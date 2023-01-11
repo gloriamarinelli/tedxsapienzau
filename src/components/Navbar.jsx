@@ -5,6 +5,7 @@ import {
 	faInstagram,
 	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
 	return (
@@ -85,12 +86,12 @@ export default function Navbar() {
 									Join us
 								</button>
 								<li className="nav-item">
-									<a
+									<Link
 										className="nav-link text-bg-light"
-										href="#"
+										to="/"
 									>
 										Home
-									</a>
+									</Link>
 								</li>
 								<li className="nav-item dropdown">
 									<a
@@ -130,12 +131,12 @@ export default function Navbar() {
 									</a>
 								</li>
 								<li className="nav-item">
-									<a
+									<Link
 										className="nav-link text-bg-light"
-										href="#"
+										to="/partners"
 									>
 										Partners
-									</a>
+									</Link>
 								</li>
 								<li className="nav-item dropdown">
 									<a
@@ -167,12 +168,12 @@ export default function Navbar() {
 									</ul>
 								</li>
 								<li className="nav-item">
-									<a
+									<Link
 										className="nav-link text-bg-light"
-										href="#"
+										to="/about"
 									>
 										About
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>

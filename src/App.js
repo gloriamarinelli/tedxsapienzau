@@ -1,18 +1,36 @@
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Home from "./components/home";
-import About from "./components/about";
-//import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import About from "./components/About";
+
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: (
+			<>
+				<Navbar />
+				<Outlet />
+			</>
+		),
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				path: "/",
+				element: <Home />,
+			},
+			{
+				path: "/about",
+				element: <About />,
+			},
+		],
+	},
+]);
 
 function App() {
-	return (
-		<div className="App">
-			<Navbar />
-			<Footer />
-			<Home />
-			<About />
-		</div>
-	);
+	return <RouterProvider router={router} />;
 }
 
 export default App;
