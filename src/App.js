@@ -5,14 +5,14 @@ import About from "./components/about";
 //import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-    <Navbar />
-    <Footer />
-    <Home />
-    <About />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Navbar />
+			<Footer />
+			<Home />
+			<About />
+		</div>
+	);
 }
 
 export default App;
