@@ -68,7 +68,16 @@ export default function Navbar() {
 									height="50"
 								></img>
 							</a>
-							<ul className="nav">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  </div>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active"></li>
 								<button
 									type="button"
 									className="btn btn-danger"
@@ -168,8 +177,10 @@ export default function Navbar() {
 							</ul>
 						</div>
 					</div>
-				</nav>
+					</div>
+								</nav>
 			</div>
-		</>
+			
+					</>
 	);
 }
