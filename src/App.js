@@ -13,6 +13,7 @@ const router = createBrowserRouter([
 			<>
 				<Navbar />
 				<Outlet />
+				<Footer />
 			</>
 		),
 		errorElement: <ErrorPage />,

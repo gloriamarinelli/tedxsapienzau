@@ -19,7 +19,7 @@ export default function ErrorPage() {
 				Qualcosa è andato storto, non riusciamo a trovare la pagina che
 				hai richiesto
 			</p>
-			<Link to="/">Torna alla home</Link>
+			<Link to="/home">Torna alla home</Link>
 		</div>
 	);
 }
