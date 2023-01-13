@@ -17,7 +17,7 @@ function Footer() {
 								width=""
 								height="40"
 							></img>
-							<p className="mt-1 mb-0 text-white">
+							<p className="mt-3 mb-0 text-white text-sm">
 								TEDxSapienzaU è un evento TED organizzato in
 								modo indipendente ed è anche il primo TED
 								Universitario che si terrà nell’Università di
@@ -26,34 +26,37 @@ function Footer() {
 								popolano questa grande comunità accademica.
 							</p>
 
-							<h5 className="mt-3 mb-0 text-white">
-								Cerchi informazioni? Contattaci
-								info@tedxsapienzau.com
-							</h5>
+							
 						</div>
 
-						<div className="col-lg-4 mb-5 mb-lg-0">
-							<h4 className="text-white mt-4 mb-4">
+						<div className="col-lg-4 mb-5 mb-lg-0 text-center">
+							<h4 className="text-white mt-4 mb-4 text-center">
 								Resta aggiornato
 							</h4>
-							<h6 className="text-light mt-1 mb-4">
+							<p className="text-white font-weight-light mt-1 mb-4 text-center">
 								Iscriviti alla newsletter per rimanere
 								aggiornato sui nostri eventi
-							</h6>
-							<form
-								className="btn btn-outline-light btn-social mx-1"
-								href="#!"
+							</p>
+							<input  type="email" id="email"
+       pattern=".+@globex\.com" size="40" required
+								className=" text-center btn btn-outline-light btn-social mx-1 " placeholder="Inserisci la tua email..*"
+								
 							>
-								Inserisci la tua email..*
-							</form>
+								
+							</input>
+							<FontAwesomeIcon
+										style={{ color: "white" }}
+										icon={faFacebook}              //METTERE FRECCIA !!!!!!!!!!!!!
+										size="2xl"
+									/>						
 						</div>
 
-						<div className="col-lg-4 mb-5 mb-lg-0">
-							<h4 className="text-white mt-4 mb-4">
+						<div className="col-lg-4 mb-5 mb-lg-0 ">
+							<h4 className="text-white mt-4 mb-4 text-center">
 								Seguici sui social
 							</h4>
 							<div style={{ display: "flex", gap: "30px" }}>
-								<a classNam="" aria-current="page" href="#">
+								<a className="" aria-current="page" href="#">
 									<FontAwesomeIcon
 										style={{ color: "white" }}
 										icon={faFacebook}
@@ -81,9 +84,18 @@ function Footer() {
 									/>
 								</a>
 							</div>
+							<h5 className="mt-5 mb-0 text-white text-center">
+								Cerchi informazioni o vuoi proporre la tua idea? Contattaci!
+								</h5>
+								<p className="text-white font-weight-light mt-3 mb-4 text-center">
+								info@tedxsapienzau.com
+							</p>
+								
+							
 						</div>
 					</div>
 				</div>
+				<hr className="text-white"></hr>
 				<div className="copyright py-4 text-center text-white">
 					<div className="container">
 						<small>
