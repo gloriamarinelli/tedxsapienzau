@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
+import Partners from "./components/Partners";
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
 				<Navbar />
 				<Outlet />
 				<Footer />
+				
 			</>
 		),
 		errorElement: <ErrorPage />,
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
+			},
+			{
+				path: "/",
+				element: <Partners />,
 			},
 			{
 				path: "/about",
