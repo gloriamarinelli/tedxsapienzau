@@ -69,119 +69,130 @@ export default function Navbar() {
 									height="50"
 								></img>
 							</a>
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-toggle="collapse"
+								data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent"
+								aria-expanded="false"
+								aria-label="Toggle navigation"
+							>
+								<span class="navbar-toggler-icon"></span>
+							</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-  </div>
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
-								<li class="nav-item active"></li>
-								<button
-									type="button"
-									className="btn btn-danger"
-								>
-									Join us
-								</button>
-								<li className="nav-item">
-									<Link
-										className="nav-link text-bg-light"
-										to="/"
+							<div
+								class="collapse navbar-collapse"
+								id="navbarSupportedContent"
+							></div>
+							<div
+								class="collapse navbar-collapse"
+								id="navbarSupportedContent"
+							>
+								<ul class="navbar-nav mr-auto">
+									<li class="nav-item active"></li>
+									<button
+										type="button"
+										className="btn btn-danger"
 									>
-										Home
-									</Link>
-								</li>
-								<li className="nav-item dropdown">
-									<a
-										className="nav-link dropdown-toggle text-bg-light"
-										data-bs-toggle="dropdown"
-										href="#"
-										role="button"
-										aria-expanded="false"
-									>
-										Edizioni
-									</a>
-									<ul className="dropdown-menu">
-										<li>
-											<a
-												className="dropdown-item text-bg-light"
-												href="#"
-											>
-												2023
-											</a>
-										</li>
-										<li>
-											<a
-												className="dropdown-item text-bg-light"
-												href="#"
-											>
-												2022
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li className="nav-item">
-									<a
-										className="nav-link text-bg-light"
-										href="#"
-									>
-										Blog
-									</a>
-								</li>
-								<li className="nav-item">
-									<Link
-										className="nav-link text-bg-light"
-										to="/partners"
-									>
-										Partners
-									</Link>
-								</li>
-								<li className="nav-item dropdown">
-									<a
-										className="nav-link dropdown-toggle text-bg-light"
-										data-bs-toggle="dropdown"
-										href="#"
-										role="button"
-										aria-expanded="false"
-									>
-										Team
-									</a>
-									<ul className="dropdown-menu">
-										<li>
-											<a
-												className="dropdown-item text-bg-light"
-												href="#"
-											>
-												2023
-											</a>
-										</li>
-										<li>
-											<a
-												className="dropdown-item text-bg-light"
-												href="#"
-											>
-												2022
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li className="nav-item">
-									<Link
-										className="nav-link text-bg-light"
-										to="/about"
-									>
-										About
-									</Link>
-								</li>
-							</ul>
+										Join us
+									</button>
+									<li className="nav-item">
+										<Link
+											className="nav-link text-bg-light"
+											to="/"
+										>
+											Home
+										</Link>
+									</li>
+									<li className="nav-item dropdown">
+										<a
+											className="nav-link dropdown-toggle text-bg-light"
+											data-bs-toggle="dropdown"
+											href="#"
+											role="button"
+											aria-expanded="false"
+										>
+											Edizioni
+										</a>
+										<ul className="dropdown-menu">
+											<li>
+												<a
+													className="dropdown-item text-bg-light"
+													href="#"
+												>
+													2023
+												</a>
+											</li>
+											<li>
+												<a
+													className="dropdown-item text-bg-light"
+													href="#"
+												>
+													2022
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li className="nav-item">
+										<a
+											className="nav-link text-bg-light"
+											href="#"
+										>
+											Blog
+										</a>
+									</li>
+									<li className="nav-item">
+										<Link
+											className="nav-link text-bg-light"
+											to="/partners"
+										>
+											Partners
+										</Link>
+									</li>
+									<li className="nav-item dropdown">
+										<a
+											className="nav-link dropdown-toggle text-bg-light"
+											data-bs-toggle="dropdown"
+											href="#"
+											role="button"
+											aria-expanded="false"
+										>
+											Team
+										</a>
+										<ul className="dropdown-menu">
+											<li>
+												<a
+													className="dropdown-item text-bg-light"
+													href="#"
+												>
+													2023
+												</a>
+											</li>
+											<li>
+												<a
+													className="dropdown-item text-bg-light"
+													href="#"
+												>
+													2022
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li className="nav-item">
+										<Link
+											className="nav-link text-bg-light"
+											to="/about"
+										>
+											About
+										</Link>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-					</div>
-								</nav>
+				</nav>
 			</div>
-			
-					</>
+		</>
 	);
 }
