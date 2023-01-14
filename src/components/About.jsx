@@ -1,18 +1,31 @@
 export default function About() {
 	return (
 		<>
-	<div class="text-right bg-light">
-      <div class="col-md-4 p-lg-4 mx-auto my-4">
-        <h1 class="font-weight-normal text-align-right">ABOUT US</h1>
-    </div>
-	</div>
+	<div class="header">
+     
+        <h1 class="font-weight-normal mt-5 mb-5">ABOUT US</h1>
+		</div>
+	
+	<style>
+        {
+          `.header {
+			padding: 10px;
+			background-image: linear-gradient(
+				to left,
+				rgb(230, 43, 30),
+				rgba(0, 0, 255, 0.5));
+			text-align: center;
+			color: black;
+            }`
+        }
+      </style>
      
 	<div class="container marketing">
 
 
 <div class="row featurette">
   <div class="col-md-7 order-md-2">
-		<p class="lead">TED è un'organizzazione no profit dedicata alla diffusione di idee, di solito sotto forma di discorsi brevi e potenti (18 minuti o meno). TED è nato nel 1984 come una conferenza in cui tecnologia, intrattenimento e design convergevano e oggi copre quasi tutti gli argomenti, dalla scienza al business alle questioni globali, in più di 100 lingue. L’obiettivo quello di diffondere idee di valore e sostenere le idee che cambiano il mondo.</p>
+		<p class="lead">TED è un'organizzazione no profit dedicata alla diffusione di idee, di solito sotto forma di discorsi brevi e potenti (18 minuti o meno). TED è nato nel 1984 come una conferenza in cui tecnologia, intrattenimento e design convergevano e oggi copre quasi tutti gli argomenti, dalla scienza al business alle questioni globali, in più di 100 lingue. L'obiettivo quello di diffondere idee di valore e sostenere le idee che cambiano il mondo.</p>
   </div>
   <div class="col-md-5 order-md-1">
   <img

@@ -52,9 +52,18 @@ export default function Navbar() {
 										/>
 									</a>
 								</li>
-								<button type="button" className="btn btn-light">
+								<style>
+        {
+          `.newsletter {
+			padding: 10px;
+			background-color: white;
+			color: black;
+            }`
+        }
+      </style>
+								<a class="newsletter" href="#footer">
 									Newsletter
-								</button>
+									</a>
 							</ul>
 						</div>
 					</div>

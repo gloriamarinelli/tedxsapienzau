@@ -9,6 +9,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function Footer() {
 	return (
 		<>
+		<section class="page-section" id="footer">
 			<footer className="footer bg-black">
 				<div className="container">
 					<div className="row">
@@ -119,6 +120,7 @@ function Footer() {
 					</div>
 				</div>
 			</footer>
+			</section>
 		</>
 	);
 }
