@@ -1,21 +1,18 @@
 export default function About() {
 	return (
 		<>
-			<div class="header">
+			<div
+				class="header"
+				style={{
+					padding: "10px",
+					backgroundImage:
+						"linear-gradient(to left,	rgb(230, 43, 30),rgba(0, 0, 255, 0.5))",
+					textAlign: "center",
+					color: "black",
+				}}
+			>
 				<h1 class="font-weight-normal mt-5 mb-5">ABOUT US</h1>
 			</div>
-
-			<style>
-				{`.header {
-			padding: 10px;
-			background-image: linear-gradient(
-				to left,
-				rgb(230, 43, 30),
-				rgba(0, 0, 255, 0.5));
-			text-align: center;
-			color: black;
-            }`}
-			</style>
 
 			<div class="container marketing">
 				<div class="row featurette">
