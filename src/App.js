@@ -17,7 +17,13 @@ const router = createBrowserRouter([
 				<Footer />
 			</>
 		),
-		errorElement: <ErrorPage />,
+		errorElement: (
+			<>
+				<Navbar />
+				<ErrorPage />
+				<Footer />
+			</>
+		),
 		children: [
 			{
 				path: "/",
