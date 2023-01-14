@@ -15,7 +15,6 @@ const router = createBrowserRouter([
 				<Navbar />
 				<Outlet />
 				<Footer />
-				
 			</>
 		),
 		errorElement: <ErrorPage />,
@@ -25,7 +24,7 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: "/",
+				path: "/partners",
 				element: <Partners />,
 			},
 			{

@@ -4,6 +4,7 @@ import {
 	faInstagram,
 	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
 	return (
@@ -26,8 +27,6 @@ function Footer() {
 								gli speakers, i partner e gli studenti che
 								popolano questa grande comunità accademica.
 							</p>
-
-							
 						</div>
 
 						<div className="col-lg-4 mb-5 mb-lg-0 text-center">
@@ -38,25 +37,40 @@ function Footer() {
 								Iscriviti alla newsletter per rimanere
 								aggiornato sui nostri eventi
 							</p>
-							<input  type="email" id="email"
-       pattern=".+@globex\.com" size="40" required
-								className=" text-center btn btn-outline-light btn-social mx-1 " placeholder="Inserisci la tua email..*"
-								
-							>
-								
-							</input>
-							<FontAwesomeIcon
-										style={{ color: "white" }}
-										icon={faFacebook}              //METTERE FRECCIA !!!!!!!!!!!!!
-										size="2xl"
-									/>						
+							<div className="row">
+								<input
+									type="email"
+									id="email"
+									pattern=".+@globex\.com"
+									size="40"
+									required
+									className="text-center btn btn-outline-light btn-social mx-1 col-8"
+									placeholder="Inserisci la tua email..*"
+								></input>
+								<FontAwesomeIcon
+									className="col-2"
+									style={{
+										color: "#fff",
+										borderRadius: "50%",
+										cursor: "pointer",
+									}}
+									icon={faArrowRight}
+									size="2xl"
+								/>
+							</div>
 						</div>
 
 						<div className="col-lg-4 mb-5 mb-lg-0 ">
 							<h4 className="text-white mt-4 mb-4 text-center">
 								Seguici sui social
 							</h4>
-							<div style={{ display: "flex", gap: "30px" }}>
+							<div
+								style={{
+									display: "flex",
+									gap: "30px",
+									justifyContent: "center",
+								}}
+							>
 								<a className="" aria-current="page" href="#">
 									<FontAwesomeIcon
 										style={{ color: "white" }}
@@ -86,13 +100,12 @@ function Footer() {
 								</a>
 							</div>
 							<h5 className="mt-5 mb-0 text-white text-center">
-								Cerchi informazioni o vuoi proporre la tua idea? Contattaci!
-								</h5>
-								<p className="text-white font-weight-light mt-3 mb-4 text-center">
+								Cerchi informazioni o vuoi proporre la tua idea?
+								Contattaci!
+							</h5>
+							<p className="text-white font-weight-light mt-3 mb-4 text-center">
 								info@tedxsapienzau.com
 							</p>
-								
-							
 						</div>
 					</div>
 				</div>
