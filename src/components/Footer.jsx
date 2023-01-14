@@ -37,18 +37,18 @@ function Footer() {
 								Iscriviti alla newsletter per rimanere
 								aggiornato sui nostri eventi
 							</p>
-							<div className="row">
+							<div className="row allign-center">
 								<input
 									type="email"
 									id="email"
 									pattern=".+@globex\.com"
-									size="40"
+									size="60"
 									required
-									className="text-center btn btn-outline-light btn-social mx-1 col-8"
+									className="btn btn-outline-light btn-social mx-1 col-8"
 									placeholder="Inserisci la tua email..*"
 								></input>
 								<FontAwesomeIcon
-									className="col-2"
+									className=" text-center col-2"
 									style={{
 										color: "#fff",
 										borderRadius: "50%",
