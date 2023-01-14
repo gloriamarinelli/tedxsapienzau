@@ -55,17 +55,15 @@ export default function Navbar() {
 									</a>
 								</li>
 								<style>
-        {
-          `.newsletter {
+									{`.newsletter {
 			padding: 10px;
 			background-color: white;
 			color: black;
-            }`
-        }
-      </style>
+            }`}
+								</style>
 								<a class="newsletter" href="#footer">
 									Newsletter
-									</a>
+								</a>
 							</ul>
 						</div>
 					</div>
