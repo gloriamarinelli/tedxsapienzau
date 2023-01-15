@@ -2,7 +2,7 @@ import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import global from "../resources/global.json";
+import global from "../../resources/global.json";
 
 export default function ErrorPage() {
 	return (
