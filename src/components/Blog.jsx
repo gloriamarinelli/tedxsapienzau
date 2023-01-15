@@ -1,4 +1,4 @@
-export default function Partners() {
+export default function Blog() {
 	return (
 	<>
 	<div
@@ -22,7 +22,7 @@ export default function Partners() {
 						fontWeight: "bold",
 					}}
 				>
-					PARTNERS
+					BLOG
 				</h1>
 			</div>
 	
