@@ -3,6 +3,8 @@ import Home from "./components/Home";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
 import Partners from "./components/Partners";
+import Blog from "./components/Blog";
+
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
 			{
 				path: "/partners",
 				element: <Partners />,
+			},
+			{
+				path: "/partners",
+				element: <Blog />,
 			},
 			{
 				path: "/about",

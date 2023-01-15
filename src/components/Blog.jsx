@@ -1,6 +1,6 @@
 export default function Blog() {
-	return (
-	<>
+return(
+<>
 	<div
 				className="header"
 				style={{
@@ -26,7 +26,12 @@ export default function Blog() {
 				</h1>
 			</div>
 	
-	
-	
-	</>);
+	</>
+
+)
+
+
+
 }
+
+

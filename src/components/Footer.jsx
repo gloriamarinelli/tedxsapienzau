@@ -73,7 +73,7 @@ function Footer() {
 									<a
 										className=""
 										aria-current="page"
-										href="#"
+										href="https://www.facebook.com/tedxsapienzau/"
 									>
 										<FontAwesomeIcon
 											style={{ color: "white" }}
