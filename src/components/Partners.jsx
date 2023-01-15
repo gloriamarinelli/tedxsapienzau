@@ -25,8 +25,13 @@ export default function Partners() {
 					PARTNERS
 				</h1>
 			</div>
+
+			
+<h3>Chi ci ha supportato: <button>2023</button> 
+<button>2022</button></h3>
 	
-	
-	
+
+
+
 	</>);
 }
