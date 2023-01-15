@@ -121,7 +121,7 @@ export default function Navbar() {
 								<li className="nav-item">
 									<Link
 										className="nav-link text-bg-light"
-										to="/home"
+										to=""
 									>
 										Home
 									</Link>
