@@ -9,15 +9,16 @@ export default function ErrorPage() {
 		<div
 			style={{
 				width: "100vw",
-				height: "80vh",
+				height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
-				gap: "10%",
+				gap: "5vw",
+				flexWrap: "wrap",
 			}}
 		>
 			<svg
-				style={{ maxWidth: "40vw" }}
+				style={{ flex: "0 1 450px" }}
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0, 0, 410, 164"
 			>

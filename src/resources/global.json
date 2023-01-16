@@ -1,5 +1,9 @@
 {
 	"COLORS": {
 		"ROSSO_TED": "#E62B1E"
+	},
+	"UTILS": {
+		"SOCIAL_NAV_HEIGHT": "64px",
+		"NAV_HEIGHT": "76px"
 	}
 }
