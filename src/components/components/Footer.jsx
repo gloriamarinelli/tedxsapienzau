@@ -4,7 +4,10 @@ import {
 	faInstagram,
 	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+	faArrowRight,
+	faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
 	return (
@@ -39,7 +42,7 @@ function Footer() {
 									Iscriviti alla newsletter per rimanere
 									aggiornato sui nostri eventi
 								</p>
-								<div className="row align-cente">
+								<div className="row d-flex align-items-center">
 									<input
 										type="email"
 										id="email"
@@ -53,11 +56,10 @@ function Footer() {
 										className="text-center col-1"
 										style={{
 											color: "#fff",
-											borderRadius: "50%",
 											cursor: "pointer",
 										}}
-										icon={faArrowRight}
-										size="2xl"
+										icon={faCircleArrowRight}
+										size="2x"
 									/>
 								</div>
 							</div>
