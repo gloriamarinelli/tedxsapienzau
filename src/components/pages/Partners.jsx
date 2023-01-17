@@ -26,8 +26,23 @@ export default function Partners() {
 				>
 					PARTNERS
 				</h1>
-			</div>
 
+				
+			</div>
+			<div
+			className="mt-5 mb-5"
+					style={{
+						fontSize: "20px",
+						fontWeight: "bold",
+						textAlign: "center",
+					color: "black",
+					}}
+			>
+<p>TEDxSapienzaU è un evento indipendente organizzato da studenti volontari che con il loro contributo e grazie al supporto di tutti gli enti, aziende e organizzazioni operano per il suo successo!</p>
+</div>
+			
+			
+			
 			<h3>
 				Chi ci ha supportato: <button>2023</button>
 				<button>2022</button>
