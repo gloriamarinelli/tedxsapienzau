@@ -122,14 +122,7 @@ export default function Navbar() {
 									</button>
 									</a>
 								</li>
-								<li className="nav-item">
-									<Link
-										className="nav-link text-bg-light"
-										to=""
-									>
-										Home
-									</Link>
-								</li>
+								
 								<li className="nav-item dropdown">
 									<a
 										className="nav-link dropdown-toggle text-bg-light"
