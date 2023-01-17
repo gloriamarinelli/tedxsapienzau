@@ -41,7 +41,7 @@ export default function Join(){
     <required><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input></required>
 	   
   </div>
-  <button type="submit" class="btn btn-dark">Submit</button>
+  <button type="submit" class="btn btn-dark">Invia</button>
 </form>
 					</div>
 					<div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
@@ -70,7 +70,7 @@ export default function Join(){
   </div>
   
   
-  <button type="submit" class="btn btn-dark mb-5 mt-3">Submit</button>
+  <button type="submit" class="btn btn-dark mb-5 mt-3">Invia</button>
 </form>
 					</div>
 					<div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center mb-5">
