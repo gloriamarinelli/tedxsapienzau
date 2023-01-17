@@ -5,6 +5,7 @@ import About from "./components/pages/About";
 import ErrorPage from "./components/pages/ErrorPage";
 import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
+import Join from "./components/pages/Join";
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
@@ -35,8 +36,12 @@ const router = createBrowserRouter([
 				element: <Partners />,
 			},
 			{
-				path: "/partners",
+				path: "/blog",
 				element: <Blog />,
+			},
+			{
+				path: "/joinus",
+				element: <Join />,
 			},
 			{
 				path: "/about",
