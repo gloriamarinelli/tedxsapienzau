@@ -40,7 +40,7 @@ const router = createBrowserRouter([
 				element: <Blog />,
 			},
 			{
-				path: "/joinus",
+				path: "/join",
 				element: <Join />,
 			},
 			{
