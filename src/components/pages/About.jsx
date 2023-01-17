@@ -5,11 +5,10 @@ export default function About() {
 				className="header"
 				style={{
 					padding: "10px",
-					backgroundImage:
-						"linear-gradient(to left,	rgb(230, 43, 30),rgba(0, 0, 255, 0.5))",
+					backgroundColor: "grey",
 					textAlign: "center",
 					color: "black",
-					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+					marginBottom: "10px",
 					height: "40vh",
 					display: "grid",
 					placeItems: "center",
@@ -28,7 +27,7 @@ export default function About() {
 
 			<div className="container marketing">
 				<div className="row featurette">
-					<div className="col-md-7 order-md-2">
+					<div className="col-md-7 order-md-2 mt-3">
 						<p className="lead">
 							TED è un'organizzazione no profit dedicata alla
 							diffusione di idee, di solito sotto forma di

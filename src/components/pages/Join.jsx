@@ -63,9 +63,9 @@ export default function Join(){
 				<div className="row featurette">
 					<div className="col-md-7 order-md-2">
 					
-						<h3>Sei un'azienda e ti interessa una collaborazione con noi?</h3>
+						<h3>Sei un'azienda e ti interessa collaborare  e supportarci?</h3>
 					<form>
-  <div class="mb-3">
+  <div class="mb-10">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
