@@ -2,8 +2,14 @@ export default function Join(){
     return(
         <>
 		<div
-		style={{
-					
+		
+			
+			style={{
+backgroundColor: "grey",
+				textAlign: "left",
+				color: "white",
+				display: "grid",
+				height: "100",
 					color: "black",
 					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",

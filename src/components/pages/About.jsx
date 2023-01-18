@@ -9,6 +9,7 @@ export default function About() {
 					textAlign: "center",
 					color: "black",
 					marginBottom: "10px",
+					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",
 					display: "grid",
 					placeItems: "center",
