@@ -24,9 +24,7 @@ export default function PartnerCard({ title, subtitle, imgSrc }) {
 				</a>
 				<div class="portfolio-caption">
 					<div class="portfolio-caption-heading">{title}</div>
-					<div class="portfolio-caption-subheading text-muted">
-						{subtitle}
-					</div>
+					
 				</div>
 			</div>
 		</div>

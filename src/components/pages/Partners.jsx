@@ -42,10 +42,17 @@ export default function Partners() {
 </div>
 			
 			
-			
-			<h3>
-				Chi ci ha supportato: <button>2023</button>
-				<button>2022</button>
+
+								
+			<h3 className="mt-5 mb-5"
+					style={{
+						fontSize: "20px",
+						fontWeight: "bold",
+						textAlign: "left",
+					color: "black",
+					}}>
+				Chi ci ha supportato: <button type="button" class="btn btn-secondary btn-lg">2023</button>
+				<button type="button" class="btn btn-secondary btn-lg">2022</button>
 			</h3>
 
 			<section class="page-section" id="portfolio">
