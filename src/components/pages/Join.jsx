@@ -15,6 +15,7 @@ export default function Join(){
 					className="font-weight-bold mt-5 mb-5"
 					style={{
 						fontSize: "50px",
+						
 						fontWeight: "bold",
 					}}
 				>
@@ -66,7 +67,11 @@ export default function Join(){
     <required><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input></required>
 	<label for="exampleInputEmail1" class="form-label">Nome</label>
     <required><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input></required>
-	   
+	<label for="exampleInputEmail1" class="form-label">Telefono</label>
+    <required><input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input></required>
+	<label for="exampleInputEmail1" class="form-label">Messaggio</label>
+    <required><input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input></required>
+	
   </div>
   
   
