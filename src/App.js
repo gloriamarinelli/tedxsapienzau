@@ -7,10 +7,14 @@ import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
 import Join from "./components/pages/Join";
 
+
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { Redirect } from 'react-router-dom';
+
 
 const router = createBrowserRouter([
 	{
+		
 		path: "/",
 		element: (
 			<>
@@ -29,6 +33,14 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
+				element: <Home />,
+			},
+			{
+				path: "/tedxsapienzau",
+				element: <Home />,
+			},
+			{
+				path: "/tedxsapienzau/",
 				element: <Home />,
 			},
 			{
@@ -53,6 +65,7 @@ const router = createBrowserRouter([
 
 function App() {
 	return <RouterProvider router={router} />;
+	
 }
 
 export default App;
