@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tedxsapienzau/static/css/main.44f8b8b5.css",
-    "main.js": "/tedxsapienzau/static/js/main.6c92de3b.js",
+    "main.js": "/tedxsapienzau/static/js/main.0b633ddf.js",
     "static/js/787.8f638028.chunk.js": "/tedxsapienzau/static/js/787.8f638028.chunk.js",
     "index.html": "/tedxsapienzau/index.html",
     "main.44f8b8b5.css.map": "/tedxsapienzau/static/css/main.44f8b8b5.css.map",
-    "main.6c92de3b.js.map": "/tedxsapienzau/static/js/main.6c92de3b.js.map",
+    "main.0b633ddf.js.map": "/tedxsapienzau/static/js/main.0b633ddf.js.map",
     "787.8f638028.chunk.js.map": "/tedxsapienzau/static/js/787.8f638028.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44f8b8b5.css",
-    "static/js/main.6c92de3b.js"
+    "static/js/main.0b633ddf.js"
   ]
 }
