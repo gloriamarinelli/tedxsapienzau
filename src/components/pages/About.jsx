@@ -1,11 +1,12 @@
+import "../../index.css";
+
 export default function About() {
 	return (
 		<>
 			<div
-				className="header"
+				className="header gradient-background-about"
 				style={{
 					padding: "10px",
-					backgroundColor: "grey",
 					textAlign: "center",
 					color: "#fff",
 					marginBottom: "10px",
@@ -20,7 +21,7 @@ export default function About() {
 					style={{
 						fontSize: "120px",
 						fontWeight: "bold",
-						fontFamily: "GothamBold"
+						fontFamily: "GothamBold",
 					}}
 				>
 					ABOUT US

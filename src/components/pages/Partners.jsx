@@ -10,12 +10,9 @@ export default function Partners() {
 	return (
 		<>
 			<div
-				className="header"
+				className="header gradient-background"
 				style={{
 					padding: "10px",
-					backgroundImage:
-						"radial-gradient(circle, rgba(21,119,64,1) 0%, rgba(50,53,144,1) 100%)",
-					textAlign: "center",
 					color: "#fff",
 					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",
@@ -112,19 +109,20 @@ export default function Partners() {
 					</div>
 					<div className="row">
 						<PartnerCard
-							title="RedBull"
+							title=""
 							subtitle="Sottotitolo"
 							imgSrc="https://loghi-famosi.com/wp-content/uploads/2020/11/Red-Bull-Logo.png"
 						/>
 						<PartnerCard
-							title="Regione Lazio"
+							title=""
 							subtitle="Sottotitolo"
 							imgSrc="https://www.melogranoroma.org/wp-content/uploads/2019/03/logo-REGIONE-LAZIO.png"
 						/>
-						<PartnerCard title="Titolo" subtitle="Sottotitolo" />
-						<PartnerCard title="Titolo" subtitle="Sottotitolo" />
-						<PartnerCard title="Titolo" subtitle="Sottotitolo" />
-						<PartnerCard title="Titolo" subtitle="Sottotitolo" />
+						<PartnerCard
+							title=""
+							subtitle="Sottotitolo"
+							imgSrc="https://upload.wikimedia.org/wikipedia/it/thumb/c/cc/UniCredit_logo.svg/1200px-UniCredit_logo.svg.png"
+						/>
 					</div>
 				</div>
 			</section>

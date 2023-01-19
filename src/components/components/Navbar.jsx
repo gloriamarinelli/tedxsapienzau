@@ -82,7 +82,10 @@ export default function Navbar() {
 				 * NAVBAR
 				 */}
 
-				<nav className="navbar navbar-expand-lg navbar-white bg-white static-top">
+				<nav
+					className="navbar navbar-expand-lg navbar-white bg-white static-top"
+					style={{ fontFamily: "GothamBold" }}
+				>
 					<div className="container">
 						<Link to="/">
 							<img

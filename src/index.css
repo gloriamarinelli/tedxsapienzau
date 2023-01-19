@@ -23,3 +23,29 @@ code {
 	height: 5px;
 	background-color: #e62b1e;
 }
+
+.gradient-background {
+	background: radial-gradient(
+			circle at 20% 400px,
+			rgba(209, 46, 171, 0.7) 0%,
+			rgba(21, 52, 119, 0) 50%
+		),
+		radial-gradient(
+			circle at 70% 10%,
+			rgba(21, 119, 64, 1) 0%,
+			rgba(50, 53, 144, 1) 100%
+		);
+}
+
+.gradient-background-about {
+	background: radial-gradient(
+			circle at 20% 400px,
+			rgba(194, 202, 40, 0.9) 0%,
+			rgba(21, 52, 119, 0) 80%
+		),
+		radial-gradient(
+			circle at 70% 10%,
+			rgb(184, 41, 19) 0%,
+			rgb(28, 31, 111) 100%
+		);
+}
