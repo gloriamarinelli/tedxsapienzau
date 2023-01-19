@@ -17,9 +17,12 @@ export default function Navbar() {
 				 * SOCIAL HEADER
 				 */}
 				<nav>
-					<div className="navbar navbar-topbar navbar-expand-xl navbar-black bg-black">
+					<div
+						className="navbar navbar-topbar navbar-expand-xl navbar-black bg-black"
+						style={{ height: "40px" }}
+					>
 						<div className="container nav justify-content-end">
-							<ul className="nav justify-content-end">
+							<ul className="nav d-flex align-items-center justify-content-end">
 								<li className="nav-item">
 									<a
 										className="nav-link active"
@@ -29,7 +32,7 @@ export default function Navbar() {
 										<FontAwesomeIcon
 											style={{ color: "white" }}
 											icon={faFacebook}
-											size="2xl"
+											size="xl"
 										/>
 									</a>
 								</li>
@@ -41,7 +44,7 @@ export default function Navbar() {
 										<FontAwesomeIcon
 											style={{ color: "white" }}
 											icon={faLinkedin}
-											size="2xl"
+											size="xl"
 										/>
 									</a>
 								</li>
@@ -53,7 +56,7 @@ export default function Navbar() {
 										<FontAwesomeIcon
 											style={{ color: "white" }}
 											icon={faInstagram}
-											size="2xl"
+											size="xl"
 										/>
 									</a>
 								</li>
@@ -63,6 +66,7 @@ export default function Navbar() {
 										backgroundColor: "#fff",
 										color: "#000",
 										textDecoration: "none",
+										fontFamily: "GothamBold",
 									}}
 									className="newsletter"
 									href="#footer"
