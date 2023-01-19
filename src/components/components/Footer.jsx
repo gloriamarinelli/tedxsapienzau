@@ -12,7 +12,7 @@ import {
 function Footer() {
 	return (
 		<>
-			<section class="page-section" id="footer">
+			<section className="page-section" id="footer">
 				<footer className="footer bg-black">
 					<div className="container">
 						<div className="row gx-5">

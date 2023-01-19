@@ -1,6 +1,12 @@
+import React, { useRef } from "react";
 import PartnerCard from "../components/PartnerCard";
 
+import "../../index.css";
+
 export default function Partners() {
+	const button2022 = useRef();
+	const button2023 = useRef();
+
 	return (
 		<>
 			<div
@@ -8,9 +14,9 @@ export default function Partners() {
 				style={{
 					padding: "10px",
 					backgroundImage:
-						"linear-gradient(to left,	rgb(230, 43, 30),rgba(0, 0, 255, 0.5))",
+						"radial-gradient(circle, rgba(21,119,64,1) 0%, rgba(50,53,144,1) 100%)",
 					textAlign: "center",
-					color: "black",
+					color: "#fff",
 					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",
 					display: "grid",
@@ -20,49 +26,91 @@ export default function Partners() {
 				<h1
 					className="font-weight-bold mt-5 mb-5"
 					style={{
-						fontSize: "90px",
+						fontSize: "120px",
 						fontWeight: "bold",
+						fontFamily: "GothamBold",
 					}}
 				>
 					PARTNERS
 				</h1>
-
-				
 			</div>
-			<div
-			className="mt-5 mb-5"
-					style={{
-						fontSize: "20px",
-						fontWeight: "bold",
-						textAlign: "center",
-					color: "black",
-					}}
-			>
-<p>TEDxSapienzaU è un evento indipendente organizzato da studenti volontari che con il loro contributo e grazie al supporto di tutti gli enti, aziende e organizzazioni operano per il suo successo!</p>
-</div>
-			
-			
 
-								
-			<h3 className="mt-5 mb-5"
+			{/* <div
+				className="mt-5 mb-5"
+				style={{
+					fontSize: "20px",
+					fontWeight: "bold",
+					color: "black",
+				}}
+			>
+				<p>
+					TEDxSapienzaU è un evento indipendente organizzato da
+					studenti volontari che con il loro contributo e grazie al
+					supporto di tutti gli enti, aziende e organizzazioni operano
+					per il suo successo!
+				</p>
+			</div> */}
+			<section
+				className="mt-5 mb-5"
+				style={{
+					width: "95vw",
+					margin: "auto",
+					fontFamily: "GothamBold",
+				}}
+			>
+				<h3
 					style={{
-						fontSize: "20px",
+						fontSize: "25px",
 						fontWeight: "bold",
 						textAlign: "left",
-					color: "black",
-					}}>
-				Chi ci ha supportato: <button type="button" class="btn btn-secondary btn-lg">2023</button>
-				<button type="button" class="btn btn-secondary btn-lg">2022</button>
-			</h3>
+						color: "black",
+						display: "flex",
+					}}
+				>
+					Chi ci ha supportato:
+					<div
+						ref={button2023}
+						className="year-button underlined"
+						type="button"
+						style={{ marginLeft: "30px" }}
+						onClick={() => {
+							console.log("click");
+							button2022.current.classList.remove("underlined");
+							button2023.current.classList.add("underlined");
+						}}
+					>
+						2023
+					</div>
+					<div
+						ref={button2022}
+						className="year-button"
+						type="button"
+						style={{ marginLeft: "30px" }}
+						onClick={() => {
+							console.log("click");
+							button2023.current.classList.remove("underlined");
+							button2022.current.classList.add("underlined");
+						}}
+					>
+						2022
+					</div>
+				</h3>
+			</section>
 
-			<section class="page-section" id="portfolio">
-				<div class="container">
-					<div class="text-center">
-						<h2 class="section-heading text-uppercase">
+			<section className="page-section" id="portfolio">
+				<div className="container">
+					<div className="text-center">
+						<h2
+							className="section-heading text-uppercase"
+							style={{
+								fontFamily: "GothamBold",
+								fontSize: "3em",
+							}}
+						>
 							Main Sponsor
 						</h2>
 					</div>
-					<div class="row">
+					<div className="row">
 						<PartnerCard
 							title="RedBull"
 							subtitle="Sottotitolo"
