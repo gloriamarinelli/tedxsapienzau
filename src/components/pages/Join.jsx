@@ -10,7 +10,7 @@ backgroundColor: "grey",
 				color: "white",
 				display: "grid",
 				height: "100",
-					color: "black",
+				color: "#fff",
 					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",
 					display: "grid",
@@ -21,8 +21,8 @@ backgroundColor: "grey",
 					className="font-weight-bold mt-5 mb-5"
 					style={{
 						fontSize: "50px",
-						
 						fontWeight: "bold",
+						fontFamily: "GothamBold"
 					}}
 				>
 					Entra a far parte anche tu del team TedxSapienzaU!

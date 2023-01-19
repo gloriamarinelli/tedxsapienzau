@@ -7,7 +7,7 @@ export default function About() {
 					padding: "10px",
 					backgroundColor: "grey",
 					textAlign: "center",
-					color: "black",
+					color: "#fff",
 					marginBottom: "10px",
 					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",
@@ -18,8 +18,9 @@ export default function About() {
 				<h1
 					className="font-weight-bold mt-5 mb-5"
 					style={{
-						fontSize: "90px",
+						fontSize: "120px",
 						fontWeight: "bold",
+						fontFamily: "GothamBold"
 					}}
 				>
 					ABOUT US
