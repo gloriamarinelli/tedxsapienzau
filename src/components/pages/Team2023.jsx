@@ -44,8 +44,11 @@ export default function Team2023() {
 							Team Esecutivo
 						</h2>
 					</div>
-					<div className="row gap-5 justify-content-center">
-						<ExecutiveTeamCard />
+					<div className="row justify-content-center">
+						<ExecutiveTeamCard 
+						name="Vittorio E. Agostinelli"
+						role="Organizer"
+						imgSrc="https://static.vecteezy.com/ti/vettori-gratis/p1/2318271-icona-profilo-utente-vettoriale.jpg"/>
 						<ExecutiveTeamCard />
 						<ExecutiveTeamCard />
 						<ExecutiveTeamCard />

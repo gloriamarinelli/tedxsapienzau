@@ -107,8 +107,8 @@ export default function Partners() {
 						>
 							Main Sponsor
 						</h2>
-					</div>
-					<div className="row">
+					</div><div className="row">
+					
 						<PartnerCard
 							title=""
 							subtitle="Sottotitolo"
