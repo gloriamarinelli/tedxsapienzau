@@ -10,6 +10,7 @@ import Join from "./components/pages/Join";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import Team2023 from "./components/pages/Team2023";
+import Team2022 from "./components/pages/Team2022";
 
 const router = createBrowserRouter([
 	{
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
 			{
 				path: "/about",
 				element: <About />,
+			},
+			{
+				path: "/team2022",
+				element: <Team2022 />,
 			},
 			{
 				path: "/team2023",
