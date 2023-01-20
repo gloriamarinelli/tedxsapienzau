@@ -144,7 +144,7 @@ export default function Navbar() {
 												className="dropdown-item text-bg-light"
 												href="#"
 											>
-												2023
+												Edizione 2023
 											</a>
 										</li>
 										<li>
@@ -152,7 +152,7 @@ export default function Navbar() {
 												className="dropdown-item text-bg-light"
 												href="#"
 											>
-												2022
+												Edizione 2022
 											</a>
 										</li>
 									</ul>
@@ -186,20 +186,20 @@ export default function Navbar() {
 									</a>
 									<ul className="dropdown-menu">
 										<li>
-											<a
+											<Link
 												className="dropdown-item text-bg-light"
-												href="#"
+												to="/team2023"
 											>
-												2023
-											</a>
+												Team 2023
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												className="dropdown-item text-bg-light"
-												href="#"
+												to="/team2022"
 											>
-												2022
-											</a>
+												Team 2022
+											</Link>
 										</li>
 									</ul>
 								</li>

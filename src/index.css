@@ -49,3 +49,16 @@ code {
 			rgb(28, 31, 111) 100%
 		);
 }
+
+.gradient-background-team2023 {
+	background: radial-gradient(
+			circle at 20% 400px,
+			rgba(34, 42, 209, 0.9) 0%,
+			rgba(21, 52, 119, 0) 80%
+		),
+		radial-gradient(
+			circle at 50% 50%,
+			rgb(211, 43, 17) 0%,
+			rgb(28, 31, 111) 100%
+		);
+}

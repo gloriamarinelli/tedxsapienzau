@@ -47,6 +47,7 @@ export default function Partners() {
 					per il suo successo!
 				</p>
 			</div> */}
+
 			<section
 				className="mt-5 mb-5"
 				style={{
