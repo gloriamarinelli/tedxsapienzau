@@ -7,7 +7,7 @@ export default function PartnerCard({ title, subtitle, imgSrc }) {
 				className="portfolio-item"
 				style={{
 					aspectRatio: 1,
-					width: "200px",
+					width: "190px",
 					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
@@ -22,9 +22,9 @@ export default function PartnerCard({ title, subtitle, imgSrc }) {
 					</div>
 					<img className="img-fluid" src={imgSrc} alt="..." />
 				</a>
-				<div className="portfolio-caption">
+				{/* <div className="portfolio-caption">
 					<div className="portfolio-caption-heading">{title}</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
