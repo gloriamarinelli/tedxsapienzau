@@ -1,5 +1,5 @@
 import "../../index.css";
-import Card from "react-bootstrap/Card";
+
 
 export default function About() {
   return (
@@ -198,6 +198,12 @@ export default function About() {
             visualizzazioni su youtube
           </h5>
         </div>
+
+        
+
+
+
+
       </div>
     </>
   );
