@@ -150,7 +150,7 @@ export default function Navbar() {
 										<li>
 											<a
 												className="dropdown-item text-bg-light"
-												href="#"
+												href="/edizione2022"
 											>
 												Edizione 2022
 											</a>

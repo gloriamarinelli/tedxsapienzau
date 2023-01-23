@@ -11,6 +11,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import Team2023 from "./components/pages/Team2023";
 import Team2022 from "./components/pages/Team2022";
+import Edizioni2022 from "./components/pages/Edizione2022";
+import Edizione2022 from "./components/pages/Edizione2022";
 
 const router = createBrowserRouter([
 	{
@@ -65,6 +67,10 @@ const router = createBrowserRouter([
 			{
 				path: "/team2023",
 				element: <Team2023 />,
+			},
+			{
+				path: "/edizione2022",
+				element: <Edizione2022 />,
 			},
 		],
 	},

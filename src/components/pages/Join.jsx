@@ -1,7 +1,8 @@
 export default function Join() {
   return (
     <>
-      <div className= "gradient-background"
+      <div
+        className="gradient-background"
         style={{
           backgroundColor: "red",
           textAlign: "left",
@@ -77,7 +78,14 @@ export default function Join() {
                   ></input>
                 </required>
               </div>
-              <button type="submit" class="btn btn-dark">
+              <button
+                type="submit"
+                class="btn"
+                style={{
+                  backgroundColor: "rgb(235, 0, 40)",
+                  color: "white",
+                }}
+              >
                 Invia
               </button>
             </form>
@@ -145,7 +153,11 @@ export default function Join() {
                 </required>
               </div>
 
-              <button type="submit" class="btn btn-dark mb-5 mt-3">
+              <button type="submit" class="btn mt-3 mb-3"
+              style={{
+                backgroundColor: "rgb(235, 0, 40)",
+                color: "white"
+              }}>
                 Invia
               </button>
             </form>

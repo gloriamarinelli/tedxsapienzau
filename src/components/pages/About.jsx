@@ -118,7 +118,7 @@ export default function About() {
           <h1
             className="font-weight-bold mt-5 "
             style={{
-              color: "rgb(230, 43, 30)",
+              color: "rgb(235, 0, 40)",
               fontSize: "100px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
@@ -139,7 +139,7 @@ export default function About() {
           <h1
             className="font-weight-bold mt-5 "
             style={{
-              color: "rgb(230, 43, 30)",
+              color: "rgb(235, 0, 40)",
               fontSize: "100px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
@@ -160,7 +160,7 @@ export default function About() {
           <h1
             className="font-weight-bold mt-5 "
             style={{
-              color: "rgb(230, 43, 30)",
+              color: "rgb(235, 0, 40)",
               fontSize: "100px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
@@ -181,7 +181,7 @@ export default function About() {
           <h1
             className="font-weight-bold mt-5 "
             style={{
-              color: "rgb(230, 43, 30)",
+              color: "rgb(235, 0, 40)",
               fontSize: "100px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
