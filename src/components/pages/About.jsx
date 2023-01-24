@@ -2,7 +2,7 @@ import "../../index.css";
 import React from "react";
 import Image from "../images/Cos'è TED.png";
 import Image1 from "../images/Cos'è TEDx.png";
-import Image2 from "../images/LogoNERO.png";
+import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

@@ -8,7 +8,7 @@ import {
   faArrowRight,
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import Image from "../images/LogoBIANCO.png";
+import Image from "../images/logo-white.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Footer() {
@@ -23,7 +23,7 @@ function Footer() {
                   src={Image}
                   alt="LogoTedx"
                   width=""
-                  height="40"
+                  height="60"
                 />
                 <p className="mt-3 mb-0 text-white text-sm">
                   TEDxSapienzaU è un evento TED organizzato in modo indipendente

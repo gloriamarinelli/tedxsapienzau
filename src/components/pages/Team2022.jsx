@@ -11,10 +11,10 @@ export default function Team2022() {
         style={{
           padding: "10px",
           textAlign: "center",
-          backgroundColor: "#E62B1E",
+          backgroundColor: "",
           
           marginBottom: "10px",
-          clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+         
           height: "40vh",
           display: "grid",
           placeItems: "left",
@@ -23,7 +23,7 @@ export default function Team2022() {
         <h1
           className="font-weight-bold mt-5 mb-5"
           style={{
-            color: "black",
+            color: "#EB0028",
             fontSize: "120px",
             fontWeight: "bold",
             fontFamily: "GothamBold",
@@ -32,6 +32,7 @@ export default function Team2022() {
           TEAM 2022
         </h1>
       </div>
+      <hr className="featurette-divider"></hr>
 
       <section className="page-section" id="portfolio">
         <div className="container">

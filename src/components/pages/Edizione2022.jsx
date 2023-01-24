@@ -23,7 +23,7 @@ import Awards2 from "../images/Eleonora Pariset.jpg";
 import Awards3 from "../images/Arianna Peduzzi.jpg";
 import Awards4 from "../images/Serena Spanò.jpg";
 
-import Image2 from "../images/LogoNERO.png";
+import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
 
 export default function Edizione2022() {
@@ -55,7 +55,7 @@ export default function Edizione2022() {
         <h1
           className="font-weight-bold"
           style={{
-            fontSize: "40px",
+            fontSize: "20px",
             textAlign: "center",
             fontWeight: "bold",
             color: "#EB0028",
@@ -179,7 +179,7 @@ export default function Edizione2022() {
                   <a class="portfolio-item" href="https://youtu.be/MiGjiZrhAeg">
                     <div class="caption">
                       <div class="caption-content">
-                        <p class="mb-0">Giovanna Melandri</p>
+                        <p class="mb-0"></p>
                       </div>
                     </div>
                     <LazyLoadImage src={Action1} alt="Melandri" height="300" />
@@ -193,7 +193,7 @@ export default function Edizione2022() {
                   >
                     <div class="caption">
                     <div class="caption-content">
-                        <p class="mb-0">Valeria Trombetta</p>
+                        <p class="mb-0">Ciao</p>
                       </div>
                     </div>
                     <LazyLoadImage src={Action2} alt="Trombetta" height="300" />
@@ -207,7 +207,7 @@ export default function Edizione2022() {
                   >
                     <div class="caption">
                     <div class="caption-content">
-                        <p class="mb-0">Fasma</p>
+                        <p class="mb-0"></p>
                       </div>
                     </div>
                     <LazyLoadImage src={Action3} alt="Fasma" height="300" />

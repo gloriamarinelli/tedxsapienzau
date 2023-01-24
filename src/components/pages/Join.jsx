@@ -38,7 +38,7 @@ export default function Join() {
             <form>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">
-                  Indirizzo email
+                  Indirizzo email istituzionale
                 </label>
                 <required>
                   <input
