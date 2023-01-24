@@ -168,14 +168,17 @@ export default function Edizione2022() {
           >
             <div class="row">
               <div class="col-sm">
+              <a href="https://youtu.be/MiGjiZrhAeg" target="_self"> 
                 <LazyLoadImage src={Action1} alt="Melandri" height="300" />
-              </div>
+              </a></div>
               <div class="col-sm">
+              <a href="https://youtu.be/zTfHpas8FHM" target="_self"> 
                 <LazyLoadImage src={Action2} alt="Trombetta" height="300" />
-              </div>
+              </a></div>
               <div class="col-sm">
+              <a href="https://youtu.be/BTTkcs7F1AY" target="_self"> 
                 <LazyLoadImage src={Action3} alt="Fasma" height="300" />
-              </div>
+              </a></div>
             </div>
           </div>
           <p
@@ -196,13 +199,19 @@ export default function Edizione2022() {
           >
             <div class="row">
               <div class="col-sm">
-                <LazyLoadImage src={Cross1} alt="Melandri" height="300" />
+              <a href="" target="_self"> 
+                <LazyLoadImage src={Cross1} alt="Bottaro" height="300" />
+              </a>
               </div>
               <div class="col-sm">
-                <LazyLoadImage src={Cross2} alt="Trombetta" height="300" />
+              <a href="https://youtu.be/CYC8W7UK0mg" target="_self"> 
+                <LazyLoadImage src={Cross2} alt="Amoroso" height="300" />
+                </a>
               </div>
               <div class="col-sm">
-                <LazyLoadImage src={Cross3} alt="Fasma" height="300" />
+              <a href="https://youtu.be/8gfmJP59Y7g" target="_self"> 
+                <LazyLoadImage src={Cross3} alt="Baccini" height="300" />
+                </a>
               </div>
             </div>
           </div>
@@ -224,17 +233,23 @@ export default function Edizione2022() {
           >
             <div class="row">
               <div class="col-sm">
-                <LazyLoadImage src={Transf1} alt="Loreto" height="300" />
+                <a href="https://youtu.be/UadTNZPaxF0" target="_self">
+                  <LazyLoadImage src={Transf1} alt="Loreto" height="300" />
+                </a>
               </div>
               <div class="col-sm">
-                <LazyLoadImage src={Transf2} alt="Dallari" height="300" />
+                <a href="https://youtu.be/8gfmJP59Y7g" target="_self">
+                  <LazyLoadImage src={Transf2} alt="Dallari" height="300" />
+                </a>
               </div>
               <div class="col-sm">
-                <LazyLoadImage
-                  src={Transf3}
-                  alt="Jelenkowska-Lucà"
-                  height="300"
-                />
+                <a href="https://youtu.be/aCV40aShbbo" target="_self">
+                  <LazyLoadImage
+                    src={Transf3}
+                    alt="Jelenkowska-Lucà"
+                    height="300"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -256,23 +271,23 @@ export default function Edizione2022() {
           >
             <div class="row">
               <div class="col-sm">
-              <a href="" target="_self"> 
-                <LazyLoadImage src={Awards1} alt="Volosumarte" height="250" />
-              </a>
-              </div>
-              <div class="col-sm">
-              <a href="" target="_self"> 
-                <LazyLoadImage src={Awards2} alt="Pariset" height="250" />
+                <a href="https://youtu.be/ZBQguIEJFBo" target="_self">
+                  <LazyLoadImage src={Awards1} alt="Volosumarte" height="250" />
                 </a>
               </div>
               <div class="col-sm">
-              <a href="" target="_self"> 
-                <LazyLoadImage src={Awards3} alt="Peduzzi" height="250" />
+                <a href="https://youtu.be/OBaW4Inps4o" target="_self">
+                  <LazyLoadImage src={Awards2} alt="Pariset" height="250" />
                 </a>
               </div>
               <div class="col-sm">
-              <a href="" target="_self"> 
-                <LazyLoadImage src={Awards4} alt="Spanò" height="250" />
+                <a href="https://youtu.be/C19qjBMT_3Y" target="_self">
+                  <LazyLoadImage src={Awards3} alt="Peduzzi" height="250" />
+                </a>
+              </div>
+              <div class="col-sm">
+                <a href="https://youtu.be/Z2UVvrwMEHs" target="_self">
+                  <LazyLoadImage src={Awards4} alt="Spanò" height="250" />
                 </a>
               </div>
             </div>
