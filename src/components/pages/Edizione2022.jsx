@@ -2,6 +2,8 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 
+import "../../index.css";
+
 import Image from "../images/ACT2022.gif";
 
 import Action1 from "../images/Giovanna Melandri.jpg";
@@ -38,10 +40,13 @@ export default function Edizione2022() {
       >
         <LazyLoadImage src={Image} alt="ACT2022" />
       </header>
+
+      <hr className="featurette-divider"></hr>
+
       <div
         className="header"
         style={{
-          backgroundColor: "#ea9999",
+         
           textAlign: "left",
           display: "grid",
           height: "100",
@@ -84,6 +89,8 @@ export default function Edizione2022() {
           Piazzale Aldo Moro 5, Roma
         </h1>
       </div>
+
+      <hr className="featurette-divider"></hr>
 
       <div className="container">
         <h1
@@ -166,19 +173,47 @@ export default function Edizione2022() {
               textAlign: "center",
             }}
           >
-            <div class="row">
-              <div class="col-sm">
-              <a href="https://youtu.be/MiGjiZrhAeg" target="_self"> 
-                <LazyLoadImage src={Action1} alt="Melandri" height="300" />
-              </a></div>
-              <div class="col-sm">
-              <a href="https://youtu.be/zTfHpas8FHM" target="_self"> 
-                <LazyLoadImage src={Action2} alt="Trombetta" height="300" />
-              </a></div>
-              <div class="col-sm">
-              <a href="https://youtu.be/BTTkcs7F1AY" target="_self"> 
-                <LazyLoadImage src={Action3} alt="Fasma" height="300" />
-              </a></div>
+            <div class="content-section" id="portfolio">
+              <div class="row">
+                <div class="col-sm">
+                  <a class="portfolio-item" href="https://youtu.be/MiGjiZrhAeg">
+                    <div class="caption">
+                      <div class="caption-content">
+                        <p class="mb-0">Giovanna Melandri</p>
+                      </div>
+                    </div>
+                    <LazyLoadImage src={Action1} alt="Melandri" height="300" />
+                  </a>
+                </div>
+                <div class="col-sm">
+                  <a
+                    class="portfolio-item"
+                    href="https://youtu.be/zTfHpas8FHM"
+                    target="_self"
+                  >
+                    <div class="caption">
+                    <div class="caption-content">
+                        <p class="mb-0">Valeria Trombetta</p>
+                      </div>
+                    </div>
+                    <LazyLoadImage src={Action2} alt="Trombetta" height="300" />
+                  </a>
+                </div>
+                <div class="col-sm">
+                  <a
+                    class="portfolio-item"
+                    href="https://youtu.be/BTTkcs7F1AY"
+                    target="_self"
+                  >
+                    <div class="caption">
+                    <div class="caption-content">
+                        <p class="mb-0">Fasma</p>
+                      </div>
+                    </div>
+                    <LazyLoadImage src={Action3} alt="Fasma" height="300" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <p
@@ -199,18 +234,18 @@ export default function Edizione2022() {
           >
             <div class="row">
               <div class="col-sm">
-              <a href="" target="_self"> 
-                <LazyLoadImage src={Cross1} alt="Bottaro" height="300" />
-              </a>
-              </div>
-              <div class="col-sm">
-              <a href="https://youtu.be/CYC8W7UK0mg" target="_self"> 
-                <LazyLoadImage src={Cross2} alt="Amoroso" height="300" />
+                <a href="" target="_self">
+                  <LazyLoadImage src={Cross1} alt="Bottaro" height="300" />
                 </a>
               </div>
               <div class="col-sm">
-              <a href="https://youtu.be/8gfmJP59Y7g" target="_self"> 
-                <LazyLoadImage src={Cross3} alt="Baccini" height="300" />
+                <a href="https://youtu.be/CYC8W7UK0mg" target="_self">
+                  <LazyLoadImage src={Cross2} alt="Amoroso" height="300" />
+                </a>
+              </div>
+              <div class="col-sm">
+                <a href="https://youtu.be/8gfmJP59Y7g" target="_self">
+                  <LazyLoadImage src={Cross3} alt="Baccini" height="300" />
                 </a>
               </div>
             </div>
@@ -271,22 +306,38 @@ export default function Edizione2022() {
           >
             <div class="row">
               <div class="col-sm">
-                <a href="https://youtu.be/ZBQguIEJFBo" target="_self">
+                <a
+                  class="portfolio-item"
+                  href="https://youtu.be/ZBQguIEJFBo"
+                  target="_self"
+                >
                   <LazyLoadImage src={Awards1} alt="Volosumarte" height="250" />
                 </a>
               </div>
               <div class="col-sm">
-                <a href="https://youtu.be/OBaW4Inps4o" target="_self">
+                <a
+                  class="portfolio-item"
+                  href="https://youtu.be/OBaW4Inps4o"
+                  target="_self"
+                >
                   <LazyLoadImage src={Awards2} alt="Pariset" height="250" />
                 </a>
               </div>
               <div class="col-sm">
-                <a href="https://youtu.be/C19qjBMT_3Y" target="_self">
+                <a
+                  class="portfolio-item"
+                  href="https://youtu.be/C19qjBMT_3Y"
+                  target="_self"
+                >
                   <LazyLoadImage src={Awards3} alt="Peduzzi" height="250" />
                 </a>
               </div>
               <div class="col-sm">
-                <a href="https://youtu.be/Z2UVvrwMEHs" target="_self">
+                <a
+                  class="portfolio-item"
+                  href="https://youtu.be/Z2UVvrwMEHs"
+                  target="_self"
+                >
                   <LazyLoadImage src={Awards4} alt="Spanò" height="250" />
                 </a>
               </div>
