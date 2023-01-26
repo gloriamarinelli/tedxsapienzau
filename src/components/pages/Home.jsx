@@ -24,7 +24,7 @@ export default function Home() {
 							cursor: "pointer",
 						}}
 					>
-						<h1
+						<h3
 							style={{
 								textTransform: "uppercase",
 								backgroundColor: global.COLORS.ROSSO_TED,
@@ -34,7 +34,7 @@ export default function Home() {
 							}}
 						>
 							Scopri di più
-						</h1>
+						</h3>
 					</div>
 				</div>
 				<section
@@ -54,7 +54,7 @@ export default function Home() {
 							flexDirection: "column",
 						}}
 					>
-						<h1 style={{ fontSize: "60px" }}>
+						<h1 style={{ fontSize: "50px" }}>
 							BACK TO ZERO{" "}
 							<span
 								style={{
@@ -84,7 +84,7 @@ export default function Home() {
 							flexDirection: "column",
 						}}
 					>
-						<h1 style={{ fontSize: "60px" }}>
+						<h1 style={{ fontSize: "50px" }}>
 							BACK TO ZERO{" "}
 							<span
 								style={{
