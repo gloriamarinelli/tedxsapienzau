@@ -25,6 +25,7 @@ import Awards4 from "../images/Serena Spanò.jpg";
 
 import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
+import SpeakerCard from "../components/SpeakerCard";
 
 export default function Edizione2022() {
 	return (
@@ -251,40 +252,26 @@ export default function Edizione2022() {
 							textAlign: "center",
 						}}
 					>
-						<div class="row">
-							<div class="col-sm">
-								<a href="" target="_self">
-									<LazyLoadImage
-										src={Cross1}
-										alt="Bottaro"
-										height="300"
-									/>
-								</a>
-							</div>
-							<div class="col-sm">
-								<a
-									href="https://youtu.be/CYC8W7UK0mg"
-									target="_self"
-								>
-									<LazyLoadImage
-										src={Cross2}
-										alt="Amoroso"
-										height="300"
-									/>
-								</a>
-							</div>
-							<div class="col-sm">
-								<a
-									href="https://youtu.be/8gfmJP59Y7g"
-									target="_self"
-								>
-									<LazyLoadImage
-										src={Cross3}
-										alt="Baccini"
-										height="300"
-									/>
-								</a>
-							</div>
+						<div
+							style={{
+								display: "flex",
+								justifyContent: "center",
+								flexWrap: "wrap",
+								gap: "70px",
+							}}
+						>
+							<SpeakerCard
+								nomeSpeaker="Viviana Bottaro"
+								imgSrc={Cross1}
+							/>
+							<SpeakerCard
+								nomeSpeaker="Giusy Amoroso"
+								imgSrc={Cross2}
+							/>
+							<SpeakerCard
+								nomeSpeaker="Mario Baccini"
+								imgSrc={Cross3}
+							/>
 						</div>
 					</div>
 					<p
