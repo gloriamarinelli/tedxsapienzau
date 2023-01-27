@@ -4,6 +4,8 @@ import Image from "../images/Cos'è TED.png";
 import Image1 from "../images/Cos'è TEDx.png";
 import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
+
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function About() {
@@ -17,7 +19,7 @@ export default function About() {
           color: "#fff",
           marginBottom: "10px",
           clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-          height: "40vh",
+          height: "80vh",
           display: "grid",
           placeItems: "center",
         }}
@@ -31,8 +33,10 @@ export default function About() {
           }}
         >
           ABOUT US
+          
         </h1>
       </div>
+      
 
       <div className="container marketing">
         <div className="row featurette">

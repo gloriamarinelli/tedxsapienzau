@@ -1,33 +1,44 @@
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-		"Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 @font-face {
-	font-family: GothamBold;
-	src: url("./resources/Gotham-Bold.otf") format("opentype");
+  font-family: GothamBold;
+  src: url("./resources/Gotham-Bold.otf") format("opentype");
 }
 
 .underlined::after {
-	content: "";
-	display: block;
-	height: 5px;
-	background-color: #e62b1e;
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #eb0028;
 }
 
 /*
   GRADIENTI PER SFONDI HEADER PAGINE
 */
 .gradient-background {
+  background: radial-gradient(
+      circle at 20% 400px,
+      rgba(130, 36, 51, 0.9) 20%,
+      rgba(235, 0, 40, 0) 40%
+    ),
+    radial-gradient(
+      circle at 70% 10%,
+      rgb(130, 36, 51) 0%,
+      rgb(235, 0, 40) 40%
+    );
+  /*
 	background: radial-gradient(
 			circle at 20% 400px,
 			rgba(209, 46, 171, 0.7) 0%,
@@ -38,71 +49,91 @@ code {
 			rgba(21, 119, 64, 1) 0%,
 			rgba(50, 53, 144, 1) 100%
 		);
+		  
+*/
 }
 
 .gradient-background-about {
-	background: radial-gradient(
-			circle at 20% 400px,
-			rgba(194, 202, 40, 0.9) 0%,
-			rgba(21, 52, 119, 0) 80%
-		),
-		radial-gradient(
-			circle at 70% 10%,
-			rgb(184, 41, 19) 0%,
-			rgb(28, 31, 111) 100%
-		);
+  background-image: url('./components/images/sapienza1X.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  /*
+  background: radial-gradient(
+      circle at 20% 400px,
+      rgba(130, 36, 51, 0.9) 20%,
+      rgba(235, 0, 40, 0) 40%
+    ),
+    radial-gradient(
+      circle at 70% 10%,
+      rgb(130, 36, 51) 0%,
+      rgb(235, 0, 40) 40%
+    );
+    */
 }
 
 .gradient-background-team2023 {
 	background: radial-gradient(
-			circle at 20% 400px,
-			rgba(34, 42, 209, 0.9) 0%,
-			rgba(21, 52, 119, 0) 80%
-		),
-		radial-gradient(
-			circle at 50% 50%,
-			rgb(211, 43, 17) 0%,
-			rgb(28, 31, 111) 100%
-		);
+      circle at 20% 400px,
+      rgba(130, 36, 51, 0.9) 20%,
+      rgba(235, 0, 40, 0) 40%
+    ),
+    radial-gradient(
+      circle at 70% 10%,
+      rgb(130, 36, 51) 0%,
+      rgb(235, 0, 40) 40%
+    );
+	/*
+  background: radial-gradient(
+      circle at 20% 400px,
+      rgba(34, 42, 209, 0.9) 0%,
+      rgba(21, 52, 119, 0) 80%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgb(235, 0, 40) 0%,
+      rgb(28, 31, 111) 100%
+    );
+	*/
 }
 
 /** SPEAKER CARD **/
 
 .speaker-card {
-	position: relative;
-	overflow: hidden;
-	border-radius: 40px;
-	flex: 0 0 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  flex: 0 0 300px;
 }
 
 .speaker-card-image {
-	display: block;
-	transition: all 0.3s ease;
+  display: block;
+  transition: all 0.3s ease;
 }
 
 .speaker-card-text {
-	position: absolute;
-	bottom: -100%;
-	left: 0;
-	background: linear-gradient(transparent, transparent 10%, #eb0027e7 60%);
-	width: 100%;
-	height: 100%;
-	transition: all 0.3s ease;
-	padding-left: 20px;
-	padding-bottom: 20px;
-	color: white;
-	font-size: 25px;
-	font-family: GothamBold;
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	justify-content: flex-end;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(transparent, transparent 10%, #eb0028 60%);
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  color: white;
+  font-size: 25px;
+  font-family: GothamBold;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .speaker-card:hover .speaker-card-text {
-	bottom: 0;
+  bottom: 0;
 }
 
 .speaker-card:hover .speaker-card-image {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }

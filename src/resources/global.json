@@ -1,6 +1,7 @@
 {
 	"COLORS": {
-		"ROSSO_TED": "#EB0028"
+		"ROSSO_TED": "#EB0028",
+		"ROSSO_SAPIENZA": "#822433"
 	},
 	"UTILS": {
 		"SOCIAL_NAV_HEIGHT": "64px",
