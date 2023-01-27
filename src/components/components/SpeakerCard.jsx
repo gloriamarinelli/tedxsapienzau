@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "../../index.css";
 
-export default function SpeakerCard({ nomeSpeaker, imgSrc, linkTalk }) {
+export default function SpeakerCard({ nomeSpeaker, imgSrc, linkTalk, bio }) {
 	return (
 		<div className="speaker-card">
 			<LazyLoadImage
@@ -14,7 +14,7 @@ export default function SpeakerCard({ nomeSpeaker, imgSrc, linkTalk }) {
 				height="300"
 				className="speaker-card-image"
 			/>
-			<div className="speaker-card-text">
+			<div className="speaker-card-text">				
 				<p style={{ cursor: "pointer" }}>
 					{nomeSpeaker}{" "}
 					<FontAwesomeIcon
@@ -22,12 +22,14 @@ export default function SpeakerCard({ nomeSpeaker, imgSrc, linkTalk }) {
 						icon={faCircleInfo}
 					/>
 				</p>
+				
 				<a
 					href={linkTalk}
 					style={{
 						fontSize: "18px",
 						marginTop: "-10px",
 						cursor: "pointer",
+						color: "white"
 					}}
 				>
 					Vai al Talk <FontAwesomeIcon icon={faYoutube} />
