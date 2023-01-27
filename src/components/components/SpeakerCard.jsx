@@ -5,7 +5,14 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "../../index.css";
 
-export default function SpeakerCard({ nomeSpeaker, imgSrc, linkTalk, bio }) {
+export default function SpeakerCard({
+	nomeSpeaker,
+	imgSrc,
+	linkTalk,
+	bio,
+	setIsBioOpen,
+	setSelectedSpeakerInfo,
+}) {
 	return (
 		<div className="speaker-card">
 			<LazyLoadImage
@@ -14,22 +21,27 @@ export default function SpeakerCard({ nomeSpeaker, imgSrc, linkTalk, bio }) {
 				height="300"
 				className="speaker-card-image"
 			/>
-			<div className="speaker-card-text">				
-				<p style={{ cursor: "pointer" }}>
-					{nomeSpeaker}{" "}
-					<FontAwesomeIcon
-						style={{ marginLeft: "20px" }}
-						icon={faCircleInfo}
-					/>
+			<div className="speaker-card-text">
+				<p
+					style={{ cursor: "pointer" }}
+					onClick={() => {
+						setIsBioOpen(true);
+						setSelectedSpeakerInfo({
+							nomeSpeaker: nomeSpeaker,
+							imgSrc: imgSrc,
+						});
+					}}
+				>
+					{nomeSpeaker} <FontAwesomeIcon icon={faCircleInfo} />
 				</p>
-				
+
 				<a
 					href={linkTalk}
 					style={{
 						fontSize: "18px",
 						marginTop: "-10px",
 						cursor: "pointer",
-						color: "white"
+						color: "white",
 					}}
 				>
 					Vai al Talk <FontAwesomeIcon icon={faYoutube} />
