@@ -4,6 +4,8 @@ import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 
 import "../../index.css";
 
+import Image from "../images/Senzanome.png";
+
 import Action1 from "../images/Giovanna Melandri.jpg";
 import Action2 from "../images/Valeria Trombetta.jpg";
 import Action3 from "../images/Fasma.jpg";
@@ -34,9 +36,14 @@ export default function Edizione2022() {
           padding: "10px",
           textAlign: "center",
           marginBottom: "10px",
-          height: "40vh",
+          height: "45vh",
         }}
-      ></header>
+        >
+          <div>
+              <LazyLoadImage src={Image} alt="Pecora" height="550"/>
+            </div>
+           
+                  </header>
 
       <hr className="featurette-divider"></hr>
 
