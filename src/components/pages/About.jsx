@@ -5,7 +5,6 @@ import Image1 from "../images/Cos'è TEDx.png";
 import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
 
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function About() {
@@ -33,11 +32,10 @@ export default function About() {
           }}
         >
           ABOUT US
-          
         </h1>
       </div>
-      
 
+      {/* Cos'è TED */}
       <div className="container marketing">
         <div className="row featurette">
           <div className="col-md-7 order-md-2 mt-3">
@@ -58,15 +56,16 @@ export default function About() {
             </p>
           </div>
           <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-            <div>
-              <LazyLoadImage src={Image} alt="Cos'èTED" width="" height="50" />
-            </div>
+            <LazyLoadImage src={Image} alt="Cos'èTED" height="50" />
           </div>
+        </div>
 
-          <hr className="featurette-divider"></hr>
+        <hr className="featurette-divider"></hr>
 
+        {/* Cos'è TEDx */}
+        <div className="container marketing">
           <div className="row featurette">
-            <div className="col-md-7 order-md-2">
+            <div className="col-md-7 order-md-2 mt-3">
               <p
                 className="lead"
                 style={{
@@ -81,12 +80,7 @@ export default function About() {
               </p>
             </div>
             <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-              <LazyLoadImage
-                src={Image1}
-                alt="Cos'èTEDx"
-                width=""
-                height="50"
-              />
+              <LazyLoadImage src={Image1} alt="Cos'èTEDx" height="50" />
             </div>
           </div>
 
@@ -94,12 +88,7 @@ export default function About() {
 
           <div className="row featurette">
             <div className="col-md-7 order-md-2 mt-4">
-              <LazyLoadImage
-                src={Image2}
-                alt="TedxSapienzaU"
-                width=""
-                height="70"
-              />
+              <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="70" />
               <p
                 className="lead mt-3"
                 style={{
@@ -107,10 +96,10 @@ export default function About() {
                 }}
               >
                 Il TEDxSapienzaU è il primo TED Universitario che si terrà
-                nell’Università di Roma “La Sapienza”. Grazie a questo l’intera
+                nell'Università di Roma “La Sapienza”. Grazie a questo l'intera
                 comunità studentesca e accademica potrà godere di una
-                programmazione nuova e di respiro internazionale. L’evento è
-                stato fortemente voluto da alcuni studenti dell’Ateneo, che
+                programmazione nuova e di respiro internazionale. L'evento è
+                stato fortemente voluto da alcuni studenti dell'Ateneo, che
                 grazie al supporto e alla delega della Magnifica Rettrice
                 Antonella Polimeni, il Comitato TEDxSapienzaU, composto dagli
                 studenti organizzatori, e dall'Area Supporto alla Ricerca e
@@ -118,103 +107,102 @@ export default function About() {
                 licenza ufficiale TEDx.
               </p>
             </div>
+            <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
+              <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="400" />
+            </div>
           </div>
 
-          <div className="col-md-5 order-md-1 mb-4">
-            <LazyLoadImage src={Image3} alt="Stage2022" width="" height="400" />
+          <div
+            class="row mt-10 mb-10"
+            style={{
+              textAlign: "center",
+            }}
+          >
+            <div class="col">
+              <h1
+                className="font-weight-bold mt-5 "
+                style={{
+                  color: "rgb(235, 0, 40)",
+                  fontSize: "100px",
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                13+
+              </h1>
+              <h5
+                style={{
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                speaker
+              </h5>
+            </div>
+            <div class="col">
+              <h1
+                className="font-weight-bold mt-5 "
+                style={{
+                  color: "rgb(235, 0, 40)",
+                  fontSize: "100px",
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                3k
+              </h1>
+              <h5
+                style={{
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                spettatori
+              </h5>
+            </div>
+            <div class="col">
+              <h1
+                className="font-weight-bold mt-5 "
+                style={{
+                  color: "rgb(235, 0, 40)",
+                  fontSize: "100px",
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                3k+
+              </h1>
+              <h5
+                style={{
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                social followers
+              </h5>
+            </div>
+            <div class="col">
+              <h1
+                className="font-weight-bold mt-5 "
+                style={{
+                  color: "rgb(235, 0, 40)",
+                  fontSize: "100px",
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                15k+
+              </h1>
+              <h5
+                style={{
+                  fontWeight: "bold",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                visualizzazioni su youtube
+              </h5>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div
-        class="row mt-10 mb-10"
-        style={{
-          textAlign: "center",
-        }}
-      >
-        <div class="col">
-          <h1
-            className="font-weight-bold mt-5 "
-            style={{
-              color: "rgb(235, 0, 40)",
-              fontSize: "100px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            13+
-          </h1>
-          <h5
-            style={{
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            speaker
-          </h5>
-        </div>
-        <div class="col">
-          <h1
-            className="font-weight-bold mt-5 "
-            style={{
-              color: "rgb(235, 0, 40)",
-              fontSize: "100px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            3k
-          </h1>
-          <h5
-            style={{
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            spettatori
-          </h5>
-        </div>
-        <div class="col">
-          <h1
-            className="font-weight-bold mt-5 "
-            style={{
-              color: "rgb(235, 0, 40)",
-              fontSize: "100px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            3k+
-          </h1>
-          <h5
-            style={{
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            social followers
-          </h5>
-        </div>
-        <div class="col">
-          <h1
-            className="font-weight-bold mt-5 "
-            style={{
-              color: "rgb(235, 0, 40)",
-              fontSize: "100px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            15k+
-          </h1>
-          <h5
-            style={{
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            visualizzazioni su youtube
-          </h5>
         </div>
       </div>
     </>
