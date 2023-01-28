@@ -103,6 +103,25 @@ code {
 	bottom: 0;
 }
 
+.speaker-card:hover .speaker-card-text-v2 {
+	left: 0;
+}
+
 .speaker-card:hover .speaker-card-image {
 	transform: scale(1.1);
+}
+
+.speaker-card-text-v2 {
+	position: absolute;
+	bottom: 7%;
+	left: -100%;
+	background-color: #eb0028;
+	width: 60%;
+	height: 10%;
+	transition: all 0.3s ease;
+	color: white;
+	font-size: 22px;
+	font-family: GothamBold;
+	display: grid;
+	place-items: center;
 }

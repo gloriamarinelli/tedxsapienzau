@@ -34,18 +34,6 @@ export default function SpeakerCard({
 				>
 					{nomeSpeaker} <FontAwesomeIcon icon={faCircleInfo} />
 				</p>
-
-				<a
-					href={linkTalk}
-					style={{
-						fontSize: "18px",
-						marginTop: "-10px",
-						cursor: "pointer",
-						color: "white",
-					}}
-				>
-					Vai al Talk <FontAwesomeIcon icon={faYoutube} />
-				</a>
 			</div>
 		</div>
 	);
