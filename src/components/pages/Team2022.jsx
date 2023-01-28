@@ -1,29 +1,27 @@
 import React, { useState, useEffect } from "react";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 
-import global from "../../resources/global.json";
 import "../../index.css";
 
 export default function Team2022() {
 	return (
 		<>
 			<div
-				className="header"
+				className="header gradient-background-team2022"
 				style={{
 					padding: "10px",
 					textAlign: "center",
+					color: "#fff",
 					marginBottom: "10px",
-					backgroundColor: global.COLORS.ROSSO_TED,
 					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 					height: "40vh",
 					display: "grid",
-					placeItems: "left",
+					placeItems: "center",
 				}}
 			>
 				<h1
 					className="font-weight-bold mt-5 mb-5"
 					style={{
-						color: "#fff",
 						fontSize: "120px",
 						fontWeight: "bold",
 						fontFamily: "GothamBold",
@@ -32,7 +30,7 @@ export default function Team2022() {
 					TEAM 2022
 				</h1>
 			</div>
-			<hr className="featurette-divider"></hr>
+
 
 			<section className="page-section" id="portfolio">
 				<div className="container">

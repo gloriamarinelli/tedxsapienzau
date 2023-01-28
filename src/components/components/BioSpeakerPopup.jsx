@@ -35,7 +35,7 @@ export default function BioSpeakerPopup({
 					top: 0,
 					right: isBioOpen ? 0 : "-100%",
 					background:
-						"linear-gradient(307deg, rgb(130, 36, 51) 29%, #EB0028 98%)",
+						"linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)",
 					transition: "all 0.4s ease-in-out",
 				}}
 			>

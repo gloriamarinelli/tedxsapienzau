@@ -131,7 +131,7 @@ export default function Edizione2022() {
 						ed esperienze ispiratrici:
 					</p>
 					<p>
-						<strong style={{ color: "#EB0028", fontSize: "35px" }}>
+						<strong style={{ color: "#E62B1E", fontSize: "35px" }}>
 							ACTION.
 						</strong>{" "}
 					</p>
@@ -141,7 +141,7 @@ export default function Edizione2022() {
 						futuro.{" "}
 					</p>
 					<p>
-						<strong style={{ color: "#EB0028", fontSize: "35px" }}>
+						<strong style={{ color: "#E62B1E", fontSize: "35px" }}>
 							CROSS-FERTILIZATION.
 						</strong>{" "}
 					</p>
@@ -151,7 +151,7 @@ export default function Edizione2022() {
 						saperi.{" "}
 					</p>
 					<p>
-						<strong style={{ color: "#EB0028", fontSize: "35px" }}>
+						<strong style={{ color: "#E62B1E", fontSize: "35px" }}>
 							TRANSFORMATION.
 						</strong>{" "}
 					</p>
@@ -181,7 +181,7 @@ export default function Edizione2022() {
 							marginLeft: "30px",
 						}}
 					>
-						<strong style={{ color: "#EB0028" }}>A</strong>CTION
+						<strong style={{ color: "#E62B1E" }}>A</strong>CTION
 					</p>
 					<div
 						class="container"
@@ -232,7 +232,7 @@ export default function Edizione2022() {
 						marginLeft: "30px",
 					}}
 				>
-					<strong style={{ color: "#EB0028" }}>C</strong>
+					<strong style={{ color: "#E62B1E" }}>C</strong>
 					ROSS-FERTILIZATION
 				</p>
 				<div
@@ -283,7 +283,7 @@ export default function Edizione2022() {
 						marginLeft: "30px",
 					}}
 				>
-					<strong style={{ color: "#EB0028" }}>T</strong>
+					<strong style={{ color: "#E62B1E" }}>T</strong>
 					RANSFORMATION
 				</p>
 				<div
@@ -334,7 +334,7 @@ export default function Edizione2022() {
 						marginLeft: "30px",
 					}}
 				>
-					<strong style={{ color: "#EB0028" }}>TED</strong>
+					<strong style={{ color: "#E62B1E" }}>TED</strong>
 					xSapienzaU AWARDS
 				</p>
 				<div
