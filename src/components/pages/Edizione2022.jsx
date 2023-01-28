@@ -25,6 +25,7 @@ import Awards4 from "../images/Serena Spanò.jpg";
 
 import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
+
 import SpeakerCard from "../components/SpeakerCard";
 import SpeakerCardv2 from "../components/SpeakerCardv2";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
@@ -42,6 +43,7 @@ export default function Edizione2022() {
 					textAlign: "center",
 					marginBottom: "10px",
 					height: "45vh",
+					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 				}}
 			>
 				<div>

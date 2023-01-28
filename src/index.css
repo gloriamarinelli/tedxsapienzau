@@ -43,10 +43,10 @@ code {
 
 .gradient-background-about {
 	background-image: url("./components/images/sapienza1X.jpg");
-	background-position: center; 
-	background-repeat: no-repeat; 
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	}
+}
 
 .gradient-background-team2023 {
 	background: radial-gradient(
@@ -59,12 +59,12 @@ code {
 			rgb(130, 36, 51) 0%,
 			rgb(235, 0, 40) 40%
 		);
-	}
+}
 
-	.gradient-background-team2022 {
-		background: radial-gradient(ellipse at top, #E62B1E, transparent),
+.gradient-background-team2022 {
+	background: radial-gradient(ellipse at top, #e62b1e, transparent),
 		radial-gradient(ellipse at bottom, #822433, transparent);
-		}
+}
 
 /** SPEAKER CARD **/
 
@@ -84,7 +84,7 @@ code {
 	position: absolute;
 	bottom: -100%;
 	left: 0;
-	background: linear-gradient(transparent, transparent 10%, #E62B1E 60%);
+	background: linear-gradient(transparent, transparent 10%, #e62b1e 60%);
 	width: 100%;
 	height: 100%;
 	transition: all 0.3s ease;
@@ -108,20 +108,21 @@ code {
 }
 
 .speaker-card:hover .speaker-card-image {
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
 
 .speaker-card-text-v2 {
 	position: absolute;
 	bottom: 7%;
 	left: -100%;
-	background-color: #E62B1E;
+	background-color: #000;
 	width: 60%;
-	height: 10%;
+	height: 15%;
 	transition: all 0.3s ease;
 	color: white;
-	font-size: 22px;
+	font-size: 23px;
 	font-family: GothamBold;
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

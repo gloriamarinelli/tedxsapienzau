@@ -36,9 +36,7 @@ export default function SpeakerCardv2({
 					height="300"
 					className="speaker-card-image"
 				/>
-				<div className="speaker-card-text-v2">
-					<p>Scopri di più</p>
-				</div>
+				<p className="speaker-card-text-v2">Scopri di più</p>
 			</div>
 			<p
 				style={{

@@ -1,11 +1,8 @@
 {
 	"COLORS": {
 		"ROSSO_TED": "#EB0028",
-		"ROSSO_TED_2023": "RGB: (235, 0, 40)", 
-
-		"ROSSO_TED_2022": "RGB: (230, 43, 30)",
+		"ROSSO_TED_2023": "RGB: (235, 0, 40)",
 		"ROSSO_TED_2022": "#E62B1E",
-
 		"ROSSO_SAPIENZA": "#822433"
 	},
 	"UTILS": {
