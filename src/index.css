@@ -39,39 +39,14 @@ code {
 			rgb(130, 36, 51) 0%,
 			rgb(235, 0, 40) 40%
 		);
-	/*
-	background: radial-gradient(
-			circle at 20% 400px,
-			rgba(209, 46, 171, 0.7) 0%,
-			rgba(21, 52, 119, 0) 50%
-		),
-		radial-gradient(
-			circle at 70% 10%,
-			rgba(21, 119, 64, 1) 0%,
-			rgba(50, 53, 144, 1) 100%
-		);
-		  
-*/
 }
 
 .gradient-background-about {
 	background-image: url("./components/images/sapienza1X.jpg");
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Do not repeat the image */
+	background-position: center; 
+	background-repeat: no-repeat; 
 	background-size: cover;
-	/*
-  background: radial-gradient(
-      circle at 20% 400px,
-      rgba(130, 36, 51, 0.9) 20%,
-      rgba(235, 0, 40, 0) 40%
-    ),
-    radial-gradient(
-      circle at 70% 10%,
-      rgb(130, 36, 51) 0%,
-      rgb(235, 0, 40) 40%
-    );
-    */
-}
+	}
 
 .gradient-background-team2023 {
 	background: radial-gradient(
@@ -84,19 +59,7 @@ code {
 			rgb(130, 36, 51) 0%,
 			rgb(235, 0, 40) 40%
 		);
-	/*
-  background: radial-gradient(
-      circle at 20% 400px,
-      rgba(34, 42, 209, 0.9) 0%,
-      rgba(21, 52, 119, 0) 80%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgb(235, 0, 40) 0%,
-      rgb(28, 31, 111) 100%
-    );
-	*/
-}
+	}
 
 /** SPEAKER CARD **/
 
