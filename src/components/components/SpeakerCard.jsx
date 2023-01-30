@@ -6,7 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "../../index.css";
 
-export default function SpeakerCard({
+export default function SpeakerCardv2({
 	nomeSpeaker,
 	imgSrc,
 	linkTalk,
@@ -15,27 +15,42 @@ export default function SpeakerCard({
 	setSelectedSpeakerInfo,
 }) {
 	return (
-		<div className="speaker-card">
-			<LazyLoadImage
-				src={imgSrc}
-				alt={nomeSpeaker}
-				height="300"
-				className="speaker-card-image"
-			/>
-			<div className="speaker-card-text">
-				<p
-					style={{ cursor: "pointer" }}
-					onClick={() => {
-						setIsBioOpen(true);
-						setSelectedSpeakerInfo({
-							nomeSpeaker: nomeSpeaker,
-							imgSrc: imgSrc,
-						});
-					}}
-				>
-					{nomeSpeaker} <FontAwesomeIcon icon={faCircleInfo} />
-				</p>
+		<card
+			style={{
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center",
+				cursor: "pointer",
+			}}
+			onClick={() => {
+				setIsBioOpen(true);
+				setSelectedSpeakerInfo({
+					nomeSpeaker: nomeSpeaker,
+					imgSrc: imgSrc,
+				});
+			}}
+		>
+			<div className="speaker-card">
+				<LazyLoadImage
+					src={imgSrc}
+					alt={nomeSpeaker}
+					height="300"
+					className="speaker-card-image"
+				/>
+				<p className="speaker-card-text">Scopri di più</p>
 			</div>
-		</div>
+			<p
+				style={{
+					fontSize: "20px",
+					textTransform: "uppercase",
+					fontFamily: "GothamBold",
+					maxWidth: "16ch",
+					textAlign: "center",
+					marginTop: "15px",
+				}}
+			>
+				{nomeSpeaker}
+			</p>
+		</card>
 	);
 }

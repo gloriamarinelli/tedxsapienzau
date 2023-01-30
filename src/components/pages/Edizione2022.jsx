@@ -27,7 +27,6 @@ import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
 
 import SpeakerCard from "../components/SpeakerCard";
-import SpeakerCardv2 from "../components/SpeakerCardv2";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
 
 export default function Edizione2022() {
@@ -285,7 +284,7 @@ export default function Edizione2022() {
 						gap: "70px",
 					}}
 				>
-					<SpeakerCardv2
+					<SpeakerCard
 						nomeSpeaker="Vittorio Loreto"
 						imgSrc={Transf1}
 						linkTalk="https://youtu.be/UadTNZPaxF0"
@@ -293,7 +292,7 @@ export default function Edizione2022() {
 						setIsBioOpen={setIsBioOpen}
 						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
 					/>
-					<SpeakerCardv2
+					<SpeakerCard
 						nomeSpeaker="Valentina Dallari"
 						imgSrc={Transf2}
 						linkTalk="https://youtu.be/8gfmJP59Y7g"
@@ -301,7 +300,7 @@ export default function Edizione2022() {
 						setIsBioOpen={setIsBioOpen}
 						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
 					/>
-					<SpeakerCardv2
+					<SpeakerCard
 						nomeSpeaker="Ewelina Jelenkowska-Lucà"
 						imgSrc={Transf3}
 						linkTalk="https://youtu.be/aCV40aShbbo"
