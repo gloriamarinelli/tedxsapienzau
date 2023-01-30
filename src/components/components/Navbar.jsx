@@ -19,10 +19,16 @@ export default function Navbar() {
 				 */}
 				<nav>
 					<div
-						className="navbar navbar-topbar navbar-expand-xl navbar-black bg-black"
-						style={{ height: "40px" }}
+						style={{
+							height: "40px",
+							width: "100vw",
+							display: "flex",
+							backgroundColor: "#000",
+							justifyContent: "flex-end",
+							alignItems: "center",
+						}}
 					>
-						<div className="container nav justify-content-end">
+						<div className="container-xl nav justify-content-end">
 							<ul className="nav d-flex align-items-center justify-content-end">
 								<li className="nav-item">
 									<a
