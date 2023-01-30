@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "../images/Get involved in TEDxSapienzaU.png";
 import Image1 from "../images/Work with TEDxSapienzaU.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
