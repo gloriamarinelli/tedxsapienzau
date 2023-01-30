@@ -29,6 +29,8 @@ import Image3 from "../images/stage2022.jpeg";
 import SpeakerCard from "../components/SpeakerCard";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
 
+import global from "../../resources/global.json";
+
 export default function Edizione2022() {
 	const [isBioOpen, setIsBioOpen] = useState(false);
 	const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
@@ -100,8 +102,83 @@ export default function Edizione2022() {
 
 			<hr className="featurette-divider"></hr>
 
-			<div className="container">
+			<div className="container mb-5">
 				<h1
+					className="font-weight-bold mt-5 mb-3"
+					style={{
+						fontSize: "45px",
+						textAlign: "center",
+						fontWeight: "bold",
+						marginLeft: "30px",
+					}}
+				>
+					IL TEMA DELL'EVENTO
+				</h1>
+				<p>
+					Il titolo della prima edizione del TEDxSapienzaU sarà{" "}
+					<strong>ACT - Lead the change</strong>. Come da linee guida
+					TEDx, i dialoghi che verranno presentati riguarderanno
+					diverse materie ed aree tematiche interconnesse,
+					prediligendo le migliori idee ed esperienze ispiratrici:
+				</p>
+				<div className="row gap-5">
+					<div className="col container theme-card">
+						<strong
+							style={{
+								fontSize: "240px",
+								color: global.COLORS.ROSSO_TED_2022,
+							}}
+						>
+							A
+						</strong>
+						<p style={{ fontSize: "20px", textAlign: "justify" }}>
+							<strong
+								style={{ color: global.COLORS.ROSSO_TED_2022 }}
+							>
+								Action
+							</strong>
+							: La cultura dell'azione contro la cultura
+							dell'inerzia e il ruolo della cittadinanza attiva
+							nell'educazione del futuro.
+						</p>
+					</div>
+					<div className="col theme-card">
+						<strong
+							style={{
+								fontSize: "240px",
+								color: global.COLORS.ROSSO_TED_2022,
+							}}
+						>
+							C
+						</strong>
+						<p>
+							<strong>Cross-Fertilization</strong>: La
+							predisposizione alla creatività ed empatia, la pop
+							education e i nuovi orizzonti della contaminazione
+							tra i saperi.
+						</p>
+					</div>
+					<div className="col theme-card d-flex justify-content-center">
+						<strong
+							style={{
+								fontSize: "240px",
+								color: global.COLORS.ROSSO_TED_2022,
+							}}
+						>
+							T
+						</strong>
+						<p>
+							<strong>Transformation</strong>: Il digitale e la
+							realtà integrata, la trasformazione dei modelli
+							educativi e il valore dell'esperienza nella crescita
+							dell'individuo.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="container">
+				{/* <h1
 					className="font-weight-bold mt-5 mb-3"
 					style={{
 						fontSize: "45px",
@@ -162,7 +239,7 @@ export default function Edizione2022() {
 						modelli educativi e il valore dell'esperienza nella
 						crescita dell'individuo.
 					</p>
-				</div>
+				</div> */}
 
 				<div className="container">
 					<h1

@@ -26,6 +26,27 @@ code {
 }
 
 /*
+	EDIZIONE 2022 
+*/
+
+.theme-card {
+	height: 500px;
+	border: 2px solid #e62b1e;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.theme-card p {
+	font-size: 20px;
+}
+
+.theme-card p strong {
+	color: #e62b1e;
+}
+
+/*
   GRADIENTI PER SFONDI HEADER PAGINE
 */
 .gradient-background {
