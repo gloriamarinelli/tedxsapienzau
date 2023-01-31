@@ -113,8 +113,8 @@ export default function Edizione2022() {
 				>
 					IL TEMA DELL'EVENTO
 				</h1>
-				<p style={{ fontSize: "20px" }}>
-					Il titolo della prima edizione del TEDxSapienzaU sarà
+				<p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
+					Il titolo della prima edizione del TEDxSapienzaU sarà{" "}
 					<strong>ACT - Lead the change</strong>. Come da linee guida
 					TEDx, i dialoghi che verranno presentati riguarderanno
 					diverse materie ed aree tematiche interconnesse,
@@ -123,15 +123,15 @@ export default function Edizione2022() {
 				{/** CARDS */}
 				<div className="row gap-5 d-flex justify-content-center">
 					<div className="col-lg-3 theme-card">
-						<LazyLoadImage
-							src={pecoraImage}
-							className="theme-card-image"
-						/>
-						<p style ={{
-							fontSize: "250px",
-							color: "#fff",
-							zIndex: "2"
-						}}>A</p>
+						<p
+							style={{
+								fontSize: "250px",
+								color: "#fff",
+								zIndex: "2",
+							}}
+						>
+							A
+						</p>
 						<p>
 							<strong>Action</strong>: La cultura dell'azione
 							contro la cultura dell'inerzia e il ruolo della
@@ -139,11 +139,19 @@ export default function Edizione2022() {
 						</p>
 					</div>
 					<div className="col-lg-3 theme-card">
-					<p style ={{
-							fontSize: "250px",
-							color: "#fff",
-							zIndex: "2"
-						}}>C</p>
+						<LazyLoadImage
+							src={pecoraImage}
+							className="theme-card-image"
+						/>
+						<p
+							style={{
+								fontSize: "250px",
+								color: "#fff",
+								zIndex: "2",
+							}}
+						>
+							C
+						</p>
 						<p>
 							<strong>Cross-Fertilization</strong>: La
 							predisposizione alla creatività ed empatia, la pop
@@ -152,11 +160,15 @@ export default function Edizione2022() {
 						</p>
 					</div>
 					<div className="col-lg-3 theme-card">
-					<p style ={{
-							fontSize: "250px",
-							color: "#fff",
-							zIndex: "2"
-						}}>T</p>
+						<p
+							style={{
+								fontSize: "250px",
+								color: "#fff",
+								zIndex: "2",
+							}}
+						>
+							T
+						</p>
 						<p>
 							<strong>Transformation</strong>: Il digitale e la
 							realtà integrata, la trasformazione dei modelli

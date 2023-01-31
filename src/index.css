@@ -44,8 +44,10 @@ code {
 }
 
 .theme-card {
-	background: linear-gradient(rgba(230, 43, 30, 0.8) 50%, rgba(227, 227, 227, 0.8));
-	border: 2px solid #e62b1e;
+	background: linear-gradient(
+		rgba(230, 43, 30, 0.8) 50%,
+		rgba(227, 227, 227, 0.8)
+	);
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
@@ -56,9 +58,11 @@ code {
 .theme-card-image {
 	position: absolute;
 	width: 200px;
-	top: 20px;
-	right: 0px;
+	top: 30px;
+	right: 40px;
 	z-index: 1;
+	overflow: hidden;
+	transform: scale(1.1);
 }
 
 .theme-card p {
