@@ -44,7 +44,7 @@ code {
 }
 
 .theme-card {
-	background: linear-gradient(#e62b1e 70%, rgba(0, 0, 0, 0.8));
+	background: linear-gradient(rgba(230, 43, 30, 0.8) 50%, rgba(227, 227, 227, 0.8));
 	border: 2px solid #e62b1e;
 	border-radius: 20px;
 	display: flex;
@@ -61,22 +61,16 @@ code {
 	z-index: 1;
 }
 
-.theme-card > strong {
-	font-size: 200px;
-	color: #fff;
-	z-index: 2;
-}
-
 .theme-card p {
 	font-size: 18px;
 	text-align: justify;
 	max-width: 22ch;
 	font-family: GothamBook;
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 .theme-card > p > strong {
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 992px) {
