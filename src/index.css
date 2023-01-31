@@ -74,3 +74,10 @@ code {
 	background: radial-gradient(ellipse at top, #e62b1e, transparent),
 		radial-gradient(ellipse at bottom, #822433, transparent);
 }
+
+.header-ed2022{
+	background-image: url("./components/images/Edizione2022.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

@@ -41,7 +41,7 @@ export default function Edizione2022() {
 	return (
 		<>
 			<header
-				className="header ed2022"
+				className="header-ed2022"
 				style={{
 					padding: "10px",
 					textAlign: "center",
@@ -50,9 +50,7 @@ export default function Edizione2022() {
 					
 				}}
 			>
-				<div>
-					<LazyLoadImage src={Image} alt="Pecora" height="300" />
-				</div>
+				
 			</header>
 
 			<section className="where-is-the-event row pt-3 pb-3">
