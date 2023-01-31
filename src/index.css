@@ -18,6 +18,10 @@ code {
 	src: url("./resources/Gotham-Bold.otf") format("opentype");
 }
 
+* {
+	font-family: GothamBold;
+}
+
 .underlined::after {
 	content: "";
 	display: block;
@@ -29,8 +33,13 @@ code {
 	EDIZIONE 2022 
 */
 
+.theme-card-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .theme-card {
-	height: 500px;
+	background-color: #e62b1e;
 	border: 2px solid #e62b1e;
 	border-radius: 20px;
 	display: flex;
@@ -38,12 +47,24 @@ code {
 	align-items: center;
 }
 
-.theme-card p {
-	font-size: 20px;
+.theme-card > strong {
+	font-size: 200px;
+	color: #fff;
 }
 
-.theme-card p strong {
-	color: #e62b1e;
+.theme-card p {
+	text-align: justify;
+	max-width: 22ch;
+}
+
+.theme-card > p > strong {
+	color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+	.theme-card p {
+		max-width: 40ch;
+	}
 }
 
 /*
@@ -122,4 +143,5 @@ code {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 2;
 }

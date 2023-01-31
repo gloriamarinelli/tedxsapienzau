@@ -114,43 +114,24 @@ export default function Edizione2022() {
 				>
 					IL TEMA DELL'EVENTO
 				</h1>
-				<p>
+				<p style={{ fontSize: "20px" }}>
 					Il titolo della prima edizione del TEDxSapienzaU sarà{" "}
 					<strong>ACT - Lead the change</strong>. Come da linee guida
 					TEDx, i dialoghi che verranno presentati riguarderanno
 					diverse materie ed aree tematiche interconnesse,
 					prediligendo le migliori idee ed esperienze ispiratrici:
 				</p>
-				<div className="row gap-5">
-					<div className="col container theme-card">
-						<strong
-							style={{
-								fontSize: "240px",
-								color: global.COLORS.ROSSO_TED_2022,
-							}}
-						>
-							A
-						</strong>
-						<p style={{ fontSize: "20px", textAlign: "justify" }}>
-							<strong
-								style={{ color: global.COLORS.ROSSO_TED_2022 }}
-							>
-								Action
-							</strong>
-							: La cultura dell'azione contro la cultura
-							dell'inerzia e il ruolo della cittadinanza attiva
-							nell'educazione del futuro.
+				<div className="row gap-5 d-flex justify-content-center">
+					<div className="col-lg-3 theme-card">
+						<strong>A</strong>
+						<p>
+							<strong>Action</strong>: La cultura dell'azione
+							contro la cultura dell'inerzia e il ruolo della
+							cittadinanza attiva nell'educazione del futuro.
 						</p>
 					</div>
-					<div className="col theme-card">
-						<strong
-							style={{
-								fontSize: "240px",
-								color: global.COLORS.ROSSO_TED_2022,
-							}}
-						>
-							C
-						</strong>
+					<div className="col-lg-3 theme-card">
+						<strong>C</strong>
 						<p>
 							<strong>Cross-Fertilization</strong>: La
 							predisposizione alla creatività ed empatia, la pop
@@ -158,15 +139,8 @@ export default function Edizione2022() {
 							tra i saperi.
 						</p>
 					</div>
-					<div className="col theme-card d-flex justify-content-center">
-						<strong
-							style={{
-								fontSize: "240px",
-								color: global.COLORS.ROSSO_TED_2022,
-							}}
-						>
-							T
-						</strong>
+					<div className="col-lg-3 theme-card">
+						<strong>T</strong>
 						<p>
 							<strong>Transformation</strong>: Il digitale e la
 							realtà integrata, la trasformazione dei modelli

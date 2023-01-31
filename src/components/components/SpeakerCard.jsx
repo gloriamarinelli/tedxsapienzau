@@ -31,6 +31,7 @@ export default function SpeakerCardv2({
 			}}
 		>
 			<div className="speaker-card">
+				<div className="speaker-card-filter"></div>
 				<LazyLoadImage
 					src={imgSrc}
 					alt={nomeSpeaker}
