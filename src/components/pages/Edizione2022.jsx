@@ -23,8 +23,7 @@ import Awards2 from "../images/Eleonora Pariset.jpg";
 import Awards3 from "../images/Arianna Peduzzi.jpg";
 import Awards4 from "../images/Serena Spanò.jpg";
 
-import Image2 from "../images/logo-black.png";
-import Image3 from "../images/stage2022.jpeg";
+import pecoraImage from "../images/pecora.png";
 
 import SpeakerCard from "../components/SpeakerCard";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
@@ -121,8 +120,13 @@ export default function Edizione2022() {
 					diverse materie ed aree tematiche interconnesse,
 					prediligendo le migliori idee ed esperienze ispiratrici:
 				</p>
+				{/** CARDS */}
 				<div className="row gap-5 d-flex justify-content-center">
 					<div className="col-lg-3 theme-card">
+						<LazyLoadImage
+							src={pecoraImage}
+							className="theme-card-image"
+						/>
 						<strong>A</strong>
 						<p>
 							<strong>Action</strong>: La cultura dell'azione

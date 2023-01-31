@@ -18,6 +18,11 @@ code {
 	src: url("./resources/Gotham-Bold.otf") format("opentype");
 }
 
+@font-face {
+	font-family: GothamBook;
+	src: url("./resources/Gotham-Book.otf") format("opentype");
+}
+
 * {
 	font-family: GothamBold;
 }
@@ -39,22 +44,35 @@ code {
 }
 
 .theme-card {
-	background-color: #e62b1e;
+	background: linear-gradient(#e62b1e 70%, rgba(0, 0, 0, 0.8));
 	border: 2px solid #e62b1e;
 	border-radius: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+}
+
+.theme-card-image {
+	position: absolute;
+	width: 200px;
+	top: 20px;
+	right: 0px;
+	z-index: 1;
 }
 
 .theme-card > strong {
 	font-size: 200px;
 	color: #fff;
+	z-index: 2;
 }
 
 .theme-card p {
+	font-size: 18px;
 	text-align: justify;
 	max-width: 22ch;
+	font-family: GothamBook;
+	color: #fff;
 }
 
 .theme-card > p > strong {

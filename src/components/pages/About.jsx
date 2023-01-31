@@ -46,6 +46,7 @@ export default function About() {
 							className="lead"
 							style={{
 								textAlign: "justify",
+								fontFamily: "GothamBook",
 							}}
 						>
 							TED è un'organizzazione no profit dedicata alla
@@ -78,6 +79,7 @@ export default function About() {
 								className="lead"
 								style={{
 									textAlign: "justify",
+									fontFamily: "GothamBook",
 								}}
 							>
 								Per poter ampliare la diffusione delle Idee di
@@ -104,6 +106,7 @@ export default function About() {
 								className="lead mt-3"
 								style={{
 									textAlign: "justify",
+									fontFamily: "GothamBook",
 								}}
 							>
 								Il TEDxSapienzaU è il primo TED Universitario
