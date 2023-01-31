@@ -1,0 +1,111 @@
+/*
+ WHERE IS TH EVENT
+*/
+
+.where-is-the-event {
+	background-color: black;
+	width: 100vw;
+	display: flex;
+	font-family: GothamBook;
+}
+
+.where-is-the-event > div:nth-child(1) {
+	display: flex;
+	padding: 50px;
+	color: white;
+	gap: 30px;
+	font-size: 18px;
+	flex-direction: column;
+}
+
+.where-is-the-event > div:nth-child(2) {
+	display: grid;
+	place-items: center;
+}
+
+/*
+  THEME CARDS
+*/
+
+.theme-card-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.theme-card {
+	background: linear-gradient(
+		rgba(230, 43, 30, 0.8) 50%,
+		rgba(227, 227, 227, 0.8)
+	);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.theme-card-image {
+	position: absolute;
+	width: 200px;
+	top: 30px;
+	right: 40px;
+	z-index: 1;
+	overflow: hidden;
+	transform: scale(1.1);
+}
+
+.theme-card p {
+	font-size: 18px;
+	text-align: justify;
+	max-width: 22ch;
+	font-family: GothamBook;
+	color: rgb(0, 0, 0);
+}
+
+.theme-card > p > strong {
+	color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 992px) {
+	.theme-card p {
+		max-width: 40ch;
+	}
+}
+
+/** SPEAKER CARD **/
+
+.speaker-card {
+	position: relative;
+	overflow: hidden;
+	flex: 0 0 300px;
+}
+
+.speaker-card-image {
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.speaker-card:hover .speaker-card-text {
+	left: 0;
+}
+
+.speaker-card:hover .speaker-card-image {
+	transform: scale(1.2);
+}
+
+.speaker-card-text {
+	position: absolute;
+	bottom: 7%;
+	left: -100%;
+	background-color: #000;
+	width: 60%;
+	height: 15%;
+	transition: all 0.3s ease;
+	color: white;
+	font-size: 23px;
+	font-family: GothamBold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}

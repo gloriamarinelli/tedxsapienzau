@@ -3,6 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 
 import "../../index.css";
+import "../../resources/styles/edizione2022style.css";
 
 import Image from "../images/Senzanome.png";
 
@@ -24,11 +25,14 @@ import Awards3 from "../images/Arianna Peduzzi.jpg";
 import Awards4 from "../images/Serena Spanò.jpg";
 
 import pecoraImage from "../images/pecora.png";
+import TedxLogo from "../images/logo-white.png";
 
 import SpeakerCard from "../components/SpeakerCard";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
 
 import global from "../../resources/global.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Edizione2022() {
 	const [isBioOpen, setIsBioOpen] = useState(false);
@@ -51,55 +55,34 @@ export default function Edizione2022() {
 				</div>
 			</header>
 
-			<hr className="featurette-divider"></hr>
-
-			<div
-				className="header"
-				style={{
-					textAlign: "left",
-					display: "grid",
-					height: "100",
-				}}
-			>
-				<h1
-					className="font-weight-bold"
-					style={{
-						fontSize: "20px",
-						textAlign: "center",
-						fontWeight: "bold",
-						color: "#EB0028",
-						fontFamily: "GothamBold",
-					}}
-				>
-					Venerdì 29 aprile
-				</h1>
-
-				<h1
-					className="font-weight-bold "
-					style={{
-						fontSize: "20px",
-						textAlign: "center",
-						fontWeight: "bold",
-						fontFamily: "GothamBold",
-					}}
-				>
-					Università "La Sapienza" - Aula Magna Rettorato
-				</h1>
-
-				<h1
-					className="font-weight-bold"
-					style={{
-						fontSize: "20px",
-						textAlign: "center",
-						fontWeight: "bold",
-						fontFamily: "GothamBold",
-					}}
-				>
-					Piazzale Aldo Moro 5, Roma
-				</h1>
-			</div>
-
-			<hr className="featurette-divider"></hr>
+			<section className="where-is-the-event row pt-3 pb-3">
+				<div className="col-md-6">
+					<div className="row">
+						<FontAwesomeIcon
+							className="col-2"
+							icon={faLocationDot}
+							style={{ color: global.COLORS.ROSSO_TED_2022 }}
+							size="2x"
+						/>
+						<p className="col-8">
+							Università La Sapienza - Aula Magna Rettorato
+							Piazzale Aldo Moro, 5, 00185 Roma RM
+						</p>
+					</div>
+					<div className="row">
+						<FontAwesomeIcon
+							className="col-2"
+							icon={faCalendar}
+							style={{ color: global.COLORS.ROSSO_TED_2022 }}
+							size="2x"
+						/>
+						<p className="col-8">29 Aprile 2022</p>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<LazyLoadImage src={TedxLogo} width="400px" />
+				</div>
+			</section>
 
 			<div className="container mb-5">
 				<h1
