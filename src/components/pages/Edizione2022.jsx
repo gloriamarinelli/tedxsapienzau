@@ -5,7 +5,7 @@ import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 import "../../index.css";
 import "../../resources/styles/edizione2022style.css";
 
-import Image from "../images/Senzanome.png";
+import Image from "../images/Edizione2022.png";
 
 import Action1 from "../images/Giovanna Melandri.jpg";
 import Action2 from "../images/Valeria Trombetta.jpg";
@@ -47,11 +47,11 @@ export default function Edizione2022() {
 					textAlign: "center",
 					marginBottom: "10px",
 					height: "45vh",
-					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+					
 				}}
 			>
 				<div>
-					<LazyLoadImage src={Image} alt="Pecora" height="550" />
+					<LazyLoadImage src={Image} alt="Pecora" height="300" />
 				</div>
 			</header>
 
