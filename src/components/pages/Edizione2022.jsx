@@ -5,8 +5,6 @@ import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 import "../../index.css";
 import "../../resources/styles/edizione2022style.css";
 
-import Image from "../images/Edizione2022.png";
-
 import Action1 from "../images/Giovanna Melandri.jpg";
 import Action2 from "../images/Valeria Trombetta.jpg";
 import Action3 from "../images/Fasma.jpg";
