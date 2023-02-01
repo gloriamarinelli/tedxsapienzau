@@ -1,70 +1,78 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
 
 @font-face {
-  font-family: GothamBold;
-  src: url("./resources/Gotham-Bold.otf") format("opentype");
+	font-family: GothamBold;
+	src: url("./resources/Gotham-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: GothamBook;
-  src: url("./resources/Gotham-Book.otf") format("opentype");
+	font-family: GothamBook;
+	src: url("./resources/Gotham-Book.otf") format("opentype");
 }
 
 * {
-  font-family: GothamBold;
+	font-family: GothamBold;
 }
 
 .underlined::after {
-  content: "";
-  display: block;
-  height: 5px;
-  background-color: #eb0028;
+	content: "";
+	display: block;
+	height: 5px;
+	background-color: #eb0028;
 }
 
 /*
   GRADIENTI PER SFONDI HEADER PAGINE
 */
 .gradient-background {
-  background: radial-gradient(
-      circle at 20% 400px,
-      rgba(130, 36, 51, 0.9) 20%,
-      rgba(235, 0, 40, 0) 40%
-    ),
-    radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
+	background: radial-gradient(
+			circle at 20% 400px,
+			rgba(130, 36, 51, 0.9) 20%,
+			rgba(235, 0, 40, 0) 40%
+		),
+		radial-gradient(
+			circle at 70% 10%,
+			rgb(130, 36, 51) 0%,
+			rgb(235, 0, 40) 40%
+		);
 }
 
 .gradient-background-about {
-  background-image: url("./components/images/sapienza1X.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-image: url("./components/images/sapienza1X.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .gradient-background-team2023 {
-  background: radial-gradient(
-      circle at 20% 400px,
-      rgba(130, 36, 51, 0.9) 20%,
-      rgba(235, 0, 40, 0) 40%
-    ),
-    radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
+	background: radial-gradient(
+			circle at 20% 400px,
+			rgba(130, 36, 51, 0.9) 20%,
+			rgba(235, 0, 40, 0) 40%
+		),
+		radial-gradient(
+			circle at 70% 10%,
+			rgb(130, 36, 51) 0%,
+			rgb(235, 0, 40) 40%
+		);
 }
 
 .gradient-background-team2022 {
-  background: radial-gradient(ellipse at top, #e62b1e, transparent),
-    radial-gradient(ellipse at bottom, #822433, transparent);
+	background: radial-gradient(ellipse at top, #e62b1e, transparent),
+		radial-gradient(ellipse at bottom, #822433, transparent);
 }
 
 /*

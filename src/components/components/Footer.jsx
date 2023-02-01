@@ -25,9 +25,14 @@ function Footer() {
 									alt="LogoTedx"
 									width=""
 									height="60"
-									style={{ marginLeft: "-16px" }}
+									style={{
+										marginLeft: "-16px",
+									}}
 								/>
-								<p className="mt-3 mb-0 text-white text-sm">
+								<p
+									className="mt-3 mb-0 text-white text-sm"
+									style={{ fontFamily: "GothamBook" }}
+								>
 									TEDxSapienzaU è un evento TED organizzato in
 									modo indipendente ed è anche il primo TED
 									Universitario che si terrà nell'Università
@@ -39,10 +44,16 @@ function Footer() {
 							</div>
 
 							<div className="col-lg-4 mb-5 mb-lg-0">
-								<h4 className="text-white mt-4 mb-4">
+								<h4
+									className="text-white mt-4 mb-4"
+									style={{ fontFamily: "GothamBook" }}
+								>
 									Resta aggiornato
 								</h4>
-								<p className="text-white font-weight-light mt-1 mb-4">
+								<p
+									className="text-white font-weight-light mt-1 mb-4"
+									style={{ fontFamily: "GothamBook" }}
+								>
 									Iscriviti alla newsletter per rimanere
 									aggiornato sui nostri eventi
 								</p>
@@ -69,7 +80,10 @@ function Footer() {
 							</div>
 
 							<div className="col-lg-4 mb-5 mb-lg-0 ">
-								<h4 className="text-white mt-4 mb-4">
+								<h4
+									className="text-white mt-4 mb-4"
+									style={{ fontFamily: "GothamBook" }}
+								>
 									Seguici sui social
 								</h4>
 								<div
@@ -108,11 +122,17 @@ function Footer() {
 										/>
 									</a>
 								</div>
-								<h5 className="mt-5 mb-0 text-white">
+								<h5
+									className="mt-5 mb-0 text-white"
+									style={{ fontFamily: "GothamBook" }}
+								>
 									Cerchi informazioni o vuoi proporre la tua
 									idea? Contattaci!
 								</h5>
-								<p className="text-white font-weight-light mt-3 mb-4">
+								<p
+									className="text-white font-weight-light mt-3 mb-4"
+									style={{ fontFamily: "GothamBook" }}
+								>
 									info@tedxsapienzau.com
 								</p>
 							</div>
