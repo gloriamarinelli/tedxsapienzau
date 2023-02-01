@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 
 import "../../index.css";
 import "../../resources/styles/edizione2022style.css";

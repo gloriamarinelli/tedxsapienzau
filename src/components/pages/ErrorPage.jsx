@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import global from "../../resources/global.json";
