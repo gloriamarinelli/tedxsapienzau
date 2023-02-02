@@ -114,7 +114,7 @@ export default function Blog() {
 						/>
               </div>
               <div class="media-body">
-                <span class="media-date">9 dic 2022</span>
+                <span class="media-date">09 dic 2022</span>
                 <h5 class="mt-3 sep">
                   Progresso: antiche istruzioni per l'uso
                 </h5>
@@ -139,7 +139,7 @@ export default function Blog() {
 						/>
               </div>
               <div class="media-body">
-                <span class="media-date">2 dic 2022</span>
+                <span class="media-date">02 dic 2022</span>
                 <h5 class="mt-3 sep">
                   ProVocAzione: musica, sensualità ed identità. Volosumarte
                 </h5>
