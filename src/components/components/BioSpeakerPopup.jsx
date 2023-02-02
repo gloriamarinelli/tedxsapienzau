@@ -4,6 +4,8 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+import "../../resources/styles/edizione2022style.css";
+
 export default function BioSpeakerPopup({
 	isBioOpen,
 	setIsBioOpen,
@@ -25,6 +27,7 @@ export default function BioSpeakerPopup({
 				opacity: isBioOpen ? 1 : 0,
 				pointerEvents: isBioOpen ? "initial" : "none",
 				transition: "all 0.4s ease-in-out",
+				zIndex: 10,
 			}}
 			onClick={() => setIsBioOpen(false)}
 		>
@@ -61,14 +64,24 @@ export default function BioSpeakerPopup({
 						fontFamily: "GothamBold",
 					}}
 				>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/ew0ceIXgV6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/ew0ceIXgV6g"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
+
+					<div className="tag-speaker mt-3 mb-1">{selectedSpeakerInfo.tag}</div>
 					<h1>{selectedSpeakerInfo.nomeSpeaker}</h1>
-					<p style={{ fontSize: "20px", marginTop: "20px" }}>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Inventore dolorem alias repellendus optio deleniti
-						iusto facilis dolorum animi ipsam suscipit ipsa maiores
-						nihil, ex quae asperiores quia expedita nemo error
-						voluptatibus repellat placeat adipisci! Sequi a soluta
+
+					<p className="mt-1" style={{ fontSize: "20px" }}>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+						dolorem alias repellendus optio deleniti iusto facilis dolorum animi
+						ipsam suscipit ipsa maiores nihil, ex quae asperiores quia expedita
+						nemo error voluptatibus repellat placeat adipisci! Sequi a soluta
 						delectus eum ducimus.
 					</p>
 				</div>

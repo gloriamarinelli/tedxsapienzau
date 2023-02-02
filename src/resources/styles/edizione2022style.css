@@ -114,3 +114,15 @@
 	align-items: center;
 	z-index: 2;
 }
+
+/**
+* SPEAKER BIO POPUP
+**/
+
+.tag-speaker {
+	width: fit-content;
+	padding: 5px 15px;
+	border-radius: 25px;
+	background-color: #0c9deb;
+	font-size: 15px;
+}

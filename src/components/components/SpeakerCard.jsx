@@ -11,11 +11,13 @@ export default function SpeakerCardv2({
 	imgSrc,
 	linkTalk,
 	bio,
+	tag,
 	setIsBioOpen,
 	setSelectedSpeakerInfo,
 }) {
 	return (
 		<card
+			className="col-4"
 			style={{
 				display: "flex",
 				flexDirection: "column",
@@ -27,6 +29,7 @@ export default function SpeakerCardv2({
 				setSelectedSpeakerInfo({
 					nomeSpeaker: nomeSpeaker,
 					imgSrc: imgSrc,
+					tag: tag,
 				});
 			}}
 		>
