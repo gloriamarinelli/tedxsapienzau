@@ -22,7 +22,7 @@ import Awards3 from "../images/Arianna Peduzzi.jpg";
 import Awards4 from "../images/Serena Spanò.jpg";
 
 import pecoraImage from "../images/pecora.png";
-import TedxLogo from "../images/logo-white.png";
+import TedxLogo from "../images/TEDlogovecchio.png";
 
 import SpeakerCard from "../components/SpeakerCard";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";

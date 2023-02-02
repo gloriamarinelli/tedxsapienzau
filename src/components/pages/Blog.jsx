@@ -60,7 +60,7 @@ export default function Blog() {
               </div>
               <div class="media-body">
                 <span class="media-date">24 dic 2022</span>
-                <h5 class="mt-3 sep">
+                <h5 class="mt-3">
                   Natale con TEDxSapienzaU: un albero condiviso e mille idee
                   appese ai rami
                 </h5>
@@ -86,7 +86,7 @@ export default function Blog() {
               </div>
               <div class="media-body">
                 <span class="media-date">16 dic 2022</span>
-                <h5 class="mt-3 sep">
+                <h5 class="mt-3">
                   {" "}
                   Essere artisti nel mondo degli NFT: l’autenticità restituisce
                   valore ai digital artists
@@ -115,7 +115,7 @@ export default function Blog() {
               </div>
               <div class="media-body">
                 <span class="media-date">09 dic 2022</span>
-                <h5 class="mt-3 sep">
+                <h5 class="mt-3">
                   Progresso: antiche istruzioni per l'uso
                 </h5>
                 <a
@@ -140,7 +140,7 @@ export default function Blog() {
               </div>
               <div class="media-body">
                 <span class="media-date">02 dic 2022</span>
-                <h5 class="mt-3 sep">
+                <h5 class="mt-3">
                   ProVocAzione: musica, sensualità ed identità. Volosumarte
                 </h5>
                 <a
