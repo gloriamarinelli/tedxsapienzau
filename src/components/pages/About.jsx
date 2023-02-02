@@ -209,34 +209,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <section class="pt-5 pb-5">
-        <div class="container">
-          <div class="row gap-5 justify-content-center align-items-center">
-            <div class="card" style={{ width: "30rem" }}>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-            </div>
-            <div class="card" style={{ width: "30rem" }}>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-            </div>
-            <div class="card" style={{ width: "30rem" }}>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

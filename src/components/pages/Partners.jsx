@@ -10,7 +10,7 @@ export default function Partners() {
 
   return (
     <>
-      <div
+    <div
         className="header gradient-background"
         style={{
           padding: "10px",
@@ -55,13 +55,14 @@ export default function Partners() {
             ref={button2023}
             className="year-button"
             type="button"
-            style={{ marginLeft: "30px" }}
+            style={{ marginLeft: "30px", color: "grey" }}
+            /*
             onClick={() => {
               console.log("click");
               button2022.current.classList.remove("underlined");
               button2023.current.classList.add("underlined");
               setActiveYear(2023);
-            }}
+            }} */
           >
             2023
           </div>
@@ -227,38 +228,38 @@ function getSponsors2022() {
         <PartnerCard
           title="Queesy"
           imgSrc="https://cdn.shopify.com/s/files/1/0267/7194/7575/files/queesy-logo-header_1350x.png?v=1618655220"
-		  linkSite="https://queesy.com/"
-		/>
+          linkSite="https://queesy.com/"
+        />
         <PartnerCard
           title="Red Bull"
           imgSrc="https://loghi-famosi.com/wp-content/uploads/2020/11/Red-Bull-Logo.png"
-		  linkSite="https://www.redbull.com/it-it/"
-		/>
+          linkSite="https://www.redbull.com/it-it/"
+        />
         <PartnerCard
           title="Morettino"
           imgSrc="https://i0.wp.com/newsfood.com/wp-content/uploads/2009/07/17/20090717154415-bf0acfdc.jpg?fit=800%2C600&ssl=1"
-		  linkSite="https://morettino.com/it_it/caffe?gclid=EAIaIQobChMIgOzuj_rp_AIVw_Z3Ch02BAjyEAAYASAAEgKhNvD_BwE"
-		/>
+          linkSite="https://morettino.com/it_it/caffe?gclid=EAIaIQobChMIgOzuj_rp_AIVw_Z3Ch02BAjyEAAYASAAEgKhNvD_BwE"
+        />
         <PartnerCard
           title="Steccolecco"
           imgSrc="https://steccolecco.com/wp-content/uploads/2019/06/logo-233x300.png"
-		  linkSite="https://steccolecco.com/"
-		/>
+          linkSite="https://steccolecco.com/"
+        />
         <PartnerCard
           title="Gorillas"
           imgSrc="https://techprincess.it/wp-content/uploads/2022/02/Save-the-Waste-2.jpg"
-		  linkSite="https://gorillas.io/it"
-		/>
+          linkSite="https://gorillas.io/it"
+        />
         <PartnerCard
           title="Up2You"
           imgSrc="https://www.startup-turismo.it/wp-content/uploads/2022/06/logo-14.png"
-		  linkSite="https://www.u2y.io/"
-		/>
+          linkSite="https://www.u2y.io/"
+        />
         <PartnerCard
           title="Green Hole"
           imgSrc="https://uqrmecdn.s3.us-east-2.amazonaws.com/u/314241/701532-1237158219cc6b3f47dd0f4c6d417df04ef0cd4.jpg"
-		  linkSite="https://www.greenholeconcept.com/"
-		/>
+          linkSite="https://www.greenholeconcept.com/"
+        />
       </div>
     </section>
   );

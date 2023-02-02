@@ -72,7 +72,7 @@ export default function Edizione2022() {
           </div>
         </div>
         <div className="col-md-6">
-          <LazyLoadImage src={TedxLogo} width="400px" />
+          <LazyLoadImage src={TedxLogo} width="300px" />
         </div>
       </section>
 

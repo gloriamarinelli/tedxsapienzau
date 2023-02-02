@@ -144,7 +144,7 @@ export default function Blog() {
                   ProVocAzione: musica, sensualità ed identità. Volosumarte
                 </h5>
                 <a
-                  href="blog-post-right-sidebar.html"
+                  href=""
                   class="btn btn-transparent"
                 >
                   View More

@@ -61,15 +61,7 @@ export default function BioSpeakerPopup({
 						fontFamily: "GothamBold",
 					}}
 				>
-					<LazyLoadImage
-						src={selectedSpeakerInfo.imgSrc}
-						alt={selectedSpeakerInfo.nomeSpeaker}
-						height="300"
-						className="speaker-card-image"
-						style={{
-							marginBottom: "50px",
-						}}
-					/>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ew0ceIXgV6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					<h1>{selectedSpeakerInfo.nomeSpeaker}</h1>
 					<p style={{ fontSize: "20px", marginTop: "20px" }}>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
