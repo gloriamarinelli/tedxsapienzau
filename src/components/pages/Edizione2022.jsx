@@ -150,7 +150,7 @@ export default function Edizione2022() {
 			</div>
 
 			<div className="container">
-				{/* <h1
+				<h1
 					className="font-weight-bold mt-5 mb-3"
 					style={{
 						fontSize: "45px",
@@ -159,104 +159,36 @@ export default function Edizione2022() {
 						marginLeft: "30px",
 					}}
 				>
-					IL TEMA DELL'EVENTO
+					GLI SPEAKER
 				</h1>
-
-				<div
-					className="mb-5"
-					style={{
-						textAlign: "justify",
-						fontSize: "20px",
-						marginLeft: "30px",
-					}}
-				>
-					<p>
-						Il titolo della prima edizione del TEDxSapienzaU sarà{" "}
-						<strong>ACT - Lead the change</strong>.{" "}
-					</p>
-
-					<p>
-						Come da linee guida TEDx, i dialoghi che verranno
-						presentati riguarderanno diverse materie ed aree
-						tematiche interconnesse, prediligendo le migliori idee
-						ed esperienze ispiratrici:
-					</p>
-					<p>
-						<strong style={{ color: "#E62B1E", fontSize: "35px" }}>
-							ACTION.
-						</strong>{" "}
-					</p>
-					<p>
-						La cultura dell'azione contro la cultura dell'inerzia e
-						il ruolo della cittadinanza attiva nell'educazione del
-						futuro.{" "}
-					</p>
-					<p>
-						<strong style={{ color: "#E62B1E", fontSize: "35px" }}>
-							CROSS-FERTILIZATION.
-						</strong>{" "}
-					</p>
-					<p>
-						La predisposizione alla creatività ed empatia, la pop
-						education e i nuovi orizzonti della contaminazione tra i
-						saperi.{" "}
-					</p>
-					<p>
-						<strong style={{ color: "#E62B1E", fontSize: "35px" }}>
-							TRANSFORMATION.
-						</strong>{" "}
-					</p>
-					<p>
-						Il digitale e la realtà integrata, la trasformazione dei
-						modelli educativi e il valore dell'esperienza nella
-						crescita dell'individuo.
-					</p>
-				</div> */}
-
-				<div className="container">
-					<h1
-						className="font-weight-bold mt-5 mb-3"
-						style={{
-							fontSize: "45px",
-							textAlign: "center",
-							fontWeight: "bold",
-							marginLeft: "30px",
-						}}
-					>
-						GLI SPEAKER
-					</h1>
-					<div className="row">
-						<SpeakerCard
-							nomeSpeaker="Giovanna Melandri"
-							imgSrc={Action1}
-							linkTalk="https://youtu.be/MiGjiZrhAeg"
-							tag="Action"
-							bio=""
-							setIsBioOpen={setIsBioOpen}
-							setSelectedSpeakerInfo={setSelectedSpeakerInfo}
-						/>
-						<SpeakerCard
-							nomeSpeaker="Valeria Trombetta"
-							imgSrc={Action2}
-							linkTalk="https://youtu.be/zTfHpas8FHM"
-							tag="Action"
-							bio=""
-							setIsBioOpen={setIsBioOpen}
-							setSelectedSpeakerInfo={setSelectedSpeakerInfo}
-						/>
-						<SpeakerCard
-							nomeSpeaker="Fasma"
-							imgSrc={Action3}
-							linkTalk="https://youtu.be/BTTkcs7F1AY"
-							tag="Action"
-							bio=""
-							setIsBioOpen={setIsBioOpen}
-							setSelectedSpeakerInfo={setSelectedSpeakerInfo}
-						/>
-					</div>
-				</div>
-
-				<div className="row">
+				<div className="row mb-5">
+					<SpeakerCard
+						nomeSpeaker="Giovanna Melandri"
+						imgSrc={Action1}
+						linkTalk="https://youtu.be/MiGjiZrhAeg"
+						tag="Action"
+						bio=""
+						setIsBioOpen={setIsBioOpen}
+						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+					/>
+					<SpeakerCard
+						nomeSpeaker="Valeria Trombetta"
+						imgSrc={Action2}
+						linkTalk="https://youtu.be/zTfHpas8FHM"
+						tag="Action"
+						bio=""
+						setIsBioOpen={setIsBioOpen}
+						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+					/>
+					<SpeakerCard
+						nomeSpeaker="Fasma"
+						imgSrc={Action3}
+						linkTalk="https://youtu.be/BTTkcs7F1AY"
+						tag="Action"
+						bio=""
+						setIsBioOpen={setIsBioOpen}
+						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+					/>
 					<SpeakerCard
 						nomeSpeaker="Viviana Bottaro"
 						imgSrc={Cross1}
@@ -284,9 +216,6 @@ export default function Edizione2022() {
 						setIsBioOpen={setIsBioOpen}
 						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
 					/>
-				</div>
-
-				<div className="row">
 					<SpeakerCard
 						nomeSpeaker="Vittorio Loreto"
 						imgSrc={Transf1}
@@ -314,9 +243,6 @@ export default function Edizione2022() {
 						setIsBioOpen={setIsBioOpen}
 						setSelectedSpeakerInfo={setSelectedSpeakerInfo}
 					/>
-				</div>
-
-				<div className="mb-5 row">
 					<SpeakerCard
 						nomeSpeaker="Volosumarte"
 						imgSrc={Awards1}

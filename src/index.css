@@ -1,8 +1,8 @@
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-		"Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
@@ -25,6 +25,7 @@ code {
 
 * {
 	font-family: GothamBold;
+	scroll-behavior: smooth;
 }
 
 .underlined::after {
@@ -43,11 +44,7 @@ code {
 			rgba(130, 36, 51, 0.9) 20%,
 			rgba(235, 0, 40, 0) 40%
 		),
-		radial-gradient(
-			circle at 70% 10%,
-			rgb(130, 36, 51) 0%,
-			rgb(235, 0, 40) 40%
-		);
+		radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
 }
 
 .gradient-background-about {
@@ -63,15 +60,10 @@ code {
 			rgba(130, 36, 51, 0.9) 20%,
 			rgba(235, 0, 40, 0) 40%
 		),
-		radial-gradient(
-			circle at 70% 10%,
-			rgb(130, 36, 51) 0%,
-			rgb(235, 0, 40) 40%
-		);
+		radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
 }
 
 .gradient-background-team2022 {
 	background: radial-gradient(ellipse at top, #e62b1e, transparent),
 		radial-gradient(ellipse at bottom, #822433, transparent);
 }
-

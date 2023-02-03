@@ -17,7 +17,7 @@ export default function SpeakerCardv2({
 }) {
 	return (
 		<card
-			className="col-4"
+			className="col-lg-4 col-md-6"
 			style={{
 				display: "flex",
 				flexDirection: "column",
