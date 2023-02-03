@@ -65,8 +65,8 @@ export default function Blog() {
 									Natale con TEDxSapienzaU: un albero condiviso e mille idee
 									appese ai rami
 								</h5>
-								<Link to="/post/1" class="btn btn-transparent">
-									View More
+								<Link to="/post/1">
+									<button className="button">View More</button>
 								</Link>
 							</div>
 						</div>
