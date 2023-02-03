@@ -14,6 +14,7 @@ import Team2023 from "./components/pages/Team2023";
 import Team2022 from "./components/pages/Team2022";
 import Edizioni2022 from "./components/pages/Edizione2022";
 import Edizione2022 from "./components/pages/Edizione2022";
+import BlogPost from "./components/pages/BlogPost";
 
 const router = createBrowserRouter([
 	{
@@ -42,16 +43,16 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: "/tedxsapienzau/",
-				element: <Home />,
-			},
-			{
 				path: "/partners",
 				element: <Partners />,
 			},
 			{
 				path: "/blog",
 				element: <Blog />,
+			},
+			{
+				path: "/post/:id",
+				element: <BlogPost />,
 			},
 			{
 				path: "/join",
