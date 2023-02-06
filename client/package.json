@@ -2,7 +2,7 @@
   "name": "tedxsapienzau",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost:3000",
+  "homepage": "http://localhost:3000/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
@@ -56,5 +56,6 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+  "proxy": "http://localhost:8800/api/"
 }
