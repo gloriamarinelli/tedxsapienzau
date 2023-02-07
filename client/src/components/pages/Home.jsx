@@ -1,10 +1,16 @@
+import { Canvas } from "@react-three/fiber";
 import React from "react";
 import global from "../../resources/global.json";
+import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
 
 export default function Home() {
 	return (
 		<>
-			<div style={{ backgroundColor: "#000" }}>
+			<div
+				style={{
+					backgroundColor: global.COLORS.BLU_SCURO_POSTER,
+				}}
+			>
 				<div
 					id="landing-cover"
 					className="d-flex align-items-center justify-content-center"
@@ -14,9 +20,21 @@ export default function Home() {
 						fontFamily: "GothamBold",
 					}}
 				>
-					<h1 style={{ fontSize: "120px" }} className="text-white">
+					<div
+						style={{
+							position: "absolute",
+							height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+							width: "100%",
+						}}
+					>
+						<Canvas>
+							<DynamicBubbleCanvas />
+						</Canvas>
+					</div>
+					<h1 style={{ fontSize: "120px", zIndex: 2 }} className="text-white">
 						BACK to ZERO
 					</h1>
+
 					<div
 						style={{
 							position: "absolute",
@@ -65,15 +83,13 @@ export default function Home() {
 							</span>
 						</h1>
 						<p style={{ maxWidth: "50ch" }} className="lead pt-5">
-							Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Suscipit exercitationem velit culpa ducimus
-							aliquid consequatur excepturi deserunt voluptatem,
-							sequi, consequuntur necessitatibus dolore quod in,
-							maxime reiciendis veritatis quia praesentium rerum
-							fugiat atque unde porro! Vero cum, architecto
-							explicabo recusandae esse, impedit pariatur earum
-							nihil inventore accusantium nisi natus, dolor
-							dolorum?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+							exercitationem velit culpa ducimus aliquid consequatur excepturi
+							deserunt voluptatem, sequi, consequuntur necessitatibus dolore
+							quod in, maxime reiciendis veritatis quia praesentium rerum fugiat
+							atque unde porro! Vero cum, architecto explicabo recusandae esse,
+							impedit pariatur earum nihil inventore accusantium nisi natus,
+							dolor dolorum?
 						</p>
 					</div>
 					<div></div>
@@ -95,15 +111,13 @@ export default function Home() {
 							</span>
 						</h1>
 						<p style={{ maxWidth: "50ch" }} className="lead pt-5">
-							Lorem ipsum dolor sit, amet consectetur adipisicing
-							elit. Suscipit exercitationem velit culpa ducimus
-							aliquid consequatur excepturi deserunt voluptatem,
-							sequi, consequuntur necessitatibus dolore quod in,
-							maxime reiciendis veritatis quia praesentium rerum
-							fugiat atque unde porro! Vero cum, architecto
-							explicabo recusandae esse, impedit pariatur earum
-							nihil inventore accusantium nisi natus, dolor
-							dolorum?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+							exercitationem velit culpa ducimus aliquid consequatur excepturi
+							deserunt voluptatem, sequi, consequuntur necessitatibus dolore
+							quod in, maxime reiciendis veritatis quia praesentium rerum fugiat
+							atque unde porro! Vero cum, architecto explicabo recusandae esse,
+							impedit pariatur earum nihil inventore accusantium nisi natus,
+							dolor dolorum?
 						</p>
 					</div>
 				</section>
