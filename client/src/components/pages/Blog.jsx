@@ -1,26 +1,22 @@
 import React from "react";
 import "../../resources/styles/blogstyle.css";
-import Image from "../images/blogPOST1.png";
-import Image1 from "../images/blog2.jpg";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Blog = () => {
-	const [blog, setPosts] = useState([]);
+  const [blog, setPosts] = useState([]);
 
-	useEffect(() => {
-		axios
-			.get("http://localhost:8800/posts")
-			.then((res, err) => {
-				console.log(res);
-				setPosts(JSON.stringify(res.data, null, 2));
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	}, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8800/posts")
+      .then((res, err) => {
+        console.log(res);
+        setPosts(JSON.stringify(res.data, null, 2));
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
 	return (
 		<>
