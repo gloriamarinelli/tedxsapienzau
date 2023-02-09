@@ -66,17 +66,16 @@ export default function Blog() {
             <div class="row no-gutters">
               <div class="col-xl-6 col-12 mb-5 mb-xl-0">
                 <div class="col-xl-6 col-12">
-                  <div class="media media-news">
+                  <div class="media media-news"  key={blog.id}>
                     <div class="media-img">
                       <img src={blog.image} width="400" height="280" />
                     </div>
                     <div class="media-body">
-                      <span class="media-date">2 dic 2022</span>
+                      <span class="media-date">{blog.data}</span>
                       <h5 class="mt-3 sep">
-                        ProVocAzione: musica, sensualità ed identità.
-                        Volosumarte
+                      {blog.titolo}
                       </h5>
-                      <p to="/post/1">
+                      <p to={`/blog/${blog.id}`}>
                         <button className="button">View More</button>
                       </p>
                     </div>
