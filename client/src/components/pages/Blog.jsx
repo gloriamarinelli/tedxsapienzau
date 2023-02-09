@@ -63,10 +63,10 @@ export default function Blog() {
         console.log(titolo, data, image);
         return (
           <div class="container">
-            <div class="row no-gutters">
+            <div class="row no-gutters" key={blog.id}>
               <div class="col-xl-6 col-12 mb-5 mb-xl-0">
                 <div class="col-xl-6 col-12">
-                  <div class="media media-news"  key={blog.id}>
+                  <div class="media media-news">
                     <div class="media-img">
                       <img src={blog.image} width="400" height="280" />
                     </div>
