@@ -83,7 +83,7 @@ export default function DynamicBubbleCanvas({ setBg }) {
 	return (
 		<>
 			<PerspectiveCamera makeDefault position={[0, 0, 6]} fov={75}>
-				<a.ambientLight intensity={ambient} />
+				<a.ambientLight intensity={0.4} />
 				<a.pointLight
 					ref={light}
 					position-z={-15}
@@ -108,15 +108,15 @@ export default function DynamicBubbleCanvas({ setBg }) {
 						});
 					}}
 				>
-					<sphereBufferGeometry args={[1, 64, 64]} />
+					<sphereGeometry args={[1, 64, 64]} />
 					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
 				</a.mesh>
 				<a.mesh position={[2.5, 1.5, 4]}>
-					<sphereBufferGeometry args={[1, 64, 64]} />
+					<sphereGeometry args={[1, 64, 64]} />
 					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
 				</a.mesh>
 				<a.mesh position={[-2.5, -1, 4.5]}>
-					<sphereBufferGeometry args={[1, 64, 64]} />
+					<sphereGeometry args={[1, 64, 64]} />
 					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
 				</a.mesh>
 				<ContactShadows
