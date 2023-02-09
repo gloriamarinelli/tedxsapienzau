@@ -183,7 +183,7 @@ export default function Edizione2022() {
               <SpeakerCard
                 key={id}
                 nomeSpeaker={nome}
-                imgSrc={Action1}
+                imgSrc={foto}
                 linkTalk={linkYT}
                 bio={bio}
                 setIsBioOpen={setIsBioOpen}
