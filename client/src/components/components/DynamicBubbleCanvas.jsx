@@ -28,11 +28,11 @@ export default function DynamicBubbleCanvas({ setBg }) {
 
 	// Change cursor on hovered state
 	useEffect(() => {
-		document.body.style.cursor = hovered
-			? "none"
-			: `url('data:image/svg+xml;base64,${btoa(
-					'<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10" fill="#a42332"/></svg>'
-			  )}'), auto`;
+		// document.body.style.cursor = hovered
+		// 	? "none"
+		// 	: `url('data:image/svg+xml;base64,${btoa(
+		// 			'<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10" fill="#a42332"/></svg>'
+		// 	  )}'), auto`;
 	}, [hovered]);
 
 	window.addEventListener("mousemove", (e) => {
@@ -82,7 +82,7 @@ export default function DynamicBubbleCanvas({ setBg }) {
 
 	return (
 		<>
-			<PerspectiveCamera makeDefault position={[0, 0, 6]} fov={75}>
+			<PerspectiveCamera makeDefault position={[0, 0, 5.5]} fov={75}>
 				<a.ambientLight intensity={0.4} />
 				<a.pointLight
 					ref={light}
@@ -111,11 +111,11 @@ export default function DynamicBubbleCanvas({ setBg }) {
 					<sphereGeometry args={[1, 64, 64]} />
 					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
 				</a.mesh>
-				<a.mesh position={[2.5, 1.5, 4]}>
+				<a.mesh position={[2, 1.2, 4]}>
 					<sphereGeometry args={[1, 64, 64]} />
 					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
 				</a.mesh>
-				<a.mesh position={[-2.5, -1, 4.5]}>
+				<a.mesh position={[-2, -0.7, 4.5]}>
 					<sphereGeometry args={[1, 64, 64]} />
 					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
 				</a.mesh>

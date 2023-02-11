@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useRef } from "react";
 import global from "../../resources/global.json";
+import CustomCursor from "../components/CustomCursor";
 import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
 
 export default function Home() {
@@ -31,9 +32,10 @@ export default function Home() {
 							<DynamicBubbleCanvas />
 						</Canvas>
 					</div>
-					<h1 style={{ fontSize: "120px", zIndex: 2 }} className="text-white">
-						BACK to ZERO
-					</h1>
+					<h1
+						style={{ fontSize: "120px", zIndex: 2 }}
+						className="text-white"
+					></h1>
 
 					<div
 						style={{
@@ -56,6 +58,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			{/* <CustomCursor /> */}
 		</>
 	);
 }
