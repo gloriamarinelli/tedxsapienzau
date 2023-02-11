@@ -17,6 +17,7 @@ import Write from "./components/pages/Write";
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+import Login from "./components/pages/Login";
 
 const router = createBrowserRouter([
 	{
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
 			{
 				path: "/write",
 				element: <Write />,
+			},
+			{
+				path: "/login",
+				element: <Login />,
 			},
 		],
 	},

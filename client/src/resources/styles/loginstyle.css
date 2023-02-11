@@ -1,0 +1,36 @@
+.login-main-container {
+	width: 100vw;
+	display: grid;
+	place-items: center;
+}
+
+.login-container {
+	height: 80%;
+	min-height: 400px;
+	width: 450px;
+	background-color: whitesmoke;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	width: max-content;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid #eb0028;
+	color: #eb0028;
+}
+.button:hover {
+	border: 1px solid white;
+	background-color: rgb(235, 0, 40);
+	color: white;
+}
+
+input {
+	height: 40px;
+}
