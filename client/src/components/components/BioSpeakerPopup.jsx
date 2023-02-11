@@ -12,21 +12,22 @@ export default function BioSpeakerPopup({
 	selectedSpeakerInfo,
 }) {
 	return (
-		<div
-			style={{
-				width: "100vw",
-				height: "100vh",
-				backgroundColor: "rgba(0, 0, 0, 0.5)",
-				position: "fixed",
-				top: 0,
-				left: 0,
-				opacity: isBioOpen ? 1 : 0,
-				pointerEvents: isBioOpen ? "initial" : "none",
-				transition: "all 0.4s ease-in-out",
-				zIndex: 10,
-			}}
-			onClick={() => setIsBioOpen(false)}
-		>
+		<div>
+			<div
+				style={{
+					width: "100vw",
+					height: "100vh",
+					backgroundColor: "rgba(0, 0, 0, 0.5)",
+					position: "fixed",
+					top: 0,
+					left: 0,
+					opacity: isBioOpen ? 1 : 0,
+					pointerEvents: isBioOpen ? "initial" : "none",
+					transition: "all 0.4s ease-in-out",
+					zIndex: 10,
+				}}
+				onClick={() => setIsBioOpen(false)}
+			></div>
 			<div
 				style={{
 					height: "100vh",
@@ -34,9 +35,11 @@ export default function BioSpeakerPopup({
 					position: "fixed",
 					top: 0,
 					right: isBioOpen ? 0 : "-100%",
+					zIndex: 11,
 					background:
 						"linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)",
 					transition: "all 0.4s ease-in-out",
+					overflowY: "scroll",
 				}}
 			>
 				<FontAwesomeIcon
