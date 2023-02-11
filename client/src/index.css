@@ -1,8 +1,8 @@
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-		"Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
@@ -34,6 +34,33 @@ code {
 	background-color: #eb0028;
 }
 
+.cursor-dot {
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	mix-blend-mode: difference;
+	position: fixed;
+	pointer-events: none;
+	border-radius: 50%;
+	z-index: 999;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+.bigger {
+	display: block;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	background-color: rgba(0, 0, 0, 0);
+	transition: all 0.15s;
+	-webkit-transition: all 0.15s;
+	-moz-transition: all 0.15s;
+}
+
 /*
   GRADIENTI PER SFONDI HEADER PAGINE
 */
@@ -43,11 +70,7 @@ code {
 			rgba(130, 36, 51, 0.9) 20%,
 			rgba(235, 0, 40, 0) 40%
 		),
-		radial-gradient(
-			circle at 70% 10%,
-			rgb(130, 36, 51) 0%,
-			rgb(235, 0, 40) 40%
-		);
+		radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
 }
 
 .gradient-background-about {
@@ -63,15 +86,10 @@ code {
 			rgba(130, 36, 51, 0.9) 20%,
 			rgba(235, 0, 40, 0) 40%
 		),
-		radial-gradient(
-			circle at 70% 10%,
-			rgb(130, 36, 51) 0%,
-			rgb(235, 0, 40) 40%
-		);
+		radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
 }
 
 .gradient-background-team2022 {
 	background: radial-gradient(ellipse at top, #e62b1e, transparent),
 		radial-gradient(ellipse at bottom, #822433, transparent);
 }
-
