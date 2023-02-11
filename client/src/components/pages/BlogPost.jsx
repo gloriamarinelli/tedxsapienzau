@@ -4,7 +4,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Image from "../images/blogPOST1.png";
 import {
   faFacebook,
   faFacebookF,
@@ -59,7 +58,7 @@ export default function BlogPost() {
           più lo spirito dell’associazione. La condivisione, in questo caso, è
           al centro di tutto, ed è un elemento che ci accomuna con il Natale.
         </p>
-        <img src={Image} alt="Post" className="post-image" />
+        <img  alt="Post" className="post-image" />
         <p>
           Se si ha un’idea che vale è bello metterla a disposizione di tutti,
           proprio come quando gli speaker diffondono le loro conoscenze sul

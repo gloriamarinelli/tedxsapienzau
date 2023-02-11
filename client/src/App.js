@@ -9,7 +9,6 @@ import Blog from "./components/pages/Blog";
 import Join from "./components/pages/Join";
 import Team2023 from "./components/pages/Team2023";
 import Team2022 from "./components/pages/Team2022";
-import Edizioni2022 from "./components/pages/Edizione2022";
 import Edizione2022 from "./components/pages/Edizione2022";
 import BlogPost from "./components/pages/BlogPost";
 
