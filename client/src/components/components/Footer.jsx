@@ -23,7 +23,6 @@ function Footer() {
 
 	const handleResize = () => {
 		setWindowSize(window.innerWidth);
-		console.info("resize");
 	};
 
 	if (windowSize > global.UTILS.MOBILE_WIDTH) {
