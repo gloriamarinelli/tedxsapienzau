@@ -1,90 +1,183 @@
 import React, { useRef, useState } from "react";
 import PartnerCard from "../components/PartnerCard";
-
+import { useOutletContext } from "react-router";
+import global from "../../resources/global.json";
 import "../../index.css";
 
 export default function Partners() {
 	const [activeYear, setActiveYear] = useState(2022);
+	const [windowSize, setWindowSize] = useOutletContext();
 	const button2022 = useRef();
 	const button2023 = useRef();
 
-	return (
-		<>
-			<div
-				className="header gradient-background"
-				style={{
-					padding: "10px",
-					color: "#fff",
-					clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-					height: "40vh",
-					display: "grid",
-					placeItems: "center",
-				}}
-			>
-				<h1
-					className="font-weight-bold mt-5 mb-5"
+	if (windowSize > global.UTILS.MOBILE_WIDTH) {
+		/**
+		 * DESKTOP
+		 */
+		return (
+			<>
+				<div
+					className="header gradient-background"
 					style={{
-						fontSize: "120px",
-						fontWeight: "bold",
+						padding: "10px",
+						color: "#fff",
+						clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+						height: "40vh",
+						display: "grid",
+						placeItems: "center",
+					}}
+				>
+					<h1
+						className="font-weight-bold mt-5 mb-5"
+						style={{
+							fontSize: "120px",
+							fontWeight: "bold",
+							fontFamily: "GothamBold",
+						}}
+					>
+						PARTNERS
+					</h1>
+				</div>
+
+				<section
+					className="mt-5 mb-5"
+					style={{
+						width: "95vw",
+						margin: "auto",
 						fontFamily: "GothamBold",
 					}}
 				>
-					PARTNERS
-				</h1>
-			</div>
-
-			<section
-				className="mt-5 mb-5"
-				style={{
-					width: "95vw",
-					margin: "auto",
-					fontFamily: "GothamBold",
-				}}
-			>
-				<h3
-					style={{
-						fontSize: "25px",
-						fontWeight: "bold",
-						textAlign: "left",
-						color: "black",
-						display: "flex",
-					}}
-				>
-					Chi ci ha supportato:
-					<div
-						ref={button2023}
-						className="year-button"
-						type="button"
-						style={{ marginLeft: "30px", color: "grey", cursor: "initial" }}
-						/*
-            onClick={() => {
-              console.log("click");
-              button2022.current.classList.remove("underlined");
-              button2023.current.classList.add("underlined");
-              setActiveYear(2023);
-            }} */
-					>
-						2023
-					</div>
-					<div
-						ref={button2022}
-						className="year-button underlined"
-						type="button"
-						style={{ marginLeft: "30px" }}
-						onClick={() => {
-							console.log("click");
-							button2023.current.classList.remove("underlined");
-							button2022.current.classList.add("underlined");
-							setActiveYear(2022);
+					<h3
+						style={{
+							fontSize: "25px",
+							fontWeight: "bold",
+							textAlign: "left",
+							color: "black",
+							display: "flex",
 						}}
 					>
-						2022
+						Chi ci ha supportato:
+						<div
+							ref={button2023}
+							className="year-button"
+							type="button"
+							style={{ marginLeft: "30px", color: "grey", cursor: "initial" }}
+							/*
+							onClick={() => {
+								console.log("click");
+								button2022.current.classList.remove("underlined");
+								button2023.current.classList.add("underlined");
+								setActiveYear(2023);
+							}} */
+						>
+							2023
+						</div>
+						<div
+							ref={button2022}
+							className="year-button underlined"
+							type="button"
+							style={{ marginLeft: "30px" }}
+							onClick={() => {
+								console.log("click");
+								button2023.current.classList.remove("underlined");
+								button2022.current.classList.add("underlined");
+								setActiveYear(2022);
+							}}
+						>
+							2022
+						</div>
+					</h3>
+				</section>
+				{activeYear === 2023 ? getSponsors2023() : getSponsors2022()}
+			</>
+		);
+	} else {
+		/**
+		 * MOBILE
+		 */
+		return (
+			<>
+				<div
+					className="header gradient-background"
+					style={{
+						padding: "10px",
+						color: "#fff",
+						height: "30vh",
+						display: "grid",
+						placeItems: "center",
+					}}
+				>
+					<h1
+						className="font-weight-bold mt-5 mb-5"
+						style={{
+							fontSize: "60px",
+							fontWeight: "bold",
+							fontFamily: "GothamBold",
+						}}
+					>
+						PARTNERS
+					</h1>
+				</div>
+
+				<section
+					className="mt-3 mb-5"
+					style={{
+						width: "95vw",
+						margin: "auto",
+						fontFamily: "GothamBold",
+					}}
+				>
+					<h3
+						style={{
+							fontSize: "30px",
+							fontWeight: "bold",
+							textAlign: "left",
+							color: "black",
+							display: "flex",
+						}}
+					>
+						Chi ci ha supportato:
+					</h3>
+					<div style={{ display: "flex" }}>
+						<div
+							ref={button2022}
+							className="year-button underlined"
+							type="button"
+							style={{ marginRight: "30px", fontSize: "30px" }}
+							onClick={() => {
+								console.log("click");
+								button2023.current.classList.remove("underlined");
+								button2022.current.classList.add("underlined");
+								setActiveYear(2022);
+							}}
+						>
+							2022
+						</div>
+						<div
+							ref={button2023}
+							className="year-button"
+							type="button"
+							style={{
+								color: "grey",
+								cursor: "initial",
+								fontSize: "30px",
+							}}
+							/*
+							onClick={() => {
+								console.log("click");
+								button2022.current.classList.remove("underlined");
+								button2023.current.classList.add("underlined");
+								setActiveYear(2023);
+							}} */
+						>
+							2023
+						</div>
 					</div>
-				</h3>
-			</section>
-			{activeYear === 2023 ? getSponsors2023() : getSponsors2022()}
-		</>
-	);
+				</section>
+				{activeYear === 2023 ? getSponsors2023() : getSponsors2022()}
+			</>
+		);
+	}
 }
 
 function getSponsors2022() {
