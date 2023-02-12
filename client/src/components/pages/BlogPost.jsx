@@ -6,8 +6,7 @@ import { Buffer } from "buffer";
 import BlogCardPost from "../components/BlogCardPost";
 
 export default function BlogPost() {
-  const [blog, setBlog] = useState([]);
-  const [selectedBlogPost, setSelectedBlogPost] = useState({});
+  const [blog, setBlog] = useState([]);  
 
   useEffect(() => {
     axios
@@ -32,9 +31,8 @@ export default function BlogPost() {
           descrizione={descrizione}
           image={base64StringImage}
           data={data}
-          selectedBlogPost={selectedBlogPost}
         />
-      );
+      );      
     });
   }
 }
