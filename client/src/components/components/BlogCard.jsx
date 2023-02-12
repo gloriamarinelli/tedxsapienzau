@@ -1,10 +1,10 @@
 import React from "react";
 import "../../resources/styles/blogstyle.css";
+import { Link } from "react-router-dom";
 
 export default function BlogCard({
   id,
-  titolo,
-  descrizione,
+  titolo,  
   image,
   data
  }) {
@@ -24,7 +24,9 @@ export default function BlogCard({
             <div className="media-body">
               <span className="media-date">{data}</span>
               <h5 className="mt-3">{titolo}</h5>
-              <button className="button">View More</button>           
+              <Link className="link" to={`/blog/${id}`}>
+              <button className="button">View More</button>       
+              </Link>    
             </div>
           </div>
         </div>
