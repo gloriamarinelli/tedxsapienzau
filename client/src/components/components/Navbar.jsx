@@ -144,7 +144,7 @@ export default function Navbar() {
 									</a>
 									<ul className="dropdown-menu">
 										<li>
-											<a className="dropdown-item text-bg-light" href="/write">
+											<a className="dropdown-item text-bg-light" href="">
 												Edizione 2023
 											</a>
 										</li>
