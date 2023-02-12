@@ -11,17 +11,10 @@ import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
 
 import "../../resources/styles/aboutstyle.css";
+import { useOutletContext } from "react-router";
 
 export default function About() {
-	const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-	useEffect(() => {
-		window.addEventListener("resize", handleResize);
-	}, []);
-
-	const handleResize = () => {
-		setWindowSize(window.innerWidth);
-	};
+	const [windowSize, setWindowSize] = useOutletContext();
 
 	if (windowSize > global.UTILS.MOBILE_WIDTH) {
 		return (
@@ -242,7 +235,7 @@ export default function About() {
 						textAlign: "center",
 						color: "#fff",
 						marginBottom: "10px",
-						clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+						// clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 						height: "40vh",
 						display: "grid",
 						placeItems: "center",

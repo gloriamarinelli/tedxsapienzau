@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/components/Navbar";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
@@ -21,13 +21,7 @@ import Login from "./components/pages/Login";
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: (
-			<>
-				<Navbar />
-				<Outlet />
-				<Footer />
-			</>
-		),
+		element: <HomeManager />,
 		errorElement: (
 			<>
 				<Navbar />
@@ -87,6 +81,26 @@ const router = createBrowserRouter([
 		],
 	},
 ]);
+
+function HomeManager() {
+	const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+	}, []);
+
+	const handleResize = () => {
+		setWindowSize(window.innerWidth);
+	};
+
+	return (
+		<>
+			<Navbar />
+			<Outlet context={[windowSize, setWindowSize]} />
+			<Footer />
+		</>
+	);
+}
 
 function App() {
 	return <RouterProvider router={router} />;
