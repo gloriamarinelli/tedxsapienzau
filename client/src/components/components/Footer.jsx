@@ -18,11 +18,12 @@ function Footer() {
 	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
 	useEffect(() => {
-		document.addEventListener("resize", handleResize);
+		window.addEventListener("resize", handleResize);
 	}, []);
 
 	const handleResize = () => {
 		setWindowSize(window.innerWidth);
+		console.info("resize");
 	};
 
 	if (windowSize > global.UTILS.MOBILE_WIDTH) {
