@@ -4,6 +4,7 @@ import Image1 from "../images/Work with TEDxSapienzaU.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
+import axios from "axios";
 
 export default function Join() {
 	const [windowSize, setWindowSize] = useOutletContext();

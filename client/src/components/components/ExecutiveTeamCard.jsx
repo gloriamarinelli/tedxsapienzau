@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function ExecutiveTeamCard({ name, role, imgSrc }) {
+export default function ExecutiveTeamCard({ 
+	id, 
+	nome, 
+	ruolo, 
+	image 
+}) {
 	return (
 		<>
 			<div className="col-lg-3 mb-4 d-flex justify-content-center">
@@ -25,7 +30,10 @@ export default function ExecutiveTeamCard({ name, role, imgSrc }) {
 								<i className="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img className="img-fluid" src={imgSrc} alt="..." />
+						<img
+						src={`data:image/*;base64,${image}`} 
+						height="100"
+						/>
 					</a>
 					<div
 						className="portfolio-caption"
@@ -38,9 +46,10 @@ export default function ExecutiveTeamCard({ name, role, imgSrc }) {
 							style={{
 								fontWeight: "bold",
 								textAlign: "center",
+								fontSize: "20px"
 							}}
 						>
-							{name}
+							{nome}
 						</div>
 
 						<div
@@ -50,7 +59,7 @@ export default function ExecutiveTeamCard({ name, role, imgSrc }) {
 								textAlign: "center",
 							}}
 						>
-							{role}
+							{ruolo}
 						</div>
 					</div>
 				</div>
