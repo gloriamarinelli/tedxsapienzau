@@ -28,8 +28,8 @@ export default function ErrorPage() {
 				<path
 					d="M136 16h124v38h-78v18h78v35h-78v18h78v38H136z"
 					stroke="#CCC"
-					stroke-width="1"
-					stroke-dasharray="4,6"
+					strokeWidth="1"
+					strokeDasharray="4,6"
 					fill="none"
 				></path>
 			</svg>
