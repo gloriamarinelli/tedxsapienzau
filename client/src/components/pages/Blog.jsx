@@ -2,6 +2,8 @@ import React from "react";
 import "../../resources/styles/blogstyle.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Buffer } from "buffer";
+import BlogCard from "../components/BlogCard";
 
 export default function Blog() {
   const [blog, setBlog] = useState([]);
@@ -59,33 +61,18 @@ export default function Blog() {
       </div>
 
       {blog.map((blog) => {
-        const { id, titolo, descrizione, image, data } = blog;
-        console.log(titolo, data, image);
+        const { id, titolo, image, data } = blog;
+        let base64StringImage = Buffer.from(image, "binary").toString("base64");
         return (
-          <div class="container">
-            <div class="row no-gutters" key={blog.id}>
-              <div class="col-xl-6 col-12 mb-5 mb-xl-0">
-                <div class="col-xl-6 col-12">
-                  <div class="media media-news">
-                    <div class="media-img">
-                      <img src={blog.image} width="400" height="280" />
-                    </div>
-                    <div class="media-body">
-                      <span class="media-date">{blog.data}</span>
-                      <h5 class="mt-3 sep">
-                      {blog.titolo}
-                      </h5>
-                      <p to={`/blog/${blog.id}`}>
-                        <button className="button">View More</button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <BlogCard
+            key={id}
+            titolo={titolo}
+            image={base64StringImage}
+            data={data}
+          />
         );
       })}
+      
     </>
   );
 }

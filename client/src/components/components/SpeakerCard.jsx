@@ -1,9 +1,4 @@
 import React from "react";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
 import "../../index.css";
 
 export default function SpeakerCard({

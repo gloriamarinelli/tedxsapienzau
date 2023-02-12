@@ -4,23 +4,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../index.css";
 import "../../resources/styles/edizione2022style.css";
 
-import Action1 from "../images/Giovanna Melandri.jpg";
-import Action2 from "../images/Valeria Trombetta.jpg";
-import Action3 from "../images/Fasma.jpg";
-
-import Cross1 from "../images/Viviana Bottaro.jpg";
-import Cross2 from "../images/Giusy Amoroso.jpg";
-import Cross3 from "../images/Mario Baccini.jpg";
-
-import Transf1 from "../images/Vittorio Loreto.jpg";
-import Transf2 from "../images/Valentina Dallari.jpg";
-import Transf3 from "../images/Ewelina Jelenkowska-Lucà.jpg";
-
-import Awards1 from "../images/Volosumarte.jpg";
-import Awards2 from "../images/Eleonora Pariset.jpg";
-import Awards3 from "../images/Arianna Peduzzi.jpg";
-import Awards4 from "../images/Serena Spanò.jpg";
-
 import pecoraImage from "../images/pecora.png";
 import TedxLogo from "../images/TEDlogovecchio.png";
 

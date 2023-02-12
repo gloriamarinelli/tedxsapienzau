@@ -38,7 +38,9 @@ body {
   width: 85%;
   right: 0;
   bottom: 0;
+  
 }
+
 @media (min-width: 768px) {
   .media.media-news .media-body {
     position: relative;
