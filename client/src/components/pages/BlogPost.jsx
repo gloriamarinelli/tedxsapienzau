@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Buffer } from "buffer";
+
 import BlogCardPost from "../components/BlogCardPost";
 
 export default function BlogPost() {
