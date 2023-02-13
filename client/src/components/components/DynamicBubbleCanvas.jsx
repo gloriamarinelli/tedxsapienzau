@@ -7,11 +7,15 @@ import {
 	MeshDistortMaterial,
 	ContactShadows,
 	Text3D,
-	MeshTransmissionMaterial,
 	Center,
+	OrthographicCamera,
+	OrbitControls,
+	MeshTransmissionMaterial,
+	useHelper,
 } from "@react-three/drei";
 import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/three";
+import { SpotLightHelper } from "three";
 
 // React-spring animates native elements, in this case <mesh/> etc,
 // but it can also handle 3rd–party objs, just wrap them in "a".
@@ -26,14 +30,8 @@ export default function DynamicBubbleCanvas({ setBg }) {
 	const [distanceX, setDistanceX] = useState(0);
 	const [distanceY, setDistanceY] = useState(0);
 
-	// Change cursor on hovered state
-	useEffect(() => {
-		// document.body.style.cursor = hovered
-		// 	? "none"
-		// 	: `url('data:image/svg+xml;base64,${btoa(
-		// 			'<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10" fill="#a42332"/></svg>'
-		// 	  )}'), auto`;
-	}, [hovered]);
+	const [spherePositionX, setSpherePositionX] = useState(1.8);
+	const [spherePositionY, setSpherePositionY] = useState(0);
 
 	window.addEventListener("mousemove", (e) => {
 		const { x, y } = e;
@@ -52,12 +50,12 @@ export default function DynamicBubbleCanvas({ setBg }) {
 		light.current.position.y = state.mouse.y * 20;
 		if (sphere.current) {
 			sphere.current.position.x = THREE.MathUtils.lerp(
-				sphere.current.position.x - distanceX / 2000,
+				spherePositionX + sphere.current.position.x - distanceX / 2000,
 				hovered ? state.mouse.x / 2 : 0,
 				0.2
 			);
 			sphere.current.position.y = THREE.MathUtils.lerp(
-				sphere.current.position.y + distanceY / 2000,
+				spherePositionY + sphere.current.position.y - 0.2 + distanceY / 2000,
 				Math.sin(state.clock.elapsedTime / 1.5) / 6 +
 					(hovered ? state.mouse.y / 2 : 0),
 				0.2
@@ -69,7 +67,7 @@ export default function DynamicBubbleCanvas({ setBg }) {
 	// React-spring is physics based and turns static props into animated values
 	const [{ wobble, coat, color, ambient, env }] = useSpring(
 		{
-			wobble: down ? 2.2 : hovered ? 2.05 : 2,
+			wobble: down ? 2.3 : hovered ? 2.15 : 2.1,
 			coat: mode && !hovered ? 0.04 : 1,
 			// ambient: mode && !hovered ? 1.5 : 0.5,
 			// env: mode && !hovered ? 0.4 : 1,
@@ -82,7 +80,8 @@ export default function DynamicBubbleCanvas({ setBg }) {
 
 	return (
 		<>
-			<PerspectiveCamera makeDefault position={[0, 0, 5.5]} fov={75}>
+			{/* <OrbitControls /> */}
+			<OrthographicCamera makeDefault position={[0, 0, 100]} fov={75} zoom={35}>
 				<a.ambientLight intensity={0.4} />
 				<a.pointLight
 					ref={light}
@@ -90,56 +89,112 @@ export default function DynamicBubbleCanvas({ setBg }) {
 					intensity={2}
 					color="#a42332"
 				/>
-			</PerspectiveCamera>
+			</OrthographicCamera>
 			<Suspense fallback={null}>
-				<a.mesh
-					ref={sphere}
-					scale={wobble}
-					onPointerOver={() => setHovered(true)}
-					onPointerOut={() => setHovered(false)}
-					onPointerDown={() => setDown(true)}
-					onPointerUp={() => {
-						setDown(false);
-						// Toggle mode between dark and bright
-						setMode(!mode);
-						setBg({
-							background: !mode ? "#202020" : "#f0f0f0",
-							fill: !mode ? "#f0f0f0" : "#202020",
-						});
-					}}
-				>
-					<sphereGeometry args={[1, 64, 64]} />
-					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
+				<a.mesh ref={sphere} scale={wobble} position={[5.3, -0.8, 0]}>
+					<sphereGeometry args={[1.2, 64, 64]} />
+					<AnimatedMaterial color={"#5272b5"} />
 				</a.mesh>
-				<a.mesh position={[2, 1.2, 4]}>
+				<a.mesh position={[-20, 3, 4]} scale={6}>
 					<sphereGeometry args={[1, 64, 64]} />
-					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
+					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.7} />
 				</a.mesh>
-				<a.mesh position={[-2, -0.7, 4.5]}>
+				<a.mesh position={[20, -5, 4.5]} scale={6}>
 					<sphereGeometry args={[1, 64, 64]} />
-					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.9} />
+					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.7} />
 				</a.mesh>
-				<ContactShadows
-					rotation={[Math.PI / 2, 0, 0]}
-					position={[0, -1.6, 0]}
-					opacity={mode ? 0.8 : 0.4}
-					width={15}
-					height={15}
-					blur={2.5}
-					far={1.6}
-				/>
-
-				<directionalLight
-					intensity={12}
-					color={"#a42332"}
-					position={[0, -10, -3]}
-				/>
-				<hemisphereLight
-					groundColor={"#a42332"}
-					color={"#2e3777"}
-					intensity={5}
-				/>
+				{/* {BackToZeroLetters()} */}
+				{Lights()}
 			</Suspense>
 		</>
+	);
+}
+
+const Lights = () => {
+	const spotLightRightRef = useRef();
+	const spotLightLeftRef = useRef();
+	// useHelper(spotLightRightRef, SpotLightHelper, "red");
+	// useHelper(spotLightLeftRef, SpotLightHelper, "green");
+
+	useFrame(() => {
+		if (spotLightRightRef && spotLightLeftRef) {
+			spotLightRightRef.current.target.position.set(25, 0, 0);
+			spotLightRightRef.current.target.updateMatrixWorld();
+			spotLightLeftRef.current.target.position.set(-25, 0, 0);
+			spotLightLeftRef.current.target.updateMatrixWorld();
+		}
+	});
+
+	return (
+		<>
+			<spotLight
+				intensity={30}
+				color={"#a42332"}
+				position={[10, -20, 15]}
+				angle={0.4}
+				ref={spotLightRightRef}
+			/>
+			<spotLight
+				intensity={20}
+				color={"#a42332"}
+				position={[10, -20, 15]}
+				angle={0.4}
+				ref={spotLightLeftRef}
+			/>
+			<ambientLight intensity={0.55} />
+		</>
+	);
+};
+
+function BackToZeroLetters() {
+	const groupRef = useRef();
+	return (
+		<group
+			position={[1, 0, 0]}
+			ref={groupRef}
+			onPointerEnter={() => console.log("enter group")}
+		>
+			<Letter
+				char={"BACK"}
+				position={[-10, 3, 0]}
+				font={"/Gotham_Black_Italic.json"}
+				scale={0.035}
+			/>
+			<Letter
+				char={"TO"}
+				position={[2.3, 3, 0]}
+				font={"/Gotham_Black_Italic.json"}
+				scale={0.035}
+			/>
+			<Letter
+				char={"ZERO"}
+				position={[-10.5, -3, 0]}
+				font={"/Gotham_Black_Regular.json"}
+				scale={0.055}
+			/>
+		</group>
+	);
+}
+
+function Letter({ char, ...props }) {
+	const letter = useRef();
+	// The letters contents are moved to its whereabouts in world coordinates
+	return (
+		<Text3D
+			bevelEnabled
+			smooth={1}
+			size={80}
+			height={4}
+			curveSegments={10}
+			bevelThickness={10}
+			bevelSize={2}
+			bevelOffset={0}
+			bevelSegments={5}
+			ref={letter}
+			{...props}
+		>
+			<meshBasicMaterial color={"#fff"} />
+			{char}
+		</Text3D>
 	);
 }

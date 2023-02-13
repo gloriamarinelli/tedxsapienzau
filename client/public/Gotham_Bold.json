@@ -1,0 +1,88 @@
+{
+	"glyphs": {
+		" ": { "ha": 417, "x_min": 0, "x_max": 0, "o": "" },
+		"E": {
+			"ha": 931,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 117 972 l 850 972 l 850 782 l 329 782 l 329 585 l 788 585 l 788 394 l 329 394 l 329 190 l 857 190 l 857 0 l 117 0 "
+		},
+		"K": {
+			"ha": 1014,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 117 972 l 331 972 l 331 547 l 722 972 l 985 972 l 588 560 l 1001 0 l 744 0 l 443 414 l 331 297 l 331 0 l 117 0 "
+		},
+		"O": {
+			"ha": 1181,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 589 -17 b 74 483 289 -17 74 207 l 74 486 b 592 989 74 763 292 989 b 1107 489 892 989 1107 765 l 1107 486 b 589 -17 1107 210 889 -17 m 592 181 b 883 483 764 181 883 317 l 883 486 b 589 792 883 653 761 792 b 297 489 417 792 297 656 l 297 486 b 592 181 297 319 419 181 "
+		},
+		"R": {
+			"ha": 1004,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 117 972 l 561 972 b 844 874 685 972 779 939 b 928 651 900 818 928 744 l 928 649 b 719 347 928 492 843 393 l 957 0 l 707 0 l 499 311 l 331 311 l 331 0 l 117 0 m 547 500 b 711 638 653 500 711 554 l 711 640 b 543 779 711 733 649 779 l 331 779 l 331 500 "
+		},
+		"T": {
+			"ha": 900,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 343 775 l 47 775 l 47 972 l 853 972 l 853 775 l 557 775 l 557 0 l 343 0 "
+		},
+		"Z": {
+			"ha": 983,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 88 163 l 622 785 l 104 785 l 104 972 l 897 972 l 897 810 l 363 188 l 897 188 l 897 0 l 88 0 "
+		},
+		"C": {
+			"ha": 1025,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 572 -17 b 74 483 286 -17 74 204 l 74 486 b 581 989 74 763 282 989 b 964 839 763 989 875 928 l 828 682 b 579 792 751 750 678 792 b 297 489 415 792 297 656 l 297 486 b 579 181 297 319 413 181 b 835 294 690 181 758 224 l 971 157 b 572 -17 871 50 761 -17 "
+		},
+		"A": {
+			"ha": 1097,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 450 979 l 647 979 l 1064 0 l 840 0 l 751 218 l 340 218 l 251 0 l 33 0 m 675 407 l 546 722 l 417 407 "
+		},
+		"B": {
+			"ha": 1003,
+			"x_min": 0,
+			"x_max": 0,
+			"o": "m 117 972 l 568 972 b 822 886 681 972 765 943 b 889 721 867 842 889 786 l 889 718 b 761 508 889 610 831 544 b 943 269 874 465 943 399 l 943 267 b 579 0 943 89 799 0 l 117 0 m 676 685 b 536 785 676 750 626 785 l 325 785 l 325 579 l 522 579 b 676 682 617 579 676 610 m 731 296 b 572 401 731 361 683 401 l 325 401 l 325 188 l 579 188 b 731 293 674 188 731 221 "
+		}
+	},
+	"familyName": "Gotham",
+	"ascender": 1333,
+	"descender": -333,
+	"underlinePosition": -104,
+	"underlineThickness": 69,
+	"boundingBox": { "yMin": -411, "xMin": -318, "yMax": 1413, "xMax": 1660 },
+	"resolution": 1000,
+	"original_font_information": {
+		"format": 0,
+		"copyright": "Copyright (C) 2001, 2011 Hoefler & Co. http://www.typography.com |DCNT",
+		"fontFamily": "Gotham",
+		"fontSubfamily": "Bold",
+		"uniqueID": "TD",
+		"fullName": "Gotham-Bold",
+		"version": "Version 3.301",
+		"postScriptName": "Gotham-Bold",
+		"trademark": "Gotham is a trademark of Hoefler & Co., which may be registered in certain jurisdictions.",
+		"manufacturer": "Hoefler & Co.",
+		"designer": "Hoefler & Co.",
+		"description": "This software is the property of Hoefler & Co. You may not copy, modify, distribute, or download this software, or install it upon any computer, or host it from any location. Your right to use this software is subject to the Terms of Service agreement that exists between you and Hoefler & Co. If no such agreement exists, you may not use this software for any purpose. For more information, please visit http://www.typography.com/webfont-software, or contact Hoefler & Co. at www.typography.com",
+		"manufacturerURL": "www.typography.com",
+		"designerURL": "www.typography.com",
+		"licence": "This software is the property of Hoefler & Co. You may not copy, modify, distribute, or download this software, or install it upon any computer, or host it from any location. Your right to use this software is subject to the Terms of Service agreement that exists between you and Hoefler & Co. If no such agreement exists, you may not use this software for any purpose. For more information, please visit http://www.typography.com/webfont-software, or contact Hoefler & Co. at www.typography.com",
+		"licenceURL": "http://www.typography.com/webfont-software",
+		"preferredFamily": "Gotham",
+		"preferredSubfamily": "Bold"
+	},
+	"cssFontWeight": "bold",
+	"cssFontStyle": "normal"
+}

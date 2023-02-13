@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import global from "../../resources/global.json";
 import CustomCursor from "../components/CustomCursor";
 import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
+import BackToZer from "../images/Logo BTZ.png";
 
 export default function Home() {
 	return (
@@ -31,6 +32,21 @@ export default function Home() {
 						<Canvas>
 							<DynamicBubbleCanvas />
 						</Canvas>
+					</div>
+					<div
+						style={{
+							position: "absolute",
+							height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+							width: "100%",
+							display: "grid",
+							placeItems: "center",
+						}}
+					>
+						<img
+							src={BackToZer}
+							width="650"
+							style={{ transform: "translatey(-50px)" }}
+						/>
 					</div>
 					<h1
 						style={{ fontSize: "120px", zIndex: 2 }}
