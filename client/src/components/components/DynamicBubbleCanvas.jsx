@@ -145,7 +145,7 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 						<sphereGeometry args={[1, 64, 64]} />
 						<AnimatedMaterial color={"#5272b5"} />
 					</a.mesh>
-					<a.mesh position={[-20, 3, 4]} scale={6}>
+					<a.mesh position={[-8.5, 8, 4]} scale={6}>
 						<sphereGeometry args={[1, 64, 64]} />
 						<AnimatedMaterial
 							color={"#2e3777"}
@@ -153,7 +153,7 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 							roughness={0.7}
 						/>
 					</a.mesh>
-					<a.mesh position={[20, -5, 4.5]} scale={6}>
+					<a.mesh position={[8.5, -8, 4.5]} scale={6}>
 						<sphereGeometry args={[1, 64, 64]} />
 						<AnimatedMaterial
 							color={"#2e3777"}
@@ -161,8 +161,7 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 							roughness={0.7}
 						/>
 					</a.mesh>
-					{/* {BackToZeroLetters()} */}
-					{Lights()}
+					{MobileLights()}
 				</Suspense>
 			</>
 		);
@@ -172,8 +171,8 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 const Lights = () => {
 	const spotLightRightRef = useRef();
 	const spotLightLeftRef = useRef();
-	// useHelper(spotLightRightRef, SpotLightHelper, "red");
-	// useHelper(spotLightLeftRef, SpotLightHelper, "green");
+	useHelper(spotLightRightRef, SpotLightHelper, "red");
+	useHelper(spotLightLeftRef, SpotLightHelper, "green");
 
 	useFrame(() => {
 		if (spotLightRightRef && spotLightLeftRef) {
@@ -200,6 +199,44 @@ const Lights = () => {
 				angle={0.4}
 				ref={spotLightLeftRef}
 			/>
+			<ambientLight intensity={0.55} />
+		</>
+	);
+};
+
+const MobileLights = () => {
+	const spotLightRightRef = useRef();
+	const spotLightLeftRef = useRef();
+	useHelper(spotLightRightRef, SpotLightHelper, "red");
+	useHelper(spotLightLeftRef, SpotLightHelper, "green");
+
+	useFrame(() => {
+		if (spotLightRightRef && spotLightLeftRef) {
+			spotLightLeftRef.current.target.position.set(-5, 10, 2);
+			spotLightLeftRef.current.target.updateMatrixWorld();
+
+			spotLightRightRef.current.target.position.set(5, -8, 7);
+			spotLightRightRef.current.target.updateMatrixWorld();
+		}
+	});
+
+	return (
+		<>
+			<spotLight
+				intensity={20}
+				color={"#a42332"}
+				position={[-5, -10, 30]}
+				angle={0.2}
+				ref={spotLightLeftRef}
+			/>
+			<spotLight
+				intensity={40}
+				color={"#a42332"}
+				position={[-5, -8, 5]}
+				angle={0.6}
+				ref={spotLightRightRef}
+			/>
+
 			<ambientLight intensity={0.55} />
 		</>
 	);
