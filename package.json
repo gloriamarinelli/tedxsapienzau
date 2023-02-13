@@ -4,6 +4,7 @@
     "@react-three/fiber": "^8.11.0",
     "@types/three": "^0.149.0",
     "bootstrap": "^5.2.3",
+    "buffer": "^6.0.3",
     "react-bootstrap": "^2.7.0",
     "three": "^0.149.0"
   }
