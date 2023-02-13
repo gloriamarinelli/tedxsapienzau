@@ -207,8 +207,8 @@ const Lights = () => {
 const MobileLights = () => {
 	const spotLightRightRef = useRef();
 	const spotLightLeftRef = useRef();
-	useHelper(spotLightRightRef, SpotLightHelper, "red");
-	useHelper(spotLightLeftRef, SpotLightHelper, "green");
+	// useHelper(spotLightRightRef, SpotLightHelper, "red");
+	// useHelper(spotLightLeftRef, SpotLightHelper, "green");
 
 	useFrame(() => {
 		if (spotLightRightRef && spotLightLeftRef) {
