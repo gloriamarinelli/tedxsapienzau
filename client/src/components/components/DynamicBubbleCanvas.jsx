@@ -16,12 +16,13 @@ import {
 import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/three";
 import { SpotLightHelper } from "three";
+import global from "../../resources/global.json";
 
 // React-spring animates native elements, in this case <mesh/> etc,
 // but it can also handle 3rd–party objs, just wrap them in "a".
 const AnimatedMaterial = a(MeshDistortMaterial);
 
-export default function DynamicBubbleCanvas({ setBg }) {
+export default function DynamicBubbleCanvas({ windowSize }) {
 	const sphere = useRef();
 	const light = useRef();
 	const [mode, setMode] = useState(false);
@@ -78,36 +79,94 @@ export default function DynamicBubbleCanvas({ setBg }) {
 		[mode, hovered, down]
 	);
 
-	return (
-		<>
-			{/* <OrbitControls /> */}
-			<OrthographicCamera makeDefault position={[0, 0, 100]} fov={75} zoom={35}>
-				<a.ambientLight intensity={0.4} />
-				<a.pointLight
-					ref={light}
-					position-z={-15}
-					intensity={2}
-					color="#a42332"
-				/>
-			</OrthographicCamera>
-			<Suspense fallback={null}>
-				<a.mesh ref={sphere} scale={wobble} position={[5.3, -0.8, 0]}>
-					<sphereGeometry args={[1.2, 64, 64]} />
-					<AnimatedMaterial color={"#5272b5"} />
-				</a.mesh>
-				<a.mesh position={[-20, 3, 4]} scale={6}>
-					<sphereGeometry args={[1, 64, 64]} />
-					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.7} />
-				</a.mesh>
-				<a.mesh position={[20, -5, 4.5]} scale={6}>
-					<sphereGeometry args={[1, 64, 64]} />
-					<AnimatedMaterial color={"#2e3777"} metalness={0.2} roughness={0.7} />
-				</a.mesh>
-				{/* {BackToZeroLetters()} */}
-				{Lights()}
-			</Suspense>
-		</>
-	);
+	if (windowSize > global.UTILS.TABLET_WIDTH) {
+		return (
+			<>
+				{/* <OrbitControls /> */}
+				<OrthographicCamera
+					makeDefault
+					position={[0, 0, 100]}
+					fov={75}
+					zoom={35}
+				>
+					<a.ambientLight intensity={0.4} />
+					<a.pointLight
+						ref={light}
+						position-z={-15}
+						intensity={2}
+						color="#a42332"
+					/>
+				</OrthographicCamera>
+				<Suspense fallback={null}>
+					<a.mesh ref={sphere} scale={wobble} position={[5.3, -0.8, 0]}>
+						<sphereGeometry args={[1.2, 64, 64]} />
+						<AnimatedMaterial color={"#5272b5"} />
+					</a.mesh>
+					<a.mesh position={[-20, 3, 4]} scale={6}>
+						<sphereGeometry args={[1, 64, 64]} />
+						<AnimatedMaterial
+							color={"#2e3777"}
+							metalness={0.2}
+							roughness={0.7}
+						/>
+					</a.mesh>
+					<a.mesh position={[20, -5, 4.5]} scale={6}>
+						<sphereGeometry args={[1, 64, 64]} />
+						<AnimatedMaterial
+							color={"#2e3777"}
+							metalness={0.2}
+							roughness={0.7}
+						/>
+					</a.mesh>
+					{/* {BackToZeroLetters()} */}
+					{Lights()}
+				</Suspense>
+			</>
+		);
+	} else {
+		return (
+			<>
+				<OrthographicCamera
+					makeDefault
+					position={[0, 0, 100]}
+					fov={75}
+					zoom={35}
+				>
+					<a.ambientLight intensity={0.4} />
+					<a.pointLight
+						ref={light}
+						position-z={-15}
+						intensity={2}
+						color="#a42332"
+					/>
+				</OrthographicCamera>
+				<Suspense fallback={null}>
+					<a.mesh scale={1.25} position={[3.5, 0.5, 0]}>
+						<sphereGeometry args={[1, 64, 64]} />
+						<AnimatedMaterial color={"#5272b5"} />
+					</a.mesh>
+					<a.mesh position={[-20, 3, 4]} scale={6}>
+						<sphereGeometry args={[1, 64, 64]} />
+						<AnimatedMaterial
+							color={"#2e3777"}
+							metalness={0.2}
+							roughness={0.7}
+						/>
+					</a.mesh>
+					<a.mesh position={[20, -5, 4.5]} scale={6}>
+						<sphereGeometry args={[1, 64, 64]} />
+						<AnimatedMaterial
+							color={"#2e3777"}
+							metalness={0.2}
+							roughness={0.7}
+						/>
+					</a.mesh>
+					{/* {BackToZeroLetters()} */}
+					{Lights()}
+				</Suspense>
+			</>
+		);
+	}
 }
 
 const Lights = () => {
