@@ -10,6 +10,8 @@ import Join from "./components/pages/Join";
 import Team2023 from "./components/pages/Team2023";
 import Team2022 from "./components/pages/Team2022";
 import Edizione2022 from "./components/pages/Edizione2022";
+import Edizione2023 from "./components/pages/Edizione2023";
+
 import BlogPost from "./components/pages/BlogPost";
 
 import Write from "./components/pages/Write";
@@ -69,6 +71,10 @@ const router = createBrowserRouter([
 			{
 				path: "/edizione2022",
 				element: <Edizione2022 />,
+			},
+			{
+				path: "/edizione2023",
+				element: <Edizione2023 />,
 			},
 			{
 				path: "/write",
