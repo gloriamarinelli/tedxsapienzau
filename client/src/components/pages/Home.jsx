@@ -45,12 +45,17 @@ export default function Home() {
 								width: "100%",
 								display: "grid",
 								placeItems: "center",
+								pointerEvents: "none",
+								userSelect: "none",
 							}}
 						>
 							<img
 								src={BackToZer}
 								width="650"
-								style={{ transform: "translatey(-50px)" }}
+								style={{
+									transform: "translatey(-50px)",
+									userSelect: "none",
+								}}
 							/>
 						</div>
 					) : (
@@ -61,6 +66,7 @@ export default function Home() {
 								width: "100%",
 								display: "grid",
 								placeItems: "center",
+								pointerEvents: "none",
 							}}
 						>
 							<img

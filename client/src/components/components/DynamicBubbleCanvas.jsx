@@ -28,53 +28,38 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 	const [mode, setMode] = useState(false);
 	const [down, setDown] = useState(false);
 	const [hovered, setHovered] = useState(false);
-	const [distanceX, setDistanceX] = useState(0);
-	const [distanceY, setDistanceY] = useState(0);
-
-	const [spherePositionX, setSpherePositionX] = useState(1.8);
-	const [spherePositionY, setSpherePositionY] = useState(0);
-
-	window.addEventListener("mousemove", (e) => {
-		const { x, y } = e;
-		let distanceX =
-			((x - window.innerWidth / 2) / (window.innerWidth / 2)) * 100;
-		setDistanceX(distanceX);
-		let distanceY =
-			((y - window.innerHeight / 2) / (window.innerHeight / 2)) * 100;
-		setDistanceY(distanceY);
-	});
 
 	// Make the bubble float and follow the mouse
 	// This is frame-based animation, useFrame subscribes the component to the render-loop
-	useFrame((state) => {
-		light.current.position.x = state.mouse.x * 20;
-		light.current.position.y = state.mouse.y * 20;
-		if (sphere.current) {
-			sphere.current.position.x = THREE.MathUtils.lerp(
-				spherePositionX + sphere.current.position.x - distanceX / 2000,
-				hovered ? state.mouse.x / 2 : 0,
-				0.2
-			);
-			sphere.current.position.y = THREE.MathUtils.lerp(
-				spherePositionY + sphere.current.position.y - 0.2 + distanceY / 2000,
-				Math.sin(state.clock.elapsedTime / 1.5) / 6 +
-					(hovered ? state.mouse.y / 2 : 0),
-				0.2
-			);
-		}
-	});
+	// useFrame((state) => {
+	// 	light.current.position.x = state.mouse.x * 20;
+	// 	light.current.position.y = state.mouse.y * 20;
+	// 	if (sphere.current) {
+	// 		sphere.current.position.x = THREE.MathUtils.lerp(
+	// 			spherePositionX + sphere.current.position.x - distanceX / 6000,
+	// 			hovered ? state.mouse.x / 2 : 0,
+	// 			0.2
+	// 		);
+	// 		sphere.current.position.y = THREE.MathUtils.lerp(
+	// 			spherePositionY + sphere.current.position.y - 0.2 + distanceY / 6000,
+	// 			Math.sin(state.clock.elapsedTime / 1.5) / 6 +
+	// 				(hovered ? state.mouse.y / 2 : 0),
+	// 			0.2
+	// 		);
+	// 	}
+	// });
 
 	// Springs for color and overall looks, this is state-driven animation
 	// React-spring is physics based and turns static props into animated values
 	const [{ wobble, coat, color, ambient, env }] = useSpring(
 		{
-			wobble: down ? 2.3 : hovered ? 2.15 : 2.1,
+			wobble: down ? 2.1 : hovered ? 1.95 : 1.8,
 			coat: mode && !hovered ? 0.04 : 1,
-			// ambient: mode && !hovered ? 1.5 : 0.5,
-			// env: mode && !hovered ? 0.4 : 1,
-			// color: hovered ? "#E8B059" : mode ? "#202020" : "white",
+			ambient: mode && !hovered ? 1.5 : 0.5,
+			env: mode && !hovered ? 0.4 : 1,
+			color: hovered ? "#a42332" : mode ? "#5272b5" : "#5272b5",
 			config: (n) =>
-				n === "wobble" && hovered && { mass: 2, tension: 1000, friction: 10 },
+				n === "wobble" && hovered && { mass: 2, tension: 500, friction: 10 },
 		},
 		[mode, hovered, down]
 	);
@@ -83,12 +68,7 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 		return (
 			<>
 				{/* <OrbitControls /> */}
-				<OrthographicCamera
-					makeDefault
-					position={[0, 0, 100]}
-					fov={75}
-					zoom={35}
-				>
+				<OrthographicCamera makeDefault position={[0, 0, 100]} zoom={35}>
 					<a.ambientLight intensity={0.4} />
 					<a.pointLight
 						ref={light}
@@ -98,9 +78,20 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 					/>
 				</OrthographicCamera>
 				<Suspense fallback={null}>
-					<a.mesh ref={sphere} scale={wobble} position={[5.3, -0.8, 0]}>
+					<a.mesh
+						ref={sphere}
+						scale={wobble}
+						position={[7, -0.5, 0]}
+						onPointerOver={() => setHovered(true)}
+						onPointerOut={() => setHovered(false)}
+						onPointerDown={() => setDown(true)}
+						onPointerUp={() => {
+							setDown(false);
+							setMode(!mode);
+						}}
+					>
 						<sphereGeometry args={[1.2, 64, 64]} />
-						<AnimatedMaterial color={"#5272b5"} />
+						<AnimatedMaterial color={color} />
 					</a.mesh>
 					<a.mesh position={[-20, 3, 4]} scale={6}>
 						<sphereGeometry args={[1, 64, 64]} />
@@ -171,8 +162,8 @@ export default function DynamicBubbleCanvas({ windowSize }) {
 const Lights = () => {
 	const spotLightRightRef = useRef();
 	const spotLightLeftRef = useRef();
-	useHelper(spotLightRightRef, SpotLightHelper, "red");
-	useHelper(spotLightLeftRef, SpotLightHelper, "green");
+	// useHelper(spotLightRightRef, SpotLightHelper, "red");
+	// useHelper(spotLightLeftRef, SpotLightHelper, "green");
 
 	useFrame(() => {
 		if (spotLightRightRef && spotLightLeftRef) {
