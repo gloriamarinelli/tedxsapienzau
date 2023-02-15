@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Buffer } from "buffer";
@@ -14,22 +14,19 @@ import { useParams } from "react-router";
 
 export default function BlogPost() {
 	const [blogPost, setBlogPost] = useState([]);
-
 	let { id } = useParams();
-	console.log(id);
 
 	useEffect(() => {
 		axios
 			.get(`http://localhost:8800/blog/${id}`)
 			.then((res, err) => {
 				setBlogPost(res.data);
+				console.log(res.data);
 			})
 			.catch((err) => {
 				console.error(err);
 			});
 	}, []);
-
-	console.log(blogPost);
 
 	// eslint-disable-next-line no-lone-blocks
 
@@ -50,15 +47,22 @@ export default function BlogPost() {
  * @returns Carta container del blog post
  */
 function BlogCardPost(titolo, descrizione, image, data) {
+	console.log("IMAGE = ", image);
+	let base64Image;
+	if (image) {
+		base64Image = Buffer.from(image, "binary").toString("base64");
+		console.log(base64Image);
+	}
+
 	return (
 		<div className="main-container">
 			<div className="post-container">
 				<p>{data}</p>
 				<hr className="featurette-divider"></hr>
 				<h1>{titolo}</h1>
-				<p>{descrizione}</p>
+				<p dangerouslySetInnerHTML={{ __html: descrizione }}></p>
 				<img
-					src={`data:image/*;base64,${image}`}
+					src={`data:image/*;base64,${base64Image}`}
 					alt={titolo}
 					className="post-image"
 				/>

@@ -23,10 +23,6 @@ code {
 	src: url("./resources/Gotham-Book.otf") format("opentype");
 }
 
-* {
-	font-family: GothamBold;
-}
-
 .underlined::after {
 	content: "";
 	display: block;
