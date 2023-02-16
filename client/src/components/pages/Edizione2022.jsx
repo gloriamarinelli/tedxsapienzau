@@ -16,11 +16,13 @@ import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Buffer } from "buffer";
 
 import axios from "axios";
+import { useOutletContext } from "react-router";
 
 export default function Edizione2022() {
 	const [isBioOpen, setIsBioOpen] = useState(false);
 	const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
 	const [speakers, setSpeakers] = useState([]);
+	const [windowSize, setWindowSize] = useOutletContext();
 
 	useEffect(() => {
 		axios
@@ -212,6 +214,7 @@ export default function Edizione2022() {
 				isBioOpen={isBioOpen}
 				setIsBioOpen={setIsBioOpen}
 				selectedSpeakerInfo={selectedSpeakerInfo}
+				windowSize={windowSize}
 			/>
 		</>
 	);
