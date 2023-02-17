@@ -56,14 +56,6 @@ export default function BlogPost() {
  * @returns Carta container del blog post
  */
 function BlogCardPost(titolo, descrizione, image, data) {
-	const [base64Image, setBase64Image] = useState();
-
-	useEffect(() => {
-		if (image) {
-			setBase64Image(Buffer.from(image, "binary").toString("base64"));
-		}
-	}, [image]);
-
 	return (
 		<div className="main-container">
 			<div className="post-container">
@@ -84,7 +76,7 @@ function BlogCardPost(titolo, descrizione, image, data) {
 				<h1>{titolo}</h1>
 				<p dangerouslySetInnerHTML={{ __html: descrizione }}></p>
 				<img
-					src={`data:image/*;base64,${base64Image}`}
+					src={`data:image/*;base64,${image ?? ""}`}
 					alt={titolo}
 					className="post-image"
 				/>

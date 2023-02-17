@@ -28,30 +28,31 @@ const Write = () => {
 	const handleClick = async (e) => {
 		e.preventDefault();
 
-		const formData = new FormData();
-		formData.append("image", file);
+		let blobImage;
+		if (file) {
+			if (value == "" || title == "") {
+				alert("Compila tutti i campi prima di pubblicare l'articolo!");
+				return;
+			}
 
-		if (value == "" || title == "") {
-			alert("Compila tutti i campi prima di pubblicare l'articolo!");
-			return;
-		}
-
-		axios
-			.post(
-				"http://localhost:8800/blog",
-				{
-					title: title,
-					description: value,
-					image: formData,
-					date: new Date(),
-				},
-				{ headers: { Accept: "multipart/form-data" } }
-			)
-			.then((res, err) => {
+			imageToBase64(file).then((res) => {
 				console.log(res);
-				navigate("/blog");
-			})
-			.catch((err) => console.error(err));
+				axios
+					.post("http://localhost:8800/blog", {
+						title: title,
+						description: value,
+						image: res,
+						date: new Date(),
+					})
+					.then((res, err) => {
+						console.log(res);
+						navigate("/blog");
+					})
+					.catch((err) => console.error(err));
+			});
+		} else {
+			alert("Aggiungi una foto all'articolo!");
+		}
 	};
 
 	return (
@@ -169,8 +170,15 @@ const Write = () => {
 
 export default Write;
 
-async function imageToBlob(file) {
-	const formData = new FormData();
-	formData.append("file", file);
-	return formData;
+async function imageToBase64(file) {
+	return new Promise((res) => {
+		const reader = new FileReader();
+		reader.onloadend = () => {
+			const base64String = reader.result
+				.replace("data:", "")
+				.replace(/^.+,/, "");
+			res(base64String);
+		};
+		reader.readAsDataURL(file);
+	});
 }

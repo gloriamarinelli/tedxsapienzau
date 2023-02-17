@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../resources/styles/blogstyle.css";
 import { Link } from "react-router-dom";
 import format from "date-fns/format";
@@ -11,16 +11,19 @@ export default function BlogCard({ id, titolo, image, data }) {
 				<div className="col-xl-6 col-12 mb-5 mb-xl-0">
 					<div className="media media-news">
 						<div className="media-img">
-							<img
-								src={`data:image/*;base64,${image}`}
-								width="400"
-								height="280"
+							<div
+								style={{
+									background: `url(data:image/*;base64,${image ?? ""})`,
+									width: "400px",
+									height: "300px",
+									backgroundPosition: "center",
+									backgroundSize: "cover",
+								}}
 								alt={titolo}
-							/>
+							></div>
 						</div>
 						<div className="media-body">
 							<span className="media-date">
-								{" "}
 								{data
 									? format(new Date(data), "d MMM YYY", { locale: it })
 									: ""}

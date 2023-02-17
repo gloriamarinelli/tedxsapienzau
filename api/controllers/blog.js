@@ -31,8 +31,6 @@ export const postBlog = (req, res) => {
 		req.body.image,
 		new Date(),
 	];
-
-	console.log;
 	db.query(q, [values], (err, data) => {
 		if (err) return res.json(err);
 		return res.json("Inserted BlogPost");

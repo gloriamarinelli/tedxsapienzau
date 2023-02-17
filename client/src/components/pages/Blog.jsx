@@ -15,7 +15,7 @@ export default function Blog() {
 		axios
 			.get("http://localhost:8800/blog")
 			.then((res, err) => {
-				setBlog(res.data);
+				setBlog(res.data.reverse());
 			})
 			.catch((err) => {
 				console.error(err);
@@ -66,17 +66,13 @@ export default function Blog() {
 						per cambiare il mondo
 					</p>
 				</div>
-
 				{blog.map((blog) => {
 					const { id, titolo, image, data } = blog;
-					let base64StringImage = Buffer.from(image, "binary").toString(
-						"base64"
-					);
 					return (
 						<BlogCard
 							key={id}
 							titolo={titolo}
-							image={base64StringImage}
+							image={image}
 							data={data}
 							id={id}
 						/>
@@ -131,14 +127,11 @@ export default function Blog() {
 
 				{blog.map((blog) => {
 					const { id, titolo, image, data } = blog;
-					let base64StringImage = Buffer.from(image, "binary").toString(
-						"base64"
-					);
 					return (
 						<BlogCard
 							key={id}
 							titolo={titolo}
-							image={base64StringImage}
+							image={image}
 							data={data}
 							id={id}
 						/>
