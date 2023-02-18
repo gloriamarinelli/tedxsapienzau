@@ -13,7 +13,7 @@ export const getBlog = (req, res) => {
 
 export const getBlogID = (req, res) => {
 	const q =
-		"SELECT b.id, `titolo`, `descrizione`, `image`, `data` FROM blog b WHERE b.id = ? ";
+		"SELECT b.id, `titolo`, `descrizione`, `image`, `data`, `autore` FROM blog b WHERE b.id = ? ";
 
 	db.query(q, [req.params.id], (err, data) => {
 		if (err) return res.status(500).json(err);
@@ -24,10 +24,11 @@ export const getBlogID = (req, res) => {
 
 export const postBlog = (req, res) => {
 	const q =
-		"INSERT INTO blog (`titolo`, `descrizione`, `image`, `data`) VALUES (?)";
+		"INSERT INTO blog (`titolo`, `descrizione`,`autore`, `image`, `data`) VALUES (?)";
 	const values = [
 		req.body.title,
 		req.body.description,
+		req.body.autore,
 		req.body.image,
 		new Date(),
 	];

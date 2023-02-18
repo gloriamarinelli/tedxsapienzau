@@ -43,7 +43,8 @@ export default function BlogPost() {
 		blogPost.titolo,
 		blogPost.descrizione,
 		blogPost.image,
-		blogPost.data
+		blogPost.data,
+		blogPost.autore
 	);
 }
 
@@ -55,13 +56,13 @@ export default function BlogPost() {
  * @param {Date} data
  * @returns Carta container del blog post
  */
-function BlogCardPost(titolo, descrizione, image, data) {
+function BlogCardPost(titolo, descrizione, image, data, autore) {
 	return (
 		<div className="main-container">
 			<div className="post-container">
 				<div className="d-flex" style={{ fontSize: "18px" }}>
 					<p style={{ marginRight: "10px" }}>
-						Simone Teglia{" "}
+						{autore}{" "}
 						<FontAwesomeIcon
 							icon={faFeatherPointed}
 							style={{ marginRight: "10px" }}

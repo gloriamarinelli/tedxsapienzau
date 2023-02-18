@@ -150,3 +150,12 @@ body {
 .menu-container {
 	flex: 1 1 100px;
 }
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-container > label {
+	font-size: 30px;
+}

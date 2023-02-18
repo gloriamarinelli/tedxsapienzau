@@ -10,7 +10,7 @@ const Write = () => {
 	const [value, setValue] = useState(state?.title || "");
 	const [title, setTitle] = useState(state?.desc || "");
 	const [file, setFile] = useState(null);
-	const [cat, setCat] = useState(state?.cat || "");
+	const [author, setAuthor] = useState("");
 
 	const navigate = useNavigate();
 
@@ -28,7 +28,6 @@ const Write = () => {
 	const handleClick = async (e) => {
 		e.preventDefault();
 
-		let blobImage;
 		if (file) {
 			if (value == "" || title == "") {
 				alert("Compila tutti i campi prima di pubblicare l'articolo!");
@@ -41,6 +40,7 @@ const Write = () => {
 					.post("http://localhost:8800/blog", {
 						title: title,
 						description: value,
+						autore: author,
 						image: res,
 						date: new Date(),
 					})
@@ -80,19 +80,25 @@ const Write = () => {
 				</div>
 			</div>
 			<div className="menu-container">
-				<div className="item">
-					<h3>Completa l'articolo</h3>
-					<input
-						className="file mb-4"
-						type="file"
-						accept="image/*"
-						onChange={(e) => setFile(e.target.files[0])}
-					/>
-					<div className="buttons">
-						<button className="button" onClick={handleClick}>
-							Publish
-						</button>
-					</div>
+				<h3>Completa l'articolo</h3>
+				<input
+					className="file mb-4"
+					type="file"
+					accept="image/*"
+					onChange={(e) => setFile(e.target.files[0])}
+				/>
+				<label htmlFor="author">Autore</label>
+				<input
+					id="author"
+					type="text"
+					name="author"
+					onChange={(e) => setAuthor(e.target.value)}
+					className="mb-5"
+				/>
+				<div className="buttons">
+					<button className="button" onClick={handleClick}>
+						Publish
+					</button>
 				</div>
 				{/* <div className="item">
 					<h1>Category</h1>
