@@ -19,6 +19,7 @@ import Write from "./components/pages/Write";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import Login from "./components/pages/Login";
+import { AuthContextProvider } from "./components/context/authContext";
 
 const router = createBrowserRouter([
 	{
@@ -109,7 +110,11 @@ function HomeManager() {
 }
 
 function App() {
-	return <RouterProvider router={router} />;
+	return (
+		<AuthContextProvider>
+			<RouterProvider router={router} />
+		</AuthContextProvider>
+	);
 }
 
 export default App;

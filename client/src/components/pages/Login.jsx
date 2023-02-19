@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
+import axios from "axios";
 import "../../resources/styles/loginstyle.css";
 import global from "../../resources/global.json";
+import { AuthContext } from "../context/authContext";
+import { useNavigate } from "react-router";
 
 export default function Login() {
 	return (
@@ -20,26 +22,35 @@ export default function Login() {
 }
 
 const LoginForm = () => {
-	const [email, setEmail] = useState("");
+	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+
+	const { login } = useContext(AuthContext);
+	const navigate = useNavigate();
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		// Add your submit logic here
-		console.log(`email: ${email} password: ${password}`);
+		console.log(`username: ${username} password: ${password}`);
+		try {
+			login({ username: username, password: password });
+			navigate("/blog");
+		} catch (err) {
+			alert("C'è stato un errore");
+		}
 	};
 
 	return (
 		<form onSubmit={handleSubmit} style={{ width: "70%" }}>
 			<div style={{ display: "flex", flexDirection: "column" }}>
-				<label htmlFor="email-login">Email:</label>
+				<label htmlFor="username">Username:</label>
 				<input
 					type="text"
-					id="email-login"
+					id="usernam"
 					className="mb-4"
 					placeholder=""
-					value={email}
-					onChange={(event) => setEmail(event.target.value)}
+					value={username}
+					onChange={(event) => setUsername(event.target.value)}
 				/>
 				<label htmlFor="password">Password:</label>
 				<input

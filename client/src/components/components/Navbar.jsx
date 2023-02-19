@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faFacebook,
@@ -9,8 +9,13 @@ import { Link } from "react-router-dom";
 import Image from "../images/logo-black.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
+import { AuthContext } from "../context/authContext";
 
 export default function Navbar() {
+	const { currentUser } = useContext(AuthContext);
+
+	console.log(currentUser.username);
+
 	return (
 		<>
 			<div className="Navbar">
@@ -144,7 +149,10 @@ export default function Navbar() {
 									</a>
 									<ul className="dropdown-menu">
 										<li>
-											<a className="dropdown-item text-bg-light" href="/edizione2023">
+											<a
+												className="dropdown-item text-bg-light"
+												href="/edizione2023"
+											>
 												Edizione 2023
 											</a>
 										</li>
@@ -203,6 +211,19 @@ export default function Navbar() {
 										About
 									</Link>
 								</li>
+								{/**
+								 * Da cambiare. Bisogna utilizzare jason web token per autenticare la sessione dell'admin
+								 * Adesso con questa soluzione chiunque cambiando manualmente il localStorage può diventare admin
+								 */}
+								{currentUser ? (
+									<li className="nav-item">
+										<Link className="nav-link text-bg-light" to="/write">
+											Scrivi
+										</Link>
+									</li>
+								) : (
+									<></>
+								)}
 							</ul>
 						</div>
 					</div>

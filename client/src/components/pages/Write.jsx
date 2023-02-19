@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
+import axios from "axios";
+import "react-quill/dist/quill.snow.css";
 import "../../resources/styles/blogstyle.css";
 
 const Write = () => {
@@ -11,8 +12,13 @@ const Write = () => {
 	const [title, setTitle] = useState(state?.desc || "");
 	const [file, setFile] = useState(null);
 	const [author, setAuthor] = useState("");
-
+	const { currentUser } = useContext(AuthContext);
 	const navigate = useNavigate();
+	useEffect(() => {
+		if (!currentUser) {
+			navigate("/");
+		}
+	}, []);
 
 	const upload = async () => {
 		try {

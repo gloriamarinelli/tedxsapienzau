@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../resources/styles/blogstyle.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -6,10 +6,13 @@ import { Buffer } from "buffer";
 import BlogCard from "../components/BlogCard";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
+import { AuthContext } from "../context/authContext";
 
 export default function Blog() {
 	const [blog, setBlog] = useState([]);
 	const [windowSize, setWindowSize] = useOutletContext();
+
+	const { currentUser } = useContext(AuthContext);
 
 	useEffect(() => {
 		axios
