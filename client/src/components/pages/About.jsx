@@ -7,9 +7,7 @@ import Image3 from "../images/stage2022.jpeg";
 import Image4 from "../images/Cos'è TED.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
-
 import global from "../../resources/global.json";
-
 import "../../resources/styles/aboutstyle.css";
 import { useOutletContext } from "react-router";
 

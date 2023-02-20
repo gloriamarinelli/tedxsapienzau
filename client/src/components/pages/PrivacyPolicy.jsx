@@ -1,6 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router";
 import "../../index.css";
+import global from "../../resources/global.json";
 
 export default function PrivacyPolicy() {
   const [windowSize, setWindowSize] = useOutletContext();

@@ -13,11 +13,8 @@ import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
 import Statuto from "./components/pages/Statuto";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
-
 import BlogPost from "./components/pages/BlogPost";
-
 import Write from "./components/pages/Write";
-
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import Login from "./components/pages/Login";

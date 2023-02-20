@@ -51,6 +51,7 @@ function Footer() {
                     sono le idee, gli speakers, i partner e gli studenti che
                     popolano questa grande comunità accademica.
                   </p>
+                  
                   <div
                     className="d-flex flex-row justify-content-start mt-4 mb-4"
                     style={{ gap: "60px" }}
