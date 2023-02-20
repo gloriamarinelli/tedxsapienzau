@@ -22,7 +22,7 @@ export default function Statuto() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-3"
+            className="font-weight-bold mt-5"
             style={{
               fontSize: "30px",
               fontWeight: "bold",
@@ -321,7 +321,7 @@ export default function Statuto() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-3"
+            className="font-weight-bold mt-5"
             style={{
               fontSize: "15px",
               fontWeight: "bold",

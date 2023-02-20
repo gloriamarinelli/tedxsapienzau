@@ -295,7 +295,6 @@ export default function PrivacyPolicy() {
             Responsabili del trattamento eventualmente designati.
           </p>
         </div>
-
       </>
     );
   }
