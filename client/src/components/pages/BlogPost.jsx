@@ -9,7 +9,7 @@ import { faFeatherPointed } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { format } from "date-fns";
 import { useNavigate, useParams } from "react-router";
-import { it } from "date-fns";
+import { it } from "date-fns/locale";
 
 export default function BlogPost() {
 	const [blogPost, setBlogPost] = useState([]);
