@@ -6,6 +6,7 @@ import joinusRoutes from "./routes/joinus.js";
 import teamRoutes from "./routes/team.js";
 import authRoutes from "./routes/auth.js";
 import bodyParser from "body-parser";
+import newsletterRoutes from "./routes/newsletter.js"
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use("/speakers", speakerRoutes);
 app.use("/joinus", joinusRoutes);
 app.use("/team", teamRoutes);
 app.use("/auth", authRoutes);
+app.use("/newsletter", newsletterRoutes);
 
 app.get("/", (req, res) => {
 	res.json("Hello backend tedxSapienzaU!");

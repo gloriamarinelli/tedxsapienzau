@@ -12,9 +12,27 @@ import {
 import Image from "../images/logo-white.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
+import axios from "axios";
+import "../../index.css";
 
 function Footer() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  const submitHandle = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    axios
+      .post("http://localhost:8800/newsletter", {
+        email,
+      })
+      .then((response) => {
+        console.log(response);
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
@@ -94,26 +112,23 @@ function Footer() {
                     Iscriviti alla newsletter per rimanere aggiornato sui nostri
                     eventi
                   </p>
-                  <div className="row d-flex align-items-center">
+
+                  <form
+                    onSubmit={submitHandle}
+                    className="row d-flex align-items-center"
+                  >
                     <input
-                      type="email"
+                      type="text"
                       id="email"
-                      pattern=".+@globex\.com"
-                      size="60"
+                      name="email"
                       required
                       className="btn btn-outline-light btn-social mx-1 col-9"
                       placeholder="Inserisci la tua email..*"
                     ></input>
-                    <FontAwesomeIcon
-                      className="text-center col-1"
-                      style={{
-                        color: "#fff",
-                        cursor: "pointer",
-                      }}
-                      icon={faCircleArrowRight}
-                      size="2x"
-                    />
-                  </div>
+
+                    <button type="button" className="btn btn-primary btn-xs"> Publish
+                    </button>
+                  </form>
                 </div>
 
                 <div className="col-lg-4 mb-5 mb-lg-0 ">
