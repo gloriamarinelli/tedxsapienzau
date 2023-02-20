@@ -12,10 +12,10 @@ import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
 
 export default function Navbar() {
-	const { currentUser } = useContext(AuthContext);
+	/*const { currentUser } = useContext(AuthContext);
 
 	console.log(currentUser.username);
-
+*/
 	return (
 		<>
 			<div className="Navbar">
