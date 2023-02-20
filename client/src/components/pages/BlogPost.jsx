@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import { Buffer } from "buffer";
 import {
 	faFacebookF,
 	faLinkedinIn,

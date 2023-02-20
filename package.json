@@ -6,6 +6,7 @@
     "bootstrap": "^5.2.3",
     "buffer": "^6.0.3",
     "date-fns": "^2.29.3",
+    "locale": "^0.1.0",
     "react-bootstrap": "^2.7.0",
     "three": "^0.149.0"
   }
