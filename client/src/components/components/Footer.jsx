@@ -51,7 +51,7 @@ function Footer() {
                     sono le idee, gli speakers, i partner e gli studenti che
                     popolano questa grande comunità accademica.
                   </p>
-                  
+
                   <div
                     className="d-flex flex-row justify-content-start mt-4 mb-4"
                     style={{ gap: "60px" }}
@@ -214,6 +214,33 @@ function Footer() {
                     sono le idee, gli speakers, i partner e gli studenti che
                     popolano questa grande comunità accademica.
                   </p>
+
+                  <div
+                    className="d-flex flex-row justify-content-start mt-4 mb-4"
+                    style={{ gap: "60px" }}
+                  >
+                    <a
+                      href="/statuto"
+                      style={{
+                        color: "white",
+                        textDecoration: "none",
+                        fontFamily: "GothamBold",
+                      }}
+                    >
+                      Statuto
+                    </a>
+
+                    <a
+                      href="/privacypolicy"
+                      style={{
+                        color: "white",
+                        textDecoration: "none",
+                        fontFamily: "GothamBold",
+                      }}
+                    >
+                      Privacy Policy
+                    </a>
+                  </div>
                 </div>
 
                 <div className="mb-3">

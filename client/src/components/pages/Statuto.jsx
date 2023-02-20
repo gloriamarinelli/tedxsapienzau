@@ -13,22 +13,18 @@ export default function Statuto() {
     return (
       <>
         <div
-          className="header gradient-background-team2023"
+          className="header"
           style={{
-            padding: "10px",
             textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
+            color: "black",
             display: "grid",
             placeItems: "center",
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-5"
+            className="font-weight-bold mt-5 mb-3"
             style={{
-              fontSize: "120px",
+              fontSize: "30px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
             }}
@@ -37,7 +33,7 @@ export default function Statuto() {
           </h1>
         </div>
 
-        <div style={{ textAlign: "center", padding: "20px" }}>
+        <div style={{ textAlign: "center", padding: "100px" }}>
           <h5
             style={{
               fontWeight: "bold",
@@ -315,21 +311,19 @@ export default function Statuto() {
     return (
       <>
         <div
-          className="header gradient-background-team2023"
+          className="header"
           style={{
-            padding: "10px",
             textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            height: "40vh",
+            color: "black",
+            marginBottom: "5px",
             display: "grid",
             placeItems: "center",
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-5"
+            className="font-weight-bold mt-5 mb-3"
             style={{
-              fontSize: "60px",
+              fontSize: "15px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
             }}
