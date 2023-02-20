@@ -215,7 +215,7 @@ export default function Navbar() {
 								 * Da cambiare. Bisogna utilizzare jason web token per autenticare la sessione dell'admin
 								 * Adesso con questa soluzione chiunque cambiando manualmente il localStorage può diventare admin
 								 */}
-								{currentUser ? (
+								{/* {currentUser ? (
 									<li className="nav-item">
 										<Link className="nav-link text-bg-light" to="/write">
 											Scrivi
@@ -223,7 +223,7 @@ export default function Navbar() {
 									</li>
 								) : (
 									<></>
-								)}
+								)} */}
 							</ul>
 						</div>
 					</div>
