@@ -129,7 +129,7 @@ export default function Partners() {
 				>
 					<h3
 						style={{
-							fontSize: "30px",
+							fontSize: "15px",
 							fontWeight: "bold",
 							textAlign: "left",
 							color: "black",
