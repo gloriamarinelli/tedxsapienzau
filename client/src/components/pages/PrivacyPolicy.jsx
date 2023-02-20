@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
         <div
           style={{
             textAlign: "justify",
-            padding: "20px",
+            padding: "100px",
             fontFamily: "GothamBook",
           }}
         >
@@ -182,7 +182,7 @@ export default function PrivacyPolicy() {
         <div
           style={{
             textAlign: "justify",
-            padding: "100px",
+            padding: "20px",
             fontFamily: "GothamBook",
           }}
         >
