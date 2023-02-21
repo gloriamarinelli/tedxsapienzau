@@ -203,7 +203,7 @@ const MobileLights = () => {
 
 	useFrame(() => {
 		if (spotLightRightRef && spotLightLeftRef) {
-			spotLightLeftRef.current.target.position.set(-5, 10, 2);
+			spotLightLeftRef.current.target.position.set(-7, 10, 2);
 			spotLightLeftRef.current.target.updateMatrixWorld();
 
 			spotLightRightRef.current.target.position.set(5, -8, 7);
