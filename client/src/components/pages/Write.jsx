@@ -13,7 +13,7 @@ const Write = () => {
 	const [file, setFile] = useState(null);
 	const [author, setAuthor] = useState("");
 	const [base64Image, setBase64Image] = useState(null);
-	const { currentUser } = useContext(AuthContext);
+	const { currentUser, currentToken } = useContext(AuthContext);
 	const navigate = useNavigate();
 
 	useEffect(() => {

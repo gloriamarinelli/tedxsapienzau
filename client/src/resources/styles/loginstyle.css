@@ -6,8 +6,9 @@
 
 .login-container {
 	height: 80%;
-	min-height: 400px;
-	width: 450px;
+	min-height: 450px;
+	min-width: 500px;
+	padding: 0 50px;
 	background-color: whitesmoke;
 	border-radius: 30px;
 	display: flex;

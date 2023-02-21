@@ -1,5 +1,9 @@
 import { db } from "../db.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+
+const JWT_SECRET =
+	"goK!pusp6ThEdURUtRenOwUhAsWUCLheBazl!uJLPlS8EbreWLdrupIwabRAsiBu";
 
 export const register = (req, res) => {
 	return;
@@ -30,8 +34,14 @@ export const login = (req, res) => {
 		if (!isPasswordCorrect)
 			return res.status(400).json("Wrong username or password!");
 
-		res.status(200).json(other);
+		const token = jwt.sign({ username: data[0].username }, JWT_SECRET, {
+			expiresIn: "24h",
+		});
+
+		res.status(200).json({ userData: other, token: token });
 	});
 };
 
-export const logout = (req, res) => {};
+export const logout = (req, res) => {
+	res.status(200).json("User has been logged out.");
+};
