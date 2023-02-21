@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import blogRoutes from "./routes/blog.js";
 import speakerRoutes from "./routes/speakers.js";
-import joinusRoutes from "./routes/joinus.js";
+import joinRoutes from "./routes/join.js";
 import teamRoutes from "./routes/team.js";
 import authRoutes from "./routes/auth.js";
 import bodyParser from "body-parser";
@@ -16,7 +16,8 @@ app.use(cors());
 
 app.use("/blog", blogRoutes);
 app.use("/speakers", speakerRoutes);
-app.use("/joinus", joinusRoutes);
+app.use("/join", joinRoutes);
+app.use("/join1", joinRoutes);
 app.use("/team", teamRoutes);
 app.use("/auth", authRoutes);
 app.use("/newsletter", newsletterRoutes);

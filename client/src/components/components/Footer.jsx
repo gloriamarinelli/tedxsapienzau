@@ -5,10 +5,6 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faArrowRight,
-  faCircleArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
 import Image from "../images/logo-white.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
