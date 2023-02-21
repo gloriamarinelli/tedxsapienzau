@@ -89,3 +89,20 @@ code {
   background: radial-gradient(ellipse at top, #e62b1e, transparent),
     radial-gradient(ellipse at bottom, #822433, transparent);
 }
+
+/* BUTTON SUBMIT NREWSLETTER */
+
+.button-submit-newsletter {
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 19px;
+  border: -31px solid #ffffff;
+  border-radius: 127px;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+.button-submit-newsletter:hover {
+  color: #eb0028;
+  background-color: #ffffff;
+}

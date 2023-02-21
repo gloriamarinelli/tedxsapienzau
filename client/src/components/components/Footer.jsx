@@ -121,12 +121,17 @@ function Footer() {
                       type="text"
                       id="email"
                       name="email"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                       required
                       className="btn btn-outline-light btn-social mx-1 col-9"
-                      placeholder="Inserisci la tua email..*"
+                      placeholder="Inserisci la tua email...*"
                     ></input>
 
-                    <button type="button" className="btn btn-primary btn-xs"> Publish
+                    <button
+                      type="sumbit"
+                      className="button-submit-newsletter text-center col-2"
+                    >
+                      ➱
                     </button>
                   </form>
                 </div>
@@ -273,24 +278,27 @@ function Footer() {
                     eventi
                   </p>
                   <div className="row d-flex align-items-center">
-                    <input
-                      type="email"
-                      id="email"
-                      pattern=".+@globex\.com"
-                      size="60"
-                      required
-                      className="btn btn-outline-light btn-social mx-1 col-9"
-                      placeholder="Inserisci la tua email..*"
-                    ></input>
-                    <FontAwesomeIcon
-                      className="text-center col-1"
-                      style={{
-                        color: "#fff",
-                        cursor: "pointer",
-                      }}
-                      icon={faCircleArrowRight}
-                      size="2x"
-                    />
+                    <form
+                      onSubmit={submitHandle}
+                      className="row d-flex align-items-center"
+                    >
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        className="btn btn-outline-light btn-social mx-1 col-9"
+                        placeholder="Inserisci la tua email..*"
+                      ></input>
+
+                      <button
+                        type="sumbit"
+                        className="button-submit-newsletter text-center col-2"
+                      >
+                        ➱
+                      </button>
+                    </form>
                   </div>
                 </div>
 
