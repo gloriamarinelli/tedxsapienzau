@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faFacebook,
@@ -15,9 +15,11 @@ import "../../index.css";
 function Footer() {
 	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
+	const inputRef = useRef();
+
 	const submitHandle = (event) => {
-		event.preventDefault();		
-		const email = event.target.email.value;
+		event.preventDefault();
+		let email = inputRef.current.value;
 		axios
 			.post("http://localhost:8800/newsletter", {
 				email,
@@ -112,6 +114,7 @@ function Footer() {
 
 									<form className="row d-flex align-items-center">
 										<input
+											ref={inputRef}
 											type="text"
 											id="email"
 											name="email"
@@ -130,7 +133,7 @@ function Footer() {
 											}}
 											icon={faCircleArrowRight}
 											size="2x"
-											onClick={e => submitHandle}
+											onClick={submitHandle}
 										/>
 									</form>
 								</div>
