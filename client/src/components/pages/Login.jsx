@@ -27,9 +27,15 @@ export default function Login() {
 						fontFamily: "GothamBold",
 					}}
 				>
-					{currentUser ? `Benvenuto, ${currentUser.username}` : "BYE BYE!"}
+					{currentUser ? `Benvenuto ${currentUser.username}` : "LOGIN"}
 				</h1>
-				
+				{currentUser ? (
+					<div style={{ width: "80%" }}>
+						
+					</div>
+				) : (
+					LoginForm()
+				)}
 			</div>
 		</div>
 	);
