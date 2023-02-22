@@ -13,6 +13,7 @@ import { AuthContext } from "../context/authContext";
 
 export default function Navbar() {
   const { currentUser } = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);
   /*
 	console.log(currentUser.username);
 */
@@ -213,13 +214,43 @@ export default function Navbar() {
 
                 {currentUser ? (
                   <li className="nav-item">
-                    <Link className="nav-link text-bg-light" to="/write">
+                    <Link
+                      className="nav-link bg-success text-white"
+                      to="/write"
+                    >
                       Scrivi
                     </Link>
                   </li>
                 ) : (
                   <></>
                 )}
+
+                {currentUser ? (
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link bg-success text-white"
+                      type="submit"
+                      onClick={logout}
+                    >
+                      Logout
+                    </Link>
+                  </li>
+                ) : (
+                  <></>
+                )}
+                <>
+                  <li className="nav-item">
+                    <p
+                      className=" nav-link"
+                      style={{
+                        color: "green",
+                        fontSize: "15px",
+                      }}
+                    >
+                      {currentUser ? `Benvenuto, ${currentUser.username}` : ""}
+                    </p>
+                  </li>
+                </>
               </ul>
             </div>
           </div>
