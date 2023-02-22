@@ -68,7 +68,7 @@ export default function Team2022() {
 
             <div className="row gap-5 justify-content-center">
               {team.map((team) => {
-                const { id, nome, ruolo, image } = team;
+                const { id, nome, ruolo, image, link, anno } = team;
                 let base64StringImage = Buffer.from(image, "binary").toString(
                   "base64"
                 );
@@ -78,6 +78,8 @@ export default function Team2022() {
                     nome={nome}
                     ruolo={ruolo}
                     image={base64StringImage}
+                    link={link}  
+                    anno={anno}                  
                   />
                 );
               })}
@@ -133,7 +135,7 @@ export default function Team2022() {
 
             <div className="row gap-5 justify-content-center">
               {team.map((team) => {
-                const { id, nome, ruolo, image } = team;
+                const { id, nome, ruolo, image, link } = team;
                 let base64StringImage = Buffer.from(image, "binary").toString(
                   "base64"
                 );
@@ -143,6 +145,7 @@ export default function Team2022() {
                     nome={nome}
                     ruolo={ruolo}
                     image={base64StringImage}
+                    link={link}
                   />
                 );
               })}
