@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
   faInstagram,
   faLinkedin,
+  faTiktok,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import Image from "../images/logo-black.png";
@@ -76,19 +79,41 @@ export default function Navbar() {
                     />
                   </a>
                 </li>
-                <a
-                  style={{
-                    padding: "10px 15px",
-                    backgroundColor: "#fff",
-                    color: "#000",
-                    textDecoration: "none",
-                    fontFamily: "GothamBold",
-                  }}
-                  className="newsletter"
-                  href="#footer"
-                >
-                  Newsletter
-                </a>
+                <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    href="https://www.tiktok.com/@tedxsapienzau?is_from_webapp=1&sender_device=pc"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      style={{ color: "white" }}
+                      icon={faTiktok}
+                      size="xl"
+                    />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      style={{ color: "white" }}
+                      icon={faYoutube}
+                      size="xl"
+                    />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#footer">
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      style={{ color: "white" }}
+                      size="xl"
+                    />
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -215,44 +240,31 @@ export default function Navbar() {
                     role="button"
                     aria-expanded="false"
                   >
-                   About us
+                    About us
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link
-                        className="dropdown-item text-bg-light"
-                        to="/"
-                      >
+                      <Link className="dropdown-item text-bg-light" to="/">
                         Storia
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item text-bg-light"
-                        to="/"
-                      >
-                       Location
+                      <Link className="dropdown-item text-bg-light" to="/">
+                        Location
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item text-bg-light"
-                        to="/"
-                      >
-                       Sostenibilità
+                      <Link className="dropdown-item text-bg-light" to="/">
+                        Sostenibilità
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item text-bg-light"
-                        to="/about"
-                      >
-                       Mission & Vision
+                      <Link className="dropdown-item text-bg-light" to="/about">
+                        Mission & Vision
                       </Link>
                     </li>
-
                   </ul>
-                  </li>
+                </li>
 
                 {currentUser ? (
                   <li className="nav-item">

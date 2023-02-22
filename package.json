@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@react-three/drei": "^9.56.18",
     "@react-three/fiber": "^8.11.0",
     "@types/three": "^0.149.0",
