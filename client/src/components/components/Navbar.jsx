@@ -206,11 +206,53 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link text-bg-light" to="/about">
-                    About
-                  </Link>
-                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle text-bg-light"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                  >
+                   About us
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/"
+                      >
+                        Storia
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/"
+                      >
+                       Location
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/"
+                      >
+                       Sostenibilità
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/about"
+                      >
+                       Mission & Vision
+                      </Link>
+                    </li>
+
+                  </ul>
+                  </li>
 
                 {currentUser ? (
                   <li className="nav-item">

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import Image from "../images/Get involved in TEDxSapienzaU.png";
-import Image1 from "../images/Work with TEDxSapienzaU.png";
+import Image from "../images/joinstudent.webp";
+import Image1 from "../images/joinpartner.webp";
+import Image2 from "../images/joinadvise.webp";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
@@ -149,8 +151,76 @@ export default function Join() {
                 </button>
               </form>
             </div>
-            <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-              <LazyLoadImage src={Image} alt="Student" width="" height="100" />
+            <div className="col-md-5 order-md-1 d-flex">
+              <LazyLoadImage src={Image} alt="Student" height="400" />
+            </div>
+          </div>
+
+          <hr className="featurette-divider"></hr>
+
+          <div className="row featurette">           
+            <div className="col-md-7 order-md-2">
+              <h3>Sei un'azienda e ti interessa collaborare e supportarci?</h3>
+              <form onSubmit={submitHandle1}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Indirizzo email*
+                  </label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Nome*
+                  </label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Telefono*
+                  </label>
+                  <input
+                    type="text"
+                    id="telefono"
+                    name="telefono"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Messaggio
+                  </label>
+                  <input
+                    type="text"
+                    id="messaggio"
+                    name="messaggio"
+                    className="form-control mx-1 col-9"
+                  ></input>
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn mt-3 mb-3"
+                  style={{
+                    backgroundColor: "rgb(235, 0, 40)",
+                    color: "white",
+                  }}
+                >
+                  Invia
+                </button>
+              </form>            
+            </div>
+            <div className="col-5 order-md-2">
+              <LazyLoadImage src={Image1} alt="Work" height="400" />
             </div>
           </div>
 
@@ -200,7 +270,7 @@ export default function Join() {
                   <input
                     type="text"
                     id="messaggio"
-                    name="messaggio"              
+                    name="messaggio"
                     className="form-control mx-1 col-9"
                   ></input>
                 </div>
@@ -217,8 +287,8 @@ export default function Join() {
                 </button>
               </form>
             </div>
-            <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center mb-5">
-              <LazyLoadImage src={Image1} alt="Work" width="" height="100" />
+            <div className="col-md-5 order-md-1 d-flex">
+              <LazyLoadImage src={Image2} alt="Work" height="400" />
             </div>
           </div>
         </div>
