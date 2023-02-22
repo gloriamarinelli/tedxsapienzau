@@ -1,10 +1,11 @@
 import "../../index.css";
 import React, { useState, useEffect } from "react";
-import Image from "../images/Cos'è TED.png";
-import Image1 from "../images/Cos'è TEDx.png";
-import Image2 from "../images/logo-black.png";
-import Image3 from "../images/stage2022.jpeg";
-import Image4 from "../images/Cos'è TED.png";
+import Image1 from "../images/Cos'è TED.png";
+import Image2 from "../images/Cos'è TEDx.png";
+import Image3 from "../images/logo-black.png";
+import Image4 from "../images/stage2022.jpeg";
+
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
@@ -46,7 +47,7 @@ export default function About() {
 					{/* Cos'è TED */}
 					<div className="row featurette">
 						<div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-							<LazyLoadImage src={Image} alt="Cos'èTED" height="50" />
+							<LazyLoadImage src={Image1} alt="Cos'èTED" height="50" />
 						</div>
 						<div className="col-md-7 order-md-2 mt-3">
 							<p
@@ -74,7 +75,7 @@ export default function About() {
 					<div className="marketing">
 						<div className="row featurette">
 							<div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-								<LazyLoadImage src={Image1} alt="Cos'èTEDx" height="50" />
+								<LazyLoadImage src={Image2} alt="Cos'èTEDx" height="50" />
 							</div>
 							<div className="col-md-7 order-md-2 mt-3">
 								<p
@@ -451,21 +452,22 @@ const CarouselComponent = () => {
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
+					src={Image1}
+					height="100px"
 					alt="First slide"
 				/>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
+					src={Image2}
 					alt="Second slide"
 				/>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
+					src={Image3}
 					alt="Third slide"
 				/>
 			</Carousel.Item>
@@ -475,14 +477,7 @@ const CarouselComponent = () => {
 					src={Image4}
 					alt="Third slide"
 				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block carousel-image"
-					src={Image4}
-					alt="Third slide"
-				/>
-			</Carousel.Item>
+			</Carousel.Item>			
 		</Carousel>
 	);
 };

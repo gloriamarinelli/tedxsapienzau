@@ -83,7 +83,7 @@ export default function Join() {
               fontFamily: "GothamBold",
             }}
           >
-            Entra a far parte anche tu del team TedxSapienzaU!
+            Entra a far parte anche tu del team TEDxSapienzaU!
           </h1>
         </div>
 
@@ -195,13 +195,12 @@ export default function Join() {
                   ></input>
 
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Messaggio*
+                    Messaggio
                   </label>
                   <input
                     type="text"
                     id="messaggio"
-                    name="messaggio"
-                    required
+                    name="messaggio"              
                     className="form-control mx-1 col-9"
                   ></input>
                 </div>
@@ -254,7 +253,7 @@ export default function Join() {
               textAlign: "center",
             }}
           >
-            Entra a far parte anche tu del team TedxSapienzaU!
+            Entra a far parte anche tu del team TEDxSapienzaU!
           </h1>
         </div>
 

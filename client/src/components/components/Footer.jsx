@@ -18,10 +18,8 @@ function Footer() {
 	const inputRef = useRef();
 
 	const submitHandle = (event) => {
-		event.preventDefault();
-		console.log("hello");
-		return;
-		const email = event.target.email.value;
+	event.preventDefault();
+		let email = inputRef.current.value;		
 		axios
 			.post("http://localhost:8800/newsletter", {
 				email,
@@ -135,7 +133,7 @@ function Footer() {
 											}}
 											icon={faCircleArrowRight}
 											size="2x"
-											onClick={e => submitHandle}
+											onClick={submitHandle}
 										/>
 									</form>
 								</div>
@@ -202,7 +200,7 @@ function Footer() {
 						<div className="copyright py-4 text-center text-white">
 							<div className="container">
 								<small>
-									&copy; Copyright 2022 - 2023 | TedxSapienzaU | All Rights
+									&copy; Copyright 2022 - 2023 | TEDxSapienzaU | All Rights
 									Reserved
 								</small>
 							</div>
@@ -368,7 +366,7 @@ function Footer() {
 						<div className="copyright py-4 text-center text-white">
 							<div className="container">
 								<small>
-									&copy; Copyright 2022 - 2023 | TedxSapienzaU | All Rights
+									&copy; Copyright 2022 - 2023 | TEDxSapienzaU | All Rights
 									Reserved
 								</small>
 							</div>

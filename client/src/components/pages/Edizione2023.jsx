@@ -100,7 +100,10 @@ export default function Edizione2023() {
               style={{ color: global.COLORS.ROSSO_TED }}
               size="2x"
             />
-            <p className="col-8">?</p>
+            <p className="col-8">
+              Università La Sapienza - Aula Magna Rettorato Piazzale Aldo Moro,
+              5, 00185 Roma RM
+            </p>
           </div>
           <div className="row">
             <FontAwesomeIcon
@@ -109,7 +112,7 @@ export default function Edizione2023() {
               style={{ color: global.COLORS.ROSSO_TED }}
               size="2x"
             />
-            <p className="col-8">?</p>
+            <p className="col-8">Autunno 2023</p>
           </div>
         </div>
         <div className="col-md-6">
@@ -152,7 +155,7 @@ export default function Edizione2023() {
         >
           L'uomo e il mondo che lo circonda non sono binari separati, ma rotaie
           che si muovono insieme, hanno bisogno l'uno dell'altro.
-        </p>        
+        </p>
       </div>
 
       <div className="container">
