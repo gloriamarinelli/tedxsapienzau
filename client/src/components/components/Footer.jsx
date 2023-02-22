@@ -19,7 +19,9 @@ function Footer() {
 
 	const submitHandle = (event) => {
 		event.preventDefault();
-		let email = inputRef.current.value;
+		console.log("hello");
+		return;
+		const email = event.target.email.value;
 		axios
 			.post("http://localhost:8800/newsletter", {
 				email,
@@ -133,7 +135,7 @@ function Footer() {
 											}}
 											icon={faCircleArrowRight}
 											size="2x"
-											onClick={submitHandle}
+											onClick={e => submitHandle}
 										/>
 									</form>
 								</div>
