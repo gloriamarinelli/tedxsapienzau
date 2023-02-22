@@ -16,9 +16,7 @@ function Footer() {
 	const [windowSize, setWindowSize] = useState(window.innerWidth);
 
 	const submitHandle = (event) => {
-		event.preventDefault();
-		console.log("hello");
-		return;
+		event.preventDefault();		
 		const email = event.target.email.value;
 		axios
 			.post("http://localhost:8800/newsletter", {
@@ -125,13 +123,14 @@ function Footer() {
 
 										<FontAwesomeIcon
 											className="text-center col-1"
+											type="submit"
 											style={{
 												color: "#fff",
 												cursor: "pointer",
 											}}
 											icon={faCircleArrowRight}
 											size="2x"
-											onClick={submitHandle}
+											onClick={e => submitHandle}
 										/>
 									</form>
 								</div>

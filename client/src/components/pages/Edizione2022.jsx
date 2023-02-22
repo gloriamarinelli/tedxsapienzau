@@ -100,7 +100,7 @@ export default function Edizione2022() {
 						<FontAwesomeIcon
 							className="col-2"
 							icon={faLocationDot}
-							style={{ color: global.COLORS.ROSSO_TED_2022 }}
+							style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
 							size="2x"
 						/>
 						<p className="col-8">
@@ -112,7 +112,7 @@ export default function Edizione2022() {
 						<FontAwesomeIcon
 							className="col-2"
 							icon={faCalendar}
-							style={{ color: global.COLORS.ROSSO_TED_2022 }}
+							style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
 							size="2x"
 						/>
 						<p className="col-8">29 Aprile 2022</p>
@@ -136,9 +136,9 @@ export default function Edizione2022() {
 					IL TEMA DELL'EVENTO
 				</h1>
 				<p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
-					Il titolo della prima edizione del TEDxSapienzaU sarà{" "}
+					Il titolo della prima edizione del TEDxSapienzaU è stato{" "}
 					<strong>ACT - Lead the change</strong>. Come da linee guida TEDx, i
-					dialoghi che verranno presentati riguarderanno diverse materie ed aree
+					dialoghi che sono stati presentati hanno riguardato diverse materie ed aree
 					tematiche interconnesse, prediligendo le migliori idee ed esperienze
 					ispiratrici:
 				</p>
