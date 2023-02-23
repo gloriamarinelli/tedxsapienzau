@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/components/Navbar";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
-import About from "./components/pages/About";
+import MissionandVision from "./components/pages/MissionandVision";
 import ErrorPage from "./components/pages/ErrorPage";
 import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
@@ -57,8 +57,8 @@ const router = createBrowserRouter([
 				element: <Join />,
 			},
 			{
-				path: "/about",
-				element: <About />,
+				path: "/mission&vision",
+				element: <MissionandVision />,
 			},
 			{
 				path: "/team2022",

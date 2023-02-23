@@ -11,7 +11,7 @@ import global from "../../resources/global.json";
 import "../../resources/styles/aboutstyle.css";
 import { useOutletContext } from "react-router";
 
-export default function About() {
+export default function MissionandVision() {
 	const [windowSize, setWindowSize] = useOutletContext();
 
 	if (windowSize > global.UTILS.MOBILE_WIDTH) {
@@ -38,7 +38,7 @@ export default function About() {
 							fontFamily: "GothamBold",
 						}}
 					>
-						ABOUT US
+						MISSION & VISION
 					</h1>
 				</div>
 
@@ -247,7 +247,7 @@ export default function About() {
 							fontFamily: "GothamBold",
 						}}
 					>
-						ABOUT US
+						MISSION & VISION
 					</h1>
 				</div>
 

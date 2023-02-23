@@ -259,7 +259,7 @@ export default function Navbar() {
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item text-bg-light" to="/about">
+                      <Link className="dropdown-item text-bg-light" to="/mission&vision">
                         Mission & Vision
                       </Link>
                     </li>
