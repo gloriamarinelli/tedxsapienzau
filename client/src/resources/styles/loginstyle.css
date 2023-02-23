@@ -35,3 +35,34 @@
 input {
 	height: 40px;
 }
+
+.error-message {
+	color: white;
+	background-color: rgba(235, 0, 40, 1);
+	font-size: 15px;
+	text-align: center;
+	padding: 8px 0px;
+	font-family: GothamBook;
+	width: 80%;
+	margin: auto;
+	border-radius: 6px;
+}
+
+.error-animation {
+	animation: wiggle 0.4s;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: translateX(0px);
+	}
+	25% {
+		transform: translateX(15px);
+	}
+	75% {
+		transform: translateX(-15px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}

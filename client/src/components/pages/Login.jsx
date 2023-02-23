@@ -7,6 +7,9 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/logo-black.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Login() {
 	const { currentUser } = useContext(AuthContext);
@@ -29,13 +32,7 @@ export default function Login() {
 				>
 					{currentUser ? `Benvenuto, ${currentUser.username}` : "LOGIN"}
 				</h1>
-				{currentUser ? (
-					<div style={{ width: "80%" }}>
-						
-					</div>
-				) : (
-					LoginForm()
-				)}
+				{currentUser ? <div style={{ width: "80%" }}></div> : LoginForm()}
 			</div>
 		</div>
 	);
@@ -44,17 +41,24 @@ export default function Login() {
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const [error, setError] = useState(null);
 
 	const { login } = useContext(AuthContext);
 
-	const handleSubmit = (event) => {
+	const errorMessageRef = useRef();
+
+	const handleSubmit = async (event) => {
 		event.preventDefault();
 		console.log(`username: ${username} password: ${password}`);
-		try {
-			login({ username: username, password: password });
-		} catch (err) {
-			alert("C'è stato un errore");
-		}
+		await login({ username: username, password: password })
+			.then((res) => console.log(res))
+			.catch((err) => {
+				setError(err.response.data);
+				console.log(err);
+				errorMessageRef.current.classList.remove("error-animation");
+				void errorMessageRef.current.offsetWidth;
+				errorMessageRef.current.classList.add("error-animation");
+			});
 	};
 
 	return (
@@ -81,6 +85,13 @@ const LoginForm = () => {
 					<button type="submit" className="button" style={{ width: "100%" }}>
 						Login
 					</button>
+					<span
+						className="error-message error-animation mt-3"
+						ref={errorMessageRef}
+						style={{ display: error ? "initial" : "none" }}
+					>
+						<FontAwesomeIcon icon={faCircleXmark} /> {error}
+					</span>
 				</div>
 			</form>
 		</>

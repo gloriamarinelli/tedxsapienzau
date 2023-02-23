@@ -32,7 +32,7 @@ export const login = (req, res) => {
 		const { password, ...other } = data[0];
 
 		if (!isPasswordCorrect)
-			return res.status(400).json("Wrong username or password!");
+			return res.status(400).json("Username o password errati");
 
 		const token = jwt.sign({ username: data[0].username }, JWT_SECRET, {
 			expiresIn: "24h",

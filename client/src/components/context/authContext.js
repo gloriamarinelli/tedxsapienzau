@@ -21,9 +21,18 @@ export const AuthContextProvider = ({ children }) => {
 	}, [currentToken]);
 
 	const login = async (inputs) => {
-		const res = await axios.post("http://localhost:8800/auth/login", inputs);
-		setCurrentUser(res.data.userData);
-		setCurrentToken(res.data.token);
+		return new Promise((res, rej) => {
+			axios
+				.post("http://localhost:8800/auth/login", inputs)
+				.then((result) => {
+					setCurrentUser(result.data.userData);
+					setCurrentToken(result.data.token);
+					res(result);
+				})
+				.catch((err) => {
+					rej(err);
+				});
+		});
 	};
 
 	const logout = async (inputs) => {

@@ -18,7 +18,7 @@ const Write = () => {
 
 	useEffect(() => {
 		if (!currentUser) {
-			navigate("/");
+			navigate("/login");
 		}
 	}, []);
 
