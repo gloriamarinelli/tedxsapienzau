@@ -1,16 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../images/joinstudent.webp";
 import Image1 from "../images/joinpartner.webp";
 import Image2 from "../images/joinadvise.webp";
-
+import { useLocation } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import axios from "axios";
 
 export default function Join() {
+  const state = useLocation().state;
   const [windowSize, setWindowSize] = useOutletContext();
+  const [cat, setCat] = useState(state?.cat || "");
 
+  /*
   const submitHandle = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -56,6 +59,7 @@ export default function Join() {
         console.log(error);
       });
   };
+  */
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**
@@ -72,8 +76,6 @@ export default function Join() {
             height: "100",
             color: "#fff",
             clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
             placeItems: "center",
           }}
         >
@@ -89,11 +91,12 @@ export default function Join() {
           </h1>
         </div>
 
+        {/* JOIN STUDENT */}
         <div className="container marketing">
           <div className="row featurette">
             <div className="col-md-7 order-md-2">
               <h3>Sei uno studente interessato al progetto?</h3>
-              <form onSubmit={submitHandle}>
+              <form /*onSubmit={submitHandle}*/>
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Indirizzo email istituzionale*
@@ -152,84 +155,20 @@ export default function Join() {
               </form>
             </div>
             <div className="col-md-5 order-md-1 d-flex">
-              <LazyLoadImage src={Image} alt="Student" height="400" />
+              <img
+                src="https://static.vecteezy.com/ti/vettori-gratis/t1/3592464-un-unico-disegno-di-lavoratori-e-donne-seduti-nella-sala-riunioni-insieme-e-discutere-durante-l-ora-di-pranzo-concetto-aziendale-continuo-disegno-linea-disegno-illustrazione-grafica-vettoriale.jpg"
+                alt="JoinStudent"
+              />
             </div>
           </div>
 
           <hr className="featurette-divider"></hr>
 
-          <div className="row featurette">           
-            <div className="col-md-7 order-md-2">
-              <h3>Sei un'azienda e ti interessa collaborare e supportarci?</h3>
-              <form onSubmit={submitHandle1}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Indirizzo email*
-                  </label>
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    required
-                    className="form-control mx-1 col-9"
-                  ></input>
-
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Nome*
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    className="form-control mx-1 col-9"
-                  ></input>
-
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Telefono*
-                  </label>
-                  <input
-                    type="text"
-                    id="telefono"
-                    name="telefono"
-                    required
-                    className="form-control mx-1 col-9"
-                  ></input>
-
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Messaggio
-                  </label>
-                  <input
-                    type="text"
-                    id="messaggio"
-                    name="messaggio"
-                    className="form-control mx-1 col-9"
-                  ></input>
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn mt-3 mb-3"
-                  style={{
-                    backgroundColor: "rgb(235, 0, 40)",
-                    color: "white",
-                  }}
-                >
-                  Invia
-                </button>
-              </form>            
-            </div>
-            <div className="col-5 order-md-2">
-              <LazyLoadImage src={Image1} alt="Work" height="400" />
-            </div>
-          </div>
-
-          <hr className="featurette-divider"></hr>
-
+          {/* JOIN PARTNER */}
           <div className="row featurette">
             <div className="col-md-7 order-md-2">
               <h3>Sei un'azienda e ti interessa collaborare e supportarci?</h3>
-              <form onSubmit={submitHandle1}>
+              <form /*onSubmit={submitHandle1}*/>
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Indirizzo email*
@@ -287,8 +226,77 @@ export default function Join() {
                 </button>
               </form>
             </div>
+            <div className="col-5 order-md-2">
+              <img
+                src="https://us.123rf.com/450wm/remodesigner/remodesigner1906/remodesigner190601238/127855200-disegno-a-tratteggio-continuo-della-stretta-di-mano-stretta-di-mano-dei-partner-commerciali.jpg?ver=6"
+                alt="Join Partner"
+              />
+            </div>
+          </div>
+
+          <hr className="featurette-divider"></hr>
+
+          {/* JOIN ADVISE */}
+          <div className="row featurette">
+            <div className="col-md-7 order-md-2">
+              <h3>
+                Hai uno{" "}
+                <select>
+                  <option value="1">Speaker</option>
+                  <option value="2">Sponsor</option>
+                </select>{" "}
+                da consigliarci?
+              </h3>
+
+              <form /*onSubmit={submitHandle1}*/>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Nome*
+                  </label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Contatto
+                  </label>
+                  <input
+                    type="text"
+                    id="contatto"
+                    name="contatto"
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Messaggio
+                  </label>
+                  <input
+                    type="text"
+                    id="messaggio"
+                    name="messaggio"
+                    className="form-control mx-1 col-9"
+                  ></input>
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn mt-3 mb-3"
+                  style={{
+                    backgroundColor: "rgb(235, 0, 40)",
+                    color: "white",
+                  }}
+                >
+                  Invia
+                </button>
+              </form>
+            </div>
             <div className="col-md-5 order-md-1 d-flex">
-              <LazyLoadImage src={Image2} alt="Work" height="400" />
+              <img src="https://static.vecteezy.com/ti/gratis-vektor/p3/3592505-ein-einzellinien-zeichnung-von-jung-weiblichen-moderatorin-denken-wahrend-der-arbeit-prasentation-im-buro-wahrend-meeting-arbeit-prasentationskonzept-kontinuierliche-linie-zeichnen-grafikdesign-illustration-vektor.jpg" 
+              height="350px"/>
             </div>
           </div>
         </div>
@@ -327,63 +335,60 @@ export default function Join() {
           </h1>
         </div>
 
+        {/* JOIN STUDENT */}
         <div className="container marketing">
-          <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center mb-3">
-            <LazyLoadImage src={Image} alt="Student" width="" height="100" />
-          </div>
-          <div className="row featurette mb-5">
+          <div className="row featurette">
             <div className="col-md-7 order-md-2">
               <h3>Sei uno studente interessato al progetto?</h3>
-              <form>
-                <div className="mb-3">
+              <form /*onSubmit={submitHandle}*/>
+                <div style={{ display: "flex", flexDirection: "column" }}>
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Indirizzo email istituzionale
+                    Indirizzo email istituzionale*
                   </label>
-                  <required>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Nome
+                    Nome*
                   </label>
-                  <required>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Cognome
+                    Cognome*
                   </label>
-                  <required>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="cognome"
+                    name="cognome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Descrivici il tuo interesse
                   </label>
-                  <required>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="interesse"
+                    name="interesse"
+                    className="form-control mx-1 col-9"
+                  ></input>
                 </div>
+
                 <button
                   type="submit"
-                  className="btn"
+                  className="btn mt-3"
                   style={{
                     backgroundColor: "rgb(235, 0, 40)",
                     color: "white",
@@ -393,62 +398,61 @@ export default function Join() {
                 </button>
               </form>
             </div>
+            <div className="col-md-5 order-md-1 d-flex">
+              <LazyLoadImage src={Image} alt="JoinStudent" height="400" />
+            </div>
           </div>
 
           <hr className="featurette-divider"></hr>
 
-          <div className="row featurette mt-5">
-            <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center mb-3">
-              <LazyLoadImage src={Image1} alt="Work" width="" height="100" />
-            </div>
+          {/* JOIN PARTNER */}
+          <div className="row featurette">
             <div className="col-md-7 order-md-2">
               <h3>Sei un'azienda e ti interessa collaborare e supportarci?</h3>
-              <form>
-                <div className="mb-10">
+              <form /*onSubmit={submitHandle1}*/>
+                <div style={{ display: "flex", flexDirection: "column" }}>
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Indirizzo email
+                    Indirizzo email*
                   </label>
-                  <required>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Nome
+                    Nome*
                   </label>
-                  <required>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Telefono
+                    Telefono*
                   </label>
-                  <required>
-                    <input
-                      type="number"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="telefono"
+                    name="telefono"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Messaggio
                   </label>
-                  <required>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    ></input>
-                  </required>
+                  <input
+                    type="text"
+                    id="messaggio"
+                    name="messaggio"
+                    className="form-control mx-1 col-9"
+                  ></input>
                 </div>
 
                 <button
@@ -462,6 +466,74 @@ export default function Join() {
                   Invia
                 </button>
               </form>
+            </div>
+            <div className="col-5 order-md-2">
+              <LazyLoadImage src={Image1} alt="JoinPartner" height="400" />
+            </div>
+          </div>
+
+          <hr className="featurette-divider"></hr>
+
+          {/* JOIN ADVISE */}
+          <div className="row featurette">
+            <div className="col-md-7 order-md-2">
+              <h3>
+                Hai uno{" "}
+                <select>
+                  <option value="1">Speaker</option>
+                  <option value="2">Sponsor</option>
+                </select>{" "}
+                da consigliarci?
+              </h3>
+
+              <form /*onSubmit={submitHandle1}*/>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Nome*
+                  </label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Contatto
+                  </label>
+                  <input
+                    type="text"
+                    id="contatto"
+                    name="contatto"
+                    className="form-control mx-1 col-9"
+                  ></input>
+
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Messaggio
+                  </label>
+                  <input
+                    type="text"
+                    id="messaggio"
+                    name="messaggio"
+                    className="form-control mx-1 col-9"
+                  ></input>
+                </div>
+
+                <button
+                  type="submit"
+                  className="btn mt-3 mb-3"
+                  style={{
+                    backgroundColor: "rgb(235, 0, 40)",
+                    color: "white",
+                  }}
+                >
+                  Invia
+                </button>
+              </form>
+            </div>
+            <div className="col-md-5 order-md-1 d-flex">
+              <LazyLoadImage src={Image2} alt="Work" height="400" />
             </div>
           </div>
         </div>

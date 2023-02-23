@@ -5,7 +5,7 @@ import {
   faInstagram,
   faLinkedin,
   faTiktok,
-  faYoutube
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "../images/logo-white.png";
@@ -44,6 +44,9 @@ function Footer() {
   };
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
+    /**
+     * DESKTOP
+     */
     return (
       <>
         <section className="page-section" id="footer">
@@ -192,17 +195,16 @@ function Footer() {
                         size="2xl"
                       />
                     </a>
-					<a
-                    className=""
-                    href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
-                  
-                  >
-                    <FontAwesomeIcon                     
-                      style={{ color: "white" }}
-                      icon={faYoutube}
-                      size="2xl"
-                    />
-                  </a>
+                    <a
+                      className=""
+                      href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
+                    >
+                      <FontAwesomeIcon
+                        style={{ color: "white" }}
+                        icon={faYoutube}
+                        size="2xl"
+                      />
+                    </a>
                   </div>
                   <h5
                     className="mt-5 mb-0 text-white"
@@ -233,6 +235,9 @@ function Footer() {
       </>
     );
   } else {
+    /**
+     * MOBILE
+     */
     return (
       <>
         <section className="page-section" id="footer">
@@ -317,12 +322,17 @@ function Footer() {
                         placeholder="Inserisci la tua email..*"
                       ></input>
 
-                      <button
-                        type="sumbit"
-                        className="button-submit-newsletter text-center col-2"
-                      >
-                        ➱
-                      </button>
+                      <FontAwesomeIcon
+                        className="text-center col-1"
+                        type="submit"
+                        style={{
+                          color: "#fff",
+                          cursor: "pointer",
+                        }}
+                        icon={faCircleArrowRight}
+                        size="2x"
+                        onClick={submitHandle}
+                      />
                     </form>
                   </div>
                 </div>
@@ -366,6 +376,26 @@ function Footer() {
                       <FontAwesomeIcon
                         style={{ color: "white" }}
                         icon={faInstagram}
+                        size="2xl"
+                      />
+                    </a>
+                    <a
+                      className=""
+                      href="https://www.tiktok.com/@tedxsapienzau?is_from_webapp=1&sender_device=pc"
+                    >
+                      <FontAwesomeIcon
+                        style={{ color: "white" }}
+                        icon={faTiktok}
+                        size="2xl"
+                      />
+                    </a>
+                    <a
+                      className=""
+                      href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
+                    >
+                      <FontAwesomeIcon
+                        style={{ color: "white" }}
+                        icon={faYoutube}
                         size="2xl"
                       />
                     </a>
