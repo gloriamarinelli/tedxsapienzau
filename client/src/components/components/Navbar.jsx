@@ -41,7 +41,7 @@ export default function Navbar() {
               <ul className="nav d-flex align-items-center justify-content-end">
                 <li className="nav-item">
                   <a
-                    className="nav-link active"
+                    className="nav-link"
                     aria-current="page"
                     href="https://www.facebook.com/tedxsapienzau/"
                     target="_blank"
@@ -88,7 +88,7 @@ export default function Navbar() {
                     <FontAwesomeIcon
                       style={{ color: "white" }}
                       icon={faTiktok}
-                      size="xl"
+                      size="lg"
                     />
                   </a>
                 </li>
@@ -101,7 +101,7 @@ export default function Navbar() {
                     <FontAwesomeIcon
                       style={{ color: "white" }}
                       icon={faYoutube}
-                      size="xl"
+                      size="lg"
                     />
                   </a>
                 </li>

@@ -73,7 +73,7 @@ export default function Join() {
             backgroundColor: "red",
             textAlign: "left",
             display: "grid",
-            height: "100",
+            height: "40vh",
             color: "#fff",
             clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
             placeItems: "center",
@@ -228,8 +228,9 @@ export default function Join() {
             </div>
             <div className="col-5 order-md-2">
               <img
-                src="https://us.123rf.com/450wm/remodesigner/remodesigner1906/remodesigner190601238/127855200-disegno-a-tratteggio-continuo-della-stretta-di-mano-stretta-di-mano-dei-partner-commerciali.jpg?ver=6"
+                src="https://img.freepik.com/premium-vector/businessmen-shaking-hands-continuous-line-drawing-business-people-meeting-handshake-partner-collaboration-partnership-vector-concept-man-having-deal-agreement-business-signing-contract_102902-3255.jpg"
                 alt="Join Partner"
+                height="300px"
               />
             </div>
           </div>
@@ -295,8 +296,10 @@ export default function Join() {
               </form>
             </div>
             <div className="col-md-5 order-md-1 d-flex">
-              <img src="https://static.vecteezy.com/ti/gratis-vektor/p3/3592505-ein-einzellinien-zeichnung-von-jung-weiblichen-moderatorin-denken-wahrend-der-arbeit-prasentation-im-buro-wahrend-meeting-arbeit-prasentationskonzept-kontinuierliche-linie-zeichnen-grafikdesign-illustration-vektor.jpg" 
-              height="350px"/>
+              <img
+                src="https://static.vecteezy.com/ti/gratis-vektor/p3/3592505-ein-einzellinien-zeichnung-von-jung-weiblichen-moderatorin-denken-wahrend-der-arbeit-prasentation-im-buro-wahrend-meeting-arbeit-prasentationskonzept-kontinuierliche-linie-zeichnen-grafikdesign-illustration-vektor.jpg"
+                height="350px"
+              />
             </div>
           </div>
         </div>
@@ -398,9 +401,6 @@ export default function Join() {
                 </button>
               </form>
             </div>
-            <div className="col-md-5 order-md-1 d-flex">
-              <LazyLoadImage src={Image} alt="JoinStudent" height="400" />
-            </div>
           </div>
 
           <hr className="featurette-divider"></hr>
@@ -467,9 +467,6 @@ export default function Join() {
                 </button>
               </form>
             </div>
-            <div className="col-5 order-md-2">
-              <LazyLoadImage src={Image1} alt="JoinPartner" height="400" />
-            </div>
           </div>
 
           <hr className="featurette-divider"></hr>
@@ -531,9 +528,6 @@ export default function Join() {
                   Invia
                 </button>
               </form>
-            </div>
-            <div className="col-md-5 order-md-1 d-flex">
-              <LazyLoadImage src={Image2} alt="Work" height="400" />
             </div>
           </div>
         </div>

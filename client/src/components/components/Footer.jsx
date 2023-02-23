@@ -28,7 +28,8 @@ function Footer() {
       })
       .then((response) => {
         console.log(response);
-        event.target.reset();
+        inputRef.current.value = "";
+        inputRef.current.style.borderColor = "green";
       })
       .catch((error) => {
         console.log(error);
@@ -207,17 +208,18 @@ function Footer() {
                     </a>
                   </div>
                   <h5
-                    className="mt-5 mb-0 text-white"
+                    className="text-white mt-5 mb-0"
                     style={{ fontFamily: "GothamBook" }}
                   >
                     Cerchi informazioni o vuoi proporre la tua idea? Contattaci!
                   </h5>
-                  <p
+                  <a
                     className="text-white font-weight-light mt-3 mb-4"
                     style={{ fontFamily: "GothamBook" }}
+                    href="mailto:info@tedxsapienzau.com"
                   >
                     info@tedxsapienzau.com
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -406,12 +408,13 @@ function Footer() {
                   >
                     Cerchi informazioni o vuoi proporre la tua idea? Contattaci!
                   </h5>
-                  <p
+                  <a
                     className="text-white font-weight-light mt-3 mb-4"
                     style={{ fontFamily: "GothamBook" }}
+                    href="mailto:info@tedxsapienzau.com"
                   >
                     info@tedxsapienzau.com
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
