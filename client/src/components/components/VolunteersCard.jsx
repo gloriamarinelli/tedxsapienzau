@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ExecutiveTeamCard({ id, nome, ruolo, image, link }) {
+export default function VolunteersCard({ id, nome, ruolo, image, link }) {
   return (
     <>
       <div className="col-lg-3 mb-4 d-flex justify-content-center">
@@ -21,9 +21,8 @@ export default function ExecutiveTeamCard({ id, nome, ruolo, image, link }) {
             </div>
           </div>
           <img
-          src="https://i0.wp.com/www.diamonddotz.it/wp-content/uploads/2020/05/DDS.B-600x600.jpg"
-            /*src={`data:image/*;base64,${image}`}*/
-            height="100"
+            src={`data:image/*;base64,${image}`}
+            height="10"
             alt="foto team esecutivo"
           />
 
