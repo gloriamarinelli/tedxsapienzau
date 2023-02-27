@@ -1,4 +1,8 @@
 import { db } from "../db.js";
+import jwt from "jsonwebtoken";
+
+const JWT_SECRET =
+	"goK!pusp6ThEdURUtRenOwUhAsWUCLheBazl!uJLPlS8EbreWLdrupIwabRAsiBu";
 
 export const getBlog = (req, res) => {
 	const q = req.query.cat
@@ -23,17 +27,28 @@ export const getBlogID = (req, res) => {
 };
 
 export const postBlog = (req, res) => {
-	const q =
-		"INSERT INTO blog (`titolo`, `descrizione`,`autore`, `image`, `data`) VALUES (?)";
-	const values = [
-		req.body.title,
-		req.body.description,
-		req.body.autore,
-		req.body.image,
-		new Date(),
-	];
-	db.query(q, [values], (err, data) => {
-		if (err) return res.json(err);
-		return res.json("Inserted BlogPost");
-	});
+	const bearerToken = req.headers["authorization"];
+	if (bearerToken) {
+		const token = bearerToken.split(" ")[1];
+		jwt.verify(token, JWT_SECRET, (err, decoded) => {
+			if (err) {
+				console.log(err);
+				return res.status(401).json("Token errato");
+			} else {
+				const q =
+					"INSERT INTO blog (`titolo`, `descrizione`,`autore`, `image`, `data`) VALUES (?)";
+				const values = [
+					req.body.title,
+					req.body.description,
+					req.body.autore,
+					req.body.image,
+					new Date(),
+				];
+				db.query(q, [values], (err, data) => {
+					if (err) return res.json(err);
+					return res.json("Inserted BlogPost");
+				});
+			}
+		});
+	}
 };

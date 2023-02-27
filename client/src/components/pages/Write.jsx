@@ -13,14 +13,24 @@ const Write = () => {
 	const [file, setFile] = useState(null);
 	const [author, setAuthor] = useState("");
 	const [base64Image, setBase64Image] = useState(null);
-	const { currentUser, currentToken } = useContext(AuthContext);
+	const { currentUser, currentToken, logout } = useContext(AuthContext);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (!currentUser) {
+		if (!currentToken) {
 			navigate("/login");
+		} else {
+			let decoded = JSON.parse(atob(currentToken.split(".")[1]));
+			if (decoded.exp * 1000 < Date.now()) {
+				console.log("Token Expired");
+				logout();
+			}
 		}
 	}, []);
+
+	useEffect(() => {
+		if (!currentToken) navigate("/login");
+	}, [currentToken]);
 
 	useEffect(() => {
 		imageToBase64(file).then((res) => setBase64Image(res));
@@ -36,20 +46,30 @@ const Write = () => {
 			}
 
 			imageToBase64(file).then((res) => {
-				console.log(res);
 				axios
-					.post("http://localhost:8800/blog", {
-						title: title,
-						description: value,
-						autore: author,
-						image: res,
-						date: new Date(),
-					})
+					.post(
+						"http://localhost:8800/blog",
+						{
+							title: title,
+							description: value,
+							autore: author,
+							image: res,
+							date: new Date(),
+						},
+						{ headers: { Authorization: `Bearer ${currentToken}` } }
+					)
 					.then((res, err) => {
 						console.log(res);
 						navigate("/blog");
 					})
-					.catch((err) => console.error(err));
+					.catch((err) => {
+						const status = err.response.status;
+						if (status === 401) {
+							//forse da fixare sequenza eventi
+							logout();
+							navigate("/login");
+						}
+					});
 			});
 		} else {
 			alert("Aggiungi una foto all'articolo!");
