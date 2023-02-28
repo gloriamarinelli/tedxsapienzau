@@ -4,7 +4,12 @@ import Image from "../images/Cos'è TED.png";
 import Image1 from "../images/Cos'è TEDx.png";
 import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.jpeg";
-import Image4 from "../images/Cos'è TED.png";
+
+import Image11 from "../images/TED_0039.jpg";
+import Image12 from "../images/TED_0053.jpg";
+import Image13 from "../images/TED_0117.jpg";
+import Image14 from "../images/TED_0489.jpg";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
@@ -443,46 +448,37 @@ const CarouselComponent = () => {
 		<Carousel
 			activeIndex={index}
 			onSelect={handleSelect}
-			style={{
-				maxheight: "500",
-			}}
-			variant="dark"
+			
+			variant="white"
 		>
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
+					src={Image11}
 					alt="First slide"
 				/>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
+					src={Image12}
 					alt="Second slide"
 				/>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
+					src={Image13}
 					alt="Third slide"
 				/>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
-					src={Image4}
-					alt="Third slide"
+					src={Image14}
+					alt="Fourth slide"
 				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block carousel-image"
-					src={Image4}
-					alt="Third slide"
-				/>
-			</Carousel.Item>
+			</Carousel.Item>			
 		</Carousel>
 	);
 };
