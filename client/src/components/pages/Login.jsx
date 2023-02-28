@@ -49,7 +49,6 @@ const LoginForm = () => {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
-		console.log(`username: ${username} password: ${password}`);
 		await login({ username: username, password: password })
 			.then((res) => console.log(res))
 			.catch((err) => {

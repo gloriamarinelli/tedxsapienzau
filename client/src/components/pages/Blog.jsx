@@ -16,7 +16,7 @@ export default function Blog() {
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:8800/blog")
+			.get(global.CONNECTION.ENDPOINT + "blog")
 			.then((res, err) => {
 				setBlog(res.data.reverse());
 			})

@@ -3,8 +3,8 @@
 		"ROSSO_TED": "#EB0028",
 		"ROSSO_TED_2023": "RGB: (235, 0, 40)",
 		"ROSSO_TED_2022": "#E62B1E",
-		"ROSSO_EDIZIONE_2022" : "#ff2b06"	,
-		"ROSSO_SAPIENZA": "#822433", 
+		"ROSSO_EDIZIONE_2022": "#ff2b06",
+		"ROSSO_SAPIENZA": "#822433",
 		"ROSSO_POSTER": "#a42332",
 		"VIOLACEO_POSTER": "#702355",
 		"BLU_POSTER": "#2e3777",
@@ -15,5 +15,8 @@
 		"NAV_HEIGHT": "76px",
 		"MOBILE_WIDTH": "480",
 		"TABLET_WIDTH": "768"
+	},
+	"CONNECTION": {
+		"ENDPOINT": "https://tedxsapienzau-backend.herokuapp.com/"
 	}
 }

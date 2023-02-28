@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import global from "../../resources/global.json";
 import axios from "axios";
 
 export const AuthContext = createContext();
@@ -23,7 +24,7 @@ export const AuthContextProvider = ({ children }) => {
 	const login = async (inputs) => {
 		return new Promise((res, rej) => {
 			axios
-				.post("http://localhost:8800/auth/login", inputs)
+				.post(global.CONNECTION.ENDPOINT + "auth/login", inputs)
 				.then((result) => {
 					setCurrentUser(result.data.userData);
 					setCurrentToken(result.data.token);
@@ -36,7 +37,7 @@ export const AuthContextProvider = ({ children }) => {
 	};
 
 	const logout = async (inputs) => {
-		await axios.post("http://localhost:8800/auth/logout");
+		await axios.post(global.CONNECTION.ENDPOINT + "auth/logout");
 		setCurrentUser(null);
 		setCurrentToken(null);
 	};

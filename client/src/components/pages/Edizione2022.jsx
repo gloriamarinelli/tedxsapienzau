@@ -26,7 +26,7 @@ export default function Edizione2022() {
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:8800/speakers/edizione/2022")
+			.get(global.CONNECTION.ENDPOINT + "speakers/edizione/2022")
 			.then((res, err) => {
 				setSpeakers(res.data);
 			})
@@ -138,9 +138,9 @@ export default function Edizione2022() {
 				<p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
 					Il titolo della prima edizione del TEDxSapienzaU è stato{" "}
 					<strong>ACT - Lead the change</strong>. Come da linee guida TEDx, i
-					dialoghi che sono stati presentati hanno riguardato diverse materie ed aree
-					tematiche interconnesse, prediligendo le migliori idee ed esperienze
-					ispiratrici:
+					dialoghi che sono stati presentati hanno riguardato diverse materie ed
+					aree tematiche interconnesse, prediligendo le migliori idee ed
+					esperienze ispiratrici:
 				</p>
 				{/** CARDS */}
 				<div className="row gap-5 d-flex justify-content-center">
