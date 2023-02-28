@@ -11,6 +11,8 @@ import { format } from "date-fns";
 import { useNavigate, useParams } from "react-router";
 import { it } from "date-fns/locale";
 
+import global from "../../resources/global.json";
+
 export default function BlogPost() {
 	const [blogPost, setBlogPost] = useState([]);
 	let { id } = useParams();
@@ -18,7 +20,7 @@ export default function BlogPost() {
 
 	useEffect(() => {
 		axios
-			.get(`http://localhost:8800/blog/${id}`)
+			.get(global.CONNECTION.ENDPOINT + `blog/${id}`)
 			.then((res, err) => {
 				if (
 					res.data === null ||
