@@ -3,6 +3,7 @@ import ReactQuill from "react-quill";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import axios from "axios";
+import global from "../../resources/global.json";
 import "react-quill/dist/quill.snow.css";
 import "../../resources/styles/blogstyle.css";
 
@@ -48,7 +49,7 @@ const Write = () => {
 			imageToBase64(file).then((res) => {
 				axios
 					.post(
-						"http://localhost:8800/blog",
+						global.CONNECTION.ENDPOINT + "blog",
 						{
 							title: title,
 							description: value,
