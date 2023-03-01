@@ -6,6 +6,7 @@ import CustomCursor from "../components/CustomCursor";
 import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
 import BackToZer from "../images/Logo BTZ.png";
 import { useOutletContext } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 	const [windowSize, setWindowSize] = useOutletContext();
@@ -85,21 +86,24 @@ export default function Home() {
 					<div
 						style={{
 							position: "absolute",
-							bottom: "30px",
+							bottom: "50px",
 							cursor: "pointer",
 						}}
 					>
-						<h3
+						<Link
+							to="edizione2023"
 							style={{
 								textTransform: "uppercase",
 								backgroundColor: global.COLORS.ROSSO_POSTER,
 								padding: "25px 60px",
 								borderRadius: "25px",
 								color: "#fff",
+								fontSize: "25px",
+								textDecoration: "none",
 							}}
 						>
 							Scopri di più
-						</h3>
+						</Link>
 					</div>
 				</div>
 			</div>

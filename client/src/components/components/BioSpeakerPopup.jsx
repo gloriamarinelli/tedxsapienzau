@@ -58,11 +58,14 @@ export default function BioSpeakerPopup({
 						}}
 						onClick={() => setIsBioOpen(false)}
 					/>
-					<img
-						src={`data:image/*;base64,${selectedSpeakerInfo.fotoSidebar}`}
-						width="100%"
-						className="speaker-card-image"
-					/>
+					<iframe
+						width="600"
+						height="400"
+						src={selectedSpeakerInfo.linkTalk}
+						title="YouTube video player"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowFullScreen
+					></iframe>
 					<div
 						style={{
 							width: "95%",

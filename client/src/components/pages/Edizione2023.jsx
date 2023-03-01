@@ -158,7 +158,7 @@ export default function Edizione2023() {
 				</p>
 			</div>
 
-			<div className="container">
+			<div className="container mb-5">
 				<h1
 					className="font-weight-bold mt-5 mb-3"
 					style={{
@@ -170,13 +170,24 @@ export default function Edizione2023() {
 				>
 					GLI SPEAKERS
 				</h1>
-				<div className="row">{handleSpeakersCardSection()}</div>
+				{/**NON CI SONO ANCORA SPEAKER DA MOSTRARE */}
+				{/* <div className="row">{handleSpeakersCardSection()}</div> */}
+				<p
+					style={{
+						fontSize: "20px",
+						fontFamily: "GothamBook",
+						fontStyle: "italic",
+						textAlign: "center",
+					}}
+				>
+					Coming Soon...
+				</p>
 			</div>
-			<BioSpeakerPopup
+			{/* <BioSpeakerPopup
 				isBioOpen={isBioOpen}
 				setIsBioOpen={setIsBioOpen}
 				selectedSpeakerInfo={selectedSpeakerInfo}
-			/>
+			/> */}
 		</>
 	);
 }

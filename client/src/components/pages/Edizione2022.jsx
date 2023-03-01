@@ -59,19 +59,14 @@ export default function Edizione2022() {
 		} else {
 			let res = [];
 			speakers.map((speaker) => {
-				const { id, nome, bio, categoria, foto, fotoSidebar } = speaker;
-				let base64StringImage = Buffer.from(foto, "binary").toString("base64");
-				let base64StringImageSidebar = Buffer.from(
-					fotoSidebar,
-					"binary"
-				).toString("base64");
+				const { id, nome, bio, categoria, fotoPath, link } = speaker;
 				res.push(
 					<SpeakerCard
 						key={id}
 						nomeSpeaker={nome}
-						imgSrc={base64StringImage}
+						imgSrc={fotoPath}
 						bio={bio}
-						fotoSidebar={base64StringImageSidebar}
+						linkTalk={link}
 						tag={categoria}
 						setIsBioOpen={setIsBioOpen}
 						setSelectedSpeakerInfo={setSelectedSpeakerInfo}

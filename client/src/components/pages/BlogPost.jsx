@@ -19,6 +19,7 @@ export default function BlogPost() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		axios
 			.get(global.CONNECTION.ENDPOINT + `blog/${id}`)
 			.then((res, err) => {
