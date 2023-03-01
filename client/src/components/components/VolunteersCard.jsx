@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function VolunteersCard({ id, nome, ruolo, image, link }) {
+export default function VolunteersCard({ id, nome, image, link }) {
   return (
     <>
       <div className="col-lg-3 mb-4 d-flex justify-content-center">
@@ -12,7 +12,7 @@ export default function VolunteersCard({ id, nome, ruolo, image, link }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            flexDirection: "column"           
+            flexDirection: "column",
           }}
         >
           <div className="portfolio-hover">
@@ -32,11 +32,13 @@ export default function VolunteersCard({ id, nome, ruolo, image, link }) {
               justifyContent: "center",
             }}
           >
-            <a href={link}
-			style={{
-				color: "black",
-				textDecoration: "none"
-			}}>
+            <a
+              href={link}
+              style={{
+                color: "black",
+                textDecoration: "none",
+              }}
+            >
               <div
                 className="portfolio-caption-heading"
                 style={{
@@ -48,15 +50,6 @@ export default function VolunteersCard({ id, nome, ruolo, image, link }) {
                 {nome}
               </div>
             </a>
-            <div
-              className="portfolio-caption-heading"
-              style={{
-                fontStyle: "italic",
-                textAlign: "center",
-              }}
-            >
-              {ruolo}
-            </div>
           </div>
         </div>
       </div>
