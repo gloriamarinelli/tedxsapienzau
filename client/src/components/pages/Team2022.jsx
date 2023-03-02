@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
-import VolunteersCard from "../components/VolunteersCard";
 import axios from "axios";
 import "../../index.css";
 import { Buffer } from "buffer";
@@ -69,49 +68,16 @@ export default function Team2022() {
 
             <div className="row gap-5 justify-content-center">
               {team.map((team) => {
-                const { id, nome, ruolo, image, link, anno } = team;
+                const { id, nome, gruppo, ruolo, image, link, anno } = team;
                 let base64StringImage = Buffer.from(image, "binary").toString(
                   "base64"
                 );
-                return (
+                return (                  
                   <ExecutiveTeamCard
                     key={id}
                     nome={nome}
+                    gruppo={gruppo}
                     ruolo={ruolo}
-                    image={base64StringImage}
-                    link={link}
-                    anno={anno}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="page-section" id="portfolio">
-          <div className="container">
-            <div className="text-center">
-              <h2
-                className="section-heading text-uppercase mb-5"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "3em",
-                }}
-              >
-                Team ?
-              </h2>
-            </div>
-
-            <div className="row gap-5 justify-content-center">
-              {team.map((team1) => {
-                const { id, nome, team, image, link, anno } = team1;
-                let base64StringImage = Buffer.from(image, "binary").toString(
-                  "base64"
-                );
-                return (
-                  <VolunteersCard
-                    key={id}
-                    nome={nome}
                     image={base64StringImage}
                     link={link}
                     anno={anno}

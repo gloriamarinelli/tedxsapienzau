@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function ExecutiveTeamCard({ id, nome, ruolo, image, link }) {
+export default function ExecutiveTeamCard({
+  id,
+  nome,
+  gruppo,
+  ruolo,
+  image,
+  link,
+  anno,
+}) {
   return (
     <>
       <div className="col-lg-3 mb-4 d-flex justify-content-center">
@@ -12,7 +20,7 @@ export default function ExecutiveTeamCard({ id, nome, ruolo, image, link }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            flexDirection: "column"           
+            flexDirection: "column",
           }}
         >
           <div className="portfolio-hover">
@@ -21,8 +29,7 @@ export default function ExecutiveTeamCard({ id, nome, ruolo, image, link }) {
             </div>
           </div>
           <img
-          src="https://i0.wp.com/www.diamonddotz.it/wp-content/uploads/2020/05/DDS.B-600x600.jpg"
-            /*src={`data:image/*;base64,${image}`}*/
+            src={`data:image/*;base64,${image}`}
             height="100"
             alt="foto team esecutivo"
           />
@@ -33,11 +40,13 @@ export default function ExecutiveTeamCard({ id, nome, ruolo, image, link }) {
               justifyContent: "center",
             }}
           >
-            <a href={link}
-			style={{
-				color: "black",
-				textDecoration: "none"
-			}}>
+            <a
+              href={link}
+              style={{
+                color: "black",
+                textDecoration: "none",
+              }}
+            >
               <div
                 className="portfolio-caption-heading"
                 style={{

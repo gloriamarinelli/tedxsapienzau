@@ -5,15 +5,15 @@ import Image1 from "../images/Cos_èTEDx.webp";
 import Image2 from "../images/logo-black.png";
 import Image3 from "../images/stage2022.webp";
 
-import Image11 from "../images/TED_0039.jpg";
-import Image12 from "../images/TED_0053.jpg";
-import Image13 from "../images/TED_0117.jpg";
-import Image14 from "../images/TED_0489.jpg";
+import Image11 from "../images/ted-0039.webp";
+import Image12 from "../images/ted-0053.webp";
+import Image13 from "../images/ted-0117.webp";
+import Image14 from "../images/ted-0489.webp";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
-import "../../resources/styles/aboutstyle.css";
+import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
 
 export default function MissionandVision() {

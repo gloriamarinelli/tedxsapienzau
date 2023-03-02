@@ -1,9 +1,8 @@
 import express from "express";
-import { getBoardYear, getVolunteersYear } from "../controllers/team.js";
+import { getTeamYear } from "../controllers/team.js";
 
 const router = express.Router();
 
-router.get("/:anno", getBoardYear);
-router.get("/:anno", getVolunteersYear);
+router.get("/:anno",  getTeamYear );
 
 export default router;

@@ -70,7 +70,7 @@ code {
 }
 
 .gradient-background-about {
-  background-image: url("./components/images/sapienza1X.jpg");
+  background-image: url("./components/images/sapienza1X.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
