@@ -68,19 +68,18 @@ export default function Team2022() {
 
             <div className="row gap-5 justify-content-center">
               {team.map((team) => {
-                const { id, nome, gruppo, ruolo, image, link, anno } = team;
-                let base64StringImage = Buffer.from(image, "binary").toString(
+                const { id, nome, gruppo, ruolo, image, link} = team;
+                /*let base64StringImage = Buffer.from(image, "binary").toString(
                   "base64"
-                );
+                );*/
                 return (                  
                   <ExecutiveTeamCard
                     key={id}
                     nome={nome}
                     gruppo={gruppo}
                     ruolo={ruolo}
-                    image={base64StringImage}
-                    link={link}
-                    anno={anno}
+                    image={image}
+                    link={link}                    
                   />
                 );
               })}
@@ -136,14 +135,15 @@ export default function Team2022() {
 
             <div className="row gap-5 justify-content-center">
               {team.map((team) => {
-                const { id, nome, ruolo, image, link } = team;
-                let base64StringImage = Buffer.from(image, "binary").toString(
+                const { id, nome, gruppo, ruolo, image, link } = team;
+                  let base64StringImage = Buffer.from(image, "binary").toString(
                   "base64"
                 );
                 return (
                   <ExecutiveTeamCard
                     key={id}
                     nome={nome}
+                    gruppo={gruppo}
                     ruolo={ruolo}
                     image={base64StringImage}
                     link={link}
