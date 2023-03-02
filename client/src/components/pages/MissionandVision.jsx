@@ -1,9 +1,9 @@
 import "../../index.css";
 import React, { useState, useEffect } from "react";
-import Image from "../images/Cos'è TED.png";
-import Image1 from "../images/Cos'è TEDx.png";
+import Image from "../images/Cos_èTED.webp";
+import Image1 from "../images/Cos_èTEDx.webp";
 import Image2 from "../images/logo-black.png";
-import Image3 from "../images/stage2022.jpeg";
+import Image3 from "../images/stage2022.webp";
 
 import Image11 from "../images/TED_0039.jpg";
 import Image12 from "../images/TED_0053.jpg";
