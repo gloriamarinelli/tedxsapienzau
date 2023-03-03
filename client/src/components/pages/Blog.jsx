@@ -56,7 +56,10 @@ export default function Blog() {
 				<Pagination.Item
 					key={number}
 					active={number === currentPage}
-					onClick={() => setCurrentPage(number)}
+					onClick={() => {
+						setCurrentPage(number);
+						window.scrollTo(0, 300);
+					}}
 				>
 					{number}
 				</Pagination.Item>
@@ -69,7 +72,7 @@ export default function Blog() {
 					width: "100%",
 					display: "flex",
 					justifyContent: "center",
-					margin: "40px 0 0 0 ",
+					margin: "20px 0 0 0 ",
 				}}
 			>
 				<Pagination>
@@ -185,7 +188,6 @@ export default function Blog() {
 						per cambiare il mondo
 					</p>
 				</div>
-
 				{blog.map((blog) => {
 					const { id, titolo, image, data } = blog;
 					return (
@@ -198,6 +200,7 @@ export default function Blog() {
 						/>
 					);
 				})}
+				{getButtons()}
 			</>
 		);
 	}
