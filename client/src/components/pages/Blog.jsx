@@ -7,23 +7,79 @@ import BlogCard from "../components/BlogCard";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
+import { Pagination } from "react-bootstrap";
 
 export default function Blog() {
 	const [blog, setBlog] = useState([]);
+	const [blogSize, setBlogSize] = useState(0);
+	const [currentPage, setCurrentPage] = useState(1);
 	const [windowSize, setWindowSize] = useOutletContext();
 
 	const { currentUser } = useContext(AuthContext);
 
+	const pageSize = 5;
+
 	useEffect(() => {
 		axios
-			.get(global.CONNECTION.ENDPOINT + "blog")
-			.then((res, err) => {
+			.get(global.CONNECTION.ENDPOINT + "blog/count")
+			.then((res) => {
+				setBlogSize(res.data[0].posts);
+				getCurrentPagePosts();
+			})
+			.catch((err) => console.error(err));
+	}, []);
+
+	useEffect(() => {
+		getCurrentPagePosts();
+	}, [currentPage, blogSize]);
+
+	const getCurrentPagePosts = () => {
+		if (blogSize === 0) return;
+		let start = blogSize - pageSize * currentPage;
+		let end = blogSize - pageSize * (currentPage - 1);
+		console.log(start, end);
+		axios
+			.get(global.CONNECTION.ENDPOINT + `blog?start=${start}&end=${end}`)
+			.then((res) => {
 				setBlog(res.data.reverse());
 			})
 			.catch((err) => {
 				console.error(err);
 			});
-	}, []);
+	};
+
+	const getButtons = () => {
+		let items = [];
+
+		for (let number = 1; number <= Math.ceil(blogSize / pageSize); number++) {
+			items.push(
+				<Pagination.Item
+					key={number}
+					active={number === currentPage}
+					onClick={() => setCurrentPage(number)}
+				>
+					{number}
+				</Pagination.Item>
+			);
+		}
+
+		return (
+			<div
+				style={{
+					width: "100%",
+					display: "flex",
+					justifyContent: "center",
+					margin: "40px 0 0 0 ",
+				}}
+			>
+				<Pagination>
+					<Pagination.First />
+					{items}
+					<Pagination.Last />
+				</Pagination>
+			</div>
+		);
+	};
 
 	if (windowSize > global.UTILS.MOBILE_WIDTH) {
 		/**
@@ -69,6 +125,7 @@ export default function Blog() {
 						per cambiare il mondo
 					</p>
 				</div>
+				{getButtons()}
 				{blog.map((blog) => {
 					const { id, titolo, image, data } = blog;
 					return (
@@ -81,6 +138,7 @@ export default function Blog() {
 						/>
 					);
 				})}
+				{getButtons()}
 			</>
 		);
 	} else {
