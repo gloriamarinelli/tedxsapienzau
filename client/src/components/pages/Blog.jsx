@@ -71,6 +71,7 @@ export default function Blog() {
 				style={{
 					width: "100%",
 					display: "flex",
+					color: "black",
 					justifyContent: "center",
 					margin: "20px 0 0 0 ",
 				}}
