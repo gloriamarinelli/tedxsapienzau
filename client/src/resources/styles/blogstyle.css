@@ -167,6 +167,6 @@ body {
 
 .active .page-link {
   background: #eb0028 !important;
-  color: "black";
+  color: "black" !important;
   border-color: #eb0028 !important;
 }

@@ -1,68 +1,72 @@
 .login-main-container {
-	width: 100vw;
-	display: grid;
-	place-items: center;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-image: url("../../components/images/IMG_7395.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .login-container {
-	height: 80%;
-	min-height: 450px;
-	min-width: 500px;
-	padding: 0 50px;
-	background-color: whitesmoke;
-	border-radius: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  height: 80%;
+  min-height: 450px;
+  min-width: 500px;
+  padding: 0 50px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
-	width: max-content;
-	padding: 10px 20px;
-	border: none;
-	cursor: pointer;
-	background-color: white;
-	border: 1px solid #eb0028;
-	color: #eb0028;
+  width: max-content;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #eb0028;
+  color: #eb0028;
 }
 .button:hover {
-	border: 1px solid white;
-	background-color: rgb(235, 0, 40);
-	color: white;
+  border: 1px solid white;
+  background-color: rgb(235, 0, 40);
+  color: white;
 }
 
 input {
-	height: 40px;
+  height: 40px;
 }
 
 .error-message {
-	color: white;
-	background-color: rgba(235, 0, 40, 1);
-	font-size: 15px;
-	text-align: center;
-	padding: 8px 0px;
-	font-family: GothamBook;
-	width: 80%;
-	margin: auto;
-	border-radius: 6px;
+  color: white;
+  background-color: rgba(235, 0, 40, 1);
+  font-size: 15px;
+  text-align: center;
+  padding: 8px 0px;
+  font-family: GothamBook;
+  width: 80%;
+  margin: auto;
+  border-radius: 6px;
 }
 
 .error-animation {
-	animation: wiggle 0.4s;
+  animation: wiggle 0.4s;
 }
 
 @keyframes wiggle {
-	0% {
-		transform: translateX(0px);
-	}
-	25% {
-		transform: translateX(15px);
-	}
-	75% {
-		transform: translateX(-15px);
-	}
-	100% {
-		transform: translateX(0px);
-	}
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
