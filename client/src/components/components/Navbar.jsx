@@ -292,19 +292,6 @@ export default function Navbar() {
 										</Link>
 									</li>
 								)}
-								<>
-									<li className="nav-item">
-										<p
-											className=" nav-link"
-											style={{
-												color: "green",
-												fontSize: "15px",
-											}}
-										>
-											{currentToken && `Benvenuto, ${currentUser.username}`}
-										</p>
-									</li>
-								</>
 							</ul>
 						</div>
 					</div>
