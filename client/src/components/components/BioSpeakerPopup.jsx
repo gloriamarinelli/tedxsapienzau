@@ -52,8 +52,8 @@ export default function BioSpeakerPopup({
 						style={{
 							color: "#fff",
 							position: "absolute",
-							left: "30px",
-							top: "30px",
+							left: "20px",
+							top: "60px",
 							cursor: "pointer",
 						}}
 						onClick={() => setIsBioOpen(false)}
@@ -115,8 +115,8 @@ export default function BioSpeakerPopup({
 						style={{
 							color: "#fff",
 							position: "absolute",
-							left: "30px",
-							top: "30px",
+							left: "20px",
+							top: "60px",
 							cursor: "pointer",
 						}}
 						onClick={() => setIsBioOpen(false)}
