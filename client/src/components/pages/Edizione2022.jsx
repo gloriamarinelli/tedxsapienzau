@@ -13,8 +13,6 @@ import BioSpeakerPopup from "../components/BioSpeakerPopup";
 import global from "../../resources/global.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { Buffer } from "buffer";
-
 import axios from "axios";
 import { useOutletContext } from "react-router";
 
