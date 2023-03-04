@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Image from "../images/joinstudent.webp";
-import Image1 from "../images/joinpartner.webp";
-import Image2 from "../images/joinadvise.webp";
 import { useLocation } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
-import axios from "axios";
 
 export default function Join() {
   const state = useLocation().state;
