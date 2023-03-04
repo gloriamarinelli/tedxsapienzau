@@ -77,6 +77,31 @@ const Write = () => {
 		}
 	};
 
+	const modules = {
+		toolbar: [
+			[{ font: [] }],
+			[{ size: ["small", false, "large", "huge"] }],
+			["bold", "italic", "underline"],
+			[{ list: "ordered" }, { list: "bullet" }],
+			[{ align: [] }],
+			[{ color: [] }, { background: [] }],
+			["clean"],
+		],
+	};
+
+	const formats = [
+		"font",
+		"size",
+		"bold",
+		"italic",
+		"underline",
+		"list",
+		"bullet",
+		"align",
+		"color",
+		"background",
+	];
+
 	return (
 		<div className="container main-container mt-5 mb-5">
 			<div className="content-container">
@@ -93,8 +118,9 @@ const Write = () => {
 				/>
 				<div className="editor-container">
 					<ReactQuill
-						className="editor"
 						theme="snow"
+						modules={modules}
+						formats={formats}
 						value={value}
 						onChange={setValue}
 						style={{ height: "400px", marginBottom: "30px" }}
