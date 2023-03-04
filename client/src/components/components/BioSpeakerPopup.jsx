@@ -101,6 +101,7 @@ export default function BioSpeakerPopup({
 						position: "fixed",
 						top: 0,
 						right: isBioOpen ? 0 : "-100%",
+						opacity: isBioOpen ? 1 : 0,
 						zIndex: 11,
 						background:
 							"linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)",
@@ -120,11 +121,14 @@ export default function BioSpeakerPopup({
 						}}
 						onClick={() => setIsBioOpen(false)}
 					/>
-					<img
-						src={`data:image/*;base64,${selectedSpeakerInfo.fotoSidebar}`}
+					<iframe
 						width="100%"
-						className="speaker-card-image"
-					/>
+						height="400"
+						src={selectedSpeakerInfo.linkTalk}
+						title="YouTube video player"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowFullScreen
+					></iframe>
 					<div
 						style={{
 							width: "95%",

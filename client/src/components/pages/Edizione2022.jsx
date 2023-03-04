@@ -89,34 +89,36 @@ export default function Edizione2022() {
 				}}
 			></header>
 
-			<section className="where-is-the-event row pt-3 pb-3">
-				<div className="col-md-6">
-					<div className="row">
-						<FontAwesomeIcon
-							className="col-2"
-							icon={faLocationDot}
-							style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
-							size="2x"
-						/>
-						<p className="col-8">
-							Università La Sapienza - Aula Magna Rettorato Piazzale Aldo Moro,
-							5, 00185 Roma RM
-						</p>
+			<div className="where-is-the-event-section">
+				<div className="row no-gutters mx-0 where-is-the-event">
+					<div className="col-md-6">
+						<div className="row">
+							<FontAwesomeIcon
+								className="col-2"
+								icon={faLocationDot}
+								style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
+								size="2x"
+							/>
+							<p className="col-8">
+								Università La Sapienza - Aula Magna Rettorato Piazzale Aldo
+								Moro, 5, 00185 Roma RM
+							</p>
+						</div>
+						<div className="row">
+							<FontAwesomeIcon
+								className="col-2"
+								icon={faCalendar}
+								style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
+								size="2x"
+							/>
+							<p className="col-8">29 Aprile 2022</p>
+						</div>
 					</div>
-					<div className="row">
-						<FontAwesomeIcon
-							className="col-2"
-							icon={faCalendar}
-							style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
-							size="2x"
-						/>
-						<p className="col-8">29 Aprile 2022</p>
+					<div className="col-md-6">
+						<LazyLoadImage src={TedxLogo} width="300px" />
 					</div>
 				</div>
-				<div className="col-md-6">
-					<LazyLoadImage src={TedxLogo} width="300px" />
-				</div>
-			</section>
+			</div>
 
 			<div className="container mb-5">
 				<h1
@@ -125,7 +127,6 @@ export default function Edizione2022() {
 						fontSize: "45px",
 						textAlign: "center",
 						fontWeight: "bold",
-						marginLeft: "30px",
 					}}
 				>
 					IL TEMA DELL'EVENTO
@@ -198,7 +199,6 @@ export default function Edizione2022() {
 						fontSize: "45px",
 						textAlign: "center",
 						fontWeight: "bold",
-						marginLeft: "30px",
 					}}
 				>
 					GLI SPEAKERS

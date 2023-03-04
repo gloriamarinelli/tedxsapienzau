@@ -2,12 +2,14 @@
  WHERE IS THE EVENT
 */
 
-.where-is-the-event {
-	background-color: black;
-	font-family: GothamBook;
+@media screen and (max-width: 768px) {
+	.where-is-the-event > div:nth-child(2) {
+		padding-bottom: 30px;
+	}
 }
 
 .where-is-the-event > div:nth-child(1) {
+	background-color: black;
 	display: flex;
 	padding: 50px;
 	color: white;
@@ -17,6 +19,7 @@
 }
 
 .where-is-the-event > div:nth-child(2) {
+	background-color: black;
 	display: grid;
 	place-items: center;
 }
@@ -90,12 +93,14 @@
 	transition: all 0.3s ease;
 }
 
-.speaker-card:hover .speaker-card-text {
-	left: 0;
-}
+@media screen and (min-width: 768px) {
+	.speaker-card:hover .speaker-card-text {
+		left: 0;
+	}
 
-.speaker-card:hover .speaker-card-image {
-	transform: scale(1.2);
+	.speaker-card:hover .speaker-card-image {
+		transform: scale(1.2);
+	}
 }
 
 .speaker-card-text {
