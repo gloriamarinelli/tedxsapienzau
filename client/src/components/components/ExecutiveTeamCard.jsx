@@ -6,12 +6,11 @@ export default function ExecutiveTeamCard({
   gruppo,
   ruolo,
   image,
-  link 
+  link,
 }) {
   return (
     <>
       <div className="col-lg-3 mb-4 d-flex justify-content-center">
-        <h1>{gruppo}</h1>
         <div
           className="portfolio-item"
           style={{
@@ -30,7 +29,7 @@ export default function ExecutiveTeamCard({
           </div>
           <img
             src={`data:image/*;base64,${image}`}
-            height="100"
+            height="250"
             alt="foto team esecutivo"
           />
 

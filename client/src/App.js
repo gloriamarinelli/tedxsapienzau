@@ -16,7 +16,6 @@ import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import BlogPost from "./components/pages/BlogPost";
 import Write from "./components/pages/Write";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
 

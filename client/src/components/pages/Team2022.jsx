@@ -12,7 +12,7 @@ export default function Team2022() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/team/2022")
+      .get(global.CONNECTION.ENDPOINT + "team/2022")
       .then((res, err) => {
         setTeam(res.data);
       })
@@ -21,139 +21,118 @@ export default function Team2022() {
       });
   }, []);
 
-  if (windowSize > global.UTILS.MOBILE_WIDTH) {
-    /**
-     * DESKTOP
-     */
-    return (
-      <>
+  const handleSpeakersCardSection = () => {
+    if (team.length === 0) {
+      return (
         <div
-          className="header gradient-background-team2022"
           style={{
-            padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
-            placeItems: "center",
+            height: "200px",
+            width: "90%",
+            margin: "auto",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
-            style={{
-              fontSize: "120px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            TEAM 2022
-          </h1>
+          <div className="spinner"></div>
         </div>
+      );
+    } else {
+      let res = [];
+      // eslint-disable-next-line no-lone-blocks
+      {
+        team.map((team) => {
+          const { id, nome, gruppo, ruolo, image, link } = team;
+          let base64StringImage = Buffer.from(image, "binary").toString(
+            "base64"
+          );
+          res.push(
+            <ExecutiveTeamCard
+              key={id}
+              nome={nome}
+              gruppo={gruppo}
+              ruolo={ruolo}
+              image={base64StringImage}
+              link={link}
+            />
+          );
+        });
+        return res;
+      }
+    }
+  };
 
-        <section className="page-section" id="portfolio">
-          <div className="container">
-            <div className="text-center">
-              <h2
-                className="section-heading text-uppercase mb-5"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "3em",
-                }}
-              >
-                Team Esecutivo
-              </h2>
-            </div>
-
-            <div className="row gap-5 justify-content-center">
-              {team.map((team) => {
-                const { id, nome, gruppo, ruolo, image, link} = team;
-                let base64StringImage = Buffer.from(image, "binary").toString(
-                  "base64"
-                );
-                return (                  
-                  <ExecutiveTeamCard
-                    key={id}
-                    nome={nome}
-                    gruppo={gruppo}
-                    ruolo={ruolo}
-                    image={base64StringImage}
-                    link={link}                    
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      </>
-    );
-  } else {
-    /**
-     * MOBILE
-     */
-    return (
-      <>
-        <div
-          className="header gradient-background-team2022"
+  return (
+    <>
+      <div
+        className="header gradient-background-team2022"
+        style={{
+          padding: "10px",
+          textAlign: "center",
+          color: "#fff",
+          marginBottom: "10px",
+          clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+          height: "40vh",
+          display: "grid",
+          placeItems: "center",
+        }}
+      >
+        <h1
+          className="font-weight-bold mt-5 mb-5"
           style={{
-            padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            //clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
-            placeItems: "center",
+            fontSize: "120px",
+            fontWeight: "bold",
+            fontFamily: "GothamBold",
           }}
         >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
-            style={{
-              fontSize: "60px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          >
-            TEAM 2022
-          </h1>
-        </div>
+          TEAM 2022
+        </h1>
+      </div>
+      <div className="row gap-5 justify-content-center">
+        <div className="row">{handleSpeakersCardSection()}</div>
+      </div>
+    </>
+  );
+}
 
-        <section className="page-section" id="portfolio">
-          <div className="container">
-            <div className="text-center">
-              <h3
-                className="section-heading text-uppercase mb-5"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "3em",
-                }}
-              >
-                Team Esecutivo
-              </h3>
-            </div>
-
-            <div className="row gap-5 justify-content-center">
-              {team.map((team) => {
-                const { id, nome, gruppo, ruolo, image, link } = team;
-                  let base64StringImage = Buffer.from(image, "binary").toString(
-                  "base64"
-                );
-                return (
-                  <ExecutiveTeamCard
-                    key={id}
-                    nome={nome}
-                    gruppo={gruppo}
-                    ruolo={ruolo}
-                    image={base64StringImage}
-                    link={link}
-                  />
-                );
-              })}
-            </div>
+// eslint-disable-next-line no-lone-blocks
+{
+  /* 
+      <section className="page-section" id="portfolio">
+        <div className="container">
+          <div className="text-center">
+            <h2
+              className="section-heading text-uppercase mb-5"
+              style={{
+                fontFamily: "GothamBold",
+                fontSize: "3em",
+              }}
+            >
+              Team Esecutivo
+            </h2>
           </div>
-        </section>
-      </>
-    );
-  }
+
+          <div className="row gap-5 justify-content-center">
+            {team.map((team) => {
+              const { id, nome, gruppo, ruolo, image, link } = team;
+              let base64StringImage = Buffer.from(image, "binary").toString(
+                "base64"
+              );
+              return (
+                <ExecutiveTeamCard
+                  key={id}
+                  nome={nome}
+                  gruppo={gruppo}
+                  ruolo={ruolo}
+                  image={base64StringImage}
+                  link={link}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+          */
 }
