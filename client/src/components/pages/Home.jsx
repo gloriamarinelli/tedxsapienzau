@@ -87,7 +87,7 @@ export default function Home() {
 					<div
 						style={{
 							position: "absolute",
-							bottom: "80px",
+							bottom: "120px",
 							cursor: "pointer",
 						}}
 					>
