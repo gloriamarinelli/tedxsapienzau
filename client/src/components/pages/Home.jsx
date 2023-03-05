@@ -25,6 +25,7 @@ export default function Home() {
 						height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
 						width: "100vw",
 						fontFamily: "GothamBold",
+						position: "relative",
 					}}
 				>
 					<div
@@ -86,7 +87,7 @@ export default function Home() {
 					<div
 						style={{
 							position: "absolute",
-							bottom: "50px",
+							bottom: "80px",
 							cursor: "pointer",
 						}}
 					>
