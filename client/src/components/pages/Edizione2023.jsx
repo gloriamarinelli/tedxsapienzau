@@ -91,7 +91,7 @@ export default function Edizione2023() {
 				}}
 			></header>
 
-			<section className="where-is-the-event23 row pt-3 pb-3">
+			<section className="where-is-the-event23 row mx-0 pt-3 pb-3">
 				<div className="col-md-6">
 					<div className="row">
 						<FontAwesomeIcon
@@ -127,7 +127,6 @@ export default function Edizione2023() {
 						fontSize: "45px",
 						textAlign: "center",
 						fontWeight: "bold",
-						marginLeft: "30px",
 					}}
 				>
 					IL NOSTRO OBIETTIVO
@@ -165,7 +164,6 @@ export default function Edizione2023() {
 						fontSize: "45px",
 						textAlign: "center",
 						fontWeight: "bold",
-						marginLeft: "30px",
 					}}
 				>
 					GLI SPEAKERS
