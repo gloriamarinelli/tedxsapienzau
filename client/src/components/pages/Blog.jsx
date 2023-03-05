@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import "../../resources/styles/blogstyle.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Buffer } from "buffer";
 import BlogCard from "../components/BlogCard";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
@@ -128,7 +127,7 @@ export default function Blog() {
             per cambiare il mondo
           </p>
         </div>
-       
+
         {blog.map((blog) => {
           const { id, titolo, image, data } = blog;
           return (
@@ -156,7 +155,6 @@ export default function Blog() {
             textAlign: "left",
             color: "white",
             display: "grid",
-            //clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
             height: "50vh",
           }}
         >
