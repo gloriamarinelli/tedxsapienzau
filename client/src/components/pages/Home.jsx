@@ -87,7 +87,8 @@ export default function Home() {
 					<div
 						style={{
 							position: "absolute",
-							bottom: "120px",
+							//MARGIN BOTTOM DA CAPIRE COME RISOLVERE PROBLEMA IN MOBILE NAVBAR DIVERSE
+							bottom: "150px",
 							cursor: "pointer",
 						}}
 					>
@@ -95,15 +96,20 @@ export default function Home() {
 							to="edizione2023"
 							style={{
 								textTransform: "uppercase",
-								backgroundColor: global.COLORS.ROSSO_POSTER,
-								padding: "25px 60px",
+								// backgroundColor: global.COLORS.ROSSO_POSTER,
+								backgroundColor: "gold",
+								padding:
+									windowSize > global.UTILS.TABLET_WIDTH
+										? "25px 60px"
+										: "20px 40px",
 								borderRadius: "25px",
-								color: "#fff",
-								fontSize: "25px",
+								color: "#000",
+								fontSize:
+									windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
 								textDecoration: "none",
 							}}
 						>
-							Scopri di più
+							TedxSapienza Awards
 						</Link>
 					</div>
 				</div>
