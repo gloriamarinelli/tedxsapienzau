@@ -25,10 +25,9 @@ export default function Team2022() {
 
 	useEffect(() => {
 		axios
-			.get(global.CONNECTION.ENDPOINT + "team/2022")
+			.get(global.CONNECTION.ENDPOINT + "team/22")
 			.then((res, err) => {
 				const data = res.data;
-				console.log(data);
 				let newBoard = [];
 				let newVolunteers = [];
 				data.forEach((item) => {
@@ -104,6 +103,7 @@ export default function Team2022() {
 			let base64StringImage = Buffer.from(image, "binary").toString("base64");
 			curatorArray.push(
 				<VolunteerCard
+					key={id}
 					id={id}
 					nome={nome}
 					gruppo={gruppo}

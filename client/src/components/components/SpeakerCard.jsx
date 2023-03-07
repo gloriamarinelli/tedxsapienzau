@@ -35,7 +35,7 @@ export default function SpeakerCard({
 			<div className="speaker-card">
 				<div className="speaker-card-filter"></div>
 				<img
-					src={`/images/${imgSrc}`}
+					src={`/images/speakers22/${imgSrc}`}
 					height="300"
 					className="speaker-card-image"
 					alt={nomeSpeaker}

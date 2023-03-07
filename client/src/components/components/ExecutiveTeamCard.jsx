@@ -7,6 +7,7 @@ export default function ExecutiveTeamCard({
 	ruolo,
 	image,
 	link,
+	year,
 }) {
 	return (
 		<>
@@ -18,7 +19,7 @@ export default function ExecutiveTeamCard({
 					className="portfolio-item"
 					style={{
 						aspectRatio: 1,
-						height: "300px",
+						height: "400px",
 						display: "flex",
 						justifyContent: "center",
 						alignItems: "center",
@@ -31,8 +32,12 @@ export default function ExecutiveTeamCard({
 						</div>
 					</div>
 					<img
-						src={`data:image/*;base64,${image}`}
-						height="250"
+						src={
+							year === 2023
+								? `/images/board23/${image}`
+								: `data:image/*;base64,${image}`
+						}
+						height="350"
 						alt="foto team esecutivo"
 					/>
 
