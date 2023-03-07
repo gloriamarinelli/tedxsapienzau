@@ -13,7 +13,7 @@ export default function PartnerCard({ title, imgSrc, linkSite, sponsorType }) {
 					flexDirection: "column",
 				}}
 			>
-				<a className="portfolio-link" href={linkSite}>
+				<a className="portfolio-link" href={linkSite} target="_blank">
 					<img
 						className="img-fluid"
 						src={imgSrc}
