@@ -1,10 +1,16 @@
 import express from "express";
-import { getBlogID, getBlog, postBlog } from "../controllers/blog.js";
+import {
+	getBlogPostFromID,
+	getBlog,
+	postBlog,
+	countBlog,
+} from "../controllers/blog.js";
 
 const router = express.Router();
 
-router.get("/", getBlog);
-router.get("/:id", getBlogID);
+router.get("/count", countBlog);
+router.get("/:id", getBlogPostFromID);
 router.post("/", postBlog);
+router.get("/", getBlog);
 
 export default router;

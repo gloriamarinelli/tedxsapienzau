@@ -5,17 +5,24 @@ const JWT_SECRET =
 	"goK!pusp6ThEdURUtRenOwUhAsWUCLheBazl!uJLPlS8EbreWLdrupIwabRAsiBu";
 
 export const getBlog = (req, res) => {
-	const q = req.query.cat
-		? "SELECT * FROM blog WHERE cat=?"
-		: "SELECT * FROM blog";
+	console.log(req.query);
+	if (req.query.start && req.query.end) {
+		const q = "SELECT * FROM blog WHERE blog.id > ? AND blog.id <= ? ";
+		db.query(q, [req.query.start, req.query.end], (err, data) => {
+			if (err) return res.send(err);
+			return res.status(200).json(data);
+		});
+	} else {
+		const q = "SELECT * FROM blog";
 
-	db.query(q, [req.query.cat], (err, data) => {
-		if (err) return res.send(err);
-		return res.status(200).json(data);
-	});
+		db.query(q, [req.query.cat], (err, data) => {
+			if (err) return res.send(err);
+			return res.status(200).json(data);
+		});
+	}
 };
 
-export const getBlogID = (req, res) => {
+export const getBlogPostFromID = (req, res) => {
 	const q =
 		"SELECT b.id, `titolo`, `descrizione`, `image`, `data`, `autore` FROM blog b WHERE b.id = ? ";
 
@@ -23,6 +30,15 @@ export const getBlogID = (req, res) => {
 		if (err) return res.status(500).json(err);
 
 		return res.status(200).json(data[0]);
+	});
+};
+
+export const countBlog = (req, res) => {
+	const q = "SELECT COUNT(*) AS posts FROM blog";
+	db.query(q, [], (err, data) => {
+		if (err) return res.send(err);
+		console.log(data);
+		return res.status(200).json(data);
 	});
 };
 
