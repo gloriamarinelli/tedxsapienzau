@@ -116,83 +116,76 @@ export default function Home() {
         </div>
       </div>
 
-      <section>
-        <div
-          style={{
-            backgroundColor: "#521831",
-          }}
-        >
-          <div className="container marketing">
-            <div className="row featurette">
-              <div className="col-md-7 order-md-2">
-                <a
-                  style={{
-                    height: "200px",
-                    width: "90%",
-                    margin: "auto",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    color: "white",
-                    fontSize: "40px",
-                    textDecoration: "none",
-                    fontFamily: "GothamBold",
-
-                    backgroundColor: "#f8c403",
-                    textDecoration: "none",
-                    fontFamily: "GothamBold",
-                  }}
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScPVPoWlQTJ5sB0chtpiZTlcFMUBaTb4DDG6mPwXyPkx9lx_Q/viewform"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Invia la tua candidatura
-                </a>
-                <a
-                  style={{
-                    height: "200px",
-                    width: "90%",
-                    margin: "auto",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    color: "white",
-                    fontSize: "30px",
-                    textDecoration: "none",
-                    fontFamily: "GothamBold",
-                  }}
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScPVPoWlQTJ5sB0chtpiZTlcFMUBaTb4DDG6mPwXyPkx9lx_Q/viewform"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src="https://img.freepik.com/premium-vector/flag-italy-with-circle-frame-white-background_197792-368.jpg?w=2000"
-                    height="30px"
-                  ></img>
-                  REGOLAMENTO
-                </a>
-                <a
-                  style={{
-                    height: "200px",
-                    width: "90%",
-                    margin: "auto",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    color: "white",
-                    fontSize: "30px",
-                    textDecoration: "none",
-                    fontFamily: "GothamBold",
-                  }}
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScPVPoWlQTJ5sB0chtpiZTlcFMUBaTb4DDG6mPwXyPkx9lx_Q/viewform"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  REGULATIONS
-                </a>
+      <section
+        style={{
+          backgroundColor: "#521831",
+        }}
+      >
+        <div class="container px-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="p-5">
+                {" "}
+                <LazyLoadImage
+                  src={Image}
+                  alt="Awards"
+                  height="330px"
+                  placeItems="center"
+                />
               </div>
-              <div className="col-md-5 order-md-1 d-flex mt-5 mb-5">
-                <LazyLoadImage src={Image} alt="Awards" height="400px" />
+            </div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <p class="display-4">
+                  <a
+                    className="btn5"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "30px",
+                      textDecoration: "none",
+                      fontFamily: "GothamBold",
+                      textDecoration: "none",
+                    }}
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScPVPoWlQTJ5sB0chtpiZTlcFMUBaTb4DDG6mPwXyPkx9lx_Q/viewform"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Invia la tua candidatura
+                  </a>
+                </p>
+
+                <a
+                  className="btn5-1"
+                  style={{
+                    display: "flex",
+                    fontSize: "20px",
+                    textDecoration: "none",
+                    fontFamily: "GothamBold",
+                    textDecoration: "none",
+                  }}
+                  href="/images/IT_regolamento Awards.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Regolamento 🇮🇹
+                </a>
+
+                <a
+                  className="btn5-1"
+                  style={{
+                    display: "flex",
+                    fontSize: "20px",
+                    textDecoration: "none",
+                    fontFamily: "GothamBold",
+                    textDecoration: "none",
+                  }}
+                  href="/images/EN_Regulations_BackToZeroAwards.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Regulations 🇬🇧
+                </a>
               </div>
             </div>
           </div>
