@@ -5,24 +5,46 @@ import "../../index.css";
 import { Buffer } from "buffer";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
+import VolunteerCard from "../components/VolunteerCard";
 
 export default function Team2022() {
-	const [team, setTeam] = useState([]);
+	const [board, setBoard] = useState([]);
+	const [volunteers, setVolunteers] = useState([]);
 	const [windowSize, setWindowSize] = useOutletContext();
+
+	const gruppi = [
+		"communication",
+		"curator",
+		"fundraising",
+		"grafica",
+		"marketing",
+		"planning",
+		"radio",
+		"speaker curator",
+	];
 
 	useEffect(() => {
 		axios
 			.get(global.CONNECTION.ENDPOINT + "team/2022")
 			.then((res, err) => {
-				setTeam(res.data);
+				const data = res.data;
+				console.log(data);
+				let newBoard = [];
+				let newVolunteers = [];
+				data.forEach((item) => {
+					if (item.gruppo === "board") newBoard.push(item);
+					else newVolunteers.push(item);
+				});
+				setBoard(newBoard);
+				setVolunteers(newVolunteers);
 			})
 			.catch((err) => {
 				console.error(err);
 			});
 	}, []);
 
-	const handleSpeakersCardSection = () => {
-		if (team.length === 0) {
+	const handleBoardCardSection = () => {
+		if (board.length === 0) {
 			return (
 				<div
 					style={{
@@ -41,8 +63,9 @@ export default function Team2022() {
 			let res = [];
 			// eslint-disable-next-line no-lone-blocks
 			{
-				team.map((team) => {
-					const { id, nome, gruppo, ruolo, image, link } = team;
+				board.map((board) => {
+					const { id, nome, gruppo, ruolo, image, link } = board;
+					if (gruppo != "board") return;
 					let base64StringImage = Buffer.from(image, "binary").toString(
 						"base64"
 					);
@@ -57,12 +80,47 @@ export default function Team2022() {
 						/>
 					);
 				});
-				return res;
+				return (
+					<>
+						<h1 style={{ margin: "30px 0" }}>Team Esecutivo</h1>
+						{res}
+					</>
+				);
 			}
 		}
 	};
 
-	if (windowSize > global.UTILS.MOBILE_WIDTH) {
+	const handleVolunteersCardSection = () => {
+		if (volunteers.length === 0) return;
+
+		const curatorVolunteers = volunteers.filter(
+			(person) => person.gruppo === "curator"
+		);
+		console.log(curatorVolunteers);
+		let curatorArray = [];
+
+		curatorVolunteers.map((vol) => {
+			const { id, nome, gruppo, image, link } = vol;
+			let base64StringImage = Buffer.from(image, "binary").toString("base64");
+			curatorArray.push(
+				<VolunteerCard
+					id={id}
+					nome={nome}
+					gruppo={gruppo}
+					image={base64StringImage}
+					link={link}
+				/>
+			);
+		});
+		return (
+			<>
+				<h1 style={{ marginTop: "30px" }}>Team curator</h1>
+				{curatorArray}
+			</>
+		);
+	};
+
+	if (windowSize > global.UTILS.TABLET_WIDTH) {
 		/**
 		 * DESKTOP
 		 */
@@ -92,8 +150,11 @@ export default function Team2022() {
 						TEAM 2022
 					</h1>
 				</div>
-				<div className="row gap-5 justify-content-center">
-					<div className="row">{handleSpeakersCardSection()}</div>
+				<div className="container">
+					<div className="row">{handleBoardCardSection()}</div>
+				</div>
+				<div className="container">
+					<div className="row">{handleVolunteersCardSection()}</div>
 				</div>
 			</>
 		);
@@ -127,7 +188,7 @@ export default function Team2022() {
 					</h1>
 				</div>
 				<div className="row mx-0 gap-5 justify-content-center">
-					{handleSpeakersCardSection()}
+					{handleBoardCardSection()}
 				</div>
 			</>
 		);
