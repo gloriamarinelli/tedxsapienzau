@@ -77,6 +77,13 @@
 	background-size: cover;
 }
 
+.header-ed2023 {
+	background-image: url("../../components/images/Edizione2023.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 /** SPEAKER CARD **/
 
 .speaker-card {

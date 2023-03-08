@@ -81,17 +81,18 @@ export default function Edizione2023() {
 
 	return (
 		<>
+		<section>
 			<header
-				className="header-ed2022"
+				className="header-ed2023"
 				style={{
-					padding: "10px",
+					
 					textAlign: "center",
 					marginBottom: "10px",
 					height: "45vh",
 				}}
 			></header>
 
-			<section className="where-is-the-event23 row mx-0 pt-3 pb-3">
+			<div className="where-is-the-event23 row mx-0 pt-3 pb-3">
 				<div className="col-md-6">
 					<div className="row">
 						<FontAwesomeIcon
@@ -118,6 +119,7 @@ export default function Edizione2023() {
 				<div className="col-md-6">
 					<LazyLoadImage src={TedxLogo} width="300px" />
 				</div>
+			</div>
 			</section>
 
 			<div className="container mb-5">
