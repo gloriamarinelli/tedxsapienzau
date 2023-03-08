@@ -34,7 +34,7 @@ export default function ExecutiveTeamCard({
 					<img
 						src={
 							year === 2023
-								? `/images/board23/${image}`
+								? `/images/team23/${image}`
 								: `data:image/*;base64,${image}`
 						}
 						height="350"

@@ -16,11 +16,10 @@ export default function VolunteerCard({ id, nome, gruppo, image, link }) {
 						justifyContent: "center",
 						alignItems: "center",
 						flexDirection: "column",
-						cursor: link && "pointer",
 					}}
 				>
 					<img
-						src={`data:image/*;base64,${image}`}
+						src={image && `/images/team23/${image}`}
 						height="240"
 						alt="foto volontario"
 					/>
@@ -36,6 +35,7 @@ export default function VolunteerCard({ id, nome, gruppo, image, link }) {
 							style={{
 								color: "black",
 								textDecoration: "none",
+								cursor: link && "pointer",
 							}}
 						>
 							<div

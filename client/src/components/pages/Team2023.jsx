@@ -12,16 +12,7 @@ export default function Team2022() {
 	const [volunteers, setVolunteers] = useState([]);
 	const [windowSize, setWindowSize] = useOutletContext();
 
-	const gruppi = [
-		"communication",
-		"curator",
-		"fundraising",
-		"grafica",
-		"marketing",
-		"planning",
-		"radio",
-		"speaker curator",
-	];
+	const gruppi = ["dmw", "cem", "ers", "la", "pem", "sec"];
 
 	useEffect(() => {
 		axios
@@ -91,21 +82,47 @@ export default function Team2022() {
 	const handleVolunteersCardSection = () => {
 		if (volunteers.length === 0) return;
 
-		const curatorVolunteers = volunteers.filter(
-			(person) => person.gruppo === "curator"
-		);
-		console.log(curatorVolunteers);
-		let curatorArray = [];
+		let dmwVolunteers = [];
+		let cemVolunteers = [];
+		let ersVolunteers = [];
+		let pemVolunteers = [];
+		let secVolunteers = [];
+		let laVolunteers = [];
 
-		curatorVolunteers.map((vol) => {
-			const { id, nome, gruppo, image, link } = vol;
-			let base64StringImage = Buffer.from(image, "binary").toString("base64");
-			curatorArray.push(
+		volunteers.map((vol) => {
+			switch (vol.gruppo) {
+				case "dmw":
+					dmwVolunteers.push(vol);
+					break;
+				case "cem":
+					cemVolunteers.push(vol);
+					break;
+				case "ers":
+					ersVolunteers.push(vol);
+					break;
+				case "pem":
+					pemVolunteers.push(vol);
+					break;
+				case "sec":
+					secVolunteers.push(vol);
+					break;
+				case "la":
+					laVolunteers.push(vol);
+					break;
+			}
+		});
+
+		let dmwArray = [];
+
+		dmwVolunteers.map((vol) => {
+			const { id, nome, gruppo, fotoNome, link } = vol;
+			dmwArray.push(
 				<VolunteerCard
+					key={id}
 					id={id}
 					nome={nome}
 					gruppo={gruppo}
-					image={base64StringImage}
+					image={fotoNome}
 					link={link}
 				/>
 			);
@@ -113,7 +130,7 @@ export default function Team2022() {
 		return (
 			<>
 				<h1 style={{ marginTop: "30px" }}>Team curator</h1>
-				{curatorArray}
+				{dmwArray}
 			</>
 		);
 	};
