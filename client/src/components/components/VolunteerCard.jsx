@@ -19,6 +19,7 @@ export default function VolunteerCard({ id, nome, gruppo, image, link }) {
 					src={image && `/images/team23/${image}`}
 					height="280"
 					alt="foto volontario"
+					style={{ maxWidth: "300px", objectFit: "cover" }}
 				/>
 
 				<div

@@ -343,7 +343,9 @@ export default function Team2022() {
 					</h1>
 				</div>
 				<div className="row mx-0 gap-5 justify-content-center">
-					{handleBoardCardSection()}
+					<div className="row"> {handleBoardCardSection()}</div>
+
+					<div>{handleVolunteersCardSection()}</div>
 				</div>
 			</>
 		);
