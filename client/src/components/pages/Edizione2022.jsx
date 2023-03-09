@@ -83,6 +83,7 @@ export default function Edizione2022() {
 					padding: "10px",
 					textAlign: "center",
 					marginBottom: "10px",
+					marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					height: "45vh",
 				}}
 			></header>

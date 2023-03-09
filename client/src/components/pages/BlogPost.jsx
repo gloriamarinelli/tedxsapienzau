@@ -60,7 +60,10 @@ export default function BlogPost() {
  */
 function BlogCardPost(titolo, descrizione, image, data, autore) {
 	return (
-		<div className="main-container">
+		<div
+			className="main-container"
+			style={{ marginTop: global.UTILS.NAV_HEIGHT }}
+		>
 			<div className="post-container">
 				<div className="d-flex" style={{ fontSize: "18px" }}>
 					<p style={{ marginRight: "10px" }}>

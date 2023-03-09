@@ -103,7 +103,10 @@ const Write = () => {
 	];
 
 	return (
-		<div className="container main-container mt-5 mb-5">
+		<div
+			className="container main-container mb-5"
+			style={{ marginTop: "100px" }}
+		>
 			<div className="content-container">
 				<label htmlFor="title" style={{ fontSize: "30px" }}>
 					Titolo

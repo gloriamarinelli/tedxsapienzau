@@ -125,7 +125,12 @@ export default function Navbar() {
 
 				<nav
 					className="navbar navbar-expand-lg navbar-white bg-white static-top"
-					style={{ fontFamily: "GothamBold" }}
+					style={{
+						fontFamily: "GothamBold",
+						position: "absolute",
+						zIndex: 99,
+						width: "100vw",
+					}}
 				>
 					<div className="container">
 						<Link to="/">

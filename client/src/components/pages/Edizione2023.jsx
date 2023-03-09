@@ -21,16 +21,16 @@ export default function Edizione2023() {
 	const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
 	const [speakers, setSpeakers] = useState([]);
 
-	useEffect(() => {
-		axios
-			.get(global.CONNECTION.ENDPOINT + "/speakers/edizione/2023")
-			.then((res, err) => {
-				setSpeakers(res.data);
-			})
-			.catch((err) => {
-				console.error(err);
-			});
-	}, []);
+	// useEffect(() => {
+	// 	axios
+	// 		.get(global.CONNECTION.ENDPOINT + "/speakers/edizione/2023")
+	// 		.then((res, err) => {
+	// 			setSpeakers(res.data);
+	// 		})
+	// 		.catch((err) => {
+	// 			console.error(err);
+	// 		});
+	// }, []);
 
 	/**
 	 * This function returns a spinner when the data from the db is still loading.
@@ -81,44 +81,44 @@ export default function Edizione2023() {
 
 	return (
 		<>
-		<section>
-			<header
-				className="header-ed2023"
-				style={{					
-					textAlign: "center",
-					marginBottom: "10px",
-					height: "45vh",
-				}}
-			></header>
+			<section>
+				<header
+					className="header-ed2023"
+					style={{
+						textAlign: "center",
+						height: "45vh",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+					}}
+				></header>
 
-			<div className="where-is-the-event23 row mx-0 pt-3 pb-3">
-				<div className="col-md-6">
-					<div className="row">
-						<FontAwesomeIcon
-							className="col-2"
-							icon={faLocationDot}
-							style={{ color: global.COLORS.ROSSO_TED }}
-							size="2x"
-						/>
-						<p className="col-8">
-							Università La Sapienza - Aula Magna Rettorato Piazzale Aldo Moro,
-							5, 00185 Roma RM
-						</p>
+				<div className="where-is-the-event23 row mx-0 pt-3 pb-3">
+					<div className="col-md-6">
+						<div className="row">
+							<FontAwesomeIcon
+								className="col-2"
+								icon={faLocationDot}
+								style={{ color: global.COLORS.ROSSO_TED }}
+								size="2x"
+							/>
+							<p className="col-8">
+								Università La Sapienza - Aula Magna Rettorato Piazzale Aldo
+								Moro, 5, 00185 Roma RM
+							</p>
+						</div>
+						<div className="row">
+							<FontAwesomeIcon
+								className="col-2"
+								icon={faCalendar}
+								style={{ color: global.COLORS.ROSSO_TED }}
+								size="2x"
+							/>
+							<p className="col-8">Autunno 2023</p>
+						</div>
 					</div>
-					<div className="row">
-						<FontAwesomeIcon
-							className="col-2"
-							icon={faCalendar}
-							style={{ color: global.COLORS.ROSSO_TED }}
-							size="2x"
-						/>
-						<p className="col-8">Autunno 2023</p>
+					<div className="col-md-6">
+						<LazyLoadImage src={TedxLogo} width="300px" />
 					</div>
 				</div>
-				<div className="col-md-6">
-					<LazyLoadImage src={TedxLogo} width="300px" />
-				</div>
-			</div>
 			</section>
 
 			<div className="container mb-5">

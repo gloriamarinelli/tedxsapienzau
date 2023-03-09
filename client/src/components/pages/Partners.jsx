@@ -25,6 +25,7 @@ export default function Partners() {
 						height: "40vh",
 						display: "grid",
 						placeItems: "center",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1
@@ -105,6 +106,7 @@ export default function Partners() {
 						height: "30vh",
 						display: "grid",
 						placeItems: "center",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1

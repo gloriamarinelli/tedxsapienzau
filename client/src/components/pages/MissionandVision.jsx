@@ -33,6 +33,7 @@ export default function MissionandVision() {
 						height: "80vh",
 						display: "grid",
 						placeItems: "center",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1
@@ -242,6 +243,7 @@ export default function MissionandVision() {
 						height: "40vh",
 						display: "grid",
 						placeItems: "center",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1
@@ -445,12 +447,7 @@ const CarouselComponent = () => {
 	};
 
 	return (
-		<Carousel
-			activeIndex={index}
-			onSelect={handleSelect}
-			
-			variant="white"
-		>
+		<Carousel activeIndex={index} onSelect={handleSelect} variant="white">
 			<Carousel.Item>
 				<img
 					className="d-block carousel-image"
@@ -478,7 +475,7 @@ const CarouselComponent = () => {
 					src={Image14}
 					alt="Fourth slide"
 				/>
-			</Carousel.Item>			
+			</Carousel.Item>
 		</Carousel>
 	);
 };

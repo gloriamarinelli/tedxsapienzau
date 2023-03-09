@@ -72,6 +72,7 @@ export default function Join() {
 						color: "#fff",
 						clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 						placeItems: "center",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1
@@ -317,6 +318,7 @@ export default function Join() {
 						height: "40vh",
 						display: "grid",
 						placeItems: "center",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1

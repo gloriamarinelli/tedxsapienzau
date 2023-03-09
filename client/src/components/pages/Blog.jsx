@@ -92,6 +92,7 @@ export default function Blog() {
 						display: "grid",
 						clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
 						height: "50vh",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1
@@ -151,6 +152,7 @@ export default function Blog() {
 						color: "white",
 						display: "grid",
 						height: "50vh",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>
 					<h1

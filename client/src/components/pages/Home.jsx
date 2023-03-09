@@ -11,6 +11,44 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Home() {
 	const [windowSize, setWindowSize] = useOutletContext();
 
+	const getCallToAction = () => {
+		return (
+			<div
+				style={{
+					position: "absolute",
+					left: 0,
+					bottom: 0,
+					width: "100%",
+					height: "100vh",
+					height: "-webkit-fill-available",
+					display: "flex",
+					justifyContent: "center",
+				}}
+			>
+				<Link
+					to="edizione2023"
+					className="btn5-2"
+					style={{
+						textTransform: "uppercase",
+						padding:
+							windowSize > global.UTILS.TABLET_WIDTH
+								? "25px 60px"
+								: "20px 40px",
+						borderRadius: "25px",
+						color: "#000",
+						fontFamily: "GothamBold",
+						fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
+						textDecoration: "none",
+						bottom: "50px",
+						position: "absolute",
+					}}
+				>
+					Scopri di più
+				</Link>
+			</div>
+		);
+	};
+
 	return (
 		<>
 			<div
@@ -22,7 +60,7 @@ export default function Home() {
 					id="landing-cover"
 					className="d-flex align-items-center justify-content-center"
 					style={{
-						height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+						height: `calc(100vh - ${global.UTILS.SOCIAL_NAV_HEIGHT})`,
 						width: "100vw",
 						fontFamily: "GothamBold",
 						position: "relative",
@@ -31,7 +69,7 @@ export default function Home() {
 					<div
 						style={{
 							position: "absolute",
-							height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+							height: `calc(100vh - ${global.UTILS.SOCIAL_NAV_HEIGHT})`,
 							width: "100%",
 						}}
 					>
@@ -85,27 +123,7 @@ export default function Home() {
 						style={{ fontSize: "120px", zIndex: 2 }}
 						className="text-white"
 					></h1>
-					<Link
-						to="edizione2023"
-						className="btn5-2"
-						style={{
-							textTransform: "uppercase",
-							padding:
-								windowSize > global.UTILS.TABLET_WIDTH
-									? "25px 60px"
-									: "20px 40px",
-							borderRadius: "25px",
-							color: "#000",
-							fontFamily: "GothamBold",
-							fontSize:
-								windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
-							textDecoration: "none",
-							position: "absolute",
-							bottom: "50px",
-						}}
-					>
-						Scopri di più
-					</Link>
+					{getCallToAction()}
 				</div>
 			</div>
 
@@ -138,7 +156,7 @@ export default function Home() {
 											fontSize:
 												windowSize > global.UTILS.TABLET_WIDTH
 													? "30px"
-													: "17px",
+													: "16px",
 											textDecoration: "none",
 											fontFamily: "GothamBold",
 										}}
