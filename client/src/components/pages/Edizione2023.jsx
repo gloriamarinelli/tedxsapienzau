@@ -84,8 +84,7 @@ export default function Edizione2023() {
 		<section>
 			<header
 				className="header-ed2023"
-				style={{
-					
+				style={{					
 					textAlign: "center",
 					marginBottom: "10px",
 					height: "45vh",
