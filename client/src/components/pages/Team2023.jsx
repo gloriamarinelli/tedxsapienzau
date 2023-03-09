@@ -52,7 +52,6 @@ export default function Team2022() {
 			);
 		} else {
 			let res = [];
-			// eslint-disable-next-line no-lone-blocks
 			{
 				board.map((board) => {
 					const { id, nome, gruppo, ruolo, fotoNome, link } = board;
@@ -71,7 +70,16 @@ export default function Team2022() {
 				});
 				return (
 					<>
-						<h1 style={{ margin: "30px 0" }}>Team Esecutivo</h1>
+						{" "}
+						<h1
+							style={{
+								margin: "30px 0",
+								fontFamily: "GothamBold",
+								fontSize: "50px",
+							}}
+						>
+							Team esecutivo
+						</h1>
 						{res}
 					</>
 				);
@@ -113,6 +121,11 @@ export default function Team2022() {
 		});
 
 		let dmwArray = [];
+		let cemArray = [];
+		let ersArray = [];
+		let laArray = [];
+		let pemArray = [];
+		let secArray = [];
 
 		dmwVolunteers.map((vol) => {
 			const { id, nome, gruppo, fotoNome, link } = vol;
@@ -127,10 +140,139 @@ export default function Team2022() {
 				/>
 			);
 		});
+
+		cemVolunteers.map((vol) => {
+			const { id, nome, gruppo, fotoNome, link } = vol;
+			cemArray.push(
+				<VolunteerCard
+					key={id}
+					id={id}
+					nome={nome}
+					gruppo={gruppo}
+					image={fotoNome}
+					link={link}
+				/>
+			);
+		});
+
+		ersVolunteers.map((vol) => {
+			const { id, nome, gruppo, fotoNome, link } = vol;
+			ersArray.push(
+				<VolunteerCard
+					key={id}
+					id={id}
+					nome={nome}
+					gruppo={gruppo}
+					image={fotoNome}
+					link={link}
+				/>
+			);
+		});
+
+		laVolunteers.map((vol) => {
+			const { id, nome, gruppo, fotoNome, link } = vol;
+			laArray.push(
+				<VolunteerCard
+					key={id}
+					id={id}
+					nome={nome}
+					gruppo={gruppo}
+					image={fotoNome}
+					link={link}
+				/>
+			);
+		});
+
+		pemVolunteers.map((vol) => {
+			const { id, nome, gruppo, fotoNome, link } = vol;
+			pemArray.push(
+				<VolunteerCard
+					key={id}
+					id={id}
+					nome={nome}
+					gruppo={gruppo}
+					image={fotoNome}
+					link={link}
+				/>
+			);
+		});
+
+		secVolunteers.map((vol) => {
+			const { id, nome, gruppo, fotoNome, link } = vol;
+			secArray.push(
+				<VolunteerCard
+					key={id}
+					id={id}
+					nome={nome}
+					gruppo={gruppo}
+					image={fotoNome}
+					link={link}
+				/>
+			);
+		});
+
 		return (
 			<>
-				<h1 style={{ marginTop: "30px" }}>Team curator</h1>
-				{dmwArray}
+				<h1
+					style={{
+						margin: "30px 0",
+						fontFamily: "GothamBold",
+						fontSize: "40px",
+					}}
+				>
+					Team Design, Media & Website
+				</h1>
+				<div className="row">{dmwArray}</div>
+				<h1
+					style={{
+						margin: "30px 0",
+						fontFamily: "GothamBold",
+						fontSize: "40px",
+					}}
+				>
+					Team Communication, Editorial & Marketing
+				</h1>
+				<div className="row">{cemArray}</div>
+				<h1
+					style={{
+						margin: "30px 0",
+						fontFamily: "GothamBold",
+						fontSize: "40px",
+					}}
+				>
+					Team External Relation & Sponsor
+				</h1>
+				<div className="row">{ersArray}</div>
+				<h1
+					style={{
+						margin: "30px 0",
+						fontFamily: "GothamBold",
+						fontSize: "40px",
+					}}
+				>
+					Team Legal & Administrative
+				</h1>
+				<div className="row">{laArray}</div>
+				<h1
+					style={{
+						margin: "30px 0",
+						fontFamily: "GothamBold",
+						fontSize: "40px",
+					}}
+				>
+					Team Planning & Event Management
+				</h1>
+				<div className="row">{pemArray}</div>
+				<h1
+					style={{
+						margin: "30px 0",
+						fontFamily: "GothamBold",
+						fontSize: "40px",
+					}}
+				>
+					Team Speakers & Event Curation
+				</h1>
+				<div className="row">{secArray}</div>
 			</>
 		);
 	};
@@ -166,11 +308,9 @@ export default function Team2022() {
 					</h1>
 				</div>
 
-				<div className="container">
+				<div className="container-xl">
 					<div className="row">{handleBoardCardSection()}</div>
-				</div>
-				<div className="container">
-					<div className="row">{handleVolunteersCardSection()}</div>
+					<div>{handleVolunteersCardSection()}</div>
 				</div>
 			</>
 		);
@@ -181,12 +321,11 @@ export default function Team2022() {
 		return (
 			<>
 				<div
-					className="header gradient-background-team2022"
+					className="header gradient-background-team2023"
 					style={{
 						padding: "10px",
 						textAlign: "center",
 						color: "#fff",
-						marginBottom: "10px",
 						height: "40vh",
 						display: "grid",
 						placeItems: "center",
@@ -200,7 +339,7 @@ export default function Team2022() {
 							fontFamily: "GothamBold",
 						}}
 					>
-						TEAM 2022
+						TEAM 2023
 					</h1>
 				</div>
 				<div className="row mx-0 gap-5 justify-content-center">

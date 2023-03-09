@@ -1,4 +1,5 @@
 import React from "react";
+import global from "../../resources/global.json";
 
 export default function ExecutiveTeamCard({
 	id,
@@ -13,76 +14,65 @@ export default function ExecutiveTeamCard({
 		<>
 			<div
 				key={id}
-				className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
+				className="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
+				style={{
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					flexDirection: "column",
+				}}
 			>
+				<img
+					src={
+						year === 2023
+							? `/images/team23/${image}`
+							: `data:image/*;base64,${image}`
+					}
+					width="245px"
+					height="350px"
+					alt="foto team esecutivo"
+					style={{ borderRadius: "20px 20px 0 0", objectFit: "cover" }}
+				/>
+
 				<div
-					className="portfolio-item"
+					className="portfolio-caption"
 					style={{
-						aspectRatio: 1,
-						height: "400px",
-						display: "flex",
 						justifyContent: "center",
-						alignItems: "center",
-						flexDirection: "column",
+						backgroundColor: "#000",
+						color: "#fff",
+						width: "245px",
+						borderRadius: "0 0 20px 20px",
+						padding: "20px 0",
+						height: "120px",
 					}}
 				>
-					<div className="portfolio-hover">
-						<div className="portfolio-hover-content">
-							<i className="fas fa-plus fa-3x"></i>
-						</div>
-					</div>
-					<img
-						src={
-							year === 2023
-								? `/images/team23/${image}`
-								: `data:image/*;base64,${image}`
-						}
-						height="350"
-						alt="foto team esecutivo"
-					/>
-
-					<div
-						className="portfolio-caption"
+					<a
+						href={link}
 						style={{
-							justifyContent: "center",
+							color: "#fff",
+							textDecoration: "none",
 						}}
 					>
-						<a
-							href={link}
-							style={{
-								color: "black",
-								textDecoration: "none",
-							}}
-						>
-							<div
-								className="portfolio-caption-heading"
-								style={{
-									fontWeight: "bold",
-									textAlign: "center",
-									fontSize: "20px",
-								}}
-							>
-								{nome}
-							</div>
-						</a>
 						<div
 							className="portfolio-caption-heading"
 							style={{
-								fontStyle: "italic",
+								fontWeight: "bold",
 								textAlign: "center",
+								fontSize: "23px",
 							}}
 						>
-							{ruolo}
+							{nome}
 						</div>
-						<div
-							className="portfolio-caption-heading"
-							style={{
-								fontStyle: "italic",
-								textAlign: "center",
-							}}
-						>
-							{gruppo == "board" ? "" : gruppo}
-						</div>
+					</a>
+					<div
+						className="portfolio-caption-heading"
+						style={{
+							fontStyle: "italic",
+							textAlign: "center",
+							fontSize: "15px",
+						}}
+					>
+						{ruolo}
 					</div>
 				</div>
 			</div>
