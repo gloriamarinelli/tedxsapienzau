@@ -13,12 +13,15 @@ import Image from "../images/logo-black.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
 
-export default function Navbar() {
+export default function NavbarComponent() {
+	const [expanded, setExpanded] = useState(false);
 	const { currentUser, currentToken } = useContext(AuthContext);
 	const { logout } = useContext(AuthContext);
 
-	/*const navRef = useRef();*/
+	const navRef = useRef();
 
 	return (
 		<>
@@ -128,10 +131,11 @@ export default function Navbar() {
 				 * NAVBAR
 				 */}
 
-				<nav
-					className="navbar navbar-expand-lg navbar-white bg-white static-top"
-					/*ref={navRef}
-					className="navbar navbar-white bg-white static-top"*/
+				<Navbar
+					ref={navRef}
+					className="navbar navbar-white bg-white static-top"
+					expand={"lg"}
+					expanded={expanded}
 					style={{
 						fontFamily: "GothamBold",
 						position: "absolute",
@@ -139,11 +143,11 @@ export default function Navbar() {
 						width: "100vw",
 					}}
 				>
-					<div className="container">
+					<Container>
 						<Link to="/">
 							<LazyLoadImage src={Image} alt="LogoTedx" width="" height="40" />
 						</Link>
-						<button
+						{/* <button
 							className="navbar-toggler"
 							type="button"
 							data-bs-toggle="collapse"
@@ -153,14 +157,15 @@ export default function Navbar() {
 							aria-label="Toggle navigation"
 						>
 							<span className="navbar-toggler-icon"></span>
-						</button>
-						<div
-							className="collapse navbar-collapse"
-							id="navbarSupportedContent"
-						>
+						</button> */}
+						<Navbar.Toggle
+							aria-controls="basic-navbar-nav"
+							onClick={() => setExpanded(expanded ? false : "expanded")}
+						/>
+						<Navbar.Collapse>
 							<ul className="navbar-nav ms-auto">
 								<li className="nav-item">
-									<a href="/join">
+									<Link to="/join" onClick={() => setExpanded(false)}>
 										<button
 											type="button"
 											className="btn"
@@ -172,7 +177,7 @@ export default function Navbar() {
 										>
 											Join us
 										</button>
-									</a>
+									</Link>
 								</li>
 
 								<li className="nav-item dropdown">
@@ -186,31 +191,41 @@ export default function Navbar() {
 									</a>
 									<ul className="dropdown-menu">
 										<li>
-											<a
+											<Link
 												className="dropdown-item text-bg-light"
-												href="/edizione2023"
+												to="/edizione2023"
+												onClick={() => setExpanded(false)}
 											>
 												Edizione 2023
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a
+											<Link
 												className="dropdown-item text-bg-light"
-												href="/edizione2022"
+												to="/edizione2022"
+												onClick={() => setExpanded(false)}
 											>
 												Edizione 2022
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</li>
 
 								<li className="nav-item">
-									<Link className="nav-link text-bg-light" to="/blog">
+									<Link
+										className="nav-link text-bg-light"
+										to="/blog"
+										onClick={() => setExpanded(false)}
+									>
 										Blog
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link className="nav-link text-bg-light" to="/partners">
+									<Link
+										className="nav-link text-bg-light"
+										to="/partners"
+										onClick={() => setExpanded(false)}
+									>
 										Partners
 									</Link>
 								</li>
@@ -229,6 +244,7 @@ export default function Navbar() {
 											<Link
 												className="dropdown-item text-bg-light"
 												to="/team2023"
+												onClick={() => setExpanded(false)}
 											>
 												Team 2023
 											</Link>
@@ -237,6 +253,7 @@ export default function Navbar() {
 											<Link
 												className="dropdown-item text-bg-light"
 												to="/team2022"
+												onClick={() => setExpanded(false)}
 											>
 												Team 2022
 											</Link>
@@ -256,17 +273,29 @@ export default function Navbar() {
 									</a>
 									<ul className="dropdown-menu">
 										<li>
-											<Link className="dropdown-item text-bg-light" to="/">
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/"
+												onClick={() => setExpanded(false)}
+											>
 												Storia
 											</Link>
 										</li>
 										<li>
-											<Link className="dropdown-item text-bg-light" to="/">
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/"
+												onClick={() => setExpanded(false)}
+											>
 												Location
 											</Link>
 										</li>
 										<li>
-											<Link className="dropdown-item text-bg-light" to="/">
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/"
+												onClick={() => setExpanded(false)}
+											>
 												Sostenibilità
 											</Link>
 										</li>
@@ -274,6 +303,7 @@ export default function Navbar() {
 											<Link
 												className="dropdown-item text-bg-light"
 												to="/mission&vision"
+												onClick={() => setExpanded(false)}
 											>
 												Mission & Vision
 											</Link>
@@ -286,6 +316,7 @@ export default function Navbar() {
 										<Link
 											className="nav-link bg-success text-white"
 											to="/write"
+											onClick={() => setExpanded(false)}
 										>
 											Scrivi
 										</Link>
@@ -305,9 +336,9 @@ export default function Navbar() {
 									</li>
 								)}
 							</ul>
-						</div>
-					</div>
-				</nav>
+						</Navbar.Collapse>
+					</Container>
+				</Navbar>
 			</div>
 		</>
 	);

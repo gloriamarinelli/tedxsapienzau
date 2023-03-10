@@ -23,6 +23,7 @@ export default function Home() {
 					height: "-webkit-fill-available",
 					display: "flex",
 					justifyContent: "center",
+					alignItems: "flex-end",
 				}}
 			>
 				<Link
@@ -39,8 +40,8 @@ export default function Home() {
 						fontFamily: "GothamBold",
 						fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
 						textDecoration: "none",
-						bottom: "50px",
-						position: "absolute",
+						height: "70px",
+						marginBottom: "50px",
 					}}
 				>
 					Scopri di più

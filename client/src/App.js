@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./components/components/Navbar";
+import NavbarComponent from "./components/components/NavbarComponent";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
 import MissionandVision from "./components/pages/MissionandVision";
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 		element: <HomeManager />,
 		errorElement: (
 			<>
-				<Navbar />
+				<NavbarComponent />
 				<ErrorPage />
 				<Footer />
 			</>
@@ -108,7 +108,7 @@ function HomeManager() {
 
 	return (
 		<>
-			<Navbar />
+			<NavbarComponent />
 			<Outlet context={[windowSize, setWindowSize]} />
 			<Footer />
 		</>
