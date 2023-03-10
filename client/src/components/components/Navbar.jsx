@@ -45,6 +45,7 @@ export default function Navbar() {
 										aria-current="page"
 										href="https://www.facebook.com/tedxsapienzau/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<FontAwesomeIcon
 											style={{ color: "white" }}
@@ -58,6 +59,7 @@ export default function Navbar() {
 										className="nav-link"
 										href="https://www.linkedin.com/company/tedxsapienzau/mycompany/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<FontAwesomeIcon
 											style={{ color: "white" }}
@@ -71,6 +73,7 @@ export default function Navbar() {
 										className="nav-link"
 										href="https://www.instagram.com/tedxsapienzau/"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<FontAwesomeIcon
 											style={{ color: "white" }}
@@ -84,6 +87,7 @@ export default function Navbar() {
 										className="nav-link"
 										href="https://www.tiktok.com/@tedxsapienzau?is_from_webapp=1&sender_device=pc"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<FontAwesomeIcon
 											style={{ color: "white" }}
@@ -97,6 +101,7 @@ export default function Navbar() {
 										className="nav-link"
 										href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<FontAwesomeIcon
 											style={{ color: "white" }}
