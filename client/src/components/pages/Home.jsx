@@ -155,7 +155,7 @@ export default function Home() {
 											alignItems: "center",
 											fontSize:
 												windowSize > global.UTILS.TABLET_WIDTH
-													? "30px"
+													? "25px"
 													: "16px",
 											textDecoration: "none",
 											fontFamily: "GothamBold",

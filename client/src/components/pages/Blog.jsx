@@ -17,6 +17,8 @@ export default function Blog() {
 	const { currentUser } = useContext(AuthContext);
 
 	const pageSize = 5;
+	const clearDbIncrement = 10;
+	const clearDbMagic = 2;
 
 	useEffect(() => {
 		axios
@@ -34,10 +36,13 @@ export default function Blog() {
 
 	const getCurrentPagePosts = () => {
 		if (blogSize === 0) return;
-		let start = blogSize - pageSize * currentPage;
-		let end = blogSize - pageSize * (currentPage - 1);
+		let start = blogSize - pageSize * currentPage + clearDbMagic;
+		let end = blogSize - pageSize * (currentPage - 1) + clearDbMagic;
 		axios
-			.get(global.CONNECTION.ENDPOINT + `blog?start=${start}&end=${end}`)
+			.get(
+				global.CONNECTION.ENDPOINT +
+					`blog?start=${start * clearDbIncrement}&end=${end * clearDbIncrement}`
+			)
 			.then((res) => {
 				setBlog(res.data.reverse());
 			})

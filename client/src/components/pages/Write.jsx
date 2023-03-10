@@ -85,6 +85,7 @@ const Write = () => {
 			[{ list: "ordered" }, { list: "bullet" }],
 			[{ align: [] }],
 			[{ color: [] }, { background: [] }],
+			["link", "image", "video"],
 			["clean"],
 		],
 	};
@@ -100,6 +101,9 @@ const Write = () => {
 		"align",
 		"color",
 		"background",
+		"link",
+		"image",
+		"video",
 	];
 
 	return (

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -17,9 +17,9 @@ import { AuthContext } from "../context/authContext";
 export default function Navbar() {
 	const { currentUser, currentToken } = useContext(AuthContext);
 	const { logout } = useContext(AuthContext);
-	/*
-	console.log(currentUser.username);
-*/
+
+	const navRef = useRef();
+
 	return (
 		<>
 			<div className="Navbar">
@@ -129,7 +129,8 @@ export default function Navbar() {
 				 */}
 
 				<nav
-					className="navbar navbar-expand-lg navbar-white bg-white static-top"
+					ref={navRef}
+					className="navbar navbar-white bg-white static-top"
 					style={{
 						fontFamily: "GothamBold",
 						position: "absolute",
