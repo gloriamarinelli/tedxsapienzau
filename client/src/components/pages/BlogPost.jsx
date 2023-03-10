@@ -89,7 +89,14 @@ function BlogCardPost(titolo, descrizione, image, data, autore) {
 				<hr className="featurette-divider"></hr>
 				<div className="post-social-container">
 					<FontAwesomeIcon icon={faFacebookF} size="lg" />
-					<FontAwesomeIcon icon={faTwitter} size="lg" />
+					<a
+						class="twitter-share-button"
+						href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+							window.location.href
+						)}`}
+					>
+						Tweet
+					</a>
 					<FontAwesomeIcon icon={faLinkedinIn} size="lg" />
 				</div>
 			</div>
