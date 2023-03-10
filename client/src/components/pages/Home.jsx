@@ -13,42 +13,24 @@ export default function Home() {
 
 	const getCallToAction = () => {
 		return (
-			<div
+			<Link
+				to="edizione2023"
+				className="btn5-2"
 				style={{
+					textTransform: "uppercase",
+					padding:
+						windowSize > global.UTILS.TABLET_WIDTH ? "25px 60px" : "20px 40px",
+					borderRadius: "25px",
+					color: "#000",
+					fontFamily: "GothamBold",
+					fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
+					textDecoration: "none",
 					position: "absolute",
-					left: 0,
-					bottom: 0,
-					width: "100%",
-					height: "100vh",
-					height: "-webkit-fill-available",
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "flex-end",
+					bottom: "80px",
 				}}
 			>
-				<Link
-					to="edizione2023"
-					className="btn5-2"
-					style={{
-						textTransform: "uppercase",
-						padding:
-							windowSize > global.UTILS.TABLET_WIDTH
-								? "25px 60px"
-								: "20px 40px",
-						borderRadius: "25px",
-						color: "#000",
-						fontFamily: "GothamBold",
-						fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
-						textDecoration: "none",
-						height: "70px",
-						marginBottom: "80px",
-						display: "flex",
-						alignItems: "center",
-					}}
-				>
-					Scopri di più
-				</Link>
-			</div>
+				Scopri di più
+			</Link>
 		);
 	};
 
