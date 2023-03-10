@@ -41,7 +41,9 @@ export default function Home() {
 						fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
 						textDecoration: "none",
 						height: "70px",
-						marginBottom: "50px",
+						marginBottom: "80px",
+						display: "flex",
+						alignItems: "center",
 					}}
 				>
 					Scopri di più
