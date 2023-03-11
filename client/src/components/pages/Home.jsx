@@ -182,7 +182,7 @@ export default function Home() {
 									target="_blank"
 									rel="noreferrer"
 								>
-									Regulations 🇬🇧
+									Regulation 🇬🇧
 								</a>
 							</div>
 						</div>
