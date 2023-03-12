@@ -256,7 +256,7 @@ export default function Navbar() {
 									</a>
 									<ul className="dropdown-menu">
 										<li>
-											<Link className="dropdown-item text-bg-light" to="/">
+											<Link className="dropdown-item" to="/">
 												Storia
 											</Link>
 										</li>
