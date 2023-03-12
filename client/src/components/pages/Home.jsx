@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import global from "../../resources/global.json";
 import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
-import BackToZer from "../images/Logo BTZ.png";
+import BackToZero from "../images/Logo BTZ.png";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/awardsSZSFONDO.webp";
@@ -75,7 +75,7 @@ export default function Home() {
 							}}
 						>
 							<img
-								src={BackToZer}
+								src={BackToZero}
 								alt="back to zero"
 								width="650"
 								style={{
@@ -96,7 +96,7 @@ export default function Home() {
 							}}
 						>
 							<img
-								src={BackToZer}
+								src={BackToZero}
 								alt="back to zero"
 								width="300"
 								style={{ transform: "translatey(-50px)" }}
