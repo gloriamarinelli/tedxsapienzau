@@ -13,6 +13,7 @@ export default function Blog() {
 	const [blogSize, setBlogSize] = useState(0);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [windowSize, setWindowSize] = useOutletContext();
+	const [isLoading, setIsLoading] = useState(true);
 
 	const { currentUser } = useContext(AuthContext);
 
@@ -26,11 +27,13 @@ export default function Blog() {
 			.then((res) => {
 				setBlogSize(res.data[0].posts);
 				getCurrentPagePosts();
+				setIsLoading(false);
 			})
 			.catch((err) => console.error(err));
 	}, []);
 
 	useEffect(() => {
+		setIsLoading(true);
 		getCurrentPagePosts();
 	}, [currentPage, blogSize]);
 
@@ -45,6 +48,7 @@ export default function Blog() {
 			)
 			.then((res) => {
 				setBlog(res.data.reverse());
+				setIsLoading(false);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -129,19 +133,34 @@ export default function Blog() {
 					</p>
 				</div>
 
-				{blog.map((blog) => {
-					const { id, titolo, image, data } = blog;
-					return (
-						<BlogCard
-							key={id}
-							titolo={titolo}
-							image={image}
-							data={data}
-							id={id}
-						/>
-					);
-				})}
-				{getButtons()}
+				{!isLoading ? (
+					blog.map((blog) => {
+						const { id, titolo, image, data } = blog;
+						return (
+							<BlogCard
+								key={id}
+								titolo={titolo}
+								image={image}
+								data={data}
+								id={id}
+							/>
+						);
+					})
+				) : (
+					<div
+						style={{
+							height: "200px",
+							width: "90%",
+							margin: "auto",
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+					>
+						<div className="spinner"></div>
+					</div>
+				)}
+				{!isLoading && getButtons()}
 			</>
 		);
 	} else {
