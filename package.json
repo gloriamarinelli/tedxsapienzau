@@ -11,6 +11,13 @@
     "jsonwebtoken": "^9.0.0",
     "locale": "^0.1.0",
     "react-bootstrap": "^2.7.0",
+    "react-router-sitemap-generator": "^0.0.8",
     "three": "^0.149.0"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
   }
 }
