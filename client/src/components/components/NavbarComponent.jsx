@@ -165,7 +165,7 @@ export default function NavbarComponent() {
 						<Navbar.Collapse>
 							<ul className="navbar-nav ms-auto">
 								<li className="nav-item">
-									<Link to="/join" onClick={() => setExpanded(false)}>
+									{/* <Link to="/join" onClick={() => setExpanded(false)}>
 										<button
 											type="button"
 											className="btn"
@@ -177,7 +177,7 @@ export default function NavbarComponent() {
 										>
 											Join us
 										</button>
-									</Link>
+									</Link> */}
 								</li>
 
 								<li className="nav-item dropdown">
@@ -278,7 +278,7 @@ export default function NavbarComponent() {
 												to="/"
 												onClick={() => setExpanded(false)}
 											>
-												Storia
+												History
 											</Link>
 										</li>
 										<li>
@@ -296,7 +296,7 @@ export default function NavbarComponent() {
 												to="/"
 												onClick={() => setExpanded(false)}
 											>
-												Sostenibilità
+												Sustainability
 											</Link>
 										</li>
 										<li>
