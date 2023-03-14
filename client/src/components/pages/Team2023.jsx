@@ -18,7 +18,6 @@ export default function Team2022() {
 			.get(global.CONNECTION.ENDPOINT + "team/23")
 			.then((res, err) => {
 				const data = res.data;
-				console.log(data);
 				let newBoard = [];
 				let newVolunteers = [];
 				data.forEach((item) => {

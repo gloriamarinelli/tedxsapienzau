@@ -65,7 +65,7 @@ function BlogCardPost(titolo, descrizione, image, data, autore) {
 			style={{ marginTop: global.UTILS.NAV_HEIGHT }}
 		>
 			<div className="post-container">
-				<div className="d-flex" style={{ fontSize: "18px" }}>
+				<div className="d-flex" style={{ fontSize: "18px", flexWrap: "wrap" }}>
 					<p style={{ marginRight: "10px" }}>
 						{autore}{" "}
 						<FontAwesomeIcon
