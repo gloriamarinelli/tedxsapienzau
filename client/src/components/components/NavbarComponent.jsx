@@ -261,7 +261,17 @@ export default function NavbarComponent() {
 									</ul>
 								</li>
 
-								<li className="nav-item dropdown">
+								<li className="nav-item">
+									<Link
+										className="nav-link text-bg-light"
+										to="/mission&vision"
+										onClick={() => setExpanded(false)}
+									>
+										About Us
+									</Link>
+								</li>
+
+								{/* <li className="nav-item dropdown">
 									<a
 										className="nav-link dropdown-toggle text-bg-light"
 										data-bs-toggle="dropdown"
@@ -309,7 +319,7 @@ export default function NavbarComponent() {
 											</Link>
 										</li>
 									</ul>
-								</li>
+								</li> */}
 
 								{currentToken && (
 									<li className="nav-item">
