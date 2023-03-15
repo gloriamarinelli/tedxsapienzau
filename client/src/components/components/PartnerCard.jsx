@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function PartnerCard({ title, imgSrc, linkSite, sponsorType }) {
   return (
@@ -26,8 +26,8 @@ export default function PartnerCard({ title, imgSrc, linkSite, sponsorType }) {
             style={{
               maxWidth:
                 sponsorType === "institutional" || sponsorType === "main"
-                  ? "200px"
-                  : "150px",
+                  ? "150px"
+                  : "100px",
             }}
           />
         </a>
