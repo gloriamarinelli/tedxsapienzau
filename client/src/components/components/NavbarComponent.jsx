@@ -16,10 +16,11 @@ import { AuthContext } from "../context/authContext";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 
-export default function NavbarComponent() {
+export default function NavbarComponent(props) {
 	const [expanded, setExpanded] = useState(false);
 	const { currentUser, currentToken } = useContext(AuthContext);
 	const { logout } = useContext(AuthContext);
+	const [windowSize, setWindowSize] = useState(props.windowSize);
 
 	const navRef = useRef();
 
@@ -147,23 +148,16 @@ export default function NavbarComponent() {
 						<Link to="/">
 							<LazyLoadImage src={Image} alt="LogoTedx" width="" height="40" />
 						</Link>
-						{/* <button
-							className="navbar-toggler"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#navbarSupportedContent"
-							aria-controls="navbarSupportedContent"
-							aria-expanded="false"
-							aria-label="Toggle navigation"
-						>
-							<span className="navbar-toggler-icon"></span>
-						</button> */}
 						<Navbar.Toggle
 							aria-controls="basic-navbar-nav"
 							onClick={() => setExpanded(expanded ? false : "expanded")}
 						/>
 						<Navbar.Collapse>
-							<ul className="navbar-nav ms-auto">
+							<ul
+								className={`navbar-nav ms-auto ${
+									windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
+								}`}
+							>
 								<li className="nav-item">
 									{/* <Link to="/join" onClick={() => setExpanded(false)}>
 										<button
@@ -261,7 +255,17 @@ export default function NavbarComponent() {
 									</ul>
 								</li>
 
-								<li className="nav-item dropdown">
+								<li className="nav-item">
+									<Link
+										className="nav-link text-bg-light"
+										to="/mission&vision"
+										onClick={() => setExpanded(false)}
+									>
+										About Us
+									</Link>
+								</li>
+
+								{/* <li className="nav-item dropdown">
 									<a
 										className="nav-link dropdown-toggle text-bg-light"
 										data-bs-toggle="dropdown"
@@ -309,7 +313,7 @@ export default function NavbarComponent() {
 											</Link>
 										</li>
 									</ul>
-								</li>
+								</li> */}
 
 								{currentToken && (
 									<li className="nav-item">

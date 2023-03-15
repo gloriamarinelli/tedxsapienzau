@@ -108,7 +108,7 @@ function HomeManager() {
 
 	return (
 		<>
-			<NavbarComponent />
+			<NavbarComponent windowSize={windowSize} />
 			<Outlet context={[windowSize, setWindowSize]} />
 			<Footer />
 		</>
