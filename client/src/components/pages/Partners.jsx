@@ -302,7 +302,7 @@ function getSponsors2022() {
 					/>
 					<PartnerCard
 						title="Cose Belle Cose Rare"
-						imgSrc="https://exhibitorsearch.messefrankfurt.com/images/large/company_pictures/10000001202301/0012232945/1673365153223_2686457057.png"
+						imgSrc="https://cosebellecoserare.com/wp-content/uploads/2020/12/Logo-Home-Colorato.png"
 						linkSite="https://cosebellecoserare.com/it/home-v4-italiano/"
 						sponsorType={"smart"}
 					/>

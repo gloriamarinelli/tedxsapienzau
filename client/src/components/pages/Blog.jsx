@@ -147,17 +147,29 @@ export default function Blog() {
 						);
 					})
 				) : (
-					<div
-						style={{
-							height: "200px",
-							width: "90%",
-							margin: "auto",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-						}}
-					>
-						<div className="spinner"></div>
+					<div class="blog-card">
+						<div class="meta">
+							<div
+								class="photo"
+								style={{
+									background: "lightgrey",
+									width: "350px",
+									height: "250px",
+									backgroundPosition: "center",
+									backgroundSize: "cover",
+								}}
+								alt={"loading"}
+							></div>
+						</div>
+						<div class="description">
+							<h4
+								style={{
+									fontFamily: "GothamBold",
+								}}
+							>
+								Loading...
+							</h4>
+						</div>
 					</div>
 				)}
 				{!isLoading && getButtons()}

@@ -74,7 +74,7 @@ export default function BioSpeakerPopup({
 							fontFamily: "GothamBold",
 						}}
 					>
-						<div className="tag-speaker mt-3 mb-1">
+						<div className="tag-speaker mt-3 mb-1" style={{ fontSize: "17px" }}>
 							{selectedSpeakerInfo.tag}
 						</div>
 						<h1>{selectedSpeakerInfo.nomeSpeaker}</h1>
