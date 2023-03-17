@@ -33,7 +33,6 @@ export default function Blog() {
 	}, []);
 
 	useEffect(() => {
-		setIsLoading(true);
 		getCurrentPagePosts();
 	}, [currentPage, blogSize]);
 
@@ -48,7 +47,9 @@ export default function Blog() {
 			)
 			.then((res) => {
 				setBlog(res.data.reverse());
-				setIsLoading(false);
+				setTimeout(() => {
+					setIsLoading(false);
+				}, 100);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -65,6 +66,7 @@ export default function Blog() {
 					active={number === currentPage}
 					onClick={() => {
 						setCurrentPage(number);
+						setIsLoading(true);
 						window.scrollTo(0, 300);
 					}}
 				>
@@ -219,18 +221,45 @@ export default function Blog() {
 						per cambiare il mondo
 					</p>
 				</div>
-				{blog.map((blog) => {
-					const { id, titolo, image, data } = blog;
-					return (
-						<BlogCard
-							key={id}
-							titolo={titolo}
-							image={image}
-							data={data}
-							id={id}
-						/>
-					);
-				})}
+				{!isLoading ? (
+					blog.map((blog) => {
+						const { id, titolo, image, data } = blog;
+						return (
+							<BlogCard
+								key={id}
+								titolo={titolo}
+								image={image}
+								data={data}
+								id={id}
+							/>
+						);
+					})
+				) : (
+					<div class="blog-card">
+						<div class="meta">
+							<div
+								class="photo"
+								style={{
+									background: "lightgrey",
+									width: "350px",
+									height: "250px",
+									backgroundPosition: "center",
+									backgroundSize: "cover",
+								}}
+								alt={"loading"}
+							></div>
+						</div>
+						<div class="description">
+							<h4
+								style={{
+									fontFamily: "GothamBold",
+								}}
+							>
+								Loading...
+							</h4>
+						</div>
+					</div>
+				)}
 				{getButtons()}
 			</>
 		);
