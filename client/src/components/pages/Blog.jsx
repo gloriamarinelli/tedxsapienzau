@@ -65,9 +65,9 @@ export default function Blog() {
 					key={number}
 					active={number === currentPage}
 					onClick={() => {
+						window.scrollTo(0, 0);
 						setCurrentPage(number);
 						setIsLoading(true);
-						window.scrollTo(0, 300);
 					}}
 				>
 					{number}
