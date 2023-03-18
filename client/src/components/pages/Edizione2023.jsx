@@ -151,11 +151,11 @@ export default function Edizione2023() {
             fontSize: "30px",
             fontFamily: "GothamBook",
             fontStyle: "italic",
-			textAlign: "center",
+            textAlign: "center",
           }}
         >
-          ❝ L'uomo e il mondo che lo circonda non sono binari separati, ma rotaie
-          che si muovono insieme, hanno bisogno l'uno dell'altro. ❞
+          ❝ L'uomo e il mondo che lo circonda non sono binari separati, ma
+          rotaie che si muovono insieme, hanno bisogno l'uno dell'altro. ❞
         </p>
       </div>
 
@@ -177,7 +177,7 @@ export default function Edizione2023() {
             fontSize: "20px",
             fontFamily: "GothamBook",
             fontStyle: "",
-			color:"grey",
+            color: "grey",
             textAlign: "center",
           }}
         >

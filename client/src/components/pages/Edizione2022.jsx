@@ -162,7 +162,7 @@ export default function Edizione2022() {
 								style={{
 									fontSize: "250px",
 									color: "#fff",
-									zIndex: "2",
+									zIndex: "2"									
 								}}
 							>
 								C
