@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../../resources/styles/blogstyle.css";
-import { Link } from "react-router-dom";
 import format from "date-fns/format";
 import { it } from "date-fns/locale";
 

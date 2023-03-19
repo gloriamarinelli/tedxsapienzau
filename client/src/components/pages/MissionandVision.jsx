@@ -1,5 +1,5 @@
 import "../../index.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "../images/Cos_èTED.webp";
 import Image1 from "../images/Cos_èTEDx.webp";
 import Image2 from "../images/logo-black.png";
@@ -114,10 +114,10 @@ export default function MissionandVision() {
                 >
                   Il TEDxSapienzaU è il primo TED Universitario dell'Università
                   di Roma “La Sapienza”. Grazie a questo l'intera comunità
-                  studentesca e accademica gode di una programmazione sempre 
-                  nuova e internazionale. L'evento è stato fortemente
-                  voluto da alcuni studenti dell'Ateneo che, grazie al supporto
-                  e alla delega della Magnifica Rettrice Antonella Polimeni, il
+                  studentesca e accademica gode di una programmazione sempre
+                  nuova e internazionale. L'evento è stato fortemente voluto da
+                  alcuni studenti dell'Ateneo che, grazie al supporto e alla
+                  delega della Magnifica Rettrice Antonella Polimeni, il
                   Comitato TEDxSapienzaU composto dagli studenti organizzatori,
                   e dall'Area Supporto alla Ricerca e Trasferimento Tecnologico,
                   ha ottenuto dalla TED Foundation la licenza ufficiale TEDx.
