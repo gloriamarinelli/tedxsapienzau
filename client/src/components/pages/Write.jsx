@@ -105,6 +105,29 @@ const Write = () => {
 	];
 
 	return (
+		<>
+		<div
+					className="header-write"
+					style={{
+						backgroundColor:"RGBA(25, 135, 84,0.5)",
+						padding: "10px",
+						textAlign: "center",
+						color: "black",
+						display: "grid",						
+						height: "20vh",
+						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+					}}
+				>
+					<h1
+						className="font-weight-bold mt-5"
+						style={{
+							fontSize: "40px",						
+							marginLeft: "30px",
+						}}
+					>
+						INSERISCI UN NUOVO ARTICOLO
+					</h1>
+					</div>
 		<div
 			className="container main-container mb-5"
 			style={{ marginTop: "100px" }}
@@ -160,6 +183,7 @@ const Write = () => {
 				</div>
 			</div>
 		</div>
+		</>
 	);
 };
 

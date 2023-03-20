@@ -15,6 +15,8 @@ import Statuto from "./components/pages/Statuto";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import BlogPost from "./components/pages/BlogPost";
 import Write from "./components/pages/Write";
+import Newsletter from "./components/pages/Newsletter";
+
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
@@ -90,6 +92,10 @@ const router = createBrowserRouter([
 			{
 				path: "/privacypolicy",
 				element: <PrivacyPolicy />,
+			},
+			{
+				path: "/newsletter",
+				element: <Newsletter />,
 			},
 		],
 	},
