@@ -11,26 +11,10 @@ const Newsletter = () => {
   const navigate = useNavigate();
   const state = useLocation().state;
   const { currentUser, currentToken, logout } = useContext(AuthContext);
-
-  useEffect(() => {
-    if (!currentToken) {
-      navigate("/login");
-    } else {
-      let decoded = JSON.parse(atob(currentToken.split(".")[1]));
-      if (decoded.exp * 1000 < Date.now()) {
-        console.log("Token Expired");
-        logout();
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!currentToken) navigate("/login");
-  }, [currentToken]);
-
+ 
   useEffect(() => {
     axios
-      .get(global.CONNECTION.ENDPOINT + "/")
+      .get(global.CONNECTION.ENDPOINT + "/newsletter")
       .then((res, err) => {
         setNewsletter(res.data);
       })
