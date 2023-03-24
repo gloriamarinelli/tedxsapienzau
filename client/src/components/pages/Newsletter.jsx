@@ -4,14 +4,14 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
-import TableNewsletter from "../components/TableNewsletter";
+import Table from 'react-bootstrap/Table';
 
 const Newsletter = () => {
   const [newsletter, setNewsletter] = useState([]);
   const navigate = useNavigate();
   const state = useLocation().state;
   const { currentUser, currentToken, logout } = useContext(AuthContext);
- 
+
   useEffect(() => {
     axios
       .get(global.CONNECTION.ENDPOINT + "newsletter")
@@ -48,10 +48,27 @@ const Newsletter = () => {
         </h1>
       </div>
 
-      {newsletter.map((newsletter) => {
-        const { id, email, time } = newsletter;
-        return <TableNewsletter key={id} id={id} email={email} time={time} />;
-      })}
+      <div className="mb-5 mt-2" style={{marginLeft:"50px"}}  >
+        <Table striped bordered hover size="sm">
+          <tr
+            style={{ color: global.COLORS.ROSSO_TED, fontFamily: "GothamBold", fontSize:"25px", height:"50px"}}
+          >
+            <th>Email</th>
+            <th>Time</th>
+          </tr>
+
+          {newsletter.map((newsletter) => {
+            const { id, email, time } = newsletter;
+            return (
+              <tr key={id}  style={{ fontFamily: "GothamBook", fontSize:"20px", height:"50px" }}
+              >
+                <td>{email}</td>
+                <td>{time}</td>
+              </tr>
+            );
+          })}
+        </Table>
+      </div>
     </>
   );
 };
