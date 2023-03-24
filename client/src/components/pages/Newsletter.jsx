@@ -10,7 +10,6 @@ const Newsletter = () => {
   const [newsletter, setNewsletter] = useState([]);
   const navigate = useNavigate();
   const state = useLocation().state;
-  const [windowSize, setWindowSize] = useOutletContext();
   const { currentUser, currentToken, logout } = useContext(AuthContext);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ const Newsletter = () => {
 
   useEffect(() => {
     axios
-      .get(global.CONNECTION.ENDPOINT + "newsletter")
+      .get(global.CONNECTION.ENDPOINT + "/")
       .then((res, err) => {
         setNewsletter(res.data);
       })
