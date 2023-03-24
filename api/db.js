@@ -6,7 +6,7 @@ const configuration = {
 	host: process.env.HOST,
 	user: process.env.USERNAME,
 	password: process.env.PASSWORD,
-	port: "3306",
+	port: "3004",
 	database: process.env.DATABASE,
 };
 

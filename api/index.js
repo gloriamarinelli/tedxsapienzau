@@ -25,6 +25,6 @@ app.get("/", (req, res) => {
 	res.json("Hello backend tedxSapienzaU!");
 });
 
-app.listen(8800, () => {
+app.listen(process.env.PORT || 5500, () => {
 	console.log("Running Server");
 });

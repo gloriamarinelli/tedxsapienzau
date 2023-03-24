@@ -1,7 +1,7 @@
 import React from "react";
 import "../../index.css";
 
-export default function TableNewsletter({ email, time }) {
+export default function TableNewsletter({ id, email, time }) {
   return (
     <table>
       <tr>

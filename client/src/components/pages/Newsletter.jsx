@@ -14,7 +14,7 @@ const Newsletter = () => {
  
   useEffect(() => {
     axios
-      .get(global.CONNECTION.ENDPOINT + "/newsletter")
+      .get(global.CONNECTION.ENDPOINT + "newsletter")
       .then((res, err) => {
         setNewsletter(res.data);
       })
