@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import axios from "axios";
@@ -16,8 +16,6 @@ export default function Join() {
 		const nome = event.target.nome.value;
 		const cognome = event.target.cognome.value;
 		const interesse = event.target.interesse.value;
-
-		console.log(email, nome, cognome, interesse);
 
 		axios
 			.post(global.CONNECTION.ENDPOINT + "join/student", {
@@ -81,6 +79,49 @@ export default function Join() {
 				console.log(error);
 			});
 	};
+
+	if (formSubmitted) {
+		return (
+			<div
+				style={{
+					width: "100vw",
+					height: "100vh",
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					flexDirection: "column",
+					opacity: formSubmitted ? 1 : 0,
+					transition: "all 0.5s ease-in-out",
+				}}
+			>
+				<img
+					src="/images/logo-black.png"
+					width="50%"
+					style={{ minWidth: "350px" }}
+				/>
+				<p
+					style={{
+						fontSize: windowSize > 992 ? "35px" : "25px",
+						maxWidth: "20ch",
+						textAlign: "center",
+					}}
+				>
+					Grazie per averci contattato. Ci sentiamo presto
+				</p>
+				<Link
+					to="/"
+					style={{
+						padding: "10px 20px",
+						backgroundColor: global.COLORS.ROSSO_TED,
+						textDecoration: "none",
+						color: "#fff",
+					}}
+				>
+					Torna alla home
+				</Link>
+			</div>
+		);
+	}
 
 	if (windowSize > 992) {
 		/**
