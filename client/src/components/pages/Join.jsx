@@ -2,61 +2,87 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
+import axios from "axios";
 
 export default function Join() {
 	const state = useLocation().state;
 	const [windowSize, setWindowSize] = useOutletContext();
 	const [cat, setCat] = useState(state?.cat || "");
+	const [formSubmitted, setFormSubmitted] = useState(false);
 
-	/*
-  const submitHandle = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const nome = event.target.nome.value;
-    const cognome = event.target.cognome.value;
-    const interesse = event.target.interesse.value;
+	const handleSubmitStudent = (event) => {
+		event.preventDefault();
+		const email = event.target.email.value;
+		const nome = event.target.nome.value;
+		const cognome = event.target.cognome.value;
+		const interesse = event.target.interesse.value;
 
-    axios
-      .post("http://localhost:8800/join", {
-        email,
-        nome,
-        cognome,
-        interesse,
-      })
-      .then((response) => {
-        console.log(response);
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+		console.log(email, nome, cognome, interesse);
 
-  const submitHandle1 = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const nome = event.target.nome.value;
-    const telefono = event.target.telefono.value;
-    const messaggio = event.target.messaggio.value;
+		axios
+			.post(global.CONNECTION.ENDPOINT + "join/student", {
+				email,
+				nome,
+				cognome,
+				contenuto: interesse,
+			})
+			.then((response) => {
+				console.log(response);
+				event.target.reset();
+				setFormSubmitted(true);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 
-    axios
-      .post("http://localhost:8800/join1", {
-        email,
-        nome,
-        telefono,
-        messaggio,
-      })
-      .then((response) => {
-        console.log(response);
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  */
+	const handleSubmitPartner = (event) => {
+		event.preventDefault();
+		const email = event.target.email.value;
+		const nome = event.target.nome.value;
+		const telefono = event.target.telefono.value;
+		const messaggio = event.target.messaggio.value;
 
-	if (windowSize > global.UTILS.TABLET_WIDTH) {
+		axios
+			.post(global.CONNECTION.ENDPOINT + "join/partner", {
+				email,
+				nome,
+				telefono,
+				contenuto: messaggio,
+			})
+			.then((response) => {
+				console.log(response);
+				event.target.reset();
+				setFormSubmitted(true);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
+
+	const handleSubmitAdvise = (event) => {
+		event.preventDefault();
+		const nome = event.target.nome.value;
+		const contatto = event.target.contatto.value;
+		const messaggio = event.target.messaggio.value;
+
+		axios
+			.post(global.CONNECTION.ENDPOINT + "join/advise", {
+				nome,
+				telefono: contatto,
+				contenuto: messaggio,
+			})
+			.then((response) => {
+				console.log(response);
+				event.target.reset();
+				setFormSubmitted(true);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
+
+	if (windowSize > 992) {
 		/**
 		 * DESKTOP
 		 */
@@ -92,7 +118,7 @@ export default function Join() {
 					<div className="row featurette">
 						<div className="col-md-7 order-md-2">
 							<h3>Sei uno studente interessato al progetto?</h3>
-							<form /*onSubmit={submitHandle}*/>
+							<form onSubmit={handleSubmitStudent}>
 								<div style={{ display: "flex", flexDirection: "column" }}>
 									<label htmlFor="exampleInputEmail1" className="form-label">
 										Indirizzo email istituzionale*
@@ -164,7 +190,7 @@ export default function Join() {
 					<div className="row featurette">
 						<div className="col-md-7 order-md-2">
 							<h3>Sei un'azienda e ti interessa collaborare e supportarci?</h3>
-							<form /*onSubmit={submitHandle1}*/>
+							<form onSubmit={handleSubmitPartner}>
 								<div style={{ display: "flex", flexDirection: "column" }}>
 									<label htmlFor="exampleInputEmail1" className="form-label">
 										Indirizzo email*
@@ -245,7 +271,7 @@ export default function Join() {
 								da consigliarci?
 							</h3>
 
-							<form /*onSubmit={submitHandle1}*/>
+							<form onSubmit={handleSubmitAdvise}>
 								<div style={{ display: "flex", flexDirection: "column" }}>
 									<label htmlFor="exampleInputEmail1" className="form-label">
 										Nome*
@@ -308,7 +334,7 @@ export default function Join() {
 		return (
 			<>
 				<div
-					className="gradient-background mb-5"
+					className="gradient-background mb-5 "
 					style={{
 						backgroundColor: "red",
 						textAlign: "left",
@@ -338,9 +364,9 @@ export default function Join() {
 				{/* JOIN STUDENT */}
 				<div className="container marketing">
 					<div className="row featurette">
-						<div className="col-md-7 order-md-2">
+						<div className="col">
 							<h3>Sei uno studente interessato al progetto?</h3>
-							<form /*onSubmit={submitHandle}*/>
+							<form onSubmit={handleSubmitStudent}>
 								<div style={{ display: "flex", flexDirection: "column" }}>
 									<label htmlFor="exampleInputEmail1" className="form-label">
 										Indirizzo email istituzionale*
@@ -404,9 +430,9 @@ export default function Join() {
 
 					{/* JOIN PARTNER */}
 					<div className="row featurette">
-						<div className="col-md-7 order-md-2">
+						<div className="col">
 							<h3>Sei un'azienda e ti interessa collaborare e supportarci?</h3>
-							<form /*onSubmit={submitHandle1}*/>
+							<form onSubmit={handleSubmitPartner}>
 								<div style={{ display: "flex", flexDirection: "column" }}>
 									<label htmlFor="exampleInputEmail1" className="form-label">
 										Indirizzo email*
@@ -470,7 +496,7 @@ export default function Join() {
 
 					{/* JOIN ADVISE */}
 					<div className="row featurette">
-						<div className="col-md-7 order-md-2">
+						<div className="col">
 							<h3>
 								Hai uno{" "}
 								<select>
@@ -480,7 +506,7 @@ export default function Join() {
 								da consigliarci?
 							</h3>
 
-							<form /*onSubmit={submitHandle1}*/>
+							<form onSubmit={handleSubmitAdvise}>
 								<div style={{ display: "flex", flexDirection: "column" }}>
 									<label htmlFor="exampleInputEmail1" className="form-label">
 										Nome*
