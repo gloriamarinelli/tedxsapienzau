@@ -140,18 +140,17 @@ export default function Location() {
               >
                 offerta formativa
               </a>
-              : <strong>300 corsi</strong>
+              : <strong>300 corsi </strong> 
               di laurea e laurea magistrale (di cui oltre{" "}
-              <strong>60 in inglese</strong>),
-              <strong>200 master</strong>, oltre <strong>90 dottorati</strong>{" "}
+              <strong>60 in inglese</strong>), 
+              <strong> 200 master</strong>, oltre <strong>90 dottorati</strong>{" "}
               di ricerca e più di <strong>80 scuole di specializzazione</strong>
               . La comunità studentesca si compone di più di{" "}
               <strong>30 mila studenti</strong> fuorisede, 10 mila
               internazionali e oltre 2,2 mila studenti all’anno in mobilità
               internazionale. Sono 984 le Università Partner, collocate in 87
               Paesi, con la quale l’Ateneo ha stretto rapporti negli anni.
-              Viceversa, Sapienza offre ai propri studenti
-              <strong>numerose opportunità internazionali</strong>, per esempio
+              Viceversa, Sapienza offre ai propri studenti <strong> numerose opportunità internazionali</strong>, per esempio
               lauree a doppio titolo, borse per tesi all’estero, tirocini in
               diversi paesi europei ed extraeuropei, dottorati internazionali.
             </p>
@@ -174,7 +173,7 @@ export default function Location() {
               </a>{" "}
               scientifica, si parla di una copertura tra le discipline ad ampio
               raggio: l’Ateneo raggiunge
-              <strong>livelli di eccellenza</strong> in molti ambiti, tra cui
+              <strong> livelli di eccellenza</strong> in molti ambiti, tra cui
               l’archeologia, la fisica, l’astrofisica e le scienze umanistiche.
               L’Università ha inoltre accolto durante lo studio o l’insegnamento
               premi Nobel e scienziati di fama internazionale.
@@ -201,14 +200,13 @@ export default function Location() {
               delle Nazioni unite con attività di didattica, di ricerca, di
               terza missione e con policy trasversali. Le iniziative portate
               avanti sono descritte sul portale
-              <strong>Sapienza sostenibile</strong> e nel{" "}
+              <strong> Sapienza sostenibile</strong> e nel{" "}
               <a
                 href="https://www.uniroma1.it/it/pagina/rapporto-di-sostenibilita"
                 style={{ color: "#EB0028" }}
               >
-                Bilancio sociale e di sostenibilità
-              </a>
-              pubblicato ogni anno.
+                Bilancio sociale e di sostenibilità</a> {" "}
+                pubblicato ogni anno.
             </p>
           </div>
 
@@ -259,11 +257,11 @@ export default function Location() {
               }}
             >
               Tra gli spazi fondamentali c’è senz’altro{" "}
-              <strong>l’Aula Magna del Rettorato</strong>
+              <strong>l’Aula Magna del Rettorato </strong>
               collocata nella Città Universitaria, una vera e propria città
               nella città situata nel cuore di Roma. L’Aula Magna ha una
               superficie di
-              <strong>900 metri quadri</strong> e si conclude con una tribuna
+              <strong> 900 metri quadri</strong> e si conclude con una tribuna
               absidata definita da una parete curva con il murale “L’Italia tra
               le Arti e le Scienze” del pittore Mario Sironi. Si tratta di
               un’opera fissata in una dimensione atemporale che rappresenta una
