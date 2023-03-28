@@ -255,27 +255,37 @@ export default function NavbarComponent(props) {
 									</ul>
 								</li>
 
-								<li className="nav-item">
-									<Link
-										className="nav-link text-bg-light"
-										to="/mission&vision"
-										onClick={() => setExpanded(false)}
-									>
-										About Us
-									</Link>
-								</li>
-
-								{/* <li className="nav-item dropdown">
+								
+								<li className="nav-item dropdown">
 									<a
 										className="nav-link dropdown-toggle text-bg-light"
 										data-bs-toggle="dropdown"
-										href="#"
+										href="/location"
 										role="button"
 										aria-expanded="false"
 									>
 										About us
 									</a>
 									<ul className="dropdown-menu">
+									<li>
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/mission&vision"
+												onClick={() => setExpanded(false)}
+											>
+												Mission & Vision
+											</Link>
+										</li>
+									<li>
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/location"
+												onClick={() => setExpanded(false)}
+											>
+												Location
+											</Link>
+										</li>
+										{/*
 										<li>
 											<Link
 												className="dropdown-item text-bg-light"
@@ -285,15 +295,7 @@ export default function NavbarComponent(props) {
 												History
 											</Link>
 										</li>
-										<li>
-											<Link
-												className="dropdown-item text-bg-light"
-												to="/"
-												onClick={() => setExpanded(false)}
-											>
-												Location
-											</Link>
-										</li>
+										
 										<li>
 											<Link
 												className="dropdown-item text-bg-light"
@@ -303,24 +305,16 @@ export default function NavbarComponent(props) {
 												Sustainability
 											</Link>
 										</li>
-										<li>
-											<Link
-												className="dropdown-item text-bg-light"
-												to="/mission&vision"
-												onClick={() => setExpanded(false)}
-											>
-												Mission & Vision
-											</Link>
-										</li>
+										*/}
 									</ul>
-								</li> */}
+								</li> 
 
 								{currentToken && (
 									<li className="nav-item dropdown">
 										<a
 											className="nav-link dropdown-toggle bg-success text-white"
 											data-bs-toggle="dropdown"
-											href="#"
+											href=""
 											role="button"
 											aria-expanded="false"
 										>

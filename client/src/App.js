@@ -16,6 +16,8 @@ import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import BlogPost from "./components/pages/BlogPost";
 import Write from "./components/pages/Write";
 import Newsletter from "./components/pages/Newsletter";
+import Location from "./components/pages/Location";
+
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
@@ -60,6 +62,10 @@ const router = createBrowserRouter([
 			{
 				path: "/mission&vision",
 				element: <MissionandVision />,
+			},
+			{
+				path: "/location",
+				element: <Location />,
 			},
 			{
 				path: "/team2022",

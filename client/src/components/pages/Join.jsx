@@ -98,6 +98,7 @@ export default function Join() {
 					src="/images/logo-black.png"
 					width="50%"
 					style={{ minWidth: "350px" }}
+					alt="TEDxSapienzaU"
 				/>
 				<p
 					style={{
@@ -106,7 +107,7 @@ export default function Join() {
 						textAlign: "center",
 					}}
 				>
-					Grazie per averci contattato. Ci sentiamo presto
+					Grazie per averci contattato
 				</p>
 				<Link
 					to="/"
@@ -362,6 +363,7 @@ export default function Join() {
 							<img
 								src="https://static.vecteezy.com/ti/gratis-vektor/p3/3592505-ein-einzellinien-zeichnung-von-jung-weiblichen-moderatorin-denken-wahrend-der-arbeit-prasentation-im-buro-wahrend-meeting-arbeit-prasentationskonzept-kontinuierliche-linie-zeichnen-grafikdesign-illustration-vektor.jpg"
 								height="350px"
+								alt="Join Advise"
 							/>
 						</div>
 					</div>
