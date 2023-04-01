@@ -1,7 +1,7 @@
 {
 	"COLORS": {
 		"ROSSO_TED": "#EB0028",
-		"ROSSO_TED_2023": "RGB: (235, 0, 40)",
+		"ROSSO_TED_2023": "RGB(235, 0, 40)",
 		"ROSSO_TED_2022": "#E62B1E",
 		"ROSSO_EDIZIONE_2022": "#ff2b06",
 		"ROSSO_SAPIENZA": "#822433",
@@ -10,7 +10,7 @@
 		"BLU_POSTER": "#2e3777",
 		"BLU_SCURO_POSTER": "#242958",
 		"GIALLO_AWARDS": "#ffd800",
-		"CELESTE":"#5272b5"
+		"CELESTE": "#5272b5"
 	},
 	"UTILS": {
 		"SOCIAL_NAV_HEIGHT": "40px",

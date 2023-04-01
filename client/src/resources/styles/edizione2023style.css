@@ -2,12 +2,18 @@
  WHERE IS THE EVENT
 */
 
+.where-is-the-event-awards {
+	background-color: #521831;
+	font-family: GothamBook;
+}
+
 .where-is-the-event23 {
 	background-color: #242958;
 	font-family: GothamBook;
 }
 
-.where-is-the-event23 > div:nth-child(1) {
+.where-is-the-event23 > div:nth-child(1),
+.where-is-the-event-awards > div:nth-child(1) {
 	display: flex;
 	padding: 50px;
 	color: white;
@@ -16,7 +22,8 @@
 	flex-direction: column;
 }
 
-.where-is-the-event23 > div:nth-child(2) {
+.where-is-the-event23 > div:nth-child(2),
+.where-is-the-event-awards > div:nth-child(2) {
 	display: grid;
 	place-items: center;
 }
@@ -73,6 +80,13 @@
 .header-ed2023 {
 	background-image: url("../../components/images/Edizione2023.webp");
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header-awards {
+	background-image: url("../../components/images/awardsHeader.webp");
+	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }

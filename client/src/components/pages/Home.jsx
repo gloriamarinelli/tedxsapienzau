@@ -14,7 +14,7 @@ export default function Home() {
 	const getCallToAction = () => {
 		return (
 			<Link
-				to="edizione2023"
+				to="awards"
 				className="btn5-2"
 				style={{
 					textTransform: "uppercase",
@@ -29,9 +29,13 @@ export default function Home() {
 					bottom: "80px",
 				}}
 			>
-				Scopri di più
+				Scopri gli awards
 			</Link>
 		);
+	};
+
+	const getSectionGeneralInfo = () => {
+		return <section></section>;
 	};
 
 	return (
@@ -111,84 +115,86 @@ export default function Home() {
 					{getCallToAction()}
 				</div>
 			</div>
+		</>
+	);
+}
 
-			<section
-				style={{
-					backgroundColor: "#521831",
-				}}
-			>
-				<div className="container px-5">
-					<div className="row gx-5 align-items-center">
-						<div className="col-lg-6">
-							<div className="p-5 d-flex justify-content-center align-items-center">
-								<LazyLoadImage
-									src={Image}
-									alt="Awards"
-									height={
-										windowSize > global.UTILS.MOBILE_WIDTH ? "330px" : "250px"
-									}
-								/>
-							</div>
+function getBannerSubscribeAwards(windowSize) {
+	return (
+		<section
+			style={{
+				backgroundColor: "#521831",
+			}}
+		>
+			<div className="container px-5">
+				<div className="row gx-5 align-items-center">
+					<div className="col-lg-6">
+						<div className="p-5 d-flex justify-content-center align-items-center">
+							<LazyLoadImage
+								src={Image}
+								alt="Awards"
+								height={
+									windowSize > global.UTILS.MOBILE_WIDTH ? "330px" : "250px"
+								}
+							/>
 						</div>
-						<div className="col-lg-6">
-							<div className="p-5">
-								<p className="display-4">
-									<a
-										className="btn5"
-										style={{
-											display: "flex",
-											alignItems: "center",
-											fontSize:
-												windowSize > global.UTILS.TABLET_WIDTH
-													? "25px"
-													: "16px",
-											textDecoration: "none",
-											fontFamily: "GothamBold",
-										}}
-										href="https://docs.google.com/forms/d/e/1FAIpQLScPVPoWlQTJ5sB0chtpiZTlcFMUBaTb4DDG6mPwXyPkx9lx_Q/viewform"
-										target="_blank"
-										rel="noreferrer"
-									>
-										Invia la tua candidatura
-									</a>
-								</p>
-
+					</div>
+					<div className="col-lg-6">
+						<div className="p-5">
+							<p className="display-4">
 								<a
-									className="btn5-1"
+									className="btn5"
 									style={{
 										display: "flex",
+										alignItems: "center",
 										fontSize:
-											windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
+											windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "16px",
 										textDecoration: "none",
 										fontFamily: "GothamBold",
 									}}
-									href="/images/IT_regolamento Awards.pdf"
+									href="https://docs.google.com/forms/d/e/1FAIpQLScPVPoWlQTJ5sB0chtpiZTlcFMUBaTb4DDG6mPwXyPkx9lx_Q/viewform"
 									target="_blank"
 									rel="noreferrer"
 								>
-									Regolamento 🇮🇹
+									Invia la tua candidatura
 								</a>
+							</p>
 
-								<a
-									className="btn5-1"
-									style={{
-										display: "flex",
-										fontSize:
-											windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
-										textDecoration: "none",
-										fontFamily: "GothamBold",
-									}}
-									href="/images/EN_Regulations_BackToZeroAwards.pdf"
-									target="_blank"
-									rel="noreferrer"
-								>
-									Regulation 🇬🇧
-								</a>
-							</div>
+							<a
+								className="btn5-1"
+								style={{
+									display: "flex",
+									fontSize:
+										windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
+									textDecoration: "none",
+									fontFamily: "GothamBold",
+								}}
+								href="/images/IT_regolamento Awards.pdf"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Regolamento 🇮🇹
+							</a>
+
+							<a
+								className="btn5-1"
+								style={{
+									display: "flex",
+									fontSize:
+										windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
+									textDecoration: "none",
+									fontFamily: "GothamBold",
+								}}
+								href="/images/EN_Regulations_BackToZeroAwards.pdf"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Regulation 🇬🇧
+							</a>
 						</div>
 					</div>
 				</div>
-			</section>
-		</>
+			</div>
+		</section>
 	);
 }

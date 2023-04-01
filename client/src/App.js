@@ -18,10 +18,10 @@ import Write from "./components/pages/Write";
 import Newsletter from "./components/pages/Newsletter";
 import Location from "./components/pages/Location";
 
-
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
+import Awards from "./components/pages/Awards";
 
 const router = createBrowserRouter([
 	{
@@ -102,6 +102,10 @@ const router = createBrowserRouter([
 			{
 				path: "/newsletter",
 				element: <Newsletter />,
+			},
+			{
+				path: "/awards",
+				element: <Awards />,
 			},
 		],
 	},
