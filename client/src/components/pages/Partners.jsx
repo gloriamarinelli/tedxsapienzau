@@ -54,7 +54,6 @@ export default function Partners() {
             style={{
               fontSize: "25px",
               fontWeight: "bold",
-              textAlign: "left",
               color: "black",
               display: "flex",
             }}
@@ -90,7 +89,7 @@ export default function Partners() {
               2022
             </div>
           </h3>
-		  <div className="">
+
           <Link to="/join">
             <button
               type="button"
@@ -104,8 +103,8 @@ export default function Partners() {
               Join us
             </button>
           </Link>
-		  </div>
         </section>
+
         {activeYear === 2023 ? getSponsors2023() : getSponsors2022()}
       </>
     );
