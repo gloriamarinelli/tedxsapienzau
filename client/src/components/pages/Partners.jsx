@@ -201,19 +201,16 @@ function getSponsors2022() {
 					<PartnerCard
 						title="Commissione Europea"
 						imgSrc="https://italy.representation.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2021-04/logo_ce-it-rvb-hr.png?itok=n0KlJmYq"
-						linkSite="https://commission.europa.eu/index_it"
 						sponsorType={"institutional"}
 					/>
 					<PartnerCard
 						title="Regione Lazio"
 						imgSrc="https://www.melogranoroma.org/wp-content/uploads/2019/03/logo-REGIONE-LAZIO.png"
-						linkSite="https://www.regione.lazio.it/"
 						sponsorType={"institutional"}
 					/>
 					<PartnerCard
 						title="Comune di Roma"
 						imgSrc="https://www.astronomitaly.com/wp-content/uploads/2015/10/Roma-capitale.jpg"
-						linkSite="https://www.comune.roma.it/web/it/home.page"
 						sponsorType={"institutional"}
 					/>
 				</div>
@@ -231,19 +228,16 @@ function getSponsors2022() {
 					<PartnerCard
 						title="UniCredit"
 						imgSrc="https://upload.wikimedia.org/wikipedia/it/thumb/c/cc/UniCredit_logo.svg/1200px-UniCredit_logo.svg.png"
-						linkSite="https://www.unicredit.it/it/privati.html"
 						sponsorType={"main"}
 					/>
 					<PartnerCard
 						title="Eni"
 						imgSrc="https://makerfairerome.eu/wp-content/uploads/2020/07/Logo_tricolore_eni.jpg"
-						linkSite="https://www.eni.com/it-IT/home.html"
 						sponsorType={"main"}
 					/>
 					<PartnerCard
 						title="Fondazione Ania"
 						imgSrc="https://www.fondazioneania.it/images/loghi/logo.png"
-						linkSite="https://www.fondazioneania.it/home"
 						sponsorType={"main"}
 					/>
 				</div>
@@ -261,25 +255,21 @@ function getSponsors2022() {
 					<PartnerCard
 						title="Pioda Imaging"
 						imgSrc="https://www.piodaimaging.it/wp-content/uploads/2021/12/favicon.png"
-						linkSite="https://www.piodaimaging.it/"
 						sponsorType={"supporting"}
 					/>
 					<PartnerCard
 						title="Ferrovie dello Stato"
 						imgSrc="https://www.smau.it/Imported/PartnerProfile/image-thumb__5951__partner-show-image/Ferrovie_dello_Stato_Italiane_32880.jpeg"
-						linkSite="https://www.fsitaliane.it/"
 						sponsorType={"supporting"}
 					/>
 					<PartnerCard
 						title="Unobravo"
 						imgSrc="https://assets-global.website-files.com/6340630bc206e3e9f1770198/6340630bc206e33cf777029f_Logo-unobravo.png"
-						linkSite="https://www.unobravo.com/"
 						sponsorType={"supporting"}
 					/>
 					<PartnerCard
 						title="Autocentri Balduina"
 						imgSrc="https://www.autocentribalduina.com/static/img/pict3512.jpg"
-						linkSite="https://www.autocentribalduina.com/"
 						sponsorType={"supporting"}
 					/>
 				</div>
@@ -297,19 +287,16 @@ function getSponsors2022() {
 					<PartnerCard
 						title="CDalloro"
 						imgSrc="https://cdn.shopify.com/s/files/1/0084/4696/7889/products/logo_scritta_nera_scontornato_0a7bd0ae-a45f-4a0c-8f70-a29ecd08284a_620x.png?v=1654963814"
-						linkSite="https://www.cdalloro.com/"
 						sponsorType={"smart"}
 					/>
 					<PartnerCard
 						title="Cose Belle Cose Rare"
 						imgSrc="https://cosebellecoserare.com/wp-content/uploads/2020/12/Logo-Home-Colorato.png"
-						linkSite="https://cosebellecoserare.com/it/home-v4-italiano/"
 						sponsorType={"smart"}
 					/>
 					<PartnerCard
 						title="Essenziale Seta"
 						imgSrc="https://www.essenzialeseta.com/wp-content/uploads/2021/04/cropped-Logo-bordo-150px-1.png"
-						linkSite="https://www.essenzialeseta.com/"
 						sponsorType={"smart"}
 					/>
 				</div>
@@ -327,31 +314,26 @@ function getSponsors2022() {
 					<PartnerCard
 						title="Queesy"
 						imgSrc="https://cdn.shopify.com/s/files/1/0267/7194/7575/files/queesy-logo-header_1350x.png?v=1618655220"
-						linkSite="https://queesy.com/"
 						sponsorType={"friendly"}
 					/>
 					<PartnerCard
 						title="Red Bull"
 						imgSrc="https://loghi-famosi.com/wp-content/uploads/2020/11/Red-Bull-Logo.png"
-						linkSite="https://www.redbull.com/it-it/"
 						sponsorType={"friendly"}
 					/>
 					<PartnerCard
 						title="Morettino"
 						imgSrc="https://i0.wp.com/newsfood.com/wp-content/uploads/2009/07/17/20090717154415-bf0acfdc.jpg?fit=800%2C600&ssl=1"
-						linkSite="https://morettino.com/it_it/caffe?gclid=EAIaIQobChMIgOzuj_rp_AIVw_Z3Ch02BAjyEAAYASAAEgKhNvD_BwE"
 						sponsorType={"friendly"}
 					/>
 					<PartnerCard
 						title="Steccolecco"
 						imgSrc="https://steccolecco.com/wp-content/uploads/2019/06/logo-233x300.png"
-						linkSite="https://steccolecco.com/"
 						sponsorType={"friendly"}
 					/>
 					<PartnerCard
 						title="Gorillas"
 						imgSrc="https://techprincess.it/wp-content/uploads/2022/02/Save-the-Waste-2.jpg"
-						linkSite="https://gorillas.io/it"
 						sponsorType={"friendly"}
 					/>
 					<PartnerCard
@@ -363,7 +345,6 @@ function getSponsors2022() {
 					<PartnerCard
 						title="Green Hole"
 						imgSrc="https://uqrmecdn.s3.us-east-2.amazonaws.com/u/314241/701532-1237158219cc6b3f47dd0f4c6d417df04ef0cd4.jpg"
-						linkSite="https://www.greenholeconcept.com/"
 						sponsorType={"friendly"}
 					/>
 				</div>

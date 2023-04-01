@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartnerCard({ title, imgSrc, linkSite, sponsorType }) {
+export default function PartnerCard({ title, imgSrc, sponsorType }) {
   return (
     <div className="col-lg-4 col-sm-6 mb-5 mt-5 d-flex justify-content-center">
       <div
@@ -13,12 +13,7 @@ export default function PartnerCard({ title, imgSrc, linkSite, sponsorType }) {
           flexDirection: "column",
         }}
       >
-        <a
-          className="portfolio-link"
-          href={linkSite}
-          target="_blank"
-          rel="noreferrer"
-        >
+        
           <img
             className="img-fluid"
             src={imgSrc}
@@ -30,7 +25,7 @@ export default function PartnerCard({ title, imgSrc, linkSite, sponsorType }) {
                   : "100px",
             }}
           />
-        </a>
+        
       </div>
     </div>
   );
