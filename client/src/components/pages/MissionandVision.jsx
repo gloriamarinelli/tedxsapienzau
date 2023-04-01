@@ -186,7 +186,7 @@ export default function MissionandVision() {
 										fontFamily: "GothamBold",
 									}}
 								>
-									3k+
+									5k+
 								</h1>
 								<h5
 									style={{
@@ -395,7 +395,7 @@ export default function MissionandVision() {
 										fontFamily: "GothamBold",
 									}}
 								>
-									3k+
+									5k+
 								</h1>
 								<h5
 									style={{
