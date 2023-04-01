@@ -87,7 +87,7 @@ export default function Team2022() {
                 fontSize: "50px",
               }}
             >
-              Team esecutivo
+              Board
             </h1>
             {res}
           </>
