@@ -138,9 +138,9 @@ export default function Edizione2023() {
           di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che
           rallentano la crescita della nostra società, peggiorando la qualità
           della nostra vita. <strong>Riconsiderare noi stessi </strong> ed il
-          nostro modo di confrontarci, imparare ed interagire con la società
-          contemporanea, le <strong>arti</strong> e le <strong>scienze</strong>{" "}
-          è fondamentale per costruire un mondo dove l'essere umano possa '
+          nostro modo di confrontarci. Imparare ed interagire con la società
+          contemporanea, con le <strong>arti</strong> e le <strong>scienze</strong>.{" "}
+          È fondamentale per costruire un mondo dove l'essere umano possa '
           <strong>rinascere</strong>', prosperando ed esprimendosi al meglio in
           ogni disciplina. Riscoprire le basi per <strong>rinascere</strong>,
           diventare persone migliori in un luogo migliore.

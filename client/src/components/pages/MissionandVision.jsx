@@ -63,12 +63,12 @@ export default function MissionandVision() {
 								}}
 							>
 								TED è un'organizzazione no profit dedicata alla diffusione di
-								idee, di solito sotto forma di discorsi brevi e potenti (18
+								idee sotto forma di discorsi brevi e potenti (18
 								minuti o meno). TED è nato nel 1984 come una conferenza in cui
 								tecnologia, intrattenimento e design convergevano e oggi copre
 								quasi tutti gli argomenti, dalla scienza al business alle
-								questioni globali, in più di 100 lingue. L'obiettivo quello di
-								diffondere idee di valore e sostenere le idee che cambiano il
+								questioni globali, in più di 100 lingue. L'obiettivo è quello di
+								diffondere e sostenere idee di valore per cambiare il
 								mondo.
 							</p>
 						</div>
@@ -90,9 +90,9 @@ export default function MissionandVision() {
 										fontFamily: "GothamBook",
 									}}
 								>
-									Per poter ampliare la diffusione delle Idee di Valore, TED ha
+									Per poter ampliare la diffusione delle idee di valore, TED ha
 									creato un programma apposito, il TEDx, ossia degli eventi
-									locali ed organizzati in modo indipendente, ma con lo spirito
+									locali organizzati in modo indipendente ma sempre con lo spirito
 									di una vera e propria conferenza TED, che infatti concede la
 									propria licenza.
 								</p>
@@ -116,9 +116,9 @@ export default function MissionandVision() {
 									di Roma “La Sapienza”. Grazie a questo l'intera comunità
 									studentesca e accademica gode di una programmazione sempre
 									nuova e internazionale. L'evento è stato fortemente voluto da
-									alcuni studenti dell'Ateneo che, grazie al supporto della
+									alcuni studenti dell'Ateneo e, grazie al supporto della
 									Magnifica Rettrice Antonella Polimeni, il Comitato
-									TEDxSapienzaU composto dagli studenti organizzatori, e
+									TEDxSapienzaU composto dagli studenti organizzatori e
 									dall'Area Supporto alla Ricerca e Trasferimento Tecnologico,
 									ha ottenuto dalla TED Foundation la licenza ufficiale TEDx.
 								</p>
@@ -272,12 +272,12 @@ export default function MissionandVision() {
 								}}
 							>
 								TED è un'organizzazione no profit dedicata alla diffusione di
-								idee, di solito sotto forma di discorsi brevi e potenti (18
+								idee sotto forma di discorsi brevi e potenti (18
 								minuti o meno). TED è nato nel 1984 come una conferenza in cui
 								tecnologia, intrattenimento e design convergevano e oggi copre
 								quasi tutti gli argomenti, dalla scienza al business alle
-								questioni globali, in più di 100 lingue. L'obiettivo quello di
-								diffondere idee di valore e sostenere le idee che cambiano il
+								questioni globali, in più di 100 lingue. L'obiettivo è quello di
+								diffondere e sostenere idee di valore per cambiare il
 								mondo.
 							</p>
 						</div>
@@ -299,9 +299,9 @@ export default function MissionandVision() {
 										fontFamily: "GothamBook",
 									}}
 								>
-									Per poter ampliare la diffusione delle Idee di Valore, TED ha
+									Per poter ampliare la diffusione delle idee di valore, TED ha
 									creato un programma apposito, il TEDx, ossia degli eventi
-									locali ed organizzati in modo indipendente, ma con lo spirito
+									locali organizzati in modo indipendente ma sempre con lo spirito
 									di una vera e propria conferenza TED, che infatti concede la
 									propria licenza.
 								</p>
@@ -321,16 +321,15 @@ export default function MissionandVision() {
 										fontFamily: "GothamBook",
 									}}
 								>
-									Il TEDxSapienzaU è il primo TED Universitario che si terrà
-									nell'Università di Roma “La Sapienza”. Grazie a questo
-									l'intera comunità studentesca e accademica potrà godere di una
-									programmazione nuova e di respiro internazionale. L'evento è
-									stato fortemente voluto da alcuni studenti dell'Ateneo, che
-									grazie al supporto della Magnifica Rettrice Antonella
-									Polimeni, il Comitato TEDxSapienzaU, composto dagli studenti
-									organizzatori, e dall'Area Supporto alla Ricerca e
-									Trasferimento Tecnologico, ha ottenuto dalla TED Foundation la
-									licenza ufficiale TEDx.
+									Il TEDxSapienzaU è il primo TED Universitario dell'Università
+									di Roma “La Sapienza”. Grazie a questo l'intera comunità
+									studentesca e accademica gode di una programmazione sempre
+									nuova e internazionale. L'evento è stato fortemente voluto da
+									alcuni studenti dell'Ateneo e, grazie al supporto della
+									Magnifica Rettrice Antonella Polimeni, il Comitato
+									TEDxSapienzaU composto dagli studenti organizzatori e
+									dall'Area Supporto alla Ricerca e Trasferimento Tecnologico,
+									ha ottenuto dalla TED Foundation la licenza ufficiale TEDx.
 								</p>
 							</div>
 							<div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">

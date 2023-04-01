@@ -151,7 +151,7 @@ export default function Join() {
 							fontFamily: "GothamBold",
 						}}
 					>
-						Entra a far parte anche tu del team TEDxSapienzaU!
+						Entra anche tu a far parte del team TEDxSapienzaU!
 					</h1>
 				</div>
 
@@ -400,7 +400,7 @@ export default function Join() {
 							textAlign: "center",
 						}}
 					>
-						Entra a far parte anche tu del team TEDxSapienzaU!
+						Entra anche tu a far parte del team TEDxSapienzaU!
 					</h1>
 				</div>
 
