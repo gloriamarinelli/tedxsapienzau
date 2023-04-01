@@ -4,7 +4,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../../index.css";
 import "../../resources/styles/edizione2022style.css";
 
-import pecoraImage from "../images/pecora.png";
 import TedxLogo from "../images/TEDlogovecchio.png";
 
 import SpeakerCard from "../components/SpeakerCard";
@@ -156,8 +155,7 @@ export default function Edizione2022() {
 								nell'educazione del futuro.
 							</p>
 						</div>
-						<div className="col-lg-3 theme-card">
-							<LazyLoadImage src={pecoraImage} className="theme-card-image" />
+						<div className="col-lg-3 theme-card">							
 							<p
 								style={{
 									fontSize: "250px",
