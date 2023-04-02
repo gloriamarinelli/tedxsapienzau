@@ -40,9 +40,8 @@ export default function Awards() {
               size="2x"
             />
             <p className="col-8">18 Aprile 2023</p>
-          </div>
-          <div className="col-md-6">
-            <div className="row">
+          
+            <div className="row mt-3">
               <a
                 href="https://www.eventbrite.it/e/biglietti-awards-by-tedxsapienzau-514452590547"
                 type="button"
