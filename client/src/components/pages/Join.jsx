@@ -157,7 +157,7 @@ export default function Join() {
 
 				{/* JOIN STUDENT */}
 				<div className="container marketing">
-					<div className="row featurette">
+					{/* <div className="row featurette">
 						<div className="col-md-7 order-md-2">
 							<h3>Sei uno studente interessato al progetto?</h3>
 							<form onSubmit={handleSubmitStudent}>
@@ -224,7 +224,7 @@ export default function Join() {
 								alt="JoinStudent"
 							/>
 						</div>
-					</div>
+					</div> */}
 
 					<hr className="featurette-divider"></hr>
 
@@ -302,7 +302,7 @@ export default function Join() {
 					<hr className="featurette-divider"></hr>
 
 					{/* JOIN ADVISE */}
-					<div className="row featurette">
+					{/* <div className="row featurette">
 						<div className="col-md-7 order-md-2">
 							<h3>
 								Hai uno{" "}
@@ -366,7 +366,7 @@ export default function Join() {
 								alt="Join Advise"
 							/>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</>
 		);
@@ -406,7 +406,7 @@ export default function Join() {
 
 				{/* JOIN STUDENT */}
 				<div className="container marketing">
-					<div className="row featurette">
+					{/* <div className="row featurette">
 						<div className="col">
 							<h3>Sei uno studente interessato al progetto?</h3>
 							<form onSubmit={handleSubmitStudent}>
@@ -467,7 +467,7 @@ export default function Join() {
 								</button>
 							</form>
 						</div>
-					</div>
+					</div> */}
 
 					<hr className="featurette-divider"></hr>
 
@@ -538,7 +538,7 @@ export default function Join() {
 					<hr className="featurette-divider"></hr>
 
 					{/* JOIN ADVISE */}
-					<div className="row featurette">
+					{/* <div className="row featurette">
 						<div className="col">
 							<h3>
 								Hai uno{" "}
@@ -595,7 +595,7 @@ export default function Join() {
 								</button>
 							</form>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</>
 		);
