@@ -52,7 +52,7 @@ export default function Awards() {
                   fontFamily: "GothamBold",
                 }}
               >
-                Compra i biglietti
+                Ottieni i biglietti
               </a>
             </div>
           </div>
