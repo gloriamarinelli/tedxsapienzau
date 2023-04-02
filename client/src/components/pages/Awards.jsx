@@ -41,19 +41,21 @@ export default function Awards() {
             />
             <p className="col-8">18 Aprile 2023</p>
           </div>
-          <div className="row">
-            <a
-              href="https://www.eventbrite.it/e/biglietti-awards-by-tedxsapienzau-514452590547"
-              type="button"
-              className="btn5-1 col-6"
-              style={{
-                fontWeight: "bold",
-                marginLeft: "180px",
-                fontFamily: "GothamBold",
-              }}
-            >
-              Compra i biglietti
-            </a>
+          <div className="col-md-6">
+            <div className="row">
+              <a
+                href="https://www.eventbrite.it/e/biglietti-awards-by-tedxsapienzau-514452590547"
+                type="button"
+                className="btn5-1"
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "20px",
+                  fontFamily: "GothamBold",
+                }}
+              >
+                Compra i biglietti
+              </a>
+            </div>
           </div>
         </div>
         <div className="col-md-6">
