@@ -7,8 +7,7 @@ import ErrorPage from "./components/pages/ErrorPage";
 import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
 import Join from "./components/pages/Join";
-import Team2023 from "./components/pages/Team2023";
-import Team2022 from "./components/pages/Team2022";
+import Team from "./components/pages/Team";
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
 import Statuto from "./components/pages/Statuto";
@@ -66,14 +65,10 @@ const router = createBrowserRouter([
 			{
 				path: "/location",
 				element: <Location />,
-			},
+			},			
 			{
-				path: "/team2022",
-				element: <Team2022 />,
-			},
-			{
-				path: "/team2023",
-				element: <Team2023 />,
+				path: "/team",
+				element: <Team />,
 			},
 			{
 				path: "/edizione2022",
