@@ -84,13 +84,6 @@
 	background-size: cover;
 }
 
-.header-awards {
-	background-image: url("../../components/images/awardsHeader.webp");
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 /** SPEAKER CARD **/
 
 .speaker-card {

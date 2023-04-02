@@ -113,51 +113,12 @@ code {
 	background-color: #ffffff;
 }
 
-/*BUTTON HOME AWARDS*/
-.btn5 {
-	display: inline-block;
-	padding: 0.8em 1.6em;
-	margin: 0 0.3em 0.3em 0;
-	border: none;
-	border-radius: 0.5em;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: "arial";
-	text-transform: uppercase;
-	font-weight: 400;
-	color: black;
-	background-color: #ffd800;
-	box-shadow: inset 0 -0.6em 0 -0.3em rgba(0, 0, 0, 0.2);
-	text-align: center;
-	position: relative;
-	cursor: pointer;
-}
-.btn5:hover {
-	background: #702355;
-	color: #d9d9d9;
-}
-
-.btn5-1 {
-	display: inline-block;
-	padding: 0.7em 1.4em;
-	margin: 0 0.3em 0.3em 0;
-	border: none;
-	border-radius: 0.5em;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: "arial";
-	text-transform: uppercase;
-	font-weight: 400;
-	color: black;
-	background-color: white;
-	box-shadow: inset 0 -0.6em 0 -0.3em rgba(0, 0, 0, 0.2);
-	text-align: center;
-	position: relative;
-	cursor: pointer;
-}
-.btn5-1:hover {
-	background: whitesmoke;
-	color: #ffd800;
+/*BUTTON AWARDS*/
+.header-awards {
+	background-image: url("./components/images/awardsHeader.webp");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .btn5-2 {
@@ -181,6 +142,29 @@ code {
 .btn5-2:hover {
 	background: #a42332bb;
 	color: #d9d9d9 !important;
+}
+
+.btn5-1 {
+	display: inline-block;
+	padding: 0.7em 1.4em;
+	margin: 0 0.3em 0.3em 0;
+	border: none;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "arial";
+	text-transform: uppercase;
+	font-weight: 400;
+	color: black;
+	background-color: #ffd800;
+	box-shadow: inset 0 -0.6em 0 -0.3em rgba(0, 0, 0, 0.2);
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+.btn5-1:hover {
+	background: whitesmoke;
+	color: black;
 }
 
 .btn-awards {
