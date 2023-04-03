@@ -28,7 +28,6 @@ export default function Team2022() {
 	];
 
 	useEffect(() => {
-		console.log("ACTIVE YEAR = ", activeYear);
 		setBoard([]);
 		setVolunteers([]);
 		setTimeout(() => {
@@ -36,7 +35,6 @@ export default function Team2022() {
 				.get("http://localhost:5500/" + `team/${activeYear}`)
 				.then((res, err) => {
 					const data = res.data;
-					console.log(data);
 					let newBoard = [];
 					let newVolunteers = [];
 					data.forEach((item) => {
@@ -716,6 +714,52 @@ export default function Team2022() {
 						TEAM
 					</h1>
 				</div>
+				<section
+					className="mt-5 mb-5 d-flex justify-content-between"
+					style={{
+						width: "95vw",
+						margin: "auto",
+						fontFamily: "GothamBold",
+					}}
+				>
+					<h3
+						style={{
+							fontSize: "25px",
+							fontWeight: "bold",
+							color: "black",
+							display: "flex",
+						}}
+					>
+						Chi ha partecipato:
+						<div
+							ref={button2023}
+							className="year-button underlined"
+							type="button"
+							style={{ marginLeft: "30px" }}
+							onClick={() => {
+								button2022.current.classList.remove("underlined");
+								button2023.current.classList.add("underlined");
+								setActiveYear(23);
+							}}
+						>
+							2023
+						</div>
+						<div
+							ref={button2022}
+							className="year-button"
+							type="button"
+							style={{ marginLeft: "30px" }}
+							onClick={() => {
+								button2023.current.classList.remove("underlined");
+								button2022.current.classList.add("underlined");
+								setActiveYear(22);
+							}}
+						>
+							2022
+						</div>
+					</h3>
+				</section>
+				{chooseYear()}
 			</>
 		);
 	}
