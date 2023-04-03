@@ -32,7 +32,7 @@ export default function Team2022() {
 		setVolunteers([]);
 		setTimeout(() => {
 			axios
-				.get("http://localhost:5500/" + `team/${activeYear}`)
+				.get(global.CONNECTION.ENDPOINT + `team/${activeYear}`)
 				.then((res, err) => {
 					const data = res.data;
 					let newBoard = [];
