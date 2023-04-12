@@ -8,7 +8,7 @@ import "../../resources/styles/partnerstyle.css";
 import "../../index.css";
 
 export default function Partners() {
-  const [activeYear, setActiveYear] = useState(23);
+  const [activeYear, setActiveYear] = useState(22);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
