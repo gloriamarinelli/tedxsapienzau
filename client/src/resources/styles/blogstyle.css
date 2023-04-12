@@ -1,14 +1,14 @@
 body {
-  background-color: #eee;
-  margin-top: 20px;
-  --rosso-ted: #eb0028;
+	background-color: #eee;
+	margin-top: 20px;
+	--rosso-ted: #eb0028;
 }
 
 .header-blog {
-  background-image: url("../../components/images/blog2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-image: url("../../components/images/blog2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /** 
@@ -16,35 +16,35 @@ body {
 **/
 
 .main-container {
-  width: 80%;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .post-container {
-  width: 700px;
-  margin: auto;
+	width: 700px;
+	margin: auto;
 }
 
 .post-container > h1 {
-  color: var(--rosso-ted);
+	color: var(--rosso-ted);
 }
 
 .post-container > p {
-  font-family: GothamBook;
-  font-size: 18px;
+	font-family: GothamBook;
+	font-size: 18px;
 }
 
 .post-image {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .post-social-container {
-  display: flex;
-  gap: 50px;
+	display: flex;
+	gap: 50px;
 }
 
 /**
@@ -52,164 +52,181 @@ body {
 **/
 
 .main-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
 .content-container {
-  flex: 1 1 500px;
+	flex: 1 1 500px;
 }
 
 .menu-container {
-  flex: 1 1 100px;
+	flex: 1 1 100px;
 }
 
 .menu-container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .menu-container > label {
-  font-size: 30px;
+	font-size: 30px;
 }
 
 .page-item .page-link {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 
 .active .page-link {
-  background: #eb0028 !important;
-  color: "black" !important;
-  border-color: #eb0028 !important;
+	background: #eb0028 !important;
+	color: "black" !important;
+	border-color: #eb0028 !important;
 }
 
 /*BLOG PAGE STYLE*/
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  background: #f1f1f1;
-  margin: 2rem;
+	background: #f1f1f1;
+	margin: 2rem;
 }
 
 .blog-card {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.6%;
-  background: #fff;
-  line-height: 1.4;
-  font-family: "GothamBold";
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 0;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
+	box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1.6%;
+	background: #fff;
+	line-height: 1.4;
+	font-family: "GothamBold";
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 0;
+	width: 95vw;
 }
 
 .blog-card:hover .photo {
-  background-size: cover;
-  background-position: "center";
+	background-size: cover;
+	background-position: "center";
 }
 .blog-card .meta {
-  position: relative;
-  z-index: 0;
-  height: 200px;
+	position: relative;
+	z-index: 0;
+	height: 200px;
 }
 
 .blog-card .details,
 .blog-card .details ul {
-  margin: auto;
-  padding: 0;
-  list-style: none;
+	margin: auto;
+	padding: 0;
+	list-style: none;
 }
 .blog-card .details {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -100%;
-  margin: auto;
-  transition: left 0.2s;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 10px;
-  width: 100%;
-  font-size: 0.9rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	margin: auto;
+	transition: left 0.2s;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 10px;
+	width: 100%;
+	font-size: 0.9rem;
 }
 .blog-card .details a {
-  -webkit-text-decoration: dotted underline;
-  text-decoration: dotted underline;
+	-webkit-text-decoration: dotted underline;
+	text-decoration: dotted underline;
 }
 .blog-card .details ul li {
-  display: inline-block;
+	display: inline-block;
 }
 
 .blog-card .details .tags li {
-  margin-right: 2px;
+	margin-right: 2px;
 }
 .blog-card .details .tags li:first-child {
-  margin-left: -4px;
+	margin-left: -4px;
 }
 .blog-card .description {
-  padding: 1rem;
-  background: #fff;
-  position: relative;
-  z-index: 1;
+	padding: 1rem;
+	background: #fff;
+	position: relative;
+	z-index: 1;
 }
 
 .blog-card p {
-  position: relative;
-  margin: 1rem 0 0;
+	position: relative;
+	margin: 1rem 0 0;
 }
 .blog-card p:first-of-type {
-  margin-top: 1.25rem;
+	margin-top: 1.25rem;
 }
 .blog-card p:first-of-type:before {
-  content: "";
-  position: absolute;
-  height: 5px;
-  background: #eb0028;
-  width: 35px;
-  top: -0.75rem;
-  border-radius: 3px;
+	content: "";
+	position: absolute;
+	height: 5px;
+	background: #eb0028;
+	width: 35px;
+	top: -0.75rem;
+	border-radius: 3px;
 }
 .blog-card:hover .details {
-  left: 0%;
+	left: 0%;
 }
 @media (min-width: 640px) {
-  .blog-card {
-    flex-direction: row;
-    max-width: 700px;
-  }
-  .blog-card .meta {
-    flex-basis: 40%;
-    height: auto;
-  }
-  .blog-card .description {
-    flex-basis: 60%;
-  }
-  .blog-card .description:before {
-    transform: skewX(-3deg);
-    content: "";
-    background: #fff;
-    width: 30px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-  .blog-card.alt {
-    flex-direction: row-reverse;
-  }
-  .blog-card.alt .description:before {
-    left: inherit;
-    right: -10px;
-    transform: skew(3deg);
-  }
-  .blog-card.alt .details {
-    padding-left: 25px;
-  }
+	.blog-card {
+		flex-direction: row;
+		max-width: 700px;
+	}
+	.blog-card .meta {
+		flex-basis: 40%;
+		height: auto;
+	}
+	.blog-card .description {
+		flex-basis: 60%;
+	}
+	.blog-card .description:before {
+		transform: skewX(-3deg);
+		content: "";
+		background: #fff;
+		width: 30px;
+		position: absolute;
+		left: -10px;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+	.blog-card.alt {
+		flex-direction: row-reverse;
+	}
+	.blog-card.alt .description:before {
+		left: inherit;
+		right: -10px;
+		transform: skew(3deg);
+	}
+	.blog-card.alt .details {
+		padding-left: 25px;
+	}
+}
+
+/** SHIMMER */
+
+.shimmer {
+	color: grey;
+	-webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300%
+		100%;
+	background-repeat: no-repeat;
+	animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+	100% {
+		-webkit-mask-position: left;
+	}
 }

@@ -27,7 +27,6 @@ export default function Blog() {
 			.then((res) => {
 				setBlogSize(res.data[0].posts);
 				getCurrentPagePosts();
-				setIsLoading(false);
 			})
 			.catch((err) => console.error(err));
 	}, []);
@@ -152,7 +151,7 @@ export default function Blog() {
 					<div class="blog-card">
 						<div class="meta">
 							<div
-								class="photo"
+								class="photo shimmer"
 								style={{
 									background: "lightgrey",
 									width: "350px",
@@ -238,10 +237,10 @@ export default function Blog() {
 					<div class="blog-card">
 						<div class="meta">
 							<div
-								class="photo"
+								class="photo shimmer"
 								style={{
 									background: "lightgrey",
-									width: "350px",
+									width: "100%",
 									height: "250px",
 									backgroundPosition: "center",
 									backgroundSize: "cover",
