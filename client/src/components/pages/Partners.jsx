@@ -174,7 +174,7 @@ export default function Partners() {
                 className="section-heading"
                 style={{
                   fontFamily: "GothamBold",
-				  fontSize: "2.5em",
+                  fontSize: "2.5em",
                 }}
               >
                 Partner Istituzionali
@@ -206,7 +206,7 @@ export default function Partners() {
                 className="section-heading"
                 style={{
                   fontFamily: "GothamBold",
-				  fontSize: "2.5em",
+                  fontSize: "2.5em",
                 }}
               >
                 Main Sponsors
@@ -238,7 +238,7 @@ export default function Partners() {
                 className="section-heading"
                 style={{
                   fontFamily: "GothamBold",
-				  fontSize: "2em",
+                  fontSize: "2em",
                 }}
               >
                 Supporting Sponsors
@@ -270,10 +270,10 @@ export default function Partners() {
                 className="section-heading"
                 style={{
                   fontFamily: "GothamBold",
-				  fontSize: "2em",
+                  fontSize: "2em",
                 }}
               >
-               Smart Sponsor
+                Smart Sponsor
               </h2>
               <div className="row">
                 <PartnerCard23
@@ -284,22 +284,25 @@ export default function Partners() {
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-				  sponsorType={"smart"}                />
+                  sponsorType={"smart"}
+                />
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-				  sponsorType={"smart"}                />
+                  sponsorType={"smart"}
+                />
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-				  sponsorType={"smart"}                />
+                  sponsorType={"smart"}
+                />
               </div>
 
               <h2
                 className="section-heading"
                 style={{
                   fontFamily: "GothamBold",
-				  fontSize: "2em",
+                  fontSize: "2em",
                 }}
               >
                 Friendly Sponsor
@@ -389,8 +392,8 @@ export default function Partners() {
               ref={button2023}
               className="year-button"
               type="button"
-              style={{ marginLeft: "30px", color:"grey" }}
-              /*onClick={() => {
+              style={{ marginLeft: "30px", color: "grey" }}
+              /* onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
@@ -491,7 +494,7 @@ export default function Partners() {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
-                setActiveYear(2022);
+                setActiveYear(22);
               }}
             >
               2022
@@ -505,12 +508,12 @@ export default function Partners() {
                 cursor: "initial",
                 fontSize: "30px",
               }}
-              /*
-							onClick={() => {
+
+              /*onClick={() => {
 								console.log("click");
 								button2022.current.classList.remove("underlined");
 								button2023.current.classList.add("underlined");
-								setActiveYear(2023);
+								setActiveYear(23);
 							}} */
             >
               2023
