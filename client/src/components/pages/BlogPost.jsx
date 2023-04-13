@@ -15,6 +15,7 @@ import global from "../../resources/global.json";
 
 export default function BlogPost() {
 	const [blogPost, setBlogPost] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
 	let { id } = useParams();
 	const navigate = useNavigate();
 
@@ -32,6 +33,7 @@ export default function BlogPost() {
 					navigate("/blog");
 				} else {
 					setBlogPost(res.data);
+					setIsLoading(false);
 				}
 			})
 			.catch((err) => {
@@ -41,13 +43,28 @@ export default function BlogPost() {
 
 	// eslint-disable-next-line no-lone-blocks
 
-	return BlogCardPost(
-		blogPost.titolo,
-		blogPost.descrizione,
-		blogPost.image,
-		blogPost.data,
-		blogPost.autore
-	);
+	if (isLoading) {
+		return (
+			<div className="main-container">
+				<div
+					className="post-container"
+					style={{ marginTop: "70px", height: "100vh" }}
+				>
+					<div className="rectangle large shimmer"></div>
+					<div className="rectangle medium shimmer"></div>
+					<div className="rectangle small shimmer"></div>
+				</div>
+			</div>
+		);
+	} else {
+		return BlogCardPost(
+			blogPost.titolo,
+			blogPost.descrizione,
+			blogPost.image,
+			blogPost.data,
+			blogPost.autore
+		);
+	}
 }
 
 /**

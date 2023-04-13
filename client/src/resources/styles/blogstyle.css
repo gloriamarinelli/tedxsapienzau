@@ -46,6 +46,24 @@ body {
 	display: flex;
 	gap: 50px;
 }
+.rectangle {
+	height: 15px;
+	background-color: grey;
+	border-radius: 5px;
+	margin: 30px 0;
+}
+
+.large {
+	width: 90%;
+}
+
+.medium {
+	width: 60%;
+}
+
+.small {
+	width: 30%;
+}
 
 /**
 * WRITE PAGE
