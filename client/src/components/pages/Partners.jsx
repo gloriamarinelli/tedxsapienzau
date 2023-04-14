@@ -442,6 +442,7 @@ export default function Partners() {
             fontStyle: "",
             color: "grey",
             textAlign: "center",
+            
           }}
         >
           In aggiornamento...
@@ -453,6 +454,7 @@ export default function Partners() {
             fontStyle: "",
             color: "grey",
             textAlign: "center",
+            padding:"50px"
           }}
         >
         Stiamo lavorando per voi per collaborare con i migliori sponsor!
@@ -552,6 +554,7 @@ export default function Partners() {
             fontStyle: "",
             color: "grey",
             textAlign: "center",
+            
           }}
         >
           In aggiornamento...
@@ -563,6 +566,7 @@ export default function Partners() {
             fontStyle: "",
             color: "grey",
             textAlign: "center",
+            padding:"50px"
           }}
         >
         Stiamo lavorando per voi per collaborare con i migliori sponsor!
