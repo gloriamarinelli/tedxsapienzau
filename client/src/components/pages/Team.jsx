@@ -699,7 +699,7 @@ export default function Team2022() {
 						padding: "10px",
 						textAlign: "center",
 						color: "#fff",
-						height: "40vh",
+						height: "30vh",
 						display: "grid",
 						placeItems: "center",
 						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
