@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartnerCard23({ imgSrc, text, sponsorType }) {
+export default function PartnerCard23({ imgSrc, text, sponsorType, link }) {
   return (
     <>
       <div
@@ -16,15 +16,17 @@ export default function PartnerCard23({ imgSrc, text, sponsorType }) {
       >
         <div className="container mb-5">
           <div className="card-pro">
-            <div className="card-projects">
-              <input type="checkbox" className="btn1" />
-              <div className="overlay">
-                <p>
-                  <strong>{text}</strong>
-                </p>
+            <a className="but" href={link} target="_blank" rel="noreferrer">
+              <div className="card-projects">
+                <input type="checkbox" className="btn1" />
+                <div className="overlay">
+                  <p>
+                    <strong>{text}</strong>
+                  </p>
+                </div>
+                <img src={imgSrc} alt="TEDx Sponsor" />
               </div>
-              <img src={imgSrc} alt="TEDx Sponsor" />
-            </div>
+            </a>
           </div>
         </div>
       </div>

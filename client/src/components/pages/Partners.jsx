@@ -8,7 +8,7 @@ import "../../resources/styles/partnerstyle.css";
 import "../../index.css";
 
 export default function Partners() {
-  const [activeYear, setActiveYear] = useState(20);
+  const [activeYear, setActiveYear] = useState(23);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
@@ -169,7 +169,7 @@ export default function Partners() {
       <>
         <section className="page-section" id="portfolio">
           <div className="container">
-            <div className="">
+            {/*<div className="">
               <h2
                 className="section-heading"
                 style={{
@@ -201,39 +201,42 @@ export default function Partners() {
                   sponsorType={"institutional"}
                 />
               </div>
-
-              <h2
-                className="section-heading"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "2.5em",
-                }}
-              >
-                Main Sponsors
-              </h2>
-              <div className="row">
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"main"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"main"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"main"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"main"}
-                />
-              </div>
-
+              */}
+            <h2
+              className="section-heading"
+              style={{
+                fontFamily: "GothamBold",
+                fontSize: "2.5em",
+              }}
+            >
+              Main Sponsors
+            </h2>
+            <div className="row">
+              <PartnerCard23
+                imgSrc="https://womenximpact.com/wp-content/uploads/2023/04/eniCorporate_B1_colorA_new-1024x404.png"
+                text="Eni è una società dell'energia con oltre 32.000 persone in 62 Paesi. La sua strategia mira a raggiungere l'obiettivo delle zero emissioni nette al 2050 e a fornire prodotti decarbonizzati, coniugando sostenibilità ambientale e finanziaria, puntando su una leadership tecnologica costruita in anni di ricerca e innovazione."
+                link="https://www.eni.com/it-IT/home.html"
+                sponsorType={"main"}
+              />
+            </div>
+            {/*
+              <PartnerCard23
+                imgSrc=""
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                sponsorType={"main"}
+              />
+              <PartnerCard23
+                imgSrc=""
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                sponsorType={"main"}
+              />
+              <PartnerCard23
+                imgSrc=""
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                sponsorType={"main"}
+              />
+            </div>
+            
               <h2
                 className="section-heading"
                 style={{
@@ -328,8 +331,8 @@ export default function Partners() {
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
                   sponsorType={"friendly"}
                 />
-              </div>
-            </div>
+                
+              </div>*/}
           </div>
         </section>
       </>
@@ -338,7 +341,7 @@ export default function Partners() {
 
   function chooseYear() {
     if (activeYear === 22) return getSponsor2022();
-    /*else return getSponsor2023();*/
+    else return getSponsor2023();
   }
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
@@ -390,15 +393,15 @@ export default function Partners() {
             Chi ci ha supportato:
             <div
               ref={button2023}
-              className="year-button"
+              className="year-button underlined"
               type="button"
-              style={{ marginLeft: "30px", color: "grey" }}
-              /* onClick={() => {
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
-              }}*/
+              }}
             >
               2023
             </div>
@@ -406,13 +409,13 @@ export default function Partners() {
               ref={button2022}
               className="year-button"
               type="button"
-              style={{ marginLeft: "30px", color: "grey"  }}
-              /*onClick={() => {
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
-              }}*/
+              }}
             >
               2022
             </div>
@@ -434,31 +437,6 @@ export default function Partners() {
         </section>
 
         {chooseYear()}
-
-        <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "GothamBook",
-            fontStyle: "",
-            color: "grey",
-            textAlign: "center",
-            
-          }}
-        >
-          In aggiornamento...
-        </p>
-        <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "GothamBook",
-            fontStyle: "",
-            color: "grey",
-            textAlign: "center",
-            padding:"50px"
-          }}
-        >
-        Stiamo lavorando per voi per collaborare con i migliori sponsor!
-        </p>
       </>
     );
   } else {
@@ -511,66 +489,41 @@ export default function Partners() {
           </h3>
           <div style={{ display: "flex" }}>
             <div
+              ref={button2023}
+              className="year-button underlined"
+              type="button"
+              style={{
+                marginRight: "30px",
+                cursor: "initial",
+                fontSize: "30px",
+              }}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2023.current.classList.add("underlined");
+                setActiveYear(23);
+              }}
+            >
+              2023
+            </div>
+            <div
               ref={button2022}
               className="year-button"
               type="button"
-              style={{ marginRight: "30px", fontSize: "30px",  color: "grey",}}
-              /*onClick={() => {
+              style={{ marginRight: "30px", fontSize: "30px" }}
+              onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
-              }}*/
+              }}
             >
               2022
-            </div>
-            <div
-              ref={button2023}
-              className="year-button"
-              type="button"
-              style={{
-                color: "grey",
-                cursor: "initial",
-                fontSize: "30px",
-              }}
-
-              /*onClick={() => {
-								console.log("click");
-								button2022.current.classList.remove("underlined");
-								button2023.current.classList.add("underlined");
-								setActiveYear(23);
-							}} */
-            >
-              2023
             </div>
           </div>
         </section>
 
         {chooseYear()}
-        <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "GothamBook",
-            fontStyle: "",
-            color: "grey",
-            textAlign: "center",
-            
-          }}
-        >
-          In aggiornamento...
-        </p>
-        <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "GothamBook",
-            fontStyle: "",
-            color: "grey",
-            textAlign: "center",
-            padding:"50px"
-          }}
-        >
-        Stiamo lavorando per voi per collaborare con i migliori sponsor!
-        </p>
       </>
     );
   }
