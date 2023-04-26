@@ -1,10 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import {
-	faFacebookF,
-	faLinkedinIn,
-	faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import { faFeatherPointed } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { format } from "date-fns";
