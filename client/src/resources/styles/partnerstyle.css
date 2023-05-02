@@ -47,14 +47,15 @@
   justify-content: center;
   border-radius: 5px;
   align-items: center;
-  color: black;
-  background: lightgrey;
+  color: white;
+  background: black;
   cursor: pointer;
   transition: all 0.4s;
 }
 
-.btn1:checked::before {
-  content: "x";
+.btn1:checked::before {  
+  content: "X";
+  position: absolute;  
   background: white;
   color: black;
 }
@@ -69,7 +70,7 @@
   border-radius: 5px;
   transition: all 0.4s;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.498);
-  color: rgb(4, 4, 4);
+  color: rgb(255, 255, 255);
   padding: 60px 10px 0 25px;
 }
 
@@ -86,9 +87,9 @@
   height: 250px;
 }
 
-.btn1:checked ~ img {
+/*.btn1:checked ~ img {
   transform: scale(2);
-}
+}*/
 
 .articles {
   display: grid;

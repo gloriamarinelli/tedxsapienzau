@@ -218,56 +218,59 @@ export default function Partners() {
                 link="https://www.eni.com/it-IT/home.html"
                 sponsorType={"main"}
               />
+              {/*
+              <PartnerCard23
+                imgSrc="https://media-assets.wired.it/photos/615f056ced9a0cf487d3362b/3:2/w_1600%2Cc_limit/wired_placeholder_dummy.png"
+                text=""
+                link=""
+                sponsorType={"main"}
+              />
+              <PartnerCard23
+                imgSrc="https://www.unicreditgroup.eu/content/unicreditgroup-eu/it/unicredit-at-a-glance/our-identity/brand-strategy/jcr:content/content-parsys/text_image_331958274/image.img.jpg/1623854968728.jpg"
+                text="UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa."
+                link=""
+                sponsorType={"main"}
+              />
+            */}
+            </div>
+            <h2
+              className="section-heading"
+              style={{
+                fontFamily: "GothamBold",
+                fontSize: "2em",
+              }}
+            >
+              Supporting Sponsors
+            </h2>
+            <div className="row">
+              <PartnerCard23
+                imgSrc="https://www.autocentribalduina.com/static/img/pict3512.jpg"
+                text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
+                La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre.
+                "
+                link="https://www.autocentribalduina.com/"
+                sponsorType={"supporting"}
+              />
+              {/*
+              <PartnerCard23
+                imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                sponsorType={"supporting"}
+              />
+              <PartnerCard23
+                imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                sponsorType={"supporting"}
+              />
+              <PartnerCard23
+                imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
+                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                sponsorType={"supporting"}
+              />
+              */}
             </div>
             {/*
-              <PartnerCard23
-                imgSrc=""
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                sponsorType={"main"}
-              />
-              <PartnerCard23
-                imgSrc=""
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                sponsorType={"main"}
-              />
-              <PartnerCard23
-                imgSrc=""
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                sponsorType={"main"}
-              />
-            </div>
-            
-              <h2
-                className="section-heading"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "2em",
-                }}
-              >
-                Supporting Sponsors
-              </h2>
-              <div className="row">
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"supporting"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"supporting"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"supporting"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"supporting"}
-                />
-              </div>
+              
 
               <h2
                 className="section-heading"
