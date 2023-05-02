@@ -24,7 +24,7 @@ export default function PartnerCard23({ imgSrc, text, sponsorType, link }) {
                     <strong>{text}</strong>
                   </p>
                 </div>
-                <img src={imgSrc} alt="TEDx Sponsor" />
+                <img src={`/images/partners23/${imgSrc}`} alt="TEDx Sponsor" />
               </div>
             </a>
           </div>

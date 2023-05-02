@@ -213,17 +213,15 @@ export default function Partners() {
             </h2>
             <div className="row">
               <PartnerCard23
-                imgSrc="https://womenximpact.com/wp-content/uploads/2023/04/eniCorporate_B1_colorA_new-1024x404.png"
+                imgSrc="Eni.webp"
                 text="Eni è una società dell'energia con oltre 32.000 persone in 62 Paesi. La sua strategia mira a raggiungere l'obiettivo delle zero emissioni nette al 2050 e a fornire prodotti decarbonizzati, coniugando sostenibilità ambientale e finanziaria, puntando su una leadership tecnologica costruita in anni di ricerca e innovazione."
                 link="https://www.eni.com/it-IT/home.html"
                 sponsorType={"main"}
               />
 
               <PartnerCard23
-                imgSrc="https://media-assets.wired.it/photos/615f056ced9a0cf487d3362b/3:2/w_1600%2Cc_limit/wired_placeholder_dummy.png"
-                text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l’obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040.
-
-                "
+                imgSrc="Tim.webp"
+                text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l’obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040."
                 link="https://www.gruppotim.it/it.html"
                 sponsorType={"main"}
               />
@@ -247,7 +245,7 @@ export default function Partners() {
             </h2>
             <div className="row">
               <PartnerCard23
-                imgSrc="https://www.autocentribalduina.com/static/img/pict3512.jpg"
+                imgSrc="Balduina.webp"
                 text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
                 La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre.
                 "
