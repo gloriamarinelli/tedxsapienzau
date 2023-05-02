@@ -218,13 +218,16 @@ export default function Partners() {
                 link="https://www.eni.com/it-IT/home.html"
                 sponsorType={"main"}
               />
-              {/*
+
               <PartnerCard23
                 imgSrc="https://media-assets.wired.it/photos/615f056ced9a0cf487d3362b/3:2/w_1600%2Cc_limit/wired_placeholder_dummy.png"
-                text=""
-                link=""
+                text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l’obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040.
+
+                "
+                link="https://www.gruppotim.it/it.html"
                 sponsorType={"main"}
               />
+              {/*
               <PartnerCard23
                 imgSrc="https://www.unicreditgroup.eu/content/unicreditgroup-eu/it/unicredit-at-a-glance/our-identity/brand-strategy/jcr:content/content-parsys/text_image_331958274/image.img.jpg/1623854968728.jpg"
                 text="UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa."
