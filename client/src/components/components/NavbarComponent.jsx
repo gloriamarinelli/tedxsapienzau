@@ -290,17 +290,17 @@ export default function NavbarComponent(props) {
 												History
 											</Link>
 										</li>
-										
+										*/}
 										<li>
 											<Link
 												className="dropdown-item text-bg-light"
-												to="/"
+												to="/sustainability"
 												onClick={() => setExpanded(false)}
 											>
 												Sustainability
 											</Link>
 										</li>
-										*/}
+										
 									</ul>
 								</li>
 

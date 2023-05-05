@@ -16,6 +16,7 @@ import BlogPost from "./components/pages/BlogPost";
 import Write from "./components/pages/Write";
 import Newsletter from "./components/pages/Newsletter";
 import Location from "./components/pages/Location";
+import Sustainability from "./components/pages/Sustainability";
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
 			{
 				path: "/awards",
 				element: <Awards />,
+			},
+			{
+				path: "/sustainability",
+				element: <Sustainability />,
 			},
 		],
 	},
