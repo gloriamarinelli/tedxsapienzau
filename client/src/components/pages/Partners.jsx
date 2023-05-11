@@ -169,7 +169,7 @@ export default function Partners() {
       <>
         <section className="page-section" id="portfolio">
           <div className="container">
-            {/*<div className="">
+            <div className="">
               <h2
                 className="section-heading"
                 style={{
@@ -177,81 +177,73 @@ export default function Partners() {
                   fontSize: "2.5em",
                 }}
               >
-                Partner Istituzionali
+                Con il patrocinio di
               </h2>
               <div className="row">
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"institutional"}
+                  imgSrc="CNR.webp"
+                  text=""
+                  link="https://www.cnr.it/"
+                  sponsorType={"patrocinio"}
                 />
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"institutional"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"institutional"}
-                />
-                <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                  sponsorType={"institutional"}
+                  imgSrc="Enea.webp"
+                  text="Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sconomico sostenibile"
+                  link="https://www.enea.it/it"
+                  sponsorType={"patrocinio"}
                 />
               </div>
-              */}
-            <h2
-              className="section-heading"
-              style={{
-                fontFamily: "GothamBold",
-                fontSize: "2.5em",
-              }}
-            >
-              Main Sponsors
-            </h2>
-            <div className="row">
-              <PartnerCard23
-                imgSrc="Eni.webp"
-                text="Eni è una società dell'energia con oltre 32.000 persone in 62 Paesi. La sua strategia mira a raggiungere l'obiettivo delle zero emissioni nette al 2050 e a fornire prodotti decarbonizzati, coniugando sostenibilità ambientale e finanziaria, puntando su una leadership tecnologica costruita in anni di ricerca e innovazione."
-                link="https://www.eni.com/it-IT/home.html"
-                sponsorType={"main"}
-              />
 
-              <PartnerCard23
-                imgSrc="Tim.webp"
-                text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l'obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040."
-                link="https://www.gruppotim.it/it.html"
-                sponsorType={"main"}
-              />
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2.5em",
+                }}
+              >
+                Main Sponsors
+              </h2>
+              <div className="row">
+                <PartnerCard23
+                  imgSrc="Eni.webp"
+                  text="Eni è una società dell'energia con oltre 32.000 persone in 62 Paesi. La sua strategia mira a raggiungere l'obiettivo delle zero emissioni nette al 2050 e a fornire prodotti decarbonizzati, coniugando sostenibilità ambientale e finanziaria, puntando su una leadership tecnologica costruita in anni di ricerca e innovazione."
+                  link="https://www.eni.com/it-IT/home.html"
+                  sponsorType={"main"}
+                />
 
-              <PartnerCard23
-                imgSrc="Unicredit.webp"
-                text="UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa."
-                link="https://www.unicredit.it/it/privati.html"
-                sponsorType={"main"}
-              />
-            </div>
+                <PartnerCard23
+                  imgSrc="Tim.webp"
+                  text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l'obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040."
+                  link="https://www.gruppotim.it/it.html"
+                  sponsorType={"main"}
+                />
 
-            <h2
-              className="section-heading"
-              style={{
-                fontFamily: "GothamBold",
-                fontSize: "2em",
-              }}
-            >
-              Supporting Sponsors
-            </h2>
-            <div className="row">
-              <PartnerCard23
-                imgSrc="Balduina.webp"
-                text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
+                <PartnerCard23
+                  imgSrc="Unicredit.webp"
+                  text="UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa."
+                  link="https://www.unicredit.it/it/privati.html"
+                  sponsorType={"main"}
+                />
+              </div>
+
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2em",
+                }}
+              >
+                Supporting Sponsors
+              </h2>
+              <div className="row">
+                <PartnerCard23
+                  imgSrc="Balduina.webp"
+                  text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
                 La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre."
-                link="https://www.autocentribalduina.com/"
-                sponsorType={"supporting"}
-              />
-              {/*
+                  link="https://www.autocentribalduina.com/"
+                  sponsorType={"supporting"}
+                />
+                {/*
               <PartnerCard23
                 imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
@@ -268,8 +260,8 @@ export default function Partners() {
                 sponsorType={"supporting"}
               />
               */}
-            </div>
-            {/*
+              </div>
+              {/*
               
 
               <h2
@@ -334,8 +326,8 @@ export default function Partners() {
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
                   sponsorType={"friendly"}
                 />
-                
-              </div>*/}
+                */}
+            </div>
           </div>
         </section>
       </>

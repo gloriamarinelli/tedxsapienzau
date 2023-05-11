@@ -39,71 +39,213 @@ export default function Sustainability() {
           >
             SUSTAINABILITY
           </h1>
-          
         </div>
 
-        <section style={{ fontSize: "18px" }}>
+        <div className="container-lg marketing">
+          <p
+            className="paragraph"
+            style={{
+              textAlign: "center",
+              marginLeft: "50px",
+              marginRight: "50px",
+              fontFamily: "GothamBook",
+              fontSize: "25px",
+            }}
+          >
+            <i>
+              “Events have the potential to be model examples of harmonious
+              balance between human activity, resource use and environmental
+              impact. There is a powerful opportunity, and an urgent imperative,
+              for events to leave a lasting positive legacy and social outcomes,
+              and to inspire attendees, supply chain and host destinations to
+              action”
+            </i>
+          </p>
+          <p
+            className="paragraph"
+            style={{
+              textAlign: "center",
+              marginLeft: "50px",
+              marginRight: "50px",
+              fontFamily: "GothamBook",
+              fontSize: "18px",
+            }}
+          >
+            <i>-Sustainaibility and Events (by Meegan Jones)</i>
+          </p>
+        </div>
+        <div className="container-lg marketing">
+          <h3
+            className="title mt-5"
+            style={{
+              textAlign: "justify",
+              fontFamily: "GothamBold",
+            }}
+          >
+            La nostra idea di SOSTENIBILITÀ
+          </h3>
+        </div>
+
+        <section style={{ fontSize: "20px" }}>
           <div className="container-lg marketing">
             <p
               className="paragraph"
               style={{
                 textAlign: "justify",
                 fontFamily: "GothamBook",
-                color: "white"
-
               }}
             >
-              L’Università Sapienza di Roma, fondata <strong>nel 1303</strong>{" "}
-              da papa Bonifacio VIII, è la più antica università di Roma e la
-              più grande in Europa. L’Ateneo conta <strong>700 anni</strong> di
-              storia e ospita, secondo i dati dell’anno accademico 2022/23,
-              circa <strong>120 mila studenti</strong> e{" "}
-              <strong>3,5 mila docenti</strong>. Tra i suoi obiettivi principali
-              c’è contribuire allo sviluppo della società della conoscenza
-              attraverso ricerca, formazione di eccellenza e di qualità e la
-              cooperazione internazionale. Il suo motto è la frase{" "}
-              <i>“Il futuro è passato qui”</i>: uno slogan che parte da lontano,
-              dalla storia centenaria dell’Università, e arriva fino ai giorni
-              nostri.
-              L’Università Sapienza di Roma, fondata <strong>nel 1303</strong>{" "}
-              da papa Bonifacio VIII, è la più antica università di Roma e la
-              più grande in Europa. L’Ateneo conta <strong>700 anni</strong> di
-              storia e ospita, secondo i dati dell’anno accademico 2022/23,
-              circa <strong>120 mila studenti</strong> e{" "}
-              <strong>3,5 mila docenti</strong>. Tra i suoi obiettivi principali
-              c’è contribuire allo sviluppo della società della conoscenza
-              attraverso ricerca, formazione di eccellenza e di qualità e la
-              cooperazione internazionale. Il suo motto è la frase{" "}
-              <i>“Il futuro è passato qui”</i>: uno slogan che parte da lontano,
-              dalla storia centenaria dell’Università, e arriva fino ai giorni
-              nostri.
-              L’Università Sapienza di Roma, fondata <strong>nel 1303</strong>{" "}
-              da papa Bonifacio VIII, è la più antica università di Roma e la
-              più grande in Europa. L’Ateneo conta <strong>700 anni</strong> di
-              storia e ospita, secondo i dati dell’anno accademico 2022/23,
-              circa <strong>120 mila studenti</strong> e{" "}
-              <strong>3,5 mila docenti</strong>. Tra i suoi obiettivi principali
-              c’è contribuire allo sviluppo della società della conoscenza
-              attraverso ricerca, formazione di eccellenza e di qualità e la
-              cooperazione internazionale. Il suo motto è la frase{" "}
-              <i>“Il futuro è passato qui”</i>: uno slogan che parte da lontano,
-              dalla storia centenaria dell’Università, e arriva fino ai giorni
-              nostri.
-              L’Università Sapienza di Roma, fondata <strong>nel 1303</strong>{" "}
-              da papa Bonifacio VIII, è la più antica università di Roma e la
-              più grande in Europa. L’Ateneo conta <strong>700 anni</strong> di
-              storia e ospita, secondo i dati dell’anno accademico 2022/23,
-              circa <strong>120 mila studenti</strong> e{" "}
-              <strong>3,5 mila docenti</strong>. Tra i suoi obiettivi principali
-              c’è contribuire allo sviluppo della società della conoscenza
-              attraverso ricerca, formazione di eccellenza e di qualità e la
-              cooperazione internazionale. Il suo motto è la frase{" "}
-              <i>“Il futuro è passato qui”</i>: uno slogan che parte da lontano,
-              dalla storia centenaria dell’Università, e arriva fino ai giorni
-              nostri.
+              Il <strong>Team TEDxSapienzaU</strong> punta ad avere un piano di
+              organizzazione sostenibile che coinvolga le tre aree fondamentali
+              (ambientale, sociale ed economica).
             </p>
           </div>
-          </section>
+        </section>
+
+        <div className="container-lg marketing">
+          <h3
+            className="title"
+            style={{
+              textAlign: "justify",
+              fontFamily: "GothamBold",
+            }}
+          >
+            I nostri obiettivi 2023
+          </h3>
+        </div>
+        <div></div>
+
+        <section style={{ fontSize: "20px" }}>
+          <div className="container-lg marketing">
+            <h3
+              className="title"
+              style={{
+                textAlign: "justify",
+                fontFamily: "GothamBold",
+              }}
+            >
+              Ambientale:
+            </h3>
+            <ul>
+              <li>Plastic free</li>
+              <li>Riduzione/compensazione emissioni di Co2</li>
+              <li>Alimenti plant based e prodotti a Km0</li>
+              <li>Attenta raccolta differenziata</li>
+            </ul>
+          </div>
+
+          <div className="container-lg marketing">
+            <h3
+              className="title"
+              style={{
+                textAlign: "justify",
+                fontFamily: "GothamBold",
+              }}
+            >
+              Economica:
+            </h3>
+            <ul>
+              <li>Ridurre i consumi</li>
+              <li>Diminuzione output negativi</li>
+              <li>Economia circolare e della condivisione</li>
+            </ul>
+          </div>
+
+          <div className="container-lg marketing">
+            <h3
+              className="title"
+              style={{
+                textAlign: "justify",
+                fontFamily: "GothamBold",
+              }}
+            >
+              Sociale:
+            </h3>
+            <ul>
+              <li>Benessere umano</li>
+              <li>Inclusività ed equità</li>
+              <li>Promozione culturale</li>
+            </ul>
+          </div>
+        </section>
+
+        <section style={{ fontSize: "20px", textAlign: "justify" }}>
+          <div className="container-lg marketing">
+            <h3
+              className="title"
+              style={{
+                fontFamily: "GothamBook",
+              }}
+            >
+              Le nostre <strong>LINEE GUIDA</strong>:
+            </h3>
+            <ul>
+              <li>
+                <strong>impatto sociale dell’evento sulla comunità</strong>,
+                contribuendo alla responsabilità sociale, senso di appartenenza
+                e identità culturale
+              </li>
+              <li>
+                <strong>organizzazione sostenibile dell’evento</strong>, tramite
+                reporting e valutazioni
+              </li>
+              <li>
+                <strong>comunicazione</strong> efficace, trasparente e
+                d’ispirazione, capace di suggerire nuove prospettive o metterle
+                in discussione
+              </li>
+              <li>
+                <strong>sede dell’evento</strong>: tutela del contesto
+                territoriale
+              </li>
+              <li>
+                <strong>emissioni</strong>: mitigazione, calcolo e compensazione
+                grazie alla collaborazione con il partner Up2You così da
+                ottenere un evento climaticamente neutro
+              </li>
+              <li>
+                <strong>gestione delle risorse</strong>: processi e materiali di
+                derivazione etica, responsabile e non tossica preferendo le
+                alternative sostenibili quali il riciclaggio e beni di seconda
+                mano
+              </li>
+              <li>
+                <strong>rifiuti e smaltimento</strong>, attuando una diretta
+                riduzione dei rifiuti e applicando corrette pratiche di
+                smaltimento o riuso
+              </li>
+              <li>
+                <strong>acqua</strong>, contrastando lo spreco d’acqua potabile
+                e favorendone un uso responsabile;{" "}
+              </li>
+            </ul>
+          </div>
+
+          <div className="container-lg marketing">
+            <h3
+              className="title"
+              style={{
+                textAlign: "justify",
+                fontFamily: "GothamBook",
+              }}
+            >
+              Le nostre <strong>AZIONI SOSTENIBILI</strong>:
+            </h3>
+            <ul>
+              <li>
+                Albero di natale TEDxSapienzaU: evento in cui gli studenti
+                Sapienza hanno avuto la possibilità di scrivere le proprie idee
+                di valore su dei cartoncini in carta riciclata da condividere
+                con la comunità Sapienza
+              </li>
+              <li>
+                Collaborazione con Up2U per la compensazione totale della CO2
+                emessa così da avere un evento climaticamente neutro
+              </li>
+              <li>Uso di materiali riciclati e gadget sostenibili</li>
+            </ul>
+          </div>
+        </section>
       </>
     );
   } else {
