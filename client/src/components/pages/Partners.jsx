@@ -177,30 +177,6 @@ export default function Partners() {
                   fontSize: "2.5em",
                 }}
               >
-                Con il patrocinio di
-              </h2>
-              <div className="row">
-                <PartnerCard23
-                  imgSrc="CNR.webp"
-                  text=""
-                  link="https://www.cnr.it/"
-                  sponsorType={"patrocinio"}
-                />
-                <PartnerCard23
-                  imgSrc="Enea.webp"
-                  text="Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sconomico sostenibile"
-                  link="https://www.enea.it/it"
-                  sponsorType={"patrocinio"}
-                />
-              </div>
-
-              <h2
-                className="section-heading"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "2.5em",
-                }}
-              >
                 Main Sponsors
               </h2>
               <div className="row">
@@ -327,6 +303,29 @@ export default function Partners() {
                   sponsorType={"friendly"}
                 />
                 */}
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2em",
+                }}
+              >
+                Con il patrocinio di
+              </h2>
+              <div className="row">
+                <PartnerCard23
+                  imgSrc="CNR.webp"
+                  text=""
+                  link="https://www.cnr.it/"
+                  sponsorType={"patrocinio"}
+                />
+                <PartnerCard23
+                  imgSrc="Enea.webp"
+                  text="Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sconomico sostenibile"
+                  link="https://www.enea.it/it"
+                  sponsorType={"patrocinio"}
+                />
+              </div>
             </div>
           </div>
         </section>
