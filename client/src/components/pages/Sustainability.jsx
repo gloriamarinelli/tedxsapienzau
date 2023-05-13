@@ -96,8 +96,8 @@ export default function Sustainability() {
               }}
             >
               Il <strong>Team TEDxSapienzaU</strong> punta ad avere un piano di
-              organizzazione sostenibile che coinvolga le tre aree fondamentali
-              (ambientale, sociale ed economica).
+              organizzazione sostenibile in tutte e tre le aree che riteniamo
+              fondamentali: ambiente, società ed economia.
             </p>
           </div>
         </section>
@@ -124,9 +124,9 @@ export default function Sustainability() {
                 fontFamily: "GothamBold",
               }}
             >
-              Ambientale:
+              Ambientali:
             </h3>
-            <ul>
+            <ul style={{ marginLeft: "30px", lineHeight: "40px" }}>
               <li>Plastic free</li>
               <li>Riduzione/compensazione emissioni di Co2</li>
               <li>Alimenti plant based e prodotti a Km0</li>
@@ -142,9 +142,9 @@ export default function Sustainability() {
                 fontFamily: "GothamBold",
               }}
             >
-              Economica:
+              Economici:
             </h3>
-            <ul>
+            <ul style={{ marginLeft: "30px", lineHeight: "40px" }}>
               <li>Ridurre i consumi</li>
               <li>Diminuzione output negativi</li>
               <li>Economia circolare e della condivisione</li>
@@ -159,9 +159,9 @@ export default function Sustainability() {
                 fontFamily: "GothamBold",
               }}
             >
-              Sociale:
+              Sociali:
             </h3>
-            <ul>
+            <ul style={{ marginLeft: "30px", lineHeight: "40px" }}>
               <li>Benessere umano</li>
               <li>Inclusività ed equità</li>
               <li>Promozione culturale</li>
@@ -179,7 +179,7 @@ export default function Sustainability() {
             >
               Le nostre <strong>LINEE GUIDA</strong>:
             </h3>
-            <ul>
+            <ol style={{ marginLeft: "30px", lineHeight: "40px" }}>
               <li>
                 <strong>impatto sociale dell’evento sulla comunità</strong>,
                 contribuendo alla responsabilità sociale, senso di appartenenza
@@ -218,7 +218,7 @@ export default function Sustainability() {
                 <strong>acqua</strong>, contrastando lo spreco d’acqua potabile
                 e favorendone un uso responsabile;{" "}
               </li>
-            </ul>
+            </ol>
           </div>
 
           <div className="container-lg marketing">
@@ -231,7 +231,7 @@ export default function Sustainability() {
             >
               Le nostre <strong>AZIONI SOSTENIBILI</strong>:
             </h3>
-            <ul>
+            <ul style={{ marginLeft: "30px", lineHeight: "40px" }}>
               <li>
                 Albero di natale TEDxSapienzaU: evento in cui gli studenti
                 Sapienza hanno avuto la possibilità di scrivere le proprie idee
@@ -239,8 +239,10 @@ export default function Sustainability() {
                 con la comunità Sapienza
               </li>
               <li>
-                Collaborazione con Up2U per la compensazione totale della CO2
-                emessa così da avere un evento climaticamente neutro
+                L’anno scorso, grazie alla collaborazione con Up2U, abbiamo
+                raggiunto la compensazione totale della CO2 emessa così da avere
+                un evento climaticamente neutro; anche quest’anno contiamo di
+                fare lo stesso
               </li>
               <li>Uso di materiali riciclati e gadget sostenibili</li>
             </ul>
