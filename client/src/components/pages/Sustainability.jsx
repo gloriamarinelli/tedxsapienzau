@@ -1,7 +1,6 @@
 import "../../index.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image from "../images/location2.webp";
-import Image1 from "../images/location1.webp";
+import Image from "../images/sostenibilità.jpg";
 
 import React, { useState } from "react";
 import global from "../../resources/global.json";
@@ -170,7 +169,7 @@ export default function Sustainability() {
         </section>
 
         <section style={{ fontSize: "20px", textAlign: "justify" }}>
-          <div className="container-lg marketing">
+          <div className="container-lg marketing mt-5">
             <h3
               className="title"
               style={{
@@ -179,49 +178,58 @@ export default function Sustainability() {
             >
               Le nostre <strong>LINEE GUIDA</strong>:
             </h3>
-            <ol style={{ marginLeft: "30px", lineHeight: "40px" }}>
-              <li>
-                <strong>impatto sociale dell’evento sulla comunità</strong>,
-                contribuendo alla responsabilità sociale, senso di appartenenza
-                e identità culturale
-              </li>
-              <li>
-                <strong>organizzazione sostenibile dell’evento</strong>, tramite
-                reporting e valutazioni
-              </li>
-              <li>
-                <strong>comunicazione</strong> efficace, trasparente e
-                d’ispirazione, capace di suggerire nuove prospettive o metterle
-                in discussione
-              </li>
-              <li>
-                <strong>sede dell’evento</strong>: tutela del contesto
-                territoriale
-              </li>
-              <li>
-                <strong>emissioni</strong>: mitigazione, calcolo e compensazione
-                grazie alla collaborazione con il partner Up2You così da
-                ottenere un evento climaticamente neutro
-              </li>
-              <li>
-                <strong>gestione delle risorse</strong>: processi e materiali di
-                derivazione etica, responsabile e non tossica preferendo le
-                alternative sostenibili quali il riciclaggio e beni di seconda
-                mano
-              </li>
-              <li>
-                <strong>rifiuti e smaltimento</strong>, attuando una diretta
-                riduzione dei rifiuti e applicando corrette pratiche di
-                smaltimento o riuso
-              </li>
-              <li>
-                <strong>acqua</strong>, contrastando lo spreco d’acqua potabile
-                e favorendone un uso responsabile;{" "}
-              </li>
-            </ol>
+          </div>
+          <div className="container-lg marketing">
+            <div className="row featurette">
+              <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
+                <LazyLoadImage src={Image} alt="Cos'èTED" height="600" />
+              </div>
+              <div className="col-md-7 order-md-2 mt-3">
+                <ol style={{ marginLeft: "30px", lineHeight: "40px" }}>
+                  <li>
+                    <strong>impatto sociale dell’evento sulla comunità</strong>,
+                    contribuendo alla responsabilità sociale, senso di
+                    appartenenza e identità culturale
+                  </li>
+                  <li>
+                    <strong>organizzazione sostenibile dell’evento</strong>,
+                    tramite reporting e valutazioni
+                  </li>
+                  <li>
+                    <strong>comunicazione</strong> efficace, trasparente e
+                    d’ispirazione, capace di suggerire nuove prospettive o
+                    metterle in discussione
+                  </li>
+                  <li>
+                    <strong>sede dell’evento</strong>: tutela del contesto
+                    territoriale
+                  </li>
+                  <li>
+                    <strong>emissioni</strong>: mitigazione, calcolo e
+                    compensazione grazie alla collaborazione con il partner
+                    Up2You così da ottenere un evento climaticamente neutro
+                  </li>
+                  <li>
+                    <strong>gestione delle risorse</strong>: processi e
+                    materiali di derivazione etica, responsabile e non tossica
+                    preferendo le alternative sostenibili quali il riciclaggio e
+                    beni di seconda mano
+                  </li>
+                  <li>
+                    <strong>rifiuti e smaltimento</strong>, attuando una diretta
+                    riduzione dei rifiuti e applicando corrette pratiche di
+                    smaltimento o riuso
+                  </li>
+                  <li>
+                    <strong>acqua</strong>, contrastando lo spreco d’acqua
+                    potabile e favorendone un uso responsabile;{" "}
+                  </li>
+                </ol>
+              </div>
+            </div>
           </div>
 
-          <div className="container-lg marketing">
+          <div className="container-lg marketing mt-5">
             <h3
               className="title"
               style={{
