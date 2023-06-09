@@ -132,7 +132,7 @@ export default function Awards() {
           </div>
           <div class="col-4">
             {" "}
-            <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image5} alt="TedxSapienzaU" height="400" />
           </div>
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function Awards() {
             <LazyLoadImage src={Image4} alt="TedxSapienzaU" height="400" />
           </div>
           <div class="col">
-            <LazyLoadImage src={Image5} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="400" />
           </div>
         </div>
       </div>
