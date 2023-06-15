@@ -9,6 +9,7 @@
     "cookie-parser": "^1.4.6",
     "date-fns": "^2.29.3",
     "jsonwebtoken": "^9.0.0",
+    "latest-version": "^7.0.0",
     "locale": "^0.1.0",
     "react-bootstrap": "^2.7.0",
     "react-router-sitemap-generator": "^0.0.8",
