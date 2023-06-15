@@ -213,7 +213,7 @@ export default function Partners() {
               </h2>
               <div className="row">
                 <PartnerCard23
-                  imgSrc="Balduina.webp"
+                  imgSrc="Balduina1.webp"
                   text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
                 La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre."
                   link="https://www.autocentribalduina.com/"
