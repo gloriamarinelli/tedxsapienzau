@@ -70,8 +70,7 @@ function Footer() {
 										style={{ fontFamily: "GothamBook" }}
 									>
 										TEDxSapienzaU è un evento TED organizzato in modo
-										indipendente gestito su licenza di TED ed è anche il primo TED universitario che si
-										terrà nell'Università di Roma “La Sapienza”. I protagonisti
+										indipendente gestito su licenza di TED. I protagonisti
 										sono le idee, gli speakers, i partner e gli studenti che
 										popolano questa grande comunità accademica.
 									</p>
