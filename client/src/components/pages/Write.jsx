@@ -14,18 +14,34 @@ const Write = () => {
 	const [file, setFile] = useState(null);
 	const [author, setAuthor] = useState("");
 	const [base64Image, setBase64Image] = useState(null);
-	const { currentUser, currentToken, logout } = useContext(AuthContext);
+	const [isLoading, setIsLoading] = useState(true);
+	const { currentUser, currentToken, logout, isUserLoggedIn } =
+		useContext(AuthContext);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (!currentToken) {
-			navigate("/login");
+		if (
+			localStorage.getItem("token") === null ||
+			localStorage.getItem("token") === undefined ||
+			localStorage.getItem("token") === "null"
+		) {
+			return;
 		} else {
-			let decoded = JSON.parse(atob(currentToken.split(".")[1]));
-			if (decoded.exp * 1000 < Date.now()) {
-				console.log("Token Expired");
-				logout();
-			}
+			const checkIsUserLoggedIn = async () => {
+				const status = await isUserLoggedIn(localStorage.getItem("token"));
+				return status;
+			};
+
+			let status = checkIsUserLoggedIn().catch((err) => console.log(err));
+			status.then((res) => {
+				if (res.status === 200) {
+					console.log(res);
+					setIsLoading(false);
+				} else {
+					console.log(res);
+					logout();
+				}
+			});
 		}
 	}, []);
 
@@ -104,16 +120,32 @@ const Write = () => {
 		"link",
 	];
 
-	return (
-		<>
-		<div
+	if (isLoading)
+		return (
+			<div
+				style={{
+					height: "800px",
+					width: "90%",
+					margin: "auto",
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+				}}
+			>
+				<div className="spinner"></div>
+			</div>
+		);
+	else
+		return (
+			<>
+				<div
 					className="header-write"
 					style={{
-						backgroundColor:"RGBA(25, 135, 84,0.5)",
+						backgroundColor: "RGBA(25, 135, 84,0.5)",
 						padding: "10px",
 						textAlign: "center",
 						color: "black",
-						display: "grid",						
+						display: "grid",
 						height: "20vh",
 						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
@@ -121,70 +153,70 @@ const Write = () => {
 					<h1
 						className="font-weight-bold mt-5"
 						style={{
-							fontSize: "40px",						
+							fontSize: "40px",
 							marginLeft: "30px",
 						}}
 					>
 						INSERISCI UN NUOVO ARTICOLO
 					</h1>
+				</div>
+				<div
+					className="container main-container mb-5"
+					style={{ marginTop: "100px" }}
+				>
+					<div className="content-container">
+						<label htmlFor="title" style={{ fontSize: "30px" }}>
+							Titolo
+						</label>
+						<input
+							id="title"
+							type="text"
+							placeholder="Scrivi qui il titolo"
+							onChange={(e) => setTitle(e.target.value)}
+							className="mb-3"
+							style={{ width: "100%" }}
+						/>
+						<div className="editor-container">
+							<ReactQuill
+								theme="snow"
+								modules={modules}
+								formats={formats}
+								value={value}
+								onChange={setValue}
+								style={{ height: "400px", marginBottom: "30px" }}
+							/>
+						</div>
 					</div>
-		<div
-			className="container main-container mb-5"
-			style={{ marginTop: "100px" }}
-		>
-			<div className="content-container">
-				<label htmlFor="title" style={{ fontSize: "30px" }}>
-					Titolo
-				</label>
-				<input
-					id="title"
-					type="text"
-					placeholder="Scrivi qui il titolo"
-					onChange={(e) => setTitle(e.target.value)}
-					className="mb-3"
-					style={{ width: "100%" }}
-				/>
-				<div className="editor-container">
-					<ReactQuill
-						theme="snow"
-						modules={modules}
-						formats={formats}
-						value={value}
-						onChange={setValue}
-						style={{ height: "400px", marginBottom: "30px" }}
-					/>
+					<div className="menu-container">
+						<h3>Completa l'articolo</h3>
+						<input
+							className="file mb-4"
+							type="file"
+							accept="image/*"
+							onChange={(e) => setFile(e.target.files[0])}
+						/>
+						{base64Image ? (
+							<img src={`data:image/*;base64,${base64Image}`} width="300px" />
+						) : (
+							<></>
+						)}
+						<label htmlFor="author">Autore</label>
+						<input
+							id="author"
+							type="text"
+							name="author"
+							onChange={(e) => setAuthor(e.target.value)}
+							className="mb-5"
+						/>
+						<div className="buttons">
+							<button className="button" onClick={handleClick}>
+								Publish
+							</button>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div className="menu-container">
-				<h3>Completa l'articolo</h3>
-				<input
-					className="file mb-4"
-					type="file"
-					accept="image/*"
-					onChange={(e) => setFile(e.target.files[0])}
-				/>
-				{base64Image ? (
-					<img src={`data:image/*;base64,${base64Image}`} width="300px" />
-				) : (
-					<></>
-				)}
-				<label htmlFor="author">Autore</label>
-				<input
-					id="author"
-					type="text"
-					name="author"
-					onChange={(e) => setAuthor(e.target.value)}
-					className="mb-5"
-				/>
-				<div className="buttons">
-					<button className="button" onClick={handleClick}>
-						Publish
-					</button>
-				</div>
-			</div>
-		</div>
-		</>
-	);
+			</>
+		);
 };
 
 export default Write;
