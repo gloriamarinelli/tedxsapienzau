@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -19,8 +19,35 @@ import Container from "react-bootstrap/Container";
 export default function NavbarComponent(props) {
 	const [expanded, setExpanded] = useState(false);
 	const { currentUser, currentToken } = useContext(AuthContext);
-	const { logout } = useContext(AuthContext);
+	const { logout, isUserLoggedIn } = useContext(AuthContext);
 	const [windowSize, setWindowSize] = useState(props.windowSize);
+	const [isAdmin, setIsAdmin] = useState(false);
+
+	useEffect(() => {
+		if (
+			localStorage.getItem("token") === null ||
+			localStorage.getItem("token") === undefined ||
+			localStorage.getItem("token") === "null"
+		) {
+			return;
+		} else {
+			const checkIsUserLoggedIn = async () => {
+				const status = await isUserLoggedIn(localStorage.getItem("token"));
+				return status;
+			};
+
+			let status = checkIsUserLoggedIn().catch((err) => console.log(err));
+			status.then((res) => {
+				if (res.status === 200) {
+					console.log(res);
+					setIsAdmin(true);
+				} else {
+					console.log(res);
+					logout();
+				}
+			});
+		}
+	}, []);
 
 	const navRef = useRef();
 
@@ -300,11 +327,10 @@ export default function NavbarComponent(props) {
 												Sustainability
 											</Link>
 										</li>
-										
 									</ul>
 								</li>
 
-								{currentToken && (
+								{isAdmin && (
 									<li className="nav-item dropdown">
 										<a
 											className="nav-link dropdown-toggle bg-success text-white"
@@ -339,7 +365,7 @@ export default function NavbarComponent(props) {
 													className="nav-link bg-success text-white"
 													type="submit"
 													onClick={logout}
-													to="/login"
+													to="/"
 												>
 													Logout
 												</Link>

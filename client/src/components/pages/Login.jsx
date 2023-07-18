@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import "../../resources/styles/loginstyle.css";
 import global from "../../resources/global.json";
@@ -13,7 +13,31 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Login() {
 	const { currentUser } = useContext(AuthContext);
-	const { logout } = useContext(AuthContext);
+	const { logout, isUserLoggedIn } = useContext(AuthContext);
+
+	useEffect(() => {
+		if (
+			localStorage.getItem("token") === null ||
+			localStorage.getItem("token") === undefined ||
+			localStorage.getItem("token") === "null"
+		) {
+			return;
+		} else {
+			const checkIsUserLoggedIn = async () => {
+				const status = await isUserLoggedIn(localStorage.getItem("token"));
+				return status;
+			};
+
+			let status = checkIsUserLoggedIn().catch((err) => console.log(err));
+			status.then((res) => {
+				if (res.status === 200) {
+					console.log(res);
+				} else {
+					logout();
+				}
+			});
+		}
+	}, []);
 
 	return (
 		<div
@@ -43,6 +67,7 @@ const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState(null);
+	const navigate = useNavigate();
 
 	const { login } = useContext(AuthContext);
 
@@ -51,7 +76,10 @@ const LoginForm = () => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		await login({ username: username, password: password })
-			.then((res) => console.log(res))
+			.then((res) => {
+				console.log(res);
+				window.location.href = "/write";
+			})
 			.catch((err) => {
 				setError(err.response.data);
 				console.log(err);

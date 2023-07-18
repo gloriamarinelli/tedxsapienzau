@@ -40,10 +40,30 @@ export const AuthContextProvider = ({ children }) => {
 		await axios.post(global.CONNECTION.ENDPOINT + "auth/logout");
 		setCurrentUser(null);
 		setCurrentToken(null);
+		window.location.href = "/";
+	};
+
+	const isUserLoggedIn = async (token) => {
+		return new Promise((res, rej) => {
+			axios
+				.post(global.CONNECTION.ENDPOINT + "auth/isUserLoggedIn", {
+					headers: {
+						"x-auth-token": token,
+					},
+				})
+				.then((result) => {
+					res(result);
+				})
+				.catch((error) => {
+					rej(error);
+				});
+		});
 	};
 
 	return (
-		<AuthContext.Provider value={{ currentUser, currentToken, login, logout }}>
+		<AuthContext.Provider
+			value={{ currentUser, currentToken, login, logout, isUserLoggedIn }}
+		>
 			{children}
 		</AuthContext.Provider>
 	);
