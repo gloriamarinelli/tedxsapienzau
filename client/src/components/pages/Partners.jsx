@@ -313,24 +313,20 @@ export default function Partners() {
                   fontSize: "2em",
                 }}
               >
-                Community Sponsors
+                Community Partners
               </h2>
               <div className="row">
                 <PartnerCardCommunity
                   imgSrc="SFClubSapienza.webp"
-                  text=""
+                 
                   link="https://startingfinance.com/cerca-club/"
                 />
                 <PartnerCardCommunity
-                  imgSrc="Mentors4U.webp"
-                  text=""
-                  link="https://www.mentors4u.com/en"
+                  imgSrc="MentorsNova.webp"
+                  
+                  link=""
                 />
-                <PartnerCardCommunity
-                  imgSrc="Nova.webp"
-                  text=""
-                  link="https://fondazione-nova.org/"
-                />
+                
                 
               </div>
 
