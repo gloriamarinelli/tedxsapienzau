@@ -5,7 +5,9 @@ import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { Link } from "react-router-dom";
 import "../../resources/styles/partnerstyle.css";
+import "../../resources/styles/partnercommunity.css";
 import "../../index.css";
+import PartnerCardCommunity from "../components/PartnerCardCommunity";
 
 export default function Partners() {
   const [activeYear, setActiveYear] = useState(23);
@@ -303,6 +305,35 @@ export default function Partners() {
                   sponsorType={"friendly"}
                 />
                 */}
+
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2em",
+                }}
+              >
+                Community Sponsors
+              </h2>
+              <div className="row">
+                <PartnerCardCommunity
+                  imgSrc="SFClubSapienza.webp"
+                  text=""
+                  link="https://startingfinance.com/cerca-club/"
+                />
+                <PartnerCardCommunity
+                  imgSrc="Mentors4U.webp"
+                  text=""
+                  link="https://www.mentors4u.com/en"
+                />
+                <PartnerCardCommunity
+                  imgSrc="Nova.webp"
+                  text=""
+                  link="https://fondazione-nova.org/"
+                />
+                
+              </div>
+
               <h2
                 className="section-heading"
                 style={{
@@ -320,7 +351,7 @@ export default function Partners() {
                   sponsorType={"patrocinio"}
                 />
                 <PartnerCard23
-                  imgSrc="Enea.webp"
+                  imgSrc="Enea.png"
                   text="Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sconomico sostenibile"
                   link="https://www.enea.it/it"
                   sponsorType={"patrocinio"}
