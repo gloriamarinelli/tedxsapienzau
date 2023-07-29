@@ -15,6 +15,7 @@ import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import "../../index.css";
 
 export default function NavbarComponent(props) {
 	const [expanded, setExpanded] = useState(false);
@@ -225,6 +226,7 @@ export default function NavbarComponent(props) {
 										data-bs-toggle="dropdown"
 										role="button"
 										aria-expanded="false"
+										style = {{borderRadius: "5px",}}
 									>
 										Edizioni
 									</a>
@@ -254,6 +256,7 @@ export default function NavbarComponent(props) {
 									<Link
 										className="nav-link text-bg-light"
 										to="/blog"
+										style = {{borderRadius: "5px",}}
 										onClick={() => setExpanded(false)}
 									>
 										Blog
@@ -263,6 +266,7 @@ export default function NavbarComponent(props) {
 									<Link
 										className="nav-link text-bg-light"
 										to="/partners"
+										style = {{borderRadius: "5px",}}
 										onClick={() => setExpanded(false)}
 									>
 										Partners
@@ -272,6 +276,7 @@ export default function NavbarComponent(props) {
 									<Link
 										className="nav-link text-bg-light"
 										to="/team"
+										style = {{borderRadius: "5px",}}
 										onClick={() => setExpanded(false)}
 									>
 										Team
@@ -285,6 +290,7 @@ export default function NavbarComponent(props) {
 										href="/location"
 										role="button"
 										aria-expanded="false"
+										style = {{borderRadius: "5px",}}
 									>
 										About us
 									</a>
@@ -338,6 +344,7 @@ export default function NavbarComponent(props) {
 											href=""
 											role="button"
 											aria-expanded="false"
+											style = {{borderRadius: "5px",}}
 										>
 											Menù Admin
 										</a>
@@ -349,15 +356,6 @@ export default function NavbarComponent(props) {
 													onClick={() => setExpanded(false)}
 												>
 													Scrivi
-												</Link>
-											</li>
-											<li>
-												<Link
-													className="nav-link bg-success text-white"
-													to="/newsletter"
-													onClick={() => setExpanded(false)}
-												>
-													Newsletter
 												</Link>
 											</li>
 											<li>

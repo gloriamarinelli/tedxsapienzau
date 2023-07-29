@@ -182,3 +182,13 @@ code {
 	position: relative;
 	margin-left: 7.5%;
 }
+
+.nav-item {
+	padding: 10px;
+	transition: background-color 0.3s ease-in-out;
+	border-radius: 5px;
+  }
+    
+.nav-item:hover {
+	background-color: #c0c0c0;
+  }

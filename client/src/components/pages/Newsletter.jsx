@@ -72,7 +72,7 @@ const Newsletter = () => {
 						marginLeft: "30px",
 					}}
 				>
-					INSCRITTI ALLA NEWSLETTER
+					ISCRITTI ALLA NEWSLETTER
 				</h1>
 			</div>
 
