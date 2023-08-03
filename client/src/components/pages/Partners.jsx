@@ -322,9 +322,11 @@ export default function Partners() {
                   link="https://startingfinance.com/cerca-club/"
                 />
                 <PartnerCardCommunity
-                  imgSrc="MentorsNova.webp"
-                  
-                  link=""
+                  imgSrc="MentorsNova.webp"                  
+                />
+                <PartnerCardCommunity
+                  imgSrc="Thesis4u.webp"                 
+                  link="https://startingfinance.com/cerca-club/"
                 />
                 
                 
