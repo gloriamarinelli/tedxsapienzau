@@ -326,7 +326,7 @@ export default function Partners() {
                 />
                 <PartnerCardCommunity
                   imgSrc="Thesis4u.webp"                 
-                  link="https://startingfinance.com/cerca-club/"
+                  link="https://thesisforyou.com/"
                 />
                 
                 
