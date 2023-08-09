@@ -204,20 +204,38 @@ export default function NavbarComponent(props) {
 								</li>
 								*/}
 
-								<li className="nav-item">
-									<Link to="/awards" onClick={() => setExpanded(false)}>
-										<button
-											type="button"
-											className="btn"
-											style={{
-												backgroundColor: global.COLORS.ROSSO_TED,
-												fontWeight: "bold",
-												color: "#fff",
-											}}
-										>
-											Awards
-										</button>
-									</Link>
+								<li className="nav-item dropdown">
+									<a
+										className="nav-link dropdown-toggle btn-danger rounded"
+										data-bs-toggle="dropdown"
+										role="button"
+										aria-expanded="false"
+										style={{
+											backgroundColor: global.COLORS.ROSSO_TED,
+											fontWeight: "bold",
+											color: "#fff",
+										}}
+									>
+										Awards
+									</a>
+									<ul className="dropdown-menu">
+										<li>
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/awards" onClick={() => setExpanded(false)}>
+												2023
+											</Link>
+										</li>
+										<li>
+											<Link
+												className="dropdown-item text-bg-light"
+												to="/awards22"
+												onClick={() => setExpanded(false)}
+											>
+												2022
+											</Link>
+										</li>
+									</ul>
 								</li>
 
 								<li className="nav-item dropdown">

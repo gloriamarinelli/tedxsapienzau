@@ -22,6 +22,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
 import Awards from "./components/pages/Awards";
+import Awards22 from "./components/pages/Awards_22";
 
 const router = createBrowserRouter([
 	{
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
 			{
 				path: "/awards",
 				element: <Awards />,
+			},
+			{
+				path: "/awards22",
+				element: <Awards22 />,
 			},
 			{
 				path: "/sustainability",

@@ -121,6 +121,14 @@ code {
 	background-size: cover;
 }
 
+.header-awards22 {
+	background-image: url("./components/images/Awards 2022/background\ image_crop.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #000000;
+}
+
 .btn5-2 {
 	display: inline-block;
 	padding: 0.7em 1.4em;
@@ -191,4 +199,10 @@ code {
     
 .nav-item:hover {
 	background-color: #c0c0c0;
+  }
+
+  .responsive { /*TODO*/
+	width: 100%;
+	max-width: 400px;
+	height: auto;
   }
