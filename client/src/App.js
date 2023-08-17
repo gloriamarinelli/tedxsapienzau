@@ -17,12 +17,11 @@ import Write from "./components/pages/Write";
 import Newsletter from "./components/pages/Newsletter";
 import Location from "./components/pages/Location";
 import Sustainability from "./components/pages/Sustainability";
-
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
 import Awards from "./components/pages/Awards";
-import Awards22 from "./components/pages/Awards_22";
+import Awards2022 from "./components/pages/Awards2022";
 
 const router = createBrowserRouter([
 	{
@@ -106,7 +105,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/awards22",
-				element: <Awards22 />,
+				element: <Awards2022 />,
 			},
 			{
 				path: "/sustainability",

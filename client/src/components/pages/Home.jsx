@@ -99,11 +99,10 @@ export default function Home() {
                 src={BackToZero}
                 alt="back to zero"
                 width="300"
-                style={{ transform: "translatey(-50px)" }}
+                style={{ transform: "translatey(-70px)" }}
               />
             </div>
           )}
-          {getCallToAction()}
         </div>
       </div>
 

@@ -5,7 +5,6 @@ import Image1 from "../images/ilaria.jpg";
 import Image5 from "../images/riccardo.jpg";
 import Image4 from "../images/myriam.jpg";
 import Image3 from "../images/matteo.jpg";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
@@ -54,7 +53,9 @@ export default function Awards() {
                 className="btn5-1"
                 style={{
                   fontWeight: "bold",
-                  fontSize: "20px",
+                  width:"50%",
+                  marginLeft: "50px",
+                  alignItems: "center",
                   fontFamily: "GothamBold",
                 }}
               >
