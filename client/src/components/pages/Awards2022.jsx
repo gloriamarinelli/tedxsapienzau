@@ -1,8 +1,7 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image2 from "../images/awards22/artist.jpg";
+import Image2 from "../images/awards22/vincitori_full.png";
 import Image1 from "../images/awards22/artist1.jpg";
-import Image5 from "../images/awards22/speaker.jpg";
 import Image4 from "../images/awards22/speaker1.jpg";
 import Image3 from "../images/awards22/speaker2.jpg";
 import Image6 from "../images/awards22/speaker3.jpg";
@@ -66,29 +65,24 @@ export default function Awards2022() {
         I VINCITORI TEDxSAPIENZAU AWARDS 2022
       </h1>
       <div class="container mt-5 mb-5">
-        <div class="row justify-content-center" style={{ gap: "1px" }}>
-          <div class="col-4">
+        <LazyLoadImage src={Image2} class="winner_22" />
+        <div class="row justify-content-center" style={{ gap: "100px" }}>
+          <div class="col-sm-4">
             {" "}
             <div class="row-4">
-              <LazyLoadImage src={Image5} alt="TedxSapienzaU" height="400" />
+              <LazyLoadImage src={Image3} class="winner_22_small" />
             </div>
-            <div class="row-4">
-              <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="400" />
+            <div class="row-4 winner_22_small">
+              <LazyLoadImage src={Image4} class="winner_22_small" />
             </div>
-            <div class="row-4">
-              <LazyLoadImage src={Image4} alt="TedxSapienzaU" height="400" />
-            </div>
-            <div class="row-4">
-              <LazyLoadImage src={Image6} alt="TedxSapienzaU" height="400" />
+            <div class="row-4 winner_22_small">
+              <LazyLoadImage src={Image6} class="winner_22_small" />
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-sm-4">
             {" "}
-            <div class="row-4">
-              <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="400" />
-            </div>
-            <div class="row-4">
-              <LazyLoadImage src={Image1} alt="TedxSapienzaU" height="400" />
+            <div class="row-4 winner_22_small">
+              <LazyLoadImage src={Image1} class="winner_22_small" />
             </div>
           </div>
         </div>

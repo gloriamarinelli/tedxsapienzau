@@ -127,11 +127,11 @@ export default function Awards() {
       </h3>
       <div class="container mt-5 mb-5">
         <div class="row justify-content-center" style={{ gap: "20px" }}>
-          <div class="col-4">
+          <div class="col-sm-4">
             {" "}
             <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="400" />
           </div>
-          <div class="col-4">
+          <div class="col-sm-4">
             {" "}
             <LazyLoadImage src={Image5} alt="TedxSapienzaU" height="400" />
           </div>

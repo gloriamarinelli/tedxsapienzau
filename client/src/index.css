@@ -201,9 +201,18 @@ code {
   background-color: #c0c0c0;
 }
 
-.responsive {
-  /*TODO*/
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+.winner_22 {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit:scale-down;
+  display: flex;
+  justify-content: center;
+}
+
+.winner_22_small {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit:scale-down;
+  display: flex;
+  justify-content: center;
 }
