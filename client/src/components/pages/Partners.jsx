@@ -354,6 +354,12 @@ export default function Partners() {
                   link="https://www.enea.it/it"
                   sponsorType={"patrocinio"}
                 />
+                <PartnerCard23
+                  imgSrc="Roma.webp"
+                  text=""
+                  link="https://www.comune.roma.it/web/it/assessorato-agricoltura-ambiente-e-ciclo-dei-rifiuti.page"
+                  sponsorType={"patrocinio"}
+                />
               </div>
             </div>
           </div>

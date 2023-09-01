@@ -191,6 +191,25 @@ code {
   margin-left: 7.5%;
 }
 
+.btn-RFW {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  margin: 0 0.3em 0.3em 0;
+  border: none;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+
+  color: white;
+  background-color: #e62153;
+  box-shadow: inset 0 -0.6em 0 -0.3em rgba(0, 0, 0, 0.2);
+}
+.btn-RFW:hover {
+  background: #e62152b5;
+  color: white;
+}
+
 .nav-item {
   padding: 10px;
   transition: background-color 0.3s ease-in-out;
@@ -204,7 +223,7 @@ code {
 .winner_22 {
   max-width: 100%;
   max-height: 100%;
-  object-fit:scale-down;
+  object-fit: scale-down;
   display: flex;
   justify-content: center;
 }
@@ -212,7 +231,7 @@ code {
 .winner_22_small {
   max-height: 100%;
   max-width: 100%;
-  object-fit:scale-down;
+  object-fit: scale-down;
   display: flex;
   justify-content: center;
 }
