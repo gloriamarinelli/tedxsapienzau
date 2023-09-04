@@ -32,7 +32,11 @@ export default function ExecutiveTeamCard({
             width="245px"
             height="350px"
             alt="foto team esecutivo"
-            style={{ borderRadius: "20px 20px 0 0", objectFit: "cover" }}
+            style={{
+              borderRadius: "20px 20px 0 0",
+              objectFit: "cover",
+              backgroundColor: "#1f1f1f",
+            }}
           />
 
           <div

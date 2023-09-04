@@ -318,18 +318,13 @@ export default function Partners() {
               <div className="row">
                 <PartnerCardCommunity
                   imgSrc="SFClubSapienza.webp"
-                 
                   link="https://startingfinance.com/cerca-club/"
                 />
+                <PartnerCardCommunity imgSrc="MentorsNova.webp" />
                 <PartnerCardCommunity
-                  imgSrc="MentorsNova.webp"                  
-                />
-                <PartnerCardCommunity
-                  imgSrc="Thesis4u.webp"                 
+                  imgSrc="Thesis4u.webp"
                   link="https://thesisforyou.com/"
                 />
-                
-                
               </div>
 
               <h2
