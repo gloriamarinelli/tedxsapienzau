@@ -50,25 +50,41 @@ function CountdownTimer() {
         <div className="btn-group">
           {expiryTime !== false ? (
             <>
-              <button type="button" className="btn">
+              <button
+                type="button"
+                className="btn"
+                style={{ color: "#e62153", fontSize: "18px" }}
+              >
                 {countdownTime.countdownDays} Days
               </button>
               <button type="button" className="btn">
                 :
               </button>
-              <button type="button" className="btn">
+              <button
+                type="button"
+                className="btn"
+                style={{ color: "#e62153", fontSize: "18px" }}
+              >
                 {countdownTime.countdownHours} Hours
               </button>
               <button type="button" className="btn">
                 :
               </button>
-              <button type="button" className="btn">
+              <button
+                type="button"
+                className="btn"
+                style={{ color: "#e62153", fontSize: "18px" }}
+              >
                 {countdownTime.countdownMinutes} Minutes
               </button>
               <button type="button" className="btn">
                 :
               </button>
-              <button type="button" className="btn">
+              <button
+                type="button"
+                className="btn"
+                style={{ color: "#e62153", fontSize: "18px" }}
+              >
                 {countdownTime.countdownSeconds} Seconds
               </button>
             </>
