@@ -1,11 +1,5 @@
-@media screen {
-  .event-RFW > div:nth-child(2) {
-    padding-bottom: 30px;
-  }
-}
-
-.event-RFW > div:nth-child(1) {
-  background-color: rgba(37, 37, 37, 0);
+.program-event > div:nth-child(1) {
+  background-color: #e62153;
   display: flex;
   padding: 50px;
   color: white;
@@ -14,8 +8,8 @@
   flex-direction: column;
 }
 
-.event-RFW > div:nth-child(2) {
-  background-color: rgba(37, 37, 37, 0);
+.program-event > div:nth-child(2) {
+  background-color: #e62153;
   display: grid;
   place-items: center;
 }
@@ -25,9 +19,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px;
+  padding: 80px;
   text-align: center;
-  height: 60vh;
+  height: 40vh;
 }
 
 .header-RFW-mobile {
@@ -52,13 +46,11 @@
   background-color: white;
   box-shadow: inset 0 -0.6em 0 -0.3em rgba(0, 0, 0, 0.2);
 }
-.btn-group:hover {
-  color: #e62153;
-}
 
 .btn-RFW-page {
   display: inline-block;
   padding: 20px;
+  margin-left: 200px;
   border: none;
   border-radius: 0.5em;
   box-sizing: border-box;

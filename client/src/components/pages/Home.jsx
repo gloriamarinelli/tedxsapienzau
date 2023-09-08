@@ -190,6 +190,7 @@ function getBannerRFW(windowSize) {
     <section
       style={{
         backgroundImage: `url(${Image1})`,
+
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
