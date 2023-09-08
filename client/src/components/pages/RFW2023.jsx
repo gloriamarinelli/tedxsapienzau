@@ -4,7 +4,7 @@ import global from "../../resources/global.json";
 import CountdownTimer from "../components/CountdownTimer";
 import { useOutletContext } from "react-router";
 import "../../index.css";
-import Iframe from "react-iframe";
+import Iframe from 'react-iframe';
 
 export default function RFW2023() {
   const [windowSize, setWindowSize] = useOutletContext();
