@@ -8,10 +8,12 @@
     "buffer": "^6.0.3",
     "cookie-parser": "^1.4.6",
     "date-fns": "^2.29.3",
+    "google-map-react": "^2.2.1",
     "jsonwebtoken": "^9.0.0",
     "latest-version": "^7.0.0",
     "locale": "^0.1.0",
     "react-bootstrap": "^2.7.0",
+    "react-iframe": "^1.8.5",
     "react-router-sitemap-generator": "^0.0.8",
     "three": "^0.149.0"
   },

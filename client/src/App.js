@@ -22,125 +22,130 @@ import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
 import Awards from "./components/pages/Awards";
 import Awards2022 from "./components/pages/Awards2022";
+import RFW2023 from "./components/pages/RFW2023";
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <HomeManager />,
-		errorElement: (
-			<>
-				<NavbarComponent />
-				<ErrorPage />
-				<Footer />
-			</>
-		),
-		children: [
-			{
-				path: "/",
-				element: <Home />,
-			},
-			{
-				path: "/tedxsapienzau",
-				element: <Home />,
-			},
-			{
-				path: "/partners",
-				element: <Partners />,
-			},
-			{
-				path: "/blog",
-				element: <Blog />,
-			},
-			{
-				path: "/blog/:id",
-				element: <BlogPost />,
-			},
-			{
-				path: "/join",
-				element: <Join />,
-			},
-			{
-				path: "/mission&vision",
-				element: <MissionandVision />,
-			},
-			{
-				path: "/location",
-				element: <Location />,
-			},			
-			{
-				path: "/team",
-				element: <Team />,
-			},
-			{
-				path: "/edizione2022",
-				element: <Edizione2022 />,
-			},
-			{
-				path: "/edizione2023",
-				element: <Edizione2023 />,
-			},
-			{
-				path: "/write",
-				element: <Write />,
-			},
-			{
-				path: "/login",
-				element: <Login />,
-			},
-			{
-				path: "/statuto",
-				element: <Statuto />,
-			},
-			{
-				path: "/privacypolicy",
-				element: <PrivacyPolicy />,
-			},
-			{
-				path: "/newsletter",
-				element: <Newsletter />,
-			},
-			{
-				path: "/awards",
-				element: <Awards />,
-			},
-			{
-				path: "/awards22",
-				element: <Awards2022 />,
-			},
-			{
-				path: "/sustainability",
-				element: <Sustainability />,
-			},
-		],
-	},
+  {
+    path: "/",
+    element: <HomeManager />,
+    errorElement: (
+      <>
+        <NavbarComponent />
+        <ErrorPage />
+        <Footer />
+      </>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/tedxsapienzau",
+        element: <Home />,
+      },
+      {
+        path: "/partners",
+        element: <Partners />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogPost />,
+      },
+      {
+        path: "/join",
+        element: <Join />,
+      },
+      {
+        path: "/mission&vision",
+        element: <MissionandVision />,
+      },
+      {
+        path: "/location",
+        element: <Location />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+      {
+        path: "/edizione2022",
+        element: <Edizione2022 />,
+      },
+      {
+        path: "/edizione2023",
+        element: <Edizione2023 />,
+      },
+      {
+        path: "/write",
+        element: <Write />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/statuto",
+        element: <Statuto />,
+      },
+      {
+        path: "/privacypolicy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "/newsletter",
+        element: <Newsletter />,
+      },
+      {
+        path: "/awards",
+        element: <Awards />,
+      },
+      {
+        path: "/awards22",
+        element: <Awards2022 />,
+      },
+      {
+        path: "/sustainability",
+        element: <Sustainability />,
+      },
+      {
+        path: "/rfw23",
+        element: <RFW2023 />,
+      },
+    ],
+  },
 ]);
 
 function HomeManager() {
-	const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-	useEffect(() => {
-		window.addEventListener("resize", handleResize);
-	}, []);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, []);
 
-	const handleResize = () => {
-		setWindowSize(window.innerWidth);
-	};
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
+  };
 
-	return (
-		<>
-			<NavbarComponent windowSize={windowSize} />
-			<Outlet context={[windowSize, setWindowSize]} />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <NavbarComponent windowSize={windowSize} />
+      <Outlet context={[windowSize, setWindowSize]} />
+      <Footer />
+    </>
+  );
 }
 
 function App() {
-	return (
-		<AuthContextProvider>
-			<RouterProvider router={router} />
-		</AuthContextProvider>
-	);
+  return (
+    <AuthContextProvider>
+      <RouterProvider router={router} />
+    </AuthContextProvider>
+  );
 }
 
 export default App;

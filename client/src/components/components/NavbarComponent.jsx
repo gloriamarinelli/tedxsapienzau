@@ -61,8 +61,8 @@ export default function NavbarComponent(props) {
         <nav>
           <div
             style={{
-              height: global.UTILS.SOCIAL_NAV_HEIGHT,
-              width: "100vw",
+              height: global.SOCIAL_NAV_HEIGHT,
+              width: "100%",
               display: "flex",
               backgroundColor: "#000",
               justifyContent: "flex-end",
@@ -186,7 +186,21 @@ export default function NavbarComponent(props) {
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
                 }`}
               >
-                
+                <li className="nav-item">
+                  <Link to="/rfw23" onClick={() => setExpanded(false)}>
+                    <button
+                      type="button"
+                      className="btn"
+                      style={{
+                        backgroundColor: global.COLORS.ROSSO_TED,
+                        fontWeight: "bold",
+                        color: "#fff",
+                      }}
+                    >
+                      Rome Future Week
+                    </button>
+                  </Link>
+                </li>
 
                 <li className="nav-item dropdown">
                   <a

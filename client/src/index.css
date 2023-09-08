@@ -116,7 +116,6 @@ code {
 /*BUTTON AWARDS*/
 .header-awards {
   background-image: url("./components/images/header_awards23.webp");
-
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -234,4 +233,8 @@ code {
   object-fit: scale-down;
   display: flex;
   justify-content: center;
+}
+
+.where-is-the-event-section{
+  background-color: "white";
 }
