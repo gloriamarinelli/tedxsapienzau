@@ -52,7 +52,10 @@ export default function Home() {
 						className="d-flex align-items-center justify-content-center"
 						style={{
 							height: `calc(100vh - ${global.UTILS.SOCIAL_NAV_HEIGHT})`,
-							width: `${100 - NewsSidebarSize}vw`,
+							width:
+								windowSize > global.UTILS.TABLET_WIDTH
+									? `${100 - NewsSidebarSize}vw`
+									: "100vw",
 							fontFamily: "GothamBold",
 							position: "relative",
 						}}
