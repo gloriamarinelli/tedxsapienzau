@@ -6,8 +6,9 @@ import { useOutletContext } from "react-router";
 import "../../index.css";
 import Iframe from "react-iframe";
 import Image from "../images/RFW23/RFW2.png";
-import Image1 from "../images/RFW23/logo-RFW1.png";
-import Image2 from "../images/RFW23/metroRFW.png";
+import Image1 from "../images/RFW23/logoRFW1.png";
+import Image2 from "../images/RFW23/metroRFWwhite.png";
+import Image3 from "../images/RFW23/metroRFWblack.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function RFW2023() {
@@ -88,7 +89,8 @@ export default function RFW2023() {
               <div className="col-lg-6">
                 <div className="p-5" style={{ fontFamily: "GothamBold" }}>
                   <h1 className="mb-3" style={{ fontSize: "40px" }}>
-                    PROGRAMMA - mercoledì 13 settembre
+                    PROGRAMMA <br />
+                    mercoledì 13 settembre
                   </h1>
 
                   <ul
@@ -139,14 +141,7 @@ export default function RFW2023() {
                     width="600"
                   />
                 </div>
-
-                <LazyLoadImage
-                  src={Image2}
-                  alt="RFW"
-                  height={
-                    windowSize > global.UTILS.MOBILE_WIDTH ? "200px" : "100px"
-                  }
-                />
+                <LazyLoadImage src={Image3} alt="RFW" height={"100px"} />
               </div>
             </div>
           </div>
@@ -172,7 +167,7 @@ export default function RFW2023() {
                       textShadow: "1px 1px 1px black",
                     }}
                   >
-                    l Comitato promotore della Conferenza TEDx presso la
+                    Il Comitato promotore della Conferenza TEDx presso la
                     Sapienza Università di Roma propone uno spazio di
                     riflessione e dialogo sul ruolo dei rapporti tra i due
                     mondi, dell'Università e dell'Impresa, nelle sfide presenti
@@ -245,6 +240,7 @@ export default function RFW2023() {
             Insieme per il futuro
           </h1>
         </div>
+
         <div className="container-lg marketing">
           <div className="row featurette mt-5 mb-5">
             <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
@@ -264,19 +260,24 @@ export default function RFW2023() {
             </div>
             <div
               className="col-md-7 order-md-2 mt-5"
-              style={{ backgroundColor: "#e62153", color: "white" }}
+              style={{
+                backgroundColor: "#e62153",
+                color: "white",
+                fontFamily: "GothamBold",
+              }}
             >
-              <h1
+              <h3
                 className="mb-3 mt-3 text-center"
-                style={{ fontSize: "30px", fontWeight: "bold", color: "black" }}
+                style={{ fontSize: "28px", fontWeight: "bold", color: "black" }}
               >
-                PROGRAMMA
-              </h1>
+                PROGRAMMA <br />
+                mercoledì 13 settembre
+              </h3>
               <ul
                 style={{
                   textShadow: "1px 1px 2px black",
                   listStyleType: "none",
-                  fontSize: "20px",
+                  fontSize: "18px",
                   lineHeight: "50px",
                   marginLeft: "-25px",
                 }}
@@ -321,13 +322,43 @@ export default function RFW2023() {
                 />
               </div>
               <div className="col-md-7 order-md-2">
-                <LazyLoadImage
-                  src={Image2}
-                  alt="RFW"
-                  height={
-                    windowSize > global.UTILS.MOBILE_WIDTH ? "300px" : "200px"
-                  }
-                />
+                <LazyLoadImage src={Image2} alt="RFW" height={"50px"} />
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="container-lg marketing"
+            style={{ backgroundImage: `url(${Image})`, color: "white" }}
+          >
+            <div className="row featurette mt-5 ">
+              <div className="col-md-7 order-md-2 align-items-center">
+                <h6
+                  className="mb-3 mt-3 "
+                  style={{
+                    color: "white",
+                    textAlign: "justify",
+                  }}
+                >
+                  Il Comitato promotore della Conferenza TEDx presso la Sapienza
+                  Università di Roma propone uno spazio di riflessione e dialogo
+                  sul ruolo dei rapporti tra i due mondi, dell'Università e
+                  dell'Impresa, nelle sfide presenti e future di ricerca,
+                  innovazione e sviluppo.
+                  <br />
+                  Durante la tavola rotonda si parlerà di crescita in ambito
+                  imprenditoriale, futuro del lavoro e innovazione tecnologica,
+                  andando ad esplorare la centralità delle università nel
+                  generare futuro, fornendo conoscenze, competenze e risorse.
+                  <br />
+                  Le Università come incubatori di innovazione e promotori dello
+                  sviluppo di nuovi ecosistemi imprenditoriali.
+                  <br />
+                  Durante l'incontro sarà possibile dialogare e interagire con
+                  esperti provenienti dal mondo dell'Università e dell'Impresa.
+                </h6>
+
+                <LazyLoadImage src={Image1} alt="RFW" height={"150px"} />
               </div>
             </div>
           </div>
