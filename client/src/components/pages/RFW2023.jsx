@@ -5,6 +5,10 @@ import CountdownTimer from "../components/CountdownTimer";
 import { useOutletContext } from "react-router";
 import "../../index.css";
 import Iframe from "react-iframe";
+import Image from "../images/RFW23/RFW2.png";
+import Image1 from "../images/RFW23/logo-RFW1.png";
+import Image2 from "../images/RFW23/metroRFW.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function RFW2023() {
   const [windowSize, setWindowSize] = useOutletContext();
@@ -82,9 +86,9 @@ export default function RFW2023() {
           <div className="container px-5">
             <div className="row gx-5 align-items-center">
               <div className="col-lg-6">
-                <div className="p-5">
-                  <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>
-                    PROGRAMMA
+                <div className="p-5" style={{ fontFamily: "GothamBold" }}>
+                  <h1 className="mb-3" style={{ fontSize: "40px" }}>
+                    PROGRAMMA - mercoledì 13 settembre
                   </h1>
 
                   <ul
@@ -93,7 +97,7 @@ export default function RFW2023() {
                       fontSize: "20px",
                       lineHeight: "50px",
                       marginLeft: "-25px",
-                      textShadow: "1px 1px 2px black",
+                      textShadow: "1px 1px 1px black",
                       color: "white",
                     }}
                   >
@@ -125,7 +129,7 @@ export default function RFW2023() {
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-6 ">
+              <div className="col-lg-6">
                 <div className="p-5 d-flex justify-content-center align-items-center">
                   <Iframe
                     url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5939.173993766895!2d12.506515243816233!3d41.90173842035876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f619da4adeb5d%3A0x8558a2dbf6f699eb!2sPalazzo%20del%20Rettorato!5e0!3m2!1sit!2sit!4v1694173166033!5m2!1sit!2sit"
@@ -133,6 +137,70 @@ export default function RFW2023() {
                     className=""
                     height="400"
                     width="600"
+                  />
+                </div>
+
+                <LazyLoadImage
+                  src={Image2}
+                  alt="RFW"
+                  height={
+                    windowSize > global.UTILS.MOBILE_WIDTH ? "200px" : "100px"
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          style={{
+            backgroundImage: `url(${Image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "auto",
+          }}
+        >
+          <div className="container px-5">
+            <div className="row gx-5 align-items-center">
+              <div className="col-lg-6" style={{ fontFamily: "GothamBold" }}>
+                <div className="p-5">
+                  <h5
+                    style={{
+                      color: "white",
+                      textAlign: "justify",
+                      textShadow: "1px 1px 1px black",
+                    }}
+                  >
+                    l Comitato promotore della Conferenza TEDx presso la
+                    Sapienza Università di Roma propone uno spazio di
+                    riflessione e dialogo sul ruolo dei rapporti tra i due
+                    mondi, dell'Università e dell'Impresa, nelle sfide presenti
+                    e future di ricerca, innovazione e sviluppo.
+                    <br />
+                    Durante la tavola rotonda si parlerà di crescita in ambito
+                    imprenditoriale, futuro del lavoro e innovazione
+                    tecnologica, andando ad esplorare la centralità delle
+                    università nel generare futuro, fornendo conoscenze,
+                    competenze e risorse.
+                    <br />
+                    Le Università come incubatori di innovazione e promotori
+                    dello sviluppo di nuovi ecosistemi imprenditoriali.
+                    <br />
+                    Durante l'incontro sarà possibile dialogare e interagire con
+                    esperti provenienti dal mondo dell'Università e
+                    dell'Impresa.
+                  </h5>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="p-5 d-flex justify-content-center align-items-center">
+                  <LazyLoadImage
+                    src={Image1}
+                    alt="RFW"
+                    height={
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "300px" : "200px"
+                    }
                   />
                 </div>
               </div>
@@ -252,7 +320,15 @@ export default function RFW2023() {
                   width="350"
                 />
               </div>
-              <div className="col-md-7 order-md-2"></div>
+              <div className="col-md-7 order-md-2">
+                <LazyLoadImage
+                  src={Image2}
+                  alt="RFW"
+                  height={
+                    windowSize > global.UTILS.MOBILE_WIDTH ? "300px" : "200px"
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
