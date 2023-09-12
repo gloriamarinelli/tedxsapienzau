@@ -111,22 +111,35 @@ export default function RFW2023() {
                     </li>
                     <hr />
                     <li>
-                      ore 17:30 Intervento del Prof. Alberto Pastore (Sapienza
-                      Università di Roma){" "}
+                      ore 17:30 Intervento Prof. Alberto Pastore - Career
+                      Service e Docente Sapienza Prorettore Placement, scouting,
+                      fundraising e incubazione di impresa{" "}
                     </li>
                     <hr />
                     <li>
-                      ore 17:45 Intervento della Prof.ssa Daniela De Leo (Rome
-                      Technopole)
+                      ore 17:45 Intervento Prof.ssa Daniela De Leo - Prorettrice
+                      al Public Engagement e Referente Sapienza per lo
+                      Spoke5-RomeTechnopole
                     </li>
                     <hr />
-                    <li>ore 18:00 Intervento di UniCredit</li>
+                    <li>
+                      ore 18:00 Intervento Debora Gatti - Head of People
+                      Attraction & Recruitment Italy Serena De Vena - Head of
+                      Learning & Development Italy di UniCredit
+                    </li>
                     <hr />
-                    <li>ore 18:15 Intervento di TIM</li>
+                    <li>
+                      ore 18:15 Intervento Felicita Di Rosa - HR, Organization &
+                      Real Estate di TIM Academy & Development
+                    </li>
                     <hr />
-                    <li>ore 18:30 Intervento di Millionaire</li>
+                    <li>
+                      ore 18:30 Intervento Matteo Cerri - Direttore Editoriale
+                      di Millionaire{" "}
+                    </li>
                     <hr />
                     <li>ore 18:45 Q&A per il pubblico</li>
+
                     <hr />
                   </ul>
                 </div>
@@ -290,20 +303,32 @@ export default function RFW2023() {
                 </li>
                 <hr />
                 <li>
-                  ore 17:30 Intervento del Prof. Alberto Pastore (Sapienza
-                  Università di Roma){" "}
+                  ore 17:30 Intervento Prof. Alberto Pastore - Career Service e
+                  Docente Sapienza Prorettore Placement, scouting, fundraising e
+                  incubazione di impresa{" "}
                 </li>
                 <hr />
                 <li>
-                  ore 17:45 Intervento della Prof.ssa Daniela De Leo (Rome
-                  Technopole)
+                  ore 17:45 Intervento Prof.ssa Daniela De Leo - Prorettrice al
+                  Public Engagement e Referente Sapienza per lo
+                  Spoke5-RomeTechnopole
                 </li>
                 <hr />
-                <li>ore 18:00 Intervento di UniCredit</li>
+                <li>
+                  ore 18:00 Intervento Debora Gatti - Head of People Attraction
+                  & Recruitment Italy Serena De Vena - Head of Learning &
+                  Development Italy di UniCredit
+                </li>
                 <hr />
-                <li>ore 18:15 Intervento di TIM</li>
+                <li>
+                  ore 18:15 Intervento Felicita Di Rosa - HR, Organization &
+                  Real Estate di TIM Academy & Development
+                </li>
                 <hr />
-                <li>ore 18:30 Intervento di Millionaire</li>
+                <li>
+                  ore 18:30 Intervento Matteo Cerri - Direttore Editoriale di
+                  Millionaire{" "}
+                </li>
                 <hr />
                 <li>ore 18:45 Q&A per il pubblico</li>
               </ul>
