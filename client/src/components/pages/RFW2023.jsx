@@ -124,8 +124,8 @@ export default function RFW2023() {
                     <hr />
                     <li>
                       ore 18:00 Intervento Debora Gatti - Head of People
-                      Attraction & Recruitment Italy Serena De Vena - Head of
-                      Learning & Development Italy di UniCredit
+                      Attraction & Recruitment Italy <br/>
+                      Intervento Serena De Vena - Head of Learning & Development Italy di UniCredit
                     </li>
                     <hr />
                     <li>
@@ -316,7 +316,8 @@ export default function RFW2023() {
                 <hr />
                 <li>
                   ore 18:00 Intervento Debora Gatti - Head of People Attraction
-                  & Recruitment Italy Serena De Vena - Head of Learning &
+                  & Recruitment Italy <br/>
+                  Serena De Vena - Head of Learning &
                   Development Italy di UniCredit
                 </li>
                 <hr />
