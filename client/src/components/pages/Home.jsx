@@ -3,6 +3,7 @@ import React from "react";
 import global from "../../resources/global.json";
 import "../../index.css";
 import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
+import NewsBox from "../components/NewsBox";
 import BackToZero from "../images/Logo BTZ.png";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
@@ -408,36 +409,4 @@ function getVerticalBannerNews(windowSize) {
     //I don't want to show the sidebar if the screen is too small
     return <></>;
   }
-}
-
-/**
- *
- * @param {*} title = title of the news
- * @param {*} imgSrc = link to the image
- * @param {*} linkTo = link to the page that contains the news
- * @returns a box that contains the news
- */
-function NewsBox({ title, imgSrc, linkTo }) {
-  return (
-    <div
-      style={{
-        backgroundColor: "rgba(50, 50, 50, 0.05)",
-        width: "95%",
-        height: "150px",
-        padding: "5px",
-        display: "flex",
-        alignItems: "center",
-        borderRadius: "2px",
-      }}
-    >
-      <Link
-        to={linkTo}
-        style={{ textDecoration: "none", color: "black", maxWidth: "70%" }}
-      >
-        <h1 style={{ fontSize: "20px" }}>{title}</h1>
-      </Link>
-
-      <img width="40%" src={imgSrc} />
-    </div>
-  );
 }
