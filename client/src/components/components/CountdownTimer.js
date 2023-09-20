@@ -73,7 +73,7 @@ function CountdownTimer() {
               </button>
             </>
           ) : (
-            <p>L'evento è finito!</p>
+            <p style={{color: "#e62153"}}>L'evento è finito!</p>
           )}
         </div>
       </div>
