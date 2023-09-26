@@ -109,7 +109,7 @@ export default function Home() {
                   src={BackToZero}
                   alt="back to zero"
                   width="300"
-                  style={{ transform: "translatey(-70px)" }}
+                  style={{ transform: "translatey(-50px)" }}
                 />
               </div>
             )}
