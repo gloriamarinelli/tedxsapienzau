@@ -305,7 +305,7 @@ export default function Team2022() {
             fontSize: "40px",
           }}
         >
-          Team Communication, Editorial & Marketing
+          Team Communication, Editorial, Marketing & Media
         </h1>
         <div className="row">{cemArray}</div>
         <h1
