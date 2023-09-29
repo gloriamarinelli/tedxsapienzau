@@ -325,6 +325,10 @@ export default function Partners() {
                   imgSrc="Thesis4u.webp"
                   link="https://thesisforyou.com/"
                 />
+                <PartnerCardCommunity
+                  imgSrc="JESAP.webp"
+                  link="https://jesap.it/"
+                />
               </div>
 
               <h2
