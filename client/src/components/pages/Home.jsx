@@ -113,10 +113,6 @@ export default function Home() {
                 />
               </div>
             )}
-            <h1
-              style={{ fontSize: "120px", zIndex: 2 }}
-              className="text-white"
-            ></h1>
             {getCallToAction()}
           </div>
         </div>
