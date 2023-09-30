@@ -30,6 +30,7 @@ function Footer() {
         console.log(response);
         inputRef.current.value = "";
         inputRef.current.style.borderColor = "green";
+        inputRef.current.placeholder = "Email inserita con successo!";
       })
       .catch((error) => {
         console.log(error);
