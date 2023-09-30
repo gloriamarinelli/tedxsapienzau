@@ -4,6 +4,7 @@ import blogRoutes from "./routes/blog.js";
 import speakerRoutes from "./routes/speakers.js";
 import teamRoutes from "./routes/team.js";
 import authRoutes from "./routes/auth.js";
+import eventbriteRoutes from "./routes/eventbrite.js";
 import bodyParser from "body-parser";
 import newsletterRoutes from "./routes/newsletter.js";
 import cookieParser from "cookie-parser";
@@ -20,6 +21,7 @@ app.use("/speakers", speakerRoutes);
 app.use("/team", teamRoutes);
 app.use("/auth", authRoutes);
 app.use("/newsletter", newsletterRoutes);
+app.use("/eventbrite", eventbrite);
 
 app.get("/", (req, res) => {
 	res.json("Hello backend tedxSapienzaU!");

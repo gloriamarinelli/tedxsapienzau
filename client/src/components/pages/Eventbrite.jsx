@@ -1,34 +1,40 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 
 export default function Eventbrite() {
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [nome, setNome] = useState("");
+  const [cognome, setCognome] = useState("");
 
-  const inputRef = useRef();
-
-  const submitHandle = (event) => {
+  const submitHandle = async (event) => {
     event.preventDefault();
-    let email = inputRef.current.value;
+
     let domain = email.split("@")[1];
 
     if (domain === "studenti.uniroma1.it" || domain === "uniroma1.it") {
-      axios
-        .post(global.CONNECTION.ENDPOINT + "newsletter", {
-          email,
-        })
-        .then((response) => {
-          console.log(response);
-          inputRef.current.value = "";
-          inputRef.current.style.borderColor = "green";
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      try {
+        const response = await axios.post(
+          global.CONNECTION.ENDPOINT + "eventbrite",
+          {
+            email,
+            nome,
+            cognome,
+          }
+        );
+
+        console.log(response);
+        event.target.reset();
+
+        setFormSubmitted(true);
+      } catch (error) {
+        console.error(error);
+      }
     } else {
-      inputRef.current.style.borderColor = "red";
+      alert("Email non valida");
     }
   };
 
@@ -54,7 +60,7 @@ export default function Eventbrite() {
         }}
         className="login-container"
       >
-        <form style={{ width: "50%" }}>
+        <form style={{ width: "50%" }} onSubmit={submitHandle}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <label htmlFor="email">Email:</label>
             <input
@@ -62,21 +68,35 @@ export default function Eventbrite() {
               type="text"
               id="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            ></input>
+            />
+
             <label htmlFor="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" className="mb-4" />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              className="mb-4"
+            />
+
             <label htmlFor="cognome">Cognome:</label>
-            <input type="text" id="cognome" name="cognome" className="mb-4" />
-            <button
-              type="submit"
-              onClick={submitHandle}
-              className="button"
-              style={{ width: "100%" }}
-            >
+            <input
+              type="text"
+              id="cognome"
+              name="cognome"
+              value={cognome}
+              onChange={(e) => setCognome(e.target.value)}
+              className="mb-4"
+            />
+
+            <Button type="submit" className="button" style={{ width: "100%" }}>
               Submit
-            </button>
+            </Button>
           </div>
         </form>
       </div>
