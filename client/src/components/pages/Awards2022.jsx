@@ -50,7 +50,6 @@ export default function Awards2022() {
           </div>
         </div>
         <div className="col-md-6">
-          <LazyLoadImage src={logoAwardsBianco} width="300px" />
         </div>
       </div>
 

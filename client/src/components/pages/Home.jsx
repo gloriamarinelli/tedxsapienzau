@@ -203,7 +203,7 @@ function getBannerRFW(windowSize) {
                 style={{
                   textAlign: "justify",
                   fontSize: "16px",
-                  marginBottom: "25px",
+                  marginBottom: "auto",
                 }}
               >
                 Dall’<strong>11</strong> al <strong>17 settembre</strong> la{" "}
@@ -233,7 +233,7 @@ function getBannerRFW(windowSize) {
                   IL FUTURO CI ASPETTA.
                 </strong>
               </p>
-              <a
+              {/*<a
                 className="btn-RFW"
                 style={{
                   fontSize:
@@ -245,7 +245,7 @@ function getBannerRFW(windowSize) {
                 rel="noreferrer"
               >
                 Partecipa anche tu!
-              </a>
+              </a>*/}
             </div>
           </div>
         </div>

@@ -116,7 +116,6 @@ export default function Edizione2023() {
             </div>
           </div>
           <div className="col-md-6">
-            <LazyLoadImage src={TedxLogo} width="300px" />
           </div>
         </div>
       </section>

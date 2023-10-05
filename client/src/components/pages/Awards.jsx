@@ -47,7 +47,7 @@ export default function Awards() {
             <p className="col-8">18 Aprile 2023</p>
 
             <div className="row mt-3">
-              <a
+              {/*<a
                 href="https://www.eventbrite.it/e/biglietti-awards-by-tedxsapienzau-514452590547"
                 type="button"
                 className="btn5-1"
@@ -60,13 +60,11 @@ export default function Awards() {
                 }}
               >
                 Ottieni i biglietti
-              </a>
+              </a>*/}
             </div>
           </div>
         </div>
-        <div className="col-md-6">
-          <LazyLoadImage src={logoAwardsBianco} width="300px" />
-        </div>
+        <div className="col-md-6"></div>
       </div>
       <div className="container mb-5 d-flex justify-content-center align-items-center flex-column">
         <h1

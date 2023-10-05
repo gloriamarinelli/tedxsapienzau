@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartnerCardCommunity({ imgSrc, text, link }) {
+export default function PartnerCardCommunity({ imgSrc, text, sponsorType, link }) {
   return (
     <>
       <div
