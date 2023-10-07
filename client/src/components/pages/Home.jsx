@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import Image from "../images/RFW23/logoRFW.webp";
 import Image1 from "../images/RFW23/RFW.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Iframe from "react-iframe";
 
 const NewsSidebarSize = 18;
 

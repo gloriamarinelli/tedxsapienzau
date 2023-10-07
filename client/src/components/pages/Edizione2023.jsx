@@ -101,8 +101,9 @@ export default function Edizione2023() {
                 size="2x"
               />
               <p className="col-8">
-                Università La Sapienza - Aula Magna Rettorato Piazzale Aldo
-                Moro, 5, 00185 Roma RM
+               Aula Magna, <br />
+               Palazzo del Rettorato <br/>
+               Sapienza Università di Roma
               </p>
             </div>
             <div className="row">
@@ -112,7 +113,7 @@ export default function Edizione2023() {
                 style={{ color: global.COLORS.ROSSO_TED }}
                 size="2x"
               />
-              <p className="col-8">Autunno 2023</p>
+              <p className="col-8">15 ottobre 2023</p>
             </div>
           </div>
           <div className="col-md-6">

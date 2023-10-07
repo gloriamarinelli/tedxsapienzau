@@ -98,8 +98,9 @@ export default function Edizione2022() {
                 size="2x"
               />
               <p className="col-8">
-                Università La Sapienza - Aula Magna Rettorato Piazzale Aldo
-                Moro, 5, 00185 Roma RM
+                Aula Magna, <br />
+                Palazzo del Rettorato <br />
+                Sapienza Università di Roma
               </p>
             </div>
             <div className="row">

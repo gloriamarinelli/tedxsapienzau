@@ -143,7 +143,7 @@ export default function NavbarComponent(props) {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#footer">
+                  <a className="nav-link" href="/newsletterBrevo">
                     <FontAwesomeIcon
                       icon={faEnvelope}
                       style={{ color: "white" }}

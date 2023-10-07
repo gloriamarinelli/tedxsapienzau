@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -9,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "../images/logo-white.png";
+import Image1 from "../images/newsletter.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
 import axios from "axios";
@@ -117,31 +119,25 @@ function Footer() {
                     Iscriviti alla newsletter per rimanere aggiornato sui nostri
                     eventi
                   </p>
-
-                  <form className="row d-flex align-items-center">
-                    <input
-                      ref={inputRef}
-                      type="text"
-                      id="email"
-                      name="email"
-                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                      required
-                      className="btn btn-outline-light btn-social mx-1 col-9"
-                      placeholder="Inserisci la tua email...*"
-                    ></input>
-
-                    <FontAwesomeIcon
-                      className="text-center col-1"
-                      type="submit"
-                      style={{
-                        color: "#fff",
-                        cursor: "pointer",
-                      }}
-                      icon={faCircleArrowRight}
-                      size="2x"
-                      onClick={submitHandle}
-                    />
-                  </form>
+                  <LazyLoadImage
+                    src={Image1}
+                    alt="newsletter"
+                    width="100"
+                    height="100"
+                    style={{
+                      alignSelf: "center",
+                    }}
+                  />
+                  <a
+                  href="/newsletterBrevo"
+                    style={{
+                      color: "white",
+                      marginLeft: "20px",
+                      fontFamily: "GothamBold",
+                    }}
+                  >
+                    Clicca qui!
+                  </a>
                 </div>
 
                 <div className="col-lg-4 mb-5 mb-lg-0 ">
