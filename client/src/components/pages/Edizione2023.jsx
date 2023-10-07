@@ -113,7 +113,7 @@ export default function Edizione2023() {
                 style={{ color: global.COLORS.ROSSO_TED }}
                 size="2x"
               />
-              <p className="col-8">15 ottobre 2023</p>
+              <p className="col-8">15 novembre 2023</p>
             </div>
           </div>
           <div className="col-md-6">
