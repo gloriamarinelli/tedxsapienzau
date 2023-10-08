@@ -305,13 +305,7 @@ function Footer() {
                     Iscriviti alla newsletter per rimanere aggiornato sui nostri
                     eventi
                   </p>
-                  <p
-                    className="text-white font-weight-light mt-1 mb-4"
-                    style={{ fontFamily: "GothamBook" }}
-                  >
-                    Iscriviti alla newsletter per rimanere aggiornato sui nostri
-                    eventi
-                  </p>
+
                   <LazyLoadImage
                     src={Image1}
                     alt="newsletter"

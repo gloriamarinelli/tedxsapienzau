@@ -69,7 +69,7 @@ export default function NewsletterBrevo() {
           <h1
             className="font-weight-bold mt-5 mb-5 text-center"
             style={{
-              fontSize: "35px",
+              fontSize: "30px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
             }}
