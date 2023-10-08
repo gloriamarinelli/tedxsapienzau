@@ -129,7 +129,7 @@ function Footer() {
                     }}
                   />
                   <a
-                  href="/newsletterBrevo"
+                    href="/newsletterBrevo"
                     style={{
                       color: "white",
                       marginLeft: "20px",
@@ -305,34 +305,32 @@ function Footer() {
                     Iscriviti alla newsletter per rimanere aggiornato sui nostri
                     eventi
                   </p>
-                  <div className="row d-flex align-items-center">
-                    <form
-                      onSubmit={submitHandle}
-                      className="row d-flex align-items-center"
-                    >
-                      <input
-                        type="text"
-                        id="email"
-                        name="email"
-                        required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        className="btn btn-outline-light btn-social mx-1 col-9"
-                        placeholder="Inserisci la tua email..*"
-                      ></input>
-
-                      <FontAwesomeIcon
-                        className="text-center col-1"
-                        type="submit"
-                        style={{
-                          color: "#fff",
-                          cursor: "pointer",
-                        }}
-                        icon={faCircleArrowRight}
-                        size="2x"
-                        onClick={submitHandle}
-                      />
-                    </form>
-                  </div>
+                  <p
+                    className="text-white font-weight-light mt-1 mb-4"
+                    style={{ fontFamily: "GothamBook" }}
+                  >
+                    Iscriviti alla newsletter per rimanere aggiornato sui nostri
+                    eventi
+                  </p>
+                  <LazyLoadImage
+                    src={Image1}
+                    alt="newsletter"
+                    width="100"
+                    height="100"
+                    style={{
+                      alignSelf: "center",
+                    }}
+                  />
+                  <a
+                    href="/newsletterBrevo"
+                    style={{
+                      color: "white",
+                      marginLeft: "20px",
+                      fontFamily: "GothamBold",
+                    }}
+                  >
+                    Clicca qui!
+                  </a>
                 </div>
 
                 <div>

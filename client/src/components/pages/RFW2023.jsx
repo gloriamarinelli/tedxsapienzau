@@ -258,7 +258,7 @@ export default function RFW2023() {
         <div className="container-lg marketing">
           <div className="row featurette mt-5 mb-5">
             <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-              <a
+              {/* <a
                 className="btn-RFW-page-mobile"
                 style={{
                   fontSize:
@@ -270,7 +270,7 @@ export default function RFW2023() {
                 rel="noreferrer"
               >
                 Partecipa ora!
-              </a>
+              </a>*/}
             </div>
             <div
               className="col-md-7 order-md-2 mt-5"
@@ -342,8 +342,6 @@ export default function RFW2023() {
               <div className="col-md-5 mb-3 order-md-1 d-flex justify-content-center align-items-center">
                 <Iframe
                   url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5939.173993766895!2d12.506515243816233!3d41.90173842035876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f619da4adeb5d%3A0x8558a2dbf6f699eb!2sPalazzo%20del%20Rettorato!5e0!3m2!1sit!2sit!4v1694173166033!5m2!1sit!2sit"
-                  id=""
-                  className=""
                   height="500"
                   width="350"
                 />
@@ -356,7 +354,10 @@ export default function RFW2023() {
 
           <div
             className="container-lg marketing"
-            style={{ backgroundImage: `url(${Image})`, color: "white" }}
+            style={{
+              backgroundImage: `url(${Image})`,
+              backgroundSize: "cover",
+            }}
           >
             <div className="row featurette mt-5 ">
               <div className="col-md-7 order-md-2 align-items-center">
