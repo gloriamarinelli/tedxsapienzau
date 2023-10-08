@@ -1,11 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import Iframe from "react-iframe";
 
 export default function NewsletterBrevo() {
-  const state = useLocation().state;
   const [windowSize, setWindowSize] = useOutletContext();
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
@@ -30,7 +28,7 @@ export default function NewsletterBrevo() {
           <h1
             className="font-weight-bold mt-5 mb-5 text-center"
             style={{
-              fontSize: "50px",
+              fontSize: "40px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
             }}
@@ -43,7 +41,7 @@ export default function NewsletterBrevo() {
         <Iframe
           width="100%"
           height="500"
-          src="https://31dfcf3b.sibforms.com/serve/MUIFANTb2PgDRsFNib3WYsB0XikTNHLNqorfqEr1y3O0yDmb2V_mpbIggi5dgSHaVxdd0hKFu2ulrerVG35KEmlZgr7boTiHk5Un9lPyBHaucqk-KkSev4b0mEzcM7KqfVTmJfrt43ut2jt_JfywGkiZ9yK02Ryyc2k5zjCbLqWiv2_UFWKF5WQScWWJYrjd_xQQjfYzc6Te6S4n"
+          src="https://31dfcf3b.sibforms.com/serve/MUIFABcw3TcswjVPMUoHXOXckrtQCP6iHRcUAW_DcMk5loXFpS5fIABCYq42tF7CbyK6_t5hFbETlmDJwDorjy7D3bOmkYFp1Xa3vPmk5CzLH8VGQgnPDYIoerKjrt53a26iGQZwlLPIg9ebQAL9j71Ct1E57ld052nEwl2D1X1pVhvYyEIALI65JapHoA1INZcH9W843TTUhogb"
         ></Iframe>
       </>
     );
@@ -81,8 +79,8 @@ export default function NewsletterBrevo() {
 
         <Iframe
           width="100%"
-          height="600"
-          src="https://31dfcf3b.sibforms.com/serve/MUIFAIg0zbBkaxs7zap8K5qhO-YqDD2876NMmonXINEkn4KLE0VtfCtJArVGmFvPqaXc2DhA_UbGoPqH3CEaQ-r0w-gt7-OVQRTIUQHEhsrF3j5g9v4YSLoucqrcQdVxXVwTata7SopA7Eb2Lc7oEY5UkEJXasZoStXYULrDrNn873DqrvdD0s223SODBcKBldaLKE-mlH9r1GeW"
+          height="450"
+          src="https://31dfcf3b.sibforms.com/serve/MUIFABcw3TcswjVPMUoHXOXckrtQCP6iHRcUAW_DcMk5loXFpS5fIABCYq42tF7CbyK6_t5hFbETlmDJwDorjy7D3bOmkYFp1Xa3vPmk5CzLH8VGQgnPDYIoerKjrt53a26iGQZwlLPIg9ebQAL9j71Ct1E57ld052nEwl2D1X1pVhvYyEIALI65JapHoA1INZcH9W843TTUhogb"
         ></Iframe>
       </>
     );
