@@ -417,18 +417,14 @@ function getVerticalBannerNews(windowSize) {
 
         <hr></hr>
         <NewsBox
-          title={
-            "Prenota i biglietti per il Main Event di TEDxSapienzaU"
-          }
+          title={"Prenota i biglietti per il Main Event di TEDxSapienzaU"}
           imgSrc={Eventbrite}
           linkTo={
             "https://www.eventbrite.it/e/biglietti-tedxsapienzau-2023-back-to-zero-717157827367?aff=oddtdtcreator"
           }
         />
         <NewsBox
-          title={
-            "Mercoledì 15 novembre torna Back to Zero"
-          }
+          title={"Mercoledì 15 novembre torna Back to Zero"}
           imgSrc={BackToZeroBLACK}
           linkTo={"/edizione2023"}
         />

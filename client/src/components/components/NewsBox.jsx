@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 export default function NewsBox({ title, imgSrc, linkTo }) {
@@ -17,7 +16,6 @@ export default function NewsBox({ title, imgSrc, linkTo }) {
     >
       <Link
         to={linkTo}
-        target="_blank"
         style={{ textDecoration: "none", color: "black", maxWidth: "70%" }}
       >
         <h1 style={{ fontSize: "20px", textAlign: "center", width: "90%" }}>
