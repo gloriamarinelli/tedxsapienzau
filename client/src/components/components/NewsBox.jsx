@@ -14,14 +14,16 @@ export default function NewsBox({ title, imgSrc, linkTo }) {
         borderRadius: "2px",
       }}
     >
-      <Link
-        to={linkTo}
+      <a
+        href={linkTo}
+        target="_blank"
+        rel="noreferrer"
         style={{ textDecoration: "none", color: "black", maxWidth: "70%" }}
       >
         <h1 style={{ fontSize: "20px", textAlign: "center", width: "90%" }}>
           {title}
         </h1>
-      </Link>
+      </a>
 
       <img width="30%" src={imgSrc} alt="" />
     </div>

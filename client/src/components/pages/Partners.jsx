@@ -331,6 +331,11 @@ export default function Partners() {
                   imgSrc="JESAP.webp"
                   link="https://jesap.it/"
                 />
+                 <PartnerCardCommunity
+                  imgSrc="Peekaboo.webp"
+                  link="https://www.peekaboovision.com/"
+                />
+                
               </div>
 
               <h2
