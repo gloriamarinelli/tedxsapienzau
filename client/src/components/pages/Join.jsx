@@ -379,10 +379,8 @@ export default function Join() {
             backgroundColor: "red",
             textAlign: "left",
             display: "grid",
-            height: "100",
             color: "#fff",
-            height: "40vh",
-            display: "grid",
+						height: "30vh",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}

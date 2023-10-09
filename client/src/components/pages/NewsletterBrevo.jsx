@@ -57,9 +57,8 @@ export default function NewsletterBrevo() {
             backgroundColor: "red",
             textAlign: "left",
             display: "grid",
-            height: "40vh",
+            height: "30vh",
             color: "#fff",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
@@ -67,7 +66,7 @@ export default function NewsletterBrevo() {
           <h1
             className="font-weight-bold mt-5 mb-5 text-center"
             style={{
-              fontSize: "30px",
+              fontSize: "40px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
             }}

@@ -19,10 +19,10 @@ export default function NewsBox({ title, imgSrc, linkTo }) {
         to={linkTo}
         style={{ textDecoration: "none", color: "black", maxWidth: "70%" }}
       >
-        <h1 style={{ fontSize: "20px" }}>{title}</h1>
+        <h1 style={{ fontSize: "20px", textAlign: "center", width: "90%" }}>{title}</h1>
       </Link>
 
-      <img width="40%" src={imgSrc} />
+      <img width="30%" src={imgSrc} alt="" />
     </div>
   );
 }

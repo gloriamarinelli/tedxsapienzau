@@ -281,7 +281,7 @@ export default function RFW2023() {
               }}
             >
               <h3
-                className="mb-3 mt-3 text-center"
+                className="mb-3  text-center"
                 style={{ fontSize: "28px", fontWeight: "bold", color: "black" }}
               >
                 PROGRAMMA <br />

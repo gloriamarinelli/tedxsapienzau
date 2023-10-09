@@ -4,7 +4,8 @@ import global from "../../resources/global.json";
 import "../../index.css";
 import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
 import NewsBox from "../components/NewsBox";
-import BackToZero from "../images/Logo BTZ.png";
+import BackToZero from "../images/Logo_BTZ.png";
+import BackToZeroBLACK from "../images/Logo_BTZ_BLACK.webp";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/RFW23/logoRFW.webp";
@@ -119,7 +120,7 @@ export default function Home() {
         </div>
         {getVerticalBannerNews(windowSize)}
       </section>
-      {getBannerRFW(windowSize)}
+      {getBannerPastEditions(windowSize)}
     </>
   );
 }
@@ -358,7 +359,7 @@ function getBannerPastEditions(windowSize) {
               className="display-4"
               style={{
                 marginTop: "10px",
-                fontSize: "50px",
+                fontSize: "40px",
                 textAlign: "center",
                 fontFamily: "GothamBold",
               }}
@@ -414,6 +415,14 @@ function getVerticalBannerNews(windowSize) {
         </div>
 
         <hr></hr>
+
+        <NewsBox
+          title={
+            "Dopo il successo ottenuto lo scorso anno, il 15 novembre 2023 torna Back to Zero"
+          }
+          imgSrc={BackToZeroBLACK}
+          linkTo={"/edizione2023"}
+        />
         <NewsBox
           title={"Rome Future Week dall'11 al 17 settembre"}
           imgSrc={

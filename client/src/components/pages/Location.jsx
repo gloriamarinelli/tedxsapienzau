@@ -321,7 +321,7 @@ export default function Location() {
             color: "#fff",
             backgroundColor: "red",
             marginBottom: "10px",
-            height: "40vh",
+						height: "30vh",
             display: "grid",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,

@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "../../index.css";
 import "../../resources/styles/edizione2023style.css";
-
-import TedxLogo from "../images/logo-white.png";
 
 import SpeakerCard from "../components/SpeakerCard";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
@@ -97,26 +94,40 @@ export default function Edizione2023() {
               <FontAwesomeIcon
                 className="col-2"
                 icon={faLocationDot}
-                style={{ color: global.COLORS.ROSSO_TED }}
+                style={{ color: global.COLORS.ROSSO_POSTER }}
                 size="2x"
               />
               <p className="col-8">
-               Aula Magna, <br />
-               Palazzo del Rettorato <br/>
-               Sapienza Università di Roma
+                Aula Magna, <br />
+                Palazzo del Rettorato <br />
+                Sapienza Università di Roma
               </p>
             </div>
             <div className="row">
               <FontAwesomeIcon
                 className="col-2"
                 icon={faCalendar}
-                style={{ color: global.COLORS.ROSSO_TED }}
+                style={{ color: global.COLORS.ROSSO_POSTER }}
                 size="2x"
               />
               <p className="col-8">15 novembre 2023</p>
             </div>
           </div>
           <div className="col-md-6">
+            <a
+              href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-2023-back-to-zero-717157827367?aff=oddtdtcreator"
+              type="button"
+              className="btn5-1"
+              style={{
+                fontWeight: "bold",
+                width: "50%",
+                marginLeft: "50px",
+                alignItems: "center",
+                fontFamily: "GothamBold",
+              }}
+            >
+              Ottieni i biglietti
+            </a>
           </div>
         </div>
       </section>
@@ -139,11 +150,12 @@ export default function Edizione2023() {
           rallentano la crescita della nostra società, peggiorando la qualità
           della nostra vita. <strong>Riconsiderare noi stessi </strong> ed il
           nostro modo di confrontarci. Imparare ed interagire con la società
-          contemporanea, con le <strong>arti</strong> e le <strong>scienze</strong>.{" "}
-          È fondamentale per costruire un mondo dove l'essere umano possa '
-          <strong>rinascere</strong>', prosperando ed esprimendosi al meglio in
-          ogni disciplina. Riscoprire le basi per <strong>rinascere</strong>,
-          diventare persone migliori in un luogo migliore.
+          contemporanea, con le <strong>arti</strong> e le{" "}
+          <strong>scienze</strong>. È fondamentale per costruire un mondo dove
+          l'essere umano possa '<strong>rinascere</strong>', prosperando ed
+          esprimendosi al meglio in ogni disciplina. Riscoprire le basi per{" "}
+          <strong>rinascere</strong>, diventare persone migliori in un luogo
+          migliore.
         </p>
 
         <p

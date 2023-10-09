@@ -188,7 +188,7 @@ export default function Blog() {
 						textAlign: "left",
 						color: "white",
 						display: "grid",
-						height: "50vh",
+						height: "30vh",
 						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
 					}}
 				>

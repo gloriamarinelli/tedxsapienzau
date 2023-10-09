@@ -238,7 +238,7 @@ export default function MissionandVision() {
             color: "#fff",
             marginBottom: "10px",
             // clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
+            height: "30vh",
             display: "grid",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,

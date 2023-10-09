@@ -23,7 +23,6 @@ import { AuthContextProvider } from "./components/context/authContext";
 import Awards from "./components/pages/Awards";
 import Awards2022 from "./components/pages/Awards2022";
 import RFW2023 from "./components/pages/RFW2023";
-import Eventbrite from "./components/pages/Eventbrite";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 
 const router = createBrowserRouter([
@@ -121,10 +120,6 @@ const router = createBrowserRouter([
       {
         path: "/rfw23",
         element: <RFW2023 />,
-      },
-      {
-        path: "/eventbrite",
-        element: <Eventbrite />,
       },
     ],
   },
