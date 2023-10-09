@@ -17,6 +17,7 @@ export default function NewsBox({ title, imgSrc, linkTo }) {
     >
       <Link
         to={linkTo}
+        target="_blank" rel="noopener noreferrer"
         style={{ textDecoration: "none", color: "black", maxWidth: "70%" }}
       >
         <h1 style={{ fontSize: "20px", textAlign: "center", width: "90%" }}>{title}</h1>

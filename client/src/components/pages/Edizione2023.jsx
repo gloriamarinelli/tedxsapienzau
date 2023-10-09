@@ -193,7 +193,18 @@ export default function Edizione2023() {
             textAlign: "center",
           }}
         >
-          Coming Soon...
+          Damiano Tullio <br /> Ilaria Lucrezia Rossi
+          <br /> Edward von Freymann
+          <br /> Riccardo Basilone
+          <br /> Gloria Schito
+          <br /> Matteo Cervellini <br />
+          Ana Estrela
+          <br /> Nina Lambarelli
+          <br />
+          Marcello Ienca <br />
+          Rose Villain <br />
+          Silvano Onofri <br />
+          Nakita Aboya
         </p>
       </div>
       {/* <BioSpeakerPopup

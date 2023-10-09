@@ -10,6 +10,7 @@ import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/RFW23/logoRFW.webp";
 import Image1 from "../images/RFW23/RFW.webp";
+import Eventbrite from "../images/eventbrite.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Iframe from "react-iframe";
 
@@ -415,10 +416,18 @@ function getVerticalBannerNews(windowSize) {
         </div>
 
         <hr></hr>
-
         <NewsBox
           title={
-            "Dopo il successo ottenuto lo scorso anno, il 15 novembre 2023 torna Back to Zero"
+            "Prenota i biglietti per il Main Event di TEDxSapienzaU"
+          }
+          imgSrc={Eventbrite}
+          linkTo={
+            "https://www.eventbrite.it/e/biglietti-tedxsapienzau-2023-back-to-zero-717157827367?aff=oddtdtcreator"
+          }
+        />
+        <NewsBox
+          title={
+            "Mercoledì 15 novembre torna Back to Zero"
           }
           imgSrc={BackToZeroBLACK}
           linkTo={"/edizione2023"}
