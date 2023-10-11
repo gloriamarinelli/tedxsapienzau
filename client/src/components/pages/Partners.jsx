@@ -204,40 +204,23 @@ export default function Partners() {
                 />
               </div>
 
-              <h2
-                className="section-heading"
-                style={{
-                  fontFamily: "GothamBold",
-                  fontSize: "2em",
-                }}
-              >
-                Supporting Sponsors
-              </h2>
               <div className="row">
                 <PartnerCard23
+                  title="Supporting Partner"
                   imgSrc="Balduina1.webp"
                   text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
                 La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre."
                   link="https://www.autocentribalduina.com/"
                   sponsorType={"supporting"}
                 />
-                {/*
-              <PartnerCard23
-                imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                sponsorType={"supporting"}
-              />
-              <PartnerCard23
-                imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                sponsorType={"supporting"}
-              />
-              <PartnerCard23
-                imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
-                sponsorType={"supporting"}
-              />
-              */}
+
+                <PartnerCard23
+                  title="Technical Partner"
+                  imgSrc="Pioda.webp"
+                  text="Nata come piccolo laboratorio artigiano di litografia e stampa su pietra, la nostra azienda ha saputo, negli anni, cogliere i cambiamenti di mercato investendo in nuove tecnologie di stampa e in know-how per essere, così, sempre al passo con le richieste della clientela. Oggi Pioda Imaging offre il suo supporto ad aziende pubbliche e private nonchè a professionisti e privati."
+                  link="https://www.piodaimaging.it/"
+                  sponsorType={"technical"}
+                />
               </div>
               {/*
               
@@ -290,6 +273,18 @@ export default function Partners() {
                   text=""
                   sponsorType={"friendly"}
                 />
+                <PartnerCard23
+                  imgSrc="CrikCrok.webp"
+                  link="https://crikcrok.it/"
+                  text=""
+                  sponsorType={"friendly"}
+                />
+                <PartnerCard23
+                  imgSrc="Sanarti.webp"
+                  link="http://www.sanarti.it/"
+                  text="SanArti è il Fondo di Assistenza Sanitaria Integrativa dell'Artigianato. Fondato da Confartigianato, CNA, Casartigiani, C.L.A.A.I., CGIL, CISL e UIL sostiene, integralmente o quasi, i costi degli iscritti per visite, esami, fare prevenzione, cure odontoiatriche, in caso di ricovero e molto altro."
+                  sponsorType={"friendly"}
+                />
                 {/*<PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
@@ -307,7 +302,7 @@ export default function Partners() {
                 />
                 */}
               </div>
-              
+
               <h2
                 className="section-heading"
                 style={{
@@ -331,11 +326,10 @@ export default function Partners() {
                   imgSrc="JESAP.webp"
                   link="https://jesap.it/"
                 />
-                 <PartnerCardCommunity
+                <PartnerCardCommunity
                   imgSrc="Peekaboo.webp"
                   link="https://www.peekaboovision.com/"
                 />
-                
               </div>
 
               <h2
