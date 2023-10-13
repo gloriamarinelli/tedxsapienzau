@@ -222,8 +222,6 @@ export default function Partners() {
                   sponsorType={"technical"}
                 />
               </div>
-              {/*
-              
 
               <h2
                 className="section-heading"
@@ -236,10 +234,12 @@ export default function Partners() {
               </h2>
               <div className="row">
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                  imgSrc="Deloitte.jpg"
+                  text=""
+                  link="https://www2.deloitte.com/it/it.html"
                   sponsorType={"smart"}
                 />
+                {/*
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
@@ -254,8 +254,8 @@ export default function Partners() {
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
                   sponsorType={"smart"}
-                />
-              </div> */}
+                />*/}
+              </div>
 
               <h2
                 className="section-heading"
