@@ -81,52 +81,112 @@ export default function Workshop() {
     }
   };
 
-  return (
-    <>
-      <div
-        className="header"
-        style={{
-          padding: "10px",
-          color: "#fff",
-          height: "40vh",
-          display: "grid",
-          placeItems: "center",
-          backgroundColor: global.COLORS.CELESTE,
-          marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-        }}
-      >
-        <h1
-          className="font-weight-bold mt-5 mb-5"
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
+    /**
+     * DESKTOP
+     */
+    return (
+      <>
+        <div
+          className="header"
           style={{
-            fontSize: "50px",
-            fontWeight: "bold",
-            fontFamily: "GothamBold",
+            padding: "10px",
+            color: "#fff",
+            height: "40vh",
+            display: "grid",
+            placeItems: "center",
+            backgroundColor: global.COLORS.CELESTE,
+            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
         >
-          Partecipa ai workshop targati <img height="80px" src={logo} alt="" />{" "}
-        </h1>
+          <h1
+            className="font-weight-bold mt-5 mb-5"
+            style={{
+              fontSize: "50px",
+              fontWeight: "bold",
+              fontFamily: "GothamBold",
+            }}
+          >
+            Partecipa ai workshop targati{" "}
+            <img height="80px" src={logo} alt="" />{" "}
+          </h1>
 
-        <p
+          <p
+            style={{
+              fontSize: "25px",
+              fontStyle: "italic",
+              textAlign: "center",
+            }}
+          >
+            Non perdere l'occasione di metterti in gioco. Partecipa al workshop
+            che fa te!
+          </p>
+        </div>
+
+        <div className="container">
+          <div className="row">{handleWorkshopCardSection()}</div>
+        </div>
+        <BioWorkshopPopup
+          isBioOpen={isBioOpen}
+          setIsBioOpen={setIsBioOpen}
+          selectedWorkshopInfo={selectedWorkshopInfo}
+          windowSize={windowSize}
+        />
+      </>
+    );
+  } else {
+    /**
+     * MOBILE
+     */
+    return (
+      <>
+        <div
+          className="header"
           style={{
-            fontSize: "25px",
-            fontStyle: "italic",
-            textAlign: "center",
+            padding: "10px",
+            color: "#fff",
+            height: "40vh",
+            display: "grid",
+            placeItems: "center",
+            backgroundColor: global.COLORS.CELESTE,
+            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
         >
-          Non perdere l'occasione di metterti in gioco. Partecipa al workshop
-          che fa te!
-        </p>
-      </div>
+          <h1
+            className="font-weight-bold mt-5 mb-3"
+            style={{
+              fontSize: "45px",
+              textAlign: "center",
+              fontWeight: "bold",
+              fontFamily: "GothamBold",
+            }}
+          >
+            Partecipa ai workshop targati{" "}
+            <strong style={{ color: "black" }}>BTZ</strong>
+          </h1>
 
-      <div className="container">
-        <div className="row">{handleWorkshopCardSection()}</div>
-      </div>
-      <BioWorkshopPopup
-        isBioOpen={isBioOpen}
-        setIsBioOpen={setIsBioOpen}
-        selectedWorkshopInfo={selectedWorkshopInfo}
-        windowSize={windowSize}
-      />
-    </>
-  );
+          <p
+            style={{
+              fontSize: "20px",
+              fontStyle: "italic",
+              textAlign: "center",
+            }}
+          >
+            Non perdere l'occasione di metterti in gioco. Partecipa al workshop
+            che fa te!
+          </p>
+        </div>
+
+        <div className="container">
+          <div className="row">{handleWorkshopCardSection()}</div>
+        </div>
+        <BioWorkshopPopup
+          isBioOpen={isBioOpen}
+          setIsBioOpen={setIsBioOpen}
+          selectedWorkshopInfo={selectedWorkshopInfo}
+          windowSize={windowSize}
+        />
+      </>
+    );
+  }
 }
