@@ -287,8 +287,8 @@ export default function Partners() {
                 />
                 <PartnerCard23
                   imgSrc="Dias.webp"
-                  text=""
-                  link="https://libreriadias.it/"
+                  text="Libreria Dias, punto di riferimento per gli studenti degli atenei romani da oltre 40 anni, offre un vasto assortimento di libri universitari in un ambiente accogliente e vivace che stimola la curiosità. Grazie alla gentilezza e preparazione, lo staff svolge un ruolo guida con affidabilità."
+                  link="https://www.libreriadias.com/"
                   sponsorType={"friendly"}
                 />
                 {/*
