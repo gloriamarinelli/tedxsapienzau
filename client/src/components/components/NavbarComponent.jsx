@@ -186,21 +186,20 @@ export default function NavbarComponent(props) {
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
                 }`}
               >
-                {/*<li className="nav-item">
-                  <Link to="/rfw23" onClick={() => setExpanded(false)}>
+                <li className="nav-item">
+                  <Link to="" onClick={() => setExpanded(false)}>
                     <button
                       type="button"
                       className="btn"
                       style={{
-                        backgroundColor: global.COLORS.ROSSO_TED,
+                        backgroundColor: global.COLORS.CELESTE,
                         fontWeight: "bold",
                         color: "#fff",
                       }}
                     >
-                      Rome Future Week
-                    </button>
+Workshop                    </button>
                   </Link>
-                    </li>*/}
+                    </li>
 
                 <li className="nav-item">
                   <Link
