@@ -285,11 +285,13 @@ export default function Partners() {
                   text="SanArti è il Fondo di Assistenza Sanitaria Integrativa dell'Artigianato. Fondato da Confartigianato, CNA, Casartigiani, C.L.A.A.I., CGIL, CISL e UIL sostiene, integralmente o quasi, i costi degli iscritti per visite, esami, fare prevenzione, cure odontoiatriche, in caso di ricovero e molto altro."
                   sponsorType={"friendly"}
                 />
-                {/*<PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                <PartnerCard23
+                  imgSrc="Dias.webp"
+                  text=""
+                  link="https://libreriadias.it/"
                   sponsorType={"friendly"}
                 />
+                {/*
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
@@ -329,6 +331,10 @@ export default function Partners() {
                 <PartnerCardCommunity
                   imgSrc="Peekaboo.webp"
                   link="https://www.peekaboovision.com/"
+                />
+                <PartnerCardCommunity
+                  imgSrc="WAYouth.webp"
+                  link="https://wayouth.it/#project"
                 />
               </div>
 

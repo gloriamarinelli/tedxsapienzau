@@ -52,7 +52,6 @@ export default function WorkshopCard({
       }}
     >
       <Card
-        color="amber"
         className="mt-5 mb-2"
         style={{
           fontFamily: "GothamBold",

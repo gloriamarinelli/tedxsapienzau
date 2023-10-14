@@ -110,7 +110,7 @@ export default function Edizione2023() {
                 style={{ color: global.COLORS.ROSSO_POSTER }}
                 size="2x"
               />
-              <p className="col-8">15 novembre 2023</p>
+              <p className="col-8">mercoledì 15 nov 2023 ore 08:45 - 17:00</p>
             </div>
           </div>
           <div className="col-md-6">

@@ -88,7 +88,7 @@ export default function Workshop() {
     return (
       <>
         <div
-          className="header"
+          className="header gradient-background-workshop"
           style={{
             padding: "10px",
             color: "#fff",
@@ -141,7 +141,7 @@ export default function Workshop() {
     return (
       <>
         <div
-          className="header"
+          className="header gradient-background-workshop-mobile"
           style={{
             padding: "10px",
             color: "#fff",
@@ -155,14 +155,14 @@ export default function Workshop() {
           <h1
             className="font-weight-bold mt-5 mb-3"
             style={{
-              fontSize: "45px",
+              fontSize: "35px",
               textAlign: "center",
               fontWeight: "bold",
               fontFamily: "GothamBold",
             }}
           >
             Partecipa ai workshop targati{" "}
-            <strong style={{ color: "black" }}>BTZ</strong>
+            <img className="mt-2" height="60px" src={logo} alt="" />{" "}
           </h1>
 
           <p
