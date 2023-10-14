@@ -38,7 +38,6 @@ export default function Edizione2022() {
    */
   const handleSpeakersCardSection = () => {
     if (speakers.length === 0) {
-      /** SPEAKERS NOT YET FETCHED FROM DATABASE */
       return (
         <div
           style={{

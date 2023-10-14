@@ -70,37 +70,36 @@ export default function Team2022() {
       );
     } else {
       let res = [];
-      {
-        board.map((board) => {
-          const { id, nome, gruppo, ruolo, fotoNome, link } = board;
-          if (gruppo != "board") return;
-          res.push(
-            <ExecutiveTeamCard
-              key={id}
-              nome={nome}
-              gruppo={gruppo}
-              ruolo={ruolo}
-              image={fotoNome}
-              link={link}
-              year={2023}
-            />
-          );
-        });
-        return (
-          <>
-            <h1
-              style={{
-                margin: "30px 0",
-                fontFamily: "GothamBold",
-                fontSize: "50px",
-              }}
-            >
-              Board
-            </h1>
-            {res}
-          </>
+
+      board.map((board) => {
+        const { id, nome, gruppo, ruolo, fotoNome, link } = board;
+        if (gruppo != "board") return;
+        res.push(
+          <ExecutiveTeamCard
+            key={id}
+            nome={nome}
+            gruppo={gruppo}
+            ruolo={ruolo}
+            image={fotoNome}
+            link={link}
+            year={2023}
+          />
         );
-      }
+      });
+      return (
+        <>
+          <h1
+            style={{
+              margin: "30px 0",
+              fontFamily: "GothamBold",
+              fontSize: "50px",
+            }}
+          >
+            Board
+          </h1>
+          {res}
+        </>
+      );
     }
   };
 
@@ -122,37 +121,36 @@ export default function Team2022() {
       );
     } else {
       let res = [];
-      {
-        board.map((board) => {
-          const { id, nome, gruppo, ruolo, fotoNome, link } = board;
-          if (gruppo != "board") return;
-          res.push(
-            <ExecutiveTeamCard
-              key={id}
-              nome={nome}
-              gruppo={gruppo}
-              ruolo={ruolo}
-              image={fotoNome}
-              link={link}
-              year={2022}
-            />
-          );
-        });
-        return (
-          <>
-            <h1
-              style={{
-                margin: "30px 0",
-                fontFamily: "GothamBold",
-                fontSize: "50px",
-              }}
-            >
-              Board
-            </h1>
-            {res}
-          </>
+
+      board.map((board) => {
+        const { id, nome, gruppo, ruolo, fotoNome, link } = board;
+        if (gruppo != "board") return;
+        res.push(
+          <ExecutiveTeamCard
+            key={id}
+            nome={nome}
+            gruppo={gruppo}
+            ruolo={ruolo}
+            image={fotoNome}
+            link={link}
+            year={2022}
+          />
         );
-      }
+      });
+      return (
+        <>
+          <h1
+            style={{
+              margin: "30px 0",
+              fontFamily: "GothamBold",
+              fontSize: "50px",
+            }}
+          >
+            Board
+          </h1>
+          {res}
+        </>
+      );
     }
   };
 

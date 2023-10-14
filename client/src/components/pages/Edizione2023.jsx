@@ -18,24 +18,18 @@ export default function Edizione2023() {
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
 
-  // useEffect(() => {
-  // 	axios
-  // 		.get(global.CONNECTION.ENDPOINT + "/speakers/edizione/2023")
-  // 		.then((res, err) => {
-  // 			setSpeakers(res.data);
-  // 		})
-  // 		.catch((err) => {
-  // 			console.error(err);
-  // 		});
-  // }, []);
+  /*axios
+    .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
+    .then((res, err) => {
+      console.log(res.data);
+      setSpeakers(res.data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 
-  /**
-   * This function returns a spinner when the data from the db is still loading.
-   * When all the speakers are fetched, this function returns the speaker card section
-   */
   const handleSpeakersCardSection = () => {
     if (speakers.length === 0) {
-      /** SPEAKERS NOT YET FETCHED FROM DATABASE */
       return (
         <div
           style={{
@@ -74,7 +68,7 @@ export default function Edizione2023() {
       });
       return res;
     }
-  };
+  };*/
 
   return (
     <>
@@ -182,8 +176,7 @@ export default function Edizione2023() {
         >
           GLI SPEAKERS
         </h1>
-        {/**NON CI SONO ANCORA SPEAKER DA MOSTRARE */}
-        {/* <div className="row">{handleSpeakersCardSection()}</div> */}
+        {/* <div className="row">{handleSpeakersCardSection()}</div>*/}
         <p
           style={{
             fontSize: "20px",
