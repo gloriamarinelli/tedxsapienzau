@@ -54,7 +54,7 @@ export default function Workshop() {
           imgSrc,
           data,
           luogo,
-          ora,
+          ore,
           link,
           pubblico,
         } = workshop;
@@ -69,7 +69,7 @@ export default function Workshop() {
             extra={extra}
             data={data}
             luogo={luogo}
-            ora={ora}
+            ore={ore}
             tag={tag}
             pubblico={pubblico}
             setIsBioOpen={setIsBioOpen}
