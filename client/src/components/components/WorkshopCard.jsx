@@ -58,10 +58,20 @@ export default function WorkshopCard({
           border: "2px solid #5272b5",
           padding: "15px",
           borderRadius: "20px",
-          height: "300px",
-          width: "350px",
+          height: "350px",
+          width: "400px",
         }}
       >
+        <Typography
+          style={{
+            fontWeight: "bold",
+            color: global.COLORS.CELESTE,
+            fontSize: "20px",
+            textAlign: "center",
+          }}
+        >
+          {titolo}
+        </Typography>
         <CardHeader
           shadow={false}
           style={{
@@ -94,9 +104,6 @@ export default function WorkshopCard({
           </Button>
         </CardFooter>
       </Card>
-      <Typography className="items-center mb-3" variant="h3">
-        {titolo}
-      </Typography>
     </div>
   );
 }

@@ -239,12 +239,13 @@ export default function Partners() {
                   link="https://www2.deloitte.com/it/it.html"
                   sponsorType={"smart"}
                 />
-                {/*
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                  imgSrc="MyDiet.webp"
+                  text=""
+                  link="https://mydietroma.it/"
                   sponsorType={"smart"}
-                />
+                />{" "}
+                {/*
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
@@ -291,12 +292,13 @@ export default function Partners() {
                   link="https://www.libreriadias.com/"
                   sponsorType={"friendly"}
                 />
-                {/*
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                  imgSrc="Tlon.webp"
+                  text="Tlon è un progetto di divulgazione culturale e filosofica che è al tempo stesso  casa editrice, libreria e teatro. Il loro focus sono i giovani studenti delle scuole e delle università a cui offrono anche corsi di formazione per la fioritura personale e il lifelong learning. Molto attivi sui social, hanno anche una rubrica fissa su vanity fair."
+                  link="https://shop.tlon.it/tlon-x-tedxsapienzau/"
                   sponsorType={"friendly"}
-                />
+                />{" "}
+                {/*
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."

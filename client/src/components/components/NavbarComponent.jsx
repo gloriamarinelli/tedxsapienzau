@@ -187,7 +187,7 @@ export default function NavbarComponent(props) {
                 }`}
               >
                 <li className="nav-item">
-                  <Link to="" onClick={() => setExpanded(false)}>
+                  <Link to="/workshop" onClick={() => setExpanded(false)}>
                     <button
                       type="button"
                       className="btn"
@@ -197,9 +197,10 @@ export default function NavbarComponent(props) {
                         color: "#fff",
                       }}
                     >
-Workshop                    </button>
+                      Workshop{" "}
+                    </button>
                   </Link>
-                    </li>
+                </li>
 
                 <li className="nav-item">
                   <Link

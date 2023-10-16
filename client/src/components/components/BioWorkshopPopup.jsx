@@ -68,9 +68,9 @@ export default function BioWorkshopPopup({
           >
             X
           </button>
-          <h1 className="mt-3" style={{ fontFamily: "GothamBold" }}>
+          <h3 className="mt-3" style={{ fontFamily: "GothamBold" }}>
             {selectedWorkshopInfo.titolo}
-          </h1>
+          </h3>
           <p>
             {" "}
             <strong>Organizzato da: </strong>
