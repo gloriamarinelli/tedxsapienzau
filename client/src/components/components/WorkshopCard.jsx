@@ -19,7 +19,7 @@ export default function WorkshopCard({
   imgSrc,
   data,
   luogo,
-  ora,
+  ore,
   link,
   pubblico,
   setIsBioOpen,
@@ -45,7 +45,7 @@ export default function WorkshopCard({
           imgSrc: imgSrc,
           data: data,
           luogo: luogo,
-          ora: ora,
+          ore: ore,
           link: link,
           pubblico: pubblico,
         });
@@ -89,7 +89,7 @@ export default function WorkshopCard({
 
         <CardBody>
           <Typography variant="lead" color="gray" className="mt-3 font-normal">
-            Data: {data} <br /> Luogo: {luogo} <br /> Ora: {ora}
+            Data: {data} <br /> Luogo: {luogo} <br /> Ore: {ore}
           </Typography>
         </CardBody>
         <CardFooter className="flex" style={{ textAlign: "center" }}>
