@@ -245,12 +245,13 @@ export default function Partners() {
                   link="https://mydietroma.it/"
                   sponsorType={"smart"}
                 />{" "}
-                {/*
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                  imgSrc="VAIA.webp"
+                  text="VAIA nasce come reazione alla tempesta che nel 2018 ha messo in ginocchio le Dolomiti. Un modello di business sostenibile, che mette al centro il territorio e le comunità che lo vivono. Design in legno e oggetti pensati per riconnettere l'uomo alla natura, con azioni concrete per ridare vita alle foreste e per tutelare i ghiacciai."
+                  link="https://www.vaiawood.eu/"
                   sponsorType={"smart"}
                 />
+                {/*
                 <PartnerCard23
                   imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
                   text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
