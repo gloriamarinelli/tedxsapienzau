@@ -296,7 +296,7 @@ export default function Partners() {
                 <PartnerCard23
                   imgSrc="Tlon.webp"
                   text="Tlon è un progetto di divulgazione culturale e filosofica che è al tempo stesso  casa editrice, libreria e teatro. Il loro focus sono i giovani studenti delle scuole e delle università a cui offrono anche corsi di formazione per la fioritura personale e il lifelong learning. Molto attivi sui social, hanno anche una rubrica fissa su vanity fair."
-                  link="https://shop.tlon.it/tlon-x-tedxsapienzau/"
+                  link="https://shop.tlon.it/segnalibro/"
                   sponsorType={"friendly"}
                 />{" "}
                 {/*
