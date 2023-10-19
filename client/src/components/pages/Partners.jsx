@@ -299,13 +299,12 @@ export default function Partners() {
                   link="https://shop.tlon.it/segnalibro/"
                   sponsorType={"friendly"}
                 />{" "}
-                {/*
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                  imgSrc="Innocent.webp"
+                  text="Ciao, noi siamo innocent. Facciamo smoothie e succhi di frutta realizzati con ingredienti naturali e nient'altro, doniamo il 10% dei nostri profitti in beneficenza e ci impegniamo affinché le nostri emissioni siano sempre più vicine a zero. Ah, siamo anche molto fieri di essere una B-Corp."
+                  link="https://www.innocentdrinks.it"
                   sponsorType={"friendly"}
                 />
-                */}
               </div>
 
               <h2
