@@ -206,7 +206,7 @@ export default function Partners() {
 
               <div className="row">
                 <PartnerCard23
-                  title="Supporting Partner"
+                  title="Supporting Sponsor"
                   imgSrc="Balduina1.webp"
                   text="Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche.
                 La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre."
@@ -215,7 +215,7 @@ export default function Partners() {
                 />
 
                 <PartnerCard23
-                  title="Technical Partner"
+                  title="Technical Sponsor"
                   imgSrc="Pioda.webp"
                   text="Nata come piccolo laboratorio artigiano di litografia e stampa su pietra, la nostra azienda ha saputo, negli anni, cogliere i cambiamenti di mercato investendo in nuove tecnologie di stampa e in know-how per essere, così, sempre al passo con le richieste della clientela. Oggi Pioda Imaging offre il suo supporto ad aziende pubbliche e private nonchè a professionisti e privati."
                   link="https://www.piodaimaging.it/"
