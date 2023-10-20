@@ -417,6 +417,11 @@ function getVerticalBannerNews(windowSize) {
 
         <hr></hr>
         <NewsBox
+          title={"Partecipa ai workshop targati BTZ"}
+          imgSrc={BackToZeroBLACK}
+          linkTo={"/workshop"}
+        />
+        <NewsBox
           title={"Prenota i biglietti per il Main Event di TEDxSapienzaU"}
           imgSrc={Eventbrite}
           linkTo={
