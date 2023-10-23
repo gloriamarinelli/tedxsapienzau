@@ -241,7 +241,7 @@ export default function Partners() {
                 />
                 <PartnerCard23
                   imgSrc="MyDiet.webp"
-                  text="Il settore dell’ healthy food negli ultimi anni ha indirizzato sempre più persone verso abitudini alimentari sane e sostenibili scontrandosi però con le difficoltà di tutti i giorni. È qui che nasce MyDiet: ci occupiamo di promuovere il mangiar sano, evitando gli sprechi alimentari, dando la possibilità a chiunque di seguire una dieta senza alcuno sforzo, non rinunciando però al gusto e alla qualità."
+                  text="Il settore dell' healthy food negli ultimi anni ha indirizzato sempre più persone verso abitudini alimentari sane e sostenibili scontrandosi però con le difficoltà di tutti i giorni. È qui che nasce MyDiet: ci occupiamo di promuovere il mangiar sano, evitando gli sprechi alimentari, dando la possibilità a chiunque di seguire una dieta senza alcuno sforzo, non rinunciando però al gusto e alla qualità."
                   link="https://mydietroma.it/"
                   sponsorType={"smart"}
                 />{" "}
@@ -251,12 +251,12 @@ export default function Partners() {
                   link="https://www.vaiawood.eu/"
                   sponsorType={"smart"}
                 />
-                {/*
                 <PartnerCard23
-                  imgSrc="https://thumbs.dreamstime.com/b/logo-generico-91911275.jpg"
-                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate."
+                  imgSrc="EF.webp"
+                  text=""
+                  link="https://www.ef-italia.it/cc/language-abroad_all_generic_all_v5/?source=007941,GGITS_EF_00_00&semcp=S-EF-pure_brand&semag=EF-00-00_pure_brand_exact&pkw=ef&opti_ca=2070653440&opti_ag=80135282327&opti_ad=368286889819&opti_key=kwd-94316055&gad=1&gclid=CjwKCAjws9ipBhB1EiwAccEi1NupV41Pi0MDaCwKPXSwt08jnI1nPDZeQeoQnO4fj2E7td2L9m2n8RoCeDoQAvD_BwE&gclsrc=aw.ds"
                   sponsorType={"smart"}
-                />*/}
+                />
               </div>
 
               <h2
