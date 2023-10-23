@@ -235,7 +235,7 @@ export default function Partners() {
               <div className="row">
                 <PartnerCard23
                   imgSrc="Deloitte.jpg"
-                  text=""
+                  text="Deloitte accompagna le aziende nello sviluppo e nell'implementazione di soluzioni innovative, sostenibili e al passo con il mercato. I suoi 345.000 professionisti in tutto il mondo sono uniti da una cultura che promuove l'integrità, la costante attenzione ai clienti, l'impegno verso i colleghi e la valorizzazione delle differenze."
                   link="https://www2.deloitte.com/it/it.html"
                   sponsorType={"smart"}
                 />
