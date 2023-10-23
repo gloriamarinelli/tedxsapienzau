@@ -241,7 +241,7 @@ export default function Partners() {
                 />
                 <PartnerCard23
                   imgSrc="MyDiet.webp"
-                  text=""
+                  text="Il settore dell’ healthy food negli ultimi anni ha indirizzato sempre più persone verso abitudini alimentari sane e sostenibili scontrandosi però con le difficoltà di tutti i giorni. È qui che nasce MyDiet: ci occupiamo di promuovere il mangiar sano, evitando gli sprechi alimentari, dando la possibilità a chiunque di seguire una dieta senza alcuno sforzo, non rinunciando però al gusto e alla qualità."
                   link="https://mydietroma.it/"
                   sponsorType={"smart"}
                 />{" "}
