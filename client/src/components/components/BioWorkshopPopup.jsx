@@ -86,7 +86,7 @@ export default function BioWorkshopPopup({
             <strong>Tematica: </strong>
             {selectedWorkshopInfo.tag}
           </p>
-          <p> {selectedWorkshopInfo.text}</p>
+          <p style={{ textAlign: "justify" }}> {selectedWorkshopInfo.text}</p>
           <p>
             {" "}
             <strong>Extra: </strong>
