@@ -9,7 +9,6 @@ import BioSpeakerPopup from "../components/BioSpeakerPopup";
 import global from "../../resources/global.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { Buffer } from "buffer";
 import { useOutletContext } from "react-router";
 
 import axios from "axios";
@@ -67,6 +66,113 @@ export default function Edizione2023() {
       });
       return res;
     }
+  };
+
+  const programma = [
+    { time: "08:45 - 09:30", title: "Accrediti", text: "" },
+    {
+      time: "09:45 - 10:00",
+      title: "Presentazione Iniziale",
+      text: "",
+    },
+    {
+      time: "10:00 - 10:15",
+      title: "Saluti istituzionali",
+      text: "Prof. Massimo Ralli, Delegato per il TEDxSapienzaU",
+    },
+    {
+      time: "10:15 - 11:30",
+      title: "Sessione I",
+      text: "Damiano Tullio, Antropologo e fondatore di Antropostudio | Ilaria Lucrezia Rossi, Studentessa di fisica e divulgatrice online | Edward von Freymann, Fondazione Gaia von Freymann | Riccardo Basilone, Studente di fisica e cantautore ",
+    },
+    { time: "11:30 - 12:00", title: "I break", text: "" },
+    {
+      time: "12:00 - 13:00",
+      title: "Sessione II",
+      text: "Gloria Schito, Fondatrice di ICONICA brand e content creator nel settore moda | Matteo Cervellini, Fisioterapista | Ana Estrela, Fondatrice di Ethnic Cook | Nina Lambarelli, Poetessa e studentessa di lingue, culture, letterature e traduzione ",
+    },
+    {
+      time: "13:00 - 15:00",
+      title: "Lunch break presso il Village TEDxSapienzaU",
+      text: "",
+    },
+    { time: "15:00 - 15:15", title: "TED GLOBAL", text: "" },
+    {
+      time: "15:15 - 15:30",
+      title: "Interventi istituzionali",
+      text: "Antonella Polimeni, Magnifica Rettrice della Sapienza Università di Roma",
+    },
+    {
+      time: "15:30 - 16:30",
+      title: "Sessione III",
+      text: "Marcello Ienca, Professore di Etica dell'Intelligenza Artificiale e Neuroscienze | Rose Villain, Rapper e cantautrice | Silvano Onofri, Membro del Response of Organisms in Martian Environment Topical Team dell'European Space Agency | Nakita Aboya, Studentessa dottoranda in Economia",
+    },
+
+    {
+      time: "16:30 - 16:45",
+      title: "Ringraziamenti da parte dei volontari e del team TEDxSapienzaU",
+      text: "",
+    },
+    {
+      time: "16:45 - 17:00",
+      title: "Intrattenimento Musicale - MUSA Sapienza",
+      text: "",
+    },
+
+    { time: "17:00", title: "Saluti finali", text: "" },
+  ];
+
+  const renderProgram23 = () => {
+    return (
+      <div className="container mb-5">
+        <h1
+          className="font-weight-bold mt-5 mb-3"
+          style={{
+            fontSize: "45px",
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          IL PROGRAMMA
+        </h1>
+        <div className="row">
+          {programma.map((item, index) => (
+            <div key={index} className="row mb-3">
+              <div className="col-md-3">
+                <p
+                  style={{
+                    fontSize: "30px",
+                    fontFamily: "GothamBold",
+                  }}
+                >
+                  {item.time}
+                </p>
+              </div>
+              <div className="col-md-6">
+                <p
+                  style={{
+                    fontSize: "25px",
+                    fontFamily: "GothamBold",
+                    color: global.COLORS.BLU_POSTER,
+                  }}
+                >
+                  {item.title}
+                </p>
+                <p
+                  style={{
+                    fontSize: "18px",
+                    fontFamily: "GothamBook",
+                    fontStyle: "italic",
+                  }}
+                >
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -176,29 +282,8 @@ export default function Edizione2023() {
           GLI SPEAKERS
         </h1>
         <div className="row">{handleSpeakersCardSection()}</div>
-        {/* <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "GothamBook",
-            fontStyle: "",
-            color: "grey",
-            textAlign: "center",
-          }}
-        >
-          Damiano Tullio <br /> Ilaria Lucrezia Rossi
-          <br /> Edward von Freymann
-          <br /> Riccardo Basilone
-          <br /> Gloria Schito
-          <br /> Matteo Cervellini <br />
-          Ana Estrela
-          <br /> Nina Lambarelli
-          <br />
-          Marcello Ienca <br />
-          Rose Villain <br />
-          Silvano Onofri <br />
-          Nakita Aboya
-        </p> */}
       </div>
+
       <BioSpeakerPopup
         isBioOpen={isBioOpen}
         setIsBioOpen={setIsBioOpen}
@@ -206,6 +291,7 @@ export default function Edizione2023() {
         windowSize={windowSize}
         year={2023}
       />
+      <div>{renderProgram23()}</div>
     </>
   );
 }
