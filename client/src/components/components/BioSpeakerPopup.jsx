@@ -90,7 +90,6 @@ export default function BioSpeakerPopup({
               margin: "auto",
               color: "#fff",
               fontFamily: "GothamBold",
-              textAlign: "justify",
             }}
           >
             <div className="tag-speaker mt-3 mb-1" style={{ fontSize: "17px" }}>
@@ -99,7 +98,11 @@ export default function BioSpeakerPopup({
             <h1>{selectedSpeakerInfo.nomeSpeaker}</h1>
             <p
               className="mt-1"
-              style={{ fontSize: "15px", fontFamily: "GothamBook" }}
+              style={{
+                fontSize: "15px",
+                fontFamily: "GothamBook",
+                textAlign: "justify",
+              }}
             >
               {selectedSpeakerInfo.bio}
             </p>
@@ -115,7 +118,7 @@ export default function BioSpeakerPopup({
       <div>
         <div
           style={{
-            height: "100vh",
+            height: "100%",
             width: "100vw",
             position: "fixed",
             top: 0,
@@ -123,7 +126,9 @@ export default function BioSpeakerPopup({
             opacity: isBioOpen ? 1 : 0,
             zIndex: 11,
             background:
-              "linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)",
+              year === 2022
+                ? "linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)"
+                : "linear-gradient(307deg, #a42332 5%, #242958 60%)",
             transition: "all 0.4s ease-in-out",
             overflowY: "scroll",
           }}
@@ -142,8 +147,9 @@ export default function BioSpeakerPopup({
           />
           {year === 2022 ? (
             <iframe
-              width="600"
+              width="380"
               height="400"
+              textAlign="center"
               src={selectedSpeakerInfo.linkTalk}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
