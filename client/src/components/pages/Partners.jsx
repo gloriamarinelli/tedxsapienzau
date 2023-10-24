@@ -278,7 +278,7 @@ export default function Partners() {
                 <PartnerCard23
                   imgSrc="CrikCrok.webp"
                   link="https://crikcrok.it/"
-                  text=""
+                  text="Crik Crok è un marchio italiano di snack croccanti e gustosi, attento alla qualità e alla freschezza degli ingredienti. Con una vasta gamma di gusti, tra cui le originali Crik Crok e le celebri Puff, da oltre 70 anni è il marchio di fiducia per soddisfare le voglie di snack degli italiani, e non solo, di tutte le età.  "
                   sponsorType={"friendly"}
                 />
                 <PartnerCard23
@@ -303,6 +303,13 @@ export default function Partners() {
                   imgSrc="Innocent.webp"
                   text="Ciao, noi siamo innocent. Facciamo smoothie e succhi di frutta realizzati con ingredienti naturali e nient'altro, doniamo il 10% dei nostri profitti in beneficenza e ci impegniamo affinché le nostri emissioni siano sempre più vicine a zero. Ah, siamo anche molto fieri di essere una B-Corp."
                   link="https://www.innocentdrinks.it"
+                  sponsorType={"friendly"}
+                />
+                <PartnerCard23
+                  imgSrc="Redbull.webp"
+                  text="Red Bull è un'azienda leader nel mercato dell'Energy Drink. L'ascesa del brand e le sue innovative strategie di marketing le hanno permesso, nel tempo, di espandersi in altri settori, come quello sportivo e musicale. 
+Red Bull Basement, il Global Student Project che mette alla prova gli studenti universitari di tutto il mondo spingendoli a trovare idee che possano migliorare il mondo."
+                  link="https://www.redbull.com/int-en/event-series/basement"
                   sponsorType={"friendly"}
                 />
               </div>
