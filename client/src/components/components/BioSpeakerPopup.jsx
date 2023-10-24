@@ -53,7 +53,9 @@ export default function BioSpeakerPopup({
             right: isBioOpen ? 0 : "-100%",
             zIndex: 11,
             background:
-              "linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)",
+              year === 2022
+                ? "linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)"
+                : "linear-gradient(307deg, #a42332 5%, #242958 60%)",
             transition: "all 0.4s ease-in-out",
             overflowY: "scroll",
           }}
