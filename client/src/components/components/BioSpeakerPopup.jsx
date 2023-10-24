@@ -90,6 +90,7 @@ export default function BioSpeakerPopup({
               margin: "auto",
               color: "#fff",
               fontFamily: "GothamBold",
+              textAlign: "justify",
             }}
           >
             <div className="tag-speaker mt-3 mb-1" style={{ fontSize: "17px" }}>
@@ -165,7 +166,11 @@ export default function BioSpeakerPopup({
             <h1>{selectedSpeakerInfo.nomeSpeaker}</h1>
             <p
               className="mt-1"
-              style={{ fontSize: "15px", fontFamily: "GothamBook" }}
+              style={{
+                fontSize: "15px",
+                fontFamily: "GothamBook",
+                textAlign: "justify",
+              }}
             >
               {selectedSpeakerInfo.bio}
             </p>
