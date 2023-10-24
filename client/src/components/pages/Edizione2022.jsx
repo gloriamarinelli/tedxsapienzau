@@ -66,6 +66,7 @@ export default function Edizione2022() {
             tag={categoria}
             setIsBioOpen={setIsBioOpen}
             setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+            year={2022}
           />
         );
       });
@@ -209,6 +210,7 @@ export default function Edizione2022() {
         setIsBioOpen={setIsBioOpen}
         selectedSpeakerInfo={selectedSpeakerInfo}
         windowSize={windowSize}
+        year={2022}
       />
     </>
   );

@@ -10,6 +10,7 @@ import global from "../../resources/global.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Buffer } from "buffer";
+import { useOutletContext } from "react-router";
 
 import axios from "axios";
 
@@ -17,16 +18,19 @@ export default function Edizione2023() {
   const [isBioOpen, setIsBioOpen] = useState(false);
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
+  const [windowSize, setWindowSize] = useOutletContext();
 
-  /*axios
-    .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
-    .then((res, err) => {
-      console.log(res.data);
-      setSpeakers(res.data);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  useEffect(() => {
+    axios
+      .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
+      .then((res, err) => {
+        console.log(res.data);
+        setSpeakers(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
 
   const handleSpeakersCardSection = () => {
     if (speakers.length === 0) {
@@ -47,28 +51,23 @@ export default function Edizione2023() {
     } else {
       let res = [];
       speakers.map((speaker) => {
-        const { id, nome, bio, categoria, foto, fotoSidebar } = speaker;
-        let base64StringImage = Buffer.from(foto, "binary").toString("base64");
-        let base64StringImageSidebar = Buffer.from(
-          fotoSidebar,
-          "binary"
-        ).toString("base64");
+        const { id, nome, bio, categoria, fotoPath } = speaker;
         res.push(
           <SpeakerCard
             key={id}
             nomeSpeaker={nome}
-            imgSrc={base64StringImage}
+            imgSrc={fotoPath}
             bio={bio}
-            fotoSidebar={base64StringImageSidebar}
             tag={categoria}
             setIsBioOpen={setIsBioOpen}
             setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+            year={2023}
           />
         );
       });
       return res;
     }
-  };*/
+  };
 
   return (
     <>
@@ -176,8 +175,8 @@ export default function Edizione2023() {
         >
           GLI SPEAKERS
         </h1>
-        {/* <div className="row">{handleSpeakersCardSection()}</div>*/}
-        <p
+        <div className="row">{handleSpeakersCardSection()}</div>
+        {/* <p
           style={{
             fontSize: "20px",
             fontFamily: "GothamBook",
@@ -198,13 +197,15 @@ export default function Edizione2023() {
           Rose Villain <br />
           Silvano Onofri <br />
           Nakita Aboya
-        </p>
+        </p> */}
       </div>
-      {/* <BioSpeakerPopup
-				isBioOpen={isBioOpen}
-				setIsBioOpen={setIsBioOpen}
-				selectedSpeakerInfo={selectedSpeakerInfo}
-			/> */}
+      <BioSpeakerPopup
+        isBioOpen={isBioOpen}
+        setIsBioOpen={setIsBioOpen}
+        selectedSpeakerInfo={selectedSpeakerInfo}
+        windowSize={windowSize}
+        year={2023}
+      />
     </>
   );
 }
