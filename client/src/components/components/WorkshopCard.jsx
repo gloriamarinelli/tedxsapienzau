@@ -58,8 +58,8 @@ export default function WorkshopCard({
           border: "2px solid #5272b5",
           padding: "15px",
           borderRadius: "20px",
-          height: "350px",
-          width: "400px",
+          height: "400px",
+          width: "430px",
         }}
       >
         <Typography
