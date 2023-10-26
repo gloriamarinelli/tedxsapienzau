@@ -230,7 +230,7 @@ export default function Partners() {
                   fontSize: "2em",
                 }}
               >
-                Smart Sponsor
+                Smart Sponsors
               </h2>
               <div className="row">
                 <PartnerCard23
@@ -266,7 +266,7 @@ export default function Partners() {
                   fontSize: "2em",
                 }}
               >
-                Friendly Sponsor
+                Friendly Sponsors
               </h2>
               <div className="row">
                 <PartnerCard23
@@ -321,7 +321,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   fontSize: "2em",
                 }}
               >
-                Media Sponsor
+                Media Partners
               </h2>
               <div className="row">
                 <PartnerCard23
