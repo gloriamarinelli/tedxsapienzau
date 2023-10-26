@@ -321,6 +321,36 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   fontSize: "2em",
                 }}
               >
+                Media Sponsor
+              </h2>
+              <div className="row">
+                <PartnerCard23
+                  imgSrc="eCo.webp"
+                  link="https://www.ecoagency.eu/"
+                  text=""
+                  sponsorType={"media"}
+                />
+                {/*<PartnerCard23
+                  imgSrc="Millionarie.webp"
+                  link=""
+                  text=""
+                  sponsorType={"media"}
+                />
+                <PartnerCard23
+                  imgSrc="RadioSapienza.webp"
+                  link=""
+                  text=""
+                  sponsorType={"media"}
+              />*/}
+              </div>
+
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2em",
+                }}
+              >
                 Community Partners
               </h2>
               <div className="row">
@@ -359,20 +389,22 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div className="row">
                 <PartnerCard23
                   imgSrc="CNR.webp"
-                  text=""
                   link="https://www.cnr.it/"
                   sponsorType={"patrocinio"}
                 />
                 <PartnerCard23
                   imgSrc="Enea.png"
-                  text="Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sconomico sostenibile"
                   link="https://www.enea.it/it"
                   sponsorType={"patrocinio"}
                 />
                 <PartnerCard23
                   imgSrc="Roma.webp"
-                  text=""
                   link="https://www.comune.roma.it/web/it/assessorato-agricoltura-ambiente-e-ciclo-dei-rifiuti.page"
+                  sponsorType={"patrocinio"}
+                />
+                <PartnerCard23
+                  imgSrc="CE.webp"
+                  link="https://commission.europa.eu/index_en"
                   sponsorType={"patrocinio"}
                 />
               </div>

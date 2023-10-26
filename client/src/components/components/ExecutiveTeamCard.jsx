@@ -1,5 +1,4 @@
 import React from "react";
-import global from "../../resources/global.json";
 
 export default function ExecutiveTeamCard({
   id,
@@ -10,7 +9,7 @@ export default function ExecutiveTeamCard({
   link,
   year,
 }) {
-  if (year == 2023) {
+  if (year === 2023) {
     return (
       <>
         <div
@@ -86,7 +85,7 @@ export default function ExecutiveTeamCard({
       </>
     );
   }
-  if (year == 2022) {
+  if (year === 2022) {
     return (
       <>
         <div
