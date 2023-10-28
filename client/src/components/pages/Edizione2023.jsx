@@ -78,18 +78,18 @@ export default function Edizione2023() {
     {
       time: "10:00 - 10:15",
       title: "Saluti istituzionali",
-      text: "Prof. Massimo Ralli, Delegato per il TEDxSapienzaU",
+      text: "Prof. Massimo Ralli → Delegato per il TEDxSapienzaU",
     },
     {
       time: "10:15 - 11:30",
       title: "Sessione I",
-      text: "Damiano Tullio, Antropologo e fondatore di Antropostudio | Ilaria Lucrezia Rossi, Studentessa di fisica e divulgatrice online | Edward von Freymann, Fondazione Gaia von Freymann | Riccardo Basilone, Studente di fisica e cantautore ",
+      text: "Damiano Tullio → Antropologo e fondatore di Antropostudio | Ilaria Lucrezia Rossi → Studentessa di fisica e divulgatrice online | Edward von Freymann → Fondazione Gaia von Freymann | Riccardo Basilone → Studente di fisica e cantautore ",
     },
     { time: "11:30 - 12:00", title: "I break", text: "" },
     {
       time: "12:00 - 13:00",
       title: "Sessione II",
-      text: "Gloria Schito, Fondatrice di ICONICA brand e content creator nel settore moda | Matteo Cervellini, Fisioterapista | Ana Estrela, Fondatrice di Ethnic Cook | Nina Lambarelli, Poetessa e studentessa di lingue, culture, letterature e traduzione ",
+      text: "Gloria Schito → Fondatrice di ICONICA brand e content creator nel settore moda | Matteo Cervellini → Fisioterapista | Ana Estrela → Fondatrice di Ethnic Cook | Nina Lambarelli → Poetessa e studentessa di lingue, culture, letterature e traduzione ",
     },
     {
       time: "13:00 - 15:00",
@@ -100,12 +100,12 @@ export default function Edizione2023() {
     {
       time: "15:15 - 15:30",
       title: "Interventi istituzionali",
-      text: "Antonella Polimeni, Magnifica Rettrice della Sapienza Università di Roma",
+      text: "Antonella Polimeni → Magnifica Rettrice della Sapienza Università di Roma",
     },
     {
       time: "15:30 - 16:30",
       title: "Sessione III",
-      text: "Marcello Ienca, Professore di Etica dell'Intelligenza Artificiale e Neuroscienze | Rose Villain, Rapper e cantautrice | Silvano Onofri, Membro del Response of Organisms in Martian Environment Topical Team dell'European Space Agency | Nakita Aboya, Studentessa dottoranda in Economia",
+      text: "Marcello Ienca → Professore di Etica dell'Intelligenza Artificiale e Neuroscienze | Rose Villain → Rapper e cantautrice | Silvano Onofri → Presidente della Commissione Scientifica Nazionale per l'Antartide (Ministero Università a Ricerca) | Nakita Aboya → Studentessa dottoranda in Economia",
     },
 
     {
@@ -158,15 +158,22 @@ export default function Edizione2023() {
                 >
                   {item.title}
                 </p>
-                <p
-                  style={{
-                    fontSize: "18px",
-                    fontFamily: "GothamBook",
-                    fontStyle: "italic",
-                  }}
-                >
-                  {item.text}
-                </p>
+                <ul>
+                  {item.text.split(" | ").map((speaker, speakerIndex) => (
+                    <li
+                      key={speakerIndex}
+                      style={{
+                        listStyleType: "none",
+                        fontSize: "20px",
+                        marginLeft: "-25px",
+                        fontFamily: "GothamBook",
+                        fontStyle: "",
+                      }}
+                    >
+                      {speaker}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
