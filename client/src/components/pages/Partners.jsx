@@ -327,7 +327,13 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <PartnerCard23
                   imgSrc="eCo.webp"
                   link="https://www.ecoagency.eu/"
-                  text=""
+                  text="eCo (ecologic Communication) nasce nel 2022 come pagina Instagram con l’obiettivo di sensibilizzare gli utenti verso tematiche sostenibili, green e inclusive. Vogliamo rappresentare la voce di una nuova comunicazione sostenibile attraverso un'informazione chiara, innovativa e di qualità."
+                  sponsorType={"media"}
+                />
+                <PartnerCard23
+                  imgSrc="RadioSapienza.png"
+                  link="https://www.radiosapienza.net/"
+                  text="RadioSapienza è la webradio ufficiale della Sapienza Università di Roma e fa parte del centro di produzione e sperimentazione radiofonica RadioLab del Dipartimento di Comunicazione e Ricerca Sociale. Nata nel 2007 si propone sia come canale di informazione, approfondimento e intrattenimento, ma anche come laboratorio formativo per tutti gli studenti dell’Ateneo."
                   sponsorType={"media"}
                 />
                 {/*<PartnerCard23
@@ -336,12 +342,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   text=""
                   sponsorType={"media"}
                 />
-                <PartnerCard23
-                  imgSrc="RadioSapienza.webp"
-                  link=""
-                  text=""
-                  sponsorType={"media"}
-              />*/}
+                */}
               </div>
 
               <h2
