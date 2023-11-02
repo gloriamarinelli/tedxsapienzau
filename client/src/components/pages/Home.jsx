@@ -12,7 +12,7 @@ import Image from "../images/RFW23/logoRFW.webp";
 import Image1 from "../images/RFW23/RFW.webp";
 import Eventbrite from "../images/eventbrite.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Iframe from "react-iframe";
+import CountdownEd23 from "../components/CountdownEd23";
 
 const NewsSidebarSize = 18;
 
@@ -21,27 +21,50 @@ export default function Home() {
 
   const getCallToAction = () => {
     return (
-      <Link
-        onClick={() => window.scrollTo(0, 0)}
-        to="edizione2023"
-        className="btn5-2"
-        style={{
-          textTransform: "uppercase",
-          padding:
-            windowSize > global.UTILS.TABLET_WIDTH ? "25px 60px" : "20px 40px",
-          borderRadius: "25px",
-          color: "#000",
-          fontFamily: "GothamBold",
-          fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
-          textDecoration: "none",
-          position: "absolute",
-          bottom: "80px",
-        }}
-      >
-        Scopri di più
-      </Link>
+      <>
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to="edizione2023"
+          className="btn5-2"
+          style={{
+            textTransform: "uppercase",
+            padding:
+              windowSize > global.UTILS.TABLET_WIDTH
+                ? "25px 60px"
+                : "20px 40px",
+            borderRadius: "25px",
+            color: "#000",
+            fontFamily: "GothamBold",
+            fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
+            textDecoration: "none",
+            position: "absolute",
+            bottom: "80px",
+          }}
+        >
+          Scopri di più
+        </Link>
+      </>
     );
   };
+
+  function getCountdown(windowSize) {
+    return (
+      <section
+        style={{
+          background: "linear-gradient(60deg, #EB0028 30%, #242958 100%)",
+          color: "white",
+          fontFamily: "GothamBold",
+          alignItems: "center",
+        }}
+      >
+        <div className="container">
+          <div className="p-2">
+            <CountdownEd23 />
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <>
@@ -118,10 +141,11 @@ export default function Home() {
             )}
             {getCallToAction()}
           </div>
+          {getCountdown()}
         </div>
         {getVerticalBannerNews(windowSize)}
       </section>
-      {getBannerPastEditions(windowSize)}
+      {/*{getBannerPastEditions(windowSize)}*/}
     </>
   );
 }
@@ -341,7 +365,8 @@ function getBannerPastEditions(windowSize) {
   return (
     <section
       style={{
-        backgroundColor: global.COLORS.ROSSO_POSTER,
+        //backgroundColor: global.COLORS.ROSSO_POSTER,
+        backgroundColor: global.COLORS.BLU_POSTER,
         color: "white",
       }}
     >
