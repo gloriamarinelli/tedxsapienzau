@@ -47,7 +47,7 @@ export default function Home() {
     );
   };
 
-  function getCountdown(windowSize) {
+  function getCountdown() {
     return (
       <section
         style={{
