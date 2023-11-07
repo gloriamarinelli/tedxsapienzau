@@ -221,6 +221,14 @@ export default function Partners() {
                   link="https://www.piodaimaging.it/"
                   sponsorType={"technical"}
                 />
+
+                <PartnerCard23
+                  title="Con la partecipazione di"
+                  imgSrc="Enav.webp"
+                  text=""
+                  link="https://www.enav.it/"
+                  sponsorType={"partecipazione"}
+                />
               </div>
 
               <h2
