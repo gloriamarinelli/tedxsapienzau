@@ -77,7 +77,7 @@ export default function Edizione2023() {
     },
     {
       time: "10:00 - 10:15",
-      title: "Saluti istituzionali",
+      title: "Interventi istituzionali",
       text: "Prof. Massimo Ralli → Delegato per il TEDxSapienzaU",
     },
     {
@@ -99,7 +99,7 @@ export default function Edizione2023() {
     { time: "15:00 - 15:15", title: "TED GLOBAL", text: "" },
     {
       time: "15:15 - 15:30",
-      title: "Interventi istituzionali",
+      title: "Saluti istituzionali",
       text: "Antonella Polimeni → Magnifica Rettrice della Sapienza Università di Roma",
     },
     {

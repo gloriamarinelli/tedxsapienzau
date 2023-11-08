@@ -1,4 +1,6 @@
 import React from "react";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ExecutiveTeamCard({
   id,
@@ -11,23 +13,39 @@ export default function ExecutiveTeamCard({
 }) {
   if (year === 2023) {
     return (
-      <>
+      <div
+        key={id}
+        className="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
+        style={{
+          position: "relative",
+        }}
+      >
         <div
-          key={id}
-          className="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
+          className="card"
           style={{
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             flexDirection: "column",
+            position: "relative",
           }}
         >
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link"
+            style={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+          </a>
+
           <img
-            src={
-              year === 2023
-                ? `/images/team23/${image}`
-                : `data:image/*;base64,${image}`
-            }
+            src={`/images/team23/${image}`}
             width="245px"
             height="350px"
             alt="foto team esecutivo"
@@ -50,26 +68,17 @@ export default function ExecutiveTeamCard({
               height: "120px",
             }}
           >
-            <a
-              href={link}
-              target="_blank"
-              rel="noreferrer"
+            <div
+              className="portfolio-caption-heading"
               style={{
-                color: "#fff",
-                textDecoration: "none",
+                fontWeight: "bold",
+                textAlign: "center",
+                fontSize: "23px",
               }}
             >
-              <div
-                className="portfolio-caption-heading"
-                style={{
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  fontSize: "23px",
-                }}
-              >
-                {nome}
-              </div>
-            </a>
+              {nome}
+            </div>
+
             <div
               className="portfolio-caption-heading"
               style={{
@@ -82,7 +91,7 @@ export default function ExecutiveTeamCard({
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
   if (year === 2022) {
