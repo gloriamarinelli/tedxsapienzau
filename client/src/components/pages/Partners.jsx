@@ -333,17 +333,18 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               </h2>
               <div className="row">
                 <PartnerCard23
-                  imgSrc="eCo.webp"
-                  link="https://www.ecoagency.eu/"
-                  text="eCo (ecologic Communication) nasce nel 2022 come pagina Instagram con l’obiettivo di sensibilizzare gli utenti verso tematiche sostenibili, green e inclusive. Vogliamo rappresentare la voce di una nuova comunicazione sostenibile attraverso un'informazione chiara, innovativa e di qualità."
-                  sponsorType={"media"}
-                />
-                <PartnerCard23
                   imgSrc="RadioSapienza.png"
                   link="https://www.radiosapienza.net/"
                   text="RadioSapienza è la webradio ufficiale della Sapienza Università di Roma e fa parte del centro di produzione e sperimentazione radiofonica RadioLab del Dipartimento di Comunicazione e Ricerca Sociale. Nata nel 2007 si propone sia come canale di informazione, approfondimento e intrattenimento, ma anche come laboratorio formativo per tutti gli studenti dell’Ateneo."
                   sponsorType={"media"}
                 />
+                <PartnerCard23
+                  imgSrc="eCo.webp"
+                  link="https://www.ecoagency.eu/"
+                  text="eCo (ecologic Communication) nasce nel 2022 come pagina Instagram con l’obiettivo di sensibilizzare gli utenti verso tematiche sostenibili, green e inclusive. Vogliamo rappresentare la voce di una nuova comunicazione sostenibile attraverso un'informazione chiara, innovativa e di qualità."
+                  sponsorType={"media"}
+                />
+
                 {/*<PartnerCard23
                   imgSrc="Millionarie.webp"
                   link=""
@@ -351,6 +352,24 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   sponsorType={"media"}
                 />
                 */}
+              </div>
+
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2em",
+                }}
+              >
+                Creative Partners
+              </h2>
+              <div className="row">
+                <PartnerCard23
+                  imgSrc="Collettivo.webp"
+                  link="https://www.instagram.com/collettivoviscosa/?hl=it"
+                  text="Collettivo Viscosa nasce da un manipolo di studentesse che hanno scelto di fare branco per sfondare nel mondo del fumetto. Collettivo Viscosa è il risultato dell’unione di creatività diverse, che hanno dato vita a soluzioni multiformi. Siamo bestie fluide, ancora in divenire ma pronte a metterci in gioco."
+                  sponsorType={"creative"}
+                />
               </div>
 
               <h2
