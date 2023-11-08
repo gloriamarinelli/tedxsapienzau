@@ -105,7 +105,7 @@ export default function Edizione2023() {
     {
       time: "15:30 - 16:30",
       title: "Sessione III",
-      text: "Marcello Ienca → Professore di Etica dell'Intelligenza Artificiale e Neuroscienze | Rose Villain → Rapper e cantautrice | Silvano Onofri → Presidente della Commissione Scientifica Nazionale per l'Antartide (Ministero Università a Ricerca) | Nakita Aboya → Studentessa dottoranda in Economia",
+      text: "Marcello Ienca → Professore di Etica dell'Intelligenza Artificiale e Neuroscienze | Rose Villain → Rapper e cantautrice | Silvano Onofri → Presidente della Commissione Scientifica Nazionale per l'Antartide (Ministero Università e Ricerca) | Nakita Aboya → Studentessa dottoranda in Economia",
     },
 
     {
