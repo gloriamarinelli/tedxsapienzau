@@ -115,8 +115,9 @@ export default function Edizione2023() {
     },
     {
       time: "16:45 - 17:00",
-      title: "Intrattenimento Musicale - MUSA Sapienza",
-      text: "",
+      title: "Esibizione Coro MuSa Blues - Diretto da Giorgio Monari",
+
+      text: "MuSa è un progetto musicale curato dal centro Sapienza CREA, attivo dal 2006 e aperto a studenti, docenti e personale di questo Ateneo. Quattro le sue formazioni: Classica, Jazz, Blues ed Etno.",
     },
 
     { time: "17:00", title: "Saluti Finali", text: "" },
@@ -158,7 +159,7 @@ export default function Edizione2023() {
                 >
                   {item.title}
                 </p>
-                <ul>
+                <ul style={{textAlign: "justify"}}>
                   {item.text.split(" | ").map((speaker, speakerIndex) => (
                     <li
                       key={speakerIndex}
