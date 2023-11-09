@@ -225,7 +225,8 @@ export default function Partners() {
                 <PartnerCard23
                   title="Con la partecipazione di"
                   imgSrc="Enav.webp"
-                  text=""
+                  text="Noi di ENAV garantiamo H24 i servizi alla navigazione aerea da 45 Torri di controllo e quattro Centri di
+                  controllo d’area. Ogni giorno accompagniamo chi vola con affidabilità e sicurezza. Disegniamo il cielo delfuturo, investendo sulle persone e sull'innovazione per un trasporto aereo sostenibile."
                   link="https://www.enav.it/"
                   sponsorType={"partecipazione"}
                 />
