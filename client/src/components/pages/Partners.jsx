@@ -243,17 +243,11 @@ export default function Partners() {
               </h2>
               <div className="row">
                 <PartnerCard23
-                  imgSrc="Deloitte.jpg"
-                  text="Deloitte accompagna le aziende nello sviluppo e nell'implementazione di soluzioni innovative, sostenibili e al passo con il mercato. I suoi 345.000 professionisti in tutto il mondo sono uniti da una cultura che promuove l'integrità, la costante attenzione ai clienti, l'impegno verso i colleghi e la valorizzazione delle differenze."
-                  link="https://www2.deloitte.com/it/it.html"
+                  imgSrc="CBCR.webp"
+                  text=""
+                  link=""
                   sponsorType={"smart"}
                 />
-                <PartnerCard23
-                  imgSrc="MyDiet.webp"
-                  text="Il settore dell' healthy food negli ultimi anni ha indirizzato sempre più persone verso abitudini alimentari sane e sostenibili scontrandosi però con le difficoltà di tutti i giorni. È qui che nasce MyDiet: ci occupiamo di promuovere il mangiar sano, evitando gli sprechi alimentari, dando la possibilità a chiunque di seguire una dieta senza alcuno sforzo, non rinunciando però al gusto e alla qualità."
-                  link="https://mydietroma.it/"
-                  sponsorType={"smart"}
-                />{" "}
                 <PartnerCard23
                   imgSrc="VAIA.webp"
                   text="VAIA nasce come reazione alla tempesta che nel 2018 ha messo in ginocchio le Dolomiti. Un modello di business sostenibile, che mette al centro il territorio e le comunità che lo vivono. Design in legno e oggetti pensati per riconnettere l'uomo alla natura, con azioni concrete per ridare vita alle foreste e per tutelare i ghiacciai."
@@ -261,9 +255,21 @@ export default function Partners() {
                   sponsorType={"smart"}
                 />
                 <PartnerCard23
+                  imgSrc="Deloitte.jpg"
+                  text="Deloitte accompagna le aziende nello sviluppo e nell'implementazione di soluzioni innovative, sostenibili e al passo con il mercato. I suoi 345.000 professionisti in tutto il mondo sono uniti da una cultura che promuove l'integrità, la costante attenzione ai clienti, l'impegno verso i colleghi e la valorizzazione delle differenze."
+                  link="https://www2.deloitte.com/it/it.html"
+                  sponsorType={"smart"}
+                />
+                <PartnerCard23
                   imgSrc="EF.webp"
-                  text=""
-                  link="https://www.ef-italia.it/cc/language-abroad_all_generic_all_v5/?source=007941,GGITS_EF_00_00&semcp=S-EF-pure_brand&semag=EF-00-00_pure_brand_exact&pkw=ef&opti_ca=2070653440&opti_ag=80135282327&opti_ad=368286889819&opti_key=kwd-94316055&gad=1&gclid=CjwKCAjws9ipBhB1EiwAccEi1NupV41Pi0MDaCwKPXSwt08jnI1nPDZeQeoQnO4fj2E7td2L9m2n8RoCeDoQAvD_BwE&gclsrc=aw.ds"
+                  text="EF Education First è l’organizzazione internazionale leader nel campo dell’educazione, specializzata in programmi di formazione linguistica, viaggi studio e scambi culturali all’estero. Nata quasi 60 anni fa in Svezia è oggi presente con più di 500 scuole e uffici in 53 Nazioni dei 5 Continenti. EF offre soluzioni mirate per ogni età, esigenza ed obiettivo futuro."
+                  link="http://www.ef-italia.it/"
+                  sponsorType={"smart"}
+                />
+                <PartnerCard23
+                  imgSrc="MyDiet.webp"
+                  text="Il settore dell' healthy food negli ultimi anni ha indirizzato sempre più persone verso abitudini alimentari sane e sostenibili scontrandosi però con le difficoltà di tutti i giorni. È qui che nasce MyDiet: ci occupiamo di promuovere il mangiar sano, evitando gli sprechi alimentari, dando la possibilità a chiunque di seguire una dieta senza alcuno sforzo, non rinunciando però al gusto e alla qualità."
+                  link="https://mydietroma.it/"
                   sponsorType={"smart"}
                 />
               </div>
@@ -279,9 +285,21 @@ export default function Partners() {
               </h2>
               <div className="row">
                 <PartnerCard23
+                  imgSrc="Tlon.webp"
+                  text="Tlon è un progetto di divulgazione culturale e filosofica che è al tempo stesso  casa editrice, libreria e teatro. Il loro focus sono i giovani studenti delle scuole e delle università a cui offrono anche corsi di formazione per la fioritura personale e il lifelong learning. Molto attivi sui social, hanno anche una rubrica fissa su vanity fair."
+                  link="https://shop.tlon.it/segnalibro/"
+                  sponsorType={"friendly"}
+                />
+                <PartnerCard23
                   imgSrc="Copernico.webp"
                   link="https://copernicofm.com/"
                   text=""
+                  sponsorType={"friendly"}
+                />
+                <PartnerCard23
+                  imgSrc="Dias.webp"
+                  text="Libreria Dias, punto di riferimento per gli studenti degli atenei romani da oltre 40 anni, offre un vasto assortimento di libri universitari in un ambiente accogliente e vivace che stimola la curiosità. Grazie alla gentilezza e preparazione, lo staff svolge un ruolo guida con affidabilità."
+                  link="https://www.libreriadias.com/"
                   sponsorType={"friendly"}
                 />
                 <PartnerCard23
@@ -296,18 +314,7 @@ export default function Partners() {
                   text="SanArti è il Fondo di Assistenza Sanitaria Integrativa dell'Artigianato. Fondato da Confartigianato, CNA, Casartigiani, C.L.A.A.I., CGIL, CISL e UIL sostiene, integralmente o quasi, i costi degli iscritti per visite, esami, fare prevenzione, cure odontoiatriche, in caso di ricovero e molto altro."
                   sponsorType={"friendly"}
                 />
-                <PartnerCard23
-                  imgSrc="Dias.webp"
-                  text="Libreria Dias, punto di riferimento per gli studenti degli atenei romani da oltre 40 anni, offre un vasto assortimento di libri universitari in un ambiente accogliente e vivace che stimola la curiosità. Grazie alla gentilezza e preparazione, lo staff svolge un ruolo guida con affidabilità."
-                  link="https://www.libreriadias.com/"
-                  sponsorType={"friendly"}
-                />
-                <PartnerCard23
-                  imgSrc="Tlon.webp"
-                  text="Tlon è un progetto di divulgazione culturale e filosofica che è al tempo stesso  casa editrice, libreria e teatro. Il loro focus sono i giovani studenti delle scuole e delle università a cui offrono anche corsi di formazione per la fioritura personale e il lifelong learning. Molto attivi sui social, hanno anche una rubrica fissa su vanity fair."
-                  link="https://shop.tlon.it/segnalibro/"
-                  sponsorType={"friendly"}
-                />{" "}
+
                 <PartnerCard23
                   imgSrc="Innocent.webp"
                   text="Ciao, noi siamo innocent. Facciamo smoothie e succhi di frutta realizzati con ingredienti naturali e nient'altro, doniamo il 10% dei nostri profitti in beneficenza e ci impegniamo affinché le nostri emissioni siano sempre più vicine a zero. Ah, siamo anche molto fieri di essere una B-Corp."
@@ -319,6 +326,12 @@ export default function Partners() {
                   text="Red Bull è un'azienda leader nel mercato dell'Energy Drink. L'ascesa del brand e le sue innovative strategie di marketing le hanno permesso, nel tempo, di espandersi in altri settori, come quello sportivo e musicale. 
 Red Bull Basement, il Global Student Project che mette alla prova gli studenti universitari di tutto il mondo spingendoli a trovare idee che possano migliorare il mondo."
                   link="https://www.redbull.com/int-en/event-series/basement"
+                  sponsorType={"friendly"}
+                />
+                <PartnerCard23
+                  imgSrc="Marziali.webp"
+                  text=""
+                  link=""
                   sponsorType={"friendly"}
                 />
               </div>
@@ -345,14 +358,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   text="eCo (ecologic Communication) nasce nel 2022 come pagina Instagram con l’obiettivo di sensibilizzare gli utenti verso tematiche sostenibili, green e inclusive. Vogliamo rappresentare la voce di una nuova comunicazione sostenibile attraverso un'informazione chiara, innovativa e di qualità."
                   sponsorType={"media"}
                 />
-
-                {/*<PartnerCard23
-                  imgSrc="Millionarie.webp"
-                  link=""
-                  text=""
+                <PartnerCard23
+                  imgSrc="RadioKaos.webp"
+                  link="https://www.radiokaositaly.com/"
+                  text="Radio Kaos Italy è la WebRadio indipendente, in vetrina, nata nel 2009 con lo scopo di individuare e diffondere le realtà artistiche, culturali, musicali e dell’underground italiano e internazionale. Miglior webradio d’Italia al MEI di Faenza e vincitrice del MArte awards come miglior webradio, una delle ospiti al World Radio Day 2021."
                   sponsorType={"media"}
                 />
-                */}
               </div>
 
               <h2
@@ -384,21 +395,21 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               </h2>
               <div className="row">
                 <PartnerCardCommunity
-                  imgSrc="SFClubSapienza.webp"
-                  link="https://startingfinance.com/cerca-club/"
+                  imgSrc="Thesis4u.webp"
+                  link="https://thesisforyou.com/"
                 />
                 <PartnerCardCommunity imgSrc="MentorsNova.webp" />
                 <PartnerCardCommunity
-                  imgSrc="Thesis4u.webp"
-                  link="https://thesisforyou.com/"
+                  imgSrc="Peekaboo.webp"
+                  link="https://www.peekaboovision.com/"
+                />
+                <PartnerCardCommunity
+                  imgSrc="SFClubSapienza.webp"
+                  link="https://startingfinance.com/cerca-club/"
                 />
                 <PartnerCardCommunity
                   imgSrc="JESAP.webp"
                   link="https://jesap.it/"
-                />
-                <PartnerCardCommunity
-                  imgSrc="Peekaboo.webp"
-                  link="https://www.peekaboovision.com/"
                 />
                 <PartnerCardCommunity
                   imgSrc="WAYouth.webp"
@@ -434,6 +445,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <PartnerCard23
                   imgSrc="CE.webp"
                   link="https://commission.europa.eu/index_en"
+                  sponsorType={"patrocinio"}
+                />
+                <PartnerCard23
+                  imgSrc="RegioneLazio.webp"
+                  link="https://www.regione.lazio.it/"
                   sponsorType={"patrocinio"}
                 />
               </div>
