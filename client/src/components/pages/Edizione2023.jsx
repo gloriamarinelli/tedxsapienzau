@@ -78,7 +78,7 @@ export default function Edizione2023() {
     {
       time: "10:00 - 10:15",
       title: "Interventi Istituzionali",
-      text: "Prof. Massimo Ralli → Delegato per il TEDxSapienzaU",
+      text: "Prof. Massimo Ralli → Delegato per il TEDxSapienzaU | Ass. Sabrina Alfonsi, Assessora all'Ambiente, all'Agricoltura e ai Rifiuti del Comune di Roma",
     },
     {
       time: "10:15 - 11:30",
@@ -159,7 +159,7 @@ export default function Edizione2023() {
                 >
                   {item.title}
                 </p>
-                <ul style={{textAlign: "justify"}}>
+                <ul style={{ textAlign: "justify" }}>
                   {item.text.split(" | ").map((speaker, speakerIndex) => (
                     <li
                       key={speakerIndex}
