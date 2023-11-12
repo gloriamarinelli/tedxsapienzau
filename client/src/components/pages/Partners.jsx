@@ -244,7 +244,7 @@ export default function Partners() {
               <div className="row">
                 <PartnerCard23
                   imgSrc="CBCR.webp"
-                  text=""
+                  text="https://cosebellecoserare.com/it/home-v4-italiano/"
                   link=""
                   sponsorType={"smart"}
                 />
@@ -331,7 +331,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <PartnerCard23
                   imgSrc="Marziali.webp"
                   text=""
-                  link=""
+                  link="https://marziali1922.com/"
                   sponsorType={"friendly"}
                 />
               </div>
