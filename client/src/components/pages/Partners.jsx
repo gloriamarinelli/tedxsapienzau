@@ -182,13 +182,7 @@ export default function Partners() {
                 Main Sponsors
               </h2>
               <div className="row">
-                <PartnerCard23
-                  imgSrc="Eni.webp"
-                  text="Eni è una società dell'energia con oltre 32.000 persone in 62 Paesi. La sua strategia mira a raggiungere l'obiettivo delle zero emissioni nette al 2050 e a fornire prodotti decarbonizzati, coniugando sostenibilità ambientale e finanziaria, puntando su una leadership tecnologica costruita in anni di ricerca e innovazione."
-                  link="https://www.eni.com/it-IT/home.html"
-                  sponsorType={"main"}
-                />
-
+              
                 <PartnerCard23
                   imgSrc="Tim.webp"
                   text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l'obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040."
