@@ -59,10 +59,7 @@ export default function Partners() {
               imgSrc="https://upload.wikimedia.org/wikipedia/it/thumb/c/cc/UniCredit_logo.svg/1200px-UniCredit_logo.svg.png"
               sponsorType={"main"}
             />
-            <PartnerCard22
-              imgSrc="https://makerfairerome.eu/wp-content/uploads/2020/07/Logo_tricolore_eni.jpg"
-              sponsorType={"main"}
-            />
+
             <PartnerCard22
               imgSrc="https://www.fondazioneania.it/images/loghi/logo.png"
               sponsorType={"main"}
@@ -182,7 +179,6 @@ export default function Partners() {
                 Main Sponsors
               </h2>
               <div className="row">
-              
                 <PartnerCard23
                   imgSrc="Tim.webp"
                   text="Il Gruppo TIM è il primo operatore di telecomunicazioni italiano e guida la transizione digitale in Italia e Brasile. Nello sviluppo del business ha fatto propria una strategia improntata alla sostenibilità che si poggia su obiettivi di climate strategy, economia circolare, crescita digitale e gender equality, con l'obiettivo di diventare carbon neutral nel 2030 e raggiungere le zero emissioni nette entro il 2040."
