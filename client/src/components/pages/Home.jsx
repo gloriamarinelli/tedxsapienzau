@@ -47,24 +47,7 @@ export default function Home() {
     );
   };
 
-  function getCountdown() {
-    return (
-      <section
-        style={{
-          background: "linear-gradient(60deg, #EB0028 30%, #242958 100%)",
-          color: "white",
-          fontFamily: "GothamBold",
-          alignItems: "center",
-        }}
-      >
-        <div className="container">
-          <div className="p-2">
-            <CountdownEd23 />
-          </div>
-        </div>
-      </section>
-    );
-  }
+ 
 
   return (
     <>
@@ -141,7 +124,7 @@ export default function Home() {
             )}
             {getCallToAction()}
           </div>
-          {getCountdown()}
+         
         </div>
         {getVerticalBannerNews(windowSize)}
       </section>
