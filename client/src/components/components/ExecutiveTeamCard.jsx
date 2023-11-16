@@ -26,6 +26,7 @@ export default function ExecutiveTeamCard({
             display: "flex",
             flexDirection: "column",
             position: "relative",
+            border: "2px solid transparent",
           }}
         >
           <a
