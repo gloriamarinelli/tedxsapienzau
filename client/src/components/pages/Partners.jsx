@@ -283,7 +283,7 @@ export default function Partners() {
                 <PartnerCard23
                   imgSrc="Copernico.webp"
                   link="https://copernicofm.com/"
-                  text=""
+                  text="Copernico offre dal 2017 servizi di pulizia professionali per uffici, autobus, ospedali. L'azienda promuove la sostenibilità come leva competitiva, tagliando sprechi e inefficienze. Inoltre, fornisce anche servizi di outsourcing in settori come logistica, traslochi, ristorazione e gestione magazzini, creando valore senza compromettere l'efficienza operativa."
                   sponsorType={"friendly"}
                 />
                 <PartnerCard23
