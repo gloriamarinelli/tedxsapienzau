@@ -351,7 +351,7 @@ export default function MissionandVision() {
                     fontFamily: "GothamBold",
                   }}
                 >
-                  13
+                  25
                 </h1>
                 <h5
                   style={{
@@ -359,7 +359,7 @@ export default function MissionandVision() {
                     fontFamily: "GothamBold",
                   }}
                 >
-                  speaker
+                  speakers
                 </h5>
               </div>
               <div className="col-12">
@@ -372,7 +372,7 @@ export default function MissionandVision() {
                     fontFamily: "GothamBold",
                   }}
                 >
-                  3k
+                  5k
                 </h1>
                 <h5
                   style={{
@@ -393,7 +393,7 @@ export default function MissionandVision() {
                     fontFamily: "GothamBold",
                   }}
                 >
-                  4k+
+                  5k+
                 </h1>
                 <h5
                   style={{
