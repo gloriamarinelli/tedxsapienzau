@@ -143,19 +143,16 @@ export default function BioSpeakerPopup({
             }}
             onClick={() => setIsBioOpen(false)}
           />
-          {year === 2022 ? (
-            <iframe
-              width="380"
-              height="400"
-              textAlign="center"
-              src={selectedSpeakerInfo.linkTalk}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          ) : (
-            <div style={{ height: "100px" }}></div>
-          )}
+          <iframe
+            width="100%"
+            height="400"
+            textAlign="center"
+            src={selectedSpeakerInfo.linkTalk}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+
           <div
             style={{
               width: "95%",
