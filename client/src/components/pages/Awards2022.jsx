@@ -8,7 +8,6 @@ import Image6 from "../images/awards22/speaker3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
-import logoAwardsBianco from "../images/TEDlogovecchio.png";
 import global from "../../resources/global.json";
 
 export default function Awards2022() {

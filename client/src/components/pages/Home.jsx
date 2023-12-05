@@ -47,8 +47,6 @@ export default function Home() {
     );
   };
 
- 
-
   return (
     <>
       <section style={{ display: "flex" }}>
@@ -124,7 +122,6 @@ export default function Home() {
             )}
             {getCallToAction()}
           </div>
-         
         </div>
         {getVerticalBannerNews(windowSize)}
       </section>

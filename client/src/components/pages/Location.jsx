@@ -1,9 +1,9 @@
 import "../../index.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image from "../images/location2.webp";
+import Image from "../images/location3.jpg";
 import Image1 from "../images/location1.webp";
 
-import React, { useState } from "react";
+import React from "react";
 import global from "../../resources/global.json";
 import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
@@ -321,7 +321,7 @@ export default function Location() {
             color: "#fff",
             backgroundColor: "red",
             marginBottom: "10px",
-						height: "30vh",
+            height: "30vh",
             display: "grid",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,

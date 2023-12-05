@@ -258,7 +258,7 @@ export default function NavbarComponent(props) {
                     <li>
                       <Link
                         className="dropdown-item text-bg-light"
-                        to="/awards"
+                        to="/awards2023"
                         onClick={() => setExpanded(false)}
                       >
                         Awards 2023
@@ -267,7 +267,7 @@ export default function NavbarComponent(props) {
                     <li>
                       <Link
                         className="dropdown-item text-bg-light"
-                        to="/awards22"
+                        to="/awards2022"
                         onClick={() => setExpanded(false)}
                       >
                         Awards 2022

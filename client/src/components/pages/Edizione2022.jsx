@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import "../../index.css";
 import "../../resources/styles/edizione2022style.css";
-
-import TedxLogo from "../images/TEDlogovecchio.png";
 
 import SpeakerCard from "../components/SpeakerCard";
 import BioSpeakerPopup from "../components/BioSpeakerPopup";
@@ -114,7 +110,22 @@ export default function Edizione2022() {
             </div>
           </div>
           <div className="col-md-6">
-            <LazyLoadImage src={TedxLogo} width="300px" />
+            <a
+              href="https://youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6&si=oP9pKvJScQewfqGa"
+              type="button"
+              className="btn5-ed22"
+              style={{
+                fontWeight: "bold",
+                width: "50%",
+                marginLeft: "50px",
+                alignItems: "center",
+                fontFamily: "GothamBook",
+              }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Guarda i TEDx talk
+            </a>{" "}
           </div>
         </div>
       </div>

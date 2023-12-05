@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import "../../index.css";
 import "../../resources/styles/edizione2023style.css";
 
 import SpeakerCard from "../components/SpeakerCard";
@@ -201,7 +200,7 @@ export default function Edizione2023() {
               <FontAwesomeIcon
                 className="col-2"
                 icon={faLocationDot}
-                style={{ color: global.COLORS.ROSSO_POSTER }}
+                style={{ color: "#EB0028" }}
                 size="2x"
               />
               <p className="col-8">
@@ -214,28 +213,30 @@ export default function Edizione2023() {
               <FontAwesomeIcon
                 className="col-2"
                 icon={faCalendar}
-                style={{ color: global.COLORS.ROSSO_POSTER }}
+                style={{ color: "#EB0028" }}
                 size="2x"
               />
               <p className="col-8">mercoledì 15 nov 2023 ore 08:45 - 17:00</p>
             </div>
           </div>
-          {/* <div className="col-md-6">
+          <div className="col-md-6">
             <a
-              href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-2023-back-to-zero-717157827367?aff=oddtdtcreator"
+              href="https://youtube.com/playlist?list=PL4-t_gJBexTBDgARWnLB3dmC0g1_OcxFc&si=o_xQf51xiEvfXWl4"
               type="button"
-              className="btn5-1"
+              className="btn5-ed23"
               style={{
                 fontWeight: "bold",
                 width: "50%",
                 marginLeft: "50px",
                 alignItems: "center",
-                fontFamily: "GothamBold",
+                fontFamily: "GothamBook",
               }}
+              target="_blank"
+              rel="noreferrer"
             >
-              Ottieni i biglietti
-            </a>
-          </div> */}
+              Guarda i TEDx talk
+            </a>{" "}
+          </div>
         </div>
       </section>
 

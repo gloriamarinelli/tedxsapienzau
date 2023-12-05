@@ -20,7 +20,7 @@ import Sustainability from "./components/pages/Sustainability";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
-import Awards from "./components/pages/Awards";
+import Awards2023 from "./components/pages/Awards2023";
 import Awards2022 from "./components/pages/Awards2022";
 import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
@@ -107,11 +107,11 @@ const router = createBrowserRouter([
         element: <NewsletterBrevo />,
       },
       {
-        path: "/awards",
-        element: <Awards />,
+        path: "/awards2023",
+        element: <Awards2023 />,
       },
       {
-        path: "/awards22",
+        path: "/awards2022",
         element: <Awards2022 />,
       },
       {

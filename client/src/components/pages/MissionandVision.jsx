@@ -3,18 +3,25 @@ import React, { useState } from "react";
 import Image from "../images/Cos_èTED.webp";
 import Image1 from "../images/Cos_èTEDx.webp";
 import Image2 from "../images/logo-black.png";
-import Image3 from "../images/stage2022.webp";
 
-import Image11 from "../images/ted-0039.webp";
-import Image12 from "../images/ted-0053.webp";
-import Image13 from "../images/ted-0117.webp";
-import Image14 from "../images/ted-0489.webp";
+import Image3 from "../images/missionvision22/stage2022.webp";
+//import Image11 from "../images/missionvision22/ted-0039.webp";
+//import Image12 from "../images/missionvision22/ted-0053.webp";
+//import Image13 from "../images/missionvision22/ted-0117.webp";
+//import Image14 from "../images/missionvision22/ted-0489.webp";
+
+//import Image3 from "../images/missionvision23/stage2022.webp";
+import Image11 from "../images/missionvision23/DSC00149.jpg";
+import Image13 from "../images/missionvision23/DSC04914.jpg";
+import Image14 from "../images/missionvision23/DSC05278.jpg";
+import Image15 from "../images/missionvision23/PHP07700.jpg";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
 import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
+import CountUp from "react-countup";
 
 export default function MissionandVision() {
   const [windowSize, setWindowSize] = useOutletContext();
@@ -138,12 +145,12 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  13
+                  <CountUp end={26} duration={2} />
                 </h1>
                 <h5
                   style={{
@@ -151,7 +158,7 @@ export default function MissionandVision() {
                     fontFamily: "GothamBold",
                   }}
                 >
-                  speaker
+                  speakers
                 </h5>
               </div>
               <div className="col">
@@ -159,12 +166,17 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  3k
+                  <CountUp
+                    end={3000}
+                    duration={2}
+                    useEasing={false}
+                    separator=""
+                  />
                 </h1>
                 <h5
                   style={{
@@ -180,12 +192,17 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  4k+
+                  <CountUp
+                    end={5160}
+                    duration={2}
+                    useEasing={false}
+                    separator=""
+                  />
                 </h1>
                 <h5
                   style={{
@@ -201,12 +218,17 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  15k+
+                  <CountUp
+                    end={22083}
+                    duration={2}
+                    useEasing={false}
+                    separator=""
+                  />
                 </h1>
                 <h5
                   style={{
@@ -346,12 +368,12 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5"
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  25
+                  26
                 </h1>
                 <h5
                   style={{
@@ -367,12 +389,17 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  5k
+                  <CountUp
+                    end={3000}
+                    duration={2}
+                    useEasing={false}
+                    separator=""
+                  />
                 </h1>
                 <h5
                   style={{
@@ -388,12 +415,17 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  5k+
+                  <CountUp
+                    end={5160}
+                    duration={2}
+                    useEasing={false}
+                    separator=""
+                  />
                 </h1>
                 <h5
                   style={{
@@ -409,12 +441,17 @@ export default function MissionandVision() {
                   className="font-weight-bold mt-5 "
                   style={{
                     color: "rgb(235, 0, 40)",
-                    fontSize: "100px",
+                    fontSize: "80px",
                     fontWeight: "bold",
                     fontFamily: "GothamBold",
                   }}
                 >
-                  15k+
+                  <CountUp
+                    end={22083}
+                    duration={2}
+                    useEasing={false}
+                    separator=""
+                  />
                 </h1>
                 <h5
                   style={{
@@ -443,19 +480,17 @@ const CarouselComponent = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} variant="white">
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      variant="black"
+      style={{ width: "70%", margin: "auto" }}
+    >
       <Carousel.Item>
         <img
           className="d-block carousel-image"
           src={Image11}
           alt="First slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block carousel-image"
-          src={Image12}
-          alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
@@ -469,6 +504,13 @@ const CarouselComponent = () => {
         <img
           className="d-block carousel-image"
           src={Image14}
+          alt="Fourth slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block carousel-image"
+          src={Image15}
           alt="Fourth slide"
         />
       </Carousel.Item>
