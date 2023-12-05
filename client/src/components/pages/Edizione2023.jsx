@@ -22,7 +22,6 @@ export default function Edizione2023() {
     axios
       .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
       .then((res, err) => {
-        console.log(res.data);
         setSpeakers(res.data);
       })
       .catch((err) => {
@@ -49,7 +48,7 @@ export default function Edizione2023() {
     } else {
       let res = [];
       speakers.map((speaker) => {
-        const { id, nome, bio, categoria, fotoPath } = speaker;
+        const { id, nome, bio, categoria, fotoPath, link } = speaker;
         res.push(
           <SpeakerCard
             key={id}
@@ -60,6 +59,7 @@ export default function Edizione2023() {
             setIsBioOpen={setIsBioOpen}
             setSelectedSpeakerInfo={setSelectedSpeakerInfo}
             year={2023}
+            linkTalk={link}
           />
         );
       });
