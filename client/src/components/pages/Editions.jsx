@@ -6,164 +6,13 @@ import Cover22 from "../images/cover-edizione22.webp";
 import global from "../../resources/global.json";
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
+import "../../resources/styles/editionsstyle.css";
 import "../../index.css";
 
 export default function Editions() {
   const [windowSize, setWindowSize] = useOutletContext();
 
-  const EditionCard = ({
-    title,
-    date,
-    description,
-    linkTo,
-    image,
-    imagePosition,
-  }) => {
-    const imageHeight = "700px";
-    const mobileImageHeight = "400px";
-
-    if (windowSize > global.UTILS.TABLET_WIDTH) {
-      return (
-        <div
-          style={{
-            width: "100%",
-            height: "content",
-            padding: "20px",
-            fontFamily: "GothamBold",
-            display: "flex",
-            // backgroundColor: "lightgrey",
-          }}
-        >
-          {imagePosition === "left" ? (
-            <div style={{ flex: 1 }}>
-              <LazyLoadImage
-                src={image}
-                alt="Cos'èTED"
-                width="95%"
-                height={imageHeight}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  borderRadius: "10px",
-                }}
-              />
-            </div>
-          ) : (
-            <></>
-          )}
-          <div style={{ maxWidth: "50%" }}>
-            <h2
-              style={{
-                fontSize: "60px",
-                color: global.COLORS.ROSSO_TED_2023,
-              }}
-            >
-              {title}
-            </h2>
-            <p
-              style={{ fontSize: "30px", color: global.COLORS.ROSSO_TED_2023 }}
-            >
-              {date}
-            </p>
-            <p>{description}</p>
-            <a className="link" href={linkTo}>
-              <button
-                style={{
-                  backgroundColor: global.COLORS.ROSSO_TED_2023,
-                  padding: "10px 25px",
-                  color: "white",
-                  border: "none",
-                  fontSize: "18px",
-                  borderRadius: "10px",
-                }}
-              >
-                Scopri di più
-              </button>
-            </a>
-          </div>
-          {imagePosition === "right" ? (
-            <div style={{ flex: 1 }}>
-              <LazyLoadImage
-                src={image}
-                alt="Cos'èTED"
-                width="95%"
-                height={imageHeight}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  borderRadius: "10px",
-                }}
-              />
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
-      );
-    } else {
-      /** MOBILE */
-      return (
-        <div
-          style={{
-            width: "100%",
-            height: "content",
-            padding: "20px",
-            fontFamily: "GothamBold",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            // backgroundColor: "lightgrey",
-          }}
-        >
-          <div style={{ flex: 1 }}>
-            <LazyLoadImage
-              src={image}
-              alt="Cos'èTED"
-              style={{
-                objectFit: "cover",
-                objectPosition: "center",
-                borderRadius: "10px",
-                width: "550px",
-                height: "350px",
-              }}
-            />
-          </div>
-          <div style={{ maxWidth: "80%" }}>
-            <h2
-              style={{
-                fontSize: "60px",
-                color: global.COLORS.ROSSO_TED_2023,
-              }}
-            >
-              {title}
-            </h2>
-            <p
-              style={{ fontSize: "30px", color: global.COLORS.ROSSO_TED_2023 }}
-            >
-              {date}
-            </p>
-            <p>{description}</p>
-            <a className="link" href={linkTo}>
-              <button
-                style={{
-                  backgroundColor: global.COLORS.ROSSO_TED_2023,
-                  padding: "10px 25px",
-                  color: "white",
-                  border: "none",
-                  fontSize: "18px",
-                  borderRadius: "10px",
-                }}
-              >
-                Scopri di più
-              </button>
-            </a>
-          </div>
-        </div>
-      );
-    }
-  };
-
-  if (windowSize > global.UTILS.TABLET_WIDTH) {
+  if (windowSize > 992) {
     return (
       <>
         <div
@@ -189,23 +38,122 @@ export default function Editions() {
             EDIZIONI
           </h1>
         </div>
-        <div className="container marketing mb-5 d-flex flex-column gap-2">
-          <EditionCard
-            title="BACK TO ZERO"
-            date="15 Novembre 2023"
-            description="Il nostro obiettivo è azzerare, ricercare un punto zero: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che rallentano la crescita della nostra società, peggiorando la qualità della nostra vita. Riconsiderare noi stessi ed il nostro modo di confrontarci. Imparare ed interagire con la società contemporanea, con le arti e le scienze. [...]"
-            linkTo="/edizione2023"
-            image={Cover23}
-            imagePosition="left"
-          />
-          <EditionCard
-            title="ACT: LEAD THE CHANGE"
-            date="29 Aprile 2022"
-            description="Il titolo della prima edizione del TEDxSapienzaU è stato ACT - Lead the change. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici: Action: La cultura dell'azione contro la cultura dell'inerzia e il ruolo della cittadinanza attiva nell'educazione del futuro. [...]"
-            linkTo="/edizione2022"
-            image={Cover22}
-            imagePosition="right"
-          />
+        <div className="container-lg mt-3">
+          <div class="parent" style={{ fontFamily: "GothamBold" }}>
+            <div class="div1">
+              <h2
+                style={{
+                  fontSize: "60px",
+                  color: global.COLORS.ROSSO_TED_2023,
+                }}
+              >
+                BACK TO ZERO
+              </h2>
+              <p
+                style={{
+                  fontSize: "30px",
+                  color: global.COLORS.ROSSO_TED_2023,
+                }}
+              >
+                15 Novembre 2023
+              </p>
+              <p>
+                Il nostro obiettivo è azzerare, ricercare un punto zero: le
+                disuguaglianze, i conflitti, i cattivi stili di vita, le
+                emissioni e i rifiuti. Ridurre quei fattori inquinanti che
+                rallentano la crescita della nostra società, peggiorando la
+                qualità della nostra vita. Riconsiderare noi stessi ed il nostro
+                modo di confrontarci. Imparare ed interagire con la società
+                contemporanea, con le arti e le scienze. [...]
+              </p>
+              <a className="link" href={"/edizione2023"}>
+                <button
+                  style={{
+                    backgroundColor: global.COLORS.ROSSO_TED_2023,
+                    padding: "10px 25px",
+                    color: "white",
+                    border: "none",
+                    fontSize: "18px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Scopri di più
+                </button>
+              </a>
+            </div>
+            <div class="div2">
+              <LazyLoadImage
+                src={Cover23}
+                alt="cover edizione 2023"
+                style={{
+                  height: "100%",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div class="div3">
+              <h2
+                style={{
+                  fontSize: "60px",
+                  color: global.COLORS.ROSSO_TED_2023,
+                }}
+              >
+                ACT: LEAD THE CHANGE
+              </h2>
+              <p
+                style={{
+                  fontSize: "30px",
+                  color: global.COLORS.ROSSO_TED_2023,
+                }}
+              >
+                29 Aprile 2022
+              </p>
+              <p>
+                Il titolo della prima edizione del TEDxSapienzaU è stato ACT -
+                Lead the change. Come da linee guida TEDx, i dialoghi che sono
+                stati presentati hanno riguardato diverse materie ed aree
+                tematiche interconnesse, prediligendo le migliori idee ed
+                esperienze ispiratrici: Action: La cultura dell'azione contro la
+                cultura dell'inerzia e il ruolo della cittadinanza attiva
+                nell'educazione del futuro. [...]
+              </p>
+              <a className="link" href={"/edizione2022"}>
+                <button
+                  style={{
+                    backgroundColor: global.COLORS.ROSSO_TED_2023,
+                    padding: "10px 25px",
+                    color: "white",
+                    border: "none",
+                    fontSize: "18px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Scopri di più
+                </button>
+              </a>
+            </div>
+            <div class="div4">
+              {" "}
+              <LazyLoadImage
+                src={Cover22}
+                alt="cover edizione 2023"
+                style={{
+                  height: "100%",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
+              />{" "}
+            </div>
+          </div>
         </div>
       </>
     );
@@ -213,7 +161,7 @@ export default function Editions() {
     return (
       <>
         <div
-          className="header gradient-background-team2023"
+          className="header gradient-background-team2023 "
           style={{
             padding: "10px",
             textAlign: "center",
@@ -235,21 +183,126 @@ export default function Editions() {
             EDIZIONI
           </h1>
         </div>
-        <div className="marketing mb-5 d-flex flex-column gap-2">
-          <EditionCard
-            title="BACK TO ZERO"
-            date="15 Novembre 2023"
-            description="Il nostro obiettivo è azzerare, ricercare un punto zero: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che rallentano la crescita della nostra società, peggiorando la qualità della nostra vita. Riconsiderare noi stessi ed il nostro modo di confrontarci. Imparare ed interagire con la società contemporanea, con le arti e le scienze. [...]"
-            linkTo="/edizione2023"
-            image={Cover23}
-          />
-          <EditionCard
-            title="ACT: LEAD THE CHANGE"
-            date="29 Aprile 2022"
-            description="Il titolo della prima edizione del TEDxSapienzaU è stato ACT - Lead the change. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici: Action: La cultura dell'azione contro la cultura dell'inerzia e il ruolo della cittadinanza attiva nell'educazione del futuro. [...]"
-            linkTo="/edizione2022"
-            image={Cover22}
-          />
+
+        {/**CONTENT */}
+
+        <div
+          className="container mb-5 mt-5"
+          style={{ fontFamily: "GothamBold" }}
+        >
+          <div class="mb-2">
+            <h2
+              style={{
+                fontSize: "40px",
+                color: global.COLORS.ROSSO_TED_2023,
+              }}
+            >
+              BACK TO ZERO
+            </h2>
+            <p
+              style={{
+                fontSize: "20px",
+                color: global.COLORS.ROSSO_TED_2023,
+              }}
+            >
+              15 Novembre 2023
+            </p>
+            <p>
+              Il nostro obiettivo è azzerare, ricercare un punto zero: le
+              disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni
+              e i rifiuti. Ridurre quei fattori inquinanti che rallentano la
+              crescita della nostra società, peggiorando la qualità della nostra
+              vita. Riconsiderare noi stessi ed il nostro modo di confrontarci.
+              Imparare ed interagire con la società contemporanea, con le arti e
+              le scienze. [...]
+            </p>
+            <a className="link" href={"/edizione2023"}>
+              <button
+                style={{
+                  backgroundColor: global.COLORS.ROSSO_TED_2023,
+                  padding: "10px 25px",
+                  color: "white",
+                  border: "none",
+                  fontSize: "18px",
+                  borderRadius: "10px",
+                }}
+              >
+                Scopri di più
+              </button>
+            </a>
+          </div>
+          <div>
+            <LazyLoadImage
+              src={Cover23}
+              alt="cover edizione 2023"
+              style={{
+                height: "500px",
+                boxSizing: "border-box",
+                borderRadius: "20px",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                width: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
+          <div className="mt-5 mb-2">
+            <h2
+              style={{
+                fontSize: "40px",
+                color: global.COLORS.ROSSO_TED_2023,
+              }}
+            >
+              ACT: LEAD THE CHANGE
+            </h2>
+            <p
+              style={{
+                fontSize: "20px",
+                color: global.COLORS.ROSSO_TED_2023,
+              }}
+            >
+              29 Aprile 2022
+            </p>
+            <p>
+              Il titolo della prima edizione del TEDxSapienzaU è stato ACT -
+              Lead the change. Come da linee guida TEDx, i dialoghi che sono
+              stati presentati hanno riguardato diverse materie ed aree
+              tematiche interconnesse, prediligendo le migliori idee ed
+              esperienze ispiratrici: Action: La cultura dell'azione contro la
+              cultura dell'inerzia e il ruolo della cittadinanza attiva
+              nell'educazione del futuro. [...]
+            </p>
+            <a className="link" href={"/edizione2022"}>
+              <button
+                style={{
+                  backgroundColor: global.COLORS.ROSSO_TED_2023,
+                  padding: "10px 25px",
+                  color: "white",
+                  border: "none",
+                  fontSize: "18px",
+                  borderRadius: "10px",
+                }}
+              >
+                Scopri di più
+              </button>
+            </a>
+          </div>
+          <div>
+            <LazyLoadImage
+              src={Cover22}
+              alt="cover edizione 2023"
+              style={{
+                height: "500px",
+                boxSizing: "border-box",
+                borderRadius: "20px",
+                maxWidth: "100%",
+                maxHeight: "100%",
+                width: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
         </div>
       </>
     );

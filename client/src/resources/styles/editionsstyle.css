@@ -1,0 +1,28 @@
+.parent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 15% 20% 20%;
+  grid-column-gap: 10px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+  margin-right: 10px;
+}
+.div2 {
+  grid-area: 1 / 2 / 4 / 3;
+}
+.div3 {
+  grid-area: 4 / 2 / 6 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 10px;
+}
+.div4 {
+  grid-area: 3 / 1 / 6 / 2;
+}
+
+p {
+  font-family: GothamBook;
+}
