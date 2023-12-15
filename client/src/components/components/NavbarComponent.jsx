@@ -212,36 +212,16 @@ export default function NavbarComponent(props) {
                     Rome Future Week
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle text-bg-light"
-                    data-bs-toggle="dropdown"
-                    role="button"
-                    aria-expanded="false"
+
+                <li className="nav-item">
+                  <Link
+                    className="nav-link text-bg-light"
+                    to="/edizioni"
                     style={{ borderRadius: "5px" }}
+                    onClick={() => setExpanded(false)}
                   >
                     Edizioni
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link
-                        className="dropdown-item text-bg-light"
-                        to="/edizione2023"
-                        onClick={() => setExpanded(false)}
-                      >
-                        Edizione 2023
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item text-bg-light"
-                        to="/edizione2022"
-                        onClick={() => setExpanded(false)}
-                      >
-                        Edizione 2022
-                      </Link>
-                    </li>
-                  </ul>
+                  </Link>
                 </li>
 
                 <li className="nav-item dropdown">

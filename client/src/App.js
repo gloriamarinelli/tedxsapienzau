@@ -25,6 +25,7 @@ import Awards2022 from "./components/pages/Awards2022";
 import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
+import Editions from "./components/pages/Editions";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "/team",
         element: <Team />,
+      },
+      {
+        path: "/edizioni",
+        element: <Editions />,
       },
       {
         path: "/edizione2022",
