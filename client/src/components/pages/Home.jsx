@@ -10,7 +10,7 @@ import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/RFW23/logoRFW.webp";
 import Image1 from "../images/RFW23/RFW.webp";
-import Image2 from "../images/ccv.jpg";
+import Image2 from "../images/ccv.webp";
 import Eventbrite from "../images/eventbrite.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import CountdownEd23 from "../components/CountdownEd23";
@@ -281,7 +281,7 @@ function getBannerCandidati(windowSize) {
           </div>
           <div
             className="col-lg-6"
-            style={{ backgroundColor: "rgba(255 ,255, 255, 0.65 )" }}
+            style={{ backgroundColor: "rgba(255 ,255, 255, 0.7 )" }}
           >
             <div className="p-5">
               <h1
@@ -313,6 +313,7 @@ function getBannerCandidati(windowSize) {
                   style={{
                     display: "flex",
                     alignItems: "center",
+                    justifyContent: "center",
                     fontSize:
                       windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "16px",
                     textDecoration: "none",
@@ -324,7 +325,7 @@ function getBannerCandidati(windowSize) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Invia la tua candidatura
+                  Candidati!
                 </a>
               </p>
               {/*<a
