@@ -131,7 +131,7 @@ export default function NavbarComponent(props) {
                 <li className="nav-item">
                   <a
                     className="nav-link"
-                    href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
+                    href="https://www.youtube.com/@tedxsapienzau/playlists"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -186,7 +186,39 @@ export default function NavbarComponent(props) {
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
                 }`}
               >
-                <li className="nav-item">
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle text-bg-light"
+                    data-bs-toggle="dropdown"
+                    role="button"
+                    aria-expanded="false"
+                    style={{ borderRadius: "5px" }}
+                  >
+                    Past Events
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/workshop"
+                        onClick={() => setExpanded(false)}
+                      >
+                        Workshop
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/rfw23"
+                        onClick={() => setExpanded(false)}
+                      >
+                        Rome Future Week
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+
+                {/*<li className="nav-item">
                   <Link to="/workshop" onClick={() => setExpanded(false)}>
                     <button
                       type="button"
@@ -211,7 +243,7 @@ export default function NavbarComponent(props) {
                   >
                     Rome Future Week
                   </Link>
-                </li>
+                    </li>*/}
 
                 <li className="nav-item">
                   <Link

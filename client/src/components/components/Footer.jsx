@@ -194,7 +194,7 @@ function Footer() {
                     </a>
                     <a
                       className=""
-                      href="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
+                      href="https://www.youtube.com/@tedxsapienzau/playlists"
                     >
                       <FontAwesomeIcon
                         style={{ color: "white" }}

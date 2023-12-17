@@ -10,6 +10,7 @@ import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/RFW23/logoRFW.webp";
 import Image1 from "../images/RFW23/RFW.webp";
+import Image2 from "../images/ccv.jpg";
 import Eventbrite from "../images/eventbrite.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import CountdownEd23 from "../components/CountdownEd23";
@@ -126,6 +127,7 @@ export default function Home() {
         {getVerticalBannerNews(windowSize)}
       </section>
       {/*{getBannerPastEditions(windowSize)}*/}
+      {getBannerCandidati(windowSize)}
     </>
   );
 }
@@ -239,6 +241,91 @@ function getBannerRFW(windowSize) {
                 <strong style={{ color: "#E62153" }}>
                   IL FUTURO CI ASPETTA.
                 </strong>
+              </p>
+              {/*<a
+                className="btn-RFW"
+                style={{
+                  fontSize:
+                    windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
+                  fontFamily: "GothamBold",
+                }}
+                href="https://www.eventbrite.it/e/biglietti-universita-e-impresa-insieme-per-il-futuro-703507017427?aff=oddtdtcreator"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Partecipa anche tu!
+              </a>*/}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function getBannerCandidati(windowSize) {
+  return (
+    <section
+      style={{
+        backgroundImage: `url(${Image2})`,
+        backgroundSize: "cover",
+        backgroundPosition: "left",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="container px-5">
+        <div className="row gx-5 align-items-center">
+          <div className="col-lg-6 ">
+            <div className="p-5 d-flex justify-content-center align-items-center">
+            </div>
+          </div>
+          <div
+            className="col-lg-6"
+            style={{ backgroundColor: "rgba(255 ,255, 255, 0.65 )" }}
+          >
+            <div className="p-5">
+              <h1
+                style={{
+                  color: "#eb0028",
+                  fontWeight: "bold",
+                  marginBottom: "25px",
+                }}
+              >
+               Candidati come &nbsp;volontario!
+              </h1>
+
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontSize: "16px",
+                  marginBottom: "auto",
+                }}
+              >
+                <p>
+                  Sei interessato al nostro progetto?
+                  A breve inizierà la fase di recruiting, 
+                  nel frattempo puoi già inviare
+                  la tua candidatura per far parte
+                  del nostro Team!
+                </p>
+                <a
+                  className="btn-RFW-page"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize:
+                      windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "16px",
+                    textDecoration: "none",
+                    fontFamily: "GothamBold",
+                    color: "#eb0028",
+                  }}
+                  
+                  href="/join"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Invia la tua candidatura
+                </a>
               </p>
               {/*<a
                 className="btn-RFW"
