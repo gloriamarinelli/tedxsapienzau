@@ -145,7 +145,7 @@ export default function Workshop() {
           style={{
             padding: "10px",
             color: "#fff",
-            height: "40vh",
+            height: "50vh",
             display: "grid",
             placeItems: "center",
             backgroundColor: global.COLORS.CELESTE,
