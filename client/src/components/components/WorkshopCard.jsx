@@ -66,7 +66,7 @@ export default function WorkshopCard({
             border: "2px solid #5272b5",
             padding: "15px",
             borderRadius: "20px",
-            height: "400px",
+            height: "350px",
             width: "430px",
           }}
         >
@@ -89,7 +89,7 @@ export default function WorkshopCard({
             }}
           >
             <img
-              style={{ height: "100px" }}
+              style={{ height: "80px" }}
               src={`/images/workshop23/${imgSrc}`}
               alt={titolo}
             />
