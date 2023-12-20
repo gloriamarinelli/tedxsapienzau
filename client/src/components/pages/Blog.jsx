@@ -108,7 +108,7 @@ export default function Blog() {
           <h1
             className="font-weight-bold mt-5"
             style={{
-              fontSize: "70px",
+              fontSize: "55px",
               fontWeight: "bold",
               marginLeft: "30px",
             }}
@@ -117,7 +117,7 @@ export default function Blog() {
           </h1>
           <p
             style={{
-              fontSize: "50px",
+              fontSize: "40px",
               fontStyle: "italic",
               marginLeft: "30px",
             }}

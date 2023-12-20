@@ -4,7 +4,9 @@ import Image from "../images/Cos_èTED.webp";
 import Image1 from "../images/Cos_èTEDx.webp";
 import Image2 from "../images/logo-black.png";
 
-import Image3 from "../images/missionvision22/stage2022.webp";
+//import Image3 from "../images/missionvision22/stage2022.webp";
+import Image3 from "../images/missionvision23/stage23.webp";
+
 //import Image11 from "../images/missionvision22/ted-0039.webp";
 //import Image12 from "../images/missionvision22/ted-0053.webp";
 //import Image13 from "../images/missionvision22/ted-0117.webp";
@@ -130,7 +132,7 @@ export default function MissionandVision() {
                 </p>
               </div>
               <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-                <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="400" />
+                <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="350" />
               </div>
             </div>
 
