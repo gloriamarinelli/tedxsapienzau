@@ -26,6 +26,7 @@ import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
 import Editions from "./components/pages/Editions";
+import ParlanoDiNoi from "./components/pages/parlanodinoi";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/mission&vision",
         element: <MissionandVision />,
+      },
+      {
+        path: "/parlanodinoi",
+        element: <ParlanoDiNoi />,
       },
       {
         path: "/location",

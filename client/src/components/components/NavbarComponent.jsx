@@ -369,6 +369,15 @@ export default function NavbarComponent(props) {
                         Sustainability
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        className="dropdown-item text-bg-light"
+                        to="/parlanodinoi"
+                        onClick={() => setExpanded(false)}
+                      >
+                        Parlano di Noi
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 

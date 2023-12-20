@@ -9,8 +9,22 @@ import global from "../../resources/global.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { useOutletContext } from "react-router";
+import Carousel from "react-bootstrap/Carousel";
 
 import axios from "axios";
+
+import Image1 from "../images/edizione23/tullio.jpg";
+import Image2 from "../images/edizione23/rossi.jpg";
+import Image3 from "../images/edizione23/freymann.jpg";
+import Image4 from "../images/edizione23/basilone.jpg";
+import Image5 from "../images/edizione23/schito.jpg";
+import Image6 from "../images/edizione23/cervellini.jpg";
+import Image7 from "../images/edizione23/estrela.jpg";
+import Image8 from "../images/edizione23/lambarelli.jpg";
+import Image9 from "../images/edizione23/lenca.jpg";
+import Image10 from "../images/edizione23/villain.jpg";
+import Image11 from "../images/edizione23/onofri.jpg";
+import Image12 from "../images/edizione23/aboya.jpg";
 
 export default function Edizione2023() {
   const [isBioOpen, setIsBioOpen] = useState(false);
@@ -65,6 +79,108 @@ export default function Edizione2023() {
       });
       return res;
     }
+  };
+
+  const CarouselComponent = () => {
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  
+    return (
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        variant="black"
+        style={{ width: "70%", margin: "auto" }}
+      >
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image1}
+            alt="First slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image2}
+            alt="Second slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image3}
+            alt="Third slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image4}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image5}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image6}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image7}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image8}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image9}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image10}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image11}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block carousel-image"
+            src={Image12}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+      </Carousel>
+    );
   };
 
   const programma = [
@@ -301,6 +417,7 @@ export default function Edizione2023() {
         year={2023}
       />
       <div>{renderProgram23()}</div>
+      <div className="container mb-5 mt-5">{CarouselComponent()}</div>
     </>
   );
 }
