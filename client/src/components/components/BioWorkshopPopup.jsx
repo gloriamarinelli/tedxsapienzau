@@ -117,7 +117,7 @@ export default function BioWorkshopPopup({
         style={{
           content: {
             maxWidth: "700px",
-            maxHeight: "400px",
+            maxHeight: "700px",
             margin: "auto",
             backgroundColor: global.COLORS.CELESTE,
             borderRadius: "10px",
