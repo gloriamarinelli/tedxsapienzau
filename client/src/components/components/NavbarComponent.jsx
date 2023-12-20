@@ -369,7 +369,7 @@ export default function NavbarComponent(props) {
                         Sustainability
                       </Link>
                     </li>
-                    <li>
+                    {/*<li>
                       <Link
                         className="dropdown-item text-bg-light"
                         to="/parlanodinoi"
@@ -377,7 +377,7 @@ export default function NavbarComponent(props) {
                       >
                         Parlano di Noi
                       </Link>
-                    </li>
+                  </li>*/}
                   </ul>
                 </li>
 

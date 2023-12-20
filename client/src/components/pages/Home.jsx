@@ -10,7 +10,7 @@ import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import Image from "../images/RFW23/logoRFW.webp";
 import Image1 from "../images/RFW23/RFW.webp";
-import Image2 from "../images/ccv.webp";
+import Image2 from "../images/volunteers.webp";
 import Eventbrite from "../images/eventbrite.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import CountdownEd23 from "../components/CountdownEd23";
@@ -123,11 +123,10 @@ export default function Home() {
             )}
             {getCallToAction()}
           </div>
+          {getBannerVolunteers(windowSize)}
         </div>
         {getVerticalBannerNews(windowSize)}
       </section>
-      {/*{getBannerPastEditions(windowSize)}*/}
-      {getBannerCandidati(windowSize)}
     </>
   );
 }
@@ -263,25 +262,25 @@ function getBannerRFW(windowSize) {
   );
 }
 
-function getBannerCandidati(windowSize) {
+function getBannerVolunteers(windowSize) {
   return (
     <section
       style={{
         backgroundImage: `url(${Image2})`,
         backgroundSize: "cover",
-        backgroundPosition: "left",
         backgroundRepeat: "no-repeat",
       }}
     >
       <div className="container px-5">
         <div className="row gx-5 align-items-center">
           <div className="col-lg-6 ">
-            <div className="p-5 d-flex justify-content-center align-items-center">
-            </div>
+            <div className="p-5 d-flex justify-content-center align-items-center"></div>
           </div>
           <div
             className="col-lg-6"
-            style={{ backgroundColor: "rgba(255 ,255, 255, 0.7 )" }}
+            style={{
+              backgroundColor: "rgba(255 ,255, 255, 0.7 )",
+            }}
           >
             <div className="p-5">
               <h1
@@ -289,27 +288,26 @@ function getBannerCandidati(windowSize) {
                   color: "#eb0028",
                   fontWeight: "bold",
                   marginBottom: "25px",
+                  fontSize: "40px",
                 }}
               >
-               Candidati come &nbsp;volontario!
+                Candidati come volontario!
               </h1>
 
               <p
                 style={{
                   textAlign: "justify",
-                  fontSize: "16px",
-                  marginBottom: "auto",
+                  fontSize: "18px",
+                  marginBottom: "25px",
                 }}
               >
                 <p>
-                  Sei interessato al nostro progetto?
-                  A breve inizierà la fase di recruiting, 
-                  nel frattempo puoi già inviare
-                  la tua candidatura per far parte
-                  del nostro Team!
+                  Sei interessato al nostro progetto? <br /> A breve inizierà la
+                  fase di recruiting, nel frattempo puoi già inviare la tua
+                  candidatura per far parte del nostro Team!
                 </p>
                 <a
-                  className="btn-RFW-page"
+                  className="btn-volunteers"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -320,7 +318,6 @@ function getBannerCandidati(windowSize) {
                     fontFamily: "GothamBold",
                     color: "#eb0028",
                   }}
-                  
                   href="/join"
                   target="_blank"
                   rel="noreferrer"
@@ -328,19 +325,6 @@ function getBannerCandidati(windowSize) {
                   Candidati!
                 </a>
               </p>
-              {/*<a
-                className="btn-RFW"
-                style={{
-                  fontSize:
-                    windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
-                  fontFamily: "GothamBold",
-                }}
-                href="https://www.eventbrite.it/e/biglietti-universita-e-impresa-insieme-per-il-futuro-703507017427?aff=oddtdtcreator"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Partecipa anche tu!
-              </a>*/}
             </div>
           </div>
         </div>
