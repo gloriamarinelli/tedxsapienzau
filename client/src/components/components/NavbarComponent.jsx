@@ -174,7 +174,7 @@ export default function NavbarComponent(props) {
         >
           <Container>
             <Link to="/">
-              <LazyLoadImage src={Image} alt="LogoTedx" width="" height="40" />
+              <LazyLoadImage src={Image} alt="LogoTedx" width="" height="55" />
             </Link>
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
