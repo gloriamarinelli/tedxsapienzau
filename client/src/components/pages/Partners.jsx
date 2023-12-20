@@ -343,6 +343,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   sponsorType={"media"}
                 />
                 <PartnerCard23
+                  imgSrc="Millionaire.webp"
+                  link="http://www.millionaire.it/"
+                  text="Da oltre 30 anni Millionaire è il punto di riferimento in Italia per chi vuole realizzarsi e fare impresa. Millionaire è inspirational, business e lifestyle. Scopri i nuovi business,  analizza settori e tendenze, lasciati ispirare da chi fa impresa.  In edicola, online, sui social e anche in versione digitale."
+                  sponsorType={"media"}
+                />
+                <PartnerCard23
                   imgSrc="eCo.webp"
                   link="https://www.ecoagency.eu/"
                   text="eCo (ecologic Communication) nasce nel 2022 come pagina Instagram con l’obiettivo di sensibilizzare gli utenti verso tematiche sostenibili, green e inclusive. Vogliamo rappresentare la voce di una nuova comunicazione sostenibile attraverso un'informazione chiara, innovativa e di qualità."
