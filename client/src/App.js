@@ -27,6 +27,7 @@ import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
 import Editions from "./components/pages/Editions";
 import ParlanoDiNoi from "./components/pages/parlanodinoi";
+import EditionTest from "./components/pages/EditionsTest";
 
 const router = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "/edizioni",
         element: <Editions />,
+      },
+      {
+        path: "/edizionitest",
+        element: <EditionTest />,
       },
       {
         path: "/edizione2022",

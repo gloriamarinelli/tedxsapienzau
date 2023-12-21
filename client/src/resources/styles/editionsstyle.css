@@ -5,21 +5,21 @@
   grid-column-gap: 10px;
 }
 
-.div1 {
+.text-top-left {
   grid-area: 1 / 1 / 3 / 2;
   margin-right: 10px;
 }
-.div2 {
+.image-top-right {
   grid-area: 1 / 2 / 4 / 3;
 }
-.div3 {
+.text-bottom-right {
   grid-area: 4 / 2 / 6 / 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 10px;
 }
-.div4 {
+.image-bottom-left {
   grid-area: 3 / 1 / 6 / 2;
 }
 

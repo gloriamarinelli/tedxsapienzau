@@ -15,6 +15,7 @@ import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+
 import "../../index.css";
 
 export default function NavbarComponent(props) {
@@ -58,7 +59,7 @@ export default function NavbarComponent(props) {
         {/**
          * SOCIAL HEADER
          */}
-        <nav>
+        {/* <nav>
           <div
             style={{
               height: global.SOCIAL_NAV_HEIGHT,
@@ -154,7 +155,7 @@ export default function NavbarComponent(props) {
               </ul>
             </div>
           </div>
-        </nav>
+        </nav> */}
 
         {/**
          * NAVBAR

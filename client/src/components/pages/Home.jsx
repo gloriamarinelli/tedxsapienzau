@@ -268,6 +268,7 @@ function getBannerVolunteers(windowSize) {
       style={{
         backgroundImage: `url(${Image2})`,
         backgroundSize: "cover",
+        backgroundPosition: "left top -120px",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -278,9 +279,7 @@ function getBannerVolunteers(windowSize) {
           </div>
           <div
             className="col-lg-6"
-            style={{
-              backgroundColor: "rgba(255 ,255, 255, 0.7 )",
-            }}
+            style={{ backgroundColor: "rgba(255 ,255, 255, 0.9 )" }}
           >
             <div className="p-5">
               <h1

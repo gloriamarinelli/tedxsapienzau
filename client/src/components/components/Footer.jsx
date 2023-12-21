@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
+  faFlickr,
   faInstagram,
   faLinkedin,
   faTiktok,
@@ -202,7 +203,15 @@ function Footer() {
                         size="2xl"
                       />
                     </a>
+                    <a href="https://www.flickr.com/photos/tedxsapienzau/">
+                      <FontAwesomeIcon
+                        style={{ color: "white" }}
+                        icon={faFlickr}
+                        size="2xl"
+                      />
+                    </a>
                   </div>
+
                   <h5
                     className="text-white mt-5 mb-0"
                     style={{ fontFamily: "GothamBook" }}
