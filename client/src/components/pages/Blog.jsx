@@ -106,11 +106,13 @@ export default function Blog() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5"
+            className="font-weight-bold"
             style={{
               fontSize: "55px",
               fontWeight: "bold",
               marginLeft: "30px",
+              marginBottom: "50px",
+              marginTop: "100px",
             }}
           >
             IDEAS WORTH SPREADING
@@ -193,18 +195,20 @@ export default function Blog() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5"
+            className="font-weight-bold"
             style={{
-              fontSize: "45px",
+              fontSize: "40px",
               fontWeight: "bold",
               marginLeft: "30px",
+              marginBottom: "10px",
+              marginTop: "75px",
             }}
           >
             IDEAS WORTH SPREADING
           </h1>
           <p
             style={{
-              fontSize: "25px",
+              fontSize: "20px",
               fontStyle: "italic",
               marginLeft: "30px",
             }}

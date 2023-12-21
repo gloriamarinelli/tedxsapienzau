@@ -287,7 +287,7 @@ function getBannerVolunteers(windowSize) {
                   color: "#eb0028",
                   fontWeight: "bold",
                   marginBottom: "25px",
-                  fontSize: "40px",
+                  fontSize: "30px",
                 }}
               >
                 Candidati come volontario!
@@ -295,7 +295,8 @@ function getBannerVolunteers(windowSize) {
 
               <p
                 style={{
-                  textAlign: "justify",
+                  textAlign:
+                    windowSize > global.UTILS.TABLET_WIDTH ? "justify" : "",
                   fontSize: "18px",
                   marginBottom: "25px",
                 }}
@@ -312,7 +313,7 @@ function getBannerVolunteers(windowSize) {
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize:
-                      windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "16px",
+                      windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
                     textDecoration: "none",
                     fontFamily: "GothamBold",
                     color: "#eb0028",

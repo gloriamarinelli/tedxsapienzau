@@ -276,11 +276,12 @@ export default function Sustainability() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-5"
+            className="font-weight-bold mb-5"
             style={{
               fontSize: "40px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
+              marginTop: "100px",
             }}
           >
             SUSTAINABILITY

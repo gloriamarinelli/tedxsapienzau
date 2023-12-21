@@ -268,11 +268,12 @@ export default function MissionandVision() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-5"
+            className="font-weight-bold mb-5"
             style={{
               fontSize: "60px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
+              marginTop: "80px",
             }}
           >
             MISSION & VISION
@@ -331,7 +332,7 @@ export default function MissionandVision() {
 
             <hr className="featurette-divider"></hr>
 
-            {/**TedX Sapienza U */}
+            {/**TEDx Sapienza U */}
             <div className="row featurette mt-4">
               <div className="col-md-7 order-md-2 mt-4">
                 <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="70" />
@@ -354,7 +355,7 @@ export default function MissionandVision() {
                 </p>
               </div>
               <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-                <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="350" />
+                <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="300" />
               </div>
             </div>
 

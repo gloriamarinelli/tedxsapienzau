@@ -173,11 +173,12 @@ export default function Editions() {
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-5"
+            className="font-weight-bold mb-5"
             style={{
               fontSize: "60px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
+              marginTop: "100px",
             }}
           >
             EDIZIONI
