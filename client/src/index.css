@@ -75,6 +75,19 @@ code {
     radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
 }
 
+.gradient-background-awards {
+  background: radial-gradient(
+      circle at 20% 400px,
+      rgba(255, 216, 0, 0.7) 20%,
+      rgba(217, 134, 148, 0) 50%
+    ),
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(255, 216, 0, 1) 0%,
+      rgb(235, 0, 40) 40%
+    );
+}
+
 .gradient-background-workshop {
   background: radial-gradient(
       circle at 20% 400px,
@@ -83,6 +96,7 @@ code {
     ),
     radial-gradient(circle at 70% 10%, rgb(82, 114, 181) 0%, rgb(0, 0, 0) 60%);
 }
+
 .gradient-background-workshop-mobile {
   background: radial-gradient(
       circle at 20% 400px,

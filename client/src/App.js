@@ -28,6 +28,7 @@ import Workshop from "./components/pages/Workshop";
 import Editions from "./components/pages/Editions";
 import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import EditionTest from "./components/pages/EditionsTest";
+import Awards from "./components/pages/Awards";
 
 const router = createBrowserRouter([
   {
@@ -120,6 +121,10 @@ const router = createBrowserRouter([
       {
         path: "/newsletterBrevo",
         element: <NewsletterBrevo />,
+      },
+      {
+        path: "/awards",
+        element: <Awards />,
       },
       {
         path: "/awards2023",
