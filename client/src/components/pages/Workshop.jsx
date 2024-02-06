@@ -90,7 +90,7 @@ export default function Workshop() {
         <div
           className="header gradient-background-workshop"
           style={{
-            padding: "10px",
+            padding: "50px",
             color: "#fff",
             height: "40vh",
             display: "grid",

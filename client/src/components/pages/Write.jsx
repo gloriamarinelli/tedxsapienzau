@@ -139,14 +139,16 @@ const Write = () => {
     return (
       <>
         <div
-          className="header-write"
+          className="header write"
           style={{
-            backgroundColor: "RGBA(25, 135, 84,0.5)",
             padding: "10px",
             textAlign: "center",
-            color: "black",
+            color: "#fff",
+            marginBottom: "10px",
+            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+            height: "40vh",
             display: "grid",
-            height: "20vh",
+            placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
         >
@@ -155,15 +157,13 @@ const Write = () => {
             style={{
               fontSize: "40px",
               marginLeft: "30px",
+              color: "white",
             }}
           >
             INSERISCI UN NUOVO ARTICOLO
           </h1>
         </div>
-        <div
-          className="container main-container mb-5"
-          style={{ marginTop: "100px" }}
-        >
+        <div className="container main-container mb-5">
           <div className="content-container">
             <label htmlFor="title" style={{ fontSize: "30px" }}>
               Titolo

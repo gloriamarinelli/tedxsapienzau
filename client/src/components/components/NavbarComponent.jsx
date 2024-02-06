@@ -339,7 +339,7 @@ export default function NavbarComponent(props) {
 												History
 											</Link>
 										</li>
-										*/}
+										
                     <li>
                       <Link
                         className="dropdown-item text-bg-light"
@@ -349,7 +349,7 @@ export default function NavbarComponent(props) {
                         Sustainability
                       </Link>
                     </li>
-                    {/*<li>
+                    <li>
                       <Link
                         className="dropdown-item text-bg-light"
                         to="/parlanodinoi"
@@ -380,7 +380,7 @@ export default function NavbarComponent(props) {
                           to="/write"
                           onClick={() => setExpanded(false)}
                         >
-                          Scrivi
+                          Nuovo articolo
                         </Link>
                       </li>
                       <li>

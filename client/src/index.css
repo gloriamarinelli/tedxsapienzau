@@ -122,6 +122,15 @@ code {
     radial-gradient(circle at 70% 10%, rgb(130, 36, 51) 0%, rgb(235, 0, 40) 40%);
 }
 
+.write {
+  background: radial-gradient(
+      circle at 20% 400px,
+      rgba(25, 135, 84, 0.9) 20%,
+      rgba(235, 0, 40, 0) 40%
+    ),
+    radial-gradient(circle at 70% 10%, rgb(25, 135, 84) 0%, rgb(16, 88, 54) 40%);
+}
+
 .gradient-background-team2022 {
   background: radial-gradient(ellipse at top, #e62b1e, transparent),
     radial-gradient(ellipse at bottom, #822433, transparent);

@@ -111,7 +111,6 @@ export default function Blog() {
               fontSize: "55px",
               fontWeight: "bold",
               marginLeft: "30px",
-              marginBottom: "50px",
               marginTop: "100px",
             }}
           >
