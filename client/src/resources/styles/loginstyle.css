@@ -9,9 +9,8 @@
 }
 
 .login-container {
-  height: 80%;
-  min-height: 450px;
-  min-width: 500px;
+  height: 60%;
+  width: 30%;
   padding: 0 50px;
   background-color: whitesmoke;
   border-radius: 30px;
