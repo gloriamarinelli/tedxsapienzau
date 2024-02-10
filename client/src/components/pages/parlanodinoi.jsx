@@ -7,7 +7,6 @@ import Image15 from "../images/parlanodinoi/TedX Main-314.jpg";
 
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
-import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
 
 export default function ParlanoDiNoi() {

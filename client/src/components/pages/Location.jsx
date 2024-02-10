@@ -5,7 +5,6 @@ import Image1 from "../images/location1.webp";
 
 import React from "react";
 import global from "../../resources/global.json";
-import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
 
 export default function Location() {
@@ -22,7 +21,7 @@ export default function Location() {
             color: "#fff",
             backgroundColor: "red",
             marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 65%)",
             height: "80vh",
             display: "grid",
             placeItems: "center",

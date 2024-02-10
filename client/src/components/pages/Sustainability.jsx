@@ -4,7 +4,6 @@ import Image from "../images/sostenibilità.jpg";
 
 import React, { useState } from "react";
 import global from "../../resources/global.json";
-import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
 
 export default function Sustainability() {
@@ -21,7 +20,7 @@ export default function Sustainability() {
             color: "#fff",
             backgroundColor: "red",
             marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 65%)",
             height: "80vh",
             display: "grid",
             placeItems: "center",
