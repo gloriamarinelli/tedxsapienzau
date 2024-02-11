@@ -649,7 +649,7 @@ export default function JoinUs() {
               >
                 External Relations & Sponsorship
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team External Relations & Sponsorship si occupa di gestire
                 ogni aspetto legato a sponsorizzazioni, partnership, patrocini e
                 bandi pubblici. Quindi a partire dalla ricerca di aziende,
@@ -671,7 +671,7 @@ export default function JoinUs() {
               >
                 Planning & Event Management
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team Planning and Event Management si occupa della
                 pianificazione e della gestione di vari aspetti
                 dell’organizzazione. Nel concreto si occupa della richiesta dei
@@ -692,7 +692,7 @@ export default function JoinUs() {
               >
                 Speakers & Event Curation
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team Speakers & Event Curation si occupa delle proposte dei
                 temi per i vari eventi, della scelta degli speakers e della cura
                 dei loro dettagli burocratici (es. mail e contatti) e pratici
@@ -711,7 +711,7 @@ export default function JoinUs() {
               >
                 Human Resources & Academy
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team Human Resources & Academy si occupa della selezione (es.
                 costruzione e screening delle candidature, colloqui conoscitivi)
                 e della gestione del personale al fine di garantirne il
@@ -731,7 +731,7 @@ export default function JoinUs() {
               >
                 IT & Website
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team IT & Website si occupa di garantire il corretto
                 funzionamento del{" "}
                 <a
@@ -765,7 +765,7 @@ export default function JoinUs() {
               >
                 Communication & Marketing
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il Team Communication & Marketing si occupa di curare l’intera
                 comunicazione del TEDxSapienzaU. In particolare si occupa della
                 costruzione e della pianificazione della reputazione online,
@@ -788,7 +788,7 @@ export default function JoinUs() {
               >
                 Legal & Administrative
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team Legal & Administrative cura gli aspetti giuridici e
                 amministrativi legati all'organizzazione degli eventi TED. In
                 particolare si occupa della stesura dei contratti, della
@@ -807,7 +807,7 @@ export default function JoinUs() {
               >
                 Design
               </h2>
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 Il team Design si occupa degli aspetti di progettazione
                 dell’evento. Nel dettaglio, lavora alla creazione di un’identità
                 visiva e grafica, allo sviluppo di prodotti e all’ideazione
