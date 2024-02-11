@@ -194,7 +194,7 @@ export default function NavbarComponent(props) {
                     style={{ borderRadius: "5px", backgroundColor: global.COLORS.ROSSO_TED, }}
                     onClick={() => setExpanded(false)}
                   >
-                    Join Now
+                    Join Us
                   </Link>
                 </li>
 
