@@ -114,6 +114,16 @@ code {
   background-size: cover;
 }
 
+.gradient-background-joinus {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("./components/images/volunteers.webp");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+}
+
 .gradient-background-team2023 {
   background: radial-gradient(
       circle at 20% 400px,

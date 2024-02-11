@@ -19,7 +19,7 @@ export default function JoinNow() {
         return (
           <>
             <div
-              className="gradient-background"
+              className="header gradient-background-joinus"
               style={{
                 backgroundColor: "red",
                 textAlign: "left",
@@ -34,31 +34,21 @@ export default function JoinNow() {
               <h1
                 className="font-weight-bold mt-5 mb-5 text-center"
                 style={{
-                  fontSize: "50px",
-                  fontWeight: "bold",
-                  fontFamily: "GothamBold",
-                }}
-              >
-                JOIN NOW
-              </h1>
-            </div>
-            <div>
-            <h2
-                style={{
-                  fontSize: "60px",
-                  fontWeight: "bold",
-                  color: global.COLORS.ROSSO_TED_2023,
-                  textAlign: "center",
+                  fontSize: "40px",
+              fontWeight: "bold",
+              fontFamily: "GothamBold",
+
                 }}
               >
                 Entra anche tu a far parte del team TEDxSapienzaU!
-              </h2>
-              </div>
+              </h1>
+            </div>
+
               <div className="container-lg marketing">
           <h3
             className="title"
             style={{
-              fontSize: "40px",
+              fontSize: "30px",
               textAlign: "justify",
               fontFamily: "GothamBold",
               marginTop: "30px",
@@ -155,6 +145,7 @@ Non vediamo l'ora di leggere la tua storia!
                     fontFamily: "GothamBold",
                     color: "#eb0028",
                     marginTop:"40px",
+                    width: "20%",
                   }}
                   href="https://forms.gle/4d93qym4BDjYhbpx5"
                   target="_blank"
@@ -166,28 +157,29 @@ Non vediamo l'ora di leggere la tua storia!
 
 
           <div
-          className="header gradient-background-awards "
+          className="gradient-background"
           style={{
-            padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            height: "30vh",
+            backgroundColor: "red",
+            textAlign: "left",
             display: "grid",
+            height: "25vh",
+            color: "#fff",
+            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-            marginTop:"40px",
+            marginTop: "40px",
           }}
         >
+
           <h1
             className="font-weight-bold mb-5"
             style={{
-              fontSize: "60px",
+              fontSize: "100px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
               marginTop: "50px",
             }}
           >
-            Descrizione team:
+            Descrizione team
           </h1>
         </div>
 
@@ -196,7 +188,7 @@ Non vediamo l'ora di leggere la tua storia!
             <div class="text-top-left-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -209,7 +201,7 @@ Non vediamo l'ora di leggere la tua storia!
             <div class="text-bottom-right-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -231,7 +223,7 @@ In sostanza, quindi, si occupa dell'ideazione, della progettazione e dello svilu
             <div class="text-top-left-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -247,7 +239,7 @@ In generale, quindi, si occupa a 360° del rapporto con gli speakers affinché s
             <div class="text-bottom-right-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -266,7 +258,7 @@ Inoltre si occupa della formazione del personale attraverso la ricerca continua,
             <div class="text-top-left-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -283,7 +275,7 @@ Infine, sovrintende la regia tecnica durante gli eventi principali, fungendo da 
             <div class="text-bottom-right-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -306,7 +298,7 @@ Infine si occupa della creazione di contenuti visuali, fotografici e video affin
             <div class="text-top-left-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -319,7 +311,7 @@ Infine si occupa della creazione di contenuti visuali, fotografici e video affin
             <div class="text-bottom-right-aw">
               <h2
                 style={{
-                  fontSize: "60px",
+                  fontSize: "40px",
                   color: "black",
                 }}
               >
@@ -345,7 +337,7 @@ Nel dettaglio, lavora alla creazione di un’identità visiva e grafica, allo sv
     return (
       <>
         <div
-          className="header gradient-background-team2023 "
+          className="header gradient-background-joinus "
           style={{
             padding: "10px",
             textAlign: "center",
@@ -359,32 +351,20 @@ Nel dettaglio, lavora alla creazione di un’identità visiva e grafica, allo sv
           <h1
             className="font-weight-bold mb-5"
             style={{
-              fontSize: "60px",
+              fontSize: "30px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
               marginTop: "100px",
             }}
           >
-            JOIN NOW
+            Entra anche tu a far parte del team TEDxSapienzaU!
           </h1>
         </div>
-        <div>
-            <h2
-                style={{
-                  fontSize: "60px",
-                  fontWeight: "bold",
-                  color: global.COLORS.ROSSO_TED_2023,
-                  textAlign: "center",
-                }}
-              >
-                Entra anche tu a far parte del team TEDxSapienzaU!
-              </h2>
-              </div>
         <div className="container-lg marketing">
           <h3
             className="title"
             style={{
-              fontSize: "50px",
+              fontSize: "30px",
               textAlign: "center",
               fontFamily: "GothamBold",
               marginTop: "30px",
@@ -470,6 +450,7 @@ Non vediamo l'ora di leggere la tua storia!
                   className="btn-volunteers"
                   style={{
                     display: "flex",
+                    width: "20%",
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize:
@@ -488,8 +469,9 @@ Non vediamo l'ora di leggere la tua storia!
           </div>
 
           <div
-          className="header gradient-background-awards "
+          className="gradient-background"
           style={{
+            backgroundColor: "red",
             padding: "10px",
             textAlign: "center",
             color: "#fff",
@@ -509,7 +491,7 @@ Non vediamo l'ora di leggere la tua storia!
               marginTop: "50px",
             }}
           >
-            Descrizione team:
+            Descrizione team
           </h1>
         </div>
 

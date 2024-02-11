@@ -187,11 +187,11 @@ export default function NavbarComponent(props) {
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
                 }`}
               >
-                <li className="nav-item">
+                <li className="nav-item ">
                   <Link
-                    className="nav-link text-bg-light"
+                    className="nav-link text-light"
                     to="/joinnow"
-                    style={{ borderRadius: "5px" }}
+                    style={{ borderRadius: "5px", backgroundColor: global.COLORS.ROSSO_TED, }}
                     onClick={() => setExpanded(false)}
                   >
                     Join Now
