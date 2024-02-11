@@ -1,13 +1,5 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-  faTiktok,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+
 import { Link } from "react-router-dom";
 import Image from "../images/logo-black.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -187,19 +179,21 @@ export default function NavbarComponent(props) {
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
                 }`}
               >
-                <li className="nav-item ">
-                  <Link
-                    className="nav-link text-light"
-                    to="/joinus"
-                    style={{
-                      borderRadius: "5px",
-                      backgroundColor: global.COLORS.ROSSO_TED,
-                    }}
-                    onClick={() => setExpanded(false)}
-                  >
-                    Join Us
-                  </Link>
-                </li>
+               <li className="nav-item">
+									<Link to="/joinus" onClick={() => setExpanded(false)}>
+										<button
+											type="button"
+											className="btn"
+											style={{
+												backgroundColor: global.COLORS.ROSSO_TED,
+												fontWeight: "bold",
+												color: "#fff",
+											}}
+										>
+											Join us
+										</button>
+									</Link>
+								</li>
 
                 <li className="nav-item dropdown">
                   <a
