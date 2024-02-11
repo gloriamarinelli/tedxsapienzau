@@ -190,7 +190,7 @@ export default function NavbarComponent(props) {
                 <li className="nav-item ">
                   <Link
                     className="nav-link text-light"
-                    to="/joinnow"
+                    to="/joinus"
                     style={{ borderRadius: "5px", backgroundColor: global.COLORS.ROSSO_TED, }}
                     onClick={() => setExpanded(false)}
                   >

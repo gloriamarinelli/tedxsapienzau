@@ -6,7 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "../images/location3.jpg";
 import { Center } from "@react-three/drei";
 
-export default function JoinNow() {
+export default function JoinUs() {
     const state = useLocation().state;
     const [windowSize, setWindowSize] = useOutletContext();
     const [cat, setCat] = useState(state?.cat || "");
@@ -95,7 +95,7 @@ Non vediamo l'ora di leggere la tua storia!
                 fontFamily: "GothamBook",
               }}
             >
-              Le candidature sono rivolte a tutti gli studenti <strong>regolarmente iscritti </strong> ad un corso di laurea, laurea magistrale, master, dottorato o scuola di specializzazione <strong>presso l'ateneo Sapienza Università di Roma</strong> e si chiuderanno il giorno <strong> 4/03/2024 alle ore 23:59 </strong>.
+              Le candidature sono rivolte a tutti gli studenti <strong>regolarmente iscritti </strong> ad un corso di laurea, laurea magistrale, master, dottorato o scuola di specializzazione <strong><u>presso l'ateneo Sapienza Università di Roma</u></strong> e si chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59 </strong>.
             </p>
           </div>
 
@@ -131,8 +131,9 @@ Non vediamo l'ora di leggere la tua storia!
                 fontFamily: "GothamBook",
               }}
             >
-              Per <strong>eventuali dubbi o approfondimenti </strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
+              Per <strong><u>eventuali dubbi o approfondimenti </u></strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
             </p>
+            <div style={{display: "flex", justifyContent: "center",}}>
             <a
                   className="btn-volunteers"
                   style={{
@@ -145,7 +146,7 @@ Non vediamo l'ora di leggere la tua storia!
                     fontFamily: "GothamBold",
                     color: "#eb0028",
                     marginTop:"40px",
-                    width: "20%",
+                    width: "30%",
                   }}
                   href="https://forms.gle/4d93qym4BDjYhbpx5"
                   target="_blank"
@@ -153,6 +154,7 @@ Non vediamo l'ora di leggere la tua storia!
                 >
                   Candidati!
                 </a>
+          </div>
           </div>
 
 
@@ -176,7 +178,7 @@ Non vediamo l'ora di leggere la tua storia!
               fontSize: "100px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
-              marginTop: "50px",
+              marginTop: "20px",
             }}
           >
             Descrizione team
@@ -265,7 +267,13 @@ Inoltre si occupa della formazione del personale attraverso la ricerca continua,
                 IT & Website 
               </h2>
               <p>
-              Il team IT & Website si occupa di garantire il corretto funzionamento del sito web ufficiale sia lato front-end che lato back-end e gestisce la web app ufficiale. 
+              Il team IT & Website si occupa di garantire il corretto funzionamento del <a
+                href="https://www.tedxsapienzau.com/"
+                style={{ color: "#EB0028" }}
+              >sito web</a> ufficiale sia lato front-end che lato back-end e gestisce la <a
+              href="https://tedxsapienzauapp.vercel.app/"
+              style={{ color: "#EB0028" }}
+            > web app</a> ufficiale. 
 Inoltre coordina la newsletter settimanale e cura la progettazione grafica, l'identità visiva e i contenuti, assicurando un'esperienza utente online ottimale. 
 Infine, sovrintende la regia tecnica durante gli eventi principali, fungendo da figura di supporto a 360° in ambito tecnologico.
 
@@ -337,7 +345,7 @@ Nel dettaglio, lavora alla creazione di un’identità visiva e grafica, allo sv
     return (
       <>
         <div
-          className="header gradient-background-joinus "
+          className="header gradient-background-joinus-mobile "
           style={{
             padding: "10px",
             textAlign: "center",
@@ -408,7 +416,7 @@ Non vediamo l'ora di leggere la tua storia!
                 fontFamily: "GothamBook",
               }}
             >
-              Le candidature sono rivolte a tutti gli studenti <strong>regolarmente iscritti </strong> ad un corso di laurea, laurea magistrale, master, dottorato o scuola di specializzazione <strong>presso l'ateneo Sapienza Università di Roma</strong> e si chiuderanno il giorno <strong> 4/03/2024 alle ore 23:59 </strong>.
+              Le candidature sono rivolte a tutti gli studenti <strong>regolarmente iscritti </strong> ad un corso di laurea, laurea magistrale, master, dottorato o scuola di specializzazione <strong><u>presso l'ateneo Sapienza Università di Roma</u></strong> e si chiuderanno il giorno <strong> 4/03/2024 alle ore 23:59 </strong>.
             </p>
           </div>
 
@@ -444,13 +452,15 @@ Non vediamo l'ora di leggere la tua storia!
                 fontFamily: "GothamBook",
               }}
             >
-              Per <strong>eventuali dubbi o approfondimenti </strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
+              Per <strong><u>eventuali dubbi o approfondimenti </u></strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
             </p>
+            
+            <div style={{display: "flex", justifyContent: "center",}}>
             <a
                   className="btn-volunteers"
                   style={{
                     display: "flex",
-                    width: "20%",
+                    width: "40%",
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize:
@@ -466,6 +476,7 @@ Non vediamo l'ora di leggere la tua storia!
                 >
                   Candidati!
                 </a>
+          </div>
           </div>
 
           <div
@@ -485,7 +496,7 @@ Non vediamo l'ora di leggere la tua storia!
           <h1
             className="font-weight-bold mb-5"
             style={{
-              fontSize: "60px",
+              fontSize: "40px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
               marginTop: "50px",
@@ -569,7 +580,13 @@ Inoltre si occupa della formazione del personale attraverso la ricerca continua,
               IT & Website 
             </h2>
             <p>
-            Il team IT & Website si occupa di garantire il corretto funzionamento del sito web ufficiale sia lato front-end che lato back-end e gestisce la web app ufficiale. 
+            Il team IT & Website si occupa di garantire il corretto funzionamento del <a
+                href="https://www.tedxsapienzau.com/"
+                style={{ color: "#EB0028" }}
+              >sito web</a> ufficiale sia lato front-end che lato back-end e gestisce la <a
+              href="https://tedxsapienzauapp.vercel.app/"
+              style={{ color: "#EB0028" }}
+            > web app</a> ufficiale. 
 Inoltre coordina la newsletter settimanale e cura la progettazione grafica, l'identità visiva e i contenuti, assicurando un'esperienza utente online ottimale. 
 Infine, sovrintende la regia tecnica durante gli eventi principali, fungendo da figura di supporto a 360° in ambito tecnologico.
             </p>
