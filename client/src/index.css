@@ -121,16 +121,14 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-
 }
 
 .gradient-background-joinus-mobile {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
     url("./components/images/volunteers.webp");
-  background-position:20% -95%;
+  background-position: 20% -95%;
   background-repeat: no-repeat;
-  background-size:cover;
-
+  background-size: cover;
 }
 
 .gradient-background-team2023 {
@@ -260,16 +258,6 @@ code {
 .btn-volunteers:hover {
   background: rgba(235, 0, 40, 0.7);
   color: white !important;
-}
-
-.nav-item {
-  padding: 10px;
-  transition: background-color 0.3s ease-in-out;
-  border-radius: 5px;
-}
-
-.nav-item:hover {
-  background-color: #c0c0c0;
 }
 
 .winner_22 {
