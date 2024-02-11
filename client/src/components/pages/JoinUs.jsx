@@ -131,7 +131,7 @@ Non vediamo l'ora di leggere la tua storia!
                 fontFamily: "GothamBook",
               }}
             >
-              Per <strong><u>eventuali dubbi o approfondimenti </u></strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
+              Per <strong><u>eventuali dubbi o approfondimenti</u></strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
             </p>
             <div style={{display: "flex", justifyContent: "center",}}>
             <a
@@ -452,7 +452,7 @@ Non vediamo l'ora di leggere la tua storia!
                 fontFamily: "GothamBook",
               }}
             >
-              Per <strong><u>eventuali dubbi o approfondimenti </u></strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
+              Per <strong><u>eventuali dubbi o approfondimenti</u></strong> potete contattarci inviando una mail a: <strong>info@tedxsapienzau.com</strong>
             </p>
             
             <div style={{display: "flex", justifyContent: "center",}}>
@@ -460,7 +460,7 @@ Non vediamo l'ora di leggere la tua storia!
                   className="btn-volunteers"
                   style={{
                     display: "flex",
-                    width: "40%",
+                    width: "60%",
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize:
