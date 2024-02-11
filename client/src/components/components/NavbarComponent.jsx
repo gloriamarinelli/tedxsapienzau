@@ -191,7 +191,10 @@ export default function NavbarComponent(props) {
                   <Link
                     className="nav-link text-light"
                     to="/joinus"
-                    style={{ borderRadius: "5px", backgroundColor: global.COLORS.ROSSO_TED, }}
+                    style={{
+                      borderRadius: "5px",
+                      backgroundColor: global.COLORS.ROSSO_TED,
+                    }}
                     onClick={() => setExpanded(false)}
                   >
                     Join Us

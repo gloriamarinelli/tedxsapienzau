@@ -302,9 +302,8 @@ function getBannerVolunteers(windowSize) {
                 }}
               >
                 <p>
-                  Sei interessato al nostro progetto? <br /> A breve inizierà la
-                  fase di recruiting, nel frattempo puoi già inviare la tua
-                  candidatura per far parte del nostro Team!
+                  Sei interessato al nostro progetto? <br /> Sono aperte le
+                  candidature per far parte del nostro Team!
                 </p>
                 <a
                   className="btn-volunteers"
