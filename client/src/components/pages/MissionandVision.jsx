@@ -6,12 +6,6 @@ import Image2 from "../images/logo-black.png";
 
 import Image3 from "../images/missionvision23/stage23.webp";
 
-//import Image11 from "../images/missionvision22/ted-0039.webp";
-//import Image12 from "../images/missionvision22/ted-0053.webp";
-//import Image13 from "../images/missionvision22/ted-0117.webp";
-//import Image14 from "../images/missionvision22/ted-0489.webp";
-
-//import Image3 from "../images/missionvision22/stage2022.webp";
 import Image11 from "../images/missionvision23/DSC00149.jpg";
 import Image13 from "../images/missionvision23/DSC04914.jpg";
 import Image14 from "../images/missionvision23/DSC05278.jpg";
@@ -20,7 +14,6 @@ import Image15 from "../images/missionvision23/PHP07700.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
-import "../../resources/styles/missionandvisionstyle.css";
 import { useOutletContext } from "react-router";
 import CountUp from "react-countup";
 
@@ -37,7 +30,7 @@ export default function MissionandVision() {
             textAlign: "center",
             color: "#fff",
             marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 65%)",
             height: "80vh",
             display: "grid",
             placeItems: "center",

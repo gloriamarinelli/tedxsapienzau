@@ -107,7 +107,8 @@ code {
 }
 
 .gradient-background-about {
-  background-image: url("./components/images/sapienza1X.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url("./components/images/sapX1.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -270,4 +271,10 @@ code {
 
 .where-is-the-event-section {
   background-color: "white";
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
