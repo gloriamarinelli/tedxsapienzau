@@ -100,8 +100,7 @@ export default function JoinUs() {
                 di specializzazione{" "}
               </i>
               <strong>presso l'ateneo Sapienza Università di Roma</strong> e si
-              chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59 </strong>
-              .
+              chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59</strong>.
             </p>
           </div>
 
@@ -302,7 +301,7 @@ export default function JoinUs() {
                   al fine di garantirne il benessere e di costruire un ambiente
                   creativo e produttivo. Inoltre si occupa della formazione
                   degli associati attraverso la ricerca continua, interna ed
-                  esterna al mondo universitario, di professionisti.
+                  esterna al mondo universitario, di professionisti.
                 </p>
               </div>
               <div class="image-top-right">
@@ -535,8 +534,7 @@ export default function JoinUs() {
                 di specializzazione{" "}
               </i>
               <strong>presso l'ateneo Sapienza Università di Roma</strong> e si
-              chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59 </strong>
-              .
+              chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59</strong>.
             </p>
           </div>
 
@@ -717,7 +715,7 @@ export default function JoinUs() {
                 garantirne il benessere e di costruire un ambiente creativo e
                 produttivo. Inoltre si occupa della formazione degli associati
                 attraverso la ricerca continua, interna ed esterna al mondo
-                universitario, di professionisti.
+                universitario, di professionisti.
               </p>
             </div>
 
