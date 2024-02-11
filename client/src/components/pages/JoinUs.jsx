@@ -298,12 +298,11 @@ export default function JoinUs() {
                 <p style={{ textAlign: "justify" }}>
                   Il team Human Resources & Academy si occupa della selezione
                   (es. costruzione e screening delle candidature, colloqui
-                  conoscitivi) e della gestione del personale al fine di
-                  garantirne il benessere e di costruire un ambiente creativo e
-                  produttivo per ogni membro dell'organizzazione. Inoltre si
-                  occupa della formazione del personale attraverso la ricerca
-                  continua, interna ed esterna al mondo universitario, di
-                  professionisti.
+                  conoscitivi) e della gestione dei membri dell'organizzazione
+                  al fine di garantirne il benessere e di costruire un ambiente
+                  creativo e produttivo. Inoltre si occupa della formazione
+                  degli associati attraverso la ricerca continua, interna ed
+                  esterna al mondo universitario, di professionisti.
                 </p>
               </div>
               <div class="image-top-right">
@@ -714,11 +713,11 @@ export default function JoinUs() {
               <p style={{ textAlign: "justify" }}>
                 Il team Human Resources & Academy si occupa della selezione (es.
                 costruzione e screening delle candidature, colloqui conoscitivi)
-                e della gestione del personale al fine di garantirne il
-                benessere e di costruire un ambiente creativo e produttivo per
-                ogni membro dell'organizzazione. Inoltre si occupa della
-                formazione del personale attraverso la ricerca continua, interna
-                ed esterna al mondo universitario, di professionisti.{" "}
+                e della gestione dei membri dell'organizzazione al fine di
+                garantirne il benessere e di costruire un ambiente creativo e
+                produttivo. Inoltre si occupa della formazione degli associati
+                attraverso la ricerca continua, interna ed esterna al mondo
+                universitario, di professionisti.
               </p>
             </div>
 
