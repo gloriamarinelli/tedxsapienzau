@@ -318,7 +318,7 @@ function getBannerVolunteers(windowSize) {
                     fontFamily: "GothamBold",
                     color: "#eb0028",
                   }}
-                  href="/join"
+                  href="/joinnow"
                   target="_blank"
                   rel="noreferrer"
                 >

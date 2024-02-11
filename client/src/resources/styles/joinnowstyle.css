@@ -1,0 +1,19 @@
+.header-JN {
+    background-image: url("../../components/images/minerva.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px;
+    text-align: center;
+    height: 60vh;
+  }
+  
+.header-JN-mobile {
+    background-image: url("../../components/images/minerva.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    text-align: center;
+    height: 40vh;
+  }

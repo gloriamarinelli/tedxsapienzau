@@ -187,6 +187,17 @@ export default function NavbarComponent(props) {
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
                 }`}
               >
+                <li className="nav-item">
+                  <Link
+                    className="nav-link text-bg-light"
+                    to="/joinnow"
+                    style={{ borderRadius: "5px" }}
+                    onClick={() => setExpanded(false)}
+                  >
+                    Join Now
+                  </Link>
+                </li>
+
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle text-bg-light"

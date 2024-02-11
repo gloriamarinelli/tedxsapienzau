@@ -29,6 +29,7 @@ import Editions from "./components/pages/Editions";
 import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import EditionTest from "./components/pages/EditionsTest";
 import Awards from "./components/pages/Awards";
+import JoinNow from "./components/pages/JoinNow";
 
 const router = createBrowserRouter([
   {
@@ -145,6 +146,10 @@ const router = createBrowserRouter([
       {
         path: "/workshop",
         element: <Workshop />,
+      },
+      {
+        path: "/joinnow",
+        element: <JoinNow />,
       },
     ],
   },
