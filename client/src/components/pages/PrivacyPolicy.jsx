@@ -13,16 +13,18 @@ export default function PrivacyPolicy() {
 		 */
 		return (
 			<>
-				<div
-					className="header"
-					style={{
-						textAlign: "center",
-						color: "black",
-						display: "grid",
-						placeItems: "center",
-						marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-					}}
-				>
+				 <div
+          className="header"
+          style={{
+            padding: "10px",
+            textAlign: "center",
+            color: "black",
+            height: "20vh",
+            display: "grid",
+            placeItems: "center",
+            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+          }}
+        >
 					<h1
 						className="font-weight-bold mt-5 mb-3"
 						style={{
@@ -38,8 +40,9 @@ export default function PrivacyPolicy() {
 				<div
 					style={{
 						textAlign: "justify",
-						padding: "100px",
 						fontFamily: "GothamBook",
+						marginLeft: "10%",
+						marginRight: "10%",
 					}}
 				>
 					<p style={{ fontStyle: "italic", fontWeight: "bold" }}>
