@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import "../../resources/styles/loginstyle.css";
 import { AuthContext } from "../context/authContext";
 import { useNavigate } from "react-router";
+import { redirect } from "react-router-dom";
 import Image from "../images/logo-black.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useRef } from "react";
@@ -25,7 +26,7 @@ export default function Login() {
         return status;
       };
 
-      let status = checkIsUserLoggedIn().catch((err) => console.log(err));
+      let status = checkIsUserLoggedIn().catch((err) => logout());
       status.then((res) => {
         if (res.status === 200) {
           console.log(res);

@@ -30,7 +30,7 @@ export default function NavbarComponent(props) {
         return status;
       };
 
-      let status = checkIsUserLoggedIn().catch((err) => console.log(err));
+      let status = checkIsUserLoggedIn().catch((err) => logout());
       status.then((res) => {
         if (res.status === 200) {
           console.log(res);
@@ -57,7 +57,7 @@ export default function NavbarComponent(props) {
           position: "absolute",
           zIndex: 99,
           width: "100vw",
-          top : 0
+          top: 0,
         }}
       >
         <Container>
@@ -73,6 +73,7 @@ export default function NavbarComponent(props) {
               className={`navbar-nav ms-auto ${
                 windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
               }`}
+              style={{ gap: "10px" }}
             >
               <li className="nav-item">
                 <Link to="/joinus" onClick={() => setExpanded(false)}>
@@ -92,18 +93,20 @@ export default function NavbarComponent(props) {
 
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle text-bg-light"
+                  className="nav-link dropdown-toggle text-black"
                   data-bs-toggle="dropdown"
                   role="button"
                   aria-expanded="false"
-                  style={{ borderRadius: "5px" }}
+                  style={{
+                    borderRadius: "5px",
+                  }}
                 >
                   Past Events
                 </a>
                 <ul className="dropdown-menu">
                   <li>
                     <Link
-                      className="dropdown-item text-bg-light"
+                      className="dropdown-item text-black"
                       to="/workshop"
                       onClick={() => setExpanded(false)}
                     >
@@ -112,7 +115,7 @@ export default function NavbarComponent(props) {
                   </li>
                   <li>
                     <Link
-                      className="dropdown-item text-bg-light"
+                      className="dropdown-item text-black"
                       to="/rfw23"
                       onClick={() => setExpanded(false)}
                     >
@@ -151,7 +154,7 @@ export default function NavbarComponent(props) {
 
               <li className="nav-item">
                 <Link
-                  className="nav-link text-bg-light"
+                  className="nav-link text-black"
                   to="/edizioni"
                   style={{ borderRadius: "5px" }}
                   onClick={() => setExpanded(false)}
@@ -162,7 +165,7 @@ export default function NavbarComponent(props) {
 
               <li className="nav-item">
                 <Link
-                  className="nav-link text-bg-light"
+                  className="nav-link text-black"
                   to="/awards"
                   style={{ borderRadius: "5px" }}
                   onClick={() => setExpanded(false)}
@@ -173,7 +176,7 @@ export default function NavbarComponent(props) {
 
               <li className="nav-item">
                 <Link
-                  className="nav-link text-bg-light"
+                  className="nav-link text-black"
                   to="/blog"
                   style={{ borderRadius: "5px" }}
                   onClick={() => setExpanded(false)}
@@ -183,7 +186,7 @@ export default function NavbarComponent(props) {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link text-bg-light"
+                  className="nav-link text-black"
                   to="/partners"
                   style={{ borderRadius: "5px" }}
                   onClick={() => setExpanded(false)}
@@ -193,7 +196,7 @@ export default function NavbarComponent(props) {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link text-bg-light"
+                  className="nav-link text-black"
                   to="/team"
                   style={{ borderRadius: "5px" }}
                   onClick={() => setExpanded(false)}
@@ -204,7 +207,7 @@ export default function NavbarComponent(props) {
 
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle text-bg-light"
+                  className="nav-link dropdown-toggle text-black"
                   data-bs-toggle="dropdown"
                   href="/location"
                   role="button"
@@ -216,7 +219,7 @@ export default function NavbarComponent(props) {
                 <ul className="dropdown-menu">
                   <li>
                     <Link
-                      className="dropdown-item text-bg-light"
+                      className="dropdown-item text-black"
                       to="/mission&vision"
                       onClick={() => setExpanded(false)}
                     >
@@ -225,7 +228,7 @@ export default function NavbarComponent(props) {
                   </li>
                   <li>
                     <Link
-                      className="dropdown-item text-bg-light"
+                      className="dropdown-item text-black"
                       to="/location"
                       onClick={() => setExpanded(false)}
                     >

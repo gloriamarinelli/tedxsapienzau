@@ -461,7 +461,7 @@ function getVerticalBannerNews(windowSize) {
       <section
         style={{
           width: `${NewsSidebarSize}vw`,
-          paddingTop: "75px",
+          paddingTop: "70px",
           backgroundColor: "ghostwhite",
           display: "flex",
           flexDirection: "column",
