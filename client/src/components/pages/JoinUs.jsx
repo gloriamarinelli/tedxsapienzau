@@ -347,11 +347,12 @@ export default function JoinUs() {
                     {" "}
                     web app
                   </a>{" "}
-                  ufficiale. Inoltre coordina la newsletter settimanale e cura
-                  la progettazione grafica, l'identità visiva e i contenuti,
-                  assicurando un'esperienza utente online ottimale. Infine,
-                  sovrintende la regia tecnica durante gli eventi principali,
-                  fungendo da figura di supporto a 360° in ambito tecnologico.
+                  ufficiale. Inoltre coordina la newsletter settimanale, insieme
+                  al sub team di UI/UX Designer cura la progettazione grafica,
+                  l'identità visiva e i contenuti, assicurando un'esperienza
+                  utente online ottimale. Infine, sovrintende la regia tecnica
+                  durante gli eventi principali, fungendo da figura di supporto
+                  a 360° in ambito tecnologico.
                 </p>
               </div>
 
@@ -745,11 +746,11 @@ export default function JoinUs() {
                   {" "}
                   web app
                 </a>{" "}
-                ufficiale. Inoltre coordina la newsletter settimanale e cura la
-                progettazione grafica, l'identità visiva e i contenuti,
-                assicurando un'esperienza utente online ottimale. Infine,
-                sovrintende la regia tecnica durante gli eventi principali,
-                fungendo da figura di supporto a 360° in ambito tecnologico.
+                insieme al subteam di UI/UX Designer cura la progettazione
+                grafica, l'identità visiva e i contenuti, assicurando
+                un'esperienza utente online ottimale. Infine, sovrintende la
+                regia tecnica durante gli eventi principali, fungendo da figura
+                di supporto a 360° in ambito tecnologico.
               </p>
             </div>
 
