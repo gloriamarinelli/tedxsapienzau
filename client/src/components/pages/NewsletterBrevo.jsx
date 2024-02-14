@@ -54,21 +54,22 @@ export default function NewsletterBrevo() {
         <div
           className="gradient-background"
           style={{
-            backgroundColor: "red",
-            textAlign: "left",
-            display: "grid",
-            height: "30vh",
+            padding: "10px",
+            textAlign: "center",
             color: "#fff",
+            height: "30vh",
+            display: "grid",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            marginTop: "30px",
           }}
         >
           <h1
-            className="font-weight-bold mt-5 mb-5 text-center"
+            className="font-weight-bold mb-5"
             style={{
-              fontSize: "40px",
+              fontSize: "27px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
+              marginTop: "80px",
             }}
           >
             Resta aggiornato <br />

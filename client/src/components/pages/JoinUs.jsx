@@ -463,7 +463,7 @@ export default function JoinUs() {
             height: "30vh",
             display: "grid",
             placeItems: "center",
-            marginTop: "40px",
+            marginTop: "30px",
           }}
         >
           <h1
