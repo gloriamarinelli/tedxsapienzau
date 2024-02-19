@@ -119,7 +119,7 @@ export default function Workshop() {
             }}
           >
             Non perdere l'occasione di metterti in gioco. Partecipa al workshop
-            che fa te!
+            che fa per te!
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export default function Workshop() {
             }}
           >
             Non perdere l'occasione di metterti in gioco. Partecipa al workshop
-            che fa te!
+            che fa per te!
           </p>
         </div>
 
