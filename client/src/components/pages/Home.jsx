@@ -303,7 +303,8 @@ function getBannerVolunteers(windowSize) {
               >
                 <p>
                   Sei interessato al nostro progetto? <br /> Sono aperte le
-                  candidature per far parte del nostro Team!
+                  candidature per far parte del nostro Team! <br /> Hai tempo fino al 
+                  1 marzo!
                 </p>
                 <a
                   className="btn-volunteers"

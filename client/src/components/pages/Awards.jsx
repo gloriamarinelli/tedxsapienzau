@@ -75,6 +75,7 @@ export default function Awards() {
                     border: "none",
                     fontSize: "18px",
                     borderRadius: "10px",
+                    marginBottom: "40px",
                   }}
                 >
                   Scopri di più
@@ -123,6 +124,7 @@ export default function Awards() {
                     border: "none",
                     fontSize: "18px",
                     borderRadius: "10px",
+                    marginBottom: "40px",
                   }}
                 >
                   Scopri di più

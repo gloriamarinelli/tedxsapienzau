@@ -100,7 +100,7 @@ export default function JoinUs() {
                 di specializzazione{" "}
               </i>
               <strong>presso l'ateneo Sapienza Università di Roma</strong> e si
-              chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59</strong>.
+              chiuderanno il giorno <strong> 01/03/2024 alle ore 23:59</strong>.
             </p>
           </div>
 
@@ -535,7 +535,7 @@ export default function JoinUs() {
                 di specializzazione{" "}
               </i>
               <strong>presso l'ateneo Sapienza Università di Roma</strong> e si
-              chiuderanno il giorno <strong> 26/02/2024 alle ore 23:59</strong>.
+              chiuderanno il giorno <strong> 01/03/2024 alle ore 23:59</strong>.
             </p>
           </div>
 
