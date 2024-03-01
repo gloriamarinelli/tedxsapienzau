@@ -155,77 +155,93 @@ export default function Join() {
           </h1>
         </div>
 
+        <div className="container-lg marketing">
+          <h3
+            className="title"
+            style={{
+              fontSize: "30px",
+              textAlign: "justify",
+              fontFamily: "GothamBold",
+              marginBottom: "30px",
+            }}
+          >
+            Le candidature per far parte del team sono chiuse, ma non per
+            sempre.<br></br> Compila il form qui sotto per essere contattato
+            quando riapriremo le candidature!
+          </h3>
+        </div>
+
         {/* JOIN STUDENT */}
         <div className="container marketing">
-           <div className="row featurette">
-						<div className="col-md-7 order-md-2">
-							<h3>Sei uno studente interessato al progetto?</h3>
-							<form onSubmit={handleSubmitStudent}>
-								<div style={{ display: "flex", flexDirection: "column" }}>
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Indirizzo email istituzionale*
-									</label>
-									<input
-										type="text"
-										id="email"
-										name="email"
-										required
-										className="form-control mx-1 col-9"
-									></input>
+          <div className="row featurette">
+            <div className="col-md-7 order-md-2">
+              <h3>Sei uno studente interessato al progetto?</h3>
+              <form onSubmit={handleSubmitStudent}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Indirizzo email istituzionale*
+                  </label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
 
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Nome*
-									</label>
-									<input
-										type="text"
-										id="nome"
-										name="nome"
-										required
-										className="form-control mx-1 col-9"
-									></input>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Nome*
+                  </label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
 
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Cognome*
-									</label>
-									<input
-										type="text"
-										id="cognome"
-										name="cognome"
-										required
-										className="form-control mx-1 col-9"
-									></input>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Cognome*
+                  </label>
+                  <input
+                    type="text"
+                    id="cognome"
+                    name="cognome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
 
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Descrivici il tuo interesse
-									</label>
-									<input
-										type="text"
-										id="interesse"
-										name="interesse"
-										className="form-control mx-1 col-9"
-									></input>
-								</div>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Descrivici il tuo interesse
+                  </label>
+                  <input
+                    type="text"
+                    id="interesse"
+                    name="interesse"
+                    className="form-control mx-1 col-9"
+                  ></input>
+                </div>
 
-								<button
-									type="submit"
-									className="btn mt-3"
-									style={{
-										backgroundColor: "rgb(235, 0, 40)",
-										color: "white",
-									}}
-								>
-									Invia
-								</button>
-							</form>
-						</div>
-						<div className="col-md-5 order-md-1 d-flex">
-							<img
-								src="https://static.vecteezy.com/ti/vettori-gratis/t1/3592464-un-unico-disegno-di-lavoratori-e-donne-seduti-nella-sala-riunioni-insieme-e-discutere-durante-l-ora-di-pranzo-concetto-aziendale-continuo-disegno-linea-disegno-illustrazione-grafica-vettoriale.jpg"
-								alt="JoinStudent"
-							/>
-						</div>
-					</div> <hr className="featurette-divider"></hr>
-
+                <button
+                  type="submit"
+                  className="btn mt-3"
+                  style={{
+                    backgroundColor: "rgb(235, 0, 40)",
+                    color: "white",
+                  }}
+                >
+                  Invia
+                </button>
+              </form>
+            </div>
+            <div className="col-md-5 order-md-1 d-flex">
+              <img
+                src="https://static.vecteezy.com/ti/vettori-gratis/t1/3592464-un-unico-disegno-di-lavoratori-e-donne-seduti-nella-sala-riunioni-insieme-e-discutere-durante-l-ora-di-pranzo-concetto-aziendale-continuo-disegno-linea-disegno-illustrazione-grafica-vettoriale.jpg"
+                alt="JoinStudent"
+              />
+            </div>
+          </div>{" "}
+          <hr className="featurette-divider"></hr>
           {/* JOIN PARTNER */}
           <div className="row featurette">
             <div className="col-md-7 order-md-2">
@@ -296,7 +312,6 @@ export default function Join() {
               />
             </div>
           </div>
-
           {/* JOIN ADVISE */}
           {/*
 					<hr className="featurette-divider"></hr> <div className="row featurette">
@@ -377,10 +392,11 @@ export default function Join() {
           className="gradient-background mb-5 "
           style={{
             backgroundColor: "red",
+            padding: "30px",
             textAlign: "left",
             display: "grid",
             color: "#fff",
-						height: "30vh",
+            height: "30vh",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
@@ -388,7 +404,7 @@ export default function Join() {
           <h1
             className="mt-5 mb-5"
             style={{
-              fontSize: "35px",
+              fontSize: "30px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
               maxWidth: "15ch",
@@ -399,71 +415,87 @@ export default function Join() {
           </h1>
         </div>
 
+        <div className="container-lg marketing">
+          <h3
+            className="title"
+            style={{
+              fontSize: "20px",
+              textAlign: "center",
+              fontFamily: "GothamBold",
+              marginBottom: "10px",
+            }}
+          >
+            Le candidature per far parte del team sono chiuse, ma non per
+            sempre.<br></br> Compila il form qui sotto per essere contattato
+            quando riapriremo le candidature!
+          </h3>
+        </div>
+
         {/* JOIN STUDENT */}
         <div className="container marketing">
-           <div className="row featurette">
-						<div className="col">
-							<h3>Sei uno studente interessato al progetto?</h3>
-							<form onSubmit={handleSubmitStudent}>
-								<div style={{ display: "flex", flexDirection: "column" }}>
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Indirizzo email istituzionale*
-									</label>
-									<input
-										type="text"
-										id="email"
-										name="email"
-										required
-										className="form-control mx-1 col-9"
-									></input>
+          <div className="row featurette">
+            <div className="col">
+              <h3>Sei uno studente interessato al progetto?</h3>
+              <form onSubmit={handleSubmitStudent}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Indirizzo email istituzionale*
+                  </label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
 
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Nome*
-									</label>
-									<input
-										type="text"
-										id="nome"
-										name="nome"
-										required
-										className="form-control mx-1 col-9"
-									></input>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Nome*
+                  </label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
 
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Cognome*
-									</label>
-									<input
-										type="text"
-										id="cognome"
-										name="cognome"
-										required
-										className="form-control mx-1 col-9"
-									></input>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Cognome*
+                  </label>
+                  <input
+                    type="text"
+                    id="cognome"
+                    name="cognome"
+                    required
+                    className="form-control mx-1 col-9"
+                  ></input>
 
-									<label htmlFor="exampleInputEmail1" className="form-label">
-										Descrivici il tuo interesse
-									</label>
-									<input
-										type="text"
-										id="interesse"
-										name="interesse"
-										className="form-control mx-1 col-9"
-									></input>
-								</div>
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Descrivici il tuo interesse
+                  </label>
+                  <input
+                    type="text"
+                    id="interesse"
+                    name="interesse"
+                    className="form-control mx-1 col-9"
+                  ></input>
+                </div>
 
-								<button
-									type="submit"
-									className="btn mt-3"
-									style={{
-										backgroundColor: "rgb(235, 0, 40)",
-										color: "white",
-									}}
-								>
-									Invia
-								</button>
-							</form>
-						</div>
-					</div> <hr className="featurette-divider"></hr>
-
+                <button
+                  type="submit"
+                  className="btn mt-3"
+                  style={{
+                    backgroundColor: "rgb(235, 0, 40)",
+                    color: "white",
+                  }}
+                >
+                  Invia
+                </button>
+              </form>
+            </div>
+          </div>{" "}
+          <hr className="featurette-divider"></hr>
           {/* JOIN PARTNER */}
           <div className="row featurette">
             <div className="col">
@@ -527,7 +559,6 @@ export default function Join() {
               </form>
             </div>
           </div>
-
           {/* JOIN ADVISE */}
           {/* <hr className="featurette-divider"></hr><div className="row featurette">
 						<div className="col">

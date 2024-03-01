@@ -75,7 +75,7 @@ export default function NavbarComponent(props) {
               }`}
               style={{ gap: "10px" }}
             >
-              <li className="nav-item">
+              {/*<li className="nav-item">
                 <Link to="/joinus" onClick={() => setExpanded(false)}>
                   <button
                     type="button"
@@ -89,7 +89,7 @@ export default function NavbarComponent(props) {
                     Join us
                   </button>
                 </Link>
-              </li>
+                  </li>*/}
 
               <li className="nav-item dropdown">
                 <a
@@ -202,6 +202,17 @@ export default function NavbarComponent(props) {
                   onClick={() => setExpanded(false)}
                 >
                   Team
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-black"
+                  to="/join"
+                  style={{ borderRadius: "5px" }}
+                  onClick={() => setExpanded(false)}
+                >
+                  Join Us
                 </Link>
               </li>
 

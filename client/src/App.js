@@ -86,7 +86,7 @@ const router = createBrowserRouter([
         path: "/edizioni",
         element: <Editions />,
       },
-     
+
       {
         path: "/edizione2022",
         element: <Edizione2022 />,
@@ -144,8 +144,11 @@ const router = createBrowserRouter([
         element: <Workshop />,
       },
       {
+        /*{
         path: "/joinus",
         element: <JoinUs />,
+      },
+    */
       },
     ],
   },

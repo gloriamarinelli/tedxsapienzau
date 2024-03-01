@@ -123,7 +123,9 @@ export default function Home() {
             )}
             {getCallToAction()}
           </div>
+          {/*
           {getBannerVolunteers(windowSize)}
+              */}
         </div>
         {getVerticalBannerNews(windowSize)}
       </section>
@@ -261,7 +263,8 @@ function getBannerRFW(windowSize) {
     </section>
   );
 }
-
+{
+  /*
 function getBannerVolunteers(windowSize) {
   return (
     <section
@@ -331,6 +334,8 @@ function getBannerVolunteers(windowSize) {
       </div>
     </section>
   );
+}
+*/
 }
 
 function getBannerAwards(windowSize) {
