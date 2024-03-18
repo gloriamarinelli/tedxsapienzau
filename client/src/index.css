@@ -29,6 +29,18 @@ code {
   src: url("./resources/Gotham-Book.otf") format("opentype");
 }
 
+@font-face {
+  font-family: FiraSansExtraCondensedRegular;
+  src: url("./resources/FiraSansExtraCondensed/FiraSansExtraCondensed-Regular.ttf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: FiraSansExtraCondensedBold;
+  src: url("./resources/FiraSansExtraCondensed/FiraSansExtraCondensed-Bold.ttf")
+    format("opentype");
+}
+
 .underlined::after {
   content: "";
   display: block;
