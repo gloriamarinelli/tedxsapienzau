@@ -2,47 +2,94 @@ import React from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import Iframe from "react-iframe";
+import { Grid } from "@react-three/drei";
+import Card from "react-bootstrap/Card";
+import { Color } from "three";
 
 export default function NewsletterBrevo() {
   const [windowSize, setWindowSize] = useOutletContext();
 
-  if (windowSize > global.UTILS.MOBILE_WIDTH) {
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
      * DESKTOP
      * */
     return (
       <>
-        <div
-          className="gradient-background"
-          style={{
-            backgroundColor: "red",
-            textAlign: "left",
-            display: "grid",
-            height: "40vh",
-            color: "#fff",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-          }}
-        >
-          <h1
-            className="font-weight-bold mt-5 mb-5 text-center"
+        <div style={{ backgroundColor: "#000000" }}>
+          <div
+            className="gradient-background"
             style={{
-              fontSize: "40px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
+              backgroundColor: "red",
+              textAlign: "left",
+              display: "grid",
+              height: "40vh",
+              color: "#fff",
+              clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+              placeItems: "center",
+              marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
             }}
           >
-            Resta aggiornato <br />
-            Iscriviti anche tu alla newsletter!{" "}
-          </h1>
+            <h1
+              className="font-weight-bold mt-5 mb-5 text-center"
+              style={{
+                fontSize: "40px",
+                fontWeight: "bold",
+                fontFamily: "GothamBold",
+              }}
+            >
+              Resta aggiornato <br />
+              Iscriviti anche tu alla newsletter!{" "}
+            </h1>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <Card
+                  style={{
+                    fontFamily: "Fira Sans Extra Condensed",
+                    background: "#rgba(255, 255, 255, 0.1)",
+                    maxWidth: "400",
+                    maxHeight: "400",
+                    borderRadius: "20px",
+                    marginTop: "40px",
+                    padding: "10px",
+                    fontSize: "20px",
+                    paddingBottom: "120px",
+                  }}
+                >
+                  <h1
+                    class="fira-sans"
+                    style={{
+                      color: "#FFFFFF",
+                      padding: "20px",
+                      fontSize: "60px",
+                    }}
+                  >
+                    <extra>
+                      <condensed-extrabold>
+                        NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO
+                      </condensed-extrabold>
+                    </extra>
+                  </h1>
+                  <h5 style={{ color: "#FFFFFF", padding: "20px" }}>
+                    Compila il form per rimanere aggiornato sulle nostre
+                    attività{" "}
+                  </h5>
+                </Card>
+              </div>
+              <div className="col">
+                <Iframe
+                  width="100%"
+                  height="700px"
+                  src="https://31dfcf3b.sibforms.com/serve/MUIFAGTEZxg4qoMh1bVYOvBCOXVzzXnoHEfz0jBoF7keAlY-_M_TEcdXYQmE82hTtYAloXHJ-WvS9hRh3yVSjtph-OplS9ODflSJWyfXbqCme8QRatDhjnJqgRZKTDtH15adP4VrRjnn6Wa47sCUpb99EMmxIhR_zTdN1hcqYG_XSJ4zgIp7gJ3UWM8Kca6J1dDYDmIFGDt_zPpT"
+                  frameborder="0"
+                  allowfullscreen
+                  style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+                ></Iframe>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <Iframe
-          width="100%"
-          height="500"
-          src="https://31dfcf3b.sibforms.com/serve/MUIFABcw3TcswjVPMUoHXOXckrtQCP6iHRcUAW_DcMk5loXFpS5fIABCYq42tF7CbyK6_t5hFbETlmDJwDorjy7D3bOmkYFp1Xa3vPmk5CzLH8VGQgnPDYIoerKjrt53a26iGQZwlLPIg9ebQAL9j71Ct1E57ld052nEwl2D1X1pVhvYyEIALI65JapHoA1INZcH9W843TTUhogb"
-        ></Iframe>
       </>
     );
   } else {
@@ -51,37 +98,93 @@ export default function NewsletterBrevo() {
      */
     return (
       <>
-        <div
-          className="gradient-background"
-          style={{
-            padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            height: "30vh",
-            display: "grid",
-            placeItems: "center",
-            marginTop: "30px",
-          }}
-        >
-          <h1
-            className="font-weight-bold mb-5"
+        <div style={{ backgroundColor: "#000000" }}>
+          <div
+            className="gradient-background"
             style={{
-              fontSize: "27px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-              marginTop: "80px",
+              padding: "10px",
+              textAlign: "center",
+              color: "#fff",
+              height: "30vh",
+              display: "grid",
+              placeItems: "center",
+              marginTop: "30px",
             }}
           >
-            Resta aggiornato <br />
-            Iscriviti anche tu alla newsletter!{" "}
-          </h1>
+            <h1
+              className="font-weight-bold mb-5"
+              style={{
+                fontSize: "27px",
+                fontWeight: "bold",
+                fontFamily: "GothamBold",
+                marginTop: "80px",
+              }}
+            >
+              Resta aggiornato <br />
+              Iscriviti anche tu alla newsletter!{" "}
+            </h1>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="row">
+                <Card
+                  style={{
+                    display: "flex",
+                    fontFamily: "Fira Sans Extra Condensed",
+                    background: "#rgba(255, 255, 255, 0.1)",
+                    //width: "300px",
+                    width: "85%",
+                    height: "300px",
+                    borderRadius: "20px",
+                    marginTop: "40px",
+                    padding: "0px",
+                    fontSize: "20px",
+                    paddingBottom: "10px",
+                    marginLeft: "30px",
+                    marginRight: "30px",
+                    alignContent: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  <h1
+                    class="fira-sans"
+                    style={{
+                      color: "#FFFFFF",
+                      padding: "20px",
+                      fontSize: "150%",
+                    }}
+                  >
+                    <extra>
+                      <condensed-extrabold>
+                        NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO
+                      </condensed-extrabold>
+                    </extra>
+                  </h1>
+                  <h5
+                    style={{
+                      color: "#FFFFFF",
+                      padding: "15px",
+                      fontSize: "100%",
+                    }}
+                  >
+                    Compila il form <br></br> qui sotto <br></br> per rimanere
+                    aggiornato <br></br> sulle nostre attività{" "}
+                  </h5>
+                </Card>
+              </div>
+              <div className="row">
+                <Iframe
+                  width="100%"
+                  height="700px"
+                  src="https://31dfcf3b.sibforms.com/serve/MUIFAGTEZxg4qoMh1bVYOvBCOXVzzXnoHEfz0jBoF7keAlY-_M_TEcdXYQmE82hTtYAloXHJ-WvS9hRh3yVSjtph-OplS9ODflSJWyfXbqCme8QRatDhjnJqgRZKTDtH15adP4VrRjnn6Wa47sCUpb99EMmxIhR_zTdN1hcqYG_XSJ4zgIp7gJ3UWM8Kca6J1dDYDmIFGDt_zPpT"
+                  frameborder="0"
+                  allowfullscreen
+                  style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+                ></Iframe>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <Iframe
-          width="100%"
-          height="450"
-          src="https://31dfcf3b.sibforms.com/serve/MUIFABcw3TcswjVPMUoHXOXckrtQCP6iHRcUAW_DcMk5loXFpS5fIABCYq42tF7CbyK6_t5hFbETlmDJwDorjy7D3bOmkYFp1Xa3vPmk5CzLH8VGQgnPDYIoerKjrt53a26iGQZwlLPIg9ebQAL9j71Ct1E57ld052nEwl2D1X1pVhvYyEIALI65JapHoA1INZcH9W843TTUhogb"
-        ></Iframe>
       </>
     );
   }
