@@ -147,6 +147,10 @@ export default function Footer() {
               icon={faYoutube}
               link="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
             />
+            <SocialIcon
+              icon={faFlickr}
+              link="https://www.flickr.com/photos/tedxsapienzau/albums"
+            />
           </div>
         </div>
         <div
@@ -241,7 +245,7 @@ export default function Footer() {
           </small>
         </div>
         <small className="secondary-text">
-          &copy; Copyright 2022 - 2023 | TEDxSapienzaU | All Rights Reserved
+          &copy; Copyright 2024 | TEDxSapienzaU | All Rights Reserved
         </small>
       </div>
     </section>
