@@ -87,7 +87,7 @@ export default function Footer() {
       <footer
         className="bento-box"
         style={{
-          width: windowSize > global.UTILS.MOBILE_WIDTH ? "95%" : "100%",
+          width: "100%",
           color: "white",
           display: "flex",
           justifyContent: "space-between",

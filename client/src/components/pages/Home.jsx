@@ -1,19 +1,18 @@
-import { Canvas } from "@react-three/fiber";
 import React from "react";
-import global from "../../resources/global.json";
-import "../../index.css";
-import DynamicBubbleCanvas from "../components/DynamicBubbleCanvas";
-import NewsBox from "../components/NewsBox";
-import BackToZero from "../images/Logo_BTZ.png";
-import BackToZeroBLACK from "../images/Logo_BTZ_BLACK.webp";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
-import Image from "../images/RFW23/logoRFW.webp";
+import global from "../../resources/global.json";
+import NewsBox from "../components/NewsBox";
+import BackToZeroBLACK from "../images/Logo_BTZ_BLACK.webp";
 import Image1 from "../images/RFW23/RFW.webp";
-import Image2 from "../images/volunteers.webp";
+import Image from "../images/RFW23/logoRFW.webp";
 import Eventbrite from "../images/eventbrite.png";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import CountdownEd23 from "../components/CountdownEd23";
+import Volunteers from "../images/volunteers.webp";
+import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
+import "../../index.css";
+import "../../resources/styles/home.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NewsSidebarSize = 18;
 
@@ -49,87 +48,90 @@ export default function Home() {
   };
 
   return (
-    <>
-      <section style={{ display: "flex" }}>
+    <section
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+        marginTop: global.UTILS.NAV_HEIGHT,
+        width: "100vw",
+        backgroundColor: "#000",
+        padding: global.UTILS.BENTO_BOX_PADDING,
+      }}
+    >
+      <div
+        id="main-container"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: global.UTILS.BENTO_BOX_PADDING,
+          borderRadius: global.UTILS.BENTO_BOX_PADDING,
+          backgroundImage: `url(${Volunteers})`,
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-end",
+          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+        }}
+      >
+        <div
+          id="photo-overlay"
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></div>
         <div
           style={{
-            backgroundColor: global.COLORS.BLU_SCURO_POSTER,
+            color: "white",
+            zIndex: 1,
+            display: "flex",
+            alignItems: "flex-end",
+            gap: "20px",
           }}
         >
-          <div
-            id="landing-cover"
-            className="d-flex align-items-center justify-content-center"
+          <h2
+            className="mb-5 secondary-text"
             style={{
-              height: `calc(100vh - ${global.UTILS.SOCIAL_NAV_HEIGHT})`,
-              width:
-                windowSize > global.UTILS.TABLET_WIDTH
-                  ? `${100 - NewsSidebarSize}vw`
-                  : "100vw",
-              fontFamily: "GothamBold",
-              position: "relative",
+              fontSize: "2vw",
+              visibility:
+                windowSize > global.UTILS.TABLET_WIDTH ? "initial" : " hidden",
             }}
           >
-            <div
-              style={{
-                position: "absolute",
-                height: `calc(100vh - ${global.UTILS.SOCIAL_NAV_HEIGHT})`,
-                width: "100%",
-              }}
-            >
-              <Canvas>
-                <DynamicBubbleCanvas windowSize={windowSize} />
-              </Canvas>
-            </div>
-            {windowSize > global.UTILS.TABLET_WIDTH ? (
-              <div
-                style={{
-                  position: "absolute",
-                  height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-                  width: "100%",
-                  display: "grid",
-                  placeItems: "center",
-                  pointerEvents: "none",
-                  userSelect: "none",
-                }}
-              >
-                <img
-                  src={BackToZero}
-                  alt="back to zero"
-                  width="650"
-                  style={{
-                    transform: "translatey(-50px)",
-                    userSelect: "none",
-                  }}
-                />
-              </div>
-            ) : (
-              <div
-                style={{
-                  position: "absolute",
-                  height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-                  width: "100%",
-                  display: "grid",
-                  placeItems: "center",
-                  pointerEvents: "none",
-                }}
-              >
-                <img
-                  src={BackToZero}
-                  alt="back to zero"
-                  width="300"
-                  style={{ transform: "translatey(-50px)" }}
-                />
-              </div>
-            )}
-            {getCallToAction()}
-          </div>
-          {/*
-          {getBannerVolunteers(windowSize)}
-              */}
+            TEDXSAPIENZAU
+          </h2>
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: windowSize > 1245 ? "14vh" : "100px",
+              fontWeight: 700,
+              maxWidth: "13ch",
+            }}
+          >
+            LET'S EXPLORE HOW IT WAS
+          </h1>
+          <h2
+            className="mb-5 secondary-text"
+            style={{
+              fontSize: "2vw",
+              visibility:
+                windowSize > global.UTILS.TABLET_WIDTH ? "initial" : " hidden",
+            }}
+          >
+            BACK TO ZERO 2023
+          </h2>
         </div>
-        {getVerticalBannerNews(windowSize)}
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
@@ -262,80 +264,6 @@ function getBannerRFW(windowSize) {
       </div>
     </section>
   );
-}
-{
-  /*
-function getBannerVolunteers(windowSize) {
-  return (
-    <section
-      style={{
-        backgroundImage: `url(${Image2})`,
-        backgroundSize: "cover",
-        backgroundPosition: "left top -120px",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="container px-5">
-        <div className="row gx-5 align-items-center">
-          <div className="col-lg-6 ">
-            <div className="p-5 d-flex justify-content-center align-items-center"></div>
-          </div>
-          <div
-            className="col-lg-6"
-            style={{ backgroundColor: "rgba(255 ,255, 255, 0.9 )" }}
-          >
-            <div className="p-5">
-              <h1
-                style={{
-                  color: "#eb0028",
-                  fontWeight: "bold",
-                  marginBottom: "25px",
-                  fontSize: "30px",
-                }}
-              >
-                Candidati come volontario!
-              </h1>
-
-              <p
-                style={{
-                  textAlign:
-                    windowSize > global.UTILS.TABLET_WIDTH ? "justify" : "",
-                  fontSize: "18px",
-                  marginBottom: "25px",
-                }}
-              >
-                <p>
-                  Sei interessato al nostro progetto? <br /> Sono aperte le
-                  candidature per far parte del nostro Team! <br /> Hai tempo fino al 
-                  1 marzo!
-                </p>
-                <a
-                  className="btn-volunteers"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize:
-                      windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
-                    textDecoration: "none",
-                    fontFamily: "GothamBold",
-                    color: "#eb0028",
-                  }}
-                  href="/joinus"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Candidati!
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-*/
 }
 
 function getBannerAwards(windowSize) {
