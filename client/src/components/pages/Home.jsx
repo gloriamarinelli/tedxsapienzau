@@ -13,6 +13,8 @@ import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Iframe from "react-iframe";
+import Card from "react-bootstrap/Card";
 
 const NewsSidebarSize = 18;
 
@@ -48,90 +50,184 @@ export default function Home() {
   };
 
   return (
-    <section
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-        marginTop: global.UTILS.NAV_HEIGHT,
-        width: "100vw",
-        backgroundColor: "#000",
-        padding: global.UTILS.BENTO_BOX_PADDING,
-      }}
-    >
-      <div
-        id="main-container"
+    <>
+      <section
         style={{
-          width: "100%",
-          height: "100%",
-          padding: global.UTILS.BENTO_BOX_PADDING,
-          borderRadius: global.UTILS.BENTO_BOX_PADDING,
-          backgroundImage: `url(${Volunteers})`,
-          backgroundSize: "cover",
-          backgroundPosition: "top",
           display: "flex",
           justifyContent: "center",
-          alignItems: "flex-end",
-          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          alignItems: "center",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          marginTop: global.UTILS.NAV_HEIGHT,
+          width: "100vw",
+          backgroundColor: "#000",
+          padding: global.UTILS.BENTO_BOX_PADDING,
         }}
       >
         <div
-          id="photo-overlay"
+          id="main-container"
           style={{
-            position: "absolute",
             width: "100%",
             height: "100%",
-            top: 0,
-            left: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundImage: `url(${Volunteers})`,
+            backgroundSize: "cover",
+            backgroundPosition: "top",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-          }}
-        ></div>
-        <div
-          style={{
-            color: "white",
-            zIndex: 1,
-            display: "flex",
             alignItems: "flex-end",
-            gap: "20px",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
           }}
         >
-          <h2
-            className="mb-5 secondary-text"
+          <div
+            id="photo-overlay"
             style={{
-              fontSize: "2vw",
-              visibility:
-                windowSize > global.UTILS.TABLET_WIDTH ? "initial" : " hidden",
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              top: 0,
+              left: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          ></div>
+          <div
+            style={{
+              color: "white",
+              zIndex: 1,
+              display: "flex",
+              alignItems: "flex-end",
+              gap: "20px",
             }}
           >
-            TEDXSAPIENZAU
-          </h2>
-          <h1
-            style={{
-              textAlign: "center",
-              fontSize: windowSize > 1245 ? "14vh" : "100px",
-              fontWeight: 700,
-              maxWidth: "13ch",
-            }}
-          >
-            LET'S EXPLORE HOW IT WAS
-          </h1>
-          <h2
-            className="mb-5 secondary-text"
-            style={{
-              fontSize: "2vw",
-              visibility:
-                windowSize > global.UTILS.TABLET_WIDTH ? "initial" : " hidden",
-            }}
-          >
-            BACK TO ZERO 2023
-          </h2>
+            <h2
+              className="mb-5 secondary-text"
+              style={{
+                fontSize: "2vw",
+                visibility:
+                  windowSize > global.UTILS.TABLET_WIDTH
+                    ? "initial"
+                    : " hidden",
+              }}
+            >
+              TEDXSAPIENZAU
+            </h2>
+            <h1
+              style={{
+                textAlign: "center",
+                fontSize: windowSize > 1245 ? "14vh" : "100px",
+                fontWeight: 700,
+                maxWidth: "13ch",
+              }}
+            >
+              LET'S EXPLORE HOW IT WAS
+            </h1>
+            <h2
+              className="mb-5 secondary-text"
+              style={{
+                fontSize: "2vw",
+                visibility:
+                  windowSize > global.UTILS.TABLET_WIDTH
+                    ? "initial"
+                    : " hidden",
+              }}
+            >
+              BACK TO ZERO 2023
+            </h2>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          width: "100vw",
+          backgroundColor: "#000",
+          padding: global.UTILS.BENTO_BOX_PADDING,
+        }}
+      >
+        <div
+          id="left-container"
+          style={{
+            width: "100%",
+            height: "80%",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: "#191919",
+            display: "flex",
+            marginRight: "10px",
+            justifyContent: "left",
+            alignItems: "flex",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            position: "relative",
+          }}
+        >
+        <div style={{
+          position: "absolute",
+
+        }}> 
+            <h1
+              class="fira-sans"
+              style={{
+                textAlign: "left",
+                fontSize: windowSize > 1245 ? "9vh" : "60px",
+                fontWeight: 700,
+                maxWidth: "20ch",
+                color: "#FFFFFF",
+              }}
+            >
+              <extra>
+                <condensed-extrabold>
+                  NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO<br></br>
+                </condensed-extrabold>
+              </extra>
+            </h1>
+            <h5
+              class="fira-sans"
+              style={{
+                textAlign: "left",
+                fontSize: windowSize > 1245 ? "6vh" : "30px",
+                fontWeight: 300,
+                maxWidth: "20ch",
+                color: "#FFFFFF",
+              }}
+            >
+              Compila il form per rimanere aggiornato sulle nostre attività{" "}
+            </h5>
+            </div>
+        </div>
+        <div
+          id="right-container"
+          style={{
+            width: "100%",
+            height: "80%",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: "#191919",
+            display: "flex",
+            marginLeft: "10px",
+            justifyContent: "center",
+            alignItems: "flex-end",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <Iframe
+            width="100%"
+            height="100%"
+            src="https://31dfcf3b.sibforms.com/serve/MUIFADk8q-909kd_RTTgSFBhqjYmtLW7GUm5kzfIZOBZeTCFkY5_8mGGhZ0dgLLIJz-BhtEElTz-qP_OPFbdktIf9F4waVbrtVpLvaYFLMvVNH8Wm8YHO5Lh6EzAPnVNx0ZgrWUvr9L4Zm4YQ8Z9kDXhvFlRnb410M2sgJuk--XSZCy8jPew7q55QKHmF2lar1OHnqUJ7LrcV5vK"
+            frameborder="0"
+            allowfullscreen
+            style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+          ></Iframe>
+        </div>
+      </section>
+    </>
   );
 }
 
