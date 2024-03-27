@@ -105,7 +105,10 @@ export default function Home() {
             <h2
               className="mb-5 secondary-text"
               style={{
-                fontSize: "2vw",
+                fontSize:
+                windowSize > global.UTILS.TABLET_WIDTH
+                ? "2vw"
+                : "0.5vw",
                 visibility:
                   windowSize > global.UTILS.TABLET_WIDTH
                     ? "initial"
@@ -141,10 +144,14 @@ export default function Home() {
       </section>
       <section
         style={{
-          display: "flex",
+          display: windowSize > global.UTILS.TABLET_WIDTH
+          ? "flex"
+          : "flow",
           justifyContent: "center",
           alignItems: "center",
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          height:windowSize > global.UTILS.TABLET_WIDTH
+          ? `calc(100vh - ${global.UTILS.NAV_HEIGHT})`
+          : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
           padding: global.UTILS.BENTO_BOX_PADDING,
@@ -154,7 +161,9 @@ export default function Home() {
           id="left-container"
           style={{
             width: "100%",
-            height: "80%",
+            height: windowSize > global.UTILS.TABLET_WIDTH
+            ? "80%"
+            : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -174,7 +183,7 @@ export default function Home() {
               class="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "9vh" : "60px",
+                fontSize: windowSize > 1245 ? "9vh" : "6vh",
                 fontWeight: 700,
                 maxWidth: "20ch",
                 color: "#FFFFFF",
@@ -190,9 +199,9 @@ export default function Home() {
               class="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "6vh" : "30px",
+                fontSize: windowSize > 1245 ? "6vh" : "3vh",
                 fontWeight: 300,
-                maxWidth: "20ch",
+                maxWidth: "30ch",
                 color: "#FFFFFF",
               }}
             >
@@ -204,12 +213,22 @@ export default function Home() {
           id="right-container"
           style={{
             width: "100%",
-            height: "80%",
+            height: windowSize > global.UTILS.TABLET_WIDTH
+            ? "80%"
+            : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
             display: "flex",
-            marginLeft: "10px",
+            marginLeft: windowSize > global.UTILS.TABLET_WIDTH
+            ? "10px"
+            : "0px",
+            marginTop: windowSize > global.UTILS.TABLET_WIDTH
+            ? "0px"
+            :"17px",
+            marginBottom: windowSize > global.UTILS.TABLET_WIDTH
+            ? "0px"
+            :"200vw",
             justifyContent: "center",
             alignItems: "flex-end",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
@@ -227,6 +246,7 @@ export default function Home() {
           ></Iframe>
         </div>
       </section>
+      
     </>
   );
 }
@@ -550,6 +570,7 @@ function getVerticalBannerNews(windowSize) {
     );
   } else {
     //I don't want to show the sidebar if the screen is too small
-    return <></>;
+    return <>
+    </>;
   }
 }
