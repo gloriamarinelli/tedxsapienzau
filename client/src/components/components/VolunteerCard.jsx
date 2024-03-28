@@ -55,6 +55,7 @@ export default function VolunteerCard({
                   fontWeight: "bold",
                   textAlign: "center",
                   fontSize: "20px",
+                  color: "#fff",
                 }}
               >
                 {nome}
@@ -111,6 +112,7 @@ export default function VolunteerCard({
                   fontWeight: "bold",
                   textAlign: "center",
                   fontSize: "20px",
+                  color: "#fff",
                 }}
               >
                 {nome}

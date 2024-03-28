@@ -29,6 +29,21 @@ export default function Team2022() {
     "speaker curator",
   ];
 
+  const TeamNameStyle = {
+    margin: "30px 0",
+    fontFamily: "Fira Sans Extra Condensed, sans-serif",
+    fontSize: "40px",
+    color: "#fff",
+  };
+
+  const BoardNameStyle = {
+    margin: "30px 0",
+    fontFamily: "Fira Sans Extra Condensed, sans-serif",
+    fontSize: "50px",
+    backgroundColor: global.COLORS.NERO, //! Cambiare colore
+    color: "#fff"
+  };
+
   useEffect(() => {
     setBoard([]);
     setVolunteers([]);
@@ -63,6 +78,7 @@ export default function Team2022() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <div className="spinner"></div>
@@ -89,11 +105,7 @@ export default function Team2022() {
       return (
         <>
           <h1
-            style={{
-              margin: "30px 0",
-              fontFamily: "GothamBold",
-              fontSize: "50px",
-            }}
+            style={BoardNameStyle}
           >
             Board
           </h1>
@@ -140,11 +152,7 @@ export default function Team2022() {
       return (
         <>
           <h1
-            style={{
-              margin: "30px 0",
-              fontFamily: "GothamBold",
-              fontSize: "50px",
-            }}
+            style={BoardNameStyle}
           >
             Board
           </h1>
@@ -287,61 +295,37 @@ export default function Team2022() {
     return (
       <>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Design & Website
         </h1>
         <div className="row">{dwArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Communication, Editorial, Marketing & Media
         </h1>
         <div className="row">{cemArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team External Relation & Sponsor
         </h1>
         <div className="row">{ersArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Legal & Administrative
         </h1>
         <div className="row">{laArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Planning & Event Management
         </h1>
         <div className="row">{pemArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Speakers & Event Curation
         </h1>
@@ -504,71 +488,43 @@ export default function Team2022() {
     return (
       <>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Curator
         </h1>
         <div className="row">{curatorArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Communication
         </h1>
         <div className="row">{communicationArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Speaker Curation
         </h1>
         <div className="row">{speakerArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Fundraising
         </h1>
         <div className="row">{fundArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Grafica
         </h1>
         <div className="row">{graficaArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Radio
         </h1>
         <div className="row">{radioArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Planning
         </h1>
@@ -584,7 +540,9 @@ export default function Team2022() {
 
   function getTeam2023() {
     return (
-      <div className="container-xl">
+      <div 
+        className="container-xl"
+      >
         <div className="row">{handleBoardCardSection23()}</div>
         <div>{handleVolunteersCardSection23()}</div>
       </div>
@@ -594,7 +552,9 @@ export default function Team2022() {
   function getTeam2022() {
     return (
       <>
-        <div className="container">
+        <div 
+          className="container"
+        >
           <div className="row">{handleBoardCardSection22()}</div>
         </div>
         <div className="container">
@@ -611,44 +571,59 @@ export default function Team2022() {
 
     return (
       <>
-        <div
-          className="header gradient-background-team2023"
-          style={{
+        <section
+          style = {{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
+          <div
             style={{
-              fontSize: "120px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
+              width: "100%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "#191919",
+              marginRight: "10px",
+              display: "flex",
+              justifyContent: "center", 
+              alignItems: "center",
+              textAlign: "center"
             }}
           >
-            TEAM
-          </h1>
-        </div>
+            <h1
+              className="font-weight-bold mt-5 mb-5"
+              style={{
+                fontSize: "120px",
+                fontWeight: "bold",
+                margin: "0",
+                color: global.COLORS.ROSSO_TED_2023
+              }}
+            >
+              TEAM
+            </h1>
+          </div>
+        </section>
         <section
-          className="mt-5 mb-5 d-flex justify-content-between"
+          className="d-flex justify-content-between"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            //width: "95vw",
+            //margin: "auto",
+            padding: "20px",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <h3
             style={{
               fontSize: "25px",
+              
               fontWeight: "bold",
-              color: "black",
+              color: "#fff",
               display: "flex",
             }}
           >
@@ -681,8 +656,14 @@ export default function Team2022() {
             </div>
           </h3>
         </section>
-
-        {chooseYear()}
+        <section
+          style={{
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+          }}
+        >
+          {chooseYear()}
+        </section>
       </>
     );
   } else {
@@ -691,45 +672,59 @@ export default function Team2022() {
      */
     return (
       <>
-        <div
-          className="header gradient-background-team2023"
-          style={{
+        <section
+          style = {{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            height: "30vh",
-            display: "grid",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mb-5"
+          <div
+            className="header"
             style={{
-              fontSize: "60px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-              marginTop: "100px",
+              width: "100%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "#191919",
+              marginRight: "10px",
+              display: "flex",
+              justifyContent: "center", 
+              alignItems: "center",
+              textAlign: "center"
             }}
           >
-            TEAM
-          </h1>
-        </div>
+            <h1
+              className="font-weight-bold"
+              style={{
+                fontSize: "60px",
+                fontWeight: "bold",
+                color: global.COLORS.ROSSO_TED_2023
+              }}
+            >
+              TEAM
+            </h1>
+          </div>
+        </section>
 
         <section
-          className="mt-3 mb-5"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            // width: "95vw",
+            // margin: "auto",
+            padding: "20px",
+            color: "white",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <h3
             style={{
               fontSize: "15px",
               fontWeight: "bold",
-              textAlign: "left",
-              color: "black",
+              textAlign: "center",
               display: "flex",
             }}
           >
@@ -764,7 +759,14 @@ export default function Team2022() {
             </div>
           </div>
         </section>
-        {chooseYear()}
+        <section
+          style={{
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+          }}
+        >
+          {chooseYear()}
+        </section>
       </>
     );
   }
