@@ -150,7 +150,7 @@ export default function Home() {
           justifyContent: "center",
           alignItems: "center",
           height:windowSize > global.UTILS.TABLET_WIDTH
-          ? `calc(100vh - ${global.UTILS.NAV_HEIGHT})`
+          ? `calc(70vh - ${global.UTILS.NAV_HEIGHT})`
           : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
@@ -183,7 +183,7 @@ export default function Home() {
               class="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "9vh" : "6vh",
+                fontSize: windowSize > 1245 ? "7vh" : "6vh",
                 fontWeight: 700,
                 maxWidth: "20ch",
                 color: "#FFFFFF",
@@ -199,7 +199,7 @@ export default function Home() {
               class="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "6vh" : "3vh",
+                fontSize: windowSize > 1245 ? "4vh" : "3vh",
                 fontWeight: 300,
                 maxWidth: "30ch",
                 color: "#FFFFFF",
@@ -239,7 +239,7 @@ export default function Home() {
           <Iframe
             width="100%"
             height="100%"
-            src="https://31dfcf3b.sibforms.com/serve/MUIFADk8q-909kd_RTTgSFBhqjYmtLW7GUm5kzfIZOBZeTCFkY5_8mGGhZ0dgLLIJz-BhtEElTz-qP_OPFbdktIf9F4waVbrtVpLvaYFLMvVNH8Wm8YHO5Lh6EzAPnVNx0ZgrWUvr9L4Zm4YQ8Z9kDXhvFlRnb410M2sgJuk--XSZCy8jPew7q55QKHmF2lar1OHnqUJ7LrcV5vK"
+            src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
             frameborder="0"
             allowfullscreen
             style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
