@@ -12,6 +12,8 @@
 	overflow: hidden;
 	position: relative;
 	justify-content: center;
+	background-color: white;
+	z-index: 9999;
 }
 
 .card-projects img {
@@ -113,6 +115,11 @@
 	z-index: 9999;
 }
 
-.portfolio-24{
+.portfolio-24, #portfolio{
 	background-color: black;
+}
+
+/* edizione 2022 */
+.portfolio-item{
+	background-color: white;
 }
