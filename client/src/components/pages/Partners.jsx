@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
+import PartnerCard24 from "../components/PartnerCard24";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { Link } from "react-router-dom";
@@ -10,10 +11,11 @@ import "../../index.css";
 import PartnerCardCommunity from "../components/PartnerCardCommunity";
 
 export default function Partners() {
-  const [activeYear, setActiveYear] = useState(23);
+  const [activeYear, setActiveYear] = useState(24);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
+  const button2024 = useRef();
 
   function getSponsor2022() {
     return (
@@ -456,27 +458,90 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function chooseYear() {
-    if (activeYear === 22) return getSponsor2022();
-    else return getSponsor2023();
+  function getSponsor2024() {
+    return (
+      <>
+        <section className="page-section portfolio-24" id="portfolio">
+          <div className="container">
+            <div className="">
+              <h2
+                className="section-heading"
+                style={{
+                  fontFamily: "GothamBold",
+                  fontSize: "2.5em",
+                  //color: global.COLORS.BIANCO,
+                  color: "white", // ??
+                }}
+              >
+                Main Sponsors
+              </h2>
+              <div className="row">
+                <PartnerCard24
+                  imgSrc="logo-white.png"
+                  text="white logo"
+                  link="https://www.tedxsapienzau.com/"
+                  sponsorType={"main"}
+                />
+
+                <PartnerCard24
+                  imgSrc="logo-white.png"
+                  text="white logo"
+                  link="https://www.tedxsapienzau.com/"
+                  sponsorType={"main"}
+                />
+              </div>
+              
+              <div className="row">
+                <PartnerCard24
+                  title="Supporting Sponsor"
+                  imgSrc="logo-white.png"
+                  text="white logo"
+                  link="https://www.tedxsapienzau.com/"
+                  sponsorType={"supporting"}
+                />
+                
+                <PartnerCard24
+                  title="Technical Sponsor"
+                  imgSrc="logo-white.png"
+                  text="white logo"
+                  link="https://www.tedxsapienzau.com/"
+                  sponsorType={"technical"}
+                />
+
+                <PartnerCard24
+                  title="Con la partecipazione di"
+                  imgSrc="logo-white.png"
+                  text="white logo"
+                  link="https://www.tedxsapienzau.com/"
+                  sponsorType={"partecipazione"}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    );
   }
 
-  if (windowSize > global.UTILS.TABLET_WIDTH) {
-    /**
-     * DESKTOP
-     */
+  function chooseYear() {
+    if (activeYear === 22) return getSponsor2022();
+    else if (activeYear === 23) return getSponsor2023();
+    else return getSponsor2024();
+  }
+
+  function partnerLayout24Desktop(){
     return (
       <>
         <div
-          className="header gradient-background"
+          className="header"
           style={{
             padding: "10px",
             color: "#fff",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
             height: "40vh",
             display: "grid",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h1
@@ -485,6 +550,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontSize: "120px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
+              color: global.COLORS.ROSSO_TED, 
             }}
           >
             PARTNERS
@@ -492,11 +558,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         </div>
 
         <section
-          className="mt-5 mb-5 d-flex justify-content-between"
+          className="pt-5 pb-5 px-5 d-flex justify-content-between"
           style={{
-            width: "95vw",
-            margin: "auto",
+            //width: "95vw",
+            //margin: "auto",
             fontFamily: "GothamBold",
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
@@ -505,17 +572,34 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontWeight: "bold",
               color: "black",
               display: "flex",
+              color: "white",
             }}
           >
             Chi ci ha supportato:
             <div
-              ref={button2023}
+              ref={button2024}
               className="year-button underlined"
               type="button"
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+            <div
+              ref={button2023}
+              className="year-button"
+              type="button"
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -530,6 +614,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -556,14 +641,13 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         {chooseYear()}
       </>
     );
-  } else {
-    /**
-     * MOBILE
-     */
+  }
+
+  function partnerLayout24Mobile(){
     return (
       <>
         <div
-          className="header gradient-background"
+          className="header"
           style={{
             padding: "10px",
             color: "#fff",
@@ -571,15 +655,17 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             display: "grid",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h1
-            className="font-weight-bold mb-5"
+            className="font-weight-bold pb-5"
             style={{
               fontSize: "60px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
               marginTop: "100px",
+              color: global.COLORS.ROSSO_TED, 
             }}
           >
             PARTNERS
@@ -587,11 +673,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         </div>
 
         <section
-          className="mt-3 mb-5"
+          className="pt-3 pb-5 px-3"
           style={{
-            width: "95vw",
-            margin: "auto",
+            //width: "95vw",
+            //margin: "auto",
             fontFamily: "GothamBold",
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
@@ -599,7 +686,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontSize: "15px",
               fontWeight: "bold",
               textAlign: "left",
-              color: "black",
+              color: "white",
               display: "flex",
             }}
           >
@@ -607,17 +694,38 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </h3>
           <div style={{ display: "flex" }}>
             <div
+              ref={button2024}
+              className="year-button underlined px-3"
+              type="button"
+              style={{ 
+                //marginLeft: "30px",
+                fontSize: "30px",
+                color: "white"}}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+
+            <div
               ref={button2023}
-              className="year-button underlined"
+              className="year-button px-3"
               type="button"
               style={{
-                marginRight: "30px",
+                //marginRight: "30px",
                 cursor: "initial",
                 fontSize: "30px",
+                color: "white"
               }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -626,12 +734,17 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             </div>
             <div
               ref={button2022}
-              className="year-button"
+              className="year-button px-3"
               type="button"
-              style={{ marginRight: "30px", fontSize: "30px" }}
+              style={{ 
+                //marginRight: "30px", 
+                fontSize: "30px",
+                color: "white"
+              }}
               onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -644,5 +757,239 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         {chooseYear()}
       </>
     );
+  }
+  
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
+    /**
+     * DESKTOP
+     */
+    if(activeYear === 24){
+      return partnerLayout24Desktop();
+    }
+    else{
+      return (
+        <>
+          <div
+            className="header gradient-background"
+            style={{
+              padding: "10px",
+              color: "#fff",
+              clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+              height: "40vh",
+              display: "grid",
+              placeItems: "center",
+              marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+              backgroundColor: global.COLORS.NERO,
+            }}
+          >
+            <h1
+              className="font-weight-bold mt-5 mb-5"
+              style={{
+                fontSize: "120px",
+                fontWeight: "bold",
+                fontFamily: "GothamBold",
+              }}
+            >
+              PARTNERS
+            </h1>
+          </div>
+
+          <section
+            className="mt-5 mb-5 d-flex justify-content-between"
+            style={{
+              width: "95vw",
+              margin: "auto",
+              fontFamily: "GothamBold",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "25px",
+                fontWeight: "bold",
+                color: "black",
+                display: "flex",
+              }}
+            >
+              Chi ci ha supportato:
+              <div
+                ref={button2024}
+                className="year-button underlined"
+                type="button"
+                style={{ marginLeft: "30px" }}
+                onClick={() => {
+                  console.log("click");
+                  button2022.current.classList.remove("underlined");
+                  button2023.current.classList.remove("underlined");
+                  button2024.current.classList.add("underlined");
+                  setActiveYear(24);
+                }}
+              >
+                2024
+              </div>
+              <div
+                ref={button2023}
+                className="year-button"
+                type="button"
+                style={{ marginLeft: "30px" }}
+                onClick={() => {
+                  console.log("click");
+                  button2022.current.classList.remove("underlined");
+                  button2024.current.classList.remove("underlined");
+                  button2023.current.classList.add("underlined");
+                  setActiveYear(23);
+                }}
+              >
+                2023
+              </div>
+              <div
+                ref={button2022}
+                className="year-button"
+                type="button"
+                style={{ marginLeft: "30px" }}
+                onClick={() => {
+                  console.log("click");
+                  button2023.current.classList.remove("underlined");
+                  button2024.current.classList.remove("underlined");
+                  button2022.current.classList.add("underlined");
+                  setActiveYear(22);
+                }}
+              >
+                2022
+              </div>
+            </h3>
+
+            <Link to="/join">
+              <button
+                type="button"
+                className="btn"
+                style={{
+                  backgroundColor: global.COLORS.ROSSO_TED,
+                  fontWeight: "bold",
+                  color: "#fff",
+                }}
+              >
+                Vuoi supportarci?
+              </button>
+            </Link>
+          </section>
+
+          {chooseYear()}
+        </>
+      );
+    }
+  } else {
+    /**
+     * MOBILE
+     */
+    if(activeYear === 24){
+      return partnerLayout24Mobile();
+    }
+    else{
+      return (
+        <>
+          <div
+            className="header gradient-background"
+            style={{
+              padding: "10px",
+              color: "#fff",
+              height: "30vh",
+              display: "grid",
+              placeItems: "center",
+              marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            }}
+          >
+            <h1
+              className="font-weight-bold mb-5"
+              style={{
+                fontSize: "60px",
+                fontWeight: "bold",
+                fontFamily: "GothamBold",
+                marginTop: "100px",
+              }}
+            >
+              PARTNERS
+            </h1>
+          </div>
+
+          <section
+            className="mt-3 mb-5"
+            style={{
+              width: "95vw",
+              margin: "auto",
+              fontFamily: "GothamBold",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "15px",
+                fontWeight: "bold",
+                textAlign: "left",
+                display: "flex",
+              }}
+            >
+              Chi ci ha supportato:
+            </h3>
+            <div style={{ display: "flex" }}>
+              <div
+                ref={button2024}
+                className="year-button underlined px-3"
+                type="button"
+                style={{
+                  //marginLeft: "30px",
+                  fontSize: "30px"}}
+                onClick={() => {
+                  console.log("click");
+                  button2022.current.classList.remove("underlined");
+                  button2023.current.classList.remove("underlined");
+                  button2024.current.classList.add("underlined");
+                  setActiveYear(24);
+                }}
+              >
+                2024
+              </div>
+
+              <div
+                ref={button2023}
+                className="year-button px-3"
+                type="button"
+                style={{
+                  //marginRight: "30px",
+                  cursor: "initial",
+                  fontSize: "30px",
+                }}
+                onClick={() => {
+                  console.log("click");
+                  button2022.current.classList.remove("underlined");
+                  button2024.current.classList.remove("underlined");
+                  button2023.current.classList.add("underlined");
+                  setActiveYear(23);
+                }}
+              >
+                2023
+              </div>
+              <div
+                ref={button2022}
+                className="year-button px-3"
+                type="button"
+                style={{ 
+                  //marginRight: "30px", 
+                  fontSize: "30px" }}
+                onClick={() => {
+                  console.log("click");
+                  button2023.current.classList.remove("underlined");
+                  button2024.current.classList.remove("underlined");
+                  button2022.current.classList.add("underlined");
+                  setActiveYear(22);
+                }}
+              >
+                2022
+              </div>
+            </div>
+          </section>
+
+          {chooseYear()}
+        </>
+      );
+    }
   }
 }
