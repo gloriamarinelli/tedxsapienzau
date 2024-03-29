@@ -51,11 +51,11 @@ export default function NavbarComponent(props) {
     <>
       <Navbar
         ref={navRef}
-        className="navbar navbar-white bg-black static-top"
+        className="navbar navbar-white bg-black static-top "
         expand={"lg"}
         expanded={expanded}
         style={{
-          fontFamily: "FiraSansRegular",
+          fontFamily: "Fira Sans Extra Condensed",
           fontSize: "medium",
           position: "absolute",
           zIndex: 99,
@@ -65,7 +65,7 @@ export default function NavbarComponent(props) {
           paddingBottom: "18px",
         }}
       >
-        <Container>
+        <Container fluid>
           <Link to="/">
             <LazyLoadImage src={Image} alt="LogoTedx" width="" height="45" />
           </Link>
@@ -81,52 +81,91 @@ export default function NavbarComponent(props) {
                 }`}
                 style={{ gap: "10px" }}
               >
-                <Col className="col-lg-9 col-md-12 col-sm-12  col-xs-12">
+                <Col className="col-lg-9 col-md-12 col-sm-12  col-xs-12 d-flex align-items-center">
                   <Container>
                     <Row className="mt-2 mb-2">
-                      <Col className="text-center justify-content-center d-flex ">
+                      <Col className="text-center d-flex justify-content-center">
                         <li className="nav-item dropdown ps-2 pe-2 ">
                           <a
-                            className="nav-link dropdown-toggle text-white"
+                            className="navbar-submenu-edition-item"
                             data-bs-toggle="dropdown"
                             href="/location"
                             role="button"
                             aria-expanded="false"
                             style={{ borderRadius: "5px" }}
                           >
-                            Edizioni
+                            Edizioni v
                           </a>
+                          
                           <ul
-                            className="dropdown-menu dropdown-menu-new bg-black"
+                            className="dropdown-menu dropdown-menu-new bg-black p-3 mt-3"
                             style={{
                               backgroundColor: "black",
-                              borderRadius: "5px",
+                              borderRadius: "15px",
                             }}
                           >
-                            <li>
+                            <span className="ms-3 mb-3 navbar-submenu-edition-year">2023</span>
+                            <li className="navbar-submenu-edition-item">
                               <Link
-                                className="dropdown-item text-white"
+                                className="navbar-submenu-edition-item ms-3"
                                 to="/mission&vision"
                                 onClick={() => setExpanded(false)}
                               >
-                                Mission & Vision
+                                BACK TO ZERO
                               </Link>
                             </li>
                             <li>
                               <Link
-                                className="dropdown-item text-white"
-                                to="/location"
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/mission&vision"
                                 onClick={() => setExpanded(false)}
                               >
-                                Location
+                                AWARDS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/mission&vision"
+                                onClick={() => setExpanded(false)}
+                              >
+                                COUNTDOWN
+                              </Link>
+                            </li>
+                            <span className="ms-3 mb-3 navbar-submenu-edition-year">2022</span>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/mission&vision"
+                                onClick={() => setExpanded(false)}
+                              >
+                                ACT: LEAD THE CHANGE
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/mission&vision"
+                                onClick={() => setExpanded(false)}
+                              >
+                                AWARDS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/mission&vision"
+                                onClick={() => setExpanded(false)}
+                              >
+                                COUNTDOWN
                               </Link>
                             </li>
                           </ul>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2">
+                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
                           <Link
-                            className="nav-link text-white "
+                            className="navbar-submenu-edition-item"
                             to="/partners"
                             style={{ borderRadius: "5px" }}
                             onClick={() => setExpanded(false)}
@@ -135,9 +174,9 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2">
+                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
                           <Link
-                            className="nav-link text-white"
+                            className="navbar-submenu-edition-item"
                             to="/team"
                             style={{ borderRadius: "5px" }}
                             onClick={() => setExpanded(false)}
@@ -146,9 +185,9 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2">
+                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
                           <Link
-                            className="nav-link text-white"
+                            className="navbar-submenu-edition-item"
                             to="/blog"
                             style={{ borderRadius: "5px" }}
                             onClick={() => setExpanded(false)}
@@ -157,9 +196,9 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2">
+                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
                           <Link
-                            className="nav-link text-white"
+                            className="navbar-submenu-edition-item"
                             to="/team"
                             onClick={() => setExpanded(false)}
                           >
@@ -171,10 +210,10 @@ export default function NavbarComponent(props) {
                   </Container>
                 </Col>
 
-                <Col className="col-lg-3 col-md-12 col-sm-12 col-xs-12 ">
+                <Col className="col-lg-3 col-md-12 col-sm-12 col-xs-12 col-4">
                   <Container className="">
                     <Row className="mt-2 mb-2 d-flex justify-content-center">
-                      <Col className="text-center col-lg-4 col-md-3 col-sm-4 col-xs-3 col-4">
+                      <Col className="text-center col-lg-6 col-md-3 col-sm-4 col-xs-3 col-4">
                         <li className="nav-item dropdown">
                           <a
                             className="nav-link dropdown-toggle text-white"
@@ -199,7 +238,7 @@ export default function NavbarComponent(props) {
                         </li>
                       </Col>
 
-                      <Col className="text-center col-lg-8 col-md-3 col-sm-4 col-xs-3 col-4">
+                      <Col className="text-center col-lg-6 col-md-3 col-sm-4 col-xs-3 col-8">
                         <Button
                           style={{
                             backgroundColor: "red",
