@@ -422,3 +422,18 @@ code {
 .tertiary-text {
   color: #ffffff99;
 }
+
+/* Navbar Elements*/
+.navbar-submenu-edition-year{
+  color: grey;
+  font-size: 0.8em;
+}
+.navbar-submenu-edition-item{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-submenu-edition-item:hover{
+  color: red;
+  
+}
