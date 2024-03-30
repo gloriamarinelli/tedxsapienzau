@@ -83,11 +83,11 @@ export default function Edizione2023() {
 
   const CarouselComponent = () => {
     const [index, setIndex] = useState(0);
-  
+
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
-  
+
     return (
       <Carousel
         activeIndex={index}
@@ -306,7 +306,7 @@ export default function Edizione2023() {
           style={{
             textAlign: "center",
             height: "45vh",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            marginTop: global.UTILS.NAV_HEIGHT,
           }}
         ></header>
 
