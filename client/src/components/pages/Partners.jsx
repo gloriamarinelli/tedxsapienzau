@@ -60,7 +60,7 @@ export default function Partners() {
           </h2>
           <div className="row">
             <PartnerCard22
-              imgSrc="https://upload.wikimedia.org/wikipedia/it/thumb/c/cc/UniCredit_logo.svg/1200px-UniCredit_logo.svg.png"
+              imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Unicredit_logo.svg/2560px-Unicredit_logo.svg.png"
               sponsorType={"main"}
             />
 
@@ -94,7 +94,7 @@ export default function Partners() {
               sponsorType={"supporting"}
             />
             <PartnerCard22
-              imgSrc="https://www.autocentribalduina.com/static/img/pict3512.jpg"
+              imgSrc="https://www.autocentribalduina.com/media/osvdbcml/ab-autocentri-balduina.jpg"
               sponsorType={"supporting"}
             />
           </div>
@@ -202,7 +202,7 @@ export default function Partners() {
                 />
               </div>
 
-              <div className="row" style={{color: "white"}}>
+              <div className="row" style={{ color: "white" }}>
                 <PartnerCard23
                   title="Supporting Sponsor"
                   imgSrc="Balduina1.webp"
@@ -470,21 +470,20 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function comingSoon(){    
-    return(
-      <div className="coming-soon"
-      style = {{
-        backgroundColor: global.COLORS.NERO,
-        padding: "10px",
-        fontFamily: "Fira Sans Extra Condensed, sans-serif",
-        placeItems: "center",
-        display: "grid",
-        color: global.COLORS.ROSSO_TED
-      }}
+  function comingSoon() {
+    return (
+      <div
+        className="coming-soon"
+        style={{
+          backgroundColor: global.COLORS.NERO,
+          padding: "10px",
+          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          placeItems: "center",
+          display: "grid",
+          color: global.COLORS.ROSSO_TED,
+        }}
       >
-        <h1>
-          COMING SOON . . .
-        </h1>
+        <h1>COMING SOON . . .</h1>
       </div>
     );
   }
@@ -499,11 +498,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     else return getSponsor2024();
   }
 
-  function partnerLayout24Desktop(){
+  function partnerLayout24Desktop() {
     return (
-      <>        
+      <>
         <section
-          style = {{
+          style={{
             backgroundColor: global.COLORS.NERO,
             marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
@@ -521,9 +520,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               backgroundColor: "#191919",
               //marginRight: "10px",
               display: "flex",
-              justifyContent: "center", 
+              justifyContent: "center",
               alignItems: "center",
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             <h1
@@ -532,7 +531,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 fontSize: "120px",
                 fontWeight: "bold",
                 margin: "0",
-                color: global.COLORS.ROSSO_TED
+                color: global.COLORS.ROSSO_TED,
               }}
             >
               PARTNERS
@@ -626,11 +625,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function partnerLayout24Mobile(){
+  function partnerLayout24Mobile() {
     return (
       <>
         <section
-          style = {{
+          style={{
             backgroundColor: global.COLORS.NERO, //! Cambiare colore
             marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
@@ -649,9 +648,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               backgroundColor: "#191919",
               //marginRight: "10px",
               display: "flex",
-              justifyContent: "center", 
+              justifyContent: "center",
               alignItems: "center",
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             <h1
@@ -659,7 +658,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               style={{
                 fontSize: "60px",
                 fontWeight: "bold",
-                color: global.COLORS.ROSSO_TED
+                color: global.COLORS.ROSSO_TED,
               }}
             >
               PARTNERS
@@ -692,10 +691,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               ref={button2024}
               className="year-button underlined px-3"
               type="button"
-              style={{ 
+              style={{
                 //marginLeft: "30px",
                 fontSize: "30px",
-                color: "white"}}
+                color: "white",
+              }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
@@ -715,7 +715,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 //marginRight: "30px",
                 cursor: "initial",
                 fontSize: "30px",
-                color: "white"
+                color: "white",
               }}
               onClick={() => {
                 console.log("click");
@@ -731,10 +731,10 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               ref={button2022}
               className="year-button px-3"
               type="button"
-              style={{ 
-                //marginRight: "30px", 
+              style={{
+                //marginRight: "30px",
                 fontSize: "30px",
-                color: "white"
+                color: "white",
               }}
               onClick={() => {
                 console.log("click");
@@ -753,7 +753,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       </>
     );
   }
-  
+
   if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
      * DESKTOP
