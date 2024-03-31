@@ -582,14 +582,14 @@ export default function Team2022() {
           }}
         >
           <div
+            className="bento-box"
             style={{
               width: "100%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
-              marginRight: "10px",
+              color: "white",
               display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "40px",
               justifyContent: "center", 
               alignItems: "center",
               textAlign: "center"
