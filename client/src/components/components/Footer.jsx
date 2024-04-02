@@ -241,7 +241,7 @@ export default function Footer() {
             <GreyLink text="Privacy Policy" link={"/privacypolicy"} />
           </small>
           <small className="tertiary-text">
-            <GreyLink text="Statuto" link={"/statuto"} />
+            <GreyLink text="Statuto" link={"https://drive.google.com/file/d/1VGXzgkuv93T3q2XHKxSwa-qMQzRnp5JX/view"} />
           </small>
         </div>
         <small className="secondary-text">
