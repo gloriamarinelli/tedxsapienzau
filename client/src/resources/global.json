@@ -10,7 +10,9 @@
     "BLU_POSTER": "#2e3777",
     "BLU_SCURO_POSTER": "#242958",
     "GIALLO_AWARDS": "#ffd800",
-    "CELESTE": "#5272b5"
+    "CELESTE": "#5272b5",
+    "NERO": "#000000",
+    "BIANCO": "#FFFFF"
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",

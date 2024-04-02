@@ -12,6 +12,8 @@
 	overflow: hidden;
 	position: relative;
 	justify-content: center;
+	background-color: white;
+	z-index: 9999;
 }
 
 .card-projects img {
@@ -88,4 +90,36 @@
 	height: 260px;
 }
 
+ /* 2024 */
 
+ .overlay-24 {
+	right: -100%;
+	bottom: -100%;
+}
+
+.btn1-24::before {
+	border-radius: 100px;
+	align-items: center;
+	color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+}
+
+.btn1:checked::before {
+	background: rgb(255, 255, 255);
+	color: black;
+}
+
+.card-projects-24 {
+	/* box-shadow: 0 0 15px #ffffffa1;*/
+	background-color: #191919;
+	z-index: 9999;
+}
+
+.portfolio-24, #portfolio{
+	background-color: black;
+}
+
+/* edizione 2022 */
+.portfolio-item{
+	background-color: white;
+}

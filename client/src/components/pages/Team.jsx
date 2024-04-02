@@ -7,12 +7,14 @@ import global from "../../resources/global.json";
 import VolunteerCard from "../components/VolunteerCard";
 
 export default function Team2022() {
-  const [activeYear, setActiveYear] = useState(23);
+  const [activeYear, setActiveYear] = useState(24);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
+  const button2024 = useRef();
   const button2022Mobile = useRef();
   const button2023Mobile = useRef();
+  const button2024Mobile = useRef();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
 
@@ -28,6 +30,21 @@ export default function Team2022() {
     "radio",
     "speaker curator",
   ];
+
+  const TeamNameStyle = {
+    margin: "30px 0",
+    fontFamily: "Fira Sans Extra Condensed, sans-serif",
+    fontSize: "40px",
+    color: "#fff",
+  };
+
+  const BoardNameStyle = {
+    margin: "30px 0",
+    fontFamily: "Fira Sans Extra Condensed, sans-serif",
+    fontSize: "50px",
+    backgroundColor: global.COLORS.NERO, //! Cambiare colore
+    color: "#fff"
+  };
 
   useEffect(() => {
     setBoard([]);
@@ -63,6 +80,7 @@ export default function Team2022() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <div className="spinner"></div>
@@ -89,11 +107,7 @@ export default function Team2022() {
       return (
         <>
           <h1
-            style={{
-              margin: "30px 0",
-              fontFamily: "GothamBold",
-              fontSize: "50px",
-            }}
+            style={BoardNameStyle}
           >
             Board
           </h1>
@@ -140,11 +154,7 @@ export default function Team2022() {
       return (
         <>
           <h1
-            style={{
-              margin: "30px 0",
-              fontFamily: "GothamBold",
-              fontSize: "50px",
-            }}
+            style={BoardNameStyle}
           >
             Board
           </h1>
@@ -287,61 +297,37 @@ export default function Team2022() {
     return (
       <>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Design & Website
         </h1>
         <div className="row">{dwArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Communication, Editorial, Marketing & Media
         </h1>
         <div className="row">{cemArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team External Relation & Sponsor
         </h1>
         <div className="row">{ersArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Legal & Administrative
         </h1>
         <div className="row">{laArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Planning & Event Management
         </h1>
         <div className="row">{pemArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Speakers & Event Curation
         </h1>
@@ -504,71 +490,43 @@ export default function Team2022() {
     return (
       <>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Curator
         </h1>
         <div className="row">{curatorArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Communication
         </h1>
         <div className="row">{communicationArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Speaker Curation
         </h1>
         <div className="row">{speakerArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Fundraising
         </h1>
         <div className="row">{fundArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Grafica
         </h1>
         <div className="row">{graficaArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Radio
         </h1>
         <div className="row">{radioArray}</div>
         <h1
-          style={{
-            margin: "30px 0",
-            fontFamily: "GothamBold",
-            fontSize: "40px",
-          }}
+          style={TeamNameStyle}
         >
           Team Planning
         </h1>
@@ -579,22 +537,57 @@ export default function Team2022() {
 
   function chooseYear() {
     if (activeYear === 22) return getTeam2022();
-    else return getTeam2023();
+    else if (activeYear === 23) return getTeam2023();
+    else return getTeam2024();
   }
 
   function getTeam2023() {
     return (
-      <div className="container-xl">
+      <div 
+        className="container-xl"
+      >
         <div className="row">{handleBoardCardSection23()}</div>
         <div>{handleVolunteersCardSection23()}</div>
       </div>
     );
   }
 
+  function getTeam2024() {
+    return (
+      <>
+        <div 
+          className="container"
+          style ={{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            justifyContent: "center", 
+            alignItems: "center",
+            textAlign: "center",
+            display: "flex",
+          }}
+        >
+          <h1
+            className="font-weight-bold mt-5 mb-5"
+            style={{
+              fontSize: "72px",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              fontWeight: "bold",
+              margin: "0",
+              color: global.COLORS.ROSSO_TED_2023
+            }}
+          >
+            Coming Soon...
+          </h1>
+        </div>
+      </>
+    );
+  }
+
   function getTeam2022() {
     return (
       <>
-        <div className="container">
+        <div 
+          className="container"
+        >
           <div className="row">{handleBoardCardSection22()}</div>
         </div>
         <div className="container">
@@ -604,6 +597,8 @@ export default function Team2022() {
     );
   }
 
+
+
   if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
      * DESKTOP
@@ -611,55 +606,85 @@ export default function Team2022() {
 
     return (
       <>
-        <div
-          className="header gradient-background-team2023"
-          style={{
+        <section
+          style = {{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            marginTop: "92px",
             padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
+          <div
+            className="header-team"
             style={{
-              fontSize: "120px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
+              width: "100%",
+              color: "white",
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "40px",
+              justifyContent: "center", 
+              alignItems: "center",
+              textAlign: "center"
             }}
           >
-            TEAM
-          </h1>
-        </div>
+            <h1
+              className="font-weight-bold mt-5 mb-5"
+              style={{
+                fontSize: "120px",
+                fontWeight: "bold",
+                margin: "0",
+                color: global.COLORS.ROSSO_TED_2023
+              }}
+            >
+              TEAM
+            </h1>
+          </div>
+        </section>
         <section
-          className="mt-5 mb-5 d-flex justify-content-between"
+          className="d-flex justify-content-between"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            //width: "95vw",
+            //margin: "auto",
+            padding: "20px",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <h3
             style={{
               fontSize: "25px",
+              
               fontWeight: "bold",
-              color: "black",
+              color: "#fff",
               display: "flex",
             }}
           >
             Chi ha partecipato:
             <div
-              ref={button2023}
+              ref={button2024}
               className="year-button underlined"
               type="button"
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+            <div
+              ref={button2023}
+              className="year-button"
+              type="button"
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -673,6 +698,7 @@ export default function Team2022() {
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -681,8 +707,14 @@ export default function Team2022() {
             </div>
           </h3>
         </section>
-
-        {chooseYear()}
+        <section
+          style={{
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+          }}
+        >
+          {chooseYear()}
+        </section>
       </>
     );
   } else {
@@ -691,45 +723,58 @@ export default function Team2022() {
      */
     return (
       <>
-        <div
-          className="header gradient-background-team2023"
-          style={{
+        <section
+          style = {{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            height: "30vh",
-            display: "grid",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mb-5"
+          <div
+            className="header-team"
             style={{
-              fontSize: "60px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-              marginTop: "100px",
+              width: "100%",
+              color: "white",
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "40px",
+              justifyContent: "center", 
+              alignItems: "center",
+              textAlign: "center"
             }}
           >
-            TEAM
-          </h1>
-        </div>
+            <h1
+              className="font-weight-bold"
+              style={{
+                fontSize: "60px",
+                fontWeight: "bold",
+                color: global.COLORS.ROSSO_TED_2023
+              }}
+            >
+              TEAM
+            </h1>
+          </div>
+        </section>
 
         <section
-          className="mt-3 mb-5"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            // width: "95vw",
+            // margin: "auto",
+            padding: "20px",
+            color: "white",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <h3
             style={{
               fontSize: "15px",
               fontWeight: "bold",
-              textAlign: "left",
-              color: "black",
+              textAlign: "center",
               display: "flex",
             }}
           >
@@ -737,17 +782,18 @@ export default function Team2022() {
           </h3>
           <div style={{ display: "flex" }}>
             <div
-              ref={button2022Mobile}
+              ref={button2024Mobile}
               className="year-button underlined"
               type="button"
               style={{ marginRight: "30px", fontSize: "30px" }}
               onClick={() => {
                 button2023Mobile.current.classList.remove("underlined");
-                button2022Mobile.current.classList.add("underlined");
-                setActiveYear(23);
+                button2022Mobile.current.classList.remove("underlined");
+                button2024Mobile.current.classList.add("underlined");
+                setActiveYear(24);
               }}
             >
-              2023
+              2024
             </div>
             <div
               ref={button2023Mobile}
@@ -755,8 +801,23 @@ export default function Team2022() {
               type="button"
               style={{ marginRight: "30px", fontSize: "30px" }}
               onClick={() => {
+                button2024Mobile.current.classList.remove("underlined");
                 button2022Mobile.current.classList.remove("underlined");
                 button2023Mobile.current.classList.add("underlined");
+                setActiveYear(23);
+              }}
+            >
+              2023
+            </div>
+            <div
+              ref={button2022Mobile}
+              className="year-button"
+              type="button"
+              style={{ marginRight: "30px", fontSize: "30px" }}
+              onClick={() => {
+                button2023Mobile.current.classList.remove("underlined");
+                button2024Mobile.current.classList.remove("underlined");
+                button2022Mobile.current.classList.add("underlined");
                 setActiveYear(22);
               }}
             >
@@ -764,7 +825,14 @@ export default function Team2022() {
             </div>
           </div>
         </section>
-        {chooseYear()}
+        <section
+          style={{
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+          }}
+        >
+          {chooseYear()}
+        </section>
       </>
     );
   }

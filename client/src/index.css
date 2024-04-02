@@ -424,7 +424,10 @@ code {
 }
 
 /* Navbar Elements*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1c163c4662362a927d999c5e409870f49cedee9
 .navbar-submenu-edition-year{
   color: grey;
   font-size: 0.8em;
@@ -432,13 +435,17 @@ code {
 .navbar-submenu-edition-item{
   color: #ffffff;
   text-decoration: none;
+<<<<<<< HEAD
   display: flex;
   text-align: start;
   margin-bottom: 3px;
+=======
+>>>>>>> f1c163c4662362a927d999c5e409870f49cedee9
 }
 
 .navbar-submenu-edition-item:hover{
   color: red;
+<<<<<<< HEAD
 }
 
 .navbar-submenu-edition-item-disabled {
@@ -446,4 +453,14 @@ code {
   color: rgba(138, 138, 138, 0.582);
   cursor: not-allowed;
   text-decoration: none;
+=======
+  
+}
+
+/* Team Elements */
+.header-team {
+  background-color: #ffffff1a;
+  border-radius: 24px;
+  padding: 40px;
+>>>>>>> f1c163c4662362a927d999c5e409870f49cedee9
 }

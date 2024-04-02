@@ -12,6 +12,8 @@
 	overflow: hidden;
 	position: relative;
 	justify-content: center;
+	background-color: white;
+	z-index: 9999;
 }
 
 .card-projectsC img {

@@ -1,6 +1,7 @@
 import React from "react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import global from "../../resources/global.json";
 
 export default function ExecutiveTeamCard({
   id,
@@ -18,6 +19,7 @@ export default function ExecutiveTeamCard({
         className="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
         style={{
           position: "relative",
+          backgroundColor: global.COLORS.NERO, //! Cambiare colore
         }}
       >
         <div
@@ -27,6 +29,7 @@ export default function ExecutiveTeamCard({
             flexDirection: "column",
             position: "relative",
             border: "2px solid transparent",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
           <a
@@ -53,7 +56,7 @@ export default function ExecutiveTeamCard({
             style={{
               borderRadius: "20px 20px 0 0",
               objectFit: "cover",
-              backgroundColor: "#1f1f1f",
+              //backgroundColor: "#1f1f1f",
             }}
           />
 
@@ -75,6 +78,7 @@ export default function ExecutiveTeamCard({
                 fontWeight: "bold",
                 textAlign: "center",
                 fontSize: "23px",
+                color: "#fff",
               }}
             >
               {nome}

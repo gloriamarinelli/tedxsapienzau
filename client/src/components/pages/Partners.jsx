@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
+import PartnerCard24 from "../components/PartnerCard24";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { Link } from "react-router-dom";
@@ -10,10 +11,11 @@ import "../../index.css";
 import PartnerCardCommunity from "../components/PartnerCardCommunity";
 
 export default function Partners() {
-  const [activeYear, setActiveYear] = useState(23);
+  const [activeYear, setActiveYear] = useState(24);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
+  const button2024 = useRef();
 
   function getSponsor2022() {
     return (
@@ -23,8 +25,9 @@ export default function Partners() {
             <h2
               className="section-heading"
               style={{
-                fontFamily: "GothamBold",
+                fontFamily: "Fira Sans Extra Condensed, sans-serif",
                 fontSize: "2.5em",
+                color: "white",
               }}
             >
               Partner Istituzionali
@@ -48,15 +51,16 @@ export default function Partners() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2.5em",
+              color: "white",
             }}
           >
             Main Sponsors
           </h2>
           <div className="row">
             <PartnerCard22
-              imgSrc="https://upload.wikimedia.org/wikipedia/it/thumb/c/cc/UniCredit_logo.svg/1200px-UniCredit_logo.svg.png"
+              imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Unicredit_logo.svg/2560px-Unicredit_logo.svg.png"
               sponsorType={"main"}
             />
 
@@ -69,8 +73,9 @@ export default function Partners() {
           <h2
             className="section-heading mb-3"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2em",
+              color: "white",
             }}
           >
             Supporting Sponsors
@@ -89,7 +94,7 @@ export default function Partners() {
               sponsorType={"supporting"}
             />
             <PartnerCard22
-              imgSrc="https://www.autocentribalduina.com/static/img/pict3512.jpg"
+              imgSrc="https://www.autocentribalduina.com/media/osvdbcml/ab-autocentri-balduina.jpg"
               sponsorType={"supporting"}
             />
           </div>
@@ -97,8 +102,9 @@ export default function Partners() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2em",
+              color: "white",
             }}
           >
             Smart Sponsor
@@ -121,8 +127,9 @@ export default function Partners() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2em",
+              color: "white",
             }}
           >
             Friendly Sponsor
@@ -172,8 +179,9 @@ export default function Partners() {
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2.5em",
+                  color: "white",
                 }}
               >
                 Main Sponsors
@@ -194,7 +202,7 @@ export default function Partners() {
                 />
               </div>
 
-              <div className="row">
+              <div className="row" style={{ color: "white" }}>
                 <PartnerCard23
                   title="Supporting Sponsor"
                   imgSrc="Balduina1.webp"
@@ -225,8 +233,9 @@ export default function Partners() {
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Smart Sponsors
@@ -267,8 +276,9 @@ export default function Partners() {
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Friendly Sponsors
@@ -329,8 +339,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Media Partners
@@ -365,8 +376,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Creative Partners
@@ -383,8 +395,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Community Partners
@@ -416,8 +429,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Con il patrocinio di
@@ -456,47 +470,82 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function chooseYear() {
-    if (activeYear === 22) return getSponsor2022();
-    else return getSponsor2023();
+  function comingSoon() {
+    return (
+      <div
+        className="coming-soon"
+        style={{
+          backgroundColor: global.COLORS.NERO,
+          padding: "10px",
+          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          placeItems: "center",
+          display: "grid",
+          color: global.COLORS.ROSSO_TED,
+        }}
+      >
+        <h1>COMING SOON . . .</h1>
+      </div>
+    );
   }
 
-  if (windowSize > global.UTILS.TABLET_WIDTH) {
-    /**
-     * DESKTOP
-     */
+  function getSponsor2024() {
+    return comingSoon();
+  }
+
+  function chooseYear() {
+    if (activeYear === 22) return getSponsor2022();
+    else if (activeYear === 23) return getSponsor2023();
+    else return getSponsor2024();
+  }
+
+  function partnerLayout24Desktop() {
     return (
       <>
-        <div
-          className="header gradient-background"
+        <section
           style={{
+            backgroundColor: global.COLORS.NERO,
+            marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
-            color: "#fff",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
+          <div
             style={{
-              fontSize: "120px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
+              width: "99%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "#191919",
+              //marginRight: "10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
             }}
           >
-            PARTNERS
-          </h1>
-        </div>
+            <h1
+              className="font-weight-bold mt-5 mb-5"
+              style={{
+                fontSize: "120px",
+                fontWeight: "bold",
+                margin: "0",
+                color: global.COLORS.ROSSO_TED,
+              }}
+            >
+              PARTNERS
+            </h1>
+          </div>
+        </section>
 
         <section
-          className="mt-5 mb-5 d-flex justify-content-between"
+          className="pt-5 pb-5 px-5 d-flex justify-content-between"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            //width: "95vw",
+            //margin: "auto",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
@@ -505,17 +554,34 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontWeight: "bold",
               color: "black",
               display: "flex",
+              color: "white",
             }}
           >
             Chi ci ha supportato:
             <div
-              ref={button2023}
+              ref={button2024}
               className="year-button underlined"
               type="button"
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+            <div
+              ref={button2023}
+              className="year-button"
+              type="button"
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -530,6 +596,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -556,42 +623,56 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         {chooseYear()}
       </>
     );
-  } else {
-    /**
-     * MOBILE
-     */
+  }
+
+  function partnerLayout24Mobile() {
     return (
       <>
-        <div
-          className="header gradient-background"
+        <section
           style={{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
-            color: "#fff",
-            height: "30vh",
-            display: "grid",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mb-5"
+          <div
+            className="header"
             style={{
-              fontSize: "60px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-              marginTop: "100px",
+              width: "98%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "#191919",
+              //marginRight: "10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
             }}
           >
-            PARTNERS
-          </h1>
-        </div>
+            <h1
+              className="font-weight-bold"
+              style={{
+                fontSize: "60px",
+                fontWeight: "bold",
+                color: global.COLORS.ROSSO_TED,
+              }}
+            >
+              PARTNERS
+            </h1>
+          </div>
+        </section>
 
         <section
-          className="mt-3 mb-5"
+          className="pt-3 pb-5 px-3"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            //width: "95vw",
+            //margin: "auto",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
@@ -599,7 +680,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontSize: "15px",
               fontWeight: "bold",
               textAlign: "left",
-              color: "black",
+              color: "white",
               display: "flex",
             }}
           >
@@ -607,17 +688,39 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </h3>
           <div style={{ display: "flex" }}>
             <div
-              ref={button2023}
-              className="year-button underlined"
+              ref={button2024}
+              className="year-button underlined px-3"
               type="button"
               style={{
-                marginRight: "30px",
-                cursor: "initial",
+                //marginLeft: "30px",
                 fontSize: "30px",
+                color: "white",
               }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+
+            <div
+              ref={button2023}
+              className="year-button px-3"
+              type="button"
+              style={{
+                //marginRight: "30px",
+                cursor: "initial",
+                fontSize: "30px",
+                color: "white",
+              }}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -626,12 +729,17 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             </div>
             <div
               ref={button2022}
-              className="year-button"
+              className="year-button px-3"
               type="button"
-              style={{ marginRight: "30px", fontSize: "30px" }}
+              style={{
+                //marginRight: "30px",
+                fontSize: "30px",
+                color: "white",
+              }}
               onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -644,5 +752,17 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         {chooseYear()}
       </>
     );
+  }
+
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
+    /**
+     * DESKTOP
+     */
+    return partnerLayout24Desktop();
+  } else {
+    /**
+     * MOBILE
+     */
+    return partnerLayout24Mobile();
   }
 }
