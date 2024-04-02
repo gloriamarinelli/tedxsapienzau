@@ -7,12 +7,14 @@ import global from "../../resources/global.json";
 import VolunteerCard from "../components/VolunteerCard";
 
 export default function Team2022() {
-  const [activeYear, setActiveYear] = useState(23);
+  const [activeYear, setActiveYear] = useState(24);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
+  const button2024 = useRef();
   const button2022Mobile = useRef();
   const button2023Mobile = useRef();
+  const button2024Mobile = useRef();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
 
@@ -535,7 +537,8 @@ export default function Team2022() {
 
   function chooseYear() {
     if (activeYear === 22) return getTeam2022();
-    else return getTeam2023();
+    else if (activeYear === 23) return getTeam2023();
+    else return getTeam2024();
   }
 
   function getTeam2023() {
@@ -546,6 +549,36 @@ export default function Team2022() {
         <div className="row">{handleBoardCardSection23()}</div>
         <div>{handleVolunteersCardSection23()}</div>
       </div>
+    );
+  }
+
+  function getTeam2024() {
+    return (
+      <>
+        <div 
+          className="container"
+          style ={{
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            justifyContent: "center", 
+            alignItems: "center",
+            textAlign: "center",
+            display: "flex",
+          }}
+        >
+          <h1
+            className="font-weight-bold mt-5 mb-5"
+            style={{
+              fontSize: "72px",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              fontWeight: "bold",
+              margin: "0",
+              color: global.COLORS.ROSSO_TED_2023
+            }}
+          >
+            Coming Soon...
+          </h1>
+        </div>
+      </>
     );
   }
 
@@ -564,6 +597,8 @@ export default function Team2022() {
     );
   }
 
+
+
   if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
      * DESKTOP
@@ -574,7 +609,7 @@ export default function Team2022() {
         <section
           style = {{
             backgroundColor: global.COLORS.NERO, //! Cambiare colore
-            marginTop: global.UTILS.NAV_HEIGHT,
+            marginTop: "92px",
             padding: "10px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
@@ -582,14 +617,14 @@ export default function Team2022() {
           }}
         >
           <div
+            className="header-team"
             style={{
               width: "100%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
-              marginRight: "10px",
+              color: "white",
               display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "40px",
               justifyContent: "center", 
               alignItems: "center",
               textAlign: "center"
@@ -629,12 +664,27 @@ export default function Team2022() {
           >
             Chi ha partecipato:
             <div
-              ref={button2023}
+              ref={button2024}
               className="year-button underlined"
               type="button"
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+            <div
+              ref={button2023}
+              className="year-button"
+              type="button"
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -648,6 +698,7 @@ export default function Team2022() {
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -683,15 +734,14 @@ export default function Team2022() {
           }}
         >
           <div
-            className="header"
+            className="header-team"
             style={{
               width: "100%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
-              marginRight: "10px",
+              color: "white",
               display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "40px",
               justifyContent: "center", 
               alignItems: "center",
               textAlign: "center"
@@ -732,17 +782,18 @@ export default function Team2022() {
           </h3>
           <div style={{ display: "flex" }}>
             <div
-              ref={button2022Mobile}
+              ref={button2024Mobile}
               className="year-button underlined"
               type="button"
               style={{ marginRight: "30px", fontSize: "30px" }}
               onClick={() => {
                 button2023Mobile.current.classList.remove("underlined");
-                button2022Mobile.current.classList.add("underlined");
-                setActiveYear(23);
+                button2022Mobile.current.classList.remove("underlined");
+                button2024Mobile.current.classList.add("underlined");
+                setActiveYear(24);
               }}
             >
-              2023
+              2024
             </div>
             <div
               ref={button2023Mobile}
@@ -750,8 +801,23 @@ export default function Team2022() {
               type="button"
               style={{ marginRight: "30px", fontSize: "30px" }}
               onClick={() => {
+                button2024Mobile.current.classList.remove("underlined");
                 button2022Mobile.current.classList.remove("underlined");
                 button2023Mobile.current.classList.add("underlined");
+                setActiveYear(23);
+              }}
+            >
+              2023
+            </div>
+            <div
+              ref={button2022Mobile}
+              className="year-button"
+              type="button"
+              style={{ marginRight: "30px", fontSize: "30px" }}
+              onClick={() => {
+                button2023Mobile.current.classList.remove("underlined");
+                button2024Mobile.current.classList.remove("underlined");
+                button2022Mobile.current.classList.add("underlined");
                 setActiveYear(22);
               }}
             >

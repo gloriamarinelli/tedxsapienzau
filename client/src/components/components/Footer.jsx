@@ -32,12 +32,12 @@ export default function Footer() {
         aria-current="page"
         href={link}
         style={{
-          padding: "12px 16px",
+          padding: "10px 14px",
           borderRadius: "8px",
           backgroundColor: "#ffffff1a",
         }}
       >
-        <FontAwesomeIcon style={{ color: "white" }} icon={icon} size="2xl" />
+        <FontAwesomeIcon style={{ color: "white" }} icon={icon} size="xl" />
       </a>
     );
   };
@@ -163,7 +163,7 @@ export default function Footer() {
         >
           <b>
             <WhiteLink
-              text="Edizioni"
+              text="Eventi"
               link="/edizioni"
               style={{ marginBottom: "10px" }}
             />
@@ -197,6 +197,7 @@ export default function Footer() {
             display: "flex",
             flexDirection: "column",
             gap: "20px",
+            fontSize: "18px",
           }}
         >
           <b>
@@ -209,7 +210,7 @@ export default function Footer() {
                 padding: "8px 32px",
                 color: "white",
                 border: "none",
-                fontSize: "12px",
+                fontSize: "15px",
                 borderRadius: "8px",
                 fontWeight: "bold",
               }}

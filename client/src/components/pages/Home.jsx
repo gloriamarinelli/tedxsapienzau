@@ -106,9 +106,7 @@ export default function Home() {
               className="mb-5 secondary-text"
               style={{
                 fontSize:
-                windowSize > global.UTILS.TABLET_WIDTH
-                ? "2vw"
-                : "0.5vw",
+                  windowSize > global.UTILS.TABLET_WIDTH ? "2vw" : "0.5vw",
                 visibility:
                   windowSize > global.UTILS.TABLET_WIDTH
                     ? "initial"
@@ -144,14 +142,13 @@ export default function Home() {
       </section>
       <section
         style={{
-          display: windowSize > global.UTILS.TABLET_WIDTH
-          ? "flex"
-          : "flow",
+          display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
           justifyContent: "center",
           alignItems: "center",
-          height:windowSize > global.UTILS.TABLET_WIDTH
-          ? `calc(100vh - ${global.UTILS.NAV_HEIGHT})`
-          : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          height:
+            windowSize > global.UTILS.TABLET_WIDTH
+              ? `calc(70vh - ${global.UTILS.NAV_HEIGHT})`
+              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
           padding: global.UTILS.BENTO_BOX_PADDING,
@@ -161,9 +158,7 @@ export default function Home() {
           id="left-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH
-            ? "80%"
-            : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "80%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -175,15 +170,16 @@ export default function Home() {
             position: "relative",
           }}
         >
-        <div style={{
-          position: "absolute",
-
-        }}> 
+          <div
+            style={{
+              position: "absolute",
+            }}
+          >
             <h1
               class="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "9vh" : "6vh",
+                fontSize: windowSize > 1245 ? "7vh" : "6vh",
                 fontWeight: 700,
                 maxWidth: "20ch",
                 color: "#FFFFFF",
@@ -191,7 +187,8 @@ export default function Home() {
             >
               <extra>
                 <condensed-extrabold>
-                  NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO<br></br>
+                  NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO
+                  <br></br>
                 </condensed-extrabold>
               </extra>
             </h1>
@@ -199,7 +196,7 @@ export default function Home() {
               class="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "6vh" : "3vh",
+                fontSize: windowSize > 1245 ? "4vh" : "3vh",
                 fontWeight: 300,
                 maxWidth: "30ch",
                 color: "#FFFFFF",
@@ -207,28 +204,21 @@ export default function Home() {
             >
               Compila il form per rimanere aggiornato sulle nostre attività{" "}
             </h5>
-            </div>
+          </div>
         </div>
         <div
           id="right-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH
-            ? "80%"
-            : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "80%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
             display: "flex",
-            marginLeft: windowSize > global.UTILS.TABLET_WIDTH
-            ? "10px"
-            : "0px",
-            marginTop: windowSize > global.UTILS.TABLET_WIDTH
-            ? "0px"
-            :"17px",
-            marginBottom: windowSize > global.UTILS.TABLET_WIDTH
-            ? "0px"
-            :"200vw",
+            marginLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10px" : "0px",
+            marginTop: windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "17px",
+            marginBottom:
+              windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "200vw",
             justifyContent: "center",
             alignItems: "flex-end",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
@@ -239,14 +229,13 @@ export default function Home() {
           <Iframe
             width="100%"
             height="100%"
-            src="https://31dfcf3b.sibforms.com/serve/MUIFADk8q-909kd_RTTgSFBhqjYmtLW7GUm5kzfIZOBZeTCFkY5_8mGGhZ0dgLLIJz-BhtEElTz-qP_OPFbdktIf9F4waVbrtVpLvaYFLMvVNH8Wm8YHO5Lh6EzAPnVNx0ZgrWUvr9L4Zm4YQ8Z9kDXhvFlRnb410M2sgJuk--XSZCy8jPew7q55QKHmF2lar1OHnqUJ7LrcV5vK"
+            src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
             frameborder="0"
             allowfullscreen
             style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
           ></Iframe>
         </div>
       </section>
-      
     </>
   );
 }
@@ -570,7 +559,6 @@ function getVerticalBannerNews(windowSize) {
     );
   } else {
     //I don't want to show the sidebar if the screen is too small
-    return <>
-    </>;
+    return <></>;
   }
 }
