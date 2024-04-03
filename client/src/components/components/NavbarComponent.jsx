@@ -84,7 +84,7 @@ export default function NavbarComponent(props) {
                 }`}
                 style={{ gap: "10px" }}
               >
-                <Col className="col-lg-10 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
+                <Col className="col-lg-10 col-md-12 col-sm-11 d-flex align-items-center">
                   <Container>
                     <Row>
                       <Col className="text-center d-flex justify-content-center row">
@@ -249,13 +249,13 @@ export default function NavbarComponent(props) {
                   </Container>
                 </Col>
 
-                <Col className="col-lg-2 col-md-11 col-sm-12 col-xs-12 col-12">
+                <Col className="col-lg-2 col-md-12 col-sm-12 col-11">
                   <Container className="">
                     <Row className="mt-2 mb-2 d-flex justify-content-center">
                       <Col className="col-lg-3 col-md-3 col-sm-3 col-4 text-center d-flex justify-content-start align-items-center">
-                      <li className="nav-item dropdown ">
+                      <li className="nav-item dropdown">
                           <a
-                            className="navbar-submenu-edition-item me-2 d-flex align-items-center  justify-content-start"
+                            className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
                             data-bs-toggle="dropdown"
                             href="/location"
                             role="button"
@@ -268,8 +268,7 @@ export default function NavbarComponent(props) {
                             className="dropdown-menu dropdown-menu-new p-0"
                             style={{
                               backgroundColor: "rgba(255, 255, 255, 0.0)",
-                              border: "none",
-                              marginLeft: "0px"
+                              border: "none"
                             }}
                             
                           >
@@ -281,14 +280,16 @@ export default function NavbarComponent(props) {
                         </li>
                       </Col>
 
-                      <Col className="col-lg-9 col-md-3 col-sm-3 col-4 text-center">
+                      <Col className="col-lg-9 col-md-3 col-sm-3 col-4 text-center ">
                         <Button
+
                           style={{
                             backgroundColor: global.COLORS.ROSSO_TED_2023,
                             borderColor: "red",
                             borderRadius: "30px",
                             fontWeight: "bold",
-                            width: "100%",
+                            width: "90%",
+                            marginLeft: "24px",
                           }}
                           onMouseEnter={(e) => {
                             e.target.style.borderColor = "white";
