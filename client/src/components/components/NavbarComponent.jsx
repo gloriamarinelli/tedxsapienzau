@@ -84,11 +84,11 @@ export default function NavbarComponent(props) {
                 }`}
                 style={{ gap: "10px" }}
               >
-                <Col className="col-lg-10 col-md-12 col-sm-12  col-xs-12 d-flex align-items-center">
+                <Col className="col-lg-10 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
                   <Container>
-                    <Row className="mt-2 mb-2">
-                      <Col className="text-center d-flex justify-content-center">
-                        <li className="nav-item dropdown ps-2 pe-2 ">
+                    <Row>
+                      <Col className="text-center d-flex justify-content-center row">
+                        <li className="nav-item dropdown d-flex justify-content-center col-lg-2 col-12 p-0">
                           <a
                             className="navbar-submenu-edition-item"
                             data-bs-toggle="dropdown"
@@ -97,33 +97,67 @@ export default function NavbarComponent(props) {
                             aria-expanded="false"
                             style={{ borderRadius: "5px" }}
                           >
-                            Eventi v
+                            Eventi &#709;
                           </a>
-                          
+
                           <ul
-                            className="dropdown-menu dropdown-menu-new bg-black p-3 mt-3"
+                            className="dropdown-menu dropdown-menu-new bg-black p-1 mt-4"
                             style={{
                               backgroundColor: "black",
                               borderRadius: "15px",
                             }}
                           >
-                            <span className="ms-3 mb-3 navbar-submenu-edition-year">2023</span>
-                            <li className="navbar-submenu-edition-item">
+                            <span className="ms-3 mb-3 navbar-submenu-edition-year">
+                              2024
+                            </span>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item-disabled ms-3 "
+                                to="/"
+                              >
+                                Countdown
+                              </Link>
+                            </li>
+                            <span className="ms-3 mb-3 navbar-submenu-edition-year">
+                              2023
+                            </span>
+                            <li>
                               <Link
                                 className="navbar-submenu-edition-item ms-3"
-                                to="/awards2023"
+                                to="/edizione2023"
                                 onClick={() => setExpanded(false)}
                               >
-                                BACK TO ZERO
+                                Back To Zero
                               </Link>
                             </li>
                             <li>
                               <Link
                                 className="navbar-submenu-edition-item ms-3"
-                                to="/mission&vision"
+                                to="/awards2023"
                                 onClick={() => setExpanded(false)}
                               >
-                                AWARDS
+                                Awards
+                              </Link>
+                            </li>
+                            <span className="ms-3 mb-3 navbar-submenu-edition-year">
+                              2022
+                            </span>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/edizione2022"
+                                onClick={() => setExpanded(false)}
+                              >
+                                ACT: Lead The Change
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/awards2022"
+                                onClick={() => setExpanded(false)}
+                              >
+                                Awards
                               </Link>
                             </li>
                             <li>
@@ -159,7 +193,7 @@ export default function NavbarComponent(props) {
                           </ul>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
+                        <li className="nav-item d-flex justify-content-center col-lg-1 col-12 p-0">
                           <Link
                             className="navbar-submenu-edition-item"
                             to="/partners"
@@ -170,7 +204,7 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
+                        <li className="nav-item d-flex justify-content-center col-lg-1 col-12 p-0">
                           <Link
                             className="navbar-submenu-edition-item"
                             to="/team"
@@ -181,7 +215,7 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item ps-2 pe-2 d-flex align-items-center">
+                        <li className="nav-item d-flex justify-content-center col-lg-1 col-12 p-0">
                           <Link
                             className="navbar-submenu-edition-item"
                             to="/blog"
@@ -191,55 +225,50 @@ export default function NavbarComponent(props) {
                             Blog
                           </Link>
                         </li>
-                        
-                        <li className="nav-item dropdown ps-2 pe-2 ">
+
+                        <li className="nav-item dropdown d-flex justify-content-center col-lg-2 col-sm-2 col-12 p-0">
                           <a
                             className="navbar-submenu-edition-item"
                             data-bs-toggle="dropdown"
-                            href="/location"
                             role="button"
-                            aria-expanded="false"
                             style={{ borderRadius: "5px" }}
                           >
-                            Chi Siamo v
+                            Chi Siamo &#709;
                           </a>
-                          
+
                           <ul
-                            className="dropdown-menu dropdown-menu-new bg-black p-3 mt-3"
+                            className="dropdown-menu dropdown-menu-new bg-black p-2 ms-2 me-2 mt-4"
                             style={{
                               backgroundColor: "black",
                               borderRadius: "15px",
                             }}
                           >
-                            <span className="ms-3 mb-3 navbar-submenu-edition-year">2023</span>
                             <li className="navbar-submenu-edition-item">
                               <Link
-                                className="navbar-submenu-edition-item ms-3"
-                                to="/awards2023"
+                                className="navbar-submenu-edition-item ms-4 me-4"
+                                to="/mission&vision"
                                 onClick={() => setExpanded(false)}
                               >
-                                mission and vision
+                                Mission and Vision
                               </Link>
                             </li>
                             <li>
                               <Link
-                                className="navbar-submenu-edition-item ms-3"
-                                to="/mission&vision"
+                                className="navbar-submenu-edition-item ms-4 me-4"
+                                to="/parlanodinoi"
                                 onClick={() => setExpanded(false)}
                               >
-                                location
+                                Parlano di Noi
                               </Link>
                             </li>
                             <li>
                               <Link
-                                className="navbar-submenu-edition-item ms-3"
-                                to="/mission&vision"
+                                className="navbar-submenu-edition-item ms-4 me-4"
+                                to="/location"
                                 onClick={() => setExpanded(false)}
                               >
-                                 parlano di noi
+                                Location
                               </Link>
-                            </li>
-                            <li>
                             </li>
                           </ul>
                         </li>
@@ -248,18 +277,17 @@ export default function NavbarComponent(props) {
                   </Container>
                 </Col>
 
-                <Col className="col-lg-2 col-md-12 col-sm-12 col-xs-12 col-4">
+                <Col className="col-lg-2 col-md-11 col-sm-12 col-xs-12 col-12">
                   <Container className="">
                     <Row className="mt-2 mb-2 d-flex justify-content-center">
-                      <Col className="col-lg-3 col-md-3 col-sm-3 col-4 text-center  d-flex justify-content-end align-items-center">
+                      <Col className="col-lg-3 col-md-3 col-sm-3 col-4 text-center d-flex justify-content-start align-items-center">
                       <li className="nav-item dropdown ">
                           <a
-                            className="navbar-submenu-edition-item me-2 d-flex align-items-center"
+                            className="navbar-submenu-edition-item me-2 d-flex align-items-center  justify-content-start"
                             data-bs-toggle="dropdown"
                             href="/location"
                             role="button"
                             aria-expanded="false"
-                            style={{ borderRadius: "5px"}}
                           >
                              IT <img className="rounded ms-1 me-1" src={ItalianFlag} alt="" width="20" height="15" /> &#709;
                           </a>
@@ -273,7 +301,7 @@ export default function NavbarComponent(props) {
                             }}
                             
                           >
-                            <li className="navbar-submenu-edition-item  d-flex align-items-center">
+                            <li className="navbar-submenu-edition-item d-flex align-items-center justify-content-start">
                                  EN <img className="rounded ms-1" src={EnglishFlag} alt="" width="20" height="15" />
                             </li>
 
@@ -281,7 +309,7 @@ export default function NavbarComponent(props) {
                         </li>
                       </Col>
 
-                      <Col className="text-center col-lg-8 col-md-3 col-sm-4 col-xs-3 col-8">
+                      <Col className="col-lg-9 col-md-3 col-sm-3 col-4 text-center">
                         <Button
                           style={{
                             backgroundColor: global.COLORS.ROSSO_TED_2023,
