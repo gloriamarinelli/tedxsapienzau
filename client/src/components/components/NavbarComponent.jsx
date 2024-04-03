@@ -161,34 +161,6 @@ export default function NavbarComponent(props) {
                               </Link>
                             </li>
                             <li>
-                              <Link
-                                className="navbar-submenu-edition-item ms-3"
-                                to="/mission&vision"
-                                onClick={() => setExpanded(false)}
-                              >
-                                
-                              </Link>
-                            </li>
-                            <span className="ms-3 mb-3 navbar-submenu-edition-year">2022</span>
-                            <li>
-                              <Link
-                                className="navbar-submenu-edition-item ms-3"
-                                to="/mission&vision"
-                                onClick={() => setExpanded(false)}
-                              >
-                                ACT: LEAD THE CHANGE
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
-                                className="navbar-submenu-edition-item ms-3"
-                                to="/mission&vision"
-                                onClick={() => setExpanded(false)}
-                              >
-                                AWARDS
-                              </Link>
-                            </li>
-                            <li>
                             </li>
                           </ul>
                         </li>
