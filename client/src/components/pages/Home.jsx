@@ -118,7 +118,12 @@ export default function Home() {
             <h1
               style={{
                 textAlign: "center",
-                fontSize: windowSize > 1245 ? "14vh" : "100px",
+                fontSize:
+                  windowSize > 1245
+                    ? "14vh"
+                    : windowSize > global.UTILS.MOBILE_WIDTH
+                    ? "100px"
+                    : "70px",
                 fontWeight: 700,
                 maxWidth: "13ch",
               }}
