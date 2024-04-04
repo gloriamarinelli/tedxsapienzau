@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
@@ -15,6 +15,7 @@ import "../../resources/styles/home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Iframe from "react-iframe";
 import Card from "react-bootstrap/Card";
+import backgroundVideo from "../videos/tedx.mp4";
 
 const NewsSidebarSize = 18;
 
@@ -70,27 +71,40 @@ export default function Home() {
             height: "100%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundImage: `url(${Volunteers})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${Volunteers})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
             display: "flex",
             justifyContent: "center",
             alignItems: "flex-end",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            position: "relative",
           }}
         >
-          <div
-            id="photo-overlay"
+          <video
+            src={backgroundVideo}
+            autoPlay
+            muted
+            loop
             style={{
               position: "absolute",
               width: "100%",
               height: "100%",
               top: 0,
               left: 0,
+              objectPosition: "center",
+              objectFit: "cover",
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
               backgroundColor: "rgba(0, 0, 0, 0.4)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
             }}
           ></div>
           <div
@@ -181,7 +195,7 @@ export default function Home() {
             }}
           >
             <h1
-              class="fira-sans"
+              className="fira-sans"
               style={{
                 textAlign: "left",
                 fontSize: windowSize > 1245 ? "7vh" : "6vh",
@@ -198,7 +212,7 @@ export default function Home() {
               </extra>
             </h1>
             <h5
-              class="fira-sans"
+              className="fira-sans"
               style={{
                 textAlign: "left",
                 fontSize: windowSize > 1245 ? "4vh" : "3vh",
