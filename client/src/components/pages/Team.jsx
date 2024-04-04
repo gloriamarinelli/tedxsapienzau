@@ -553,9 +553,27 @@ export default function Team2022() {
   }
 
   function getTeam2024() {
+    return comingSoon();
+  }
+
+  function getTeam2022() {
     return (
       <>
         <div 
+          className="container"
+        >
+          <div className="row">{handleBoardCardSection22()}</div>
+        </div>
+        <div className="container">
+          <div className="row">{handleVolunteersCardSection22()}</div>
+        </div>
+      </>
+    );
+  }
+
+  function comingSoon() {
+    return (
+      <div 
           className="container"
           style ={{
             backgroundColor: global.COLORS.NERO, //! Cambiare colore
@@ -578,25 +596,8 @@ export default function Team2022() {
             Coming Soon...
           </h1>
         </div>
-      </>
     );
   }
-
-  function getTeam2022() {
-    return (
-      <>
-        <div 
-          className="container"
-        >
-          <div className="row">{handleBoardCardSection22()}</div>
-        </div>
-        <div className="container">
-          <div className="row">{handleVolunteersCardSection22()}</div>
-        </div>
-      </>
-    );
-  }
-
 
 
   if (windowSize > global.UTILS.TABLET_WIDTH) {
@@ -607,9 +608,9 @@ export default function Team2022() {
     return (
       <>
         <section
-          style = {{
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
-            marginTop: "92px",
+          style={{
+            backgroundColor: global.COLORS.NERO,
+            marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
@@ -617,17 +618,17 @@ export default function Team2022() {
           }}
         >
           <div
-            className="header-team"
             style={{
-              width: "100%",
-              color: "white",
+              width: "99%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "#191919",
+              //marginRight: "10px",
               display: "flex",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: "40px",
-              justifyContent: "center", 
+              justifyContent: "center",
               alignItems: "center",
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             <h1
@@ -636,7 +637,7 @@ export default function Team2022() {
                 fontSize: "120px",
                 fontWeight: "bold",
                 margin: "0",
-                color: global.COLORS.ROSSO_TED_2023
+                color: global.COLORS.ROSSO_TED,
               }}
             >
               TEAM
@@ -644,22 +645,19 @@ export default function Team2022() {
           </div>
         </section>
         <section
-          className="d-flex justify-content-between"
+          className="pt-5 pb-5 px-5 d-flex justify-content-between"
           style={{
-            //width: "95vw",
-            //margin: "auto",
-            padding: "20px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
             style={{
               fontSize: "25px",
-              
               fontWeight: "bold",
-              color: "#fff",
+              color: "black",
               display: "flex",
+              color: "white",
             }}
           >
             Chi ha partecipato:
