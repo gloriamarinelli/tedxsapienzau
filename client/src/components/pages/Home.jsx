@@ -9,6 +9,7 @@ import Image1 from "../images/RFW23/RFW.webp";
 import Image from "../images/RFW23/logoRFW.webp";
 import Eventbrite from "../images/eventbrite.png";
 import Volunteers from "../images/volunteers.webp";
+import Editions from "./Editions";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
@@ -16,6 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Iframe from "react-iframe";
 import Card from "react-bootstrap/Card";
 import backgroundVideo from "../videos/tedx.mp4";
+import { Button, Row } from "react-bootstrap";
 
 const NewsSidebarSize = 18;
 
@@ -51,7 +53,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: "#000" }}>
       <section
         style={{
           display: "flex",
@@ -82,7 +84,6 @@ export default function Home() {
           }}
         >
           <video
-            src={backgroundVideo}
             autoPlay
             muted
             loop
@@ -96,15 +97,19 @@ export default function Home() {
               objectFit: "cover",
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
             }}
-          />
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
           <div
+            id="video-overlay"
             style={{
               position: "absolute",
               top: 0,
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              background:
+                "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))",
             }}
           ></div>
           <div
@@ -137,7 +142,7 @@ export default function Home() {
                     ? "14vh"
                     : windowSize > global.UTILS.MOBILE_WIDTH
                     ? "100px"
-                    : "70px",
+                    : "50px",
                 fontWeight: 700,
                 maxWidth: "13ch",
               }}
@@ -159,6 +164,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+        <Editions />
+        <div
+          style={{
+            display: "grid",
+            placeItems: "center",
+            marginTop: global.UTILS.BENTO_BOX_PADDING,
+          }}
+        >
+          <Link to="/edizioni">
+            <Button
+              style={{
+                backgroundColor: global.COLORS.ROSSO_TED_2023,
+                borderColor: "red",
+                borderRadius: global.UTILS.BENTO_BOX_PADDING,
+                fontWeight: "bold",
+              }}
+            >
+              Scopri di più
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       <section
         style={{
           display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
@@ -255,7 +284,7 @@ export default function Home() {
           ></Iframe>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

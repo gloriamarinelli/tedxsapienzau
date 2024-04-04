@@ -6,6 +6,7 @@ import Cover22 from "../images/cover-edizione22.webp";
 import CoverAwards23 from "../images/awards23/header_awards23.webp";
 import CoverAwards22 from "../images/awards22/awards2022.webp";
 import global from "../../resources/global.json";
+import EventBox from "../components/EventBox";
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../resources/styles/editionsstyle.css";
@@ -13,31 +14,6 @@ import "../../index.css";
 
 export default function Editions() {
   const [windowSize, setWindowSize] = useOutletContext();
-
-  const boxHeight = 600;
-
-  const EventBox = ({ date, title, description, photo }) => {
-    return (
-      <div
-        className="bento-box"
-        style={{
-          width: "%",
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),url(${photo})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          height: windowSize > global.UTILS.MOBILE_WIDTH ? boxHeight : 400,
-        }}
-      >
-        <h2>{date}</h2>
-        <h1 style={{ fontWeight: 700 }}>{title}</h1>
-        {windowSize > global.UTILS.MOBILE_WIDTH ? (
-          <p style={{ maxWidth: "50%", fontWeight: 600 }}>{description}</p>
-        ) : (
-          <></>
-        )}
-      </div>
-    );
-  };
 
   return (
     <div
@@ -53,11 +29,19 @@ export default function Editions() {
           height: "100px",
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           padding: `0 ${global.UTILS.BENTO_BOX_PADDING}`,
-          color: global.COLORS.ROSSO_TED_2023,
+          color: "#fff",
         }}
       >
-        <h1 style={{ fontWeight: 700, fontSize: "60px" }}>EDIZIONI</h1>
+        <h1
+          style={{
+            fontWeight: 700,
+            fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "60px" : "40px",
+          }}
+        >
+          EDIZIONI PASSATE
+        </h1>
       </div>
       <section
         id="grid-events-container"
@@ -75,6 +59,8 @@ export default function Editions() {
             "Il nostro obiettivo è azzerare, ricercare un punto zero: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che  rallentano la crescita della nostra società, peggiorando la qualità della nostra vita."
           }
           photo={Cover23}
+          windowSize={windowSize}
+          linkTo={"/edizione2023"}
         />
         <EventBox
           date={"18 Aprile 2023"}
@@ -83,6 +69,8 @@ export default function Editions() {
             "  Il concorso Back to Zero Awards è organizzato dal Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea con il motto TED “Ideas worth spreading”, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell’edizione 2023 del TEDxSapienzaU."
           }
           photo={CoverAwards23}
+          windowSize={windowSize}
+          linkTo={"/awards2023"}
         />
         <EventBox
           date={"29 Aprile 2022"}
@@ -91,12 +79,16 @@ export default function Editions() {
             "Il titolo della prima edizione del TEDxSapienzaU è stato ACT - Lead the change. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici."
           }
           photo={Cover22}
+          windowSize={windowSize}
+          linkTo={"/edizione2022"}
         />
         <EventBox
           date={"29 Aprile 2022"}
           title={"AWARDS 2022"}
           description={""}
           photo={CoverAwards22}
+          windowSize={windowSize}
+          linkTo={"/awards2022"}
         />
       </section>
     </div>
