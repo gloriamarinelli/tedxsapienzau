@@ -573,29 +573,19 @@ export default function Team2022() {
 
   function comingSoon() {
     return (
-      <div 
-          className="container"
-          style ={{
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
-            justifyContent: "center", 
-            alignItems: "center",
-            textAlign: "center",
-            display: "flex",
-          }}
-        >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
-            style={{
-              fontSize: "72px",
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
-              fontWeight: "bold",
-              margin: "0",
-              color: global.COLORS.ROSSO_TED_2023
-            }}
-          >
-            Coming Soon...
-          </h1>
-        </div>
+      <div
+        className="coming-soon"
+        style={{
+          backgroundColor: global.COLORS.NERO,
+          padding: "10px",
+          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          placeItems: "center",
+          display: "grid",
+          color: global.COLORS.ROSSO_TED,
+        }}
+      >
+        <h1>COMING SOON . . .</h1>
+      </div>
     );
   }
 
