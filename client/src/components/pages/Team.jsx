@@ -613,7 +613,7 @@ export default function Team2022() {
               height: "80%",
               padding: global.UTILS.BENTO_BOX_PADDING,
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
+              backgroundColor: "black",
               //marginRight: "10px",
               display: "flex",
               justifyContent: "center",
@@ -621,17 +621,7 @@ export default function Team2022() {
               textAlign: "center",
             }}
           >
-            <h1
-              className="font-weight-bold mt-5 mb-5"
-              style={{
-                fontSize: "120px",
-                fontWeight: "bold",
-                margin: "0",
-                color: global.COLORS.ROSSO_TED,
-              }}
-            >
-              TEAM
-            </h1>
+           
           </div>
         </section>
         <section

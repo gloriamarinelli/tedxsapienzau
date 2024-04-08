@@ -535,7 +535,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               height: "80%",
               padding: global.UTILS.BENTO_BOX_PADDING,
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
+              backgroundColor: "black",
               //marginRight: "10px",
               display: "flex",
               justifyContent: "center",
@@ -543,17 +543,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               textAlign: "center",
             }}
           >
-            <h1
-              className="font-weight-bold mt-5 mb-5"
-              style={{
-                fontSize: "120px",
-                fontWeight: "bold",
-                margin: "0",
-                color: global.COLORS.ROSSO_TED,
-              }}
-            >
-              PARTNERS
-            </h1>
+           
           </div>
         </section>
 
@@ -663,7 +653,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               height: "80%",
               padding: global.UTILS.BENTO_BOX_PADDING,
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
+              backgroundColor: "black",
               //marginRight: "10px",
               display: "flex",
               justifyContent: "center",
@@ -671,16 +661,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               textAlign: "center",
             }}
           >
-            <h1
-              className="font-weight-bold"
-              style={{
-                fontSize: "60px",
-                fontWeight: "bold",
-                color: global.COLORS.ROSSO_TED,
-              }}
-            >
-              PARTNERS
-            </h1>
+           
           </div>
         </section>
 
