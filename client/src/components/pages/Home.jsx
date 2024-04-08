@@ -195,8 +195,8 @@ export default function Home() {
           alignItems: "center",
           height:
             windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(70vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+              ? `calc(90vh - ${global.UTILS.NAV_HEIGHT})`
+              : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
           padding: global.UTILS.BENTO_BOX_PADDING,
@@ -206,7 +206,7 @@ export default function Home() {
           id="left-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "80%" : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -258,7 +258,7 @@ export default function Home() {
           id="right-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "80%" : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -280,7 +280,17 @@ export default function Home() {
             src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
             frameborder="0"
             allowfullscreen
-            style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+            position="absolute"
+            style={{
+              position: "absolute",
+              display: "block",
+              margin: 0,
+              padding: 0,
+              top: 0,
+              left: 0,
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }}
           ></Iframe>
         </div>
       </section>
