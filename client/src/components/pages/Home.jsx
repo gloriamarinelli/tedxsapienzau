@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
@@ -9,12 +9,15 @@ import Image1 from "../images/RFW23/RFW.webp";
 import Image from "../images/RFW23/logoRFW.webp";
 import Eventbrite from "../images/eventbrite.png";
 import Volunteers from "../images/volunteers.webp";
+import Editions from "./Editions";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Iframe from "react-iframe";
 import Card from "react-bootstrap/Card";
+import backgroundVideo from "../videos/tedx.mp4";
+import { Button, Row } from "react-bootstrap";
 
 const NewsSidebarSize = 18;
 
@@ -50,7 +53,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: "#000" }}>
       <section
         style={{
           display: "flex",
@@ -70,27 +73,43 @@ export default function Home() {
             height: "100%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundImage: `url(${Volunteers})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${Volunteers})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
             display: "flex",
             justifyContent: "center",
             alignItems: "flex-end",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            position: "relative",
           }}
         >
-          <div
-            id="photo-overlay"
+          <video
+            autoPlay
+            muted
+            loop
             style={{
               position: "absolute",
               width: "100%",
               height: "100%",
               top: 0,
               left: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              objectPosition: "center",
+              objectFit: "cover",
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            }}
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+          <div
+            id="video-overlay"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background:
+                "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))",
             }}
           ></div>
           <div
@@ -118,7 +137,12 @@ export default function Home() {
             <h1
               style={{
                 textAlign: "center",
-                fontSize: windowSize > 1245 ? "14vh" : "100px",
+                fontSize:
+                  windowSize > 1245
+                    ? "14vh"
+                    : windowSize > global.UTILS.MOBILE_WIDTH
+                    ? "100px"
+                    : "50px",
                 fontWeight: 700,
                 maxWidth: "13ch",
               }}
@@ -140,6 +164,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+        <Editions />
+        <div
+          style={{
+            display: "grid",
+            placeItems: "center",
+            marginTop: global.UTILS.BENTO_BOX_PADDING,
+          }}
+        >
+          <Link to="/edizioni">
+            <Button
+              style={{
+                backgroundColor: global.COLORS.ROSSO_TED_2023,
+                borderColor: "red",
+                borderRadius: global.UTILS.BENTO_BOX_PADDING,
+                fontWeight: "bold",
+              }}
+            >
+              Scopri di più
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       <section
         style={{
           display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
@@ -147,8 +195,8 @@ export default function Home() {
           alignItems: "center",
           height:
             windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(70vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+              ? `calc(90vh - ${global.UTILS.NAV_HEIGHT})`
+              : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
           padding: global.UTILS.BENTO_BOX_PADDING,
@@ -158,7 +206,7 @@ export default function Home() {
           id="left-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "80%" : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -176,7 +224,7 @@ export default function Home() {
             }}
           >
             <h1
-              class="fira-sans"
+              className="fira-sans"
               style={{
                 textAlign: "left",
                 fontSize: windowSize > 1245 ? "7vh" : "6vh",
@@ -193,7 +241,7 @@ export default function Home() {
               </extra>
             </h1>
             <h5
-              class="fira-sans"
+              className="fira-sans"
               style={{
                 textAlign: "left",
                 fontSize: windowSize > 1245 ? "4vh" : "3vh",
@@ -210,7 +258,7 @@ export default function Home() {
           id="right-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "80%" : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -232,11 +280,21 @@ export default function Home() {
             src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
             frameborder="0"
             allowfullscreen
-            style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+            position="absolute"
+            style={{
+              position: "absolute",
+              display: "block",
+              margin: 0,
+              padding: 0,
+              top: 0,
+              left: 0,
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }}
           ></Iframe>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

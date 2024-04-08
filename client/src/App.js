@@ -28,6 +28,7 @@ import Workshop from "./components/pages/Workshop";
 import Editions from "./components/pages/Editions";
 import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import Awards from "./components/pages/Awards";
+import ScrollToTop from "./components/components/ScrollToTop";
 import JoinUs from "./components/pages/JoinUs";
 
 const router = createBrowserRouter([
@@ -168,6 +169,7 @@ function HomeManager() {
   return (
     <>
       <NavbarComponent windowSize={windowSize} />
+      <ScrollToTop />
       <Outlet context={[windowSize, setWindowSize]} />
       <Footer />
     </>

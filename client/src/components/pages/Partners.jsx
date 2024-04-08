@@ -8,7 +8,10 @@ import { Link } from "react-router-dom";
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../index.css";
+import "../../resources/styles/parallax-scrolldown.css";
 import PartnerCardCommunity from "../components/PartnerCardCommunity";
+import ImageOne from "../components/partners_scrolldown/ImageOne.js";
+import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
 
 export default function Partners() {
   const [activeYear, setActiveYear] = useState(24);
@@ -481,15 +484,30 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           placeItems: "center",
           display: "grid",
           color: global.COLORS.ROSSO_TED,
+          textTransform: "uppercase",
         }}
       >
-        <h1>COMING SOON . . .</h1>
+        <h1>Coming Soon . . .</h1>
+      </div>
+    );
+  }
+
+  function displayParallaxScrollDown() {
+    return (
+      <div className="img-div">
+        <ImageOne />
+        <ImageTwo />
       </div>
     );
   }
 
   function getSponsor2024() {
-    return comingSoon();
+    return (
+      <>
+        {displayParallaxScrollDown()}
+        {comingSoon()}
+      </>
+    );
   }
 
   function chooseYear() {
