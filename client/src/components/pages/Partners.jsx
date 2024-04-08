@@ -502,7 +502,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
   }
 
   function getSponsor2024() {
-    return displayParallaxScrollDown();
+    return(
+      <>
+        {displayParallaxScrollDown()}
+        {comingSoon()}
+      </>
+    );
   }
 
   function chooseYear() {
