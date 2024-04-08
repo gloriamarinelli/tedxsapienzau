@@ -9,7 +9,6 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "../images/logo-white.png";
-import Image1 from "../images/newsletter.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
 import "../../index.css";
@@ -242,7 +241,7 @@ export default function Footer() {
             <GreyLink text="Privacy Policy" link={"/privacypolicy"} />
           </small>
           <small className="tertiary-text">
-            <GreyLink text="Statuto" link={"https://drive.google.com/file/d/1VGXzgkuv93T3q2XHKxSwa-qMQzRnp5JX/view"} />
+            <GreyLink text="Statuto" link={"/statuto"} />
           </small>
         </div>
         <small className="secondary-text">
