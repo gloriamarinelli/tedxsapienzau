@@ -1,7 +1,7 @@
 import { Parallax } from 'react-parallax';
 import Ocean from './img/test_1.jpg'
 const ImageTwo = () => (
-    <Parallax className='image' blur={0} bgImage={Ocean} strength={300} bgImageStyle={{minHeight:"100vh"}}>
+    <Parallax className='image' blur={0} bgImage={Ocean} strength={230} bgImageStyle={{minHeight:"100vh"}}>
         <div className='content ct-left'>
             <div className='text-div'>
                 <h3 className="img-title">Perché collaborare?</h3>
