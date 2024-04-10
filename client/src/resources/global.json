@@ -17,10 +17,11 @@
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",
-    "NAV_HEIGHT": "71px",
+    "NAV_HEIGHT": "81px",
     "MOBILE_WIDTH": "480",
     "TABLET_WIDTH": "768",
-    "BENTO_BOX_PADDING": "24px"
+    "BENTO_BOX_PADDING": "24px",
+    "HALF_BENTO_BOX_PADDING": "12px"
   },
   "CONNECTION": {
     "ENDPOINT": "https://tedxsapienzau-backend.herokuapp.com/"

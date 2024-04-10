@@ -12,7 +12,7 @@ import global from "../../resources/global.json";
 
 export default function Awards2022() {
   return (
-    <section>
+    <section style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
       <header
         className="header-awards22"
         style={{
@@ -22,9 +22,9 @@ export default function Awards2022() {
         }}
       ></header>
 
-				<div className="row no-gutters mx-0 where-is-the-event">
-					<div className="col-md-6">
-						<div className="row">
+      <div className="row no-gutters mx-0 where-is-the-event">
+        <div className="col-md-6">
+          <div className="row">
             <FontAwesomeIcon
               className="col-2"
               icon={faLocationDot}
@@ -48,8 +48,7 @@ export default function Awards2022() {
             <div className="row mt-3"></div>
           </div>
         </div>
-        <div className="col-md-6">
-        </div>
+        <div className="col-md-6"></div>
       </div>
 
       <h1
@@ -62,7 +61,7 @@ export default function Awards2022() {
       >
         I VINCITORI TEDxSAPIENZAU AWARDS 2022
       </h1>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5 pb-5">
         <LazyLoadImage src={Image2} class="winner_22" />
         <div class="row justify-content-center" style={{ gap: "100px" }}>
           <div class="col-sm-4">

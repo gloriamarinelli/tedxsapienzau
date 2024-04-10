@@ -9,7 +9,7 @@ import Image1 from "../images/RFW23/RFW.webp";
 import Image from "../images/RFW23/logoRFW.webp";
 import Eventbrite from "../images/eventbrite.png";
 import Volunteers from "../images/volunteers.webp";
-import Editions from "./Editions";
+import Events from "./Events";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
@@ -165,7 +165,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <Editions />
+        <Events withTitle={false} />
         <div
           style={{
             display: "grid",
@@ -180,6 +180,7 @@ export default function Home() {
                 borderColor: "red",
                 borderRadius: global.UTILS.BENTO_BOX_PADDING,
                 fontWeight: "bold",
+                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
               }}
             >
               Scopri di più

@@ -299,14 +299,13 @@ export default function Edizione2023() {
   };
 
   return (
-    <>
-      <section>
+    <div style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
+      <section style={{ marginTop: global.UTILS.NAV_HEIGHT }}>
         <header
           className="header-ed2023"
           style={{
             textAlign: "center",
             height: "45vh",
-            marginTop: global.UTILS.NAV_HEIGHT,
           }}
         ></header>
 
@@ -417,7 +416,7 @@ export default function Edizione2023() {
         year={2023}
       />
       <div>{renderProgram23()}</div>
-      <div className="container mb-5 mt-5">{CarouselComponent()}</div>
-    </>
+      <div className="container mt-5">{CarouselComponent()}</div>
+    </div>
   );
 }

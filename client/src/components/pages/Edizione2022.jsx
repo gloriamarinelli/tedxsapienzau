@@ -71,7 +71,7 @@ export default function Edizione2022() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
       <header
         className="header-ed2022"
         style={{
@@ -222,6 +222,6 @@ export default function Edizione2022() {
         windowSize={windowSize}
         year={2022}
       />
-    </>
+    </div>
   );
 }

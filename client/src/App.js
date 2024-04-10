@@ -10,6 +10,7 @@ import Join from "./components/pages/Join";
 import Team from "./components/pages/Team";
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
+import Events from "./components/pages/Events";
 import Statuto from "./components/pages/Statuto";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import BlogPost from "./components/pages/BlogPost";
@@ -25,7 +26,7 @@ import Awards2022 from "./components/pages/Awards2022";
 import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
-import Editions from "./components/pages/Editions";
+
 import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import Awards from "./components/pages/Awards";
 import ScrollToTop from "./components/components/ScrollToTop";
@@ -85,7 +86,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/edizioni",
-        element: <Editions />,
+        element: <Events />,
       },
 
       {

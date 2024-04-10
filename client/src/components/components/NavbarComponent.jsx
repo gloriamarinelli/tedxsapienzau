@@ -2,8 +2,8 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import Image from "../images/logo-white.png";
-import ItalianFlag from "../images/flags/it.png"
-import EnglishFlag from "../images/flags/en.png"
+import ItalianFlag from "../images/flags/it.png";
+import EnglishFlag from "../images/flags/en.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
@@ -54,7 +54,7 @@ export default function NavbarComponent(props) {
     <>
       <Navbar
         ref={navRef}
-        className="navbar navbar-white bg-black static-top "
+        className="navbar navbar-white bg-black static-top"
         expand={"lg"}
         expanded={expanded}
         style={{
@@ -160,8 +160,7 @@ export default function NavbarComponent(props) {
                                 Awards
                               </Link>
                             </li>
-                            <li>
-                            </li>
+                            <li></li>
                           </ul>
                         </li>
 
@@ -253,7 +252,7 @@ export default function NavbarComponent(props) {
                   <Container className="">
                     <Row className="mt-2 mb-2 d-flex justify-content-center">
                       <Col className="col-lg-3 col-md-3 col-sm-3 col-4 text-center d-flex justify-content-start align-items-center">
-                      <li className="nav-item dropdown">
+                        <li className="nav-item dropdown">
                           <a
                             className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
                             data-bs-toggle="dropdown"
@@ -261,28 +260,40 @@ export default function NavbarComponent(props) {
                             role="button"
                             aria-expanded="false"
                           >
-                             IT <img className="rounded ms-1 me-1" src={ItalianFlag} alt="" width="20" height="15" /> &#709;
+                            IT{" "}
+                            <img
+                              className="rounded ms-1 me-1"
+                              src={ItalianFlag}
+                              alt=""
+                              width="20"
+                              height="15"
+                            />{" "}
+                            &#709;
                           </a>
 
                           <ul
                             className="dropdown-menu dropdown-menu-new p-0"
                             style={{
                               backgroundColor: "rgba(255, 255, 255, 0.0)",
-                              border: "none"
+                              border: "none",
                             }}
-                            
                           >
                             <li className="navbar-submenu-edition-item d-flex align-items-center justify-content-start">
-                                 EN <img className="rounded ms-1" src={EnglishFlag} alt="" width="20" height="15" />
+                              EN{" "}
+                              <img
+                                className="rounded ms-1"
+                                src={EnglishFlag}
+                                alt=""
+                                width="20"
+                                height="15"
+                              />
                             </li>
-
                           </ul>
                         </li>
                       </Col>
 
                       <Col className="col-lg-9 col-md-3 col-sm-3 col-4 text-center ">
                         <Button
-
                           style={{
                             backgroundColor: global.COLORS.ROSSO_TED_2023,
                             borderColor: "red",

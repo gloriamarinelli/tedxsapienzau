@@ -424,11 +424,11 @@ code {
 }
 
 /* Navbar Elements*/
-.navbar-submenu-edition-year{
+.navbar-submenu-edition-year {
   color: grey;
   font-size: 0.8em;
 }
-.navbar-submenu-edition-item{
+.navbar-submenu-edition-item {
   color: #ffffff;
   text-decoration: none;
   display: flex;
@@ -436,7 +436,7 @@ code {
   margin-bottom: 3px;
 }
 
-.navbar-submenu-edition-item:hover{
+.navbar-submenu-edition-item:hover {
   color: red;
 }
 
@@ -445,7 +445,6 @@ code {
   color: rgba(138, 138, 138, 0.582);
   cursor: not-allowed;
   text-decoration: none;
-  
 }
 
 /* Team Elements */
