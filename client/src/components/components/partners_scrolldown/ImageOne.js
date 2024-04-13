@@ -13,7 +13,12 @@ const ImageOne = () => (
       filter: "brightness(50%)",
     }}
   >
-    <div className="content ct-right">
+    <div
+      className="content ct-right"
+      style={{
+        background: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
+      }}
+    >
       <div className="text-div">
         <h3 className="img-title">TEDx, molto più che un evento.</h3>
         <p className="img-txt">
