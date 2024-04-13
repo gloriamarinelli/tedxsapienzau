@@ -12,6 +12,8 @@ import "../../resources/styles/parallax-scrolldown.css";
 import PartnerCardCommunity from "../components/PartnerCardCommunity";
 import ImageOne from "../components/partners_scrolldown/ImageOne.js";
 import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
+import ImageThree from "../components/partners_scrolldown/ImageThree.js";
+import ImageFour from "../components/partners_scrolldown/ImageFour.js";
 
 export default function Partners() {
   const [activeYear, setActiveYear] = useState(24);
@@ -497,17 +499,14 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       <div className="img-div">
         <ImageOne />
         <ImageTwo />
+        <ImageThree />
+        <ImageFour />
       </div>
     );
   }
 
   function getSponsor2024() {
-    return (
-      <>
-        {displayParallaxScrollDown()}
-        {comingSoon()}
-      </>
-    );
+    return <>{displayParallaxScrollDown()}</>;
   }
 
   function chooseYear() {
@@ -542,9 +541,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               alignItems: "center",
               textAlign: "center",
             }}
-          >
-           
-          </div>
+          ></div>
         </section>
 
         <section
@@ -660,9 +657,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               alignItems: "center",
               textAlign: "center",
             }}
-          >
-           
-          </div>
+          ></div>
         </section>
 
         <section
