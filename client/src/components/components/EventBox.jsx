@@ -19,10 +19,13 @@ export default function EventBox({
       className="bento-box"
       style={{
         width: "%",
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),url(${photo})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),url(${photo})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         height: windowSize > global.UTILS.MOBILE_WIDTH ? boxHeight : 400,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
