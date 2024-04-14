@@ -12,7 +12,10 @@ import global from "../../resources/global.json";
 
 export default function Awards() {
   return (
-    <section>
+    <section
+      className="pb-5"
+      style={{ backgroundColor: "#000", color: "#fff" }}
+    >
       <header
         className="header-awards"
         style={{
@@ -144,7 +147,7 @@ export default function Awards() {
       >
         Speaker
       </h3>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5">
         <div class="row" style={{ gap: "20px" }}>
           <div class="col">
             <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="400" />
