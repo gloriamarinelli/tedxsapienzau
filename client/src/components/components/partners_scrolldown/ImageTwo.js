@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import wallpaper from "./img/header_blog23.webp";
+import wallpaper from "./img/3.png";
 const ImageTwo = () => (
   <Parallax
     className="image"
@@ -8,7 +8,6 @@ const ImageTwo = () => (
     strength={500}
     bgImageStyle={{
       minHeight: "100vh",
-      filter: "brightness(50%)",
     }}
   >
     <div className="content ct-left">
