@@ -14,6 +14,7 @@ import ImageOne from "../components/partners_scrolldown/ImageOne.js";
 import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
 import ImageThree from "../components/partners_scrolldown/ImageThree.js";
 import ImageFour from "../components/partners_scrolldown/ImageFour.js";
+import ImageFive from "../components/partners_scrolldown/ImageFive.js";
 
 export default function Partners() {
   const [activeYear, setActiveYear] = useState(24);
@@ -501,6 +502,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         <ImageTwo />
         <ImageThree />
         <ImageFour />
+        <ImageFive />
       </div>
     );
   }
