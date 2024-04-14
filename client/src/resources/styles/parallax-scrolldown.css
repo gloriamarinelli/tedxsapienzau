@@ -1,5 +1,5 @@
 .image {
-  min-height: 90vh; /* altezza div con img di sfondo */
+  min-height: 110vh; /* altezza div con img di sfondo */
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 
 .img-title {
   color: white;
-  text-decoration: bold;
+  font-weight: bold;
   font-size: 60px;
 }
 
