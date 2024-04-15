@@ -31,8 +31,6 @@ import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import Awards from "./components/pages/Awards";
 import ScrollToTop from "./components/components/ScrollToTop";
 import JoinUs from "./components/pages/JoinUs";
-import './i18n';
-import { useTranslation } from 'react-i18next';
 
 const router = createBrowserRouter([
   {
@@ -180,8 +178,6 @@ function HomeManager() {
 }
 
 function App() {
-  //const { t, i18n } = useTranslation();
-
   return (
     <AuthContextProvider>
       <RouterProvider router={router} />

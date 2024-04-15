@@ -25,7 +25,22 @@ export default function NavbarComponent(props) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [previousOption, setOption] = useState(undefined); //set selected navbar option
 
-  function selectOption(option){ //option is simply the string that will be used in the options (key:value object)
+
+  const navRef = useRef();
+  const team = useRef();
+  const partners = useRef();
+  const blog = useRef();
+  const mission_and_vision = useRef();
+  const location = useRef();
+  const back_to_zero = useRef();
+  const awards23 = useRef();
+  const act = useRef();
+  const awards22 = useRef();
+
+  const options = {'team': team, 'partners': partners, 'blog': blog, 'mission_and_vision': mission_and_vision, 'location': location,
+                 'back_to_zero': back_to_zero, 'awards23': awards23, 'act': act, 'awards22': awards22};
+
+  function selectOption(option){ //option is simply the string that will be used in the options (key:value object) to index the correct ref
     if(previousOption) options[previousOption].current.classList.remove('navbar-submenu-edition-item-red');
     if(!option) return;
     setOption(option);
@@ -33,7 +48,7 @@ export default function NavbarComponent(props) {
   } 
 
   function changeLanguage() {
-    if (i18n.lng === "en") i18n.changeLanguage("it");
+    if (i18n.language === "en") i18n.changeLanguage("it");
     else i18n.changeLanguage("en");
   }
 
@@ -63,20 +78,6 @@ export default function NavbarComponent(props) {
       });
     }
   }, []);
-
-  const navRef = useRef();
-  const team = useRef();
-  const partners = useRef();
-  const blog = useRef();
-  const mission_and_vision = useRef();
-  const location = useRef();
-  const back_to_zero = useRef();
-  const awards23 = useRef();
-  const act = useRef();
-  const awards22 = useRef();
-
-  const options = {'team': team, 'partners': partners, 'blog': blog, 'mission_and_vision': mission_and_vision, 'location': location,
-                 'back_to_zero': back_to_zero, 'awards23': awards23, 'act': act, 'awards22': awards22};
 
   return (
     <>
@@ -293,10 +294,10 @@ export default function NavbarComponent(props) {
                             role="button"
                             aria-expanded="false"
                           >
-                            {i18n.lng === "it" ? "IT" : "EN"}
+                            {i18n.language === "it" ? "IT" : "EN"}
                             <img
                               className="rounded ms-1 me-1"
-                              src={i18n.lng === "it" ? ItalianFlag : EnglishFlag}
+                              src={i18n.language === "it" ? ItalianFlag : EnglishFlag}
                               alt=""
                               width="20"
                               height="15"
@@ -314,10 +315,10 @@ export default function NavbarComponent(props) {
                             onClick={() => {changeLanguage()}}
                           >
                             <li className="navbar-submenu-edition-item d-flex align-items-center justify-content-start">
-                              {i18n.lng === "en" ? "EN" : "IT"}
+                              {i18n.language === "it" ? "EN" : "IT"}
                               <img
                                 className="rounded ms-1"
-                                src={i18n.lng === "en" ? EnglishFlag : ItalianFlag}
+                                src={i18n.language === "it" ? EnglishFlag : ItalianFlag}
                                 alt=""
                                 width="20"
                                 height="15"
