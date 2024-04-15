@@ -436,6 +436,14 @@ code {
   margin-bottom: 3px;
 }
 
+.navbar-submenu-edition-item-red {
+  color: #EB0028;
+  text-decoration: none;
+  display: flex;
+  text-align: start;
+  margin-bottom: 3px;
+}
+
 .navbar-submenu-edition-item:hover {
   color: red;
 }
