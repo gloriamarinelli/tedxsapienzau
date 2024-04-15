@@ -247,221 +247,222 @@ export default function MissionandVision() {
      */
     return (
       <>
-        <div
-          className="header gradient-background-about"
-          style={{
-            padding: "10px",
-            textAlign: "center",
-            color: "#fff",
-            marginBottom: "10px",
-            // clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "30vh",
-            display: "grid",
-            placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-          }}
-        >
-          <h1
-            className="font-weight-bold mb-5"
+        <div style={{ backgroundColor: "#000" }}>
+          <section
             style={{
-              fontSize: "60px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
               marginTop: "80px",
+              marginBottom: "-50px",
+              backgroundColor: global.COLORS.NERO,
             }}
           >
-            MISSION & VISION
-          </h1>
-        </div>
+            <div className="container-lg marketing">
+              {/* Cos'è TED */}
+              <div className="row featurette mt-5 mb-5">
+                <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
+                  <LazyLoadImage src={Image} alt="Cos'èTED" height="50" />
+                </div>
+                <div className="col-md-7 order-md-2 mt-3">
+                  <p
+                    className="lead"
+                    style={{
+                      color: "#FFF",
+                      fontWeight: "bold",
+                      fontFamily: "Fira sans Extra Condensed",
+                    }}
+                  >
+                    TED è un'organizzazione no profit dedicata alla diffusione
+                    di idee sotto forma di discorsi brevi e potenti (18 minuti o
+                    meno). TED è nato nel 1984 come una conferenza in cui
+                    tecnologia, intrattenimento e design convergevano e oggi
+                    copre quasi tutti gli argomenti, dalla scienza al business
+                    alle questioni globali, in più di 100 lingue. L'obiettivo è
+                    quello di diffondere e sostenere idee di valore per cambiare
+                    il mondo.
+                  </p>
+                </div>
+              </div>
 
-        <div className="container-lg marketing">
-          {/* Cos'è TED */}
-          <div className="row featurette mt-5 mb-5">
-            <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-              <LazyLoadImage src={Image} alt="Cos'èTED" height="50" />
+              <hr className="featurette-divider"></hr>
+
+              {/* Cos'è TEDx */}
+              <div className="marketing mt-4">
+                <div className="row featurette">
+                  <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
+                    <LazyLoadImage src={Image1} alt="Cos'èTEDx" height="50" />
+                  </div>
+                  <div className="col-md-7 order-md-2 mt-3">
+                    <p
+                      className="lead"
+                      style={{
+                        color: "#FFF",
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                      }}
+                    >
+                      Per poter ampliare la diffusione delle idee di valore, TED
+                      ha creato un programma apposito, il TEDx, ossia degli
+                      eventi locali organizzati in modo indipendente ma sempre
+                      con lo spirito di una vera e propria conferenza TED, che
+                      infatti concede la propria licenza.
+                    </p>
+                  </div>
+                </div>
+
+                <hr className="featurette-divider"></hr>
+
+                {/**TEDx Sapienza U */}
+                <div className="row featurette mt-4">
+                  <div className="col-md-7 order-md-2 mt-4">
+                    <LazyLoadImage
+                      src={Image2}
+                      alt="TedxSapienzaU"
+                      height="70"
+                    />
+                    <p
+                      className="lead mt-3"
+                      style={{
+                        color: "#FFF",
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                      }}
+                    >
+                      Il TEDxSapienzaU è il primo TED Universitario
+                      dell'Università di Roma “La Sapienza”. Grazie a questo
+                      l'intera comunità studentesca e accademica gode di una
+                      programmazione sempre nuova e internazionale. L'evento è
+                      stato fortemente voluto da alcuni studenti dell'Ateneo e,
+                      grazie al supporto della Magnifica Rettrice Antonella
+                      Polimeni, il Comitato TEDxSapienzaU composto dagli
+                      studenti organizzatori e dall'Area Supporto alla Ricerca e
+                      Trasferimento Tecnologico, ha ottenuto dalla TED
+                      Foundation la licenza ufficiale TEDx.
+                    </p>
+                  </div>
+                  <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
+                    <LazyLoadImage
+                      src={Image3}
+                      alt="TedxSapienzaU"
+                      height="300"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  className="row mt-10 mb-10"
+                  style={{
+                    textAlign: "center",
+                  }}
+                >
+                  <div className="col-12">
+                    <h1
+                      className="font-weight-bold mt-5"
+                      style={{
+                        color: "rgb(235, 0, 40)",
+                        fontSize: "80px",
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                        color: "#FFF",
+                      }}
+                    >
+                      26
+                    </h1>
+                    <h5
+                      style={{
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                        color: "#FFF",
+                      }}
+                    >
+                      speakers
+                    </h5>
+                  </div>
+                  <div className="col-12">
+                    <h1
+                      className="font-weight-bold mt-5 "
+                      style={{
+                        color: "rgb(235, 0, 40)",
+                        fontSize: "80px",
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                      }}
+                    >
+                      <CountUp
+                        end={3000}
+                        duration={2}
+                        useEasing={false}
+                        separator=""
+                      />
+                    </h1>
+                    <h5
+                      style={{
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                        color: "#FFF",
+                      }}
+                    >
+                      spettatori
+                    </h5>
+                  </div>
+                  <div className="col-12">
+                    <h1
+                      className="font-weight-bold mt-5 "
+                      style={{
+                        color: "rgb(235, 0, 40)",
+                        fontSize: "80px",
+                        fontWeight: "bold",
+                        fontFamily: "Fira sans Extra Condensed",
+                      }}
+                    >
+                      <CountUp
+                        end={5160}
+                        duration={2}
+                        useEasing={false}
+                        separator=""
+                      />
+                    </h1>
+                    <h5
+                      style={{
+                        fontWeight: "bold",
+                        fontFamily: "GothamBold",
+                        color: "#FFF",
+                      }}
+                    >
+                      social followers
+                    </h5>
+                  </div>
+                  <div className="col-12">
+                    <h1
+                      className="font-weight-bold mt-5 "
+                      style={{
+                        color: "rgb(235, 0, 40)",
+                        fontSize: "80px",
+                        fontWeight: "bold",
+                        fontFamily: "GothamBold",
+                      }}
+                    >
+                      <CountUp
+                        end={22083}
+                        duration={2}
+                        useEasing={false}
+                        separator=""
+                      />
+                    </h1>
+                    <h5
+                      style={{
+                        fontWeight: "bold",
+                        fontFamily: "GothamBold",
+                        color: "#FFF",
+                      }}
+                    >
+                      visualizzazioni su youtube
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              {/** CAROUSEL */}
+              <div className="container mb-5 mt-5">{CarouselComponent()}</div>
             </div>
-            <div className="col-md-7 order-md-2 mt-3">
-              <p
-                className="lead"
-                style={{
-                  textAlign: "justify",
-                  fontFamily: "GothamBook",
-                }}
-              >
-                TED è un'organizzazione no profit dedicata alla diffusione di
-                idee sotto forma di discorsi brevi e potenti (18 minuti o meno).
-                TED è nato nel 1984 come una conferenza in cui tecnologia,
-                intrattenimento e design convergevano e oggi copre quasi tutti
-                gli argomenti, dalla scienza al business alle questioni globali,
-                in più di 100 lingue. L'obiettivo è quello di diffondere e
-                sostenere idee di valore per cambiare il mondo.
-              </p>
-            </div>
-          </div>
-
-          <hr className="featurette-divider"></hr>
-
-          {/* Cos'è TEDx */}
-          <div className="marketing mt-4">
-            <div className="row featurette">
-              <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-                <LazyLoadImage src={Image1} alt="Cos'èTEDx" height="50" />
-              </div>
-              <div className="col-md-7 order-md-2 mt-3">
-                <p
-                  className="lead"
-                  style={{
-                    textAlign: "justify",
-                    fontFamily: "GothamBook",
-                  }}
-                >
-                  Per poter ampliare la diffusione delle idee di valore, TED ha
-                  creato un programma apposito, il TEDx, ossia degli eventi
-                  locali organizzati in modo indipendente ma sempre con lo
-                  spirito di una vera e propria conferenza TED, che infatti
-                  concede la propria licenza.
-                </p>
-              </div>
-            </div>
-
-            <hr className="featurette-divider"></hr>
-
-            {/**TEDx Sapienza U */}
-            <div className="row featurette mt-4">
-              <div className="col-md-7 order-md-2 mt-4">
-                <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="70" />
-                <p
-                  className="lead mt-3"
-                  style={{
-                    textAlign: "justify",
-                    fontFamily: "GothamBook",
-                  }}
-                >
-                  Il TEDxSapienzaU è il primo TED Universitario dell'Università
-                  di Roma “La Sapienza”. Grazie a questo l'intera comunità
-                  studentesca e accademica gode di una programmazione sempre
-                  nuova e internazionale. L'evento è stato fortemente voluto da
-                  alcuni studenti dell'Ateneo e, grazie al supporto della
-                  Magnifica Rettrice Antonella Polimeni, il Comitato
-                  TEDxSapienzaU composto dagli studenti organizzatori e
-                  dall'Area Supporto alla Ricerca e Trasferimento Tecnologico,
-                  ha ottenuto dalla TED Foundation la licenza ufficiale TEDx.
-                </p>
-              </div>
-              <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-                <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="300" />
-              </div>
-            </div>
-
-            <div
-              className="row mt-10 mb-10"
-              style={{
-                textAlign: "center",
-              }}
-            >
-              <div className="col-12">
-                <h1
-                  className="font-weight-bold mt-5"
-                  style={{
-                    color: "rgb(235, 0, 40)",
-                    fontSize: "80px",
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  26
-                </h1>
-                <h5
-                  style={{
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  speakers
-                </h5>
-              </div>
-              <div className="col-12">
-                <h1
-                  className="font-weight-bold mt-5 "
-                  style={{
-                    color: "rgb(235, 0, 40)",
-                    fontSize: "80px",
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  <CountUp
-                    end={3000}
-                    duration={2}
-                    useEasing={false}
-                    separator=""
-                  />
-                </h1>
-                <h5
-                  style={{
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  spettatori
-                </h5>
-              </div>
-              <div className="col-12">
-                <h1
-                  className="font-weight-bold mt-5 "
-                  style={{
-                    color: "rgb(235, 0, 40)",
-                    fontSize: "80px",
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  <CountUp
-                    end={5160}
-                    duration={2}
-                    useEasing={false}
-                    separator=""
-                  />
-                </h1>
-                <h5
-                  style={{
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  social followers
-                </h5>
-              </div>
-              <div className="col-12">
-                <h1
-                  className="font-weight-bold mt-5 "
-                  style={{
-                    color: "rgb(235, 0, 40)",
-                    fontSize: "80px",
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  <CountUp
-                    end={22083}
-                    duration={2}
-                    useEasing={false}
-                    separator=""
-                  />
-                </h1>
-                <h5
-                  style={{
-                    fontWeight: "bold",
-                    fontFamily: "GothamBold",
-                  }}
-                >
-                  visualizzazioni su youtube
-                </h5>
-              </div>
-            </div>
-          </div>
-          {/** CAROUSEL */}
-          <div className="container mb-5 mt-5">{CarouselComponent()}</div>
+          </section>
         </div>
       </>
     );
