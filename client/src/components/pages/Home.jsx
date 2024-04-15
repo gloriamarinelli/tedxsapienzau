@@ -10,6 +10,8 @@ import Image from "../images/RFW23/logoRFW.webp";
 import Eventbrite from "../images/eventbrite.png";
 import Volunteers from "../images/volunteers.webp";
 import Events from "./Events";
+import Blog from "./Blog";
+import BlogHome from "./BlogHome";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
@@ -189,6 +191,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+        <BlogHome withTitle={true} />
+        <div
+          style={{
+            display: "grid",
+            placeItems: "center",
+            marginTop: global.UTILS.BENTO_BOX_PADDING,
+          }}
+        >
+          <Link to="/blog">
+            <Button
+              style={{
+                backgroundColor: global.COLORS.ROSSO_TED_2023,
+                borderColor: "red",
+                borderRadius: global.UTILS.BENTO_BOX_PADDING,
+                fontWeight: "bold",
+                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
+              }}
+            >
+              Scopri di più
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       <section
         style={{
           display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
@@ -196,7 +223,7 @@ export default function Home() {
           alignItems: "center",
           height:
             windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(90vh - ${global.UTILS.NAV_HEIGHT})`
+              ? `calc(80vh - ${global.UTILS.NAV_HEIGHT})`
               : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
@@ -228,7 +255,7 @@ export default function Home() {
               className="fira-sans"
               style={{
                 textAlign: "left",
-                fontSize: windowSize > 1245 ? "7vh" : "6vh",
+                fontSize: windowSize > 1245 ? "6vh" : "5vh",
                 fontWeight: 700,
                 maxWidth: "20ch",
                 color: "#FFFFFF",

@@ -7,7 +7,6 @@ import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
 import { Pagination } from "react-bootstrap";
-import backgroundBlog from "../../components/images/header_blog23.webp";
 
 export default function Blog({ withTitle = true }) {
   const [blog, setBlog] = useState([]);
@@ -18,7 +17,7 @@ export default function Blog({ withTitle = true }) {
 
   const { currentUser } = useContext(AuthContext);
 
-  const pageSize = 12;
+  const pageSize = 4;
   const clearDbIncrement = 10;
   const clearDbMagic = 2;
 
@@ -56,40 +55,6 @@ export default function Blog({ withTitle = true }) {
       });
   };
 
-  const getButtons = () => {
-    let items = [];
-
-    for (let number = 1; number <= Math.ceil(blogSize / pageSize); number++) {
-      items.push(
-        <Pagination.Item
-          key={number}
-          active={number === currentPage}
-          onClick={() => {
-            window.scrollTo(0, 0);
-            setCurrentPage(number);
-            setIsLoading(true);
-          }}
-        >
-          {number}
-        </Pagination.Item>
-      );
-    }
-
-    return (
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          margin: "20px 0 0 0 ",
-          background: "#000",
-        }}
-      >
-        <Pagination>{items}</Pagination>
-      </div>
-    );
-  };
-
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**
      * DESKTOP
@@ -97,61 +62,21 @@ export default function Blog({ withTitle = true }) {
     return (
       <>
         <div style={{ backgroundColor: "#000" }}>
-          <section
-            style={{
-              marginTop: global.UTILS.NAV_HEIGHT,
-              backgroundColor: global.COLORS.NERO,
-              padding: "10px",
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
-              placeItems: "center",
-              display: "flex",
-            }}
-          >
-            <div
+          <section>
+            <h1
               style={{
-                width: "99%",
-                height: "90%",
-                padding: global.UTILS.BENTO_BOX_PADDING,
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                backgroundImage: `url(${backgroundBlog})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "grid",
-
-                textAlign: "left",
+                color: "#FFF",
+                fontFamily: "Fira Sans Extra Condensed",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "relative",
+                display: "flex",
+                padding: "60px",
+                fontSize: "6vh",
               }}
             >
-              <h1
-                className="font-weight-bold mt-5 mb-5"
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  color: global.COLORS.BIANCO,
-                }}
-              >
-                IDEAS WORTH SPREADING
-              </h1>
-              <h5
-                className="fira-sans"
-                style={{
-                  textAlign: "left",
-                  fontSize: "4vh",
-                  fontWeight: 300,
-                  maxWidth: "30ch",
-                  color: "#FFFFFF",
-                }}
-              >
-                Le{" "}
-                <strong
-                  style={{
-                    color: "#EB0028",
-                  }}
-                >
-                  idee
-                </strong>{" "}
-                per cambiare il mondo
-              </h5>
-            </div>
+              BLOG
+            </h1>
           </section>
           <section>
             {!isLoading ? (
@@ -201,7 +126,7 @@ export default function Blog({ withTitle = true }) {
                 </div>
               </div>
             )}
-            {!isLoading && getButtons()}
+            {!isLoading}
           </section>
         </div>
       </>
@@ -212,46 +137,6 @@ export default function Blog({ withTitle = true }) {
      */
     return (
       <>
-        <div
-          className="header-blog"
-          style={{
-            textAlign: "left",
-            color: "white",
-            display: "grid",
-            height: "30vh",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-          }}
-        >
-          <h1
-            className="font-weight-bold"
-            style={{
-              fontSize: "40px",
-              fontWeight: "bold",
-              marginLeft: "30px",
-              marginBottom: "10px",
-              marginTop: "75px",
-            }}
-          >
-            IDEAS WORTH SPREADING
-          </h1>
-          <p
-            style={{
-              fontSize: "20px",
-              fontStyle: "italic",
-              marginLeft: "30px",
-            }}
-          >
-            Le{" "}
-            <strong
-              style={{
-                color: "#EB0028",
-              }}
-            >
-              idee
-            </strong>{" "}
-            per cambiare il mondo
-          </p>
-        </div>
         {!isLoading ? (
           blog.map((blog) => {
             const { id, titolo, image, data } = blog;
@@ -291,7 +176,6 @@ export default function Blog({ withTitle = true }) {
             </div>
           </div>
         )}
-        {getButtons()}
       </>
     );
   }

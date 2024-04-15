@@ -17,45 +17,10 @@ export default function Join() {
      */
     return (
       <>
+        
         <section
           style={{
-            backgroundColor: global.COLORS.NERO,
             marginTop: global.UTILS.NAV_HEIGHT,
-            padding: "10px",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            placeItems: "center",
-            display: "grid",
-          }}
-        >
-          <div
-            style={{
-              width: "99%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
-              //marginRight: "10px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 mb-5"
-              style={{
-                fontSize: "120px",
-                fontWeight: "bold",
-                margin: "0",
-                color: global.COLORS.ROSSO_TED,
-              }}
-            >
-              JOIN US
-            </h1>
-          </div>
-        </section>
-        <section
-          style={{
             backgroundColor: global.COLORS.NERO,
             padding: "10px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
@@ -115,7 +80,7 @@ export default function Join() {
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
               backgroundImage: `url(${backgroundVolunteers})`,
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "top",
               display: "flex",
               marginBottom:
                 windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "200vw",
@@ -144,44 +109,10 @@ export default function Join() {
      */
     return (
       <>
+        
         <section
           style={{
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
             marginTop: global.UTILS.NAV_HEIGHT,
-            padding: "10px",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            placeItems: "center",
-            display: "grid",
-          }}
-        >
-          <div
-            className="header"
-            style={{
-              width: "98%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-            }}
-          >
-            <h1
-              className="font-weight-bold"
-              style={{
-                fontSize: "60px",
-                fontWeight: "bold",
-                color: global.COLORS.ROSSO_TED,
-              }}
-            >
-              JOIN US
-            </h1>
-          </div>
-        </section>
-        <section
-          style={{
             backgroundColor: global.COLORS.NERO, //! Cambiare colore
             height: "20vh",
             padding: "10px",

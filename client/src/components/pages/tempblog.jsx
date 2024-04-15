@@ -7,9 +7,8 @@ import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
 import { Pagination } from "react-bootstrap";
-import backgroundBlog from "../../components/images/header_blog23.webp";
 
-export default function Blog({ withTitle = true }) {
+export default function Blog() {
   const [blog, setBlog] = useState([]);
   const [blogSize, setBlogSize] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,7 +17,7 @@ export default function Blog({ withTitle = true }) {
 
   const { currentUser } = useContext(AuthContext);
 
-  const pageSize = 12;
+  const pageSize = 5;
   const clearDbIncrement = 10;
   const clearDbMagic = 2;
 
@@ -82,7 +81,6 @@ export default function Blog({ withTitle = true }) {
           display: "flex",
           justifyContent: "center",
           margin: "20px 0 0 0 ",
-          background: "#000",
         }}
       >
         <Pagination>{items}</Pagination>
@@ -96,114 +94,87 @@ export default function Blog({ withTitle = true }) {
      */
     return (
       <>
-        <div style={{ backgroundColor: "#000" }}>
-          <section
+        <div
+          className="header-blog"
+          style={{
+            textAlign: "left",
+            color: "white",
+            display: "grid",
+            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
+            height: "40vh",
+            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+          }}
+        >
+          <h1
+            className="font-weight-bold"
             style={{
-              marginTop: global.UTILS.NAV_HEIGHT,
-              backgroundColor: global.COLORS.NERO,
-              padding: "10px",
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
-              placeItems: "center",
-              display: "flex",
+              fontSize: "55px",
+              fontWeight: "bold",
+              marginLeft: "30px",
+              marginTop: "100px",
             }}
           >
-            <div
+            IDEAS WORTH SPREADING
+          </h1>
+          <p
+            style={{
+              fontSize: "40px",
+              fontStyle: "italic",
+              marginLeft: "30px",
+            }}
+          >
+            Le{" "}
+            <strong
               style={{
-                width: "99%",
-                height: "90%",
-                padding: global.UTILS.BENTO_BOX_PADDING,
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                backgroundImage: `url(${backgroundBlog})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "grid",
-
-                textAlign: "left",
+                color: "#EB0028",
               }}
             >
-              <h1
-                className="font-weight-bold mt-5 mb-5"
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  color: global.COLORS.BIANCO,
-                }}
-              >
-                IDEAS WORTH SPREADING
-              </h1>
-              <h5
-                className="fira-sans"
-                style={{
-                  textAlign: "left",
-                  fontSize: "4vh",
-                  fontWeight: 300,
-                  maxWidth: "30ch",
-                  color: "#FFFFFF",
-                }}
-              >
-                Le{" "}
-                <strong
-                  style={{
-                    color: "#EB0028",
-                  }}
-                >
-                  idee
-                </strong>{" "}
-                per cambiare il mondo
-              </h5>
-            </div>
-          </section>
-          <section>
-            {!isLoading ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                }}
-              >
-                {blog.map((blog) => {
-                  const { id, titolo, image, data } = blog;
-                  return (
-                    <BlogCard
-                      key={id}
-                      titolo={titolo}
-                      image={image}
-                      data={data}
-                      id={id}
-                    />
-                  );
-                })}
-              </div>
-            ) : (
-              <div class="blog-card">
-                <div class="meta">
-                  <div
-                    class="photo shimmer"
-                    style={{
-                      background: "lightgrey",
-                      width: "350px",
-                      height: "250px",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                    }}
-                    alt={"loading"}
-                  ></div>
-                </div>
-                <div class="description">
-                  <h4
-                    style={{
-                      fontFamily: "GothamBold",
-                    }}
-                  >
-                    Loading...
-                  </h4>
-                </div>
-              </div>
-            )}
-            {!isLoading && getButtons()}
-          </section>
+              idee
+            </strong>{" "}
+            per cambiare il mondo
+          </p>
         </div>
+
+        {!isLoading ? (
+          blog.map((blog) => {
+            const { id, titolo, image, data } = blog;
+            return (
+              <BlogCard
+                key={id}
+                titolo={titolo}
+                image={image}
+                data={data}
+                id={id}
+              />
+            );
+          })
+        ) : (
+          <div class="blog-card">
+            <div class="meta">
+              <div
+                class="photo shimmer"
+                style={{
+                  background: "lightgrey",
+                  width: "350px",
+                  height: "250px",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+                alt={"loading"}
+              ></div>
+            </div>
+            <div class="description">
+              <h4
+                style={{
+                  fontFamily: "GothamBold",
+                }}
+              >
+                Loading...
+              </h4>
+            </div>
+          </div>
+        )}
+        {!isLoading && getButtons()}
       </>
     );
   } else {

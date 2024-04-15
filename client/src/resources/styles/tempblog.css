@@ -4,6 +4,12 @@ body {
 	--rosso-ted: #eb0028;
 }
 
+.header-blog {
+	background-image: url("../../components/images/header_blog23.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 /** 
 * ARTICLE STYLES
@@ -20,7 +26,6 @@ body {
 	width: 100%;
 	max-width: 700px;
 	margin: auto;
-	margin-top: 50px;
 }
 
 .post-container > h1 {
@@ -102,7 +107,6 @@ body {
 /*BLOG PAGE STYLE*/
 * {
 	box-sizing: border-box;
-	
 }
 
 body {
@@ -112,8 +116,7 @@ body {
 
 .blog-card {
 	display: grid;
-	flex: 0 0 auto; /* Allow cards to shrink and grow based on content */
-    margin-right: 10px; /* Add some space between cards */
+	grid-row: auto;
 	margin: 1rem auto;
 	box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
 	margin-bottom: 1.6%;
@@ -126,10 +129,49 @@ body {
 	width: 350px;
 }
 
+.blog-card:hover .photo {
+	background-size: cover;
+	background-position: "center";
+}
+.blog-card .meta {
+	position: relative;
+	z-index: 0;
+	height: 200px;
+}
 
+.blog-card .details,
+.blog-card .details ul {
+	margin: auto;
+	padding: 0;
+	list-style: none;
+}
+.blog-card .details {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	margin: auto;
+	transition: left 0.2s;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 10px;
+	width: 100%;
+	font-size: 0.9rem;
+}
+.blog-card .details a {
+	-webkit-text-decoration: dotted underline;
+	text-decoration: dotted underline;
+}
+.blog-card .details ul li {
+	display: inline-block;
+}
 
-
-
+.blog-card .details .tags li {
+	margin-right: 2px;
+}
+.blog-card .details .tags li:first-child {
+	margin-left: -4px;
+}
 .blog-card .description {
 	padding: 1rem;
 	background: #191919;
@@ -137,8 +179,25 @@ body {
 	z-index: 1;
 }
 
-
-
+.blog-card p {
+	position: relative;
+	margin: 1rem 0 0;
+}
+.blog-card p:first-of-type {
+	margin-top: 1.25rem;
+}
+.blog-card p:first-of-type:before {
+	content: "";
+	position: absolute;
+	height: 5px;
+	background: #eb0028;
+	width: 35px;
+	top: -0.75rem;
+	border-radius: 3px;
+}
+.blog-card:hover .details {
+	left: 0%;
+}
 @media (min-width: 640px) {
 	.blog-card {
 		flex-direction: row;

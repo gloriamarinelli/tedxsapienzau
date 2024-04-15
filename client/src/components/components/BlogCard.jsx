@@ -49,29 +49,33 @@ export default function BlogCard({ id, titolo, image, data }) {
 						}}
 						alt={titolo}
 					></div>
-					<ul className="details">
-						<li className="date">
+				</div>
+				<div className="description">
+			
+						<h4 className="date" style={{
+							fontFamily: "Fira Sans Extra Condensed, sans-serif",
+							textTransform: "capitalize",
+							color:"#FFF",
+						}}
+					>
 							<span className="media-date">
 								{data
 									? format(new Date(data), "d MMM YYY", { locale: it })
 									: ""}
 							</span>
-						</li>
-					</ul>
-				</div>
-				<div className="description">
+						</h4>
+				<a className="link" href={`/blog/${id}`}>
 					<h4
 						style={{
-							fontFamily: "GothamBold",
+							fontFamily: "Fira Sans Extra Condensed, sans-serif",
+							textTransform: "uppercase",
+							color:"#FFF",
 						}}
 					>
 						{titolo}
 					</h4>
-					<p className="link">
-						<a className="link" href={`/blog/${id}`}>
-							<button className="button">View More</button>
-						</a>
-					</p>
+					</a>
+				
 					{isAdmin && (
 						<p className="link">
 							<a className="link" href={`/`}>
