@@ -28,17 +28,17 @@
 .img-title {
   color: white;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 2.5vw;
 }
 
 .img-txt {
   color: white;
-  font-size: 30px;
+  font-size: 1.5vw;
 }
 
 .img-txt-2 {
   color: white;
-  font-size: 23px;
+  font-size: 1vw;
 }
 
 .img-link {
@@ -74,8 +74,8 @@
   color: white;
   border: medium;
   border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 0.5vw;
+  font-size: 1vw;
   cursor: pointer;
 }
 
@@ -85,11 +85,8 @@
 
 .button-container {
   margin-top: 10%;
-}
-
-.button-text {
-  padding-left: 32%;
-  padding-right: 32%;
+  display: inline-block;
+  align-items: center;
 }
 
 .statement {

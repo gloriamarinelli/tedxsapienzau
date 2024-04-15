@@ -212,86 +212,104 @@ export default function Blog({ withTitle = true }) {
      */
     return (
       <>
-        <div
-          className="header-blog"
-          style={{
-            textAlign: "left",
-            color: "white",
-            display: "grid",
-            height: "30vh",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
-          }}
-        >
-          <h1
-            className="font-weight-bold"
+        <div style={{ backgroundColor: "#000" }}>
+          <section
             style={{
-              fontSize: "40px",
-              fontWeight: "bold",
-              marginLeft: "30px",
-              marginBottom: "10px",
-              marginTop: "75px",
+              marginTop: global.UTILS.NAV_HEIGHT,
+              backgroundColor: global.COLORS.NERO,
+              padding: "10px",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              placeItems: "center",
+              display: "flex",
             }}
           >
-            IDEAS WORTH SPREADING
-          </h1>
-          <p
-            style={{
-              fontSize: "20px",
-              fontStyle: "italic",
-              marginLeft: "30px",
-            }}
-          >
-            Le{" "}
-            <strong
+            <div
               style={{
-                color: "#EB0028",
+                width: "99%",
+                height: "90%",
+                padding: global.UTILS.BENTO_BOX_PADDING,
+                borderRadius: global.UTILS.BENTO_BOX_PADDING,
+                backgroundImage: `url(${backgroundBlog})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "grid",
+
+                textAlign: "left",
               }}
             >
-              idee
-            </strong>{" "}
-            per cambiare il mondo
-          </p>
-        </div>
-        {!isLoading ? (
-          blog.map((blog) => {
-            const { id, titolo, image, data } = blog;
-            return (
-              <BlogCard
-                key={id}
-                titolo={titolo}
-                image={image}
-                data={data}
-                id={id}
-              />
-            );
-          })
-        ) : (
-          <div class="blog-card">
-            <div class="meta">
-              <div
-                class="photo shimmer"
+              <h1
+                className="font-weight-bold mt-5 mb-5"
                 style={{
-                  background: "lightgrey",
-                  width: "100%",
-                  height: "250px",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                }}
-                alt={"loading"}
-              ></div>
-            </div>
-            <div class="description">
-              <h4
-                style={{
-                  fontFamily: "GothamBold",
+                  fontSize: "40px",
+                  fontWeight: "bold",
+                  color: global.COLORS.BIANCO,
                 }}
               >
-                Loading...
-              </h4>
+                IDEAS WORTH SPREADING
+              </h1>
+              <h5
+                className="fira-sans"
+                style={{
+                  textAlign: "left",
+                  fontSize: "4vh",
+                  fontWeight: 300,
+                  maxWidth: "30ch",
+                  color: "#FFFFFF",
+                }}
+              >
+                Le{" "}
+                <strong
+                  style={{
+                    color: "#EB0028",
+                  }}
+                >
+                  idee
+                </strong>{" "}
+                per cambiare il mondo
+              </h5>
             </div>
-          </div>
-        )}
-        {getButtons()}
+          </section>
+          {!isLoading ? (
+            blog.map((blog) => {
+              const { id, titolo, image, data } = blog;
+              return (
+                <BlogCard
+                  key={id}
+                  titolo={titolo}
+                  image={image}
+                  data={data}
+                  id={id}
+                />
+              );
+            })
+          ) : (
+            <div class="blog-card">
+              <div class="meta">
+                <div
+                  class="photo shimmer"
+                  style={{
+                    background: "lightgrey",
+                    width: "100%",
+                    height: "250px",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                  }}
+                  alt={"loading"}
+                ></div>
+              </div>
+              <div class="description">
+                <h4
+                  style={{
+                    fontFamily: "GothamBold",
+                  }}
+                >
+                  Loading...
+                </h4>
+              </div>
+            </div>
+          )}
+          {getButtons()}
+        </div>
       </>
     );
   }
