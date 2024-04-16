@@ -1,5 +1,5 @@
 .image {
-  min-height: 110vh; /* altezza div con img di sfondo */
+  min-height: 100vh; /* altezza div con img di sfondo (ideale 110vh)*/
   position: relative;
 }
 
