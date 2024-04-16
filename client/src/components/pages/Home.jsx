@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
@@ -26,6 +26,36 @@ const NewsSidebarSize = 18;
 export default function Home() {
   const [windowSize, setWindowSize] = useOutletContext();
 
+  const svgRef = useRef();
+
+  const DEBUG = 1;
+
+  useEffect(() => {
+    if (DEBUG) {
+      let path = svgRef.current.querySelector("path");
+      let length = path.getTotalLength();
+
+      console.log(length);
+
+      path.style.strokeDasharray = length + " " + length;
+
+      let offset = 8000;
+      path.style.strokeDashoffset = offset;
+
+      window.addEventListener("scroll", function () {
+        let scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        let drawLength = length * scrollPercentage;
+
+        path.style.strokeDashoffset = offset - drawLength;
+      });
+    }
+  }, []);
+
+  // This can be removed for the new version of the website (2024)
   const getCallToAction = () => {
     return (
       <>
@@ -53,6 +83,50 @@ export default function Home() {
       </>
     );
   };
+
+  if (DEBUG) {
+    return (
+      <div style={{ backgroundColor: "#000" }}>
+        <section
+          style={{
+            height: "3072px",
+            width: "100vw",
+            backgroundColor: "#000",
+            position: "relative",
+          }}
+        >
+          <svg
+            preserveAspectRatio="none"
+            width={"100%"}
+            height={"100%"}
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+            }}
+            ref={svgRef}
+            viewBox="0 0 1822 3072"
+            fill="none"
+          >
+            <path
+              d="M1284.5 0.5C1284.5 159.352 1126.36 408.347 756.694 244.5C387.029 80.6526 26.194 180 10.694 472C-4.80598 764 74.0005 1026 813.5 871C1553 716 1707.5 1002.5 1789.19 1273C1870.89 1543.5 1789.19 2259 850.194 1801C-88.8057 1343 144.5 1251.5 394.194 1214C643.888 1176.5 207.481 1678.98 76.1939 2228C15.694 2481 48.5 2937 374 2977.5C867.756 3038.94 953 2655 1196 2649C1404.31 2664.5 1441.4 2932.3 1443 3061.5"
+              stroke="#F1FF39"
+              stroke-width="17"
+            />
+          </svg>
+          <div
+            style={{ height: "100vh", width: "100vw", backgroundColor: "red" }}
+          ></div>
+          <div
+            style={{ height: "100vh", width: "100vw", backgroundColor: "blue" }}
+          ></div>
+          <div
+            style={{ height: "100vh", width: "100vw", backgroundColor: "pink" }}
+          ></div>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div style={{ backgroundColor: "#000" }}>
@@ -329,7 +403,6 @@ export default function Home() {
 /**
  * HomePage sections that are interchamble according to what we want to show
  */
-
 function getAboutBTZ(windowSize) {
   return (
     <section
