@@ -437,7 +437,7 @@ code {
 }
 
 .navbar-submenu-edition-item-red {
-  color: #EB0028;
+  color: #eb0028;
   text-decoration: none;
   display: flex;
   text-align: start;
@@ -460,4 +460,8 @@ code {
   background-color: #ffffff1a;
   border-radius: 24px;
   padding: 40px;
+}
+
+.font-600 {
+  font-weight: 600;
 }

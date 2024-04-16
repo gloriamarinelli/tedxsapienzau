@@ -115,7 +115,11 @@ export default function Home() {
             />
           </svg>
           <div
-            style={{ height: "100vh", width: "100vw", backgroundColor: "red" }}
+            style={{
+              height: "100vh",
+              width: "100vw",
+              backgroundColor: "black",
+            }}
           ></div>
           <div
             style={{ height: "100vh", width: "100vw", backgroundColor: "blue" }}

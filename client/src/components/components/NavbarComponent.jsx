@@ -25,7 +25,6 @@ export default function NavbarComponent(props) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [previousOption, setOption] = useState(undefined); //set selected navbar option
 
-
   const navRef = useRef();
   const team = useRef();
   const partners = useRef();
@@ -37,15 +36,28 @@ export default function NavbarComponent(props) {
   const act = useRef();
   const awards22 = useRef();
 
-  const options = {'team': team, 'partners': partners, 'blog': blog, 'mission_and_vision': mission_and_vision, 'location': location,
-                 'back_to_zero': back_to_zero, 'awards23': awards23, 'act': act, 'awards22': awards22};
+  const options = {
+    team: team,
+    partners: partners,
+    blog: blog,
+    mission_and_vision: mission_and_vision,
+    location: location,
+    back_to_zero: back_to_zero,
+    awards23: awards23,
+    act: act,
+    awards22: awards22,
+  };
 
-  function selectOption(option){ //option is simply the string that will be used in the options (key:value object) to index the correct ref
-    if(previousOption) options[previousOption].current.classList.remove('navbar-submenu-edition-item-red');
-    if(!option) return;
+  function selectOption(option) {
+    //option is simply the string that will be used in the options (key:value object) to index the correct ref
+    if (previousOption)
+      options[previousOption].current.classList.remove(
+        "navbar-submenu-edition-item-red"
+      );
+    if (!option) return;
     setOption(option);
-    options[option].current.classList.add('navbar-submenu-edition-item-red');
-  } 
+    options[option].current.classList.add("navbar-submenu-edition-item-red");
+  }
 
   function changeLanguage() {
     if (i18n.language === "en") i18n.changeLanguage("it");
@@ -53,7 +65,6 @@ export default function NavbarComponent(props) {
   }
 
   useEffect(() => {
-
     if (
       localStorage.getItem("token") === null ||
       localStorage.getItem("token") === undefined ||
@@ -98,7 +109,12 @@ export default function NavbarComponent(props) {
         }}
       >
         <Container fluid>
-          <Link to="/" onClick={()=>{selectOption(undefined)}}>
+          <Link
+            to="/"
+            onClick={() => {
+              selectOption(undefined);
+            }}
+          >
             <LazyLoadImage src={Image} alt="LogoTedx" width="" height="45" />
           </Link>
           <Navbar.Toggle
@@ -116,17 +132,17 @@ export default function NavbarComponent(props) {
                 <Col className="col-lg-10 col-md-12 col-sm-11 d-flex align-items-center">
                   <Container>
                     <Row>
-                      <Col className="text-center d-flex justify-content-evenly row">
-                        <li className="nav-item dropdown d-flex justify-content-center col-lg-2 col-12 p-0">
+                      <Col className="text-center d-flex justify-content-center row gap-1">
+                        <li className="nav-item dropdown d-flex justify-content-center col-xl-1 col-lg-2 col-md-12 col-2 p-">
                           <a
-                            className="navbar-submenu-edition-item"
+                            className="navbar-submenu-edition-item font-600"
                             data-bs-toggle="dropdown"
                             href="/location"
                             role="button"
                             aria-expanded="false"
                             style={{ borderRadius: "5px" }}
                           >
-                            {t('events')} &#709;
+                            {t("events")} &#709;
                           </a>
 
                           <ul
@@ -155,7 +171,10 @@ export default function NavbarComponent(props) {
                                 ref={back_to_zero}
                                 className="navbar-submenu-edition-item ms-3"
                                 to="/edizione2023"
-                                onClick={() => {setExpanded(false); selectOption("back_to_zero")}}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("back_to_zero");
+                                }}
                               >
                                 Back To Zero
                               </Link>
@@ -165,7 +184,10 @@ export default function NavbarComponent(props) {
                                 ref={awards23}
                                 className="navbar-submenu-edition-item ms-3"
                                 to="/awards2023"
-                                onClick={() => {setExpanded(false); selectOption("awards23")}}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("awards23");
+                                }}
                               >
                                 Awards
                               </Link>
@@ -178,7 +200,10 @@ export default function NavbarComponent(props) {
                                 ref={act}
                                 className="navbar-submenu-edition-item ms-3"
                                 to="/edizione2022"
-                                onClick={() => {setExpanded(false); selectOption("act")}}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("act");
+                                }}
                               >
                                 ACT: Lead The Change
                               </Link>
@@ -188,7 +213,10 @@ export default function NavbarComponent(props) {
                                 ref={awards22}
                                 className="navbar-submenu-edition-item ms-3"
                                 to="/awards2022"
-                                onClick={() => {setExpanded(false); selectOption("awards22")}}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("awards22");
+                                }}
                                 id="awards2022"
                               >
                                 Awards
@@ -197,53 +225,61 @@ export default function NavbarComponent(props) {
                           </ul>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-lg-1 col-12 p-0">
+                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col- p-0">
                           <Link
                             ref={partners}
-                            className="navbar-submenu-edition-item"
+                            className="navbar-submenu-edition-item font-600"
                             to="/partners"
                             style={{ borderRadius: "5px" }}
-                            onClick={() => {setExpanded(false); selectOption("partners")}}
+                            onClick={() => {
+                              setExpanded(false);
+                              selectOption("partners");
+                            }}
                           >
-                            {t('partners')}
+                            {t("partners")}
                           </Link>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-lg-1 col-12 p-0">
+                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col- p-0">
                           <Link
                             ref={team}
-                            className="navbar-submenu-edition-item"
+                            className="navbar-submenu-edition-item font-600"
                             to="/team"
                             style={{ borderRadius: "5px" }}
-                            onClick={() => {setExpanded(false); selectOption("team")}}
+                            onClick={() => {
+                              setExpanded(false);
+                              selectOption("team");
+                            }}
                             id="team"
                           >
-                            {t('team')}
+                            {t("team")}
                           </Link>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-lg-1 col-12 p-0">
+                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col- p-0">
                           <Link
                             ref={blog}
-                            className="navbar-submenu-edition-item"
+                            className="navbar-submenu-edition-item font-600"
                             to="/blog"
                             style={{ borderRadius: "5px" }}
-                            onClick={() => {setExpanded(false); selectOption("blog")}}
+                            onClick={() => {
+                              setExpanded(false);
+                              selectOption("blog");
+                            }}
                             id="blog"
                           >
-                            {t('blog')}
+                            {t("blog")}
                           </Link>
                         </li>
 
-                        <li className="nav-item dropdown d-flex justify-content-center col-lg-2 col-sm-2 col-12 p-0">
+                        <li className="nav-item dropdown d-flex justify-content-center col-xl-1 col-lg-2 col-sm-2 col- p-0">
                           <a
-                            className="navbar-submenu-edition-item"
+                            className="navbar-submenu-edition-item font-600"
                             data-bs-toggle="dropdown"
                             role="button"
                             style={{ borderRadius: "5px" }}
-                            
                           >
-                            {t('about_us')} &#709;
+                            {t("about_us")} &#709;
                           </a>
 
                           <ul
@@ -258,10 +294,13 @@ export default function NavbarComponent(props) {
                                 ref={mission_and_vision}
                                 className="navbar-submenu-edition-item ms-4 me-4"
                                 to="/mission&vision"
-                                onClick={() => {setExpanded(false); selectOption("mission_and_vision")}}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("mission_and_vision");
+                                }}
                                 id="mission_and_vision"
                               >
-                                {t('mission_and_vision')}
+                                {t("mission_and_vision")}
                               </Link>
                             </li>
                             <li>
@@ -269,10 +308,13 @@ export default function NavbarComponent(props) {
                                 ref={location}
                                 className="navbar-submenu-edition-item ms-4 me-4"
                                 to="/location"
-                                onClick={() => {setExpanded(false); selectOption("location")}}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("location");
+                                }}
                                 id="location"
                               >
-                                {t('location')}
+                                {t("location")}
                               </Link>
                             </li>
                           </ul>
@@ -297,13 +339,16 @@ export default function NavbarComponent(props) {
                             {i18n.language === "it" ? "IT" : "EN"}
                             <img
                               className="rounded ms-1 me-1"
-                              src={i18n.language === "it" ? ItalianFlag : EnglishFlag}
+                              src={
+                                i18n.language === "it"
+                                  ? ItalianFlag
+                                  : EnglishFlag
+                              }
                               alt=""
                               width="20"
                               height="15"
                             />
                             &#709;
-                            
                           </a>
 
                           <ul
@@ -312,13 +357,19 @@ export default function NavbarComponent(props) {
                               backgroundColor: "rgba(255, 255, 255, 0.0)",
                               border: "none",
                             }}
-                            onClick={() => {changeLanguage()}}
+                            onClick={() => {
+                              changeLanguage();
+                            }}
                           >
                             <li className="navbar-submenu-edition-item d-flex align-items-center justify-content-start">
                               {i18n.language === "it" ? "EN" : "IT"}
                               <img
                                 className="rounded ms-1"
-                                src={i18n.language === "it" ? EnglishFlag : ItalianFlag}
+                                src={
+                                  i18n.language === "it"
+                                    ? EnglishFlag
+                                    : ItalianFlag
+                                }
                                 alt=""
                                 width="20"
                                 height="15"
