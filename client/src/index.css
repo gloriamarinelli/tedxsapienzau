@@ -30,6 +30,17 @@ code {
 }
 
 @font-face {
+  font-family: Anton;
+  src: url("./resources/Anton-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Sharp-Grotesk-Bold;
+  src: url("./resources/Sharp_Grotesk/SharpGrotesk-Bold15.otf")
+    format("opentype");
+}
+
+@font-face {
   font-family: FiraSansExtraCondensedRegular;
   src: url("./resources/FiraSansExtraCondensed/FiraSansExtraCondensed-Regular.ttf")
     format("opentype");

@@ -9,7 +9,10 @@ import Image1 from "../images/RFW23/RFW.webp";
 import Image from "../images/RFW23/logoRFW.webp";
 import Eventbrite from "../images/eventbrite.png";
 import Volunteers from "../images/volunteers.webp";
+import Earth from "../images/earth.webp";
+import CountdownLogo from "../images/countdown_logo.webp";
 import Events from "./Events";
+import TEDxLogoWhite from "../images/logo-white.png";
 import Blog from "./Blog";
 import BlogHome from "./BlogHome";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
@@ -20,6 +23,7 @@ import Iframe from "react-iframe";
 import Card from "react-bootstrap/Card";
 import backgroundVideo from "../videos/tedx.mp4";
 import { Button, Row } from "react-bootstrap";
+import Countdown from "../components/Countdown";
 
 const NewsSidebarSize = 18;
 
@@ -31,15 +35,20 @@ export default function Home() {
   const DEBUG = 1;
 
   useEffect(() => {
-    if (DEBUG) {
+    /**
+     * This function is used to animate the SVG path of the homepage
+     * The animation is triggered by the scroll event that changes the strokeDashoffset of the path
+     * The path is drawn as the user scrolls down the page
+     * Animation and path are only visible on desktop due to the size of the screen
+     * @author @simoneteglia
+     */
+    if (DEBUG && windowSize > 1200) {
       let path = svgRef.current.querySelector("path");
       let length = path.getTotalLength();
 
-      console.log(length);
-
       path.style.strokeDasharray = length + " " + length;
 
-      let offset = 8000;
+      let offset = 7800;
       path.style.strokeDashoffset = offset;
 
       window.addEventListener("scroll", function () {
@@ -85,51 +94,84 @@ export default function Home() {
   };
 
   if (DEBUG) {
-    return (
-      <div style={{ backgroundColor: "#000" }}>
-        <section
-          style={{
-            height: "3072px",
-            width: "100vw",
-            backgroundColor: "#000",
-            position: "relative",
-          }}
-        >
-          <svg
-            preserveAspectRatio="none"
-            width={"100%"}
-            height={"100%"}
+    if (windowSize > 1200) {
+      return (
+        <div style={{ backgroundColor: "#000" }}>
+          <section
             style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-            }}
-            ref={svgRef}
-            viewBox="0 0 1822 3072"
-            fill="none"
-          >
-            <path
-              d="M1284.5 0.5C1284.5 159.352 1126.36 408.347 756.694 244.5C387.029 80.6526 26.194 180 10.694 472C-4.80598 764 74.0005 1026 813.5 871C1553 716 1707.5 1002.5 1789.19 1273C1870.89 1543.5 1789.19 2259 850.194 1801C-88.8057 1343 144.5 1251.5 394.194 1214C643.888 1176.5 207.481 1678.98 76.1939 2228C15.694 2481 48.5 2937 374 2977.5C867.756 3038.94 953 2655 1196 2649C1404.31 2664.5 1441.4 2932.3 1443 3061.5"
-              stroke="#F1FF39"
-              stroke-width="17"
-            />
-          </svg>
-          <div
-            style={{
-              height: "100vh",
+              height: "3072px",
               width: "100vw",
-              backgroundColor: "black",
+              backgroundColor: "#000",
+              position: "relative",
             }}
-          ></div>
-          <div
-            style={{ height: "100vh", width: "100vw", backgroundColor: "blue" }}
-          ></div>
-          <div
-            style={{ height: "100vh", width: "100vw", backgroundColor: "pink" }}
-          ></div>
-        </section>
-      </div>
-    );
+          >
+            <svg
+              preserveAspectRatio="none"
+              width={"100%"}
+              height={"100%"}
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+              }}
+              ref={svgRef}
+              viewBox="0 0 1822 3072"
+              fill="none"
+            >
+              <path
+                d="M1284.5 0.5C1284.5 159.352 1126.36 408.347 756.694 244.5C387.029 80.6526 26.194 180 10.694 472C-4.80598 764 74.0005 1026 813.5 871C1553 716 1707.5 1002.5 1789.19 1273C1870.89 1543.5 1789.19 2259 850.194 1801C-88.8057 1343 144.5 1251.5 394.194 1214C643.888 1176.5 207.481 1678.98 76.1939 2228C15.694 2481 48.5 2937 374 2977.5C867.756 3038.94 953 2655 1196 2649C1404.31 2664.5 1441.4 2932.3 1443 3061.5"
+                stroke="#F1FF39"
+                stroke-width="17"
+              />
+            </svg>
+            <div
+              style={{
+                height: "100vh",
+                width: "100vw",
+                backgroundColor: "black",
+                display: "flex",
+                alignItems: "center",
+                paddingLeft: "7vw",
+                justifyContent: "space-between",
+                padding: "0 5vw",
+              }}
+            >
+              <img src={Earth} alt="Earth" width={windowSize / 3.5} />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                }}
+              >
+                <img src={TEDxLogoWhite} width={windowSize / 6} />
+                <img
+                  src={CountdownLogo}
+                  alt="Countdown Logo"
+                  width={windowSize / 2}
+                  style={{ marginBottom: "-80px" }}
+                />
+                <Countdown language="it" />
+              </div>
+            </div>
+            <div
+              style={{
+                height: "100vh",
+                width: "100vw",
+                backgroundColor: "blue",
+              }}
+            ></div>
+            <div
+              style={{
+                height: "100vh",
+                width: "100vw",
+                backgroundColor: "pink",
+              }}
+            ></div>
+          </section>
+        </div>
+      );
+    }
   }
 
   return (

@@ -1,27 +1,55 @@
 /* Countdown Timer */
 
+.root {
+  font-family: Sharp-Grotesk-Bold, sans-serif;
+  margin-bottom: -30px;
+
+  --block-width: 100px;
+  --block-height: 150px;
+  --font-size: 150px;
+  --label-font-size: 40px;
+
+  @media screen and (max-width: 1360px) {
+    --block-width: 80px;
+    --block-height: 100px;
+    --font-size: 100px;
+    --label-font-size: 30px;
+  }
+}
+
+.colon {
+  font-size: 38px;
+  font-weight: bold;
+  color: #ffffff;
+  transform: translateY(-22px);
+}
+
 .flip-clock-days {
-    --fcc-flip-duration: 0.5s; /* transition duration when flip card */
-    --fcc-digit-block-width: 40px; /* width of digit card */
-    --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
-    --fcc-digit-font-size: 60px; /* font size of digit */
-    --fcc-digit-color: yellow; /* color of digit */
-    --fcc-label-font-size: 20px; /* font size of label */
-    --fcc-label-color: yellow; /* color of label */
-    --fcc-background: black; /* background of digit card */
-    --fcc-divider-color: black; /* color of divider */
-    --fcc-divider-height: 3px; /* height of divider */
-    --fcc-separator-size: 6px; /* size of colon */
-    --fcc-separator-color: rgba(0, 0, 0, 0); /* color of colon */
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-digit-block-width: var(--block-width); /* width of digit card */
+  --fcc-digit-block-height: var(
+    --block-height
+  ); /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: var(--font-size); /* font size of digit */
+  --fcc-digit-color: yellow; /* color of digit */
+  --fcc-label-font-size: var(--label-font-size); /* font size of label */
+  --fcc-label-color: yellow(79, 79, 30); /* color of label */
+  --fcc-background: black; /* background of digit card */
+  --fcc-divider-color: black; /* color of divider */
+  --fcc-divider-height: 3px; /* height of divider */
+  --fcc-separator-size: 6px; /* size of colon */
+  --fcc-separator-color: rgba(0, 0, 0, 0); /* color of colon */
 }
 
 .flip-clock-hours {
   --fcc-flip-duration: 0.5s; /* transition duration when flip card */
-  --fcc-digit-block-width: 40px; /* width of digit card */
-  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
-  --fcc-digit-font-size: 60px; /* font size of digit */
+  --fcc-digit-block-width: var(--block-width); /* width of digit card */
+  --fcc-digit-block-height: var(
+    --block-height
+  ); /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: var(--font-size); /* font size of digit */
   --fcc-digit-color: yellow; /* color of digit */
-  --fcc-label-font-size: 20px; /* font size of label */
+  --fcc-label-font-size: var(--label-font-size); /* font size of label */
   --fcc-label-color: yellow; /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
@@ -31,11 +59,13 @@
 }
 .flip-clock-minutes {
   --fcc-flip-duration: 0.5s; /* transition duration when flip card */
-  --fcc-digit-block-width: 40px; /* width of digit card */
-  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
-  --fcc-digit-font-size: 60px; /* font size of digit */
+  --fcc-digit-block-width: var(--block-width); /* width of digit card */
+  --fcc-digit-block-height: var(
+    --block-height
+  ); /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: var(--font-size); /* font size of digit */
   --fcc-digit-color: white; /* color of digit */
-  --fcc-label-font-size: 20px; /* font size of label */
+  --fcc-label-font-size: var(--label-font-size); /* font size of label */
   --fcc-label-color: #ffffff; /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
@@ -46,27 +76,17 @@
 
 .flip-clock-seconds {
   --fcc-flip-duration: 0.5s; /* transition duration when flip card */
-  --fcc-digit-block-width: 40px; /* width of digit card */
-  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
-  --fcc-digit-font-size: 60px; /* font size of digit */
+  --fcc-digit-block-width: var(--block-width); /* width of digit card */
+  --fcc-digit-block-height: var(
+    --block-height
+  ); /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: var(--font-size); /* font size of digit */
   --fcc-digit-color: white; /* color of digit */
-  --fcc-label-font-size: 20px; /* font size of label */
+  --fcc-label-font-size: var(--label-font-size); /* font size of label */
   --fcc-label-color: #ffffff; /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
   --fcc-divider-height: 3px; /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: white; /* color of colon */
-}
-
-.colon {
-  font-size: 38px;
-  font-weight: bold;
-  color: #ffffff;
-  transform: translateY(-22px);
-}
-
-.root{
-  background-color: black;
-  font-family: Bayron, sans-serif;
 }
