@@ -27,24 +27,28 @@ const ImageThree = () => (
             positivo alla nostra comunità.
           </p>
         </div>
-        <div class="row-box-container">
-          <div class="row-box left-col">
-            <h2>I nostri pilastri</h2>
-            <ul>
-              <li className="img-txt-2">Community</li>
-              <li className="img-txt-2">Content marketing</li>
-              <li className="img-txt-2">Employer branding</li>
-            </ul>
+        <div class="row-box-container list-column-div">
+          <div className="ct-left">
+            <div class="row-box">
+              <h2>I nostri pilastri</h2>
+              <ul>
+                <li className="img-txt-2">Community</li>
+                <li className="img-txt-2">Content marketing</li>
+                <li className="img-txt-2">Employer branding</li>
+              </ul>
+            </div>
           </div>
-          <div class="row-box right-col">
-            <h2>Collabora con noi</h2>
-            <ul>
-              <li className="img-txt-2">Sponsor</li>
-              <li className="img-txt-2">Partner</li>
-              <li className="img-txt-2">Media partner</li>
-              <li className="img-txt-2">Community partner</li>
-              <li className="img-txt-2">Patrocinio</li>
-            </ul>
+          <div className="ct-right">
+            <div class="row-box">
+              <h2>Collabora con noi</h2>
+              <ul>
+                <li className="img-txt-2">Sponsor</li>
+                <li className="img-txt-2">Partner</li>
+                <li className="img-txt-2">Media partner</li>
+                <li className="img-txt-2">Community partner</li>
+                <li className="img-txt-2">Patrocinio</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
+/* prorietà img background riquadro scroll-down */
 .image {
   min-height: 100vh; /* altezza div con img di sfondo (ideale 110vh)*/
   position: relative;
 }
 
-.image .content {
+/* prorietà div corrispondente all'intero riquadro scroll-down */
+.content {
   position: absolute;
   display: flex;
   align-items: center;
@@ -11,10 +13,11 @@
   height: 100vh;
 }
 
+/* posizionamento a sx del div con testo nel riquadro scroll-down*/
 .ct-left {
   justify-content: left;
 }
-
+/* posizionamento a dx del div con testo nel riquadro scroll-down*/
 .ct-right {
   justify-content: right;
 }
@@ -59,14 +62,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* Allinea i contenuti in alto */
-  margin: 0 30%;
+  /*margin: 0 30%;*/
 }
 
 .left-col,
 .right-col {
   width: 45%; /* Imposta la larghezza delle colonne */
   color: white; /* Colore del testo */
-  padding: 20px; /* Spazio interno */
+  /*padding: 20px; /* Spazio interno */
 }
 
 .red-button {
@@ -106,4 +109,9 @@
 /* gradiente da grigio 191919 (top) a nero totale (bottom) */
 .gradient-div-bottom {
   background-image: linear-gradient(to bottom, #191919, black);
+}
+
+.list-column-div {
+  margin: 5% 20% 0 20%;
+  color: white;
 }
