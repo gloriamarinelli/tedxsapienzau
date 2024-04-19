@@ -92,3 +92,18 @@
 .statement {
   font-style: italic;
 }
+
+/* dimensioni div gradiente */
+.gradient-div {
+  width: 100%;
+  height: 20vh;
+}
+
+/* gradiente da nero totale (top) a grigio 191919 (bottom) */
+.gradient-div-top {
+  background-image: linear-gradient(to bottom, black, #191919);
+}
+/* gradiente da grigio 191919 (top) a nero totale (bottom) */
+.gradient-div-bottom {
+  background-image: linear-gradient(to bottom, #191919, black);
+}

@@ -497,12 +497,16 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
 
   function displayParallaxScrollDown() {
     return (
-      <div className="img-div">
-        <ImageOne />
-        <ImageTwo />
-        <ImageThree />
-        <ImageFour />
-        <ImageFive />
+      <div className="parent-div">
+        <div className="gradient-div gradient-div-top"></div>
+        <div className="img-div">
+          <ImageOne />
+          <ImageTwo />
+          <ImageThree />
+          <ImageFour />
+          <ImageFive />
+        </div>
+        <div className="gradient-div gradient-div-bottom"></div>
       </div>
     );
   }
