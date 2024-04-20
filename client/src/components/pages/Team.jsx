@@ -1,10 +1,22 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, Component } from "react";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 import axios from "axios";
 import "../../index.css";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import VolunteerCard from "../components/VolunteerCard";
+import Countdown from "../components/Countdown";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Info from "../components/Info";
+import Stack from '@mui/material/Stack';
+import BasicChips from "../components/BasicChips.jsx"
+import { log } from "three/examples/jsm/nodes/Nodes.js";
+
+
+
+
+
 
 export default function Team2022() {
   const [activeYear, setActiveYear] = useState(24);
@@ -17,19 +29,37 @@ export default function Team2022() {
   const button2024Mobile = useRef();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
+  const [hovered, setHovered] = useState(false);
 
-  const gruppi23 = ["dw", "cem", "ers", "la", "pem", "sec"];
-
-  const gruppi22 = [
-    "communication",
-    "curator",
-    "fundraising",
-    "grafica",
-    "marketing",
-    "planning",
-    "radio",
-    "speaker curator",
-  ];
+  const teams = {
+    "24": {
+      "it": ["Team IT & Website", "it"],
+      "pem": ["Team Planning & Event Management", "pem"],
+      "dex": ["Team Design", "dex"],
+      "sec": ["Team Speakers & Event Curation", "sec"],
+      "ers": ["Team External Relations & Sponsor", "ers"],
+      "hra": ["Team Human Resources & Academy", "hra"],
+      "cam": ["Team Communication & Marketing", "cam"],
+      "law": ["Team Legal & Administrative", "law"]
+    },
+    "23": {
+      "dw": ["Team Design & Website", "dw"],
+      "cem": ["Team Communication, Editorial, Marketing & Media", "cem"],
+      "ers": ["Team External Relation & Sponsor", "ers"],
+      "law": ["Team Legal & Administrative", "law"],
+      "pem": ["Team Planning & Event Management", "pem"],
+      "sec": ["Team Speaker & Event Curation", "sec"]
+    },
+    "22": {
+      "cur": ["Team Curator", "cur"],
+      "com": ["Team Communication", "com"],
+      "spe": ["Team Speaker Curation", "spe"],
+      "fund": ["Team Fundraising", "fund"],
+      "graf": ["Team Grafica", "graf"],
+      "rad": ["Team Radio", "rad"],
+      "plan": ["Team Planning", "plan"]
+    }
+  };
 
   const TeamNameStyle = {
     margin: "30px 0",
@@ -45,6 +75,26 @@ export default function Team2022() {
     backgroundColor: global.COLORS.NERO, //! Cambiare colore
     color: "#fff"
   };
+
+  const BoardInfos = [
+    {
+      team: "IT",
+      x: 504,
+      y: 620,
+      name: "Gloria",
+      linkedin: "www",
+    },
+    {
+      team: "Law",
+      x: 400,
+      y: 500,
+      name: "Lucia",
+      linkedin: "www",
+    }
+    // Add more person information objects as needed
+  ];
+  
+
 
   useEffect(() => {
     setBoard([]);
@@ -297,39 +347,45 @@ export default function Team2022() {
     return (
       <>
         <h1
+          id={teams["23"]["dw"][1]}
           style={TeamNameStyle}
         >
-          Team Design & Website
+          {teams["23"]["dw"][0]}
         </h1>
         <div className="row">{dwArray}</div>
         <h1
+          id={teams["23"]["cem"][1]}
           style={TeamNameStyle}
         >
-          Team Communication, Editorial, Marketing & Media
+          {teams["23"]["cem"][0]}
         </h1>
         <div className="row">{cemArray}</div>
         <h1
+          id={teams["23"]["ers"][1]}
           style={TeamNameStyle}
         >
-          Team External Relation & Sponsor
+          {teams["23"]["ers"][0]}
         </h1>
         <div className="row">{ersArray}</div>
         <h1
+          id={teams["23"]["law"][1]}
           style={TeamNameStyle}
         >
-          Team Legal & Administrative
+          {teams["23"]["law"][0]}
         </h1>
         <div className="row">{laArray}</div>
         <h1
+          id={teams["23"]["pem"][1]}
           style={TeamNameStyle}
         >
-          Team Planning & Event Management
+          {teams["23"]["pem"][0]}
         </h1>
         <div className="row">{pemArray}</div>
         <h1
+          id={teams["23"]["sec"][1]}
           style={TeamNameStyle}
         >
-          Team Speakers & Event Curation
+          {teams["23"]["sec"][0]}
         </h1>
         <div className="row">{secArray}</div>
       </>
@@ -490,45 +546,52 @@ export default function Team2022() {
     return (
       <>
         <h1
+          id={teams["22"]["cur"][1]}
           style={TeamNameStyle}
         >
-          Team Curator
+          {teams["22"]["cur"][0]}
         </h1>
         <div className="row">{curatorArray}</div>
         <h1
+          id={teams["22"]["com"][1]}
           style={TeamNameStyle}
         >
-          Team Communication
+          {teams["22"]["com"][0]}
         </h1>
         <div className="row">{communicationArray}</div>
         <h1
+          id={teams["22"]["spe"][1]}
           style={TeamNameStyle}
         >
-          Team Speaker Curation
+          {teams["22"]["spe"][0]}
         </h1>
         <div className="row">{speakerArray}</div>
         <h1
+          id={teams["22"]["fund"][1]}
           style={TeamNameStyle}
         >
-          Team Fundraising
+          {teams["22"]["fund"][0]}
         </h1>
         <div className="row">{fundArray}</div>
         <h1
+          id={teams["22"]["graf"][1]}
           style={TeamNameStyle}
         >
-          Team Grafica
+          {teams["22"]["graf"][0]}
         </h1>
         <div className="row">{graficaArray}</div>
         <h1
+          id={teams["22"]["rad"][1]}
           style={TeamNameStyle}
         >
-          Team Radio
+          {teams["22"]["rad"][0]}
         </h1>
         <div className="row">{radioArray}</div>
         <h1
+          id={teams["22"]["plan"][1]}
           style={TeamNameStyle}
         >
-          Team Planning
+          {teams["22"]["plan"][0]}
         </h1>
         <div className="row">{planArray}</div>
       </>
@@ -589,6 +652,48 @@ export default function Team2022() {
     );
   }
 
+  function handleBoardInfos24() {
+    return BoardInfos.map((value, index) => (
+      <Info
+        key={index} // Ensure each component has a unique key
+        x={value.x}
+        y={value.y}
+        name={value.name}
+        team={value.team}
+      />
+    ));
+  }
+  
+  function handleTeamsChips() {
+    if (activeYear === 24) { return } //TODO: Remove this line when the 2024 team is ready
+    const gruppi = teams[activeYear.toString()] || teams["24"];
+
+    const chips = Object.entries(gruppi).map(([key, [teamName, teamId]]) => (
+      <BasicChips
+        key={teamId} // Using `teamId` as the key for better stability in re-renders
+        teamName={teamName}
+        teamId={teamId}
+      />
+    ));
+  
+    return chips;
+    
+  }
+
+  function handleYearChips() {
+    const chips = [24, 23, 22].map((year) => {
+      return (
+        <BasicChips
+          key={year}
+          year={year}
+          active={year === activeYear}
+          onClick={() => year !== activeYear && setActiveYear(year)}
+        />
+      );
+    });
+    return chips;
+  }
+  
 
   if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
@@ -601,89 +706,76 @@ export default function Team2022() {
           style={{
             backgroundColor: global.COLORS.NERO,
             marginTop: global.UTILS.NAV_HEIGHT,
-            padding: "10px",
+            height: "411px",
+            top: "124px",
+            left: "32px",
+            gap: "0px",
+            opacity: "0px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
             display: "grid",
           }}
         >
-          <div
-            style={{
-              width: "99%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "black",
-              //marginRight: "10px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-            }}
-          >
-           
-          </div>
-        </section>
-        <section
-          className="pt-5 pb-5 px-5 d-flex justify-content-between"
-          style={{
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            backgroundColor: global.COLORS.NERO,
-          }}
-        >
-          <h3
-            style={{
-              fontSize: "25px",
-              fontWeight: "bold",
-              color: "black",
-              display: "flex",
-              color: "white",
-            }}
-          >
-            Chi ha partecipato:
-            <div
-              ref={button2024}
-              className="year-button underlined"
-              type="button"
-              style={{ marginLeft: "30px" }}
-              onClick={() => {
-                button2022.current.classList.remove("underlined");
-                button2023.current.classList.remove("underlined");
-                button2024.current.classList.add("underlined");
-                setActiveYear(24);
-              }}
-            >
-              2024
-            </div>
-            <div
-              ref={button2023}
-              className="year-button"
-              type="button"
-              style={{ marginLeft: "30px" }}
-              onClick={() => {
-                button2022.current.classList.remove("underlined");
-                button2024.current.classList.remove("underlined");
-                button2023.current.classList.add("underlined");
-                setActiveYear(23);
-              }}
-            >
-              2023
-            </div>
-            <div
-              ref={button2022}
-              className="year-button"
-              type="button"
-              style={{ marginLeft: "30px" }}
-              onClick={() => {
-                button2023.current.classList.remove("underlined");
-                button2024.current.classList.remove("underlined");
-                button2022.current.classList.add("underlined");
-                setActiveYear(22);
-              }}
-            >
-              2022
-            </div>
-          </h3>
+          <table>
+            <tr>
+              <td>
+                <Stack 
+                  direction="row" 
+                  spacing={1}
+                  alignItems = "center"
+                  justifyContent="center"
+                  useFlexGap
+                  flexWrap="wrap" 
+                > 
+                  {handleYearChips()}
+                </Stack>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div
+                  style={{
+                    padding: global.UTILS.BENTO_BOX_PADDING,
+                    //marginRight: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center"
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontSize: "120px",
+                      fontWeight: "bold",
+                      margin: "0",
+                      color: "white",
+                    }}
+                  >
+                    MEET OUR TEAM
+                  </h1>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td 
+                style={{
+                  padding: "10px",
+                  width: "851px"
+                }}
+              >
+                <Stack 
+                  direction="row" 
+                  spacing={1}
+                  alignItems = "center"
+                  justifyContent="center"
+                  useFlexGap
+                  flexWrap="wrap" 
+                >
+                  {handleTeamsChips()}
+                </Stack>
+              </td>
+            </tr>
+          </table>
         </section>
         <section
           style={{
@@ -821,7 +913,10 @@ export default function Team2022() {
         >
           {chooseYear()}
         </section>
+        
       </>
     );
   }
 }
+
+
