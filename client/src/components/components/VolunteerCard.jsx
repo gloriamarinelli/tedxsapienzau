@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
+import "../../resources/styles/volunteerCard.css";
+
 
 export default function VolunteerCard({
   id,
@@ -9,6 +11,47 @@ export default function VolunteerCard({
   link,
   year,
 }) {
+  const [hovered, setHovered] = useState(false);
+  if (year == 2024) {
+    return (
+      <>
+        <div
+          key={id}
+          className="col-lg-3 col-md-4 col-sm-12 mb-4 custom-card-container"
+          
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <div className={`custom-card ${hovered ? '' : 'hovered'}`}>
+            <img
+              src={
+                year === 2024
+                  ? `/images/team24/${image}`
+                  : `data:image/*;base64,${image}`
+              }
+              height="280"
+              alt="foto volontario"
+              className="custom-card-image"
+            />
+
+            <div className="custom-card-caption">
+              <a
+                href={link}
+                className="custom-card-link"
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  cursor: link ? "pointer" : "default",
+                }}
+              >
+                <div className="custom-card-heading">{nome}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
   if (year == 2023) {
     return (
       <>

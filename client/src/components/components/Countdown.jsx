@@ -61,3 +61,5 @@ export default function Countdown({ language = "it" }) {
 // The font family of the countdown can be changed by changing root class in the CSS file located at client/src/resources/styles/countdown.css
 
 // Documentation for the FlipClockCountdown component can be found at https://github.com/sLeeNguyen/react-flip-clock-countdown
+
+// onComplete={function} is a prop that can be added to the FlipClockCountdown component to execute a function when the countdown is completed
