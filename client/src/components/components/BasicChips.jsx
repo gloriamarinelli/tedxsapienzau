@@ -25,7 +25,7 @@ export default function BasicChips({teamName, teamId, active = false, year, onCl
   return (
     <ThemeProvider theme={theme}>
         <Chip 
-          label = { teamName ? teamName : year} 
+          label = { teamName ? teamName : '20' + year} 
           variant = { active ? 'default' : 'outlined'} // Only when active is true the Chip will have the default variant
           color = { active ? 'selected_year' : 'white'} // Only when active is true the Chip will have the selected_year color
           component= {teamName ? 'a' : null} // Only when used for the team name the Chip will be a link
