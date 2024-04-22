@@ -4,6 +4,7 @@ const ImageTwo = () => (
   <Parallax
     className="image"
     blur={0}
+    color="#191919"
     bgImage={wallpaper}
     strength={500}
     bgImageStyle={{

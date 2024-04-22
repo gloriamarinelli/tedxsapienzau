@@ -7,7 +7,7 @@ const ImageOne = () => (
     blur={0}
     color="#191919"
     bgImage={wallpaper}
-    strength={500}
+    strength={300}
     bgImageStyle={{
       minHeight: "100vh",
     }}

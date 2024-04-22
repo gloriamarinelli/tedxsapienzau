@@ -504,7 +504,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           <ImageTwo />
           <ImageThree />
           <ImageFour />
-          <ImageFive />
+          {/*<ImageFive />*/}
         </div>
         <div className="gradient-div gradient-div-bottom"></div>
       </div>
@@ -550,7 +550,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           ></div>
         </section>
 
-        <section
+       {/* <section
           className="pt-5 pb-5 px-5 d-flex justify-content-between"
           style={{
             //width: "95vw",
@@ -629,7 +629,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               Vuoi supportarci?
             </button>
           </Link>
-        </section>
+            </section> */}
 
         {chooseYear()}
       </>
@@ -641,7 +641,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       <>
         <section
           style={{
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            backgroundColor: global.COLORS.NERO, 
             marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
