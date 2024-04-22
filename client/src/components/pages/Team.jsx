@@ -8,15 +8,10 @@ import VolunteerCard from "../components/VolunteerCard";
 import Countdown from "../components/Countdown";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Info from "../components/Info";
-import Stack from '@mui/material/Stack';
-import BasicChips from "../components/BasicChips.jsx"
+//import Info from "../components/Info";
+import Stack from "@mui/material/Stack";
+import BasicChips from "../components/BasicChips.jsx";
 import { log } from "three/examples/jsm/nodes/Nodes.js";
-
-
-
-
-
 
 export default function Team2022() {
   const [activeYear, setActiveYear] = useState(24);
@@ -32,33 +27,33 @@ export default function Team2022() {
   const [hovered, setHovered] = useState(false);
 
   const teams = {
-    "24": {
-      "it": ["Team IT & Website", "it"],
-      "pem": ["Team Planning & Event Management", "pem"],
-      "dex": ["Team Design", "dex"],
-      "sec": ["Team Speakers & Event Curation", "sec"],
-      "ers": ["Team External Relations & Sponsor", "ers"],
-      "hra": ["Team Human Resources & Academy", "hra"],
-      "cam": ["Team Communication & Marketing", "cam"],
-      "law": ["Team Legal & Administrative", "law"]
+    24: {
+      it: ["Team IT & Website", "it"],
+      pem: ["Team Planning & Event Management", "pem"],
+      dex: ["Team Design", "dex"],
+      sec: ["Team Speakers & Event Curation", "sec"],
+      ers: ["Team External Relations & Sponsor", "ers"],
+      hra: ["Team Human Resources & Academy", "hra"],
+      cam: ["Team Communication & Marketing", "cam"],
+      law: ["Team Legal & Administrative", "law"],
     },
-    "23": {
-      "dw": ["Team Design & Website", "dw"],
-      "cem": ["Team Communication, Editorial, Marketing & Media", "cem"],
-      "ers": ["Team External Relation & Sponsor", "ers"],
-      "law": ["Team Legal & Administrative", "law"],
-      "pem": ["Team Planning & Event Management", "pem"],
-      "sec": ["Team Speaker & Event Curation", "sec"]
+    23: {
+      dw: ["Team Design & Website", "dw"],
+      cem: ["Team Communication, Editorial, Marketing & Media", "cem"],
+      ers: ["Team External Relation & Sponsor", "ers"],
+      law: ["Team Legal & Administrative", "law"],
+      pem: ["Team Planning & Event Management", "pem"],
+      sec: ["Team Speaker & Event Curation", "sec"],
     },
-    "22": {
-      "cur": ["Team Curator", "cur"],
-      "com": ["Team Communication", "com"],
-      "spe": ["Team Speaker Curation", "spe"],
-      "fund": ["Team Fundraising", "fund"],
-      "graf": ["Team Grafica", "graf"],
-      "rad": ["Team Radio", "rad"],
-      "plan": ["Team Planning", "plan"]
-    }
+    22: {
+      cur: ["Team Curator", "cur"],
+      com: ["Team Communication", "com"],
+      spe: ["Team Speaker Curation", "spe"],
+      fund: ["Team Fundraising", "fund"],
+      graf: ["Team Grafica", "graf"],
+      rad: ["Team Radio", "rad"],
+      plan: ["Team Planning", "plan"],
+    },
   };
 
   const TeamNameStyle = {
@@ -73,7 +68,7 @@ export default function Team2022() {
     fontFamily: "Fira Sans Extra Condensed, sans-serif",
     fontSize: "50px",
     backgroundColor: global.COLORS.NERO, //! Cambiare colore
-    color: "#fff"
+    color: "#fff",
   };
 
   const BoardInfos = [
@@ -90,11 +85,9 @@ export default function Team2022() {
       y: 500,
       name: "Lucia",
       linkedin: "www",
-    }
+    },
     // Add more person information objects as needed
   ];
-  
-
 
   useEffect(() => {
     setBoard([]);
@@ -156,11 +149,7 @@ export default function Team2022() {
       });
       return (
         <>
-          <h1
-            style={BoardNameStyle}
-          >
-            Board
-          </h1>
+          <h1 style={BoardNameStyle}>Board</h1>
           {res}
         </>
       );
@@ -203,11 +192,7 @@ export default function Team2022() {
       });
       return (
         <>
-          <h1
-            style={BoardNameStyle}
-          >
-            Board
-          </h1>
+          <h1 style={BoardNameStyle}>Board</h1>
           {res}
         </>
       );
@@ -346,45 +331,27 @@ export default function Team2022() {
 
     return (
       <>
-        <h1
-          id={teams["23"]["dw"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["23"]["dw"][1]} style={TeamNameStyle}>
           {teams["23"]["dw"][0]}
         </h1>
         <div className="row">{dwArray}</div>
-        <h1
-          id={teams["23"]["cem"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["23"]["cem"][1]} style={TeamNameStyle}>
           {teams["23"]["cem"][0]}
         </h1>
         <div className="row">{cemArray}</div>
-        <h1
-          id={teams["23"]["ers"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["23"]["ers"][1]} style={TeamNameStyle}>
           {teams["23"]["ers"][0]}
         </h1>
         <div className="row">{ersArray}</div>
-        <h1
-          id={teams["23"]["law"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["23"]["law"][1]} style={TeamNameStyle}>
           {teams["23"]["law"][0]}
         </h1>
         <div className="row">{laArray}</div>
-        <h1
-          id={teams["23"]["pem"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["23"]["pem"][1]} style={TeamNameStyle}>
           {teams["23"]["pem"][0]}
         </h1>
         <div className="row">{pemArray}</div>
-        <h1
-          id={teams["23"]["sec"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["23"]["sec"][1]} style={TeamNameStyle}>
           {teams["23"]["sec"][0]}
         </h1>
         <div className="row">{secArray}</div>
@@ -545,52 +512,31 @@ export default function Team2022() {
 
     return (
       <>
-        <h1
-          id={teams["22"]["cur"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["cur"][1]} style={TeamNameStyle}>
           {teams["22"]["cur"][0]}
         </h1>
         <div className="row">{curatorArray}</div>
-        <h1
-          id={teams["22"]["com"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["com"][1]} style={TeamNameStyle}>
           {teams["22"]["com"][0]}
         </h1>
         <div className="row">{communicationArray}</div>
-        <h1
-          id={teams["22"]["spe"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["spe"][1]} style={TeamNameStyle}>
           {teams["22"]["spe"][0]}
         </h1>
         <div className="row">{speakerArray}</div>
-        <h1
-          id={teams["22"]["fund"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["fund"][1]} style={TeamNameStyle}>
           {teams["22"]["fund"][0]}
         </h1>
         <div className="row">{fundArray}</div>
-        <h1
-          id={teams["22"]["graf"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["graf"][1]} style={TeamNameStyle}>
           {teams["22"]["graf"][0]}
         </h1>
         <div className="row">{graficaArray}</div>
-        <h1
-          id={teams["22"]["rad"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["rad"][1]} style={TeamNameStyle}>
           {teams["22"]["rad"][0]}
         </h1>
         <div className="row">{radioArray}</div>
-        <h1
-          id={teams["22"]["plan"][1]}
-          style={TeamNameStyle}
-        >
+        <h1 id={teams["22"]["plan"][1]} style={TeamNameStyle}>
           {teams["22"]["plan"][0]}
         </h1>
         <div className="row">{planArray}</div>
@@ -606,9 +552,7 @@ export default function Team2022() {
 
   function getTeam2023() {
     return (
-      <div 
-        className="container-xl"
-      >
+      <div className="container-xl">
         <div className="row">{handleBoardCardSection23()}</div>
         <div>{handleVolunteersCardSection23()}</div>
       </div>
@@ -622,9 +566,7 @@ export default function Team2022() {
   function getTeam2022() {
     return (
       <>
-        <div 
-          className="container"
-        >
+        <div className="container">
           <div className="row">{handleBoardCardSection22()}</div>
         </div>
         <div className="container">
@@ -652,7 +594,7 @@ export default function Team2022() {
     );
   }
 
-  function handleBoardInfos24() {
+  /*function handleBoardInfos24() {
     return BoardInfos.map((value, index) => (
       <Info
         key={index} // Ensure each component has a unique key
@@ -662,10 +604,12 @@ export default function Team2022() {
         team={value.team}
       />
     ));
-  }
-  
+  }*/
+
   function handleTeamsChips() {
-    if (activeYear === 24) { return } //TODO: Remove this line when the 2024 team is ready
+    if (activeYear === 24) {
+      return;
+    } //TODO: Remove this line when the 2024 team is ready
     const gruppi = teams[activeYear.toString()] || teams["24"];
 
     const chips = Object.entries(gruppi).map(([key, [teamName, teamId]]) => (
@@ -675,9 +619,8 @@ export default function Team2022() {
         teamId={teamId}
       />
     ));
-  
+
     return chips;
-    
   }
 
   function handleYearChips() {
@@ -693,7 +636,6 @@ export default function Team2022() {
     });
     return chips;
   }
-  
 
   if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
@@ -719,14 +661,14 @@ export default function Team2022() {
           <table>
             <tr>
               <td>
-                <Stack 
-                  direction="row" 
+                <Stack
+                  direction="row"
                   spacing={1}
-                  alignItems = "center"
+                  alignItems="center"
                   justifyContent="center"
                   useFlexGap
-                  flexWrap="wrap" 
-                > 
+                  flexWrap="wrap"
+                >
                   {handleYearChips()}
                 </Stack>
               </td>
@@ -740,7 +682,7 @@ export default function Team2022() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   <h1
@@ -757,19 +699,19 @@ export default function Team2022() {
               </td>
             </tr>
             <tr>
-              <td 
+              <td
                 style={{
                   padding: "10px",
-                  width: "851px"
+                  width: "851px",
                 }}
               >
-                <Stack 
-                  direction="row" 
+                <Stack
+                  direction="row"
                   spacing={1}
-                  alignItems = "center"
+                  alignItems="center"
                   justifyContent="center"
                   useFlexGap
-                  flexWrap="wrap" 
+                  flexWrap="wrap"
                 >
                   {handleTeamsChips()}
                 </Stack>
@@ -853,10 +795,10 @@ export default function Team2022() {
               ref={button2024Mobile}
               className="year-button underlined px-3"
               type="button"
-              style={{ 
+              style={{
                 //marginRight: "30px",
                 fontSize: "30px",
-                color: "white"
+                color: "white",
               }}
               onClick={() => {
                 button2023Mobile.current.classList.remove("underlined");
@@ -871,10 +813,10 @@ export default function Team2022() {
               ref={button2023Mobile}
               className="year-button px-3"
               type="button"
-              style={{ 
+              style={{
                 //marginRight: "30px",
                 fontSize: "30px",
-                color: "white"
+                color: "white",
               }}
               onClick={() => {
                 button2024Mobile.current.classList.remove("underlined");
@@ -889,10 +831,10 @@ export default function Team2022() {
               ref={button2022Mobile}
               className="year-button px-3"
               type="button"
-              style={{ 
+              style={{
                 //marginRight: "30px",
                 fontSize: "30px",
-                color: "white"
+                color: "white",
               }}
               onClick={() => {
                 button2023Mobile.current.classList.remove("underlined");
@@ -913,10 +855,7 @@ export default function Team2022() {
         >
           {chooseYear()}
         </section>
-        
       </>
     );
   }
 }
-
-
