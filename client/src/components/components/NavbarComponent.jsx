@@ -170,7 +170,7 @@ export default function NavbarComponent(props) {
                               <Link
                                 ref={back_to_zero}
                                 className="navbar-submenu-edition-item ms-3"
-                                to="/edizione2023"
+                                to="/eventi/edizione2023"
                                 onClick={() => {
                                   setExpanded(false);
                                   selectOption("back_to_zero");
@@ -183,7 +183,7 @@ export default function NavbarComponent(props) {
                               <Link
                                 ref={awards23}
                                 className="navbar-submenu-edition-item ms-3"
-                                to="/awards2023"
+                                to="/eventi/awards2023"
                                 onClick={() => {
                                   setExpanded(false);
                                   selectOption("awards23");
@@ -199,7 +199,7 @@ export default function NavbarComponent(props) {
                               <Link
                                 ref={act}
                                 className="navbar-submenu-edition-item ms-3"
-                                to="/edizione2022"
+                                to="/eventi/edizione2022"
                                 onClick={() => {
                                   setExpanded(false);
                                   selectOption("act");
@@ -212,7 +212,7 @@ export default function NavbarComponent(props) {
                               <Link
                                 ref={awards22}
                                 className="navbar-submenu-edition-item ms-3"
-                                to="/awards2022"
+                                to="/eventi/awards2022"
                                 onClick={() => {
                                   setExpanded(false);
                                   selectOption("awards22");

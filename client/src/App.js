@@ -27,9 +27,10 @@ import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
 
-import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import Awards from "./components/pages/Awards";
 import ScrollToTop from "./components/components/ScrollToTop";
+
+import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import JoinUs from "./components/pages/JoinUs";
 
 const router = createBrowserRouter([
@@ -72,10 +73,10 @@ const router = createBrowserRouter([
         path: "/mission&vision",
         element: <MissionandVision />,
       },
-      {
+      /*{
         path: "/parlanodinoi",
         element: <ParlanoDiNoi />,
-      },
+      },*/
       {
         path: "/location",
         element: <Location />,
@@ -90,11 +91,11 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/edizione2022",
+        path: "/eventi/edizione2022",
         element: <Edizione2022 />,
       },
       {
-        path: "/edizione2023",
+        path: "/eventi/edizione2023",
         element: <Edizione2023 />,
       },
       {
@@ -106,7 +107,7 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/statuto",
+        path: "/statute",
         element: <Statuto />,
       },
       {
@@ -126,11 +127,11 @@ const router = createBrowserRouter([
         element: <Awards />,
       },
       {
-        path: "/awards2023",
+        path: "/eventi/awards2023",
         element: <Awards2023 />,
       },
       {
-        path: "/awards2022",
+        path: "/events/awards2022",
         element: <Awards2022 />,
       },
       {
@@ -142,7 +143,7 @@ const router = createBrowserRouter([
         element: <RFW2023 />,
       },
       {
-        path: "/workshop",
+        path: "/events/workshop",
         element: <Workshop />,
       },
       {
