@@ -9,7 +9,7 @@
 }
 
 .where-is-the-event > div:nth-child(1) {
-  background-color: black;
+  background-color:   #191919;
   display: flex;
   padding: 50px;
   color: white;
@@ -19,7 +19,7 @@
 }
 
 .where-is-the-event > div:nth-child(2) {
-  background-color: black;
+  background-color: #191919;
   display: grid;
   place-items: center;
 }

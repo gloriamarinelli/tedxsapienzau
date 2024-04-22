@@ -36,7 +36,7 @@
   --fcc-label-color: yellow(79, 79, 30); /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
-  --fcc-divider-height: 3px; /* height of divider */
+  --fcc-divider-height: 5px; /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: rgba(0, 0, 0, 0); /* color of colon */
 }
