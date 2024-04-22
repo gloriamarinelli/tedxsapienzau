@@ -14,7 +14,6 @@ import ImageOne from "../components/partners_scrolldown/ImageOne.js";
 import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
 import ImageThree from "../components/partners_scrolldown/ImageThree.js";
 import ImageFour from "../components/partners_scrolldown/ImageFour.js";
-import ImageFive from "../components/partners_scrolldown/ImageFive.js";
 
 export default function Partners() {
   const [activeYear, setActiveYear] = useState(24);
@@ -512,13 +511,58 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
   }
 
   function getSponsor2024() {
-    return <>{displayParallaxScrollDown()}</>;
+    return (
+      <>
+        <section className="page-section" id="portfolio">
+          <div className="container">
+            <h2
+              className="section-heading"
+              style={{
+                fontFamily: "Fira Sans Extra Condensed, sans-serif",
+                fontSize: "2.5em",
+                color: "white",
+              }}
+            >
+              Our Sponsors
+            </h2>
+            <div className="image-scroller-container">
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+            </div>
+            {/*<div className="image-scroller-container">
+                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
+                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
+                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
+                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
+                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
+              </div>*/}
+          </div>
+        </section>
+      </>
+    );
+  }
+
+  function partners24() {
+    return (
+      <>
+        {displayParallaxScrollDown()}
+        {getSponsor2024()}
+      </>
+    );
   }
 
   function chooseYear() {
     if (activeYear === 22) return getSponsor2022();
     else if (activeYear === 23) return getSponsor2023();
-    else return getSponsor2024();
+    else return partners24();
   }
 
   function partnerLayout24Desktop() {
@@ -550,7 +594,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           ></div>
         </section>
 
-       {/* <section
+        {/* <section
           className="pt-5 pb-5 px-5 d-flex justify-content-between"
           style={{
             //width: "95vw",
@@ -641,7 +685,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       <>
         <section
           style={{
-            backgroundColor: global.COLORS.NERO, 
+            backgroundColor: global.COLORS.NERO,
             marginTop: global.UTILS.NAV_HEIGHT,
             padding: "10px",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
