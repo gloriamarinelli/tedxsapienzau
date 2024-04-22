@@ -15,6 +15,7 @@ import Events from "./Events";
 import TEDxLogoWhite from "../images/logo-white.png";
 import Blog from "./Blog";
 import BlogHome from "./BlogHome";
+import MvHome from "./MvHome";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
@@ -24,6 +25,7 @@ import Card from "react-bootstrap/Card";
 import backgroundVideo from "../videos/tedx.mp4";
 import { Button, Row } from "react-bootstrap";
 import Countdown from "../components/Countdown";
+import CountUp from "react-countup";
 
 const NewsSidebarSize = 18;
 
@@ -286,6 +288,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section>
+        <MvHome withTitle={false} />
+      </section>
+
       <section>
         <Events withTitle={false} />
         <div

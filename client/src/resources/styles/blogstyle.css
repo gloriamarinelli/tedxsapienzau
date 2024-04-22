@@ -10,17 +10,21 @@ body {
 **/
 
 .main-container {
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	color: #FFF;
+	
 }
 
 .post-container {
-	width: 100%;
+	width: 90%;
 	max-width: 700px;
 	margin: auto;
 	margin-top: 50px;
+	border-radius: 25px;
+	background-color: #191919;
+	padding: 20px;
 }
 
 .post-container > h1 {
@@ -130,11 +134,19 @@ body {
 
 
 
+.blog-card .description:hover{
+	padding: 1rem;
+	background: #eb0028;
+	position: relative;
+	z-index: 1;
+	transition: background-color 0.3s ease;
+}
 .blog-card .description {
 	padding: 1rem;
 	background: #191919;
 	position: relative;
 	z-index: 1;
+	transition: background-color 0.3s ease;
 }
 
 
@@ -152,8 +164,7 @@ body {
 		flex-basis: 60%;
 	}
 	.blog-card .description:before {
-		transform: skewX(-3deg);
-		content: "";
+		
 		background: #191919;
 		width: 30px;
 		position: absolute;
@@ -173,6 +184,26 @@ body {
 	.blog-card.alt .details {
 		padding-left: 25px;
 	}
+	.underline {
+		color: #eb0028;
+		text-decoration: underline;
+		text-decoration-color: #eb0028;
+	}
+	.pagination .page-link {
+		color: #FFF !important; 
+		background-color: #191919 !important; 
+		border-color: #191919 !important; 
+	  }
+	  
+	  .pagination .page-item.active .page-link {
+		background-color: #eb0028 !important; 
+		border-color: #eb0028 !important; 
+	  }
+	  
+	  .pagination .page-link:hover {
+		background-color: #FFF !important; 
+		color: #191919 !important;
+	  }
 }
 
 /** SHIMMER */

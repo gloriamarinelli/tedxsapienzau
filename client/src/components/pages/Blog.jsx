@@ -18,7 +18,7 @@ export default function Blog({ withTitle = true }) {
 
   const { currentUser } = useContext(AuthContext);
 
-  const pageSize = 12;
+  const pageSize = 9;
   const clearDbIncrement = 10;
   const clearDbMagic = 2;
 
@@ -155,54 +155,64 @@ export default function Blog({ withTitle = true }) {
           </section>
           <section>
             {!isLoading ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                }}
-              >
-                {blog.map((blog) => {
-                  const { id, titolo, image, data } = blog;
-                  return (
-                    <BlogCard
-                      key={id}
-                      titolo={titolo}
-                      image={image}
-                      data={data}
-                      id={id}
-                    />
-                  );
-                })}
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                {[...Array(Math.ceil(blog.length / 3))].map((_, rowIndex) => (
+                  <div
+                    key={rowIndex}
+                    style={{ display: "flex", marginBottom: "20px" }}
+                  >
+                    {[...Array(3)].map((_, colIndex) => {
+                      const cardIndex = rowIndex * 3 + colIndex;
+                      const blogItem = blog[cardIndex];
+                      return blogItem ? (
+                        <div
+                          key={blogItem.id}
+                          style={{ flex: 1, margin: "0 10px" }}
+                        >
+                          <BlogCard
+                            titolo={blogItem.titolo}
+                            image={blogItem.image}
+                            data={blogItem.data}
+                            id={blogItem.id}
+                          />
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
+                ))}
               </div>
             ) : (
-              <div class="blog-card">
-                <div class="meta">
-                  <div
-                    class="photo shimmer"
-                    style={{
-                      background: "lightgrey",
-                      width: "350px",
-                      height: "250px",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                    }}
-                    alt={"loading"}
-                  ></div>
-                </div>
-                <div class="description">
-                  <h4
-                    style={{
-                      fontFamily: "GothamBold",
-                    }}
-                  >
-                    Loading...
-                  </h4>
+              <div style={{ backgroundColor: "#000" }}>
+                <div class="blog-card">
+                  <div class="meta">
+                    <div
+                      class="photo shimmer"
+                      style={{
+                        background: "lightgrey",
+                        width: "100%",
+                        height: "250px",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                      alt={"loading"}
+                    ></div>
+                  </div>
+                  <div class="description">
+                    <h4
+                      style={{
+                        fontFamily: "GothamBold",
+                      }}
+                    >
+                      Loading...
+                    </h4>
+                  </div>
                 </div>
               </div>
             )}
             {!isLoading && getButtons()}
           </section>
+          <div style={{ backgroundColor: "#000" }}>a</div>
+          <section></section>
         </div>
       </>
     );

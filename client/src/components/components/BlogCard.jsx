@@ -64,7 +64,7 @@ export default function BlogCard({ id, titolo, image, data }) {
 									: ""}
 							</span>
 						</h4>
-				<a className="link" href={`/blog/${id}`}>
+				<a className="underline" href={`/blog/${id}`}>
 					<h4
 						style={{
 							fontFamily: "Fira Sans Extra Condensed, sans-serif",
