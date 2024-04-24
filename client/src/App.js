@@ -131,7 +131,7 @@ const router = createBrowserRouter([
         element: <Awards2023 />,
       },
       {
-        path: "/events/awards2022",
+        path: "/eventi/awards2022",
         element: <Awards2022 />,
       },
       {

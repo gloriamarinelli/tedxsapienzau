@@ -201,6 +201,7 @@ export default function Blog({ withTitle = true }) {
                     <h4
                       style={{
                         fontFamily: "GothamBold",
+                        color: "white"
                       }}
                     >
                       Loading...

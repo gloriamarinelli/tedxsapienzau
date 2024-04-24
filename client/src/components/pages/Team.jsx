@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect, Component } from "react";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
 import axios from "axios";
-import "../../index.css";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import VolunteerCard from "../components/VolunteerCard";
@@ -35,7 +34,7 @@ export default function Team2022() {
       ers: ["Team External Relations & Sponsor", "ers"],
       hra: ["Team Human Resources & Academy", "hra"],
       cam: ["Team Communication & Marketing", "cam"],
-      law: ["Team Legal & Administrative", "law"],
+      law: ["Team Legal & Administrative", "la"],
     },
     23: {
       dw: ["Team Design & Website", "dw"],
@@ -169,7 +168,7 @@ export default function Team2022() {
             alignItems: "center",
           }}
         >
-          <div className="spinner"></div>
+          <div className="spinner" style></div>
         </div>
       );
     } else {
