@@ -50,7 +50,7 @@ export default function Home() {
 
       path.style.strokeDasharray = length + " " + length;
 
-      let offset = 7800;
+      let offset = 6500;
       path.style.strokeDashoffset = offset;
 
       window.addEventListener("scroll", function () {
@@ -101,14 +101,14 @@ export default function Home() {
         <div style={{ backgroundColor: "#000" }}>
           <section
             style={{
-              height: "3072px",
+              height: "100%",
               width: "100vw",
               backgroundColor: "#000",
               position: "relative",
+              fontFamily: "Anton",
             }}
           >
             <svg
-              preserveAspectRatio="none"
               width={"100%"}
               height={"100%"}
               style={{
@@ -117,13 +117,15 @@ export default function Home() {
                 top: 0,
               }}
               ref={svgRef}
-              viewBox="0 0 1822 3072"
+              viewBox="0 0 1918 2692"
               fill="none"
             >
               <path
-                d="M1284.5 0.5C1284.5 159.352 1126.36 408.347 756.694 244.5C387.029 80.6526 26.194 180 10.694 472C-4.80598 764 74.0005 1026 813.5 871C1553 716 1707.5 1002.5 1789.19 1273C1870.89 1543.5 1789.19 2259 850.194 1801C-88.8057 1343 144.5 1251.5 394.194 1214C643.888 1176.5 207.481 1678.98 76.1939 2228C15.694 2481 48.5 2937 374 2977.5C867.756 3038.94 953 2655 1196 2649C1404.31 2664.5 1441.4 2932.3 1443 3061.5"
-                stroke="#F1FF39"
-                stroke-width="17"
+                d="M4.5 13.5C34.3333 0.999942 109.48 31.5142 124 135.001C155.5 359.5 112.5 664 455.5 614.003C974.806 538.307 854 274.5 683 337.001C580.571 374.439 582.029 514.713 854 810.004C1198 1183.5 545.179 1659.65 359.5 1454.01C-73 975.004 1236.14 721.159 854 1619.01C462 2540.01 782.848 2880.17 1165 2568.01C1675.5 2151.01 1563.5 2198.01 1918 2198.01"
+                stroke={global.COLORS.GIALLO_COUNTDOWN}
+                stroke-width="20"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
             <div
@@ -161,8 +163,38 @@ export default function Home() {
                 height: "100vh",
                 width: "100vw",
                 backgroundColor: "blue",
+                display: "flex",
+                justifyContent: "flex-end",
               }}
-            ></div>
+            >
+              <div
+                style={{
+                  width: "50%",
+                  height: "100%",
+                  padding: "30px",
+                  backgroundColor: "red",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  fontSize: "20px",
+                }}
+              >
+                <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+                  LOREM IPSUM
+                </h1>
+                <p style={{ maxWidth: "30ch", color: "#fff" }}>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Pariatur reiciendis sapiente maxime hic animi atque sed nam?
+                  Ex eum earum vero facere hic et distinctio, illum
+                  reprehenderit? Laboriosam dolorem aliquam quam autem
+                  similique, est possimus omnis voluptatum, provident illo
+                  tempora nemo excepturi fugit ipsum quis pariatur commodi
+                  incidunt corrupti dolor facilis, nisi cupiditate facere.
+                  Nesciunt molestias repellendus nam quo fugiat.
+                </p>
+              </div>
+            </div>
             <div
               style={{
                 height: "100vh",

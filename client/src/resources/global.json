@@ -13,7 +13,8 @@
     "CELESTE": "#5272b5",
     "NERO": "#000000",
     "BIANCO": "#FFFFFF",
-    "GRIGIO": "#191919"
+    "GRIGIO": "#191919",
+    "GIALLO_COUNTDOWN": "#F1FF39"
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",
