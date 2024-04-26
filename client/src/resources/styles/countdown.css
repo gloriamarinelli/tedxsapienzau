@@ -21,12 +21,21 @@
   }
 
   @media screen and (max-width: 1100px) {
-    --block-width: 30px;
-    --block-height: 70px;
+    --block-width: 60px;
+    --block-height: 80px;
+    --font-size: 80px;
+    --label-font-size: 30px;
+    --divider-height: 4px;
+    --colon-translation: -30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    --block-width: 32px;
+    --block-height: 60px;
     --font-size: 60px;
     --label-font-size: 20px;
     --divider-height: 3px;
-    --colon-translation: -26px;
+    --colon-translation: -22px;
   }
 }
 

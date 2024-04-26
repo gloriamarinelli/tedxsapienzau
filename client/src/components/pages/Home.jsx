@@ -116,6 +116,7 @@ export default function Home() {
                   position: "absolute",
                   left: 0,
                   top: 0,
+                  zIndex: 1,
                 }}
                 ref={svgRef}
                 viewBox="0 0 1918 2692"
@@ -137,6 +138,7 @@ export default function Home() {
                   position: "absolute",
                   left: 0,
                   top: 0,
+                  zIndex: 1,
                 }}
                 ref={svgRef}
                 viewBox="0 0 1570 2488"
@@ -163,7 +165,15 @@ export default function Home() {
                 padding: "0 5vw",
               }}
             >
-              <img src={Earth} alt="Earth" width={windowSize / 3.5} />
+              <img
+                src={Earth}
+                alt="Earth"
+                width={windowSize / 3.5}
+                style={{
+                  maskImage:
+                    "linear-gradient(to top right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
+                }}
+              />
               <div
                 style={{
                   display: "flex",
@@ -228,6 +238,77 @@ export default function Home() {
           </section>
         </div>
       );
+    } else if (windowSize > global.UTILS.MOBILE_WIDTH) {
+      return (
+        <div style={{ backgroundColor: "#000" }}>
+          <section
+            style={{
+              height: "100%",
+              width: "100vw",
+              backgroundColor: "#000",
+              position: "relative",
+              fontFamily: "Anton",
+              paddingTop: "100px",
+            }}
+          >
+            <div
+              style={{
+                height: "100vh",
+                width: "100vw",
+                backgroundColor: "black",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                flexDirection: "column",
+                padding: " 30px 0",
+              }}
+            >
+              <img
+                src={Earth}
+                alt="Earth"
+                height={"50%"}
+                style={{
+                  alignSelf: "center",
+                  maskImage:
+                    "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
+                }}
+              />
+              <img
+                src={CountdownLogo}
+                alt="Countdown Logo"
+                width={"80%"}
+                style={{ marginTop: "-80px", marginBottom: "-50px" }}
+              />
+              <Countdown language="it" />
+            </div>
+            <div
+              style={{
+                height: "100%",
+                width: "100vw",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "50px 0",
+              }}
+            >
+              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+                LOREM IPSUM
+              </h1>
+              <p style={{ maxWidth: "25ch", color: "#fff" }}>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Pariatur reiciendis sapiente maxime hic animi atque sed nam? Ex
+                eum earum vero facere hic et distinctio, illum reprehenderit?
+                Laboriosam dolorem aliquam quam autem similique, est possimus
+                omnis voluptatum, provident illo tempora nemo excepturi fugit
+                ipsum quis pariatur commodi incidunt corrupti dolor facilis,
+                nisi cupiditate facere. Nesciunt molestias repellendus nam quo
+                fugiat.
+              </p>
+            </div>
+          </section>
+        </div>
+      );
     } else {
       return (
         <div style={{ backgroundColor: "#000" }}>
@@ -243,7 +324,7 @@ export default function Home() {
           >
             <div
               style={{
-                height: "100%",
+                height: "100vh",
                 width: "100vw",
                 backgroundColor: "black",
                 display: "flex",
@@ -256,7 +337,7 @@ export default function Home() {
               <img
                 src={Earth}
                 alt="Earth"
-                width={"90%"}
+                height={"60%"}
                 style={{
                   alignSelf: "center",
                   maskImage:
@@ -266,7 +347,7 @@ export default function Home() {
               <img
                 src={CountdownLogo}
                 alt="Countdown Logo"
-                width={"90%"}
+                width={"80%"}
                 style={{ marginTop: "-80px", marginBottom: "-50px" }}
               />
               <Countdown language="it" />
