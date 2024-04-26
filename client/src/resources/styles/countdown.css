@@ -8,12 +8,25 @@
   --block-height: 150px;
   --font-size: 150px;
   --label-font-size: 40px;
+  --divider-height: 5px;
+  --colon-translation: -22px;
 
   @media screen and (max-width: 1360px) {
     --block-width: 80px;
     --block-height: 100px;
     --font-size: 100px;
     --label-font-size: 30px;
+    --divider-height: 4px;
+    --colon-translation: -22px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    --block-width: 30px;
+    --block-height: 70px;
+    --font-size: 60px;
+    --label-font-size: 20px;
+    --divider-height: 3px;
+    --colon-translation: -26px;
   }
 }
 
@@ -21,7 +34,7 @@
   font-size: 38px;
   font-weight: bold;
   color: #ffffff;
-  transform: translateY(-22px);
+  transform: translateY(var(--colon-translation));
 }
 
 .flip-clock-days {
@@ -36,7 +49,7 @@
   --fcc-label-color: yellow(79, 79, 30); /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
-  --fcc-divider-height: 5px; /* height of divider */
+  --fcc-divider-height: var(--divider-height); /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: rgba(0, 0, 0, 0); /* color of colon */
 }
@@ -53,7 +66,7 @@
   --fcc-label-color: yellow; /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
-  --fcc-divider-height: 3px; /* height of divider */
+  --fcc-divider-height: var(--divider-height); /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: rgba(0, 0, 0, 0); /* color of colon */
 }
@@ -69,7 +82,7 @@
   --fcc-label-color: #ffffff; /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
-  --fcc-divider-height: 3px; /* height of divider */
+  --fcc-divider-height: var(--divider-height); /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: white; /* color of colon */
 }
@@ -86,7 +99,7 @@
   --fcc-label-color: #ffffff; /* color of label */
   --fcc-background: black; /* background of digit card */
   --fcc-divider-color: black; /* color of divider */
-  --fcc-divider-height: 3px; /* height of divider */
+  --fcc-divider-height: var(--divider-height); /* height of divider */
   --fcc-separator-size: 6px; /* size of colon */
   --fcc-separator-color: white; /* color of colon */
 }
