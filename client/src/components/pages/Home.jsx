@@ -274,6 +274,7 @@ export default function Home() {
                 justifyContent: "flex-start",
                 flexDirection: "column",
                 padding: " 30px 0",
+                overflow: "hidden",
               }}
             >
               <img
@@ -337,7 +338,7 @@ export default function Home() {
           >
             <div
               style={{
-                height: "100vh",
+                height: "100%",
                 width: "100vw",
                 backgroundColor: "black",
                 display: "flex",
@@ -345,12 +346,13 @@ export default function Home() {
                 justifyContent: "flex-start",
                 flexDirection: "column",
                 padding: " 30px 0",
+                overflow: "hidden",
               }}
             >
               <img
                 src={Earth}
                 alt="Earth"
-                height={"60%"}
+                width={"85%"}
                 style={{
                   alignSelf: "center",
                   maskImage:
