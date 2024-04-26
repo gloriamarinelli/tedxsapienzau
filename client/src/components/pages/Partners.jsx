@@ -571,14 +571,15 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         <section
           style={{
             backgroundColor: global.COLORS.NERO,
-            marginTop: global.UTILS.NAV_HEIGHT,
-            padding: "10px",
+            //marginTop: global.UTILS.NAV_HEIGHT,
+            //padding: "10px",
+            paddingTop: "5vh",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
             display: "grid",
           }}
         >
-          <div
+          {/*<div
             style={{
               width: "99%",
               height: "80%",
@@ -591,7 +592,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               alignItems: "center",
               textAlign: "center",
             }}
-          ></div>
+          ></div>*/}
         </section>
 
         {/* <section
