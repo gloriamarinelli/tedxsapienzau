@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import wallpaper from "./img/2.webp";
+import wallpaper from "./img/2.png";
 
 const ImageOne = () => (
   <Parallax
