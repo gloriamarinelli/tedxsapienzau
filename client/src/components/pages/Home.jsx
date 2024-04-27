@@ -181,7 +181,11 @@ export default function Home() {
                   alignItems: "flex-end",
                 }}
               >
-                <img src={TEDxLogoWhite} width={windowSize / 6} />
+                {/* <img
+                  
+                  src={TEDxLogoWhite}
+                  width={windowSize / 6}
+              />*/}
                 <img
                   src={CountdownLogo}
                   alt="Countdown Logo"
@@ -195,7 +199,8 @@ export default function Home() {
               style={{
                 height: "100vh",
                 width: "100vw",
-                backgroundColor: "blue",
+                //backgroundColor: "blue",
+                backgroundColor: "black",
                 display: "flex",
                 justifyContent: "flex-end",
               }}
@@ -205,7 +210,8 @@ export default function Home() {
                   width: "50%",
                   height: "100%",
                   padding: "30px",
-                  backgroundColor: "red",
+                  //backgroundColor: "red",
+                  backgroundColor: "black",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -232,9 +238,16 @@ export default function Home() {
               style={{
                 height: "100vh",
                 width: "100vw",
-                backgroundColor: "pink",
+                backgroundColor: "black",
+                //backgroundColor: "pink",
+                textAlign: "center",
+                marginTop: "50px",
               }}
-            ></div>
+            >
+              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+                SPEAKERS{" "}
+              </h1>
+            </div>
           </section>
         </div>
       );
@@ -261,6 +274,7 @@ export default function Home() {
                 justifyContent: "flex-start",
                 flexDirection: "column",
                 padding: " 30px 0",
+                overflow: "hidden",
               }}
             >
               <img
@@ -324,7 +338,7 @@ export default function Home() {
           >
             <div
               style={{
-                height: "100vh",
+                height: "100%",
                 width: "100vw",
                 backgroundColor: "black",
                 display: "flex",
@@ -332,12 +346,13 @@ export default function Home() {
                 justifyContent: "flex-start",
                 flexDirection: "column",
                 padding: " 30px 0",
+                overflow: "hidden",
               }}
             >
               <img
                 src={Earth}
                 alt="Earth"
-                height={"60%"}
+                width={"85%"}
                 style={{
                   alignSelf: "center",
                   maskImage:
