@@ -510,7 +510,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function checkElementPosition() {
+  /*function checkElementPosition() {
     const group_id_1 = "1st-group";
     const group_id_2 = "2nd-group";
     const last_element_id = "last-element";
@@ -523,7 +523,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     let lastElement = document.getElementById(last_element_id);
     let sndLastElement = document.getElementById(snd_last_element_id);
     
-    if (!groupElement || !lastElement) {
+    if (!groupElement || !lastElement || !groupElement2 || !sndLastElement) {
       console.debug("not found");
       return;
     }
@@ -549,7 +549,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     else{
       groupElement.style.animationPlayState = "running";
     }
-  }
+  }*/
   
   function getSponsor2024() {
     return (
@@ -580,21 +580,31 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <PartnerCard24 imgSrc="EF.webp" altText="EF"/>
               <PartnerCard24 imgSrc="MyDiet.webp" altText="MyDiet"/>
               <PartnerCard24 imgSrc="Tlon.webp" altText="Tlon"/>
-              <PartnerCard24 imgSrc="Copernico.webp" altText="Copernico" id="last-element"/>
-              </div>
-              <div className={"image-scroller-group second-images-group"} id="2nd-group">
+              <PartnerCard24 imgSrc="Copernico.webp" altText="Copernico"/>
               <PartnerCard24 imgSrc="Dias.webp" altText="Dias"/>
               <PartnerCard24 imgSrc="CrikCrok.webp" altText="CrikCrok"/>
               <PartnerCard24 imgSrc="Sanarti.webp" altText="SanArti"/>
               <PartnerCard24 imgSrc="Innocent.webp" altText="Innocent"/>
-              <PartnerCard24 imgSrc="Redbull.webp" altText="RedBull"/>
+              <PartnerCard24 imgSrc="Redbull.webp" altText="RedBull" id="last-element"/>
+              </div>
+              <div className={"image-scroller-group second-images-group"} id="2nd-group">
               <PartnerCard24 imgSrc="Marziali.webp" altText="Marziali"/>
               <PartnerCard24 imgSrc="RadioSapienza.png" altText="RadioSapienza"/>
               <PartnerCard24 imgSrc="Millionaire.webp" altText="Millionaire"/>
               <PartnerCard24 imgSrc="eCo.webp" altText="eCo"/>
               <PartnerCard24 imgSrc="RadioKaos.webp" altText="Radio Kaos Italy"/>
               <PartnerCard24 imgSrc="Collettivo.webp" altText="Collettivo Viscosa"/>
-              <PartnerCard24 imgSrc="Thesis4u.webp" altText="Thesis4u" id="2nd-last-element"/>
+              <PartnerCard24 imgSrc="Thesis4u.webp" altText="Thesis4u"/>
+              <PartnerCard24 imgSrc="MentorsNova.webp" altText="Mentors Nova"/>
+              <PartnerCard24 imgSrc="Peekaboo.webp" altText="Peekaboo"/>
+              <PartnerCard24 imgSrc="SFClubSapienza.webp" altText="SF Club Sapienza"/>
+              <PartnerCard24 imgSrc="JESAP.webp" altText="JESAP"/>
+              <PartnerCard24 imgSrc="WAYouth.webp" altText="WAYouth"/>
+              <PartnerCard24 imgSrc="CNR.webp" altText="CNR"/>
+              <PartnerCard24 imgSrc="Enea.png" altText="Enea"/>
+              <PartnerCard24 imgSrc="Roma.webp" altText="Roma"/>
+              <PartnerCard24 imgSrc="CE.webp" altText="Commissione Europea"/>
+              <PartnerCard24 imgSrc="RegioneLazio.webp" altText="Regione Lazio" id="2nd-last-element"/>
               </div>
               </div>
             </div>
@@ -605,13 +615,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
   }
 
   function Partners24() {
-    // Esegui la funzione all'avvio e quindi avvii un intervallo per eseguirla continuamente
-    useEffect(() => {
-      checkElementPosition(); // Esegui la funzione all'avvio
-      const intervalId = setInterval(checkElementPosition, 1000); // Esegui la funzione ogni secondo
-      // Pulisci l'intervallo quando il componente viene smontato
-      return () => clearInterval(intervalId);
-    }, []); // Esegui solo una volta all'avvio
+    
   
     return (
       <>
