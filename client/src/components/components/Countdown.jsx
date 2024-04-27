@@ -2,55 +2,71 @@ import React from "react";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import "../../resources/styles/countdown.css";
+import { func } from "three/examples/jsm/nodes/Nodes.js";
 
 const finalDate = new Date("2024-05-31T00:00:00+02:00").getTime(); // Data di fine del countdown
 const labelsInItalian = ["GIORNI", "ORE", "MINUTI", "SECONDI"];
 const labelsInEnglish = ["DAYS", "HOURS", "MINUTES", "SECONDS"];
+var expired = Date.now() >= finalDate;
+
+function setExpired() {
+  window.location.reload();
+}
 
 export default function Countdown({ language = "it" }) {
   const labelsLanguage = language === "en" ? labelsInEnglish : labelsInItalian;
   return (
     <div className="root">
-      <tr>
-        <td>
-          <FlipClockCountdown
-            to={finalDate}
-            className="flip-clock-days mb-5 mt-5 me-5"
-            renderMap={[true, false, false, false]}
-            labels={labelsLanguage}
-          />
-        </td>
-        <td>
-          <FlipClockCountdown
-            to={finalDate}
-            className="flip-clock-hours mb-5 mt-5"
-            renderMap={[false, true, false, false]}
-            labels={labelsLanguage}
-          />
-        </td>
-        <td>
-          <h1 className="colon">:</h1>
-        </td>
-        <td>
-          <FlipClockCountdown
-            to={finalDate}
-            className="flip-clock-minutes mb-5 mt-5"
-            renderMap={[false, false, true, false]}
-            labels={labelsLanguage}
-          />
-        </td>
-        <td>
-          <h1 className="colon">:</h1>
-        </td>
-        <td>
-          <FlipClockCountdown
-            to={finalDate}
-            className="flip-clock-seconds mb-5 mt-5"
-            renderMap={[false, false, false, true]}
-            labels={labelsLanguage}
-          />
-        </td>
-      </tr>
+      {expired !== true ? (
+        <>
+          <tr>
+            <td>
+              <FlipClockCountdown
+                to={finalDate}
+                className="flip-clock-days mb-5 mt-5 me-5"
+                renderMap={[true, false, false, false]}
+                labels={labelsLanguage}
+                onComplete={setExpired}
+              />
+            </td>
+            <td>
+              <FlipClockCountdown
+                to={finalDate}
+                className="flip-clock-hours mb-5 mt-5"
+                renderMap={[false, true, false, false]}
+                labels={labelsLanguage}
+                onComplete={setExpired}
+              />
+            </td>
+            <td>
+              <h1 className="colon">:</h1>
+            </td>
+            <td>
+              <FlipClockCountdown
+                to={finalDate}
+                className="flip-clock-minutes mb-5 mt-5"
+                renderMap={[false, false, true, false]}
+                labels={labelsLanguage}
+                onComplete={setExpired}
+              />
+            </td>
+            <td>
+              <h1 className="colon">:</h1>
+            </td>
+            <td>
+              <FlipClockCountdown
+                to={finalDate}
+                className="flip-clock-seconds mb-5 mt-5"
+                renderMap={[false, false, false, true]}
+                labels={labelsLanguage}
+                onComplete={setExpired}
+              />
+            </td>
+          </tr>
+        </>
+      ) : (
+        <h1>Il countdown è terminato</h1>
+      )}  
     </div>
   );
 }
