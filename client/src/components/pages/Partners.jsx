@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
 import PartnerCard24 from "../components/PartnerCard24";
@@ -510,6 +510,47 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
+  function checkElementPosition() {
+    const group_id_1 = "1st-group";
+    const group_id_2 = "2nd-group";
+    const last_element_id = "last-element";
+    const snd_last_element_id = "2nd-last-element";
+    const tmp_id = "tmp-id";
+    const tmp_group_id = "tmp-group-id";
+
+    let groupElement = document.getElementById(group_id_1);
+    let groupElement2 = document.getElementById(group_id_2);
+    let lastElement = document.getElementById(last_element_id);
+    let sndLastElement = document.getElementById(snd_last_element_id);
+    
+    if (!groupElement || !lastElement) {
+      console.debug("not found");
+      return;
+    }
+
+    const lastElementRect = lastElement.getBoundingClientRect();
+    if (lastElementRect.left <= 0) {
+      groupElement.style.animationPlayState = "paused";
+      groupElement2.parentNode.insertBefore(groupElement, groupElement2.nextSibling); // accodamento del primo div una volta uscito dalla visualizzazione
+      groupElement.id = tmp_group_id;
+      groupElement2.id = group_id_1;
+      groupElement = document.getElementById(group_id_1);
+      groupElement2 = document.getElementById(tmp_group_id);
+      groupElement2.id = group_id_2;
+
+      lastElement.id = tmp_id; // l'ultimo elemento del 1 gruppo riceve un id temporaneo per evitare conflitti
+      sndLastElement.id = last_element_id; // l'ultimo elemento del 2 gruppo assume l'id dell'elemento del quale viene monitorata la posizione
+      lastElement = document.getElementById(last_element_id); // scambio effettivo 
+      sndLastElement = document.getElementById(tmp_id); // il secondo elemento ora diventa quello che all'inizio era il primo perché il div viene accodato
+      sndLastElement.id = snd_last_element_id; // viene cambiato il valore dell'id
+
+
+    }
+    else{
+      groupElement.style.animationPlayState = "running";
+    }
+  }
+  
   function getSponsor2024() {
     return (
       <>
@@ -526,31 +567,52 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               Our Sponsors
             </h2>
             <div className="image-scroller-container">
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
-              <PartnerCard24 imgSrc="logo-black.png" altText="logo" />
+              <div className="group-row">
+              <div className={"image-scroller-group"} id="1st-group">
+              <PartnerCard24 imgSrc="Tim.webp" altText="TIM"/>
+              <PartnerCard24 imgSrc="Unicredit.webp" altText="Unicredit"/>
+              <PartnerCard24 imgSrc="Balduina1.webp" altText="Autocentri Balduina"/>
+              <PartnerCard24 imgSrc="Pioda.webp" altText="Pioda Imaging"/>
+              <PartnerCard24 imgSrc="Enav.webp" altText="Enav Group"/>
+              <PartnerCard24 imgSrc="CBCR.webp" altText="CBCR"/>
+              <PartnerCard24 imgSrc="VAIA.webp" altText="VAIA"/>
+              <PartnerCard24 imgSrc="Deloitte.jpg" altText="Deloitte"/>
+              <PartnerCard24 imgSrc="EF.webp" altText="EF"/>
+              <PartnerCard24 imgSrc="MyDiet.webp" altText="MyDiet"/>
+              <PartnerCard24 imgSrc="Tlon.webp" altText="Tlon"/>
+              <PartnerCard24 imgSrc="Copernico.webp" altText="Copernico" id="last-element"/>
+              </div>
+              <div className={"image-scroller-group second-images-group"} id="2nd-group">
+              <PartnerCard24 imgSrc="Dias.webp" altText="Dias"/>
+              <PartnerCard24 imgSrc="CrikCrok.webp" altText="CrikCrok"/>
+              <PartnerCard24 imgSrc="Sanarti.webp" altText="SanArti"/>
+              <PartnerCard24 imgSrc="Innocent.webp" altText="Innocent"/>
+              <PartnerCard24 imgSrc="Redbull.webp" altText="RedBull"/>
+              <PartnerCard24 imgSrc="Marziali.webp" altText="Marziali"/>
+              <PartnerCard24 imgSrc="RadioSapienza.png" altText="RadioSapienza"/>
+              <PartnerCard24 imgSrc="Millionaire.webp" altText="Millionaire"/>
+              <PartnerCard24 imgSrc="eCo.webp" altText="eCo"/>
+              <PartnerCard24 imgSrc="RadioKaos.webp" altText="Radio Kaos Italy"/>
+              <PartnerCard24 imgSrc="Collettivo.webp" altText="Collettivo Viscosa"/>
+              <PartnerCard24 imgSrc="Thesis4u.webp" altText="Thesis4u" id="2nd-last-element"/>
+              </div>
+              </div>
             </div>
-            {/*<div className="image-scroller-container">
-                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
-                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
-                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
-                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
-                <PartnerCard24 imgSrc="logo-black.png" altText="logo" divClassName="sr" />
-              </div>*/}
           </div>
         </section>
       </>
     );
   }
 
-  function partners24() {
+  function Partners24() {
+    // Esegui la funzione all'avvio e quindi avvii un intervallo per eseguirla continuamente
+    useEffect(() => {
+      checkElementPosition(); // Esegui la funzione all'avvio
+      const intervalId = setInterval(checkElementPosition, 1000); // Esegui la funzione ogni secondo
+      // Pulisci l'intervallo quando il componente viene smontato
+      return () => clearInterval(intervalId);
+    }, []); // Esegui solo una volta all'avvio
+  
     return (
       <>
         {displayParallaxScrollDown()}
@@ -558,11 +620,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       </>
     );
   }
+  
 
   function chooseYear() {
     if (activeYear === 22) return getSponsor2022();
     else if (activeYear === 23) return getSponsor2023();
-    else return partners24();
+    else return Partners24();
   }
 
   function partnerLayout24Desktop() {

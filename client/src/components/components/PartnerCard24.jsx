@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function PartnerCard24({ imgSrc, altText, divClassName }) {
+export default function PartnerCard24({ imgSrc, altText, id }) {
   return (
     <>
-      <div className={`image-scroller-img ${divClassName}`}>
+      <div id={`${id}`} className="image-scroller-div" >
         <img
           className={"img-slider"}
           src={`/images/partners24/${imgSrc}`}
