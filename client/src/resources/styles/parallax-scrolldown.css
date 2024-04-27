@@ -4,6 +4,14 @@
   position: relative;
 }
 
+/*  prorietà utile per dare all'intera pagina il colore di sfondo delle immagini 
+    nello scroll-down parallax.
+    In questo modo, se durante lo scorrimento della pagina ci fosse un problema 
+    di stretch di un riquadro dello scroll-down, sarebbe impercettibile. */
+#root{
+  background-color: #191919;
+}
+
 /* prorietà div corrispondente all'intero riquadro scroll-down */
 .content {
   position: absolute;
