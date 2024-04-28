@@ -112,7 +112,8 @@ export default function Team2022() {
     if (board.length === 0) {
       return (
         <div className="boardSpinnerSection">
-          {year !== 2022 ? <div className="spinner"></div> : null} {/* //TODO Spinner must be fixed for 2022 */}
+          {year !== 2022 ? <div className="spinner"></div> : null}
+          {/* //TODO Spinner must be fixed for 2022 */}
         </div>
       );
     } else {
@@ -275,7 +276,7 @@ export default function Team2022() {
       );
     });
     return chips;
-  }  
+  }
   // #endregion
 
   // #region ----------------------------------- Views----------------------------------------
