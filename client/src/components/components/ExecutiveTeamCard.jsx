@@ -2,6 +2,29 @@ import React from "react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import global from "../../resources/global.json";
+import Info from "./Info.jsx"
+
+
+function handleBoardInfos24({ informazioni }) {
+  return informazioni.map((value, index) => (
+    <Info
+      key={index} // Ensure each component has a unique key
+      x={value.x}
+      y={value.y}
+      name={value.name}
+      team={value.team}
+    />
+  ));
+}
+
+const BoardNameStyle = {
+  margin: "30px 0",
+  fontFamily: "Fira Sans Extra Condensed, sans-serif",
+  fontSize: "50px",
+  backgroundColor: global.COLORS.NERO, //! Cambiare colore
+  color: "#fff",
+};
+
 
 export default function ExecutiveTeamCard({
   id,
@@ -11,7 +34,36 @@ export default function ExecutiveTeamCard({
   image,
   link,
   year,
+  infos,
 }) {
+  if (year === 2024) {
+    return (
+      <>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center", 
+            justifyContent: "center",
+            flexDirection: "column",
+            position: "relative",
+            backgroundColor: "black",
+          }}
+        >
+          <h1 style={BoardNameStyle}>Board</h1>
+          {infos ? handleBoardInfos24({ informazioni: infos }) : null}
+          <img
+            src={require("../images/foto.png")}
+            alt="Test"
+            style={{
+              maxWidth: "70%",
+              height: "auto",
+            }}
+          />
+        </div>
+      </>
+    );
+
+  }
   if (year === 2023) {
     return (
       <div

@@ -1,16 +1,18 @@
 import React, { useRef, useState, useEffect, Component } from "react";
-import ExecutiveTeamCard from "../components/ExecutiveTeamCard";
+import ExecutiveTeamCard from "../components/ExecutiveTeamCard.jsx";
 import axios from "axios";
+import "../../index.css";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
-import VolunteerCard from "../components/VolunteerCard";
-import Countdown from "../components/Countdown";
+import VolunteerCard from "../components/VolunteerCard.jsx";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import Info from "../components/Info";
+import Info from "../components/Info.jsx";
 import Stack from "@mui/material/Stack";
 import BasicChips from "../components/BasicChips.jsx";
 import { log } from "three/examples/jsm/nodes/Nodes.js";
+import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
+import Countdown from "../components/Countdown.jsx";
 
 export default function Team2022() {
   const [activeYear, setActiveYear] = useState(24);
@@ -34,7 +36,7 @@ export default function Team2022() {
       ers: ["Team External Relations & Sponsor", "ers"],
       hra: ["Team Human Resources & Academy", "hra"],
       cam: ["Team Communication & Marketing", "cam"],
-      law: ["Team Legal & Administrative", "la"],
+      la: ["Team Legal & Administrative", "la"],
     },
     23: {
       dw: ["Team Design & Website", "dw"],
@@ -88,6 +90,10 @@ export default function Team2022() {
     // Add more person information objects as needed
   ];
 
+  // --------------------------------------------------------------------------------------
+  // ------------------------------UseEffect Section---------------------------------------
+  // --------------------------------------------------------------------------------------
+
   useEffect(() => {
     setBoard([]);
     setVolunteers([]);
@@ -110,6 +116,11 @@ export default function Team2022() {
         });
     }, 200);
   }, [activeYear]);
+
+  // --------------------------------------------------------------------------------------
+  // ------------------------------Board Section-------------------------------------------
+  // --------------------------------------------------------------------------------------
+
 
   const handleBoardCardSection23 = () => {
     if (board.length === 0) {
@@ -168,7 +179,7 @@ export default function Team2022() {
             alignItems: "center",
           }}
         >
-          <div className="spinner" style></div>
+          {/*  <div className="spinner" style></div> //TODO: Uncomment when fixed  */}
         </div>
       );
     } else {
@@ -196,6 +207,188 @@ export default function Team2022() {
         </>
       );
     }
+  };
+
+  // --------------------------------------------------------------------------------------
+  // ------------------------------Volunteers Section--------------------------------------
+  // --------------------------------------------------------------------------------------
+
+  const handleVolunteersCardSection24 = () => {
+    if (volunteers.length === 0) return;
+
+    let photos = {
+      it: {
+        Volunteers: [],
+      },
+      pem: {
+        Volunteers: [],
+      },
+      dex: {
+        Volunteers: [],
+      },
+      sec: {
+        Volunteers: [],
+      },
+      ers: {
+        Volunteers: [],
+      },
+      hra: {
+        Volunteers: [],
+      },
+      cam: {
+        Volunteers: [],
+      },
+      la: {
+        Volunteers: [],
+      },
+    };
+
+    volunteers.map((vol) => {
+      const { id, nome, gruppo, fotoNome, link } = vol;
+      switch (gruppo) {
+        case "it":
+          photos.it.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "pem":
+          photos.pem.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "dex":
+          photos.dex.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "sec":
+          photos.sec.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "ers":
+          photos.ers.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "hra":
+          photos.hra.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "cam":
+          photos.cam.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+        case "la":
+          photos.la.Volunteers.push(
+            <VolunteerCard
+              key={id}
+              id={id}
+              nome={nome}
+              gruppo={gruppo}
+              image={fotoNome}
+              link={link}
+              year={2024}
+            />
+          );
+          break;
+      }
+    });
+
+    return (
+      <>
+        <h1 id={teams["24"]["it"][1]} style={TeamNameStyle}>
+          {teams["24"]["it"][0]}
+        </h1>
+        <div className="row">{photos.it.Volunteers}</div>
+        <h1 id={teams["24"]["pem"][1]} style={TeamNameStyle}>
+          {teams["24"]["pem"][0]}
+        </h1>
+        <div className="row">{photos.pem.Volunteers}</div>
+        <h1 id={teams["24"]["dex"][1]} style={TeamNameStyle}>
+          {teams["24"]["dex"][0]}
+        </h1>
+        <div className="row">{photos.dex.Volunteers}</div>
+        <h1 id={teams["24"]["sec"][1]} style={TeamNameStyle}>
+          {teams["24"]["sec"][0]}
+        </h1>
+        <div className="row">{photos.sec.Volunteers}</div>
+        <h1 id={teams["24"]["ers"][1]} style={TeamNameStyle}>
+          {teams["24"]["ers"][0]}
+        </h1>
+        <div className="row">{photos.ers.Volunteers}</div>
+        <h1 id={teams["24"]["hra"][1]} style={TeamNameStyle}>
+          {teams["24"]["hra"][0]}
+        </h1>
+        <div className="row">{photos.hra.Volunteers}</div>
+        <h1 id={teams["24"]["cam"][1]} style={TeamNameStyle}>
+          {teams["24"]["cam"][0]}
+        </h1>
+        <div className="row">{photos.cam.Volunteers}</div>
+        <h1 id={teams["24"]["la"][1]} style={TeamNameStyle}>
+          {teams["24"]["la"][0]}
+        </h1>
+        <div className="row">{photos.la.Volunteers}</div>
+      </>
+    );
   };
 
   const handleVolunteersCardSection23 = () => {
@@ -543,10 +736,29 @@ export default function Team2022() {
     );
   };
 
+  // --------------------------------------------------------------------------------------
+  // ------------------------------Choose Year--------------------------------------------
+  // --------------------------------------------------------------------------------------
+
+
   function chooseYear() {
     if (activeYear === 22) return getTeam2022();
     else if (activeYear === 23) return getTeam2023();
     else return getTeam2024();
+  }
+
+  function getTeam2024() {
+    return (
+      // <>
+      //   <ExecutiveTeamCard year={2024} infos={BoardInfos} />
+      //   <div className="container-xl">
+      //     <div>{handleVolunteersCardSection24()}</div>
+      //   </div>
+      // </>
+      <div>
+        {comingSoon()}
+      </div>
+    );
   }
 
   function getTeam2023() {
@@ -556,10 +768,6 @@ export default function Team2022() {
         <div>{handleVolunteersCardSection23()}</div>
       </div>
     );
-  }
-
-  function getTeam2024() {
-    return comingSoon();
   }
 
   function getTeam2022() {
@@ -574,6 +782,10 @@ export default function Team2022() {
       </>
     );
   }
+  
+  // --------------------------------------------------------------------------------------
+  // ------------------------------Chips Section-------------------------------------------
+  // --------------------------------------------------------------------------------------
 
   function comingSoon() {
     return (
@@ -593,22 +805,8 @@ export default function Team2022() {
     );
   }
 
-  /*function handleBoardInfos24() {
-    return BoardInfos.map((value, index) => (
-      <Info
-        key={index} // Ensure each component has a unique key
-        x={value.x}
-        y={value.y}
-        name={value.name}
-        team={value.team}
-      />
-    ));
-  }*/
-
   function handleTeamsChips() {
-    if (activeYear === 24) {
-      return;
-    } //TODO: Remove this line when the 2024 team is ready
+    if (activeYear === 24) { return; } //TODO: Remove this line when the 2024 team is ready
     const gruppi = teams[activeYear.toString()] || teams["24"];
 
     const chips = Object.entries(gruppi).map(([key, [teamName, teamId]]) => (
@@ -637,9 +835,9 @@ export default function Team2022() {
   }
 
   if (windowSize > global.UTILS.TABLET_WIDTH) {
-    /**
-     * DESKTOP
-     */
+    /********************************************************************
+     *************************** DESKTOP ********************************
+     ********************************************************************/
 
     return (
       <>
@@ -729,9 +927,9 @@ export default function Team2022() {
       </>
     );
   } else {
-    /**
-     * MOBILE
-     */
+    /********************************************************************
+     *************************** MOBILE *********************************
+     ********************************************************************/
     return (
       <>
         <section
@@ -744,14 +942,22 @@ export default function Team2022() {
             display: "grid",
           }}
         >
+          <div>
+            <Stack
+              direction="row"
+              spacing={1}
+              alignItems="center"
+              justifyContent="center"
+              useFlexGap
+              flexWrap="wrap"
+            >
+              {handleYearChips()}
+            </Stack>
+          </div>
           <div
-            className="header"
             style={{
-              width: "98%",
-              height: "80%",
               padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "#191919",
+              //marginRight: "10px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -761,90 +967,30 @@ export default function Team2022() {
             <h1
               className="font-weight-bold"
               style={{
-                fontSize: "60px",
+                fontSize: "55px",
                 fontWeight: "bold",
-                color: global.COLORS.ROSSO_TED,
+                color: "white",
               }}
             >
-              TEAM
+              MEET OUR TEAM
             </h1>
           </div>
         </section>
-
         <section
-          className="pt-3 pb-5 px-3"
           style={{
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             backgroundColor: global.COLORS.NERO,
           }}
         >
-          <h3
-            style={{
-              fontSize: "15px",
-              fontWeight: "bold",
-              textAlign: "left",
-              color: "#fff",
-              display: "flex",
-            }}
+          <Stack
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            justifyContent="center"
+            useFlexGap
+            flexWrap="wrap"
           >
-            Chi ha partecipato:
-          </h3>
-          <div style={{ display: "flex" }}>
-            <div
-              ref={button2024Mobile}
-              className="year-button underlined px-3"
-              type="button"
-              style={{
-                //marginRight: "30px",
-                fontSize: "30px",
-                color: "white",
-              }}
-              onClick={() => {
-                button2023Mobile.current.classList.remove("underlined");
-                button2022Mobile.current.classList.remove("underlined");
-                button2024Mobile.current.classList.add("underlined");
-                setActiveYear(24);
-              }}
-            >
-              2024
-            </div>
-            <div
-              ref={button2023Mobile}
-              className="year-button px-3"
-              type="button"
-              style={{
-                //marginRight: "30px",
-                fontSize: "30px",
-                color: "white",
-              }}
-              onClick={() => {
-                button2024Mobile.current.classList.remove("underlined");
-                button2022Mobile.current.classList.remove("underlined");
-                button2023Mobile.current.classList.add("underlined");
-                setActiveYear(23);
-              }}
-            >
-              2023
-            </div>
-            <div
-              ref={button2022Mobile}
-              className="year-button px-3"
-              type="button"
-              style={{
-                //marginRight: "30px",
-                fontSize: "30px",
-                color: "white",
-              }}
-              onClick={() => {
-                button2023Mobile.current.classList.remove("underlined");
-                button2024Mobile.current.classList.remove("underlined");
-                button2022Mobile.current.classList.add("underlined");
-                setActiveYear(22);
-              }}
-            >
-              2022
-            </div>
-          </div>
+            {handleTeamsChips()}
+          </Stack>
         </section>
         <section
           style={{
