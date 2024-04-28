@@ -550,7 +550,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       groupElement.style.animationPlayState = "running";
     }
   }*/
-  
+
   function getSponsor2024() {
     return (
       <>
@@ -568,44 +568,79 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             </h2>
             <div className="image-scroller-container">
               <div className="group-row">
-              <div className={"image-scroller-group"} id="1st-group">
-              <PartnerCard24 imgSrc="Tim.webp" altText="TIM"/>
-              <PartnerCard24 imgSrc="Unicredit.webp" altText="Unicredit"/>
-              <PartnerCard24 imgSrc="Balduina1.webp" altText="Autocentri Balduina"/>
-              <PartnerCard24 imgSrc="Pioda.webp" altText="Pioda Imaging"/>
-              <PartnerCard24 imgSrc="Enav.webp" altText="Enav Group"/>
-              <PartnerCard24 imgSrc="CBCR.webp" altText="CBCR"/>
-              <PartnerCard24 imgSrc="VAIA.webp" altText="VAIA"/>
-              <PartnerCard24 imgSrc="Deloitte.jpg" altText="Deloitte"/>
-              <PartnerCard24 imgSrc="EF.webp" altText="EF"/>
-              <PartnerCard24 imgSrc="MyDiet.webp" altText="MyDiet"/>
-              <PartnerCard24 imgSrc="Tlon.webp" altText="Tlon"/>
-              <PartnerCard24 imgSrc="Copernico.webp" altText="Copernico"/>
-              <PartnerCard24 imgSrc="Dias.webp" altText="Dias"/>
-              <PartnerCard24 imgSrc="CrikCrok.webp" altText="CrikCrok"/>
-              <PartnerCard24 imgSrc="Sanarti.webp" altText="SanArti"/>
-              <PartnerCard24 imgSrc="Innocent.webp" altText="Innocent"/>
-              <PartnerCard24 imgSrc="Redbull.webp" altText="RedBull" id="last-element"/>
-              </div>
-              <div className={"image-scroller-group second-images-group"} id="2nd-group">
-              <PartnerCard24 imgSrc="Marziali.webp" altText="Marziali"/>
-              <PartnerCard24 imgSrc="RadioSapienza.png" altText="RadioSapienza"/>
-              <PartnerCard24 imgSrc="Millionaire.webp" altText="Millionaire"/>
-              <PartnerCard24 imgSrc="eCo.webp" altText="eCo"/>
-              <PartnerCard24 imgSrc="RadioKaos.webp" altText="Radio Kaos Italy"/>
-              <PartnerCard24 imgSrc="Collettivo.webp" altText="Collettivo Viscosa"/>
-              <PartnerCard24 imgSrc="Thesis4u.webp" altText="Thesis4u"/>
-              <PartnerCard24 imgSrc="MentorsNova.webp" altText="Mentors Nova"/>
-              <PartnerCard24 imgSrc="Peekaboo.webp" altText="Peekaboo"/>
-              <PartnerCard24 imgSrc="SFClubSapienza.webp" altText="SF Club Sapienza"/>
-              <PartnerCard24 imgSrc="JESAP.webp" altText="JESAP"/>
-              <PartnerCard24 imgSrc="WAYouth.webp" altText="WAYouth"/>
-              <PartnerCard24 imgSrc="CNR.webp" altText="CNR"/>
-              <PartnerCard24 imgSrc="Enea.png" altText="Enea"/>
-              <PartnerCard24 imgSrc="Roma.webp" altText="Roma"/>
-              <PartnerCard24 imgSrc="CE.webp" altText="Commissione Europea"/>
-              <PartnerCard24 imgSrc="RegioneLazio.webp" altText="Regione Lazio" id="2nd-last-element"/>
-              </div>
+                <div className={"image-scroller-group"} id="1st-group">
+                  <PartnerCard24 imgSrc="Tim.webp" altText="TIM" />
+                  <PartnerCard24 imgSrc="Unicredit.webp" altText="Unicredit" />
+                  <PartnerCard24
+                    imgSrc="Balduina1.webp"
+                    altText="Autocentri Balduina"
+                  />
+                  <PartnerCard24 imgSrc="Pioda.webp" altText="Pioda Imaging" />
+                  <PartnerCard24 imgSrc="Enav.webp" altText="Enav Group" />
+                  <PartnerCard24 imgSrc="CBCR.webp" altText="CBCR" />
+                  <PartnerCard24 imgSrc="VAIA.webp" altText="VAIA" />
+                  <PartnerCard24 imgSrc="Deloitte.jpg" altText="Deloitte" />
+                  <PartnerCard24 imgSrc="EF.webp" altText="EF" />
+                  <PartnerCard24 imgSrc="MyDiet.webp" altText="MyDiet" />
+                  <PartnerCard24 imgSrc="Tlon.webp" altText="Tlon" />
+                  <PartnerCard24 imgSrc="Copernico.webp" altText="Copernico" />
+                  <PartnerCard24 imgSrc="Dias.webp" altText="Dias" />
+                  <PartnerCard24 imgSrc="CrikCrok.webp" altText="CrikCrok" />
+                  <PartnerCard24 imgSrc="Sanarti.webp" altText="SanArti" />
+                  <PartnerCard24 imgSrc="Innocent.webp" altText="Innocent" />
+                  <PartnerCard24
+                    imgSrc="Redbull.webp"
+                    altText="RedBull"
+                    id="last-element"
+                  />
+                </div>
+                <div
+                  className={"image-scroller-group second-images-group"}
+                  id="2nd-group"
+                >
+                  <PartnerCard24 imgSrc="Marziali.webp" altText="Marziali" />
+                  <PartnerCard24
+                    imgSrc="RadioSapienza.png"
+                    altText="RadioSapienza"
+                  />
+                  <PartnerCard24
+                    imgSrc="Millionaire.webp"
+                    altText="Millionaire"
+                  />
+                  <PartnerCard24 imgSrc="eCo.webp" altText="eCo" />
+                  <PartnerCard24
+                    imgSrc="RadioKaos.webp"
+                    altText="Radio Kaos Italy"
+                  />
+                  <PartnerCard24
+                    imgSrc="Collettivo.webp"
+                    altText="Collettivo Viscosa"
+                  />
+                  <PartnerCard24 imgSrc="Thesis4u.webp" altText="Thesis4u" />
+                  <PartnerCard24
+                    imgSrc="MentorsNova.webp"
+                    altText="Mentors Nova"
+                  />
+                  <PartnerCard24 imgSrc="Peekaboo.webp" altText="Peekaboo" />
+                  <PartnerCard24
+                    imgSrc="SFClubSapienza.webp"
+                    altText="SF Club Sapienza"
+                  />
+                  <PartnerCard24 imgSrc="JESAP.webp" altText="JESAP" />
+                  <PartnerCard24 imgSrc="WAYouth.webp" altText="WAYouth" />
+                  <PartnerCard24 imgSrc="CNR.webp" altText="CNR" />
+                  <PartnerCard24 imgSrc="Enea.png" altText="Enea" />
+                  <PartnerCard24 imgSrc="Roma.webp" altText="Roma" />
+                  <PartnerCard24
+                    imgSrc="CE.webp"
+                    altText="Commissione Europea"
+                  />
+                  <PartnerCard24
+                    imgSrc="RegioneLazio.webp"
+                    altText="Regione Lazio"
+                    id="2nd-last-element"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -614,22 +649,143 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function Partners24() {
-    
-  
+  function displayMobileScrollDown() {
     return (
       <>
-        {displayParallaxScrollDown()}
+        <div className="gradient-div gradient-div-top"></div>
+        <div className="mobile-content">
+          <div id="mobile-1st-div" className="mobile-div ct-right">
+            <div id="mobile-text-block-1" className="mobile-text-block">
+              <h3 className="">TEDx, molto più che un evento.</h3>
+              <p className="">
+                Realizzare un TEDx è un lavoro di squadra. L’organizzazione
+                avviene in sinergia con i nostri partner.
+              </p>
+              <p className="">
+                <a
+                  href="https://www.tedxsapienzau.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Scopri di più
+                </a>
+              </p>
+            </div>
+          </div>
+          <div id="mobile-2nd-div" className="mobile-div ct-left">
+            <div id="mobile-text-block-2" className="mobile-text-block">
+              <h3 className="">Perché collaborare?</h3>
+              <h5 className="">Uniti per un obiettivo</h5>
+              <p className="">
+                Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
+                portare questo format internazionale nella nostra università
+                Sapienza. La nostra è infatti l’Università più grande d’Europa,
+                con più di 120 mila studenti iscritti.
+              </p>
+              <p className="">
+                Il nostro obiettivo è dare voce alle idee di valore che la
+                nostra comunità accademica vuole far emergere.
+              </p>
+              <p className="">Ora siamo in più di 120 volontari.</p>
+            </div>
+          </div>
+          <div id="mobile-3rd-div" className="mobile-div ct-left">
+            <div id="mobile-text-block-3" className="mobile-text-block">
+              <div className="">
+                <h4 className="">L’innovazione è nelle nostre vene </h4>
+                <p className="">
+                  Il format TEDx ci è concesso sotto licenza ufficiale da TED
+                  Foundation. Operiamo sotto i più elevati standard di qualità
+                  per garantire un’esperienza che sia all’altezza del nome che
+                  portiamo.
+                </p>
+                <p className="">
+                  Ci impegniamo a parlare di temi più rilevanti per la nostra
+                  società. Attraverso la voce degli Speaker vogliamo portare un
+                  impatto positivo alla nostra comunità.
+                </p>
+              </div>
+              <div class="">
+                <div className="">
+                  <div class="">
+                    <h2>I nostri pilastri</h2>
+                    <ul>
+                      <li className="">Community</li>
+                      <li className="">Content marketing</li>
+                      <li className="">Employer branding</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="">
+                  <div class="">
+                    <h2>Collabora con noi</h2>
+                    <ul>
+                      <li className="">Sponsor</li>
+                      <li className="">Partner</li>
+                      <li className="">Media partner</li>
+                      <li className="">Community partner</li>
+                      <li className="">Patrocinio</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-4th-div" className="mobile-div ct-right">
+            <div id="mobile-text-block-4" className="mobile-text-block">
+              <h3 className="">In numeri</h3>
+              <p className="">
+                2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
+                <ul className="">
+                  <li>1500 persone coinvolte offline negli eventi</li>
+                  <li>200000 visualizzazioni su YouTube</li>
+                  <li>50 partner a supporto del nostro evento</li>
+                  <li>300 volontari in totale</li>
+                </ul>
+                <div className="feedbacks-container">
+                  <p>Feedback Azienda</p>
+                  <p className="statement">
+                    "Ci siamo trovati benissimo blablabla"
+                  </p>
+                  <p>Partecipante evento</p>
+                  <p className="statement">"Troppo bello blablabla"</p>
+                </div>
+                <div className="button-container">
+                  <p className="button-text">
+                    <button className="red-button">
+                      Scopri chi ci ha supportato
+                    </button>
+                  </p>
+                </div>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="gradient-div gradient-div-bottom"></div>
+      </>
+    );
+  }
+
+  function partners24() {
+    let scrollDownComponent;
+    if (windowSize > global.UTILS.TABLET_WIDTH) {
+      scrollDownComponent = displayParallaxScrollDown();
+    } else {
+      scrollDownComponent = displayMobileScrollDown();
+    }
+
+    return (
+      <>
+        {scrollDownComponent}
         {getSponsor2024()}
       </>
     );
   }
-  
 
   function chooseYear() {
     if (activeYear === 22) return getSponsor2022();
     else if (activeYear === 23) return getSponsor2023();
-    else return Partners24();
+    else return partners24();
   }
 
   function partnerLayout24Desktop() {
@@ -754,8 +910,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         <section
           style={{
             backgroundColor: global.COLORS.NERO,
-            marginTop: global.UTILS.NAV_HEIGHT,
-            padding: "10px",
+            //marginTop: global.UTILS.NAV_HEIGHT,
+            //padding: "10px",
+            paddingTop: "5vh",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
             display: "grid",
@@ -778,7 +935,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           ></div>
         </section>
 
-        <section
+        {/*<section
           className="pt-3 pb-5 px-3"
           style={{
             //width: "95vw",
@@ -859,7 +1016,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               2022
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {chooseYear()}
       </>
