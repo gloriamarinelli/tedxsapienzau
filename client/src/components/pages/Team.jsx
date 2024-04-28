@@ -199,15 +199,15 @@ export default function Team2022() {
 
   function getTeam2024() {
     return (
-      <>
-        <ExecutiveTeamCard year={2024} infos={BoardInfos} />
-        <div className="container-xl">
-          <div>{handleVolunteersCardSection(2024)}</div>
-        </div>
-      </>
-      // <div>
-      //   {comingSoon()}
-      // </div>
+      // <>
+      //   <ExecutiveTeamCard year={2024} infos={BoardInfos} />
+      //   <div className="container-xl">
+      //     <div>{handleVolunteersCardSection(2024)}</div>
+      //   </div>
+      // </>
+      <div>
+        {comingSoon()}
+      </div>
     );
   }
 
