@@ -112,17 +112,8 @@ export default function Team2022() {
   const handleBoardCardSection = (year) => {
     if (board.length === 0) {
       return (
-        <div
-          style={{
-            height: "200px",
-            width: "90%",
-            margin: "auto",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {year !== 2022 ? <div className="spinner" style={{}}></div> : null}
+        <div className="boardSpinnerSection">
+          {year !== 2022 ? <div className="spinner"></div> : null} {/* //TODO Spinner must be fixed for 2022 */}
         </div>
       );
     } else {
@@ -231,8 +222,6 @@ export default function Team2022() {
       <>
         <div className="container">
           <div className="row">{handleBoardCardSection(2022)}</div>
-        </div>
-        <div className="container">
           <div className="row">{handleVolunteersCardSection(2022)}</div>
         </div>
       </>
