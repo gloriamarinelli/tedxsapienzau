@@ -30,7 +30,6 @@ export default function Team2022() {
       hra: "Team Human Resources & Academy",
       cam: "Team Communication & Marketing",
       la: "Team Legal & Administrative",
-
     },
     23: {
       acronyms: ["dw", "cem", "ers", "la", "pem", "sec"],
@@ -42,7 +41,15 @@ export default function Team2022() {
       sec: "Team Speaker & Event Curation",
     },
     22: {
-      acronyms: ["curator", "communication", "spe", "fundraising", "grafica", "radio", "planning"],
+      acronyms: [
+        "curator",
+        "communication",
+        "spe",
+        "fundraising",
+        "grafica",
+        "radio",
+        "planning",
+      ],
       curator: "Team Curator",
       communication: "Team Communication",
       spe: "Team Speaker Curation",
@@ -143,7 +150,6 @@ export default function Team2022() {
         </>
       );
     }
-  
   };
 
   // --------------------------------------------------------------------------------------
@@ -154,7 +160,10 @@ export default function Team2022() {
     if (volunteers.length === 0) return;
     const annata = year.toString().slice(-2);
 
-    let photos = teams[annata].acronyms.reduce((acc, acronym) => ({ ...acc, [acronym]: [] }), {});
+    let photos = teams[annata].acronyms.reduce(
+      (acc, acronym) => ({ ...acc, [acronym]: [] }),
+      {}
+    );
 
     volunteers.map((vol) => {
       const { id, nome, gruppo, fotoNome, link } = vol;
@@ -182,14 +191,13 @@ export default function Team2022() {
         <div className="row">{value}</div>
       </div>
     ));
-    
+
     return sections;
   };
 
   // --------------------------------------------------------------------------------------
   // ------------------------------Choose Year--------------------------------------------
   // --------------------------------------------------------------------------------------
-
 
   function chooseYear() {
     if (activeYear === 22) return getTeam2022();
@@ -205,9 +213,7 @@ export default function Team2022() {
       //     <div>{handleVolunteersCardSection(2024)}</div>
       //   </div>
       // </>
-      <div>
-        {comingSoon()}
-      </div>
+      <div>{comingSoon()}</div>
     );
   }
 
@@ -232,7 +238,7 @@ export default function Team2022() {
       </>
     );
   }
-  
+
   // --------------------------------------------------------------------------------------
   // ------------------------------Chips Section-------------------------------------------
   // --------------------------------------------------------------------------------------
@@ -256,7 +262,9 @@ export default function Team2022() {
   }
 
   function handleTeamsChips() {
-    if (activeYear === 24) { return; } //TODO: Remove this line when the 2024 team is ready
+    if (activeYear === 24) {
+      return;
+    } //TODO: Remove this line when the 2024 team is ready
     const gruppi = teams[activeYear.toString()] || teams["24"];
 
     const chips = Object.entries(gruppi).map(([key, teamName]) => (
@@ -284,14 +292,15 @@ export default function Team2022() {
     return chips;
   }
 
-  if (windowSize > global.UTILS.TABLET_WIDTH) {
-    /********************************************************************
-     *************************** DESKTOP ********************************
-     ********************************************************************/
+  // --------------------------------------------------------------------------------------
+  // --------------------------------------Views-------------------------------------------
+  // --------------------------------------------------------------------------------------
 
+  function desktopView() {
     return (
       <>
-        <section className="headerSection"
+        <section
+          className="headerSection"
           style={{
             backgroundColor: global.COLORS.NERO,
             marginTop: global.UTILS.NAV_HEIGHT,
@@ -309,7 +318,8 @@ export default function Team2022() {
               {handleYearChips()}
             </Stack>
           </div>
-          <div className="headerTitleSection"
+          <div
+            className="headerTitleSection"
             style={{
               padding: global.UTILS.BENTO_BOX_PADDING,
             }}
@@ -339,13 +349,13 @@ export default function Team2022() {
         </section>
       </>
     );
-  } else {
-    /********************************************************************
-     *************************** MOBILE *********************************
-     ********************************************************************/
+  }
+
+  function mobileView() {
     return (
       <>
-        <section className="headerSectionMobile"
+        <section
+          className="headerSectionMobile"
           style={{
             backgroundColor: global.COLORS.NERO, //! Cambiare colore
             marginTop: global.UTILS.NAV_HEIGHT,
@@ -363,7 +373,8 @@ export default function Team2022() {
               {handleYearChips()}
             </Stack>
           </div>
-          <div className="headerTitleSectionMobile"
+          <div
+            className="headerTitleSectionMobile"
             style={{
               padding: global.UTILS.BENTO_BOX_PADDING,
             }}
@@ -395,5 +406,11 @@ export default function Team2022() {
         </section>
       </>
     );
+  }
+
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
+    return desktopView();
+  } else {
+    return mobileView();
   }
 }
