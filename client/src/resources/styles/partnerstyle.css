@@ -255,3 +255,69 @@
     animation-name: image-scrolling-big-desktop;
   }
 }
+
+/* singolo div dello scroll-down per mobile */
+.mobile-div {
+  margin: 5vh 5vw;
+  background-size: cover; /* Per adattare l'immagine alla dimensione del contenitore */
+  background-position: center; /* Per centrare l'immagine all'interno del contenitore */
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+/* div interno al riquadro dello scroll-down contenente solo il testo */
+.mobile-text-block {
+  font-size: 15px;
+  color: white;
+  text-align: left;
+}
+
+#mobile-text-block-1 {
+  text-align: right;
+  width: 50%;
+}
+
+#mobile-text-block-2 {
+  text-align: left;
+  width: 60%;
+}
+
+#mobile-text-block-3 {
+  text-align: left;
+  width: 60%;
+}
+
+#mobile-text-block-4 {
+  text-align: right;
+  width: 60%;
+}
+
+#mobile-1st-div {
+  background-image: url("../../components/components/partners_scrolldown/img/2.webp");
+}
+#mobile-2nd-div {
+  background-image: url("../../components/components/partners_scrolldown/img/3.webp");
+}
+#mobile-3rd-div {
+  background-image: url("../../components/components/partners_scrolldown/img/4.webp");
+  background-position: right;
+}
+#mobile-4th-div {
+  background-image: url("../../components/components/partners_scrolldown/img/5.webp");
+}
+
+/* mobile + tablet */
+@media screen and (max-width: 820px) {
+  /* dimensioni div gradiente */
+  .gradient-div {
+    height: 10vh;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 821px) {
+  /* dimensioni div gradiente */
+  .gradient-div {
+    height: 20vh;
+  }
+}
