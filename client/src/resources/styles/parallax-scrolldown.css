@@ -161,17 +161,17 @@
 }
 
 #mobile-1st-div {
-  background-image: url("../../components/components/partners_scrolldown/img/2.png");
+  background-image: url("../../components/components/partners_scrolldown/img/2.webp");
 }
 #mobile-2nd-div {
-  background-image: url("../../components/components/partners_scrolldown/img/3.png");
+  background-image: url("../../components/components/partners_scrolldown/img/3.webp");
 }
 #mobile-3rd-div {
-  background-image: url("../../components/components/partners_scrolldown/img/4.png");
+  background-image: url("../../components/components/partners_scrolldown/img/4.webp");
   background-position: right;
 }
 #mobile-4th-div {
-  background-image: url("../../components/components/partners_scrolldown/img/5.png");
+  background-image: url("../../components/components/partners_scrolldown/img/5.webp");
 }
 
 /* mobile + tablet */
