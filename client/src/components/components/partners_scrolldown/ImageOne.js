@@ -24,6 +24,7 @@ const ImageOne = () => (
             href="https://www.tedxsapienzau.com/"
             target="_blank"
             rel="noopener noreferrer"
+            className="partners-link"
           >
             Scopri di più
           </a>
