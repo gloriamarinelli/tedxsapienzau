@@ -325,3 +325,8 @@
 .partners-link{
   color: #EB0028;
 }
+
+/* blocco animazione scroller loghi */
+.hovered *{
+  animation-play-state: paused; 
+}

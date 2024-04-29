@@ -21,6 +21,10 @@ export default function Partners() {
   const button2022 = useRef();
   const button2023 = useRef();
   const button2024 = useRef();
+  /* variabili per la gestione play-pause animazione scroller loghi */
+  let [isHovered, setIsHovered] = useState(false);
+  let onMouseMove = null;
+  let onMouseLeave = null;
 
   function getSponsor2022() {
     return (
@@ -551,6 +555,16 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     }
   }*/
 
+  /* funzione per la gestione 'pause' animazione scroller loghi */
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  /* funzione per la gestione 'play' animazione scroller loghi */
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   function getSponsor2024() {
     return (
       <>
@@ -566,7 +580,12 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             >
               Chi ci ha supportato
             </h2>
-            <div className="image-scroller-container">
+            <div 
+            /* controllo per mouse hover */
+            onMouseMove={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            /* se il mouse è hover viene aggiunta la classe 'hovered', altrimenti nulla */
+            className={`image-scroller-container ${isHovered ? 'hovered' : ''}`}>
               <div className="group-row">
                 <div className={"image-scroller-group"} id="1st-group">
                   <PartnerCard24 imgSrc="Tim.webp" altText="TIM" />
