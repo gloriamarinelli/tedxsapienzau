@@ -31,9 +31,31 @@ body {
 	color: var(--rosso-ted);
 }
 
+.post-container > h2 {
+	color:  #FFF;
+}
+
+.post-container > h3 {
+	color:  #FFF;
+}
+
+.post-container > span {
+	color:  #FFF;
+}
+
+.post-container > em {
+	color:  #FFF;
+}
+
 .post-container > p {
 	font-family: GothamBook;
 	font-size: 18px;
+	color: #FFF;
+}
+.post-container > par {
+	font-family: GothamBook;
+	font-size: 18px;
+	color: #FFF;
 }
 
 .post-image {
@@ -128,6 +150,7 @@ body {
 	overflow: hidden;
 	z-index: 0;
 	width: 350px;
+	height: 450px;
 }
 
 

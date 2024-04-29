@@ -17,7 +17,7 @@ export default function Blog({ withTitle = true }) {
 
   const { currentUser } = useContext(AuthContext);
 
-  const pageSize = 4;
+  const pageSize = 3;
   const clearDbIncrement = 10;
   const clearDbMagic = 2;
 

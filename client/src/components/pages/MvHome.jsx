@@ -122,6 +122,7 @@ export default function MvHome({ withTitle = false }) {
             <h1
               className="font-weight-bold mt-5 "
               style={{
+                paddingTop: "-40px",
                 color: hidden1 ? "#eb0028" : "#FFF",
                 fontSize: windowSize > 1245 ? "12vh" : "9vh",
                 fontWeight: "bold",
@@ -132,8 +133,9 @@ export default function MvHome({ withTitle = false }) {
             </h1>
             <h5
               style={{
+                paddingTop: "-40px",
                 fontWeight: "bold",
-                fontFamily: "GothamBold",
+                fontFamily: "Fira sans Extra Condensed",
                 color: "#FFF",
                 fontSize: windowSize > 1245 ? "4vh" : "3vh",
               }}
@@ -159,6 +161,7 @@ export default function MvHome({ withTitle = false }) {
             <h1
               className="font-weight-bold mt-5 "
               style={{
+                paddingTop: "-40px",
                 color: hidden2 ? "#eb0028" : "#FFF",
                 fontSize: windowSize > 1245 ? "12vh" : "9vh",
                 fontWeight: "bold",
@@ -169,6 +172,7 @@ export default function MvHome({ withTitle = false }) {
             </h1>
             <h5
               style={{
+                paddingTop: "-40px",
                 fontWeight: "bold",
                 fontFamily: "Fira sans Extra Condensed",
                 color: "#FFF",
@@ -196,6 +200,7 @@ export default function MvHome({ withTitle = false }) {
             <h1
               className="font-weight-bold mt-5 "
               style={{
+                paddingTop: "-40px",
                 color: hidden3 ? "#eb0028" : "#FFF",
                 fontSize: windowSize > 1245 ? "12vh" : "9vh",
                 fontWeight: "bold",
@@ -206,8 +211,9 @@ export default function MvHome({ withTitle = false }) {
             </h1>
             <h5
               style={{
+                paddingTop: "-40px",
                 fontWeight: "bold",
-                fontFamily: "GothamBold",
+                fontFamily: "Fira sans Extra Condensed",
                 color: "#FFF",
                 fontSize: windowSize > 1245 ? "4vh" : "3vh",
               }}
@@ -233,10 +239,11 @@ export default function MvHome({ withTitle = false }) {
             <h1
               className="font-weight-bold mt-5 "
               style={{
+                paddingTop: "-40px",
                 color: hidden4 ? "#eb0028" : "#FFF",
                 fontSize: windowSize > 1245 ? "11vh" : "8vh",
                 fontWeight: "bold",
-                fontFamily: "GothamBold",
+                fontFamily: "Fira sans Extra Condensed",
               }}
             >
               <CountUp
@@ -248,8 +255,9 @@ export default function MvHome({ withTitle = false }) {
             </h1>
             <h5
               style={{
+                paddingTop: "-40px",
                 fontWeight: "bold",
-                fontFamily: "GothamBold",
+                fontFamily: "Fira sans Extra Condensed",
                 color: "#FFF",
                 fontSize: windowSize > 1245 ? "3vh" : "2vh",
               }}

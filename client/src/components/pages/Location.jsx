@@ -15,7 +15,7 @@ export default function Location() {
       <>
         <section
           style={{
-            marginTop: "90px",
+            marginTop: global.UTILS.NAV_HEIGHT,
             backgroundColor: global.COLORS.NERO,
           }}
         >

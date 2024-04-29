@@ -26,7 +26,7 @@ export default function MissionandVision() {
         <div style={{ backgroundColor: "#000" }}>
           <section
             style={{
-              marginTop: "90px",
+              marginTop: global.UTILS.NAV_HEIGHT,
               marginBottom: "-50px",
               backgroundColor: global.COLORS.NERO,
             }}
