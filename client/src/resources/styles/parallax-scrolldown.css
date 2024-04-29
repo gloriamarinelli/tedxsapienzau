@@ -86,7 +86,6 @@
   border: medium;
   border-radius: 8px;
   padding: 0.5vw;
-  font-size: 1vw;
   cursor: pointer;
 }
 
@@ -122,4 +121,18 @@
 .list-column-div {
   margin: 5% 20% 0 20%;
   color: white;
+}
+
+/* mobile - tablet  */
+@media screen and (max-width: 820px) {
+  .red-button {
+    font-size: 4vw;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 821px) {
+  .red-button {
+    font-size: 1vw;
+  }
 }
