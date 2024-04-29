@@ -310,7 +310,7 @@ export default function Team2022() {
               padding: global.UTILS.BENTO_BOX_PADDING,
             }}
           >
-            <h1  style={{ color: "white" }} className="headerTitle">MEET OUR TEAM</h1>
+            <h1 className="headerTitle">MEET OUR TEAM</h1>
           </div>
           <div className="headerChipsSection">
             <Stack
@@ -365,10 +365,7 @@ export default function Team2022() {
               padding: global.UTILS.BENTO_BOX_PADDING,
             }}
           >
-            <h1
-              style={{ color: "white" }}
-              className="font-weight-bold headerTitleMobile"
-            >
+            <h1 className="font-weight-bold headerTitleMobile">
               MEET OUR TEAM
             </h1>
           </div>
