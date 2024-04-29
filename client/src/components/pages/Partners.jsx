@@ -666,6 +666,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   href="https://www.tedxsapienzau.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="partners-link"
                 >
                   Scopri di più
                 </a>
