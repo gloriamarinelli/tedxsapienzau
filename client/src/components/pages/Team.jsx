@@ -120,7 +120,7 @@ export default function Team2022() {
 
       board.map((board) => {
         const { id, nome, gruppo, ruolo, fotoNome, link } = board;
-        if (gruppo != "board") return;
+        if (gruppo !== "board") return;
         res.push(
           <ExecutiveTeamCard
             key={id}
