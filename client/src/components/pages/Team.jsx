@@ -232,7 +232,7 @@ export default function Team2022() {
   function comingSoon() {
     return (
       <div
-        className="coming-soon"
+        className="boardSpinnerSection"
         style={{
           backgroundColor: global.COLORS.NERO,
           padding: "10px",
@@ -251,7 +251,7 @@ export default function Team2022() {
     if (activeYear === 24) {
       return;
     } //TODO: Remove this line when the 2024 team is ready
-    const gruppi = teams[activeYear.toString()] || teams["24"];
+    var gruppi = teams[activeYear.toString()] || teams["24"];
 
     const chips = Object.entries(gruppi).map(([key, teamName]) => (
       <BasicChips
@@ -260,6 +260,8 @@ export default function Team2022() {
         teamId={key}
       />
     ));
+
+    delete chips[0]; // Remove the first chip which represents the acronyms
 
     return chips;
   }
