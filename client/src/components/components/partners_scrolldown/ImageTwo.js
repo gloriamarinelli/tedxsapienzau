@@ -1,7 +1,9 @@
 import { Parallax } from "react-parallax";
 import wallpaper from "./img/3.webp";
+
 const ImageTwo = () => (
   <Parallax
+    id="parallax-box-2"
     className="image"
     blur={0}
     color="#191919"

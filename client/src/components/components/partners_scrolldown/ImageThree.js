@@ -3,6 +3,7 @@ import wallpaper from "./img/4.webp";
 
 const ImageThree = () => (
   <Parallax
+    id="parallax-box-3"
     className="image"
     blur={0}
     color="#191919"
