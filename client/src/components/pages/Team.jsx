@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect, Component } from "react";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard.jsx";
 import axios from "axios";
-import "../../index.css";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import VolunteerCard from "../components/VolunteerCard.jsx";
