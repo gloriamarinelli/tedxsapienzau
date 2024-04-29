@@ -564,7 +564,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 color: "white",
               }}
             >
-              Our Sponsors
+              Chi ci ha supportato
             </h2>
             <div className="image-scroller-container">
               <div className="group-row">
