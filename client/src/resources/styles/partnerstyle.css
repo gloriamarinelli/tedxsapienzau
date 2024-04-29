@@ -140,7 +140,7 @@
 }
 
 .image-scroller-group {
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
   animation-direction: reverse;
