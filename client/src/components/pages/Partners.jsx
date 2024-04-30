@@ -619,7 +619,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 >
                   <PartnerCard24 imgSrc="Marziali.webp" altText="Marziali" />
                   <PartnerCard24
-                    imgSrc="RadioSapienza.webp"
+                    imgSrc="RadioSapienza.png"
                     altText="RadioSapienza"
                   />
                   <PartnerCard24
