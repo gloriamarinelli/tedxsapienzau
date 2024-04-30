@@ -9,7 +9,7 @@
   --font-size: 150px;
   --label-font-size: 40px;
   --divider-height: 5px;
-  --colon-translation: -22px;
+  --colon-translation: -70px;
 
   @media screen and (max-width: 1360px) {
     --block-width: 80px;
@@ -17,7 +17,7 @@
     --font-size: 100px;
     --label-font-size: 30px;
     --divider-height: 4px;
-    --colon-translation: -22px;
+    --colon-translation: -40px;
   }
 
   @media screen and (max-width: 1100px) {

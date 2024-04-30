@@ -26,8 +26,42 @@ import backgroundVideo from "../videos/tedx.mp4";
 import { Button, Row } from "react-bootstrap";
 import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
+import SpeakerCard from "../components/SpeakerCard";
+import SecretGuestImage from "../images/secret_guest.webp";
+import zIndex from "@mui/material/styles/zIndex";
 
 const NewsSidebarSize = 18;
+
+const speakersInfo = [
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: "../images/secret_guest.webp",
+  },
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: SecretGuestImage,
+  },
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: SecretGuestImage,
+  },
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: SecretGuestImage,
+  },
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: SecretGuestImage,
+  },
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: SecretGuestImage,
+  },
+  {
+    nomeSpeaker: "Simone Teglia",
+    imgSrc: SecretGuestImage,
+  },
+];
 
 export default function Home() {
   const [windowSize, setWindowSize] = useOutletContext();
@@ -125,9 +159,9 @@ export default function Home() {
                 <path
                   d="M4.5 13.5C34.3333 0.999942 109.48 31.5142 124 135.001C155.5 359.5 112.5 664 455.5 614.003C974.806 538.307 854 274.5 683 337.001C580.571 374.439 582.029 514.713 854 810.004C1198 1183.5 545.179 1659.65 359.5 1454.01C-73 975.004 1236.14 721.159 854 1619.01C462 2540.01 782.848 2880.17 1165 2568.01C1675.5 2151.01 1563.5 2198.01 1918 2198.01"
                   stroke={global.COLORS.GIALLO_COUNTDOWN}
-                  stroke-width="20"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="20"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             ) : (
@@ -147,9 +181,9 @@ export default function Home() {
                 <path
                   d="M-13.5 14.0001C16.3255 -0.240562 222 14 126.5 307.5C98.241 394.349 66.9936 695.703 331.5 615C703.5 501.5 576.104 31.4665 423.5 307.5C253.5 615 639 805.842 532.5 1078C278.362 1727.44 126.5 1430.36 126.5 1254.5C126.5 983 838.5 1349 599.5 1976.5C468.646 2320.06 680.948 2688.13 1063 2332.5C1333 2081.17 1479.5 1946.5 1576.5 1856"
                   stroke="#F1FF39"
-                  stroke-width="20"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="20"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             )}
@@ -181,15 +215,10 @@ export default function Home() {
                   alignItems: "flex-end",
                 }}
               >
-                {/* <img
-                  
-                  src={TEDxLogoWhite}
-                  width={windowSize / 6}
-              />*/}
                 <img
                   src={CountdownLogo}
                   alt="Countdown Logo"
-                  width={windowSize / 2}
+                  width={windowSize > 1360 ? "900px" : "750px"}
                   style={{ marginBottom: "-80px" }}
                 />
                 <Countdown language="it" />
@@ -197,9 +226,8 @@ export default function Home() {
             </div>
             <div
               style={{
-                height: "100vh",
+                height: "80vh",
                 width: "100vw",
-                //backgroundColor: "blue",
                 backgroundColor: "black",
                 display: "flex",
                 justifyContent: "flex-end",
@@ -210,7 +238,6 @@ export default function Home() {
                   width: "50%",
                   height: "100%",
                   padding: "30px",
-                  //backgroundColor: "red",
                   backgroundColor: "black",
                   display: "flex",
                   alignItems: "center",
@@ -239,14 +266,38 @@ export default function Home() {
                 height: "100vh",
                 width: "100vw",
                 backgroundColor: "black",
-                //backgroundColor: "pink",
                 textAlign: "center",
                 marginTop: "50px",
+                color: "#fff",
               }}
             >
               <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                SPEAKERS{" "}
+                SPEAKERS
               </h1>
+              <div
+                style={{
+                  width: "80%",
+                  margin: "auto",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {speakersInfo.map((speaker) => {
+                  console.log(speaker);
+                  const { nomeSpeaker, imgSrc } = speaker;
+                  return (
+                    <SpeakerCard
+                      nomeSpeaker={nomeSpeaker}
+                      imgSrc={SecretGuestImage}
+                      style={{
+                        zIndex: 2,
+                        flex: "1 0 21%",
+                      }}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </section>
         </div>
