@@ -580,12 +580,15 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             >
               Chi ci ha supportato
             </h2>
-            <div 
-            /* controllo per mouse hover */
-            onMouseMove={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            /* se il mouse è hover viene aggiunta la classe 'hovered', altrimenti nulla */
-            className={`image-scroller-container ${isHovered ? 'hovered' : ''}`}>
+            <div
+              /* controllo per mouse hover */
+              onMouseMove={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              /* se il mouse è hover viene aggiunta la classe 'hovered', altrimenti nulla */
+              className={`image-scroller-container ${
+                isHovered ? "hovered" : ""
+              }`}
+            >
               <div className="group-row">
                 <div className={"image-scroller-group"} id="1st-group">
                   <PartnerCard24 imgSrc="Tim.webp" altText="TIM" />
@@ -677,18 +680,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             <div id="mobile-text-block-1" className="mobile-text-block">
               <h3 className="">TEDx, molto più che un evento.</h3>
               <p className="">
-                Realizzare un TEDx è un lavoro di squadra. L’organizzazione
-                avviene in sinergia con i nostri partner.
-              </p>
-              <p className="">
-                <a
-                  href="https://www.tedxsapienzau.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="partners-link"
-                >
-                  Scopri di più
-                </a>
+                Realizzare un TEDx è un lavoro di squadra. Per questo motivo
+                collaboriamo in sinergia con i nostri partner.
               </p>
             </div>
           </div>
@@ -698,9 +691,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h5 className="">Uniti per un obiettivo</h5>
               <p className="">
                 Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
-                portare questo format internazionale nella nostra università
-                Sapienza. La nostra è infatti l’Università più grande d’Europa,
-                con più di 120 mila studenti iscritti.
+                portare questo format internazionale nella nostra Università.
+                Ora siamo più di 110 volontari. Sapienza è l’Università più
+                grande d’Europa, con più di 120 mila studenti iscritti ed il
+                nostro obiettivo è dare voce alle idee di valore della nostra
+                comunità accademica.
               </p>
               <p className="">
                 Il nostro obiettivo è dare voce alle idee di valore che la
@@ -721,13 +716,13 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 </p>
                 <p className="">
                   Ci impegniamo a parlare di temi più rilevanti per la nostra
-                  società. Attraverso la voce degli Speaker vogliamo portare un
+                  società attraverso la voce degli Speaker. Vogliamo portare un
                   impatto positivo alla nostra comunità.
                 </p>
               </div>
               <div class="">
                 <div className="">
-                  <div class="">
+                  <div className="partners-list">
                     <h2>I nostri pilastri</h2>
                     <ul>
                       <li className="">Community</li>
@@ -737,11 +732,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   </div>
                 </div>
                 <div className="">
-                  <div class="">
+                  <div className="partners-list">
                     <h2>Collabora con noi</h2>
                     <ul>
                       <li className="">Sponsor</li>
-                      <li className="">Partner</li>
+                      <li className="">Partnership</li>
                       <li className="">Media partner</li>
                       <li className="">Community partner</li>
                       <li className="">Patrocinio</li>
@@ -756,27 +751,24 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h3 className="">In numeri</h3>
               <p className="">
                 2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
-                <ul className="">
-                  <li>1500 persone coinvolte offline negli eventi</li>
-                  <li>200000 visualizzazioni su YouTube</li>
-                  <li>50 partner a supporto del nostro evento</li>
-                  <li>300 volontari in totale</li>
+                <ul className="partners-list">
+                  <li className="info-el">
+                    <h3 className="info-number">+1500</h3> persone coinvolte
+                    negli eventi
+                  </li>
+                  <li className="info-el">
+                    <h3 className="info-number">+200000</h3> visualizzazioni su
+                    YouTube
+                  </li>
+                  <li className="info-el">
+                    <h3 className="info-number">+50</h3> partner a supporto del
+                    nostro evento
+                  </li>
+                  <li className="info-el">
+                    <h3 className="info-number">+300</h3> volontari passati di
+                    qui
+                  </li>
                 </ul>
-                <div className="feedbacks-container">
-                  <p>Feedback Azienda</p>
-                  <p className="statement">
-                    "Ci siamo trovati benissimo blablabla"
-                  </p>
-                  <p>Partecipante evento</p>
-                  <p className="statement">"Troppo bello blablabla"</p>
-                </div>
-                <div className="button-container">
-                  <p className="button-text">
-                    <button className="red-button">
-                      Scopri chi ci ha supportato
-                    </button>
-                  </p>
-                </div>
               </p>
             </div>
           </div>

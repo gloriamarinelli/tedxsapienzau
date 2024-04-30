@@ -23,8 +23,8 @@ const ImageThree = () => (
             garantire un’esperienza che sia all’altezza del nome che portiamo.
           </p>
           <p className="img-txt-2">
-            Ci impegniamo a parlare di temi più rilevanti per la nostra società.
-            Attraverso la voce degli Speaker vogliamo portare un impatto
+            Ci impegniamo a parlare di temi più rilevanti per la nostra società
+            attraverso la voce degli Speaker. Vogliamo portare un impatto
             positivo alla nostra comunità.
           </p>
         </div>
@@ -32,7 +32,7 @@ const ImageThree = () => (
           <div className="ct-left">
             <div class="row-box">
               <h2>I nostri pilastri</h2>
-              <ul>
+              <ul className="partners-list">
                 <li className="img-txt-2">Community</li>
                 <li className="img-txt-2">Content marketing</li>
                 <li className="img-txt-2">Employer branding</li>
@@ -42,9 +42,9 @@ const ImageThree = () => (
           <div className="ct-right">
             <div class="row-box">
               <h2>Collabora con noi</h2>
-              <ul>
+              <ul className="partners-list">
                 <li className="img-txt-2">Sponsor</li>
-                <li className="img-txt-2">Partner</li>
+                <li className="img-txt-2">Partnership</li>
                 <li className="img-txt-2">Media partner</li>
                 <li className="img-txt-2">Community partner</li>
                 <li className="img-txt-2">Patrocinio</li>

@@ -18,25 +18,12 @@ const ImageFour = () => (
         <h3 className="img-title">In numeri</h3>
         <p className="img-txt-2">
           2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
-          <ul className="info-list">
-            <li>1500 persone coinvolte offline negli eventi</li>
-            <li>200000 visualizzazioni su YouTube</li>
-            <li>50 partner a supporto del nostro evento</li>
-            <li>300 volontari in totale</li>
+          <ul className="partners-list info-list">
+            <li className="info-el"><h3 className="info-number">+1500</h3> persone coinvolte negli eventi</li>
+            <li className="info-el"><h3 className="info-number">+200000</h3> visualizzazioni su YouTube</li>
+            <li className="info-el"><h3 className="info-number">+50</h3> partner a supporto del nostro evento</li>
+            <li className="info-el"><h3 className="info-number">+300</h3> volontari passati di qui</li>
           </ul>
-          <div className="feedbacks-container">
-            <p>Feedback Azienda</p>
-            <p className="statement">"Ci siamo trovati benissimo blablabla"</p>
-            <p>Partecipante evento</p>
-            <p className="statement">"Troppo bello blablabla"</p>
-          </div>
-          <div className="button-container">
-            <p className="button-text">
-              <button className="red-button">
-                Scopri chi ci ha supportato
-              </button>
-            </p>
-          </div>
         </p>
       </div>
     </div>

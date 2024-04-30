@@ -17,18 +17,8 @@ const ImageOne = () => (
       <div className="text-div">
         <h3 className="img-title">TEDx, molto più che un evento.</h3>
         <p className="img-txt">
-          Realizzare un TEDx è un lavoro di squadra. L’organizzazione avviene in
-          sinergia con i nostri partner.
-        </p>
-        <p className="img-link">
-          <a
-            href="https://www.tedxsapienzau.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partners-link"
-          >
-            Scopri di più
-          </a>
+          Realizzare un TEDx è un lavoro di squadra. Per questo motivo
+          collaboriamo in sinergia con i nostri partner.
         </p>
       </div>
     </div>

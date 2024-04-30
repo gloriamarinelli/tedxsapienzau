@@ -322,11 +322,22 @@
   }
 }
 
-.partners-link{
-  color: #EB0028;
-}
-
 /* blocco animazione scroller loghi */
 .hovered *{
   animation-play-state: paused; 
+}
+
+.partners-list{
+  list-style-type: none;
+}
+
+.info-number{
+  font-size: 3vw;
+  font-weight: bold;
+  color: #EB0028;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.info-el{
+  padding: 2vh 0;
 }
