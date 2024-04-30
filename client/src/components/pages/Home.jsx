@@ -57,10 +57,6 @@ const speakersInfo = [
     nomeSpeaker: "Simone Teglia",
     imgSrc: SecretGuestImage,
   },
-  {
-    nomeSpeaker: "Simone Teglia",
-    imgSrc: SecretGuestImage,
-  },
 ];
 
 export default function Home() {
@@ -247,23 +243,36 @@ export default function Home() {
                 }}
               >
                 <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                  LOREM IPSUM
+                  3, 2, 1MPATTO
                 </h1>
-                <p style={{ maxWidth: "30ch", color: "#fff" }}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Pariatur reiciendis sapiente maxime hic animi atque sed nam?
-                  Ex eum earum vero facere hic et distinctio, illum
-                  reprehenderit? Laboriosam dolorem aliquam quam autem
-                  similique, est possimus omnis voluptatum, provident illo
-                  tempora nemo excepturi fugit ipsum quis pariatur commodi
-                  incidunt corrupti dolor facilis, nisi cupiditate facere.
-                  Nesciunt molestias repellendus nam quo fugiat.
+                <p style={{ maxWidth: "40ch", color: "#fff" }}>
+                  Il tempo scorre ed è necessario creare un nuovo spazio di
+                  riflessione ed intrattenimento incentrato sulla crisi
+                  climatica.
+                  <br />
+                  <br />
+                  Un luogo dove affrontare le paure sul futuro con positività e
+                  scienza grazie ad una visione interdisciplinare e coinvolgente
+                  negli spazi del nostro Ateneo.
+                  <br />
+                  <br />
+                  Immergiti nel primo evento{" "}
+                  <span
+                    style={{
+                      color: global.COLORS.GIALLO_COUNTDOWN,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    TEDx Countdown
+                  </span>{" "}
+                  della Sapienza e lasciati ispirare dall'urgenza e dalla
+                  complessità di questa sfida globale per promuovere azioni
+                  concrete.
                 </p>
               </div>
             </div>
             <div
               style={{
-                height: "100vh",
                 width: "100vw",
                 backgroundColor: "black",
                 textAlign: "center",
@@ -292,7 +301,7 @@ export default function Home() {
                       imgSrc={SecretGuestImage}
                       style={{
                         zIndex: 2,
-                        flex: "1 0 21%",
+                        flex: "1 0 26%",
                       }}
                     />
                   );
@@ -317,14 +326,12 @@ export default function Home() {
           >
             <div
               style={{
-                height: "100vh",
                 width: "100vw",
-                backgroundColor: "black",
+                backgroundColor: "#000",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "flex-start",
                 flexDirection: "column",
-                padding: " 30px 0",
+                padding: "0 0 50px 0",
                 overflow: "hidden",
               }}
             >
@@ -354,22 +361,71 @@ export default function Home() {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                padding: "50px 0",
               }}
             >
               <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                LOREM IPSUM
+                3, 2, 1MPATTO
               </h1>
               <p style={{ maxWidth: "25ch", color: "#fff" }}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Pariatur reiciendis sapiente maxime hic animi atque sed nam? Ex
-                eum earum vero facere hic et distinctio, illum reprehenderit?
-                Laboriosam dolorem aliquam quam autem similique, est possimus
-                omnis voluptatum, provident illo tempora nemo excepturi fugit
-                ipsum quis pariatur commodi incidunt corrupti dolor facilis,
-                nisi cupiditate facere. Nesciunt molestias repellendus nam quo
-                fugiat.
+                Il tempo scorre ed è necessario creare un nuovo spazio di
+                riflessione ed intrattenimento incentrato sulla crisi climatica.
+                <br />
+                <br />
+                Un luogo dove affrontare le paure sul futuro con positività e
+                scienza grazie ad una visione interdisciplinare e coinvolgente
+                negli spazi del nostro Ateneo.
+                <br />
+                <br />
+                Immergiti nel primo evento{" "}
+                <span
+                  style={{
+                    color: global.COLORS.GIALLO_COUNTDOWN,
+                    fontWeight: "bold",
+                  }}
+                >
+                  TEDx Countdown
+                </span>{" "}
+                della Sapienza e lasciati ispirare dall'urgenza e dalla
+                complessità di questa sfida globale per promuovere azioni
+                concrete.
               </p>
+            </div>
+            <div
+              style={{
+                width: "100vw",
+                backgroundColor: "black",
+                textAlign: "center",
+                marginTop: "50px",
+                color: "#fff",
+              }}
+            >
+              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+                SPEAKERS
+              </h1>
+              <div
+                style={{
+                  width: "90%",
+                  margin: "auto",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {speakersInfo.map((speaker) => {
+                  console.log(speaker);
+                  const { nomeSpeaker, imgSrc } = speaker;
+                  return (
+                    <SpeakerCard
+                      nomeSpeaker={nomeSpeaker}
+                      imgSrc={SecretGuestImage}
+                      style={{
+                        zIndex: 2,
+                        flex: "1 0 26%",
+                      }}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </section>
         </div>
@@ -389,7 +445,7 @@ export default function Home() {
           >
             <div
               style={{
-                height: "100%",
+                height: "90vh",
                 width: "100vw",
                 backgroundColor: "black",
                 display: "flex",
@@ -430,18 +486,64 @@ export default function Home() {
               }}
             >
               <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                LOREM IPSUM
+                3, 2, 1MPATTO
               </h1>
               <p style={{ maxWidth: "25ch", color: "#fff" }}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Pariatur reiciendis sapiente maxime hic animi atque sed nam? Ex
-                eum earum vero facere hic et distinctio, illum reprehenderit?
-                Laboriosam dolorem aliquam quam autem similique, est possimus
-                omnis voluptatum, provident illo tempora nemo excepturi fugit
-                ipsum quis pariatur commodi incidunt corrupti dolor facilis,
-                nisi cupiditate facere. Nesciunt molestias repellendus nam quo
-                fugiat.
+                Il tempo scorre ed è necessario creare un nuovo spazio di
+                riflessione ed intrattenimento incentrato sulla crisi climatica.
+                <br />
+                <br />
+                Un luogo dove affrontare le paure sul futuro con positività e
+                scienza grazie ad una visione interdisciplinare e coinvolgente
+                negli spazi del nostro Ateneo.
+                <br />
+                <br />
+                Immergiti nel primo evento{" "}
+                <span
+                  style={{
+                    color: global.COLORS.GIALLO_COUNTDOWN,
+                    fontWeight: "bold",
+                  }}
+                >
+                  TEDx Countdown
+                </span>{" "}
+                della Sapienza e lasciati ispirare dall'urgenza e dalla
+                complessità di questa sfida globale per promuovere azioni
+                concrete.
               </p>
+            </div>
+            <div
+              style={{
+                width: "100vw",
+                backgroundColor: "black",
+                textAlign: "center",
+                marginTop: "50px",
+                color: "#fff",
+              }}
+            >
+              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+                SPEAKERS
+              </h1>
+              <div
+                style={{
+                  width: "100%",
+                  margin: "auto",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                {speakersInfo.map((speaker) => {
+                  console.log(speaker);
+                  const { nomeSpeaker, imgSrc } = speaker;
+                  return (
+                    <SpeakerCard
+                      nomeSpeaker={nomeSpeaker}
+                      imgSrc={SecretGuestImage}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </section>
         </div>
