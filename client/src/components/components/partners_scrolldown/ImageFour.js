@@ -1,5 +1,6 @@
 import { Parallax } from "react-parallax";
 import wallpaper from "./img/5.webp";
+import CountUp from "react-countup";
 
 const ImageFour = () => (
   <Parallax
@@ -19,10 +20,34 @@ const ImageFour = () => (
         <p className="img-txt-2">
           2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
           <ul className="partners-list info-list">
-            <li className="info-el"><h3 className="info-number">+1500</h3> persone coinvolte negli eventi</li>
-            <li className="info-el"><h3 className="info-number">+200000</h3> visualizzazioni su YouTube</li>
-            <li className="info-el"><h3 className="info-number">+50</h3> partner a supporto del nostro evento</li>
-            <li className="info-el"><h3 className="info-number">+300</h3> volontari passati di qui</li>
+            <li className="info-el">
+              <h3 className="info-number">
+                +
+                <CountUp end={1500} duration={2} useEasing={false} />
+              </h3>{" "}
+              persone coinvolte negli eventi
+            </li>
+            <li className="info-el">
+              <h3 className="info-number">
+                +
+                <CountUp end={200000} duration={2} useEasing={false} />
+              </h3>{" "}
+              visualizzazioni su YouTube
+            </li>
+            <li className="info-el">
+              <h3 className="info-number">
+                +
+                <CountUp end={50} duration={2} useEasing={false} />
+              </h3>{" "}
+              partner a supporto del nostro evento
+            </li>
+            <li className="info-el">
+              <h3 className="info-number">
+                +
+                <CountUp end={300} duration={2} useEasing={false} />
+              </h3>{" "}
+              volontari passati di qui
+            </li>
           </ul>
         </p>
       </div>
