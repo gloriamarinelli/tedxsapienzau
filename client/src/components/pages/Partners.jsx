@@ -689,7 +689,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           <div id="mobile-2nd-div" className="mobile-div ct-left">
             <div id="mobile-text-block-2" className="mobile-text-block">
               <h3 className="">Perché collaborare?</h3>
-              <h5 className="">Uniti per un obiettivo</h5>
+              <h5 id="same-goal-txt">Uniti per un obiettivo</h5>
               <p className="">
                 Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
                 portare questo format internazionale nella nostra Università.

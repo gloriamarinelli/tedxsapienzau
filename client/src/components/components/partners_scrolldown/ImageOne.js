@@ -17,8 +17,9 @@ const ImageOne = () => (
       <div className="text-div">
         <h3 className="img-title">TEDx, molto più che un evento.</h3>
         <p className="img-txt">
-          Realizzare un TEDx è un lavoro di squadra. Per questo motivo
-          collaboriamo in sinergia con i nostri partner.
+          Realizzare un TEDx è un <span id="imp-txt-1">lavoro di squadra</span>.
+          <br></br>
+          Per questo motivo collaboriamo in sinergia con i nostri partner.
         </p>
       </div>
     </div>
