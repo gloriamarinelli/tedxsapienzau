@@ -86,7 +86,7 @@ export default function MissionandVision() {
 
                 <hr className="featurette-divider"></hr>
 
-                {/**TedX Sapienza U */}
+                {/**TEDX Sapienza U */}
                 <div className="row featurette">
                   <div className="col-md-7 order-md-2 mt-4">
                     <LazyLoadImage
@@ -102,23 +102,39 @@ export default function MissionandVision() {
                         fontFamily: "Fira sans Extra Condensed",
                       }}
                     >
-                      Il TEDxSapienzaU è il primo TED Universitario
-                      dell'Università di Roma “La Sapienza”. Grazie a questo
-                      l'intera comunità studentesca e accademica gode di una
-                      programmazione sempre nuova e internazionale. L'evento è
-                      stato fortemente voluto da alcuni studenti dell'Ateneo e,
-                      grazie al supporto della Magnifica Rettrice Antonella
-                      Polimeni, il Comitato TEDxSapienzaU composto dagli
-                      studenti organizzatori e dall'Area Supporto alla Ricerca e
-                      Trasferimento Tecnologico, ha ottenuto dalla TED
-                      Foundation la licenza ufficiale TEDx.
+                      È il TEDx Universitario dell'Ateneo Sapienza
+                      dell'Università di Roma, gode della licenza ufficiale
+                      concessa da TED Foundation e del supporto della Magnifica
+                      Rettrice Antonella Polimeni insieme all'Area Supporto alla
+                      Ricerca e Trasferimento Tecnologico. L'evento, nato nel
+                      2021 dallo stimolo di alcuni studenti dell'Ateneo, è
+                      giunto ora alla sua terza edizione. Organizzato unicamente
+                      da studenti e dottorandi del primo Ateneo romano, grazie
+                      all'associazione riconosciuta <b>"SapienzaU"</b> con
+                      l'obiettivo di creare per l'intera comunità accademica una
+                      programmazione sempre nuova e internazionale.
                     </p>
+                    <a className="link" href={"/partners"}>
+                      <button
+                        style={{
+                          backgroundColor: global.COLORS.ROSSO_TED_2023,
+                          padding: "8px 32px",
+                          color: "white",
+                          border: "none",
+                          fontSize: "18px",
+                          borderRadius: "8px",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Collabora con noi{" "}
+                      </button>
+                    </a>
                   </div>
                   <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
                     <LazyLoadImage
                       src={Image3}
                       alt="TedxSapienzaU"
-                      height="350"
+                      height="400"
                     />
                   </div>
                 </div>
@@ -266,8 +282,8 @@ export default function MissionandVision() {
                     className="lead"
                     style={{
                       color: "#FFF",
-                      fontWeight: "bold",
                       fontFamily: "Fira sans Extra Condensed",
+                      textAlign: "justify",
                     }}
                   >
                     TED è un'organizzazione no profit dedicata alla diffusione
@@ -295,7 +311,7 @@ export default function MissionandVision() {
                       className="lead"
                       style={{
                         color: "#FFF",
-                        fontWeight: "bold",
+                        textAlign: "justify",
                         fontFamily: "Fira sans Extra Condensed",
                       }}
                     >
@@ -315,28 +331,46 @@ export default function MissionandVision() {
                   <div className="col-md-7 order-md-2 mt-4">
                     <LazyLoadImage
                       src={Image2}
-                      alt="TedxSapienzaU"
+                      alt="TEDxSapienzaU"
                       height="70"
                     />
                     <p
                       className="lead mt-3"
                       style={{
                         color: "#FFF",
-                        fontWeight: "bold",
+                        textAlign: "justify",
                         fontFamily: "Fira sans Extra Condensed",
                       }}
                     >
-                      Il TEDxSapienzaU è il primo TED Universitario
-                      dell'Università di Roma “La Sapienza”. Grazie a questo
-                      l'intera comunità studentesca e accademica gode di una
-                      programmazione sempre nuova e internazionale. L'evento è
-                      stato fortemente voluto da alcuni studenti dell'Ateneo e,
-                      grazie al supporto della Magnifica Rettrice Antonella
-                      Polimeni, il Comitato TEDxSapienzaU composto dagli
-                      studenti organizzatori e dall'Area Supporto alla Ricerca e
-                      Trasferimento Tecnologico, ha ottenuto dalla TED
-                      Foundation la licenza ufficiale TEDx.
+                      È il TEDx Universitario dell'Ateneo Sapienza
+                      dell'Università di Roma, gode della licenza ufficiale
+                      concessa da TED Foundation e del supporto della Magnifica
+                      Rettrice Antonella Polimeni insieme all'Area Supporto alla
+                      Ricerca e Trasferimento Tecnologico. L'evento, nato nel
+                      2021 dallo stimolo di alcuni studenti dell'Ateneo, è
+                      giunto ora alla sua terza edizione. Organizzato unicamente
+                      da studenti e dottorandi del primo Ateneo romano, grazie
+                      all'associazione riconosciuta <b>"SapienzaU"</b> con
+                      l'obiettivo di creare per l'intera comunità accademica una
+                      programmazione sempre nuova e internazionale.
                     </p>
+                    <a className="link" href={"/partners"}>
+                      <button
+                        style={{
+                          backgroundColor: global.COLORS.ROSSO_TED_2023,
+                          padding: "8px 32px",
+                          color: "white",
+                          border: "none",
+                          fontSize: "18px",
+                          borderRadius: "8px",
+                          fontWeight: "bold",
+                          marginBottom: "20px",
+                          alignItems: "center",
+                        }}
+                      >
+                        Collabora con noi{" "}
+                      </button>
+                    </a>
                   </div>
                   <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
                     <LazyLoadImage
@@ -361,7 +395,6 @@ export default function MissionandVision() {
                         fontSize: "80px",
                         fontWeight: "bold",
                         fontFamily: "Fira sans Extra Condensed",
-                        color: "#FFF",
                       }}
                     >
                       26

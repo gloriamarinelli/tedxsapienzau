@@ -50,6 +50,7 @@ export default function Editions({ withTitle = true }) {
           backgroundColor: "#000",
           padding: `0 ${global.UTILS.BENTO_BOX_PADDING}`,
           gap: "15px",
+          textAlign: "justify",
         }}
       >
         {eventsInfo.map((event, index) => (

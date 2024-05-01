@@ -240,6 +240,7 @@ export default function Home() {
                   justifyContent: "center",
                   flexDirection: "column",
                   fontSize: "20px",
+                  textAlign: "justify",
                 }}
               >
                 <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
@@ -361,6 +362,7 @@ export default function Home() {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
+                textAlign: "justify",
               }}
             >
               <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
@@ -383,7 +385,7 @@ export default function Home() {
                     fontWeight: "bold",
                   }}
                 >
-                  TEDx Countdown
+                  TEDxCountdown
                 </span>{" "}
                 della Sapienza e lasciati ispirare dall'urgenza e dalla
                 complessità di questa sfida globale per promuovere azioni

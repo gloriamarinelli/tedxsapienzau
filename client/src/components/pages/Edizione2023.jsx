@@ -366,7 +366,13 @@ export default function Edizione2023() {
         >
           IL NOSTRO OBIETTIVO
         </h1>
-        <p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
+        <p
+          style={{
+            fontSize: "20px",
+            fontFamily: "GothamBook",
+            textAlign: "justify",
+          }}
+        >
           Il nostro obiettivo è <strong>azzerare</strong>, ricercare un punto{" "}
           <strong>zero</strong>: le disuguaglianze, i conflitti, i cattivi stili
           di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che

@@ -169,13 +169,13 @@ export default function Footer() {
           </b>
           <div style={{ lineHeight: "10px", fontSize: "16px" }}>
             <p className="secondary-text" style={{ marginTop: "5px" }}>
-              <GreyLink text="Back to Zero" link={"/edizione2023"} />
+              <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
             </p>
             <p className="secondary-text">
-              <GreyLink text="Awards" link={"/awards2023"} />
+              <GreyLink text="Awards" link={"/eventi/awards2023"} />
             </p>
             <p className="secondary-text">
-              <GreyLink text="ACT" link={"/edizione2022"} />
+              <GreyLink text="ACT" link={"/eventi/edizione2022"} />
             </p>
           </div>
           <b>
@@ -221,7 +221,11 @@ export default function Footer() {
             <b>Cerchi informazioni?</b>
             <p>
               Contattaci{" "}
-              <a className="tertiary-text" href="mailto:info@tedxsapienzau.com" style={{color: "#eb0028"}}>
+              <a
+                className="tertiary-text"
+                href="mailto:info@tedxsapienzau.com"
+                style={{ color: "#eb0028" }}
+              >
                 info@tedxsapienzau.com
               </a>
             </p>

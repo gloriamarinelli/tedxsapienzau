@@ -54,7 +54,7 @@ export default function Awards2022() {
       <h1
         className="font-weight-bold mt-5 mb-3"
         style={{
-          fontSize: "45px",
+          fontSize: "40px",
           textAlign: "center",
           fontWeight: "bold",
         }}
@@ -62,24 +62,24 @@ export default function Awards2022() {
         I VINCITORI TEDxSAPIENZAU AWARDS 2022
       </h1>
       <div class="container mt-5 pb-5">
-        <LazyLoadImage src={Image2} class="winner_22" />
+        <LazyLoadImage src={Image2} class="winner_22"  height="350"/>
         <div class="row justify-content-center" style={{ gap: "100px" }}>
           <div class="col-sm-4">
             {" "}
             <div class="row-4">
-              <LazyLoadImage src={Image3} class="winner_22_small" />
+              <LazyLoadImage src={Image3} class="winner_22_small"  height="350" />
             </div>
             <div class="row-4 winner_22_small">
-              <LazyLoadImage src={Image4} class="winner_22_small" />
+              <LazyLoadImage src={Image4} class="winner_22_small"  height="350" />
             </div>
             <div class="row-4 winner_22_small">
-              <LazyLoadImage src={Image6} class="winner_22_small" />
+              <LazyLoadImage src={Image6} class="winner_22_small"  height="350" />
             </div>
           </div>
           <div class="col-sm-4">
             {" "}
             <div class="row-4 winner_22_small">
-              <LazyLoadImage src={Image1} class="winner_22_small" />
+              <LazyLoadImage src={Image1} class="winner_22_small"   height="350"/>
             </div>
           </div>
         </div>
