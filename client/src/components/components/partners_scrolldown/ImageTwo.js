@@ -26,8 +26,9 @@ const ImageTwo = () => (
         </p>
         <p className="img-txt-2">
           Sapienza è l’Università più grande d’Europa, con più di 120 mila
-          studenti iscritti ed il nostro obiettivo è <br></br><span id="imp-txt-4">dare voce alle idee</span> di
-          valore della nostra comunità accademica.
+          studenti iscritti ed il nostro obiettivo è <br></br>
+          <span id="imp-txt-4">dare voce alle idee</span> di valore della nostra
+          comunità accademica.
         </p>
       </div>
     </div>
