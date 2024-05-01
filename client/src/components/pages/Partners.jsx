@@ -3,6 +3,7 @@ import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
 import PartnerCard24 from "../components/PartnerCard24";
 import { useOutletContext } from "react-router";
+import CountUp from "react-countup";
 import global from "../../resources/global.json";
 import { Link } from "react-router-dom";
 import "../../resources/styles/partnerstyle.css";
@@ -753,20 +754,32 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
                 <ul className="partners-list">
                   <li className="info-el">
-                    <h3 className="info-number">+1500</h3> persone coinvolte
-                    negli eventi
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={50} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    persone coinvolte negli eventi
                   </li>
                   <li className="info-el">
-                    <h3 className="info-number">+200000</h3> visualizzazioni su
-                    YouTube
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={200000} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    visualizzazioni su YouTube
                   </li>
                   <li className="info-el">
-                    <h3 className="info-number">+50</h3> partner a supporto del
-                    nostro evento
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={50} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    partner a supporto del nostro evento
                   </li>
                   <li className="info-el">
-                    <h3 className="info-number">+300</h3> volontari passati di
-                    qui
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={300} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    volontari passati di qui
                   </li>
                 </ul>
               </p>
