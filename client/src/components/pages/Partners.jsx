@@ -720,7 +720,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <p className="">
                   Ci impegniamo a parlare di temi più rilevanti per la nostra
                   società attraverso la voce degli Speaker. Vogliamo portare un
-                  <span id="imp-txt-3">impatto positivo</span> alla nostra
+                  <span id="imp-txt-3"> impatto positivo</span> alla nostra
                   comunità.
                 </p>
               </div>
