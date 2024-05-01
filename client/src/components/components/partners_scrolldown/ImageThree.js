@@ -16,11 +16,11 @@ const ImageThree = () => (
     <div className="content ct-left">
       <div className="var-container">
         <div className="text-div">
-          <h4 className="img-txt">L’innovazione è nelle nostre vene </h4>
+          <h4 className="img-txt">L'innovazione è nelle nostre vene</h4>
           <p className="img-txt-2">
             Il format TEDx ci è concesso sotto licenza ufficiale da TED
             Foundation. Operiamo sotto i più elevati standard di qualità per
-            garantire un’esperienza che sia all’altezza del nome che portiamo.
+            garantire un'esperienza che sia all'altezza del nome che portiamo.
           </p>
           <p className="img-txt-2">
             Ci impegniamo a parlare di temi più rilevanti per la nostra società

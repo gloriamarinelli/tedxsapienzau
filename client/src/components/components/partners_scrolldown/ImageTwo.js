@@ -22,10 +22,10 @@ const ImageTwo = () => (
         <p className="img-txt-2">
           Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di portare
           questo format internazionale nella nostra Università. <br></br>
-          Ora siamo più di 110 volontari.
+          Ora siamo più di <span id="imp-txt-5">120 volontari</span>.
         </p>
         <p className="img-txt-2">
-          Sapienza è l’Università più grande d’Europa, con più di 120 mila
+          Sapienza è l'Università più grande d'Europa, con più di 120 mila
           studenti iscritti ed il nostro obiettivo è <br></br>
           <span id="imp-txt-4">dare voce alle idee</span> di valore della nostra
           comunità accademica.
