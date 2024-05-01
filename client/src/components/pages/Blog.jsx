@@ -200,8 +200,8 @@ export default function Blog({ withTitle = true }) {
                   <div class="description">
                     <h4
                       style={{
-                        fontFamily: "GothamBold",
-                        color: "white"
+                        fontFamily: "Fira Sans Extra Condensed",
+                        color: "white",
                       }}
                     >
                       Loading...
@@ -311,7 +311,7 @@ export default function Blog({ withTitle = true }) {
               <div class="description">
                 <h4
                   style={{
-                    fontFamily: "GothamBold",
+                    fontFamily: "Fira Sans Extra Condensed",
                   }}
                 >
                   Loading...

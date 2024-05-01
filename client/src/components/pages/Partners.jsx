@@ -676,7 +676,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     return (
       <>
         <div className="gradient-div gradient-div-top"></div>
-        <div className="mobile-content">
+        <div className="mobile-content" style={{fontFamily: "Fira Sans Extra Condensed"}}>
           <div id="mobile-1st-div" className="mobile-div ct-right">
             <div id="mobile-text-block-1" className="mobile-text-block">
               <h3 className="">TEDx, molto più che un evento.</h3>
@@ -704,7 +704,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 Il nostro obiettivo è dare voce alle idee di valore che la
                 nostra comunità accademica vuole far emergere.
               </p>
-              <p className="">Ora siamo in più di 120 volontari.</p>
+              <p className="">
+                Ora siamo in più di <span id="imp-txt-4">120 volontari</span>.
+              </p>
             </div>
           </div>
           <div id="mobile-3rd-div" className="mobile-div ct-left">
@@ -714,7 +716,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <p className="">
                   Il format TEDx ci è concesso sotto licenza ufficiale da TED
                   Foundation. Operiamo sotto i più elevati standard di qualità
-                  per garantire un’esperienza che sia all’altezza del nome che
+                  per garantire un'esperienza che sia all'altezza del nome che
                   portiamo.
                 </p>
                 <p className="">
@@ -755,7 +757,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h3 className="">In numeri</h3>
               <p className="">
                 2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
-                <ul className="partners-list">
+                <ul className="partners-list1">
                   <li className="info-el">
                     <h3 className="info-number">
                       +

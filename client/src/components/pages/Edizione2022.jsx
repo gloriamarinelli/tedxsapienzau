@@ -140,7 +140,7 @@ export default function Edizione2022() {
         >
           IL TEMA DELL'EVENTO
         </h1>
-        <p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
+        <p style={{ fontSize: "20px", fontFamily: "GothamBook", textAlign: "justify" }}>
           Il titolo della prima edizione del TEDxSapienzaU è stato{" "}
           <strong>ACT - Lead the change</strong>. Come da linee guida TEDx, i
           dialoghi che sono stati presentati hanno riguardato diverse materie ed
