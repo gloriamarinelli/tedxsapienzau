@@ -19,7 +19,7 @@ const ImageFour = () => (
         <h3 className="img-title">In numeri</h3>
         <p className="img-txt-2">
           2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
-          <ul className="partners-list info-list">
+          <ul className="numbers-list info-list">
             <li className="info-el">
               <h3 className="info-number">
                 +

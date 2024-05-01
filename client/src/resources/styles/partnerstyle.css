@@ -306,7 +306,7 @@
   background-image: url("../../../public/images/partners24/mobile_scrolldown_bg_imgs/5.webp");
 }
 
-.partners-list1 {
+.numbers-list {
   list-style-type: none;
 }
 
@@ -314,7 +314,8 @@
 #imp-txt-1,
 #imp-txt-2,
 #imp-txt-3,
-#imp-txt-4 {
+#imp-txt-4,
+#imp-txt-5 {
   font-weight: bold;
   color: #eb0028;
   /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);*/

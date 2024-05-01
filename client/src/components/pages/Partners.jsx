@@ -31,7 +31,7 @@ export default function Partners() {
     return (
       <section className="page-section" id="portfolio">
         <div className="container">
-          <div className="">
+          <div>
             <h2
               className="section-heading"
               style={{
@@ -185,7 +185,7 @@ export default function Partners() {
       <>
         <section className="page-section" id="portfolio">
           <div className="container">
-            <div className="">
+            <div>
               <h2
                 className="section-heading"
                 style={{
@@ -676,11 +676,14 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     return (
       <>
         <div className="gradient-div gradient-div-top"></div>
-        <div className="mobile-content" style={{fontFamily: "Fira Sans Extra Condensed"}}>
+        <div
+          className="mobile-content"
+          style={{ fontFamily: "Fira Sans Extra Condensed" }}
+        >
           <div id="mobile-1st-div" className="mobile-div ct-right">
             <div id="mobile-text-block-1" className="mobile-text-block">
-              <h3 className="">TEDx, molto più che un evento.</h3>
-              <p className="">
+              <h3>TEDx, molto più che un evento.</h3>
+              <p>
                 Realizzare un TEDx è un{" "}
                 <span id="imp-txt-1">lavoro di squadra</span>. Per questo motivo
                 collaboriamo in sinergia con i nostri partner.
@@ -689,37 +692,33 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </div>
           <div id="mobile-2nd-div" className="mobile-div ct-left">
             <div id="mobile-text-block-2" className="mobile-text-block">
-              <h3 className="">Perché collaborare?</h3>
+              <h3>Perché collaborare?</h3>
               <h5 id="imp-txt-2">Uniti per un obiettivo</h5>
-              <p className="">
+              <p>
                 Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
-                portare questo format internazionale nella nostra Università.
-                Ora siamo più di 110 volontari. Sapienza è l’Università più
-                grande d’Europa, con più di 120 mila studenti iscritti ed il
-                nostro obiettivo è <br></br>
+                portare questo format internazionale nella nostra Università.{" "}
+                <br></br>
+                Ora siamo più di <span id="imp-txt-5">120 volontari</span>.
+              </p>
+              <p>
+                Sapienza è l'Università più grande d'Europa, con più di 120 mila
+                studenti iscritti ed il nostro obiettivo è <br></br>
                 <span id="imp-txt-4">dare voce alle idee</span> di valore della
                 nostra comunità accademica.
-              </p>
-              <p className="">
-                Il nostro obiettivo è dare voce alle idee di valore che la
-                nostra comunità accademica vuole far emergere.
-              </p>
-              <p className="">
-                Ora siamo in più di <span id="imp-txt-4">120 volontari</span>.
               </p>
             </div>
           </div>
           <div id="mobile-3rd-div" className="mobile-div ct-left">
             <div id="mobile-text-block-3" className="mobile-text-block">
-              <div className="">
-                <h4 className="">L’innovazione è nelle nostre vene </h4>
-                <p className="">
+              <div>
+                <h4>L'innovazione è nelle nostre vene</h4>
+                <p>
                   Il format TEDx ci è concesso sotto licenza ufficiale da TED
                   Foundation. Operiamo sotto i più elevati standard di qualità
                   per garantire un'esperienza che sia all'altezza del nome che
                   portiamo.
                 </p>
-                <p className="">
+                <p>
                   Ci impegniamo a parlare di temi più rilevanti per la nostra
                   società attraverso la voce degli Speaker. Vogliamo portare un
                   <span id="imp-txt-3"> impatto positivo</span> alla nostra
@@ -727,25 +726,25 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 </p>
               </div>
               <div class="">
-                <div className="">
+                <div>
                   <div>
                     <h2>I nostri pilastri</h2>
-                    <ul className="partners-list">
-                      <li className="">Community</li>
-                      <li className="">Content marketing</li>
-                      <li className="">Employer branding</li>
+                    <ul>
+                      <li>Community</li>
+                      <li>Content marketing</li>
+                      <li>Employer branding</li>
                     </ul>
                   </div>
                 </div>
-                <div className="">
+                <div>
                   <div>
                     <h2>Collabora con noi</h2>
-                    <ul className="partners-list">
-                      <li className="">Sponsor</li>
-                      <li className="">Partnership</li>
-                      <li className="">Media partner</li>
-                      <li className="">Community partner</li>
-                      <li className="">Patrocinio</li>
+                    <ul>
+                      <li>Sponsor</li>
+                      <li>Partnership</li>
+                      <li>Media partner</li>
+                      <li>Community partner</li>
+                      <li>Patrocinio</li>
                     </ul>
                   </div>
                 </div>
@@ -754,10 +753,10 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </div>
           <div id="mobile-4th-div" className="mobile-div ct-right">
             <div id="mobile-text-block-4" className="mobile-text-block">
-              <h3 className="">In numeri</h3>
-              <p className="">
+              <h3>In numeri</h3>
+              <p>
                 2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
-                <ul className="partners-list1">
+                <ul className="numbers-list">
                   <li className="info-el">
                     <h3 className="info-number">
                       +
