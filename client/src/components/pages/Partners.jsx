@@ -798,7 +798,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
 
   function partners24() {
     let scrollDownComponent;
-    if (windowSize > global.UTILS.TABLET_WIDTH) {
+    if (windowSize > global.UTILS.BIG_TABLET_WIDTH) {
       scrollDownComponent = displayParallaxScrollDown();
     } else {
       scrollDownComponent = displayMobileScrollDown();
