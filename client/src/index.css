@@ -442,8 +442,6 @@ code {
 .navbar-submenu-edition-item {
   color: #ffffff;
   text-decoration: none;
-  display: flex;
-  text-align: start;
   margin-bottom: 3px;
 }
 
@@ -465,6 +463,39 @@ code {
   cursor: not-allowed;
   text-decoration: none;
 }
+
+.custom-toggler.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0.4);;
+  color: white;
+}
+
+/* Modifica delle classi navbar per avere il collapsed button bianco*/
+nav.navbar {
+  background: transparent;
+}
+.navbar a.navbar-brand {
+  color: white;
+}
+.navbar a.navbar-brand:hover {
+  color: green;
+}
+.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: white;
+}
+.navbar-light span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+.navbar-light button.navbar-toggler {
+  border-color: yellow;
+}
+@media (max-width: 768px) {
+  nav.navbar {
+    background: lightgray;
+  }
+}
+/*======================*/
 
 /* Team Elements */
 .header-team {

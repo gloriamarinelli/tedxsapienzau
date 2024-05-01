@@ -129,11 +129,11 @@ export default function NavbarComponent(props) {
                 }`}
                 style={{ gap: "10px" }}
               >
-                <Col className="col-lg-10 col-md-12 col-sm-11 d-flex align-items-center">
+                <Col className="col-lg-10 col-md-12 col-sm-12 d-flex align-items-center">
                   <Container>
                     <Row>
                       <Col className="text-center d-flex justify-content-center row gap-1">
-                        <li className="nav-item dropdown d-flex justify-content-center col-xl-1 col-lg-2 col-md-12 col-2 p-">
+                        <li className="nav-item dropdown col-xl-1 col-lg-2 col-md-4 col-12 p-0">
                           <a
                             className="navbar-submenu-edition-item font-600"
                             data-bs-toggle="dropdown"
@@ -146,7 +146,7 @@ export default function NavbarComponent(props) {
                           </a>
 
                           <ul
-                            className="dropdown-menu dropdown-menu-new bg-black p-1 mt-4"
+                            className="dropdown-menu dropdown-menu-new bg-black p-1"
                             style={{
                               backgroundColor: "black",
                               borderRadius: "15px",
@@ -225,7 +225,7 @@ export default function NavbarComponent(props) {
                           </ul>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col- p-0">
+                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col-12 p-0">
                           <Link
                             ref={partners}
                             className="navbar-submenu-edition-item font-600"
@@ -240,7 +240,7 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col- p-0">
+                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col-12 p-0">
                           <Link
                             ref={team}
                             className="navbar-submenu-edition-item font-600"
@@ -256,7 +256,7 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col- p-0">
+                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col-12 p-0">
                           <Link
                             ref={blog}
                             className="navbar-submenu-edition-item font-600"
@@ -271,8 +271,19 @@ export default function NavbarComponent(props) {
                             {t("blog")}
                           </Link>
                         </li>
+                      {/*
+                                              <li class="nav-item dropdown col-xl-1 col-lg-2 col-sm-2 col-12 p-0">
+                                  <a class="navbar-submenu-edition-item dropdown-toggle font-600" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  {t("about_us")}
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-menu-dark bg-black text-center">
+                                    <li><a class="dropdown-item" href="/mission&vision">Mission and vision</a></li>
+                                    <li><a class="dropdown-item" href="#">Location</a></li>
+                                  </ul>
+                                </li>
+                                */ }
 
-                        <li className="nav-item dropdown d-flex justify-content-center col-xl-1 col-lg-2 col-sm-2 col- p-0">
+                        <li className="nav-item dropdown col-xl-1 col-lg-2 col-sm-2 col-md-2 col-12 p-0">
                           <a
                             className="navbar-submenu-edition-item font-600"
                             data-bs-toggle="dropdown"
@@ -281,18 +292,18 @@ export default function NavbarComponent(props) {
                           >
                             {t("about_us")} &#709;
                           </a>
+                          
 
                           <ul
-                            className="dropdown-menu dropdown-menu-new bg-black p-2 ms-2 me-2 mt-4"
+                            className="dropdown-menu dropdown-menu-new bg-black p-1"
                             style={{
-                              backgroundColor: "black",
-                              borderRadius: "15px",
+                              borderRadius: "5px"
                             }}
                           >
-                            <li className="navbar-submenu-edition-item">
+                            <li className="mt-2">
                               <Link
                                 ref={mission_and_vision}
-                                className="navbar-submenu-edition-item ms-4 me-4"
+                                className="navbar-submenu-edition-item ms-2"
                                 to="/mission&vision"
                                 onClick={() => {
                                   setExpanded(false);
@@ -303,10 +314,10 @@ export default function NavbarComponent(props) {
                                 {t("mission_and_vision")}
                               </Link>
                             </li>
-                            <li>
+                            <li className="mt-2 mb-1">
                               <Link
                                 ref={location}
-                                className="navbar-submenu-edition-item ms-4 me-4"
+                                className="navbar-submenu-edition-item ms-2"
                                 to="/location"
                                 onClick={() => {
                                   setExpanded(false);
@@ -324,17 +335,20 @@ export default function NavbarComponent(props) {
                   </Container>
                 </Col>
 
-                <Col className="col-lg-2 col-md-12 col-sm-12 col-11">
-                  <Container className="">
+                <Col className="col-lg-2 col-md-12 col-sm-12 col-12">
+
                     <Row className="mt-2 mb-2 d-flex justify-content-center">
-                      <Col className="col-lg-3 col-md-3 col-sm-3 col-4 text-center d-flex justify-content-start align-items-center">
+
+                      <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">
                         <li className="nav-item dropdown">
+                          {/*data-bs-toggle="dropdown"*/}
                           <a
                             className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
-                            data-bs-toggle="dropdown"
-                            href="/location"
+                            
+                            
                             role="button"
                             aria-expanded="false"
+                            onClick={()=>{}}
                           >
                             {i18n.language === "it" ? "IT" : "EN"}
                             <img
@@ -344,13 +358,13 @@ export default function NavbarComponent(props) {
                                   ? ItalianFlag
                                   : EnglishFlag
                               }
-                              alt=""
+                              
                               width="20"
                               height="15"
                             />
-                            &#709;
+                            {/*&#709;*/}
                           </a>
-
+                              {/*
                           <ul
                             className="dropdown-menu dropdown-menu-new p-0"
                             style={{
@@ -375,11 +389,11 @@ export default function NavbarComponent(props) {
                                 height="15"
                               />
                             </li>
-                          </ul>
+                              </ul> */}
                         </li>
                       </Col>
 
-                      <Col className="col-lg-9 col-md-3 col-sm-3 col-4 text-center ">
+                      <Col className="col-lg-9 col-md-3 col-sm-6 col-6 text-center ">
                         <Button
                           style={{
                             backgroundColor: global.COLORS.ROSSO_TED_2023,
@@ -393,7 +407,7 @@ export default function NavbarComponent(props) {
                             e.target.style.borderColor = "white";
                           }}
                           onMouseLeave={(e) => {
-                            e.target.style.borderColor = "red";
+                            e.target.style.borderColor ="red";
                           }}
                           onClick={() => {
                             setExpanded(false);
@@ -404,7 +418,7 @@ export default function NavbarComponent(props) {
                         </Button>
                       </Col>
                     </Row>
-                  </Container>
+                  
                 </Col>
 
                 {isAdmin && (
