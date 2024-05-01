@@ -681,7 +681,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             <div id="mobile-text-block-1" className="mobile-text-block">
               <h3 className="">TEDx, molto più che un evento.</h3>
               <p className="">
-                Realizzare un TEDx è un lavoro di squadra. Per questo motivo
+                Realizzare un TEDx è un{" "}
+                <span id="imp-txt-1">lavoro di squadra</span>. Per questo motivo
                 collaboriamo in sinergia con i nostri partner.
               </p>
             </div>
@@ -689,14 +690,15 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           <div id="mobile-2nd-div" className="mobile-div ct-left">
             <div id="mobile-text-block-2" className="mobile-text-block">
               <h3 className="">Perché collaborare?</h3>
-              <h5 id="same-goal-txt">Uniti per un obiettivo</h5>
+              <h5 id="imp-txt-2">Uniti per un obiettivo</h5>
               <p className="">
                 Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
                 portare questo format internazionale nella nostra Università.
                 Ora siamo più di 110 volontari. Sapienza è l’Università più
                 grande d’Europa, con più di 120 mila studenti iscritti ed il
-                nostro obiettivo è dare voce alle idee di valore della nostra
-                comunità accademica.
+                nostro obiettivo è <br></br>
+                <span id="imp-txt-4">dare voce alle idee</span> di valore della
+                nostra comunità accademica.
               </p>
               <p className="">
                 Il nostro obiettivo è dare voce alle idee di valore che la
@@ -718,7 +720,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <p className="">
                   Ci impegniamo a parlare di temi più rilevanti per la nostra
                   società attraverso la voce degli Speaker. Vogliamo portare un
-                  impatto positivo alla nostra comunità.
+                  <span id="imp-txt-3">impatto positivo</span> alla nostra
+                  comunità.
                 </p>
               </div>
               <div class="">
