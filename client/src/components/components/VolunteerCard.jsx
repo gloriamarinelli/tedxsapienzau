@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 import "../../resources/styles/volunteerCard.css";
+import global from "../../resources/global.json";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 export default function VolunteerCard({
@@ -12,6 +15,7 @@ export default function VolunteerCard({
   year,
 }) {
   const [hovered, setHovered] = useState(false);
+  const [hovered2, setHovered2] = useState(false);
   if (year == 2024) {
     return (
       <>
@@ -44,7 +48,16 @@ export default function VolunteerCard({
                   cursor: link ? "pointer" : "default",
                 }}
               >
-                <div className="custom-card-heading">{nome}</div>
+                <div className="custom-card-heading"
+                  onMouseEnter={() => setHovered2(true)}
+                  onMouseLeave={() => setHovered2(false)}
+                  style ={{
+                    color: hovered2 ? global.COLORS.ROSSO_TED : "#fff",
+                  }}
+                >
+                  {nome+" "}
+                  <FontAwesomeIcon icon={faLinkedin} size="xl" />
+                </div>
               </a>
             </div>
           </div>

@@ -4,7 +4,7 @@ import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import "../../resources/styles/countdown.css";
 import { func } from "three/examples/jsm/nodes/Nodes.js";
 
-const finalDate = new Date("2024-05-31T00:00:00+02:00").getTime(); // Data di fine del countdown
+const finalDate = new Date("2024-05-31T09:00:00+02:00").getTime(); // Data di fine del countdown
 const labelsInItalian = ["GIORNI", "ORE", "MINUTI", "SECONDI"];
 const labelsInEnglish = ["DAYS", "HOURS", "MINUTES", "SECONDS"];
 var expired = Date.now() >= finalDate;
@@ -65,7 +65,7 @@ export default function Countdown({ language = "it" }) {
           </tr>
         </>
       ) : (
-        <h1>Il countdown è terminato</h1>
+        <h1>L'evento è iniziato</h1>
       )}  
     </div>
   );
