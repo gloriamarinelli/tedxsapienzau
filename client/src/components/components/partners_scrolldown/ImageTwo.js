@@ -16,7 +16,9 @@ const ImageTwo = () => (
     <div className="content ct-left">
       <div className="text-div">
         <h3 className="img-title">Perché collaborare?</h3>
-        <h4 id="same-goal-txt" className="img-txt">Uniti per un obiettivo</h4>
+        <h4 id="imp-txt-2" className="img-txt">
+          Uniti per un obiettivo
+        </h4>
         <p className="img-txt-2">
           Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di portare
           questo format internazionale nella nostra Università. <br></br>
@@ -24,10 +26,9 @@ const ImageTwo = () => (
         </p>
         <p className="img-txt-2">
           Sapienza è l’Università più grande d’Europa, con più di 120 mila
-          studenti iscritti ed il nostro obiettivo è dare voce alle idee di
-          valore della nostra comunità accademica. Il nostro obiettivo è dare
-          voce alle idee di valore che la nostra comunità accademica vuole far
-          emergere.
+          studenti iscritti ed il nostro obiettivo è <br></br>
+          <span id="imp-txt-4">dare voce alle idee</span> di valore della nostra
+          comunità accademica.
         </p>
       </div>
     </div>

@@ -24,8 +24,12 @@ const ImageThree = () => (
           </p>
           <p className="img-txt-2">
             Ci impegniamo a parlare di temi più rilevanti per la nostra società
-            attraverso la voce degli Speaker. Vogliamo portare un impatto
-            positivo alla nostra comunità.
+            attraverso la voce degli Speaker. <br></br>
+            Vogliamo portare un{" "}
+            <span id="imp-txt-3" className="img-txt-2">
+              impatto positivo
+            </span>{" "}
+            alla nostra comunità.
           </p>
         </div>
         <div class="row-box-container list-column-div">

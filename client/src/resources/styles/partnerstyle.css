@@ -306,22 +306,21 @@
   background-image: url("../../../public/images/partners24/mobile_scrolldown_bg_imgs/5.webp");
 }
 
-/* blocco animazione scroller loghi */
-.hovered *{
-  animation-play-state: paused; 
-}
-
-.partners-list{
+.partners-list {
   list-style-type: none;
 }
 
-.info-number{
+.info-number,
+#imp-txt-1,
+#imp-txt-2,
+#imp-txt-3,
+#imp-txt-4 {
   font-weight: bold;
-  color: #EB0028;
+  color: #eb0028;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
-.info-el{
+.info-el {
   padding: 2vh 0;
 }
 
@@ -331,9 +330,13 @@
   .gradient-div {
     height: 10vh;
   }
-  .info-number{
+  .info-number {
     font-size: 4vh;
   }
+}
+
+#same-goal-txt {
+  padding: 2vh 0;
 }
 
 /* desktop */
@@ -342,7 +345,11 @@
   .gradient-div {
     height: 20vh;
   }
-  .info-number{
+  /* blocco animazione scroller loghi */
+  .hovered * {
+    animation-play-state: paused;
+  }
+  .info-number {
     font-size: 3vw;
   }
 }
