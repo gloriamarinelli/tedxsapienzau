@@ -723,9 +723,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               </div>
               <div class="">
                 <div className="">
-                  <div className="partners-list">
+                  <div>
                     <h2>I nostri pilastri</h2>
-                    <ul>
+                    <ul className="partners-list">
                       <li className="">Community</li>
                       <li className="">Content marketing</li>
                       <li className="">Employer branding</li>
@@ -733,9 +733,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   </div>
                 </div>
                 <div className="">
-                  <div className="partners-list">
+                  <div>
                     <h2>Collabora con noi</h2>
-                    <ul>
+                    <ul className="partners-list">
                       <li className="">Sponsor</li>
                       <li className="">Partnership</li>
                       <li className="">Media partner</li>
@@ -756,7 +756,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   <li className="info-el">
                     <h3 className="info-number">
                       +
-                      <CountUp end={50} duration={2} useEasing={false} />
+                      <CountUp end={1500} duration={2} useEasing={false} />
                     </h3>{" "}
                     persone coinvolte negli eventi
                   </li>
