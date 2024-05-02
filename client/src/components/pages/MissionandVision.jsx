@@ -354,6 +354,7 @@ export default function MissionandVision() {
                       l'obiettivo di creare per l'intera comunità accademica una
                       programmazione sempre nuova e internazionale.
                     </p>
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <a className="link" href={"/partners"}>
                       <button
                         style={{
@@ -365,12 +366,12 @@ export default function MissionandVision() {
                           borderRadius: "8px",
                           fontWeight: "bold",
                           marginBottom: "20px",
-                          alignItems: "center",
                         }}
                       >
                         Collabora con noi{" "}
                       </button>
                     </a>
+                    </div>
                   </div>
                   <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
                     <LazyLoadImage

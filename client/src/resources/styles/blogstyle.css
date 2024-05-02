@@ -172,6 +172,12 @@ body {
 	transition: background-color 0.3s ease;
 }
 
+.underline {
+	color: #eb0028;
+	text-decoration: underline;
+	text-decoration-color: #eb0028;
+}
+
 
 
 @media (min-width: 640px) {

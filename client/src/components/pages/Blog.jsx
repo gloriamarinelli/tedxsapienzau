@@ -101,7 +101,7 @@ export default function Blog({ withTitle = true }) {
             style={{
               marginTop: global.UTILS.NAV_HEIGHT,
               backgroundColor: global.COLORS.NERO,
-              padding: "10px",
+              padding: "25px",
               fontFamily: "Fira Sans Extra Condensed, sans-serif",
               placeItems: "center",
               display: "flex",
@@ -109,7 +109,7 @@ export default function Blog({ withTitle = true }) {
           >
             <div
               style={{
-                width: "99%",
+                width: "100%",
                 height: "90%",
                 padding: global.UTILS.BENTO_BOX_PADDING,
                 borderRadius: global.UTILS.BENTO_BOX_PADDING,
@@ -127,6 +127,7 @@ export default function Blog({ withTitle = true }) {
                   fontSize: "40px",
                   fontWeight: "bold",
                   color: global.COLORS.BIANCO,
+                  textShadow: "3px 3px #000",
                 }}
               >
                 IDEAS WORTH SPREADING
@@ -139,6 +140,7 @@ export default function Blog({ withTitle = true }) {
                   fontWeight: 300,
                   maxWidth: "30ch",
                   color: "#FFFFFF",
+                  textShadow: "3px 3px #000",
                 }}
               >
                 Le{" "}
@@ -236,7 +238,7 @@ export default function Blog({ withTitle = true }) {
           >
             <div
               style={{
-                width: "99%",
+                width: "100%",
                 height: "90%",
                 padding: global.UTILS.BENTO_BOX_PADDING,
                 borderRadius: global.UTILS.BENTO_BOX_PADDING,
@@ -254,6 +256,7 @@ export default function Blog({ withTitle = true }) {
                   fontSize: "40px",
                   fontWeight: "bold",
                   color: global.COLORS.BIANCO,
+                  textShadow: "3px 3px #000",
                 }}
               >
                 IDEAS WORTH SPREADING
@@ -266,6 +269,7 @@ export default function Blog({ withTitle = true }) {
                   fontWeight: 300,
                   maxWidth: "30ch",
                   color: "#FFFFFF",
+                  textShadow: "3px 3px #000",
                 }}
               >
                 Le{" "}

@@ -320,9 +320,9 @@ export default function Location() {
       <>
         <section
           style={{
-            marginTop: "80px",
-            backgroundColor: global.COLORS.NERO,
-            marginBottom: "-20px",
+            marginTop: global.UTILS.NAV_HEIGHT,
+            backgroundColor: global.COLORS.GRIGIO,
+            borderRadius: "25px",
           }}
         >
           <div className="container-lg marketing">
@@ -331,7 +331,7 @@ export default function Location() {
               style={{
                 textAlign: "center",
                 fontFamily: "Fira sans Extra Condensed",
-                color: "#FFF",
+                color: "#eb0028",
               }}
             >
               I luoghi di TEDxSapienzaU: Sapienza{" "}
