@@ -47,14 +47,14 @@ export default function NewsletterBrevo() {
                 <Card
                   style={{
                     fontFamily: "Fira Sans Extra Condensed",
-                    background: "#191919",
+                    background: "#rgba(255, 255, 255, 0.1)",
                     maxWidth: "400",
                     maxHeight: "400",
                     borderRadius: "20px",
                     marginTop: "40px",
                     padding: "10px",
                     fontSize: "20px",
-                    paddingBottom: "95px",
+                    paddingBottom: "120px",
                   }}
                 >
                   <h1
@@ -81,7 +81,7 @@ export default function NewsletterBrevo() {
                 <Iframe
                   width="100%"
                   height="700px"
-                  src="https://31dfcf3b.sibforms.com/serve/MUIFADk8q-909kd_RTTgSFBhqjYmtLW7GUm5kzfIZOBZeTCFkY5_8mGGhZ0dgLLIJz-BhtEElTz-qP_OPFbdktIf9F4waVbrtVpLvaYFLMvVNH8Wm8YHO5Lh6EzAPnVNx0ZgrWUvr9L4Zm4YQ8Z9kDXhvFlRnb410M2sgJuk--XSZCy8jPew7q55QKHmF2lar1OHnqUJ7LrcV5vK"
+                  src="https://31dfcf3b.sibforms.com/serve/MUIFAGTEZxg4qoMh1bVYOvBCOXVzzXnoHEfz0jBoF7keAlY-_M_TEcdXYQmE82hTtYAloXHJ-WvS9hRh3yVSjtph-OplS9ODflSJWyfXbqCme8QRatDhjnJqgRZKTDtH15adP4VrRjnn6Wa47sCUpb99EMmxIhR_zTdN1hcqYG_XSJ4zgIp7gJ3UWM8Kca6J1dDYDmIFGDt_zPpT"
                   frameborder="0"
                   allowfullscreen
                   style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
@@ -131,7 +131,7 @@ export default function NewsletterBrevo() {
                   style={{
                     display: "flex",
                     fontFamily: "Fira Sans Extra Condensed",
-                    background: "#191919",
+                    background: "#rgba(255, 255, 255, 0.1)",
                     //width: "300px",
                     width: "85%",
                     height: "300px",
@@ -176,7 +176,7 @@ export default function NewsletterBrevo() {
                 <Iframe
                   width="100%"
                   height="700px"
-                  src="https://31dfcf3b.sibforms.com/serve/MUIFADk8q-909kd_RTTgSFBhqjYmtLW7GUm5kzfIZOBZeTCFkY5_8mGGhZ0dgLLIJz-BhtEElTz-qP_OPFbdktIf9F4waVbrtVpLvaYFLMvVNH8Wm8YHO5Lh6EzAPnVNx0ZgrWUvr9L4Zm4YQ8Z9kDXhvFlRnb410M2sgJuk--XSZCy8jPew7q55QKHmF2lar1OHnqUJ7LrcV5vK"
+                  src="https://31dfcf3b.sibforms.com/serve/MUIFAGTEZxg4qoMh1bVYOvBCOXVzzXnoHEfz0jBoF7keAlY-_M_TEcdXYQmE82hTtYAloXHJ-WvS9hRh3yVSjtph-OplS9ODflSJWyfXbqCme8QRatDhjnJqgRZKTDtH15adP4VrRjnn6Wa47sCUpb99EMmxIhR_zTdN1hcqYG_XSJ4zgIp7gJ3UWM8Kca6J1dDYDmIFGDt_zPpT"
                   frameborder="0"
                   allowfullscreen
                   style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
