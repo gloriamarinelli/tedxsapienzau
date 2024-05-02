@@ -187,7 +187,7 @@
 .spinner:after {
   width: 85%;
   height: 85%;
-  background-color: #fff;
+  background-color: black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

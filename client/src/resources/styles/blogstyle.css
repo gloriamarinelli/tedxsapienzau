@@ -1,40 +1,61 @@
 body {
-	background-color: #eee;
+	background-color: #000;
 	margin-top: 20px;
 	--rosso-ted: #eb0028;
 }
 
-.header-blog {
-	background-image: url("../../components/images/header_blog23.webp");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
 /** 
 * ARTICLE STYLES
 **/
 
 .main-container {
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	color: #FFF;
+	
 }
 
 .post-container {
-	width: 100%;
+	width: 90%;
 	max-width: 700px;
 	margin: auto;
+	margin-top: 50px;
+	border-radius: 25px;
+	background-color: #191919;
+	padding: 20px;
 }
 
 .post-container > h1 {
 	color: var(--rosso-ted);
 }
 
+.post-container > h2 {
+	color:  #FFF;
+}
+
+.post-container > h3 {
+	color:  #FFF;
+}
+
+.post-container > span {
+	color:  #FFF;
+}
+
+.post-container > em {
+	color:  #FFF;
+}
+
 .post-container > p {
 	font-family: GothamBook;
 	font-size: 18px;
+	color: #FFF;
+}
+.post-container > par {
+	font-family: GothamBook;
+	font-size: 18px;
+	color: #FFF;
 }
 
 .post-image {
@@ -107,101 +128,62 @@ body {
 /*BLOG PAGE STYLE*/
 * {
 	box-sizing: border-box;
+	
 }
 
 body {
-	background: #f1f1f1;
+	background: #000;
 	margin: 2rem;
 }
 
 .blog-card {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	flex: 0 0 auto; /* Allow cards to shrink and grow based on content */
+    margin-right: 10px; /* Add some space between cards */
 	margin: 1rem auto;
 	box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
 	margin-bottom: 1.6%;
-	background: #fff;
+	background: #191919;
 	line-height: 1.4;
 	font-family: "GothamBold";
-	border-radius: 5px;
+	border-radius: 22px;
 	overflow: hidden;
 	z-index: 0;
-	width: 95vw;
+	width: 350px;
+	height: 450px;
 }
 
-.blog-card:hover .photo {
-	background-size: cover;
-	background-position: "center";
-}
-.blog-card .meta {
+
+
+
+
+.blog-card .description:hover{
+	padding: 1rem;
+	background: #eb0028;
 	position: relative;
-	z-index: 0;
-	height: 200px;
-}
-
-.blog-card .details,
-.blog-card .details ul {
-	margin: auto;
-	padding: 0;
-	list-style: none;
-}
-.blog-card .details {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: -100%;
-	margin: auto;
-	transition: left 0.2s;
-	background: rgba(0, 0, 0, 0.6);
-	color: #fff;
-	padding: 10px;
-	width: 100%;
-	font-size: 0.9rem;
-}
-.blog-card .details a {
-	-webkit-text-decoration: dotted underline;
-	text-decoration: dotted underline;
-}
-.blog-card .details ul li {
-	display: inline-block;
-}
-
-.blog-card .details .tags li {
-	margin-right: 2px;
-}
-.blog-card .details .tags li:first-child {
-	margin-left: -4px;
+	z-index: 1;
+	transition: background-color 0.3s ease;
 }
 .blog-card .description {
 	padding: 1rem;
-	background: #fff;
+	background: #191919;
 	position: relative;
 	z-index: 1;
+	transition: background-color 0.3s ease;
 }
 
-.blog-card p {
-	position: relative;
-	margin: 1rem 0 0;
+.underline {
+	color: #eb0028;
+	text-decoration: underline;
+	text-decoration-color: #eb0028;
 }
-.blog-card p:first-of-type {
-	margin-top: 1.25rem;
-}
-.blog-card p:first-of-type:before {
-	content: "";
-	position: absolute;
-	height: 5px;
-	background: #eb0028;
-	width: 35px;
-	top: -0.75rem;
-	border-radius: 3px;
-}
-.blog-card:hover .details {
-	left: 0%;
-}
+
+
+
 @media (min-width: 640px) {
 	.blog-card {
 		flex-direction: row;
-		max-width: 700px;
+		max-width: 350px;
 	}
 	.blog-card .meta {
 		flex-basis: 40%;
@@ -211,9 +193,8 @@ body {
 		flex-basis: 60%;
 	}
 	.blog-card .description:before {
-		transform: skewX(-3deg);
-		content: "";
-		background: #fff;
+		
+		background: #191919;
 		width: 30px;
 		position: absolute;
 		left: -10px;
@@ -232,6 +213,26 @@ body {
 	.blog-card.alt .details {
 		padding-left: 25px;
 	}
+	.underline {
+		color: #eb0028;
+		text-decoration: underline;
+		text-decoration-color: #eb0028;
+	}
+	.pagination .page-link {
+		color: #FFF !important; 
+		background-color: #191919 !important; 
+		border-color: #191919 !important; 
+	  }
+	  
+	  .pagination .page-item.active .page-link {
+		background-color: #eb0028 !important; 
+		border-color: #eb0028 !important; 
+	  }
+	  
+	  .pagination .page-link:hover {
+		background-color: #FFF !important; 
+		color: #191919 !important;
+	  }
 }
 
 /** SHIMMER */

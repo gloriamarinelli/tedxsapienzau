@@ -1,0 +1,97 @@
+.teamNameStyle {
+  margin: 30px 0;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-size: 40px;
+  color: white !important;
+}
+
+.boardNameStyle {
+  margin: 30px 0;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-size: 40px;
+  color: white !important;
+}
+
+.boardCardSection {
+  height: 200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boardSpinnerSection {
+  height: 200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+---------------------------------------------
+--------------- Desktop ---------------------
+--------------------------------------------- 
+*/
+
+.headerSection {
+  margin-top: 82px;
+  height: 411px;
+  top: 124px;
+  left: 32px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  place-items: center;
+  display: grid;
+  background-color: black !important;
+}
+
+.headerTitleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  color: white !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+.headerChipsSection {
+  padding: 10px;
+  width: 851px;
+}
+
+/* 
+---------------------------------------------
+--------------- Mobile ----------------------
+--------------------------------------------- 
+*/
+
+.headerSectionMobile {
+  padding: 10px;
+  font-family: "Fira Sans Extra Condensed, sans-serif";
+  place-items: center;
+  display: grid;
+}
+
+.headerTitleSectionMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.headerTitleMobile {
+  font-size: 55px;
+  font-weight: bold;
+  color: white !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}

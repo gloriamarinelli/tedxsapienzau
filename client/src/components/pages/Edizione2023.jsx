@@ -83,11 +83,11 @@ export default function Edizione2023() {
 
   const CarouselComponent = () => {
     const [index, setIndex] = useState(0);
-  
+
     const handleSelect = (selectedIndex, e) => {
       setIndex(selectedIndex);
     };
-  
+
     return (
       <Carousel
         activeIndex={index}
@@ -299,14 +299,13 @@ export default function Edizione2023() {
   };
 
   return (
-    <>
-      <section>
+    <div style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
+      <section style={{ marginTop: global.UTILS.NAV_HEIGHT }}>
         <header
           className="header-ed2023"
           style={{
             textAlign: "center",
             height: "45vh",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
         ></header>
 
@@ -367,7 +366,13 @@ export default function Edizione2023() {
         >
           IL NOSTRO OBIETTIVO
         </h1>
-        <p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
+        <p
+          style={{
+            fontSize: "20px",
+            fontFamily: "GothamBook",
+            textAlign: "justify",
+          }}
+        >
           Il nostro obiettivo è <strong>azzerare</strong>, ricercare un punto{" "}
           <strong>zero</strong>: le disuguaglianze, i conflitti, i cattivi stili
           di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che
@@ -417,7 +422,7 @@ export default function Edizione2023() {
         year={2023}
       />
       <div>{renderProgram23()}</div>
-      <div className="container mb-5 mt-5">{CarouselComponent()}</div>
-    </>
+      <div className="container mt-5">{CarouselComponent()}</div>
+    </div>
   );
 }

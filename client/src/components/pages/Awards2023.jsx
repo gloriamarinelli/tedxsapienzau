@@ -12,7 +12,10 @@ import global from "../../resources/global.json";
 
 export default function Awards() {
   return (
-    <section>
+    <section
+      className="pb-5"
+      style={{ backgroundColor: "#000", color: "#fff" }}
+    >
       <header
         className="header-awards"
         style={{
@@ -78,7 +81,7 @@ export default function Awards() {
         </h1>
         <p
           style={{
-            fontSize: "23px",
+            fontSize: "20px",
             fontFamily: "GothamBook",
             maxWidth: "75ch",
             textAlign: "justify",
@@ -91,13 +94,8 @@ export default function Awards() {
           vincitori la prestigiosa opportunità di esibirsi sul palco dell’
           <strong>edizione 2023</strong> del TEDxSapienzaU. I 5 vincitori del
           concorso TEDxSapienzaU Awards,{" "}
-          <strong style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}>
-            3 Speaker
-          </strong>{" "}
-          e{" "}
-          <strong style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}>
-            2 Artist
-          </strong>
+          <strong style={{ color: global.COLORS.ROSSO_TED }}>3 Speaker</strong>{" "}
+          e <strong style={{ color: global.COLORS.ROSSO_TED }}>2 Artist</strong>
           , vengono premiati sul palco della finale e hanno l’occasione di
           esibirsi durante l’evento <strong>TEDxSapienzaU 2023</strong>!
         </p>
@@ -122,15 +120,20 @@ export default function Awards() {
       >
         Artist
       </h3>
-      <div class="container mt-5 mb-5">
+      <div
+        class="container mt-5 mb-5"
+        style={{
+          alignItems: "center",
+        }}
+      >
         <div class="row justify-content-center" style={{ gap: "20px" }}>
           <div class="col-sm-4">
             {" "}
-            <LazyLoadImage src={Image2} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image2} alt="TEDxSapienzaU" height="350" />
           </div>
           <div class="col-sm-4">
             {" "}
-            <LazyLoadImage src={Image5} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image5} alt="TEDxSapienzaU" height="350" />
           </div>
         </div>
       </div>
@@ -144,16 +147,16 @@ export default function Awards() {
       >
         Speaker
       </h3>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5">
         <div class="row" style={{ gap: "20px" }}>
           <div class="col">
-            <LazyLoadImage src={Image3} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image3} alt="TEDxSapienzaU" height="350" />
           </div>
           <div class="col">
-            <LazyLoadImage src={Image4} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image4} alt="TEDxSapienzaU" height="350" />
           </div>
           <div class="col">
-            <LazyLoadImage src={Image1} alt="TedxSapienzaU" height="400" />
+            <LazyLoadImage src={Image1} alt="TEDxSapienzaU" height="350" />
           </div>
         </div>
       </div>

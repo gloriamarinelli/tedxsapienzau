@@ -10,13 +10,20 @@
     "BLU_POSTER": "#2e3777",
     "BLU_SCURO_POSTER": "#242958",
     "GIALLO_AWARDS": "#ffd800",
-    "CELESTE": "#5272b5"
+    "CELESTE": "#5272b5",
+    "NERO": "#000000",
+    "BIANCO": "#FFFFFF",
+    "GRIGIO": "#191919",
+    "GIALLO_COUNTDOWN": "#F1FF39"
   },
   "UTILS": {
     "SOCIAL_NAV_HEIGHT": "0px",
-    "NAV_HEIGHT": "76px",
+    "NAV_HEIGHT": "81px",
     "MOBILE_WIDTH": "480",
-    "TABLET_WIDTH": "768"
+    "TABLET_WIDTH": "768",
+    "BIG_TABLET_WIDTH": "820",
+    "BENTO_BOX_PADDING": "24px",
+    "HALF_BENTO_BOX_PADDING": "12px"
   },
   "CONNECTION": {
     "ENDPOINT": "https://tedxsapienzau-backend.herokuapp.com/"

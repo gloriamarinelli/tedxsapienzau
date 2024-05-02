@@ -12,3 +12,12 @@
 .btn-group-home:hover {
   color: #eb0028;
 }
+
+.triangle-play {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+
+  border-left: 24px solid green;
+}

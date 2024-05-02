@@ -71,14 +71,13 @@ export default function Edizione2022() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
       <header
         className="header-ed2022"
         style={{
           padding: "10px",
           textAlign: "center",
-
-          marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+          marginTop: global.UTILS.NAV_HEIGHT,
           height: "45vh",
         }}
       ></header>
@@ -141,7 +140,7 @@ export default function Edizione2022() {
         >
           IL TEMA DELL'EVENTO
         </h1>
-        <p style={{ fontSize: "20px", fontFamily: "GothamBook" }}>
+        <p style={{ fontSize: "20px", fontFamily: "GothamBook", textAlign: "justify" }}>
           Il titolo della prima edizione del TEDxSapienzaU è stato{" "}
           <strong>ACT - Lead the change</strong>. Come da linee guida TEDx, i
           dialoghi che sono stati presentati hanno riguardato diverse materie ed
@@ -223,6 +222,6 @@ export default function Edizione2022() {
         windowSize={windowSize}
         year={2022}
       />
-    </>
+    </div>
   );
 }

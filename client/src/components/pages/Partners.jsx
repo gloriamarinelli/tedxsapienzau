@@ -1,30 +1,43 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
+import PartnerCard24 from "../components/PartnerCard24";
 import { useOutletContext } from "react-router";
+import CountUp from "react-countup";
 import global from "../../resources/global.json";
 import { Link } from "react-router-dom";
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../index.css";
+import "../../resources/styles/parallax-scrolldown.css";
 import PartnerCardCommunity from "../components/PartnerCardCommunity";
+import ImageOne from "../components/partners_scrolldown/ImageOne.js";
+import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
+import ImageThree from "../components/partners_scrolldown/ImageThree.js";
+import ImageFour from "../components/partners_scrolldown/ImageFour.js";
 
 export default function Partners() {
-  const [activeYear, setActiveYear] = useState(23);
+  const [activeYear, setActiveYear] = useState(24);
   const [windowSize, setWindowSize] = useOutletContext();
   const button2022 = useRef();
   const button2023 = useRef();
+  const button2024 = useRef();
+  /* variabili per la gestione play-pause animazione scroller loghi */
+  let [isHovered, setIsHovered] = useState(false);
+  let onMouseMove = null;
+  let onMouseLeave = null;
 
   function getSponsor2022() {
     return (
       <section className="page-section" id="portfolio">
         <div className="container">
-          <div className="">
+          <div>
             <h2
               className="section-heading"
               style={{
-                fontFamily: "GothamBold",
+                fontFamily: "Fira Sans Extra Condensed, sans-serif",
                 fontSize: "2.5em",
+                color: "white",
               }}
             >
               Partner Istituzionali
@@ -48,15 +61,16 @@ export default function Partners() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2.5em",
+              color: "white",
             }}
           >
             Main Sponsors
           </h2>
           <div className="row">
             <PartnerCard22
-              imgSrc="https://upload.wikimedia.org/wikipedia/it/thumb/c/cc/UniCredit_logo.svg/1200px-UniCredit_logo.svg.png"
+              imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Unicredit_logo.svg/2560px-Unicredit_logo.svg.png"
               sponsorType={"main"}
             />
 
@@ -69,8 +83,9 @@ export default function Partners() {
           <h2
             className="section-heading mb-3"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2em",
+              color: "white",
             }}
           >
             Supporting Sponsors
@@ -89,7 +104,7 @@ export default function Partners() {
               sponsorType={"supporting"}
             />
             <PartnerCard22
-              imgSrc="https://www.autocentribalduina.com/static/img/pict3512.jpg"
+              imgSrc="https://www.autocentribalduina.com/media/osvdbcml/ab-autocentri-balduina.jpg"
               sponsorType={"supporting"}
             />
           </div>
@@ -97,8 +112,9 @@ export default function Partners() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2em",
+              color: "white",
             }}
           >
             Smart Sponsor
@@ -121,8 +137,9 @@ export default function Partners() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "GothamBold",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
               fontSize: "2em",
+              color: "white",
             }}
           >
             Friendly Sponsor
@@ -168,12 +185,13 @@ export default function Partners() {
       <>
         <section className="page-section" id="portfolio">
           <div className="container">
-            <div className="">
+            <div>
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2.5em",
+                  color: "white",
                 }}
               >
                 Main Sponsors
@@ -194,7 +212,7 @@ export default function Partners() {
                 />
               </div>
 
-              <div className="row">
+              <div className="row" style={{ color: "white" }}>
                 <PartnerCard23
                   title="Supporting Sponsor"
                   imgSrc="Balduina1.webp"
@@ -225,8 +243,9 @@ export default function Partners() {
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Smart Sponsors
@@ -267,8 +286,9 @@ export default function Partners() {
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Friendly Sponsors
@@ -329,8 +349,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Media Partners
@@ -365,8 +386,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Creative Partners
@@ -383,8 +405,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Community Partners
@@ -416,8 +439,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <h2
                 className="section-heading"
                 style={{
-                  fontFamily: "GothamBold",
+                  fontFamily: "Fira Sans Extra Condensed, sans-serif",
                   fontSize: "2em",
+                  color: "white",
                 }}
               >
                 Con il patrocinio di
@@ -456,47 +480,380 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function chooseYear() {
-    if (activeYear === 22) return getSponsor2022();
-    else return getSponsor2023();
+  function comingSoon() {
+    return (
+      <div
+        className="coming-soon"
+        style={{
+          backgroundColor: global.COLORS.NERO,
+          padding: "10px",
+          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          placeItems: "center",
+          display: "grid",
+          color: global.COLORS.ROSSO_TED,
+          textTransform: "uppercase",
+        }}
+      >
+        <h1>Coming Soon . . .</h1>
+      </div>
+    );
   }
 
-  if (windowSize > global.UTILS.TABLET_WIDTH) {
-    /**
-     * DESKTOP
-     */
+  function displayParallaxScrollDown() {
+    return (
+      <div className="parent-div">
+        <div className="gradient-div gradient-div-top"></div>
+        <div className="img-div">
+          <ImageOne />
+          <ImageTwo />
+          <ImageThree />
+          <ImageFour />
+          {/*<ImageFive />*/}
+        </div>
+        <div className="gradient-div gradient-div-bottom"></div>
+      </div>
+    );
+  }
+
+  /*function checkElementPosition() {
+    const group_id_1 = "1st-group";
+    const group_id_2 = "2nd-group";
+    const last_element_id = "last-element";
+    const snd_last_element_id = "2nd-last-element";
+    const tmp_id = "tmp-id";
+    const tmp_group_id = "tmp-group-id";
+
+    let groupElement = document.getElementById(group_id_1);
+    let groupElement2 = document.getElementById(group_id_2);
+    let lastElement = document.getElementById(last_element_id);
+    let sndLastElement = document.getElementById(snd_last_element_id);
+    
+    if (!groupElement || !lastElement || !groupElement2 || !sndLastElement) {
+      console.debug("not found");
+      return;
+    }
+
+    const lastElementRect = lastElement.getBoundingClientRect();
+    if (lastElementRect.left <= 0) {
+      groupElement.style.animationPlayState = "paused";
+      groupElement2.parentNode.insertBefore(groupElement, groupElement2.nextSibling); // accodamento del primo div una volta uscito dalla visualizzazione
+      groupElement.id = tmp_group_id;
+      groupElement2.id = group_id_1;
+      groupElement = document.getElementById(group_id_1);
+      groupElement2 = document.getElementById(tmp_group_id);
+      groupElement2.id = group_id_2;
+
+      lastElement.id = tmp_id; // l'ultimo elemento del 1 gruppo riceve un id temporaneo per evitare conflitti
+      sndLastElement.id = last_element_id; // l'ultimo elemento del 2 gruppo assume l'id dell'elemento del quale viene monitorata la posizione
+      lastElement = document.getElementById(last_element_id); // scambio effettivo 
+      sndLastElement = document.getElementById(tmp_id); // il secondo elemento ora diventa quello che all'inizio era il primo perché il div viene accodato
+      sndLastElement.id = snd_last_element_id; // viene cambiato il valore dell'id
+
+
+    }
+    else{
+      groupElement.style.animationPlayState = "running";
+    }
+  }*/
+
+  /* funzione per la gestione 'pause' animazione scroller loghi */
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  /* funzione per la gestione 'play' animazione scroller loghi */
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  function getSponsor2024() {
     return (
       <>
+        <section className="page-section" id="portfolio">
+          <div className="container">
+            <h2
+              className="section-heading"
+              style={{
+                fontFamily: "Fira Sans Extra Condensed, sans-serif",
+                fontSize: "2.5em",
+                color: "white",
+              }}
+            >
+              Chi ci ha supportato
+            </h2>
+            <div
+              /* controllo per mouse hover */
+              onMouseMove={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              /* se il mouse è hover viene aggiunta la classe 'hovered', altrimenti nulla */
+              className={`image-scroller-container ${
+                isHovered ? "hovered" : ""
+              }`}
+            >
+              <div className="group-row">
+                <div className={"image-scroller-group"} id="1st-group">
+                  <PartnerCard24 imgSrc="Tim.webp" altText="TIM" />
+                  <PartnerCard24 imgSrc="Unicredit.webp" altText="Unicredit" />
+                  <PartnerCard24
+                    imgSrc="Balduina1.webp"
+                    altText="Autocentri Balduina"
+                  />
+                  <PartnerCard24 imgSrc="Pioda.webp" altText="Pioda Imaging" />
+                  <PartnerCard24 imgSrc="Enav.webp" altText="Enav Group" />
+                  <PartnerCard24 imgSrc="CBCR.webp" altText="CBCR" />
+                  <PartnerCard24 imgSrc="VAIA.webp" altText="VAIA" />
+                  <PartnerCard24 imgSrc="Deloitte.jpg" altText="Deloitte" />
+                  <PartnerCard24 imgSrc="EF.webp" altText="EF" />
+                  <PartnerCard24 imgSrc="MyDiet.webp" altText="MyDiet" />
+                  <PartnerCard24 imgSrc="Tlon.webp" altText="Tlon" />
+                  <PartnerCard24 imgSrc="Copernico.webp" altText="Copernico" />
+                  <PartnerCard24 imgSrc="Dias.webp" altText="Dias" />
+                  <PartnerCard24 imgSrc="CrikCrok.webp" altText="CrikCrok" />
+                  <PartnerCard24 imgSrc="Sanarti.webp" altText="SanArti" />
+                  <PartnerCard24 imgSrc="Innocent.webp" altText="Innocent" />
+                  <PartnerCard24
+                    imgSrc="Redbull.webp"
+                    altText="RedBull"
+                    id="last-element"
+                  />
+                </div>
+                <div
+                  className={"image-scroller-group second-images-group"}
+                  id="2nd-group"
+                >
+                  <PartnerCard24 imgSrc="Marziali.webp" altText="Marziali" />
+                  <PartnerCard24
+                    imgSrc="RadioSapienza.png"
+                    altText="RadioSapienza"
+                  />
+                  <PartnerCard24
+                    imgSrc="Millionaire.webp"
+                    altText="Millionaire"
+                  />
+                  <PartnerCard24 imgSrc="eCo.webp" altText="eCo" />
+                  <PartnerCard24
+                    imgSrc="RadioKaos.webp"
+                    altText="Radio Kaos Italy"
+                  />
+                  <PartnerCard24
+                    imgSrc="Collettivo.webp"
+                    altText="Collettivo Viscosa"
+                  />
+                  <PartnerCard24 imgSrc="Thesis4u.webp" altText="Thesis4u" />
+                  <PartnerCard24
+                    imgSrc="MentorsNova.webp"
+                    altText="Mentors Nova"
+                  />
+                  <PartnerCard24 imgSrc="Peekaboo.webp" altText="Peekaboo" />
+                  <PartnerCard24
+                    imgSrc="SFClubSapienza.webp"
+                    altText="SF Club Sapienza"
+                  />
+                  <PartnerCard24 imgSrc="JESAP.webp" altText="JESAP" />
+                  <PartnerCard24 imgSrc="WAYouth.webp" altText="WAYouth" />
+                  <PartnerCard24 imgSrc="CNR.webp" altText="CNR" />
+                  <PartnerCard24 imgSrc="Enea.png" altText="Enea" />
+                  <PartnerCard24 imgSrc="Roma.webp" altText="Roma" />
+                  <PartnerCard24
+                    imgSrc="CE.webp"
+                    altText="Commissione Europea"
+                  />
+                  <PartnerCard24
+                    imgSrc="RegioneLazio.webp"
+                    altText="Regione Lazio"
+                    id="2nd-last-element"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  }
+
+  function displayMobileScrollDown() {
+    return (
+      <>
+        <div className="gradient-div gradient-div-top"></div>
         <div
-          className="header gradient-background"
+          className="mobile-content"
+          style={{ fontFamily: "Fira Sans Extra Condensed" }}
+        >
+          <div id="mobile-1st-div" className="mobile-div ct-right">
+            <div id="mobile-text-block-1" className="mobile-text-block">
+              <h3>TEDx, molto più che un evento.</h3>
+              <p>
+                Realizzare un TEDx è un{" "}
+                <span id="imp-txt-1">lavoro di squadra</span>. Per questo motivo
+                collaboriamo in sinergia con i nostri partner.
+              </p>
+            </div>
+          </div>
+          <div id="mobile-2nd-div" className="mobile-div ct-left">
+            <div id="mobile-text-block-2" className="mobile-text-block">
+              <h3>Perché collaborare?</h3>
+              <h5 id="imp-txt-2">Uniti per un obiettivo</h5>
+              <p>
+                Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
+                portare questo format internazionale nella nostra Università.{" "}
+                <br></br>
+                Ora siamo più di <span id="imp-txt-5">120 volontari</span>.
+              </p>
+              <p>
+                Sapienza è l'Università più grande d'Europa, con più di 120 mila
+                studenti iscritti ed il nostro obiettivo è <br></br>
+                <span id="imp-txt-4">dare voce alle idee</span> di valore della
+                nostra comunità accademica.
+              </p>
+            </div>
+          </div>
+          <div id="mobile-3rd-div" className="mobile-div ct-left">
+            <div id="mobile-text-block-3" className="mobile-text-block">
+              <div>
+                <h4>L'innovazione è nelle nostre vene</h4>
+                <p>
+                  Il format TEDx ci è concesso sotto licenza ufficiale da TED
+                  Foundation. Operiamo sotto i più elevati standard di qualità
+                  per garantire un'esperienza che sia all'altezza del nome che
+                  portiamo.
+                </p>
+                <p>
+                  Ci impegniamo a parlare di temi più rilevanti per la nostra
+                  società attraverso la voce degli Speaker. Vogliamo portare un
+                  <span id="imp-txt-3"> impatto positivo</span> alla nostra
+                  comunità.
+                </p>
+              </div>
+              <div class="">
+                <div>
+                  <div>
+                    <h2>I nostri pilastri</h2>
+                    <ul>
+                      <li>Community</li>
+                      <li>Content marketing</li>
+                      <li>Employer branding</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h2>Collabora con noi</h2>
+                    <ul>
+                      <li>Sponsor</li>
+                      <li>Partnership</li>
+                      <li>Media partner</li>
+                      <li>Community partner</li>
+                      <li>Patrocinio</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-4th-div" className="mobile-div ct-right">
+            <div id="mobile-text-block-4" className="mobile-text-block">
+              <h3>In numeri</h3>
+              <p>
+                2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
+                <ul className="numbers-list">
+                  <li className="info-el">
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={1500} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    persone coinvolte negli eventi
+                  </li>
+                  <li className="info-el">
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={200000} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    visualizzazioni su YouTube
+                  </li>
+                  <li className="info-el">
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={50} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    partner a supporto del nostro evento
+                  </li>
+                  <li className="info-el">
+                    <h3 className="info-number">
+                      +
+                      <CountUp end={300} duration={2} useEasing={false} />
+                    </h3>{" "}
+                    volontari passati di qui
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="gradient-div gradient-div-bottom"></div>
+      </>
+    );
+  }
+
+  function partners24() {
+    let scrollDownComponent;
+    if (windowSize > global.UTILS.TABLET_WIDTH) {
+      scrollDownComponent = displayParallaxScrollDown();
+    } else {
+      scrollDownComponent = displayMobileScrollDown();
+    }
+
+    return (
+      <>
+        {scrollDownComponent}
+        {getSponsor2024()}
+      </>
+    );
+  }
+
+  function chooseYear() {
+    if (activeYear === 22) return getSponsor2022();
+    else if (activeYear === 23) return getSponsor2023();
+    else return partners24();
+  }
+
+  function partnerLayout24Desktop() {
+    return (
+      <>
+        <section
           style={{
-            padding: "10px",
-            color: "#fff",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
-            display: "grid",
+            backgroundColor: global.COLORS.NERO,
+            //marginTop: global.UTILS.NAV_HEIGHT,
+            //padding: "10px",
+            paddingTop: "5vh",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mt-5 mb-5"
+          {/*<div
             style={{
-              fontSize: "120px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
+              width: "99%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "black",
+              //marginRight: "10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
             }}
-          >
-            PARTNERS
-          </h1>
-        </div>
+          ></div>*/}
+        </section>
 
-        <section
-          className="mt-5 mb-5 d-flex justify-content-between"
+        {/* <section
+          className="pt-5 pb-5 px-5 d-flex justify-content-between"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            //width: "95vw",
+            //margin: "auto",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
@@ -505,17 +862,34 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontWeight: "bold",
               color: "black",
               display: "flex",
+              color: "white",
             }}
           >
             Chi ci ha supportato:
             <div
-              ref={button2023}
+              ref={button2024}
               className="year-button underlined"
               type="button"
               style={{ marginLeft: "30px" }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+            <div
+              ref={button2023}
+              className="year-button"
+              type="button"
+              style={{ marginLeft: "30px" }}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -530,6 +904,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -551,47 +926,51 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               Vuoi supportarci?
             </button>
           </Link>
-        </section>
+            </section> */}
 
         {chooseYear()}
       </>
     );
-  } else {
-    /**
-     * MOBILE
-     */
+  }
+
+  function partnerLayout24Mobile() {
     return (
       <>
-        <div
-          className="header gradient-background"
+        <section
           style={{
-            padding: "10px",
-            color: "#fff",
-            height: "30vh",
-            display: "grid",
+            backgroundColor: global.COLORS.NERO,
+            //marginTop: global.UTILS.NAV_HEIGHT,
+            //padding: "10px",
+            paddingTop: "5vh",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+            display: "grid",
           }}
         >
-          <h1
-            className="font-weight-bold mb-5"
+          <div
+            className="header"
             style={{
-              fontSize: "60px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-              marginTop: "100px",
+              width: "98%",
+              height: "80%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundColor: "black",
+              //marginRight: "10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
             }}
-          >
-            PARTNERS
-          </h1>
-        </div>
+          ></div>
+        </section>
 
-        <section
-          className="mt-3 mb-5"
+        {/*<section
+          className="pt-3 pb-5 px-3"
           style={{
-            width: "95vw",
-            margin: "auto",
-            fontFamily: "GothamBold",
+            //width: "95vw",
+            //margin: "auto",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           <h3
@@ -599,7 +978,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               fontSize: "15px",
               fontWeight: "bold",
               textAlign: "left",
-              color: "black",
+              color: "white",
               display: "flex",
             }}
           >
@@ -607,17 +986,39 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </h3>
           <div style={{ display: "flex" }}>
             <div
-              ref={button2023}
-              className="year-button underlined"
+              ref={button2024}
+              className="year-button underlined px-3"
               type="button"
               style={{
-                marginRight: "30px",
-                cursor: "initial",
+                //marginLeft: "30px",
                 fontSize: "30px",
+                color: "white",
               }}
               onClick={() => {
                 console.log("click");
                 button2022.current.classList.remove("underlined");
+                button2023.current.classList.remove("underlined");
+                button2024.current.classList.add("underlined");
+                setActiveYear(24);
+              }}
+            >
+              2024
+            </div>
+
+            <div
+              ref={button2023}
+              className="year-button px-3"
+              type="button"
+              style={{
+                //marginRight: "30px",
+                cursor: "initial",
+                fontSize: "30px",
+                color: "white",
+              }}
+              onClick={() => {
+                console.log("click");
+                button2022.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2023.current.classList.add("underlined");
                 setActiveYear(23);
               }}
@@ -626,12 +1027,17 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             </div>
             <div
               ref={button2022}
-              className="year-button"
+              className="year-button px-3"
               type="button"
-              style={{ marginRight: "30px", fontSize: "30px" }}
+              style={{
+                //marginRight: "30px",
+                fontSize: "30px",
+                color: "white",
+              }}
               onClick={() => {
                 console.log("click");
                 button2023.current.classList.remove("underlined");
+                button2024.current.classList.remove("underlined");
                 button2022.current.classList.add("underlined");
                 setActiveYear(22);
               }}
@@ -639,10 +1045,22 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               2022
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {chooseYear()}
       </>
     );
+  }
+
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
+    /**
+     * DESKTOP
+     */
+    return partnerLayout24Desktop();
+  } else {
+    /**
+     * MOBILE
+     */
+    return partnerLayout24Mobile();
   }
 }

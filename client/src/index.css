@@ -29,6 +29,139 @@ code {
   src: url("./resources/Gotham-Book.otf") format("opentype");
 }
 
+@font-face {
+  font-family: Anton;
+  src: url("./resources/Anton-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Sharp-Grotesk-Bold;
+  src: url("./resources/Sharp_Grotesk/SharpGrotesk-Bold15.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: FiraSansExtraCondensedRegular;
+  src: url("./resources/FiraSansExtraCondensed/FiraSansExtraCondensed-Regular.ttf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: FiraSansExtraCondensedBold;
+  src: url("./resources/FiraSansExtraCondensed/FiraSansExtraCondensed-Bold.ttf")
+    format("opentype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.fira-sans extra condensed-thin {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-thin-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-extralight {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-extralight-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-light {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-light-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-regular {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-regular-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-medium {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-medium-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-semibold {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-semibold-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-bold {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-bold-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-extrabold {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-extrabold-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.fira-sans extra condensed-black {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fira-sans extra condensed-black-italic {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
 .underlined::after {
   content: "";
   display: block;
@@ -49,6 +182,7 @@ code {
   overflow: hidden;
   transition: all 0.5s ease;
 }
+
 .bigger {
   display: block;
   width: 25px;
@@ -286,112 +420,98 @@ code {
   object-fit: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-.fira-sans extra condensed-thin {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+.bento-box {
+  background-color: #ffffff1a;
+  border-radius: 24px;
+  padding: 40px;
 }
 
-.fira-sans extra condensed-thin-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 100;
-  font-style: italic;
+.secondary-text {
+  color: #ffffffcc;
 }
 
-.fira-sans extra condensed-extralight {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+.tertiary-text {
+  color: #ffffff99;
 }
 
-.fira-sans extra condensed-extralight-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 200;
-  font-style: italic;
+/* Navbar Elements*/
+.navbar-submenu-edition-year {
+  color: grey;
+  font-size: 0.8em;
+}
+.navbar-submenu-edition-item {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 3px;
 }
 
-.fira-sans extra condensed-light {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.navbar-submenu-edition-item-red {
+  color: #eb0028;
+  text-decoration: none;
+  display: flex;
+  text-align: start;
+  margin-bottom: 3px;
 }
 
-.fira-sans extra condensed-light-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+.navbar-submenu-edition-item:hover {
+  color: red;
 }
 
-.fira-sans extra condensed-regular {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.navbar-submenu-edition-item-disabled {
+  pointer-events: none;
+  color: rgba(138, 138, 138, 0.582);
+  cursor: not-allowed;
+  text-decoration: none;
 }
 
-.fira-sans extra condensed-regular-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+.custom-toggler.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
 }
 
-.fira-sans extra condensed-medium {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+/* Modifica delle classi navbar per avere il collapsed button bianco*/
+nav.navbar {
+  background: transparent;
+}
+.navbar a.navbar-brand {
+  color: white;
+}
+.navbar a.navbar-brand:hover {
+  color: green;
+}
+.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: white;
+}
+.navbar-light span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+.navbar-light span.navbar-toggler-icon:active {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='grey' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+.navbar-light button.navbar-toggler {
+  border-color: white;
+}
+.navbar-light button.navbar-toggler:active {
+  border-color: grey;
 }
 
-.fira-sans extra condensed-medium-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+@media (max-width: 768px) {
+  nav.navbar {
+    background: lightgray;
+  }
+}
+/*======================*/
+
+/* Team Elements */
+.header-team {
+  background-color: #ffffff1a;
+  border-radius: 24px;
+  padding: 40px;
 }
 
-.fira-sans extra condensed-semibold {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
+.font-600 {
   font-weight: 600;
-  font-style: normal;
-}
-
-.fira-sans extra condensed-semibold-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.fira-sans extra condensed-bold {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.fira-sans extra condensed-bold-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.fira-sans extra condensed-extrabold {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.fira-sans extra condensed-extrabold-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.fira-sans extra condensed-black {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.fira-sans extra condensed-black-italic {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-  font-weight: 900;
-  font-style: italic;
 }
