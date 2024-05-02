@@ -447,7 +447,7 @@ export default function Home() {
           >
             <div
               style={{
-                height: "90vh",
+                height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
                 width: "100vw",
                 backgroundColor: "black",
                 display: "flex",
@@ -482,15 +482,13 @@ export default function Home() {
                 width: "100vw",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
                 alignItems: "center",
                 padding: "50px 0",
+                backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
               }}
             >
-              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                3, 2, 1MPATTO
-              </h1>
-              <p style={{ maxWidth: "25ch", color: "#fff" }}>
+              <h1 style={{ color: "#000" }}>3, 2, 1MPATTO</h1>
+              <p style={{ maxWidth: "25ch", color: "#000" }}>
                 Il tempo scorre ed è necessario creare un nuovo spazio di
                 riflessione ed intrattenimento incentrato sulla crisi climatica.
                 <br />
@@ -503,12 +501,11 @@ export default function Home() {
                 Immergiti nel primo evento{" "}
                 <span
                   style={{
-                    color: global.COLORS.GIALLO_COUNTDOWN,
                     fontWeight: "bold",
                   }}
                 >
                   TEDx Countdown
-                </span>{" "}
+                </span>
                 della Sapienza e lasciati ispirare dall'urgenza e dalla
                 complessità di questa sfida globale per promuovere azioni
                 concrete.
