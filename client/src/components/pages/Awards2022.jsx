@@ -59,7 +59,7 @@ export default function Awards2022() {
           fontWeight: "bold",
         }}
       >
-        I VINCITORI TEDxSAPIENZAU AWARDS 2022
+        I VINCITORI SAPIENZAU AWARDS 2022
       </h1>
       <div class="container mt-5 pb-5">
         <LazyLoadImage src={Image2} class="winner_22" height="350" />

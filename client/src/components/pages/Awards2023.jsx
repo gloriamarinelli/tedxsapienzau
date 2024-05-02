@@ -77,7 +77,7 @@ export default function Awards() {
             fontWeight: "bold",
           }}
         >
-          COSA SONO I TEDxSAPIENZA AWARDS?
+          COSA SONO I SAPIENZAU AWARDS?
         </h1>
         <p
           style={{

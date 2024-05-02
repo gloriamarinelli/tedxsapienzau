@@ -327,7 +327,7 @@ export default function Team2022() {
         <section
           style={{
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            backgroundColor: global.COLORS.NERO,
           }}
         >
           {chooseYear()}
@@ -342,7 +342,7 @@ export default function Team2022() {
         <section
           className="headerSectionMobile"
           style={{
-            backgroundColor: global.COLORS.NERO, //! Cambiare colore
+            backgroundColor: global.COLORS.NERO,
             marginTop: global.UTILS.NAV_HEIGHT,
           }}
         >
