@@ -41,6 +41,7 @@ export default function PrivacyPolicy() {
             fontFamily: "GothamBook",
             marginLeft: "10%",
             marginRight: "10%",
+            color: "white",
           }}
         >
           <p style={{ fontStyle: "italic", fontWeight: "bold" }}>
@@ -64,13 +65,15 @@ export default function PrivacyPolicy() {
             materia di protezione dei dati personali) a coloro che interagiscono
             con i servizi Web accessibili per via telematica a partire
             dall’indirizzo:{" "}
-            <Link style={{color: "#eb0028"}} to="/tedxsapienzau">https://www.tedxsapienzau.com/</Link>.
-            L’informativa è resa solo per il presente sito internet e non anche
-            per altri siti internet eventualmente consultati dall’utente tramite
-            link presenti su questo sito. Visitando il presente sito internet,
-            si dichiara implicitamente di avere compreso ed accettato le
-            modalità di trattamento descritte nella presente informativa sulla
-            privacy. Per trattamento di dati personali si intende la loro
+            <Link style={{ color: "#eb0028" }} to="/tedxsapienzau">
+              https://www.tedxsapienzau.com/
+            </Link>
+            . L’informativa è resa solo per il presente sito internet e non
+            anche per altri siti internet eventualmente consultati dall’utente
+            tramite link presenti su questo sito. Visitando il presente sito
+            internet, si dichiara implicitamente di avere compreso ed accettato
+            le modalità di trattamento descritte nella presente informativa
+            sulla privacy. Per trattamento di dati personali si intende la loro
             raccolta, registrazione, organizzazione, conservazione,
             consultazione, elaborazione, modificazione, selezione, estrazione,
             raffronto, utilizzo, interconnessione, blocco, comunicazione,
@@ -140,10 +143,13 @@ export default function PrivacyPolicy() {
           <p>
             Ogni ulteriore richiesta circa l’utilizzo dei cookie nel presente
             sito web può essere inviata all’indirizzo email {""}
-			<a style={{color: "#eb0028"}} href="mailto:info@tedxsapienzau.com">
-                info@tedxsapienzau.com
-              </a>
-			  .
+            <a
+              style={{ color: "#eb0028" }}
+              href="mailto:info@tedxsapienzau.com"
+            >
+              info@tedxsapienzau.com
+            </a>
+            .
           </p>
 
           <p>
@@ -167,7 +173,7 @@ export default function PrivacyPolicy() {
           className="header"
           style={{
             textAlign: "center",
-            color: "black",
+            color: "white",
             display: "grid",
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
@@ -179,6 +185,7 @@ export default function PrivacyPolicy() {
               fontSize: "15px",
               fontWeight: "bold",
               fontFamily: "GothamBold",
+              color: "white",
             }}
           >
             TEDxSapienzaU - Privacy Policy Sections ​
@@ -190,6 +197,7 @@ export default function PrivacyPolicy() {
             textAlign: "justify",
             padding: "20px",
             fontFamily: "GothamBook",
+            color: "white",
           }}
         >
           <p style={{ fontStyle: "italic", fontWeight: "bold" }}>
@@ -212,14 +220,16 @@ export default function PrivacyPolicy() {
             n.196/2003 e al regolamento Europeo – GDPR 679/2016 (Codice in
             materia di protezione dei dati personali) a coloro che interagiscono
             con i servizi Web accessibili per via telematica a partire
-            dall’indirizzo:{" "}
-            <Link to="/tedxsapienzau">https://www.tedxsapienzau.com/</Link>.
-            L’informativa è resa solo per il presente sito internet e non anche
-            per altri siti internet eventualmente consultati dall’utente tramite
-            link presenti su questo sito. Visitando il presente sito internet,
-            si dichiara implicitamente di avere compreso ed accettato le
-            modalità di trattamento descritte nella presente informativa sulla
-            privacy. Per trattamento di dati personali si intende la loro
+            dall’indirizzo:{" "} <br></br>
+            <Link style={{ color: "#eb0028" }} to="/tedxsapienzau">
+              https://www.tedxsapienzau.com/
+            </Link>
+            . L’informativa è resa solo per il presente sito internet e non
+            anche per altri siti internet eventualmente consultati dall’utente
+            tramite link presenti su questo sito. Visitando il presente sito
+            internet, si dichiara implicitamente di avere compreso ed accettato
+            le modalità di trattamento descritte nella presente informativa
+            sulla privacy. Per trattamento di dati personali si intende la loro
             raccolta, registrazione, organizzazione, conservazione,
             consultazione, elaborazione, modificazione, selezione, estrazione,
             raffronto, utilizzo, interconnessione, blocco, comunicazione,
@@ -289,7 +299,14 @@ export default function PrivacyPolicy() {
           <p>
             Ogni ulteriore richiesta circa l’utilizzo dei cookie nel presente
             sito web può essere inviata all’indirizzo email
-            info@tedxsapienzau.com
+            <br></br>
+            <a
+              style={{ color: "#eb0028" }}
+              href="mailto:info@tedxsapienzau.com"
+            >
+              info@tedxsapienzau.com
+            </a>
+            .
           </p>
 
           <p>

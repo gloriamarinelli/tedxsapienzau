@@ -11,7 +11,6 @@ import Team from "./components/pages/Team";
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
 import Events from "./components/pages/Events";
-import Statuto from "./components/pages/Statuto";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import BlogPost from "./components/pages/BlogPost";
 import Write from "./components/pages/Write";
@@ -106,10 +105,7 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      {
-        path: "/statute",
-        element: <Statuto />,
-      },
+      
       {
         path: "/privacypolicy",
         element: <PrivacyPolicy />,

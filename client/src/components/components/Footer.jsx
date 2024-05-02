@@ -245,7 +245,13 @@ export default function Footer() {
             <GreyLink text="Privacy Policy" link={"/privacypolicy"} />
           </small>
           <small className="tertiary-text">
-            <GreyLink text="Statuto" link={"/statuto"} />
+            <a
+              className="secondary-text"
+              style={{ textDecoration: 'none' }}
+              href="/images/Statuto2024-25.pdf"
+            >
+              Statuto{" "}
+            </a>
           </small>
         </div>
         <small className="secondary-text">
