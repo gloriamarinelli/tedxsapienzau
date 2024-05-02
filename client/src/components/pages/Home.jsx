@@ -504,7 +504,7 @@ export default function Home() {
                     fontWeight: "bold",
                   }}
                 >
-                  TEDx Countdown
+                  TEDx Countdown{" "}
                 </span>
                 della Sapienza e lasciati ispirare dall'urgenza e dalla
                 complessità di questa sfida globale per promuovere azioni

@@ -105,7 +105,7 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-      
+
       {
         path: "/privacypolicy",
         element: <PrivacyPolicy />,
@@ -139,7 +139,7 @@ const router = createBrowserRouter([
         element: <RFW2023 />,
       },
       {
-        path: "/events/workshop",
+        path: "/workshop",
         element: <Workshop />,
       },
       {
