@@ -325,7 +325,8 @@ export default function Location() {
             borderRadius: "25px",
           }}
         >
-          <div className="container-lg marketing">
+          
+          <div className="gradient-div gradient-div-top">
             <h3
               className="title"
               style={{
@@ -602,6 +603,7 @@ export default function Location() {
             <div className="container-lg marketing mt-3 mb-3">
               <LazyLoadImage src={Image} alt="TedxSapienzaU" height="245" />
             </div>
+            <div className="gradient-div gradient-div-bottom"></div>
           </section>
         </section>
       </>
