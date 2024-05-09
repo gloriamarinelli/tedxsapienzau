@@ -271,7 +271,7 @@ export default function NavbarComponent(props) {
                             {t("blog")}
                           </Link>
                         </li>
-                      {/*
+                        {/*
                                               <li class="nav-item dropdown col-xl-1 col-lg-2 col-sm-2 col-12 p-0">
                                   <a class="navbar-submenu-edition-item dropdown-toggle font-600" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                   {t("about_us")}
@@ -281,7 +281,7 @@ export default function NavbarComponent(props) {
                                     <li><a class="dropdown-item" href="#">Location</a></li>
                                   </ul>
                                 </li>
-                                */ }
+                                */}
 
                         <li className="nav-item dropdown col-xl-1 col-lg-2 col-sm-2 col-md-2 col-12 p-0">
                           <a
@@ -292,12 +292,11 @@ export default function NavbarComponent(props) {
                           >
                             {t("about_us")} &#709;
                           </a>
-                          
 
                           <ul
                             className="dropdown-menu dropdown-menu-new bg-black p-1"
                             style={{
-                              borderRadius: "5px"
+                              borderRadius: "5px",
                             }}
                           >
                             <li className="mt-2">
@@ -336,35 +335,28 @@ export default function NavbarComponent(props) {
                 </Col>
 
                 <Col className="col-lg-2 col-md-12 col-sm-12 col-12">
-
-                    <Row className="mt-2 mb-2 d-flex justify-content-center">
-
-                      <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">
-                        <li className="nav-item dropdown">
-                          {/*data-bs-toggle="dropdown"*/}
-                          <a
-                            className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
-                            
-                            
-                            role="button"
-                            aria-expanded="false"
-                            onClick={()=>{}}
-                          >
-                            {i18n.language === "it" ? "IT" : "EN"}
-                            <img
-                              className="rounded ms-1 me-1"
-                              src={
-                                i18n.language === "it"
-                                  ? ItalianFlag
-                                  : EnglishFlag
-                              }
-                              
-                              width="20"
-                              height="15"
-                            />
-                            {/*&#709;*/}
-                          </a>
-                              {/*
+                  <Row className="mt-2 mb-2 d-flex justify-content-center">
+                    <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">
+                      <li className="nav-item dropdown">
+                        {/*data-bs-toggle="dropdown"*/}
+                        <a
+                          className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
+                          role="button"
+                          aria-expanded="false"
+                          onClick={() => {}}
+                        >
+                          {i18n.language === "it" ? "IT" : "EN"}
+                          <img
+                            className="rounded ms-1 me-1"
+                            src={
+                              i18n.language === "it" ? ItalianFlag : EnglishFlag
+                            }
+                            width="20"
+                            height="15"
+                          />
+                          {/*&#709;*/}
+                        </a>
+                        {/*
                           <ul
                             className="dropdown-menu dropdown-menu-new p-0"
                             style={{
@@ -390,72 +382,67 @@ export default function NavbarComponent(props) {
                               />
                             </li>
                               </ul> */}
+                      </li>
+                    </Col>
+
+                    <Col className="col-lg-9 col-md-3 col-sm-6 col-6 text-center ">
+                      <Button
+                        style={{
+                          backgroundColor: global.COLORS.ROSSO_TED_2023,
+                          borderColor: "red",
+                          borderRadius: "30px",
+                          fontWeight: "bold",
+                          width: "90%",
+                          marginLeft: "24px",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.borderColor = "white";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.borderColor = "red";
+                        }}
+                        onClick={() => {
+                          setExpanded(false);
+                          window.location.href = "/join";
+                        }}
+                      >
+                        Join us
+                      </Button>
+                    </Col>
+                  </Row>
+                  {isAdmin && (
+                    <li className="nav-item dropdown">
+                      <a
+                        className="nav-link dropdown-toggle bg-success d-flex justify-content-center align-items-center text-white"
+                        data-bs-toggle="dropdown"
+                        role="button"
+                      >
+                        Menù Admin
+                      </a>
+                      <ul className="dropdown-menu bg-success">
+                        <li>
+                          <Link
+                            className="nav-link text-white"
+                            to="/write"
+                            onClick={() => setExpanded(false)}
+                          >
+                            Nuovo articolo
+                          </Link>
                         </li>
-                      </Col>
-
-                      <Col className="col-lg-9 col-md-3 col-sm-6 col-6 text-center ">
-                        <Button
-                          style={{
-                            backgroundColor: global.COLORS.ROSSO_TED_2023,
-                            borderColor: "red",
-                            borderRadius: "30px",
-                            fontWeight: "bold",
-                            width: "90%",
-                            marginLeft: "24px",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.target.style.borderColor = "white";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.target.style.borderColor ="red";
-                          }}
-                          onClick={() => {
-                            setExpanded(false);
-                            window.location.href = "/join";
-                          }}
-                        >
-                          Join us
-                        </Button>
-                      </Col>
-                    </Row>
-                  
+                        <li>
+                          <Link
+                            className="nav-link text-white"
+                            type="submit"
+                            onClick={logout}
+                            to="/"
+                          >
+                            Logout
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                  )}
                 </Col>
-
-                {isAdmin && (
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle bg-success text-white"
-                      data-bs-toggle="dropdown"
-                      href=""
-                      role="button"
-                      aria-expanded="false"
-                      style={{ borderRadius: "5px" }}
-                    >
-                      Menù Admin
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link
-                          className="nav-link bg-success text-white"
-                          to="/write"
-                          onClick={() => setExpanded(false)}
-                        >
-                          Nuovo articolo
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="nav-link bg-success text-white"
-                          type="submit"
-                          onClick={logout}
-                          to="/"
-                        >
-                          Logout
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                )}
               </ul>
             </Row>
           </Navbar.Collapse>
