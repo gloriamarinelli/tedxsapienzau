@@ -181,7 +181,7 @@ const Write = () => {
                 formats={formats}
                 value={value}
                 onChange={setValue}
-                style={{ height: "400px", backgroundColor: "white" }}
+                style={{ height: "400px" }}
               />
             </div>
           </div>
