@@ -144,16 +144,14 @@ const Write = () => {
             padding: "10px",
             textAlign: "center",
             color: "#fff",
-            marginBottom: "10px",
-            clipPath: "polygon(0 0, 100% 0, 100% 65%, 0 100%)",
-            height: "40vh",
+            marginTop: "100px",
+            height: "30vh",
             display: "grid",
             placeItems: "center",
-            marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
         >
           <h1
-            className="font-weight-bold mt-5"
+            className="font-weight-bold "
             style={{
               fontSize: "40px",
               marginLeft: "30px",
@@ -183,7 +181,7 @@ const Write = () => {
                 formats={formats}
                 value={value}
                 onChange={setValue}
-                style={{ height: "400px", marginBottom: "30px" }}
+                style={{ height: "400px", backgroundColor: "white" }}
               />
             </div>
           </div>

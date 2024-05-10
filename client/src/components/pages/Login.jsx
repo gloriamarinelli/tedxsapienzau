@@ -50,6 +50,7 @@ export default function Login() {
           className="mb-4 mt-4"
           style={{
             fontFamily: "GothamBold",
+            textAlign: "center",
           }}
         >
           {currentUser ? `Benvenuto, ${currentUser.username}` : "LOGIN"}
