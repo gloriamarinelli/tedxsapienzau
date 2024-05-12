@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
@@ -28,7 +28,6 @@ import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
 import SecretGuestImage from "../images/secret_guest.webp";
-import zIndex from "@mui/material/styles/zIndex";
 
 const NewsSidebarSize = 18;
 
@@ -38,7 +37,7 @@ const speakersInfo = [
     imgSrc: "../images/secret_guest.webp",
   },
   {
-    nomeSpeaker: "Simone Teglia",
+    nomeSpeaker: "Bruno Mazzara",
     imgSrc: SecretGuestImage,
   },
   {
@@ -61,12 +60,14 @@ const speakersInfo = [
 
 export default function Home() {
   const [windowSize, setWindowSize] = useOutletContext();
+  const [scrollY, setScrollY] = useState(0);
 
   const svgRef = useRef();
 
-  const DEBUG = 1;
-
   useEffect(() => {
+    // create a function that listens for the scroll event
+    window.addEventListener("scroll", () => handleYScroll());
+
     /**
      * This function is used to animate the SVG path of the homepage
      * The animation is triggered by the scroll event that changes the strokeDashoffset of the path
@@ -74,7 +75,7 @@ export default function Home() {
      * Animation and path are only visible on desktop due to the size of the screen
      * @author @simoneteglia
      */
-    if (DEBUG && windowSize > 1100) {
+    if (windowSize > 1100) {
       let path = svgRef.current.querySelector("path");
       let length = path.getTotalLength();
 
@@ -96,279 +97,190 @@ export default function Home() {
     }
   }, []);
 
-  // This can be removed for the new version of the website (2024)
-  const getCallToAction = () => {
+  function handleYScroll() {
+    setScrollY(window.scrollY);
+  }
+
+  const getShowMore = () => {
+    // print the scroll height
     return (
-      <>
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to="edizione2023"
-          className="btn5-2"
-          style={{
-            textTransform: "uppercase",
-            padding:
-              windowSize > global.UTILS.TABLET_WIDTH
-                ? "25px 60px"
-                : "20px 40px",
-            borderRadius: "25px",
-            color: "#000",
-            fontFamily: "GothamBold",
-            fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "25px" : "19px",
-            textDecoration: "none",
-            position: "absolute",
-            bottom: "80px",
-          }}
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          position: "absolute",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          color: "#fff",
+          fontWeight: "bold",
+          fontFamily: "Anton",
+          padding: "0 0 10px 0",
+          transition: "0.5s all",
+          opacity: scrollY > 450 ? 0 : 1,
+        }}
+      >
+        <p>Cos'è TEDx Countdown?</p>
+        <svg
+          width="26"
+          height="24"
+          viewBox="0 0 26 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Scopri di più
-        </Link>
-      </>
+          <path d="M1 15L13 22L25 15" stroke="white" stroke-width="2" />
+          <path
+            d="M1 8L13 15L25 8"
+            stroke="white"
+            stroke-opacity="0.5"
+            stroke-width="2"
+          />
+          <path
+            d="M1 0.999999L13 8L25 1"
+            stroke="white"
+            stroke-opacity="0.25"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     );
   };
 
-  if (DEBUG) {
-    if (windowSize > 1100) {
-      return (
-        <div style={{ backgroundColor: "#000" }}>
-          <section
-            style={{
-              height: "100%",
-              width: "100vw",
-              backgroundColor: "#000",
-              position: "relative",
-              fontFamily: "Anton",
-            }}
-          >
-            {windowSize > 1360 ? (
-              <svg
-                width={"100%"}
-                height={"100%"}
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  zIndex: 1,
-                }}
-                ref={svgRef}
-                viewBox="0 0 1918 2692"
-                fill="none"
-              >
-                <path
-                  d="M4.5 13.5C34.3333 0.999942 109.48 31.5142 124 135.001C155.5 359.5 112.5 664 455.5 614.003C974.806 538.307 854 274.5 683 337.001C580.571 374.439 582.029 514.713 854 810.004C1198 1183.5 545.179 1659.65 359.5 1454.01C-73 975.004 1236.14 721.159 854 1619.01C462 2540.01 782.848 2880.17 1165 2568.01C1675.5 2151.01 1563.5 2198.01 1918 2198.01"
-                  stroke={global.COLORS.GIALLO_COUNTDOWN}
-                  strokeWidth="20"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            ) : (
-              <svg
-                width={"100%"}
-                height={"100%"}
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  zIndex: 1,
-                }}
-                ref={svgRef}
-                viewBox="0 0 1570 2488"
-                fill="none"
-              >
-                <path
-                  d="M-13.5 14.0001C16.3255 -0.240562 222 14 126.5 307.5C98.241 394.349 66.9936 695.703 331.5 615C703.5 501.5 576.104 31.4665 423.5 307.5C253.5 615 639 805.842 532.5 1078C278.362 1727.44 126.5 1430.36 126.5 1254.5C126.5 983 838.5 1349 599.5 1976.5C468.646 2320.06 680.948 2688.13 1063 2332.5C1333 2081.17 1479.5 1946.5 1576.5 1856"
-                  stroke="#F1FF39"
-                  strokeWidth="20"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
-            <div
+  if (windowSize > 1100) {
+    return (
+      <div style={{ backgroundColor: "#000" }}>
+        <section
+          style={{
+            height: "100%",
+            width: "100vw",
+            backgroundColor: "#000",
+            position: "relative",
+            fontFamily: "Anton",
+          }}
+        >
+          {getShowMore()}
+          {windowSize > 1360 ? (
+            <svg
+              width={"100%"}
+              height={"100%"}
               style={{
-                height: "100vh",
-                width: "100vw",
-                backgroundColor: "black",
-                display: "flex",
-                alignItems: "center",
-                paddingLeft: "7vw",
-                justifyContent: "space-between",
-                padding: "0 5vw",
+                position: "absolute",
+                left: 0,
+                top: 0,
+                zIndex: 1,
               }}
+              ref={svgRef}
+              viewBox="0 0 1918 2692"
+              fill="none"
             >
-              <img
-                src={Earth}
-                alt="Earth"
-                width={windowSize / 3.5}
-                style={{
-                  maskImage:
-                    "linear-gradient(to top right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
-                }}
+              <path
+                d="M4.5 13.5C34.3333 0.999942 109.48 31.5142 124 135.001C155.5 359.5 112.5 664 455.5 614.003C974.806 538.307 854 274.5 683 337.001C580.571 374.439 582.029 514.713 854 810.004C1198 1183.5 545.179 1659.65 359.5 1454.01C-73 975.004 1236.14 721.159 854 1619.01C462 2540.01 782.848 2880.17 1165 2568.01C1675.5 2151.01 1563.5 2198.01 1918 2198.01"
+                stroke={global.COLORS.GIALLO_COUNTDOWN}
+                strokeWidth="20"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                }}
-              >
-                <img
-                  src={CountdownLogo}
-                  alt="Countdown Logo"
-                  width={windowSize > 1360 ? "900px" : "750px"}
-                  style={{ marginBottom: "-80px" }}
-                />
-                <Countdown language="it" />
-              </div>
-            </div>
-            <div
+            </svg>
+          ) : (
+            <svg
+              width={"100%"}
+              height={"100%"}
               style={{
-                height: "80vh",
-                width: "100vw",
-                backgroundColor: "black",
-                display: "flex",
-                justifyContent: "flex-end",
+                position: "absolute",
+                left: 0,
+                top: 0,
+                zIndex: 1,
               }}
+              ref={svgRef}
+              viewBox="0 0 1570 2488"
+              fill="none"
             >
-              <div
-                style={{
-                  width: "50%",
-                  height: "100%",
-                  padding: "30px",
-                  backgroundColor: "black",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  fontSize: "20px",
-                  textAlign: "justify",
-                }}
-              >
-                <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                  3, 2, 1MPATTO
-                </h1>
-                <p style={{ maxWidth: "40ch", color: "#fff" }}>
-                  Il tempo scorre ed è necessario creare un nuovo spazio di
-                  riflessione ed intrattenimento incentrato sulla crisi
-                  climatica.
-                  <br />
-                  <br />
-                  Un luogo dove affrontare le paure sul futuro con positività e
-                  scienza grazie ad una visione interdisciplinare e coinvolgente
-                  negli spazi del nostro Ateneo.
-                  <br />
-                  <br />
-                  Immergiti nel primo evento{" "}
-                  <span
-                    style={{
-                      color: global.COLORS.GIALLO_COUNTDOWN,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    TEDx Countdown
-                  </span>{" "}
-                  della Sapienza e lasciati ispirare dall'urgenza e dalla
-                  complessità di questa sfida globale per promuovere azioni
-                  concrete.
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                width: "100vw",
-                backgroundColor: "black",
-                textAlign: "center",
-                marginTop: "50px",
-                color: "#fff",
-              }}
-            >
-              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                SPEAKERS
-              </h1>
-              <div
-                style={{
-                  width: "80%",
-                  margin: "auto",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                }}
-              >
-                {speakersInfo.map((speaker) => {
-                  console.log(speaker);
-                  const { nomeSpeaker, imgSrc } = speaker;
-                  return (
-                    <SpeakerCard
-                      nomeSpeaker={nomeSpeaker}
-                      imgSrc={SecretGuestImage}
-                      style={{
-                        zIndex: 2,
-                        flex: "1 0 26%",
-                      }}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-        </div>
-      );
-    } else if (windowSize > global.UTILS.MOBILE_WIDTH) {
-      return (
-        <div style={{ backgroundColor: "#000" }}>
-          <section
+              <path
+                d="M-13.5 14.0001C16.3255 -0.240562 222 14 126.5 307.5C98.241 394.349 66.9936 695.703 331.5 615C703.5 501.5 576.104 31.4665 423.5 307.5C253.5 615 639 805.842 532.5 1078C278.362 1727.44 126.5 1430.36 126.5 1254.5C126.5 983 838.5 1349 599.5 1976.5C468.646 2320.06 680.948 2688.13 1063 2332.5C1333 2081.17 1479.5 1946.5 1576.5 1856"
+                stroke="#F1FF39"
+                strokeWidth="20"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+          <div
             style={{
-              height: "100%",
+              height: "100vh",
               width: "100vw",
-              backgroundColor: "#000",
-              position: "relative",
-              fontFamily: "Anton",
-              paddingTop: "100px",
+              backgroundColor: "black",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "7vw",
+              justifyContent: "space-between",
+              padding: "0 5vw",
             }}
           >
+            <img
+              src={Earth}
+              alt="Earth"
+              width={windowSize / 3.5}
+              style={{
+                maskImage:
+                  "linear-gradient(to top right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
+              }}
+            />
             <div
               style={{
-                width: "100vw",
-                backgroundColor: "#000",
                 display: "flex",
-                alignItems: "center",
                 flexDirection: "column",
-                padding: "0 0 50px 0",
-                overflow: "hidden",
+                alignItems: "flex-end",
               }}
             >
-              <img
-                src={Earth}
-                alt="Earth"
-                height={"50%"}
-                style={{
-                  alignSelf: "center",
-                  maskImage:
-                    "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
-                }}
-              />
               <img
                 src={CountdownLogo}
                 alt="Countdown Logo"
-                width={"80%"}
-                style={{ marginTop: "-80px", marginBottom: "-50px" }}
+                width={windowSize > 1360 ? "900px" : "750px"}
+                style={{ marginBottom: "-80px" }}
               />
               <Countdown language="it" />
+              {/* <div
+                style={{
+                  backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
+                  color: "#000",
+                  padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
+                  borderRadius: global.UTILS.HALF_BENTO_BOX_PADDING,
+                  fontSize: "20px",
+                  fontFamily: "Fira Sans Extra Condensed",
+                }}
+              >
+                Ottieni i biglietti
+              </div> */}
             </div>
+          </div>
+          <div
+            style={{
+              height: "80vh",
+              width: "100vw",
+              backgroundColor: "black",
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
             <div
               style={{
+                width: "50%",
                 height: "100%",
-                width: "100vw",
+                padding: "30px",
+                backgroundColor: "black",
                 display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
                 alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                fontSize: "20px",
                 textAlign: "justify",
               }}
             >
               <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
                 3, 2, 1MPATTO
               </h1>
-              <p style={{ maxWidth: "25ch", color: "#fff" }}>
+              <p style={{ maxWidth: "40ch", color: "#fff" }}>
                 Il tempo scorre ed è necessario creare un nuovo spazio di
                 riflessione ed intrattenimento incentrato sulla crisi climatica.
                 <br />
@@ -385,446 +297,282 @@ export default function Home() {
                     fontWeight: "bold",
                   }}
                 >
-                  TEDxCountdown
+                  TEDx Countdown
                 </span>{" "}
                 della Sapienza e lasciati ispirare dall'urgenza e dalla
                 complessità di questa sfida globale per promuovere azioni
                 concrete.
               </p>
             </div>
+          </div>
+          <div
+            style={{
+              width: "100vw",
+              backgroundColor: "black",
+              textAlign: "center",
+              marginTop: "50px",
+              color: "#fff",
+            }}
+          >
+            <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>SPEAKERS</h1>
             <div
               style={{
-                width: "100vw",
-                backgroundColor: "black",
-                textAlign: "center",
-                marginTop: "50px",
-                color: "#fff",
+                width: "80%",
+                margin: "auto",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
               }}
             >
-              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                SPEAKERS
-              </h1>
-              <div
-                style={{
-                  width: "90%",
-                  margin: "auto",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                }}
-              >
-                {speakersInfo.map((speaker) => {
-                  console.log(speaker);
-                  const { nomeSpeaker, imgSrc } = speaker;
-                  return (
-                    <SpeakerCard
-                      nomeSpeaker={nomeSpeaker}
-                      imgSrc={SecretGuestImage}
-                      style={{
-                        zIndex: 2,
-                        flex: "1 0 26%",
-                      }}
-                    />
-                  );
-                })}
-              </div>
+              {speakersInfo.map((speaker) => {
+                const { nomeSpeaker, imgSrc } = speaker;
+                return (
+                  <SpeakerCard
+                    key={nomeSpeaker}
+                    nomeSpeaker={nomeSpeaker}
+                    imgSrc={SecretGuestImage}
+                    style={{
+                      zIndex: 2,
+                      flex: "1 0 26%",
+                    }}
+                  />
+                );
+              })}
             </div>
-          </section>
-        </div>
-      );
-    } else {
-      return (
-        <div style={{ backgroundColor: "#000" }}>
-          <section
+          </div>
+        </section>
+      </div>
+    );
+  } else if (windowSize > global.UTILS.MOBILE_WIDTH) {
+    return (
+      <div style={{ backgroundColor: "#000" }}>
+        <section
+          style={{
+            height: "100%",
+            width: "100vw",
+            backgroundColor: "#000",
+            position: "relative",
+            fontFamily: "Anton",
+            paddingTop: "100px",
+          }}
+        >
+          <div
+            style={{
+              width: "100vw",
+              backgroundColor: "#000",
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              padding: "0 0 50px 0",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={Earth}
+              alt="Earth"
+              height={"50%"}
+              style={{
+                alignSelf: "center",
+                maskImage:
+                  "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
+              }}
+            />
+            <img
+              src={CountdownLogo}
+              alt="Countdown Logo"
+              width={"80%"}
+              style={{ marginTop: "-80px", marginBottom: "-50px" }}
+            />
+            <Countdown language="it" />
+          </div>
+          <div
             style={{
               height: "100%",
               width: "100vw",
-              backgroundColor: "#000",
-              position: "relative",
-              fontFamily: "Anton",
-              paddingTop: "100px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "justify",
             }}
           >
-            <div
-              style={{
-                height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-                width: "100vw",
-                backgroundColor: "black",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                flexDirection: "column",
-                padding: " 30px 0",
-                overflow: "hidden",
-              }}
-            >
-              <img
-                src={Earth}
-                alt="Earth"
-                width={"85%"}
+            <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+              3, 2, 1MPATTO
+            </h1>
+            <p style={{ maxWidth: "25ch", color: "#fff" }}>
+              Il tempo scorre ed è necessario creare un nuovo spazio di
+              riflessione ed intrattenimento incentrato sulla crisi climatica.
+              <br />
+              <br />
+              Un luogo dove affrontare le paure sul futuro con positività e
+              scienza grazie ad una visione interdisciplinare e coinvolgente
+              negli spazi del nostro Ateneo.
+              <br />
+              <br />
+              Immergiti nel primo evento{" "}
+              <span
                 style={{
-                  alignSelf: "center",
-                  maskImage:
-                    "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
-                }}
-              />
-              <img
-                src={CountdownLogo}
-                alt="Countdown Logo"
-                width={"80%"}
-                style={{ marginTop: "-80px", marginBottom: "-50px" }}
-              />
-              <Countdown language="it" />
-            </div>
-            <div
-              style={{
-                height: "100%",
-                width: "100vw",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                padding: "50px 0",
-                backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
-              }}
-            >
-              <h1 style={{ color: "#000" }}>3, 2, 1MPATTO</h1>
-              <p style={{ maxWidth: "25ch", color: "#000" }}>
-                Il tempo scorre ed è necessario creare un nuovo spazio di
-                riflessione ed intrattenimento incentrato sulla crisi climatica.
-                <br />
-                <br />
-                Un luogo dove affrontare le paure sul futuro con positività e
-                scienza grazie ad una visione interdisciplinare e coinvolgente
-                negli spazi del nostro Ateneo.
-                <br />
-                <br />
-                Immergiti nel primo evento{" "}
-                <span
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  TEDx Countdown{" "}
-                </span>
-                della Sapienza e lasciati ispirare dall'urgenza e dalla
-                complessità di questa sfida globale per promuovere azioni
-                concrete.
-              </p>
-            </div>
-            <div
-              style={{
-                width: "100vw",
-                backgroundColor: "black",
-                textAlign: "center",
-                marginTop: "50px",
-                color: "#fff",
-              }}
-            >
-              <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
-                SPEAKERS
-              </h1>
-              <div
-                style={{
-                  width: "100%",
-                  margin: "auto",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
+                  color: global.COLORS.GIALLO_COUNTDOWN,
+                  fontWeight: "bold",
                 }}
               >
-                {speakersInfo.map((speaker) => {
-                  console.log(speaker);
-                  const { nomeSpeaker, imgSrc } = speaker;
-                  return (
-                    <SpeakerCard
-                      nomeSpeaker={nomeSpeaker}
-                      imgSrc={SecretGuestImage}
-                    />
-                  );
-                })}
-              </div>
+                TEDxCountdown
+              </span>{" "}
+              della Sapienza e lasciati ispirare dall'urgenza e dalla
+              complessità di questa sfida globale per promuovere azioni
+              concrete.
+            </p>
+          </div>
+          <div
+            style={{
+              width: "100vw",
+              backgroundColor: "black",
+              textAlign: "center",
+              marginTop: "50px",
+              color: "#fff",
+            }}
+          >
+            <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>SPEAKERS</h1>
+            <div
+              style={{
+                width: "90%",
+                margin: "auto",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
+              {speakersInfo.map((speaker) => {
+                const { nomeSpeaker, imgSrc } = speaker;
+                return (
+                  <SpeakerCard
+                    nomeSpeaker={nomeSpeaker}
+                    imgSrc={SecretGuestImage}
+                    style={{
+                      zIndex: 2,
+                      flex: "1 0 26%",
+                    }}
+                  />
+                );
+              })}
             </div>
-          </section>
-        </div>
-      );
-    }
-  }
-
-  return (
-    <div style={{ backgroundColor: "#000" }}>
-      <section
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: global.UTILS.NAV_HEIGHT,
-          width: "100vw",
-          backgroundColor: "#000",
-          padding: global.UTILS.BENTO_BOX_PADDING,
-        }}
-      >
-        <div
-          id="main-container"
+          </div>
+        </section>
+      </div>
+    );
+  } else {
+    return (
+      <div style={{ backgroundColor: "#000" }}>
+        <section
           style={{
-            width: "100%",
             height: "100%",
-            padding: global.UTILS.BENTO_BOX_PADDING,
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${Volunteers})`,
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-end",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            width: "100vw",
+            backgroundColor: "#000",
             position: "relative",
+            fontFamily: "Anton",
+            paddingTop: "100px",
           }}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              top: 0,
-              left: 0,
-              objectPosition: "center",
-              objectFit: "cover",
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            }}
-          >
-            <source src={backgroundVideo} type="video/mp4" />
-          </video>
-          <div
-            id="video-overlay"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              background:
-                "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))",
-            }}
-          ></div>
           <div
             style={{
-              color: "white",
-              zIndex: 1,
+              height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+              width: "100vw",
+              backgroundColor: "black",
               display: "flex",
-              alignItems: "flex-end",
-              gap: "20px",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              flexDirection: "column",
+              padding: " 30px 0",
+              overflow: "hidden",
             }}
           >
-            <h2
-              className="mb-5 secondary-text"
+            <img
+              src={Earth}
+              alt="Earth"
+              width={"85%"}
               style={{
-                fontSize:
-                  windowSize > global.UTILS.TABLET_WIDTH ? "2vw" : "0.5vw",
-                visibility:
-                  windowSize > global.UTILS.TABLET_WIDTH
-                    ? "initial"
-                    : " hidden",
+                alignSelf: "center",
+                maskImage:
+                  "linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)",
               }}
-            >
-              TEDXSAPIENZAU
-            </h2>
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize:
-                  windowSize > 1245
-                    ? "14vh"
-                    : windowSize > global.UTILS.MOBILE_WIDTH
-                    ? "100px"
-                    : "50px",
-                fontWeight: 700,
-                maxWidth: "13ch",
-              }}
-            >
-              LET'S EXPLORE HOW IT WAS
-            </h1>
-            <h2
-              className="mb-5 secondary-text"
-              style={{
-                fontSize: "2vw",
-                visibility:
-                  windowSize > global.UTILS.TABLET_WIDTH
-                    ? "initial"
-                    : " hidden",
-              }}
-            >
-              BACK TO ZERO 2023
-            </h2>
+            />
+            <img
+              src={CountdownLogo}
+              alt="Countdown Logo"
+              width={"80%"}
+              style={{ marginTop: "-80px", marginBottom: "-50px" }}
+            />
+            <Countdown language="it" />
           </div>
-        </div>
-      </section>
-
-      <section>
-        <MvHome withTitle={false} />
-      </section>
-
-      <section>
-        <Events withTitle={false} />
-        <div
-          style={{
-            display: "grid",
-            placeItems: "center",
-            marginTop: global.UTILS.BENTO_BOX_PADDING,
-          }}
-        >
-          <Link to="/edizioni">
-            <Button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                fontWeight: "bold",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-              }}
-            >
-              Scopri di più
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-      <section>
-        <BlogHome withTitle={true} />
-        <div
-          style={{
-            display: "grid",
-            placeItems: "center",
-            marginTop: global.UTILS.BENTO_BOX_PADDING,
-          }}
-        >
-          <Link to="/blog">
-            <Button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                fontWeight: "bold",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-              }}
-            >
-              Scopri di più
-            </Button>
-          </Link>
-        </div>
-      </section>
-
-      <section
-        style={{
-          display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
-          justifyContent: "center",
-          alignItems: "center",
-          height:
-            windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(80vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
-          width: "100vw",
-          backgroundColor: "#000",
-          padding: global.UTILS.BENTO_BOX_PADDING,
-        }}
-      >
-        <div
-          id="left-container"
-          style={{
-            width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
-            padding: global.UTILS.BENTO_BOX_PADDING,
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundColor: "#191919",
-            display: "flex",
-            marginRight: "10px",
-            justifyContent: "left",
-            alignItems: "flex",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            position: "relative",
-          }}
-        >
           <div
             style={{
-              position: "absolute",
+              height: "100%",
+              width: "100vw",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              padding: "50px 0",
+              backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
             }}
           >
-            <h1
-              className="fira-sans"
-              style={{
-                textAlign: "left",
-                fontSize: windowSize > 1245 ? "6vh" : "5vh",
-                fontWeight: 700,
-                maxWidth: "20ch",
-                color: "#FFFFFF",
-              }}
-            >
-              <extra>
-                <condensed-extrabold>
-                  NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO
-                  <br></br>
-                </condensed-extrabold>
-              </extra>
-            </h1>
-            <h5
-              className="fira-sans"
-              style={{
-                textAlign: "left",
-                fontSize: windowSize > 1245 ? "4vh" : "3vh",
-                fontWeight: 300,
-                maxWidth: "30ch",
-                color: "#FFFFFF",
-              }}
-            >
-              Compila il form per rimanere aggiornato sulle nostre attività{" "}
-            </h5>
+            <h1 style={{ color: "#000" }}>3, 2, 1MPATTO</h1>
+            <p style={{ maxWidth: "25ch", color: "#000" }}>
+              Il tempo scorre ed è necessario creare un nuovo spazio di
+              riflessione ed intrattenimento incentrato sulla crisi climatica.
+              <br />
+              <br />
+              Un luogo dove affrontare le paure sul futuro con positività e
+              scienza grazie ad una visione interdisciplinare e coinvolgente
+              negli spazi del nostro Ateneo.
+              <br />
+              <br />
+              Immergiti nel primo evento{" "}
+              <span
+                style={{
+                  fontWeight: "bold",
+                }}
+              >
+                TEDx Countdown{" "}
+              </span>
+              della Sapienza e lasciati ispirare dall'urgenza e dalla
+              complessità di questa sfida globale per promuovere azioni
+              concrete.
+            </p>
           </div>
-        </div>
-        <div
-          id="right-container"
-          style={{
-            width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
-            padding: global.UTILS.BENTO_BOX_PADDING,
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundColor: "#191919",
-            display: "flex",
-            marginLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10px" : "0px",
-            marginTop: windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "17px",
-            marginBottom:
-              windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "200vw",
-            justifyContent: "center",
-            alignItems: "flex-end",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <Iframe
-            width="100%"
-            height="100%"
-            src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
-            frameborder="0"
-            allowfullscreen
-            position="absolute"
+          <div
             style={{
-              position: "absolute",
-              display: "block",
-              margin: 0,
-              padding: 0,
-              top: 0,
-              left: 0,
-              maxWidth: "100%",
-              maxHeight: "100%",
+              width: "100vw",
+              backgroundColor: "black",
+              textAlign: "center",
+              marginTop: "50px",
+              color: "#fff",
             }}
-          ></Iframe>
-        </div>
-      </section>
-    </div>
-  );
+          >
+            <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>SPEAKERS</h1>
+            <div
+              style={{
+                width: "100%",
+                margin: "auto",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
+              {speakersInfo.map((speaker) => {
+                const { nomeSpeaker, imgSrc } = speaker;
+                return (
+                  <SpeakerCard
+                    nomeSpeaker={nomeSpeaker}
+                    imgSrc={SecretGuestImage}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
 }
 
 /**
