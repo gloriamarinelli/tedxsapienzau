@@ -169,6 +169,7 @@ export default function Home() {
                 left: 0,
                 top: 0,
                 zIndex: 1,
+                pointerEvents: "none",
               }}
               ref={svgRef}
               viewBox="0 0 1918 2692"
@@ -191,6 +192,7 @@ export default function Home() {
                 left: 0,
                 top: 0,
                 zIndex: 1,
+                pointerEvents: "none",
               }}
               ref={svgRef}
               viewBox="0 0 1570 2488"
@@ -240,18 +242,22 @@ export default function Home() {
                 style={{ marginBottom: "-80px" }}
               />
               <Countdown language="it" />
-              {/* <div
+              <a
+                href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
                 style={{
                   backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
                   color: "#000",
                   padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
                   borderRadius: global.UTILS.HALF_BENTO_BOX_PADDING,
-                  fontSize: "20px",
+                  fontSize: "22px",
                   fontFamily: "Fira Sans Extra Condensed",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  zIndex: 2,
                 }}
               >
                 Ottieni i biglietti
-              </div> */}
+              </a>
             </div>
           </div>
           <div
@@ -384,6 +390,20 @@ export default function Home() {
               style={{ marginTop: "-80px", marginBottom: "-50px" }}
             />
             <Countdown language="it" />
+            <a
+              href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
+              style={{
+                backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
+                color: "#000",
+                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
+                borderRadius: global.UTILS.HALF_BENTO_BOX_PADDING,
+                fontSize: "22px",
+                fontFamily: "Fira Sans Extra Condensed",
+                textDecoration: "none",
+              }}
+            >
+              Ottieni i biglietti
+            </a>
           </div>
           <div
             style={{
@@ -503,6 +523,21 @@ export default function Home() {
               style={{ marginTop: "-80px", marginBottom: "-50px" }}
             />
             <Countdown language="it" />
+            <a
+              href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
+              style={{
+                backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
+                color: "#000",
+                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
+                borderRadius: global.UTILS.HALF_BENTO_BOX_PADDING,
+                fontSize: "22px",
+                fontFamily: "Fira Sans Extra Condensed",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
+            >
+              Ottieni i biglietti
+            </a>
           </div>
           <div
             style={{
