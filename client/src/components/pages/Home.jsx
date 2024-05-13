@@ -352,6 +352,26 @@ export default function Home() {
   } else if (windowSize > global.UTILS.MOBILE_WIDTH) {
     return (
       <div style={{ backgroundColor: "#000" }}>
+        <a
+          href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
+          style={{
+            position: "absolute",
+            top: global.UTILS.NAV_HEIGHT,
+            left: 0,
+            width: "100%",
+            height: "10vh",
+            backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
+            zIndex: 2,
+            fontFamily: "Anton",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#000",
+            textDecoration: "none",
+          }}
+        >
+          <h1>OTTIENI I BIGLIETTI QUI</h1>
+        </a>
         <section
           style={{
             height: "100%",
@@ -390,20 +410,6 @@ export default function Home() {
               style={{ marginTop: "-80px", marginBottom: "-50px" }}
             />
             <Countdown language="it" />
-            <a
-              href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
-              style={{
-                backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
-                color: "#000",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-                borderRadius: global.UTILS.HALF_BENTO_BOX_PADDING,
-                fontSize: "22px",
-                fontFamily: "Fira Sans Extra Condensed",
-                textDecoration: "none",
-              }}
-            >
-              Ottieni i biglietti
-            </a>
           </div>
           <div
             style={{
@@ -483,6 +489,26 @@ export default function Home() {
   } else {
     return (
       <div style={{ backgroundColor: "#000" }}>
+        <a
+          href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
+          style={{
+            position: "absolute",
+            top: global.UTILS.NAV_HEIGHT,
+            left: 0,
+            width: "100%",
+            height: "10vh",
+            backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
+            zIndex: 2,
+            fontFamily: "Anton",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#000",
+            textDecoration: "none",
+          }}
+        >
+          <h1>OTTIENI I BIGLIETTI QUI</h1>
+        </a>
         <section
           style={{
             height: "100%",
@@ -502,7 +528,7 @@ export default function Home() {
               alignItems: "center",
               justifyContent: "flex-start",
               flexDirection: "column",
-              padding: " 30px 0",
+              padding: " 80px 0",
               overflow: "hidden",
             }}
           >
@@ -523,21 +549,6 @@ export default function Home() {
               style={{ marginTop: "-80px", marginBottom: "-50px" }}
             />
             <Countdown language="it" />
-            <a
-              href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-countdown-879060833617"
-              style={{
-                backgroundColor: global.COLORS.GIALLO_COUNTDOWN,
-                color: "#000",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-                borderRadius: global.UTILS.HALF_BENTO_BOX_PADDING,
-                fontSize: "22px",
-                fontFamily: "Fira Sans Extra Condensed",
-                fontWeight: "bold",
-                textDecoration: "none",
-              }}
-            >
-              Ottieni i biglietti
-            </a>
           </div>
           <div
             style={{
