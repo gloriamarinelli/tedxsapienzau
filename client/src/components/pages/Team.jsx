@@ -21,14 +21,14 @@ export default function Team2022() {
 
   const teams = {
     24: {
-      acronyms: ["it", "pem", "dex", "sec", "ers", "hra", "cam", "la"],
+      acronyms: ["it", "pem", "dex", "sec", "ers", "hra", "cem", "la"],
       it: "Team IT & Website",
       pem: "Team Planning & Event Management",
       dex: "Team Design",
       sec: "Team Speakers & Event Curation",
       ers: "Team External Relations & Sponsor",
       hra: "Team Human Resources & Academy",
-      cam: "Team Communication & Marketing",
+      cem: "Team Communication & Marketing",
       la: "Team Legal & Administrative",
     },
     23: {
@@ -194,13 +194,13 @@ export default function Team2022() {
 
   function getTeam2024() {
     return (
-      // <>
-      //   <ExecutiveTeamCard year={2024} infos={BoardInfos} />
-      //   <div className="container-xl">
-      //     <div>{handleVolunteersCardSection(2024)}</div>
-      //   </div>
-      // </>
-      <div>{comingSoon()}</div>
+      <>
+        <ExecutiveTeamCard year={2024} infos={BoardInfos} />
+        <div className="container-xl">
+          <div>{handleVolunteersCardSection(2024)}</div>
+        </div>
+      </>
+      // <div>{comingSoon()}</div>
     );
   }
 
