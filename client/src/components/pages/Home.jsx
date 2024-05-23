@@ -28,7 +28,8 @@ import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
 import SecretGuestImage from "../images/secret_guest.webp";
-import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.png";
+import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
+import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
 
 const NewsSidebarSize = 18;
 
@@ -40,10 +41,10 @@ const speakersInfo = [
     imgSrc: AlessandroCorsiniImage,
   },
   {
-    nomeSpeaker: "",
-    ruoloSpeaker: "",
-    link: "",
-    imgSrc: SecretGuestImage,
+    nomeSpeaker: "Raffaella Abate",
+    ruoloSpeaker: "Dottoranda in Psicologia Dinamica e Clinica",
+    link: "https://research.uniroma1.it/researcher/8b60c7379ba8ad0f753282348cc599974f0d56dc91c31f9bef7a573d",
+    imgSrc: RaffaellaAbateImage,
   },
   {
     nomeSpeaker: "",
