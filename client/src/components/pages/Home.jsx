@@ -35,26 +35,38 @@ const NewsSidebarSize = 18;
 const speakersInfo = [
   {
     nomeSpeaker: "Alessandro Corsini",
+    ruoloSpeaker: "Professore Ordinario di Macchine a Fluido",
+    link: "https://corsidilaurea.uniroma1.it/it/users/alessandrocorsiniuniroma1it",
     imgSrc: AlessandroCorsiniImage,
   },
   {
     nomeSpeaker: "",
+    ruoloSpeaker: "",
+    link: "",
     imgSrc: SecretGuestImage,
   },
   {
     nomeSpeaker: "",
+    ruoloSpeaker: "",
+    link: "",
     imgSrc: SecretGuestImage,
   },
   {
     nomeSpeaker: "",
+    ruoloSpeaker: "",
+    link: "",
     imgSrc: SecretGuestImage,
   },
   {
     nomeSpeaker: "",
+    ruoloSpeaker: "",
+    link: "",
     imgSrc: SecretGuestImage,
   },
   {
     nomeSpeaker: "",
+    ruoloSpeaker: "",
+    link: "",
     imgSrc: SecretGuestImage,
   },
 ];
@@ -332,16 +344,20 @@ export default function Home() {
               }}
             >
               {speakersInfo.map((speaker) => {
-                const { nomeSpeaker, imgSrc } = speaker;
+                const { nomeSpeaker, ruoloSpeaker, link, imgSrc } = speaker;
                 return (
                   <SpeakerCard
                     key={nomeSpeaker}
                     nomeSpeaker={nomeSpeaker}
+                    ruoloSpeaker={ruoloSpeaker}
+                    link={link}
                     imgSrc={imgSrc}
                     showName={true}
+                    event={"countdown24"}
                     style={{
                       zIndex: 2,
                       flex: "1 0 26%",
+                      cursor: "initial",
                     }}
                   />
                 );
@@ -471,13 +487,16 @@ export default function Home() {
               }}
             >
               {speakersInfo.map((speaker) => {
-                const { nomeSpeaker, imgSrc } = speaker;
+                const { nomeSpeaker, ruoloSpeaker, link, imgSrc } = speaker;
                 return (
                   <SpeakerCard
                     key={nomeSpeaker}
                     nomeSpeaker={nomeSpeaker}
                     imgSrc={imgSrc}
+                    link={link}
+                    ruoloSpeaker={ruoloSpeaker}
                     showName={true}
+                    event={"countdown24"}
                     style={{
                       zIndex: 2,
                       flex: "1 0 26%",
@@ -609,13 +628,16 @@ export default function Home() {
               }}
             >
               {speakersInfo.map((speaker) => {
-                const { nomeSpeaker, imgSrc } = speaker;
+                const { nomeSpeaker, ruoloSpeaker, link, imgSrc } = speaker;
                 return (
                   <SpeakerCard
                     key={nomeSpeaker}
                     nomeSpeaker={nomeSpeaker}
+                    ruoloSpeaker={ruoloSpeaker}
+                    link={link}
                     imgSrc={imgSrc}
                     showName={true}
+                    event={"countdown24"}
                     style={{
                       zIndex: 2,
                       flex: "1 0 26%",

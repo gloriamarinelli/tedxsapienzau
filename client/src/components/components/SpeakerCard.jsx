@@ -15,7 +15,68 @@ export default function SpeakerCard({
   year,
   style,
   showName,
+  ruoloSpeaker,
+  link,
+  event,
 }) {
+  if (event === "countdown24") {
+    return (
+      <div
+        className="col-lg-4 col-md-6 col-sm-12"
+        style={{
+          ...{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          },
+          ...style,
+        }}
+      >
+        <div
+          className="speaker-card"
+          style={{ cursor: "pointer" }}
+          onClick={() => (window.location.href = link)}
+        >
+          <div className="speaker-card-filter"></div>
+          <img
+            src={imgSrc}
+            height="300"
+            className="speaker-card-image"
+            alt={nomeSpeaker}
+          />
+        </div>
+
+        <p
+          onClick={() => (window.location.href = link)}
+          style={{
+            fontSize: "20px",
+            textTransform: "uppercase",
+            fontFamily: "Anton",
+            maxWidth: "16ch",
+            textAlign: "center",
+            marginTop: "15px",
+            cursor: "pointer",
+          }}
+        >
+          {showName ? nomeSpeaker : " "}
+        </p>
+        {ruoloSpeaker ? (
+          <p
+            style={{
+              color: global.COLORS.GIALLO_COUNTDOWN,
+              maxWidth: "30ch",
+              fontFamily: "Anton",
+            }}
+          >
+            {ruoloSpeaker}
+          </p>
+        ) : (
+          <></>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       className="col-lg-4 col-md-6 col-sm-12"
@@ -42,7 +103,7 @@ export default function SpeakerCard({
         }
       }}
     >
-      <div className="speaker-card">
+      <div className="speaker-card" style={{ cursor: "pointer" }}>
         <div className="speaker-card-filter"></div>
         <img
           src={
@@ -70,6 +131,7 @@ export default function SpeakerCard({
           <></>
         )}
       </div>
+
       <p
         style={{
           fontSize: "20px",
@@ -82,6 +144,19 @@ export default function SpeakerCard({
       >
         {(year === 2022) | showName ? nomeSpeaker : " "}
       </p>
+      {ruoloSpeaker ? (
+        <p
+          style={{
+            color: global.COLORS.GIALLO_COUNTDOWN,
+            maxWidth: "30ch",
+            fontFamily: "Anton",
+          }}
+        >
+          {ruoloSpeaker}
+        </p>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
