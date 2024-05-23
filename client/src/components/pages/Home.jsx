@@ -28,32 +28,33 @@ import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
 import SecretGuestImage from "../images/secret_guest.webp";
+import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.png";
 
 const NewsSidebarSize = 18;
 
 const speakersInfo = [
   {
-    nomeSpeaker: "Simone Teglia",
-    imgSrc: "../images/secret_guest.webp",
+    nomeSpeaker: "Alessandro Corsini",
+    imgSrc: AlessandroCorsiniImage,
   },
   {
-    nomeSpeaker: "Bruno Mazzara",
+    nomeSpeaker: "",
     imgSrc: SecretGuestImage,
   },
   {
-    nomeSpeaker: "Simone Teglia",
+    nomeSpeaker: "",
     imgSrc: SecretGuestImage,
   },
   {
-    nomeSpeaker: "Simone Teglia",
+    nomeSpeaker: "",
     imgSrc: SecretGuestImage,
   },
   {
-    nomeSpeaker: "Simone Teglia",
+    nomeSpeaker: "",
     imgSrc: SecretGuestImage,
   },
   {
-    nomeSpeaker: "Simone Teglia",
+    nomeSpeaker: "",
     imgSrc: SecretGuestImage,
   },
 ];
@@ -336,7 +337,8 @@ export default function Home() {
                   <SpeakerCard
                     key={nomeSpeaker}
                     nomeSpeaker={nomeSpeaker}
-                    imgSrc={SecretGuestImage}
+                    imgSrc={imgSrc}
+                    showName={true}
                     style={{
                       zIndex: 2,
                       flex: "1 0 26%",

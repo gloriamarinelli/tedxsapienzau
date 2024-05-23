@@ -25,6 +25,7 @@ import Awards2022 from "./components/pages/Awards2022";
 import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
+import Countdown2024 from "./components/pages/Countdown2024";
 
 import Awards from "./components/pages/Awards";
 import ScrollToTop from "./components/components/ScrollToTop";
@@ -129,6 +130,10 @@ const router = createBrowserRouter([
       {
         path: "/eventi/awards2022",
         element: <Awards2022 />,
+      },
+      {
+        path: "/eventi/countdown2024",
+        element: <Countdown2024 />,
       },
       {
         path: "/sustainability",

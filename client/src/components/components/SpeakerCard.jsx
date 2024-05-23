@@ -14,6 +14,7 @@ export default function SpeakerCard({
   setSelectedSpeakerInfo,
   year,
   style,
+  showName,
 }) {
   return (
     <div
@@ -79,7 +80,7 @@ export default function SpeakerCard({
           marginTop: "15px",
         }}
       >
-        {year === 2022 ? nomeSpeaker : " "}
+        {(year === 2022) | showName ? nomeSpeaker : " "}
       </p>
     </div>
   );
