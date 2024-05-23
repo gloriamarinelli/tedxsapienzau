@@ -474,8 +474,10 @@ export default function Home() {
                 const { nomeSpeaker, imgSrc } = speaker;
                 return (
                   <SpeakerCard
+                    key={nomeSpeaker}
                     nomeSpeaker={nomeSpeaker}
-                    imgSrc={SecretGuestImage}
+                    imgSrc={imgSrc}
+                    showName={true}
                     style={{
                       zIndex: 2,
                       flex: "1 0 26%",
@@ -610,8 +612,14 @@ export default function Home() {
                 const { nomeSpeaker, imgSrc } = speaker;
                 return (
                   <SpeakerCard
+                    key={nomeSpeaker}
                     nomeSpeaker={nomeSpeaker}
-                    imgSrc={SecretGuestImage}
+                    imgSrc={imgSrc}
+                    showName={true}
+                    style={{
+                      zIndex: 2,
+                      flex: "1 0 26%",
+                    }}
                   />
                 );
               })}
