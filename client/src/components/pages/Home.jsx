@@ -27,9 +27,11 @@ import { Button, Row } from "react-bootstrap";
 import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
+
 import SecretGuestImage from "../images/secret_guest.webp";
 import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
+import MarceloEnriqueContiImage from "../images/countdown24/MarceloEnriqueConti.webp";
 
 const NewsSidebarSize = 18;
 
@@ -47,10 +49,10 @@ const speakersInfo = [
     imgSrc: RaffaellaAbateImage,
   },
   {
-    nomeSpeaker: "",
-    ruoloSpeaker: "",
-    link: "",
-    imgSrc: SecretGuestImage,
+    nomeSpeaker: "Marcelo Enrique Conti",
+    ruoloSpeaker: "Professore Ordinario Management Ambientale",
+    link: "https://corsidilaurea.uniroma1.it/it/users/marcelocontiuniroma1it",
+    imgSrc: MarceloEnriqueContiImage,
   },
   {
     nomeSpeaker: "",
