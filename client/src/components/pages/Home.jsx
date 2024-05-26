@@ -50,7 +50,7 @@ const speakersInfo = [
   },
   {
     nomeSpeaker: "Marcelo Enrique Conti",
-    ruoloSpeaker: "Professore Ordinario Management Ambientale",
+    ruoloSpeaker: "Professore Ordinario di Management Ambientale e Sostenibilità",
     link: "https://corsidilaurea.uniroma1.it/it/users/marcelocontiuniroma1it",
     imgSrc: MarceloEnriqueContiImage,
   },
