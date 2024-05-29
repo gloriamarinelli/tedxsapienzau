@@ -32,6 +32,7 @@ import SecretGuestImage from "../images/secret_guest.webp";
 import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
 import MarceloEnriqueContiImage from "../images/countdown24/MarceloEnriqueConti.webp";
+import SabrinaLucibelloImage from "../images/countdown24/SabrinaLucibello.webp";
 
 const NewsSidebarSize = 18;
 
@@ -55,10 +56,10 @@ const speakersInfo = [
     imgSrc: MarceloEnriqueContiImage,
   },
   {
-    nomeSpeaker: "",
-    ruoloSpeaker: "",
-    link: "",
-    imgSrc: SecretGuestImage,
+    nomeSpeaker: "Sabrina Lucibello",
+    ruoloSpeaker: "Professoressa ordinaria in Disegno Industriale",
+    link: "https://research.uniroma1.it/researcher/ee71bff0ec967dd4fe3bb096af968cd53d93f861490fd84160c96484?page=1",
+    imgSrc: SabrinaLucibelloImage,
   },
   {
     nomeSpeaker: "",
