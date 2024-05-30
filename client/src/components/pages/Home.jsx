@@ -33,6 +33,8 @@ import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
 import MarceloEnriqueContiImage from "../images/countdown24/MarceloEnriqueConti.webp";
 import SabrinaLucibelloImage from "../images/countdown24/SabrinaLucibello.webp";
+import BrunoMazzaraImage from "../images/countdown24/BrunoMazzara.webp";
+import NunzioAlloccaImage from "../images/countdown24/NunzioAllocca.webp";
 
 const NewsSidebarSize = 18;
 
@@ -51,7 +53,8 @@ const speakersInfo = [
   },
   {
     nomeSpeaker: "Marcelo Enrique Conti",
-    ruoloSpeaker: "Professore Ordinario di Management Ambientale e Sostenibilità",
+    ruoloSpeaker:
+      "Professore Ordinario di Management Ambientale e Sostenibilità",
     link: "https://corsidilaurea.uniroma1.it/it/users/marcelocontiuniroma1it",
     imgSrc: MarceloEnriqueContiImage,
   },
@@ -62,16 +65,16 @@ const speakersInfo = [
     imgSrc: SabrinaLucibelloImage,
   },
   {
-    nomeSpeaker: "",
-    ruoloSpeaker: "",
-    link: "",
-    imgSrc: SecretGuestImage,
+    nomeSpeaker: "Bruno Mazzara",
+    ruoloSpeaker: "Professore Ordinario di Comunicazione e Ricerca Sociale",
+    link: "https://corsidilaurea.uniroma1.it/it/users/brunomazzarauniroma1it",
+    imgSrc: BrunoMazzaraImage,
   },
   {
-    nomeSpeaker: "",
-    ruoloSpeaker: "",
+    nomeSpeaker: "Nunzio Allocca",
+    ruoloSpeaker: "Professore Associato di Storia e Scienze delle tecniche",
     link: "",
-    imgSrc: SecretGuestImage,
+    imgSrc: NunzioAlloccaImage,
   },
 ];
 
@@ -644,7 +647,7 @@ export default function Home() {
                     event={"countdown24"}
                     style={{
                       zIndex: 2,
-                      flex: "1 0 26%",
+                      flex: "1 0 51%",
                     }}
                   />
                 );
