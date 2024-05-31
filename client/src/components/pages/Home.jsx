@@ -577,7 +577,7 @@ export default function Home() {
               src={CountdownLogo}
               alt="Countdown Logo"
               width={"80%"}
-              style={{ marginTop: "-80px", marginBottom: "-50px" }}
+              style={{ marginTop: "-70px", marginBottom: "0px" }}
             />
             <Countdown language="it" />
           </div>
