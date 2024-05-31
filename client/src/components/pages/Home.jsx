@@ -236,7 +236,7 @@ export default function Home() {
               alignItems: "center",
               paddingLeft: "7vw",
               justifyContent: "space-between",
-              padding: "0 5vw",
+              padding: "0 5vw 0 0",
             }}
           >
             <img

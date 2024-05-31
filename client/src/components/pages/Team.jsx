@@ -14,7 +14,7 @@ import "../../resources/styles/team.css";
 
 export default function Team2022() {
   // #region --------------------------------- Constants -------------------------------------
-  const [activeYear, setActiveYear] = useState(24);
+  const [activeYear, setActiveYear] = useState(23);
   const [windowSize, setWindowSize] = useOutletContext();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
