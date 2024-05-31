@@ -3,6 +3,7 @@ import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import "../../resources/styles/countdown.css";
 import { func } from "three/examples/jsm/nodes/Nodes.js";
+import global from "../../resources/global.json";
 
 const finalDate = new Date("2024-05-31T09:00:00+02:00").getTime(); // Data di fine del countdown
 const labelsInItalian = ["GIORNI", "ORE", "MINUTI", "SECONDI"];
@@ -65,8 +66,10 @@ export default function Countdown({ language = "it" }) {
           </tr>
         </>
       ) : (
-        <h1>L'evento è iniziato</h1>
-      )}  
+        <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
+          L'evento è iniziato
+        </h1>
+      )}
     </div>
   );
 }

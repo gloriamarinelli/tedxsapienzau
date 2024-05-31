@@ -259,7 +259,7 @@ export default function Home() {
                 src={CountdownLogo}
                 alt="Countdown Logo"
                 width={windowSize > 1360 ? "900px" : "750px"}
-                style={{ marginBottom: "-80px" }}
+                style={{ marginBottom: "-50px" }}
               />
               <Countdown language="it" />
               <a
@@ -274,6 +274,7 @@ export default function Home() {
                   textDecoration: "none",
                   cursor: "pointer",
                   zIndex: 2,
+                  marginTop: "50px",
                 }}
               >
                 Ottieni i biglietti
