@@ -157,8 +157,8 @@ export default function NavbarComponent(props) {
                             </span>
                             <li>
                               <Link
-                                className="navbar-submenu-edition-item-disabled ms-3 "
-                                to="/"
+                                className="navbar-submenu-edition-item ms-3 "
+                                to="/eventi/countdown2024"
                               >
                                 Countdown
                               </Link>

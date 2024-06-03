@@ -32,6 +32,7 @@ import ScrollToTop from "./components/components/ScrollToTop";
 
 import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import JoinUs from "./components/pages/JoinUs";
+import MvHome from "./components/pages/MvHome";
 
 const router = createBrowserRouter([
   {

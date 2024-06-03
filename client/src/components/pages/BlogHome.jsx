@@ -67,10 +67,10 @@ export default function Blog({ withTitle = true }) {
               style={{
                 color: "#FFF",
                 fontFamily: "Fira Sans Extra Condensed",
+                display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 position: "relative",
-                display: "flex",
                 padding: "60px",
                 fontSize: "6vh",
               }}
@@ -85,6 +85,8 @@ export default function Blog({ withTitle = true }) {
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
+                  maxWidth: "1500px",
+                  margin: "auto",
                 }}
               >
                 {blog.map((blog) => {
@@ -101,29 +103,33 @@ export default function Blog({ withTitle = true }) {
                 })}
               </div>
             ) : (
-              <div class="blog-card">
-                <div class="meta">
-                  <div
-                    class="photo shimmer"
-                    style={{
-                      background: "lightgrey",
-                      width: "350px",
-                      height: "250px",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                    }}
-                    alt={"loading"}
-                  ></div>
-                </div>
-                <div class="description">
-                  <h4
-                    style={{
-                      fontFamily: "GothamBold",
-                    }}
-                  >
-                    Loading...
-                  </h4>
-                </div>
+              <div style={{ display: "flex" }}>
+                {[0, 1, 2].map((number) => (
+                  <div class="blog-card">
+                    <div class="meta">
+                      <div
+                        class="photo shimmer"
+                        style={{
+                          background: "lightgrey",
+                          width: "350px",
+                          height: "250px",
+                          backgroundPosition: "center",
+                          backgroundSize: "cover",
+                        }}
+                        alt={"loading"}
+                      ></div>
+                    </div>
+                    <div class="description">
+                      <h4
+                        style={{
+                          fontFamily: "GothamBold",
+                        }}
+                      >
+                        Loading...
+                      </h4>
+                    </div>
+                  </div>
+                ))}
               </div>
             )}
             {!isLoading}

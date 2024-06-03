@@ -76,7 +76,7 @@ const eventsInfo = [
     description:
       "Il nostro obiettivo è azzerare, ricercare un punto zero: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che  rallentano la crescita della nostra società, peggiorando la qualità della nostra vita.",
     photo: Cover23,
-    linkTo: "/edizione2023",
+    linkTo: "/eventi/edizione2023",
   },
   {
     date: "18 Aprile 2023",
@@ -84,7 +84,7 @@ const eventsInfo = [
     description:
       "  Il concorso Back to Zero Awards è organizzato dal Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea con il motto TED “Ideas worth spreading”, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell’edizione 2023 del TEDxSapienzaU.",
     photo: CoverAwards23,
-    linkTo: "/awards2023",
+    linkTo: "/eventi/awards2023",
   },
   {
     date: "29 Aprile 2022",
@@ -92,13 +92,13 @@ const eventsInfo = [
     description:
       "Il titolo della prima edizione del TEDxSapienzaU è stato ACT - Lead the change. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici.",
     photo: Cover22,
-    linkTo: "/edizione2022",
+    linkTo: "/eventi/edizione2022",
   },
   {
     date: "29 Aprile 2022",
     title: "AWARDS 2022",
     description: "",
     photo: CoverAwards22,
-    linkTo: "/awards2022",
+    linkTo: "/eventi/awards2022",
   },
 ];

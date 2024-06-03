@@ -161,7 +161,12 @@ export default function Blog({ withTitle = true }) {
                 {[...Array(Math.ceil(blog.length / 3))].map((_, rowIndex) => (
                   <div
                     key={rowIndex}
-                    style={{ display: "flex", marginBottom: "20px" }}
+                    style={{
+                      display: "flex",
+                      marginBottom: "20px",
+                      gap: "150px",
+                      margin: "auto",
+                    }}
                   >
                     {[...Array(3)].map((_, colIndex) => {
                       const cardIndex = rowIndex * 3 + colIndex;
@@ -184,32 +189,38 @@ export default function Blog({ withTitle = true }) {
                 ))}
               </div>
             ) : (
-              <div style={{ backgroundColor: "#000" }}>
-                <div class="blog-card">
-                  <div class="meta">
-                    <div
-                      class="photo shimmer"
-                      style={{
-                        background: "lightgrey",
-                        width: "100%",
-                        height: "250px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                      }}
-                      alt={"loading"}
-                    ></div>
-                  </div>
-                  <div class="description">
-                    <h4
-                      style={{
-                        fontFamily: "Fira Sans Extra Condensed",
-                        color: "white",
-                      }}
-                    >
-                      Loading...
-                    </h4>
-                  </div>
-                </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "150px",
+                }}
+              >
+                {[...Array(3)].map((_) => {
+                  return (
+                    <div style={{ backgroundColor: "#000" }}>
+                      <div class="blog-card">
+                        <div class="meta">
+                          <div
+                            class="photo shimmer"
+                            style={{
+                              background: "lightgrey",
+                              width: "100%",
+                              height: "250px",
+                              backgroundPosition: "center",
+                              backgroundSize: "cover",
+                            }}
+                            alt={"loading"}
+                          ></div>
+                        </div>
+                        <div class="description">
+                          <div className="rectangle medium shimmer"></div>
+                          <div className="rectangle small shimmer"></div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             )}
             {!isLoading && getButtons()}
