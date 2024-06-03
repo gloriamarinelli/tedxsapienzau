@@ -246,9 +246,9 @@ export default function Team2022() {
   }
 
   function handleTeamsChips() {
-    if (activeYear === 24) {
-      return;
-    } //TODO: Remove this line when the 2024 team is ready
+    // if (activeYear === 24) {
+    //   return;
+    // } //TODO: Remove this line when the 2024 team is ready
     var gruppi = teams[activeYear.toString()] || teams["24"];
 
     const chips = Object.entries(gruppi).map(([key, teamName]) => (
