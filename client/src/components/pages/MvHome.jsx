@@ -1,14 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
-import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Card from "react-bootstrap/Card";
-import { Button, Row } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import CountUp from "react-countup";
 
 export default function MvHome({ withTitle = false }) {
@@ -17,6 +13,47 @@ export default function MvHome({ withTitle = false }) {
   const [hidden2, setHidden2] = useState(true);
   const [hidden3, setHidden3] = useState(true);
   const [hidden4, setHidden4] = useState(true);
+
+  const renderSubContainer = (hidden, setHidden, endValue, label, fontSize) => (
+    <div
+      onMouseEnter={() => setHidden(false)}
+      onMouseLeave={() => setHidden(true)}
+      style={{
+        borderRadius: global.UTILS.BENTO_BOX_PADDING,
+        backgroundColor: hidden ? "#191919" : "#eb0028",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        transition: "background-color 0.3s ease",
+        padding: global.UTILS.BENTO_BOX_PADDING,
+      }}
+    >
+      <h1
+        className="font-weight-bold"
+        style={{
+          color: hidden ? "#eb0028" : "#FFF",
+          fontSize: fontSize,
+          fontWeight: "bold",
+          fontFamily: "Fira sans Extra Condensed",
+        }}
+      >
+        <CountUp end={endValue} duration={2} useEasing={false} separator="" />
+      </h1>
+      <h5
+        style={{
+          paddingTop: "-40px",
+          fontWeight: "bold",
+          fontFamily: "Fira sans Extra Condensed",
+          color: "#FFF",
+          fontSize: windowSize > 1245 ? "4vh" : "3vh",
+        }}
+      >
+        {label}
+      </h5>
+    </div>
+  );
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**
@@ -54,23 +91,18 @@ export default function MvHome({ withTitle = false }) {
             textAlign: "center",
           }}
         >
-          {" "}
           <h1
             className="fira-sans"
             style={{
-              textAlign: "left",
-              fontSize: windowSize > 1245 ? "6vh" : "5vh",
-              fontWeight: 700,
-              maxWidth: "20ch",
+              textAlign: "center",
+              fontSize: windowSize > 1245 ? "6vh" : "4vh",
               color: "#FFFFFF",
             }}
           >
             <extra>
               <condensed-extrabold>
-                TEDXSAPIENZAU E' <br></br> IL TEDX UNIVERSITARIO <br></br> PIU'
-                GRANDE IN EUROPA
-                <br></br>
-                <br></br>
+                TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza
+                dell'Università di Roma
               </condensed-extrabold>
             </extra>
           </h1>
@@ -94,177 +126,19 @@ export default function MvHome({ withTitle = false }) {
             width: "100%",
             height: windowSize > global.UTILS.TABLET_WIDTH ? "100%" : "50%",
             margin: "10px",
-
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#000",
-            display: "grid", // Change to grid display
-            gridTemplateColumns: "1fr 1fr", // Divide into two columns
-            gridTemplateRows: "1fr 1fr", // Divide into two rows
-            gap: global.UTILS.BENTO_BOX_PADDING, // Add gap between grid items
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gridTemplateRows: "1fr 1fr",
+            gap: global.UTILS.BENTO_BOX_PADDING,
             position: "relative",
           }}
         >
-          {/* First sub-container */}
-          <div
-            onMouseEnter={() => setHidden1(false)}
-            onMouseLeave={() => setHidden1(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden1 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                paddingTop: "-40px",
-                color: hidden1 ? "#eb0028" : "#FFF",
-                fontSize: windowSize > 1245 ? "12vh" : "9vh",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp end={26} duration={2} useEasing={false} separator="" />
-            </h1>
-            <h5
-              style={{
-                paddingTop: "-40px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-                color: "#FFF",
-                fontSize: windowSize > 1245 ? "4vh" : "3vh",
-              }}
-            >
-              speakers
-            </h5>
-          </div>
-          {/* Second sub-container */}
-          <div
-            onMouseEnter={() => setHidden2(false)}
-            onMouseLeave={() => setHidden2(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden2 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                paddingTop: "-40px",
-                color: hidden2 ? "#eb0028" : "#FFF",
-                fontSize: windowSize > 1245 ? "12vh" : "9vh",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp end={3000} duration={2} useEasing={false} separator="" />
-            </h1>
-            <h5
-              style={{
-                paddingTop: "-40px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-                color: "#FFF",
-                fontSize: windowSize > 1245 ? "4vh" : "3vh",
-              }}
-            >
-              spettatori
-            </h5>
-          </div>
-          {/* Third sub-container */}
-          <div
-            onMouseEnter={() => setHidden3(false)}
-            onMouseLeave={() => setHidden3(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden3 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                paddingTop: "-40px",
-                color: hidden3 ? "#eb0028" : "#FFF",
-                fontSize: windowSize > 1245 ? "12vh" : "9vh",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp end={5160} duration={2} useEasing={false} separator="" />
-            </h1>
-            <h5
-              style={{
-                paddingTop: "-40px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-                color: "#FFF",
-                fontSize: windowSize > 1245 ? "4vh" : "3vh",
-              }}
-            >
-              social followers
-            </h5>
-          </div>
-          {/* Fourth sub-container */}
-          <div
-            onMouseEnter={() => setHidden4(false)}
-            onMouseLeave={() => setHidden4(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden4 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                paddingTop: "-40px",
-                color: hidden4 ? "#eb0028" : "#FFF",
-                fontSize: windowSize > 1245 ? "11vh" : "8vh",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp
-                end={22083}
-                duration={2}
-                useEasing={false}
-                separator=""
-              />
-            </h1>
-            <h5
-              style={{
-                paddingTop: "-40px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-                color: "#FFF",
-                fontSize: windowSize > 1245 ? "3vh" : "2vh",
-              }}
-            >
-              visualizzazioni su youtube
-            </h5>
-          </div>
+          {renderSubContainer(hidden1, setHidden1, 26, "speakers", windowSize > 1245 ? "12vh" : "9vh")}
+          {renderSubContainer(hidden2, setHidden2, 3000, "spettatori", windowSize > 1245 ? "12vh" : "9vh")}
+          {renderSubContainer(hidden3, setHidden3, 5160, "social followers", windowSize > 1245 ? "12vh" : "9vh")}
+          {renderSubContainer(hidden4, setHidden4, 22083, "visualizzazioni su youtube", windowSize > 1245 ? "11vh" : "8vh")}
         </div>
       </section>
     );
@@ -303,23 +177,18 @@ export default function MvHome({ withTitle = false }) {
             textAlign: "center",
           }}
         >
-          {" "}
           <h1
-            className="fira-sans"
+            className="fira-sans mb-5"
             style={{
-              textAlign: "left",
-              fontSize: windowSize > 1245 ? "6vh" : "5vh",
-              fontWeight: 700,
-              maxWidth: "20ch",
+              textAlign: "center",
+              fontSize: windowSize > 1245 ? "6vh" : "4vh",
               color: "#FFFFFF",
             }}
           >
             <extra>
               <condensed-extrabold>
-                TEDXSAPIENZAU E' <br></br> IL TEDX UNIVERSITARIO <br></br> PIU'
-                GRANDE IN EUROPA
-                <br></br>
-                <br></br>
+                TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza
+                dell'Università di Roma
               </condensed-extrabold>
             </extra>
           </h1>
@@ -343,165 +212,19 @@ export default function MvHome({ withTitle = false }) {
             width: "100%",
             height: windowSize > global.UTILS.TABLET_WIDTH ? "100%" : "50%",
             marginTop: "20px",
-
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#000",
-            display: "grid", // Change to grid display
-            gridTemplateColumns: "1fr ", // Divide into two columns
-            gridTemplateRows: "1fr", // Divide into two rows
-            gap: global.UTILS.BENTO_BOX_PADDING, // Add gap between grid items
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gridTemplateRows: "repeat(4, 1fr)",
+            gap: global.UTILS.BENTO_BOX_PADDING,
             position: "relative",
           }}
         >
-          {/* First sub-container */}
-          <div
-            onMouseEnter={() => setHidden1(false)}
-            onMouseLeave={() => setHidden1(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden1 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                color: hidden1 ? "#eb0028" : "#FFF",
-                fontSize: "80px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp end={26} duration={2} useEasing={false} separator="" />
-            </h1>
-            <h5
-              style={{
-                fontWeight: "bold",
-                fontFamily: "GothamBold",
-                color: "#FFF",
-              }}
-            >
-              speakers
-            </h5>
-          </div>
-          {/* Second sub-container */}
-          <div
-            onMouseEnter={() => setHidden2(false)}
-            onMouseLeave={() => setHidden2(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden2 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                color: hidden2 ? "#eb0028" : "#FFF",
-                fontSize: "80px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp end={3000} duration={2} useEasing={false} separator="" />
-            </h1>
-            <h5
-              style={{
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-                color: "#FFF",
-              }}
-            >
-              spettatori
-            </h5>
-          </div>
-          {/* Third sub-container */}
-          <div
-            onMouseEnter={() => setHidden3(false)}
-            onMouseLeave={() => setHidden3(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden3 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                color: hidden3 ? "#eb0028" : "#FFF",
-                fontSize: "80px",
-                fontWeight: "bold",
-                fontFamily: "Fira sans Extra Condensed",
-              }}
-            >
-              <CountUp end={5160} duration={2} useEasing={false} separator="" />
-            </h1>
-            <h5
-              style={{
-                fontWeight: "bold",
-                fontFamily: "GothamBold",
-                color: "#FFF",
-              }}
-            >
-              social followers
-            </h5>
-          </div>
-          {/* Fourth sub-container */}
-          <div
-            onMouseEnter={() => setHidden4(false)}
-            onMouseLeave={() => setHidden4(true)}
-            style={{
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: hidden4 ? "#191919" : "#eb0028",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            <h1
-              className="font-weight-bold mt-5 "
-              style={{
-                color: hidden4 ? "#eb0028" : "#FFF",
-                fontSize: "60px",
-                fontWeight: "bold",
-                fontFamily: "GothamBold",
-              }}
-            >
-              <CountUp
-                end={22083}
-                duration={2}
-                useEasing={false}
-                separator=""
-              />
-            </h1>
-            <h5
-              style={{
-                fontWeight: "bold",
-                fontFamily: "GothamBold",
-                color: "#FFF",
-              }}
-            >
-              visualizzazioni su youtube
-            </h5>
-          </div>
+          {renderSubContainer(hidden1, setHidden1, 26, "speakers", "80px")}
+          {renderSubContainer(hidden2, setHidden2, 3000, "spettatori", "80px")}
+          {renderSubContainer(hidden3, setHidden3, 5160, "social followers", "80px")}
+          {renderSubContainer(hidden4, setHidden4, 22083, "visualizzazioni su youtube", "60px")}
         </div>
       </section>
     );
