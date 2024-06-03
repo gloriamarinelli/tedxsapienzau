@@ -779,7 +779,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <section className="mb-5">
           <MvHome />
         </section>
         <section>
