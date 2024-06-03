@@ -140,7 +140,7 @@ export default function Countdown2024() {
         <section
           style={{
             width: "100vw",
-            height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            height: `calc(120vh - ${global.UTILS.NAV_HEIGHT})`,
             marginTop: global.UTILS.NAV_HEIGHT,
             backgroundColor: "#000",
             display: "flex",
@@ -178,6 +178,7 @@ export default function Countdown2024() {
               fontFamily: "Anton",
               fontSize: "100px",
               marginLeft: "1ch",
+              marginBottom: "10px"
             }}
           >
             <span style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
@@ -186,11 +187,11 @@ export default function Countdown2024() {
             </span>
             5 | 24
           </h1>
-          <p
-            style={{ color: global.COLORS.GIALLO_COUNTDOWN, marginLeft: "3ch" }}
+          <h4
+            style={{ color: global.COLORS.GIALLO_COUNTDOWN, marginLeft: "3ch",  backgroundColor: "#000", }}
           >
             Nuovo Teatro Ateneo
-          </p>
+          </h4>
         </section>
         <section
           style={{
@@ -203,6 +204,7 @@ export default function Countdown2024() {
             flexDirection: "column",
             alignItems: "center",
             padding: "50px",
+            textAlign: "justify",
           }}
         >
           <h1 style={{}}>3, 2, 1MPATTO</h1>
@@ -308,9 +310,14 @@ export default function Countdown2024() {
             </span>
             5 | 24
           </h1>
-          {getShowMore()}
+          <p
+            style={{ color: global.COLORS.GIALLO_COUNTDOWN, marginLeft: "3ch",  backgroundColor: "#000", }}
+          >
+            Nuovo Teatro Ateneo
+          </p>
+       
         </section>
-
+        {getShowMore()}
         <section
           style={{
             width: "100vw",
@@ -322,6 +329,7 @@ export default function Countdown2024() {
             flexDirection: "column",
             alignItems: "center",
             padding: "50px",
+            textAlign: "center",
           }}
         >
           <h1 style={{}}>3, 2, 1MPATTO</h1>
