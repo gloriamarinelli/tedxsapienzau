@@ -315,9 +315,9 @@ export default function Countdown2024() {
           >
             Nuovo Teatro Ateneo
           </p>
-       
+          {getShowMore()}
+
         </section>
-        {getShowMore()}
         <section
           style={{
             width: "100vw",
