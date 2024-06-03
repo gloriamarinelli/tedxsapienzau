@@ -92,7 +92,7 @@ export default function MvHome({ withTitle = false }) {
           }}
         >
           <h1
-            className="fira-sans"
+            className="fira-sans mb-5"
             style={{
               textAlign: "center",
               fontSize: windowSize > 1245 ? "6vh" : "4vh",
