@@ -35,6 +35,7 @@ export default function NavbarComponent(props) {
   const awards23 = useRef();
   const act = useRef();
   const awards22 = useRef();
+  const countdown2024 = useRef();
 
   const options = {
     team: team,
@@ -46,6 +47,7 @@ export default function NavbarComponent(props) {
     awards23: awards23,
     act: act,
     awards22: awards22,
+    countdown2024: countdown2024,
   };
 
   function selectOption(option) {
@@ -159,6 +161,11 @@ export default function NavbarComponent(props) {
                               <Link
                                 className="navbar-submenu-edition-item ms-3 "
                                 to="/eventi/countdown2024"
+                                ref={countdown2024}
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("countdown2024");
+                                }}
                               >
                                 Countdown
                               </Link>
