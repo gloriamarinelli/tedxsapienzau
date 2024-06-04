@@ -26,7 +26,7 @@ import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
 import Countdown2024 from "./components/pages/Countdown2024";
-
+import ArchivedCountdown24 from "./components/pages/archived_homepages/ArchivedCountdown24";
 import Awards from "./components/pages/Awards";
 import ScrollToTop from "./components/components/ScrollToTop";
 
@@ -173,7 +173,7 @@ function HomeManager() {
   return (
     <>
       <NavbarComponent windowSize={windowSize} />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Outlet context={[windowSize, setWindowSize]} />
       <Footer />
     </>

@@ -31,7 +31,7 @@ export default function EventBox({
       onMouseLeave={() => setIsHovered(false)}
     >
       <h2>{date}</h2>
-      <Link style={{ textDecoration: "none", color: "#fff" }} to={linkTo}>
+      <a style={{ textDecoration: "none", color: "#fff" }} href={linkTo}>
         <h1
           style={{
             fontWeight: 700,
@@ -39,7 +39,7 @@ export default function EventBox({
         >
           {title}
         </h1>
-      </Link>
+      </a>
       {windowSize > global.UTILS.MOBILE_WIDTH ? (
         <p style={{ maxWidth: "50%", fontWeight: 600 }}>{description}</p>
       ) : (

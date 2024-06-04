@@ -5,6 +5,7 @@ import Cover23 from "../images/cover-edizione23.webp";
 import Cover22 from "../images/cover-edizione22.webp";
 import CoverAwards23 from "../images/awards23/header_awards23.webp";
 import CoverAwards22 from "../images/awards22/awards2022.webp";
+import CoverCountdown24 from "../images/cover-countdown24.webp";
 import global from "../../resources/global.json";
 import EventBox from "../components/EventBox";
 import "../../resources/styles/partnerstyle.css";
@@ -53,23 +54,33 @@ export default function Editions({ withTitle = true }) {
           textAlign: "justify",
         }}
       >
-        {eventsInfo.map((event, index) => (
-          <EventBox
-            key={index}
-            date={event.date}
-            title={event.title}
-            description={event.description}
-            photo={event.photo}
-            linkTo={event.linkTo}
-            windowSize={windowSize}
-          />
-        ))}
+        {eventsInfo
+          .slice(0, withTitle ? eventsInfo.length : 4)
+          .map((event, index) => (
+            <EventBox
+              key={index}
+              date={event.date}
+              title={event.title}
+              description={event.description}
+              photo={event.photo}
+              linkTo={event.linkTo}
+              windowSize={windowSize}
+            />
+          ))}
       </section>
     </div>
   );
 }
 
 const eventsInfo = [
+  {
+    date: "31 Maggio 2024",
+    title: "COUNTDOWN",
+    description:
+      "Il tempo scorre ed è necessario creare un nuovo spazio di riflessione ed intrattenimento incentrato sulla crisi climatica. Un luogo dove affrontare le paure sul futuro con positività e scienza grazie ad una visione interdisciplinare e coinvolgente negli spazi del nostro Ateneo.",
+    photo: CoverCountdown24,
+    linkTo: "/eventi/countdown2024",
+  },
   {
     date: "15 Novembre 2023",
     title: "BACK TO ZERO",

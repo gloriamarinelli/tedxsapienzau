@@ -168,14 +168,14 @@ export default function Footer() {
             />
           </b>
           <div style={{ lineHeight: "10px", fontSize: "16px" }}>
+            <p className="secondary-text">
+              <GreyLink text="Countdow " link={"/eventi/countdown2024"} />
+            </p>
             <p className="secondary-text" style={{ marginTop: "5px" }}>
               <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
             </p>
             <p className="secondary-text">
               <GreyLink text="Awards" link={"/eventi/awards2023"} />
-            </p>
-            <p className="secondary-text">
-              <GreyLink text="ACT" link={"/eventi/edizione2022"} />
             </p>
           </div>
           <b>
@@ -247,7 +247,7 @@ export default function Footer() {
           <small className="tertiary-text">
             <a
               className="secondary-text"
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: "none" }}
               href="/images/Statuto2024-25.pdf"
             >
               Statuto{" "}

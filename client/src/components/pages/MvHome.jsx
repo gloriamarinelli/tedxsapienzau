@@ -106,7 +106,7 @@ export default function MvHome({ withTitle = false }) {
               </condensed-extrabold>
             </extra>
           </h1>
-          <Link to="/mission&vision">
+          <a href="/mission&vision">
             <Button
               style={{
                 backgroundColor: global.COLORS.ROSSO_TED_2023,
@@ -118,7 +118,7 @@ export default function MvHome({ withTitle = false }) {
             >
               Scopri di più
             </Button>
-          </Link>
+          </a>
         </div>
         <div
           id="main-right-container"

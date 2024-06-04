@@ -105,10 +105,10 @@ export default function Blog({ withTitle = true }) {
             ) : (
               <div style={{ display: "flex" }}>
                 {[0, 1, 2].map((number) => (
-                  <div class="blog-card">
-                    <div class="meta">
+                  <div className="blog-card">
+                    <div className="meta">
                       <div
-                        class="photo shimmer"
+                        className="photo shimmer"
                         style={{
                           background: "lightgrey",
                           width: "350px",
@@ -119,7 +119,7 @@ export default function Blog({ withTitle = true }) {
                         alt={"loading"}
                       ></div>
                     </div>
-                    <div class="description">
+                    <div className="description">
                       <h4
                         style={{
                           fontFamily: "GothamBold",
@@ -157,10 +157,10 @@ export default function Blog({ withTitle = true }) {
             );
           })
         ) : (
-          <div class="blog-card">
-            <div class="meta">
+          <div className="blog-card">
+            <div className="meta">
               <div
-                class="photo shimmer"
+                className="photo shimmer"
                 style={{
                   background: "lightgrey",
                   width: "100%",
@@ -171,7 +171,7 @@ export default function Blog({ withTitle = true }) {
                 alt={"loading"}
               ></div>
             </div>
-            <div class="description">
+            <div className="description">
               <h4
                 style={{
                   fontFamily: "GothamBold",
