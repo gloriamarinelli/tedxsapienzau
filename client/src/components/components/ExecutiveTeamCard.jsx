@@ -1,29 +1,42 @@
-import React from "react";
+import React, { useState } from 'react';
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import global from "../../resources/global.json";
-import Info from "./Info.jsx"
+import Chip from '@mui/material/Chip';
+import "../../resources/styles/board.css";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Stack from "@mui/material/Stack";
+
+const theme = createTheme({
+  palette: {
+    ted: {main: '#eb0028',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+  },
+});
 
 
-function handleBoardInfos24({ informazioni }) {
-  return informazioni.map((value, index) => (
-    <Info
-      key={index} // Ensure each component has a unique key
-      x={value.x}
-      y={value.y}
-      name={value.name}
-      team={value.team}
-    />
-  ));
-}
+
+const BoardInfos = [
+  { team: "org", name: "Ilaria Cataldi", linkedin: "www", path: "IlariaCataldi", role: "Organizer"},
+  { tea: "coorg", name: "Matteo Orsini", linkedin: "www", path: "MatteoOrsini", role: "Co-Organizer"},
+  { team: "segr", name: "Giulia Riccardi", linkedin: "www", path: "GiuliaRiccardi", role: "Segreteria Generale"},
+  { team: "pem", name: "Michele Gili", linkedin: "www", path: "MicheleGili", role: "Planning & Event Management" },
+  { team: "dex", name: "Enrico Romito", linkedin: "www", path: "EnricoRomito", role: "Design"},
+  { team: "sec", name: "Alessandro Paolinelli", linkedin: "www", path: "AlessandroPaolinelli", role: "Speaker & Event Curation" },
+  { team: "ers", name: "Claudio Mantuano", linkedin: "www", path: "ClaudioMantuano", role : "External Relations & Sponsor"},
+  { team: "hra", name: "Giulia Grasso", linkedin: "www", path: "GiuliaGrasso", role: "Human Resources & Academy"},
+  { team: "cem", name: "Matilde Bernardini", linkedin: "www", path: "MatildeBernardini", role: "Communication & Marketing" },
+  { team: "la", name: "Silvia Scardini", linkedin: "www", path: "SilviaScardini", role: "Legal & Administrative"},
+  { team: "it", name: "Gloria Marinelli", linkedin: "www", path: "GloriaMarinelli", role: "IT & Website"},
+];
 
 const BoardNameStyle = {
   margin: "30px 0",
   fontFamily: "Fira Sans Extra Condensed, sans-serif",
   fontSize: "50px",
-  backgroundColor: global.COLORS.NERO, //! Cambiare colore
+  backgroundColor: global.COLORS.NERO, 
   color: "#fff",
 };
+
 
 
 export default function ExecutiveTeamCard({
@@ -34,11 +47,25 @@ export default function ExecutiveTeamCard({
   image,
   link,
   year,
-  infos,
 }) {
+  const [hovered, setHovered] = useState(false);
+  const [currentInfo, setCurrentInfo] = useState(null);
+
+  const handleMouseEnter = (info) => {
+    setHovered(true);
+    setCurrentInfo(info);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+    setCurrentInfo(null);
+  };
+
+
   if (year === 2024) {
     return (
       <>
+        
         <div
           style={{
             display: "flex",
@@ -50,15 +77,77 @@ export default function ExecutiveTeamCard({
           }}
         >
           <h1 style={BoardNameStyle}>Board</h1>
-          {infos ? handleBoardInfos24({ informazioni: infos }) : null}
-          <img
-            src={require("../images/foto.png")}
-            alt="Test"
-            style={{
-              maxWidth: "70%",
-              height: "auto",
-            }}
-          />
+          <div className="mt-3 md-3"
+            onMouseEnter={() => handleMouseEnter(currentInfo)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Stack
+                direction="row"
+                spacing={1}
+                alignItems="center"
+                justifyContent="center"
+                useFlexGap
+                flexWrap="wrap"
+              >
+                {BoardInfos.map((info, index) => (
+                  <ThemeProvider theme={theme} key={index}>
+                    <Chip 
+                    label={info.name} 
+                    color={'ted'} 
+
+                    onMouseEnter={() => handleMouseEnter(info)}
+                    onMouseLeave={handleMouseLeave}
+                    />
+                  </ThemeProvider>
+                ))}
+              </Stack>
+
+          </div>
+          
+
+
+          {!hovered ? (
+              <img
+                src={'/images/team24/board.webp'}
+                alt="Board"
+                style={{
+                  maxWidth: "70%",
+                  height: "auto",
+                }}
+              />
+          ) : (
+            <div
+              className="fade-in"
+              style={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
+            >
+              <img
+                src={`/images/team24/${currentInfo?.path}.webp`}
+                alt= {currentInfo?.path}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+              <div style={{ marginLeft: '20px' }}>
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                  }}
+                >{currentInfo?.name}</p>
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "15px",
+                  }}
+                >{currentInfo?.role}</p>
+              </div>
+            </div>
+          )}
         </div>
       </>
     );

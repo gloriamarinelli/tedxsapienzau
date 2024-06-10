@@ -1,25 +1,21 @@
-import React, { useRef, useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import ExecutiveTeamCard from "../components/ExecutiveTeamCard.jsx";
 import axios from "axios";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import VolunteerCard from "../components/VolunteerCard.jsx";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Info from "../components/Info.jsx";
 import Stack from "@mui/material/Stack";
 import BasicChips from "../components/BasicChips.jsx";
-import { log } from "three/examples/jsm/nodes/Nodes.js";
 import "../../resources/styles/team.css";
 
 export default function Team2022() {
-  // #region --------------------------------- Constants -------------------------------------
+  // #region --------------------------------- Constants --------------------------------------
   const [activeYear, setActiveYear] = useState(24);
   const [windowSize, setWindowSize] = useOutletContext();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
 
-  const teams = {
+  const teams = { 
     24: {
       acronyms: ["it", "pem", "dex", "sec", "ers", "hra", "cem", "la"],
       it: "Team IT & Website",
@@ -59,27 +55,10 @@ export default function Team2022() {
       planning: "Team Planning",
     },
   };
-
-  const BoardInfos = [
-    {
-      team: "IT",
-      x: 504,
-      y: 620,
-      name: "Gloria",
-      linkedin: "www",
-    },
-    {
-      team: "Law",
-      x: 400,
-      y: 500,
-      name: "Lucia",
-      linkedin: "www",
-    },
-    // Add more person information objects as needed
-  ];
+  
   // #endregion
 
-  // #region --------------------------------- UseEffect -------------------------------------
+  // #region --------------------------------- UseEffect --------------------------------------
 
   useEffect(() => {
     setBoard([]);
@@ -105,7 +84,7 @@ export default function Team2022() {
   }, [activeYear]);
   // #endregion
 
-  // #region ---------------------------------- Board ----------------------------------------
+  // #region --------------------------------- Board ------------------------------------------
 
   const handleBoardCardSection = (year) => {
     if (board.length === 0) {
@@ -142,7 +121,7 @@ export default function Team2022() {
   };
   // #endregion
 
-  // #region -------------------------------- Volunteers -------------------------------------
+  // #region --------------------------------- Volunteers -------------------------------------
 
   const handleVolunteersCardSection = (year) => {
     if (volunteers.length === 0) return;
@@ -184,7 +163,7 @@ export default function Team2022() {
   };
   // #endregion
 
-  // #region -------------------------------- Choose Year ------------------------------------
+  // #region --------------------------------- Choose Year ------------------------------------
 
   function chooseYear() {
     if (activeYear === 22) return getTeam2022();
@@ -193,15 +172,23 @@ export default function Team2022() {
   }
 
   function getTeam2024() {
+    if (volunteers.length === 0) {
+      return (
+        <div className="boardSpinnerSection">
+          <div className="spinner" />
+        </div>
+      );
+    } else {
+
     return (
       <>
-        <ExecutiveTeamCard year={2024} infos={BoardInfos} />
+        <ExecutiveTeamCard year={2024} />
         <div className="container-xl">
           <div>{handleVolunteersCardSection(2024)}</div>
         </div>
       </>
-      // <div>{comingSoon()}</div>
     );
+  }
   }
 
   function getTeam2023() {
@@ -225,7 +212,7 @@ export default function Team2022() {
   }
   // #endregion
 
-  // #region ---------------------------------- Chips ----------------------------------------
+  // #region --------------------------------- Chips ------------------------------------------
 
   function comingSoon() {
     return (
@@ -246,9 +233,6 @@ export default function Team2022() {
   }
 
   function handleTeamsChips() {
-    // if (activeYear === 24) {
-    //   return;
-    // } //TODO: Remove this line when the 2024 team is ready
     var gruppi = teams[activeYear.toString()] || teams["24"];
 
     const chips = Object.entries(gruppi).map(([key, teamName]) => (
@@ -279,7 +263,7 @@ export default function Team2022() {
   }
   // #endregion
 
-  // #region ----------------------------------- Views----------------------------------------
+  // #region --------------------------------- Views-------------------------------------------
 
   function desktopView() {
     return (

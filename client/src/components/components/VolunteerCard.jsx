@@ -39,26 +39,34 @@ export default function VolunteerCard({
             />
 
             <div className="custom-card-caption">
-              <a
-                href={link}
-                className="custom-card-link"
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  cursor: link ? "pointer" : "default",
-                }}
-              >
-                <div className="custom-card-heading"
-                  onMouseEnter={() => setHovered2(true)}
-                  onMouseLeave={() => setHovered2(false)}
-                  style ={{
-                    color: hovered2 ? global.COLORS.ROSSO_TED : "#fff",
+
+              {link == null ? (
+                <a
+                  href={link}
+                  className="custom-card-link"
+                  style={{
+                    color: "black",
+                    textDecoration: "none",
+                    cursor: link ? "pointer" : "default",
                   }}
                 >
-                  {nome+" "}
-                  <FontAwesomeIcon icon={faLinkedin} size="xl" />
-                </div>
-              </a>
+                  <div className="custom-card-heading"
+                    onMouseEnter={() => setHovered2(true)}
+                    onMouseLeave={() => setHovered2(false)}
+                    style ={{
+                      color: hovered2 ? global.COLORS.ROSSO_TED : "#fff",
+                    }}
+                  >
+                    {nome+" "}
+                    <FontAwesomeIcon icon={faLinkedin} size="xl" />
+                  </div>
+                </a>
+                ) : (
+                  <div className="custom-card-heading">
+                    {nome}
+                  </div>
+                )}
+              
             </div>
           </div>
         </div>
