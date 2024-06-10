@@ -111,23 +111,27 @@ export default function Home() {
             position: "relative",
           }}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              top: 0,
-              left: 0,
-              objectPosition: "center",
-              objectFit: "cover",
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            }}
-          >
-            <source src={backgroundVideo} type="video/mp4" />
-          </video>
+          {windowSize > global.UTILS.TABLET_WIDTH ? (
+            <video
+              autoPlay
+              muted
+              loop
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                top: 0,
+                left: 0,
+                objectPosition: "center",
+                objectFit: "cover",
+                borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              }}
+            >
+              <source src={backgroundVideo} type="video/mp4" />
+            </video>
+          ) : (
+            <></>
+          )}
           <div
             id="video-overlay"
             style={{

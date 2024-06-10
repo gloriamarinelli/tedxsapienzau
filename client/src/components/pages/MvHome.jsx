@@ -135,10 +135,34 @@ export default function MvHome({ withTitle = false }) {
             position: "relative",
           }}
         >
-          {renderSubContainer(hidden1, setHidden1, 26, "speakers", windowSize > 1245 ? "12vh" : "9vh")}
-          {renderSubContainer(hidden2, setHidden2, 3000, "spettatori", windowSize > 1245 ? "12vh" : "9vh")}
-          {renderSubContainer(hidden3, setHidden3, 5160, "social followers", windowSize > 1245 ? "12vh" : "9vh")}
-          {renderSubContainer(hidden4, setHidden4, 22083, "visualizzazioni su youtube", windowSize > 1245 ? "11vh" : "8vh")}
+          {renderSubContainer(
+            hidden1,
+            setHidden1,
+            26,
+            "speakers",
+            windowSize > 1245 ? "12vh" : "9vh"
+          )}
+          {renderSubContainer(
+            hidden2,
+            setHidden2,
+            3000,
+            "spettatori",
+            windowSize > 1245 ? "12vh" : "9vh"
+          )}
+          {renderSubContainer(
+            hidden3,
+            setHidden3,
+            5160,
+            "social followers",
+            windowSize > 1245 ? "12vh" : "9vh"
+          )}
+          {renderSubContainer(
+            hidden4,
+            setHidden4,
+            22083,
+            "visualizzazioni su youtube",
+            windowSize > 1245 ? "11vh" : "8vh"
+          )}
         </div>
       </section>
     );
@@ -151,11 +175,6 @@ export default function MvHome({ withTitle = false }) {
         style={{
           display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
           justifyContent: "center",
-          alignItems: "center",
-          height:
-            windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(130vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(170vh - ${global.UTILS.NAV_HEIGHT})`,
           width: "100vw",
           backgroundColor: "#000",
           padding: global.UTILS.BENTO_BOX_PADDING,
@@ -223,8 +242,20 @@ export default function MvHome({ withTitle = false }) {
         >
           {renderSubContainer(hidden1, setHidden1, 26, "speakers", "80px")}
           {renderSubContainer(hidden2, setHidden2, 3000, "spettatori", "80px")}
-          {renderSubContainer(hidden3, setHidden3, 5160, "social followers", "80px")}
-          {renderSubContainer(hidden4, setHidden4, 22083, "visualizzazioni su youtube", "60px")}
+          {renderSubContainer(
+            hidden3,
+            setHidden3,
+            5160,
+            "social followers",
+            "80px"
+          )}
+          {renderSubContainer(
+            hidden4,
+            setHidden4,
+            22083,
+            "visualizzazioni su youtube",
+            "60px"
+          )}
         </div>
       </section>
     );
