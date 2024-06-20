@@ -4,12 +4,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import global from "../../resources/global.json";
 import Chip from '@mui/material/Chip';
 import "../../resources/styles/board.css";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, rgbToHex, ThemeProvider } from '@mui/material/styles';
 import Stack from "@mui/material/Stack";
 
 const theme = createTheme({
-  palette: {
-    ted: {main: '#eb0028',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+  palette: { 
+    it: {main: 'rgba(240, 126, 42, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    ted: {main: 'rgba(255,255,255, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    la: {main: 'rgba(33, 188, 239, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    cem: {main: 'rgba(233, 73, 58, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    hra: {main: 'rgba(40, 132, 199, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    ers: {main: 'rgba(240, 137, 183, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    sec: {main: 'rgba(149, 196, 89, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    dex: {main: 'rgba(250, 183, 50, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    pem: {main: 'rgba(187, 92, 158, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    segr: {main: 'rgba(235, 0, 40, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    coorg: {main: 'rgba(235, 0, 40, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+    org: {main: 'rgba(235, 0, 40, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
   },
 });
 
@@ -17,7 +28,7 @@ const theme = createTheme({
 
 const BoardInfos = [
   { team: "org", name: "Ilaria Cataldi", linkedin: "www", path: "IlariaCataldi", role: "Organizer"},
-  { tea: "coorg", name: "Matteo Orsini", linkedin: "www", path: "MatteoOrsini", role: "Co-Organizer"},
+  { team: "coorg", name: "Matteo Orsini", linkedin: "www", path: "MatteoOrsini", role: "Co-Organizer"},
   { team: "segr", name: "Giulia Riccardi", linkedin: "www", path: "GiuliaRiccardi", role: "Segreteria Generale"},
   { team: "pem", name: "Michele Gili", linkedin: "www", path: "MicheleGili", role: "Planning & Event Management" },
   { team: "dex", name: "Enrico Romito", linkedin: "www", path: "EnricoRomito", role: "Design"},
@@ -93,7 +104,7 @@ export default function ExecutiveTeamCard({
                   <ThemeProvider theme={theme} key={index}>
                     <Chip 
                     label={info.name} 
-                    color={'ted'} 
+                    color={info.team} 
 
                     onMouseEnter={() => handleMouseEnter(info)}
                     onMouseLeave={handleMouseLeave}
