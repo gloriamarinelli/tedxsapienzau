@@ -13,10 +13,69 @@ export default function VolunteerCard({
   image,
   link,
   year,
+  device,
 }) {
   const [hovered, setHovered] = useState(false);
   const [hovered2, setHovered2] = useState(false);
   if (year == 2024) {
+    if (device === "mobile") {
+      return (
+        <>
+          <div
+            key={id}
+            className="col-lg-3 col-md-4 col-sm-12 mb-4 d-flex justify-content-center"
+            style={{
+              aspectRatio: 1,
+              height: "300px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <img
+              src={
+                year === 2024
+                  ? `/images/team24/${image}`
+                  : `data:image/*;base64,${image}`
+              }
+              height="280"
+              alt="foto volontario"
+              style={{ maxWidth: "300px", objectFit: "cover" }}
+            />
+  
+            <div
+              className="portfolio-caption"
+              style={{
+                justifyContent: "center",
+              }}
+            >
+              <a
+                href={link}
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  cursor: link && "pointer",
+                }}
+              >
+                <div
+                  className="portfolio-caption-heading"
+                  style={{
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    fontSize: "20px",
+                    color: "#fff",
+                  }}
+                >
+                  {nome+"  "}
+                  {link == null ? null : <FontAwesomeIcon icon={faLinkedin} size="xl" />}
+                </div>
+              </a>
+            </div>
+          </div>
+        </>
+      );
+    }
     return (
       <>
         <div
@@ -41,7 +100,11 @@ export default function VolunteerCard({
             <div className="custom-card-caption">
 
               {link == null ? (
-                <a
+                <div className="custom-card-heading">
+                  {nome}
+                </div>
+              ) : (
+                  <a
                   href={link}
                   className="custom-card-link"
                   style={{
@@ -61,11 +124,7 @@ export default function VolunteerCard({
                     <FontAwesomeIcon icon={faLinkedin} size="xl" />
                   </div>
                 </a>
-                ) : (
-                  <div className="custom-card-heading">
-                    {nome}
-                  </div>
-                )}
+              )}
               
             </div>
           </div>
