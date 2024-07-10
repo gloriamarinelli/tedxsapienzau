@@ -24,7 +24,7 @@ export default function Team2022() {
       sec: "Team Speakers & Event Curation",
       ers: "Team External Relations & Sponsor",
       hra: "Team Human Resources & Academy",
-      cem: "Team Communication & Marketing",
+      cem: "Team Communication, Editorial, Marketing & Media",
       la: "Team Legal & Administrative",
     },
     23: {
@@ -123,7 +123,7 @@ export default function Team2022() {
 
   // #region --------------------------------- Volunteers -------------------------------------
 
-  const handleVolunteersCardSection = (year) => {
+  const handleVolunteersCardSection = (year, isMobile) => {
     if (volunteers.length === 0) return;
     const annata = year.toString().slice(-2);
 
@@ -146,6 +146,7 @@ export default function Team2022() {
           image={fotoNome}
           link={link}
           year={year}
+          device={isMobile ? "mobile" : null}
         />
       );
     });
@@ -165,13 +166,13 @@ export default function Team2022() {
 
   // #region --------------------------------- Choose Year ------------------------------------
 
-  function chooseYear() {
+  function chooseYear(mobile = false) {
     if (activeYear === 22) return getTeam2022();
     else if (activeYear === 23) return getTeam2023();
-    else return getTeam2024();
+    else return getTeam2024(mobile);
   }
 
-  function getTeam2024() {
+  function getTeam2024(small = false) {
     if (volunteers.length === 0) {
       return (
         <div className="boardSpinnerSection">
@@ -181,10 +182,21 @@ export default function Team2022() {
     } else {
       return (
         <>
-          <ExecutiveTeamCard year={2024} />
-          <div className="container-xl">
-            <div>{handleVolunteersCardSection(2024)}</div>
-          </div>
+          {small ? (
+            <>
+              <div className="container-xl">
+                <div className="row">{handleBoardCardSection(2024)}</div>
+                <div>{handleVolunteersCardSection(2024, true)}</div>
+              </div>
+            </>
+          ) : (
+            <>
+              <ExecutiveTeamCard year={2024} device={"desktop"} />
+              <div className="container-xl">
+                <div>{handleVolunteersCardSection(2024)}</div>
+              </div>
+            </>
+          )}
         </>
       );
     }
@@ -370,7 +382,7 @@ export default function Team2022() {
             backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
-          {chooseYear()}
+          {chooseYear(true)}
         </section>
       </>
     );

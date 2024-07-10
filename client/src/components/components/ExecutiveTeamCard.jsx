@@ -30,14 +30,14 @@ const BoardInfos = [
   { team: "org", name: "Ilaria Cataldi", linkedin: "www", path: "IlariaCataldi", role: "Organizer"},
   { team: "coorg", name: "Matteo Orsini", linkedin: "www", path: "MatteoOrsini", role: "Co-Organizer"},
   { team: "segr", name: "Giulia Riccardi", linkedin: "www", path: "GiuliaRiccardi", role: "Segreteria Generale"},
+  { team: "it", name: "Gloria Marinelli", linkedin: "www", path: "GloriaMarinelli", role: "IT & Website"},
   { team: "pem", name: "Michele Gili", linkedin: "www", path: "MicheleGili", role: "Planning & Event Management" },
-  { team: "dex", name: "Enrico Romito", linkedin: "www", path: "EnricoRomito", role: "Design"},
+  { team: "dex", name: "Enrico Romiti", linkedin: "www", path: "EnricoRomiti", role: "Design"},
   { team: "sec", name: "Alessandro Paolinelli", linkedin: "www", path: "AlessandroPaolinelli", role: "Speaker & Event Curation" },
   { team: "ers", name: "Claudio Mantuano", linkedin: "www", path: "ClaudioMantuano", role : "External Relations & Sponsor"},
   { team: "hra", name: "Giulia Grasso", linkedin: "www", path: "GiuliaGrasso", role: "Human Resources & Academy"},
-  { team: "cem", name: "Matilde Bernardini", linkedin: "www", path: "MatildeBernardini", role: "Communication & Marketing" },
+  { team: "cem", name: "Matilde Bernardini", linkedin: "www", path: "MatildeBernardini", role: "Communication, Editorial, Marketing & Media" },
   { team: "la", name: "Silvia Scardini", linkedin: "www", path: "SilviaScardini", role: "Legal & Administrative"},
-  { team: "it", name: "Gloria Marinelli", linkedin: "www", path: "GloriaMarinelli", role: "IT & Website"},
 ];
 
 const BoardNameStyle = {
@@ -58,6 +58,7 @@ export default function ExecutiveTeamCard({
   image,
   link,
   year,
+  device,
 }) {
   const [hovered, setHovered] = useState(false);
   const [currentInfo, setCurrentInfo] = useState(null);
@@ -73,96 +74,182 @@ export default function ExecutiveTeamCard({
   };
 
 
+  
   if (year === 2024) {
+    if (device === 'desktop') {
+      return (
+        <>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center", 
+              justifyContent: "center",
+              flexDirection: "column",
+              position: "relative",
+              backgroundColor: "black",
+            }}
+          >
+            <h1 style={BoardNameStyle}>Board</h1>
+            <div className="mt-3 md-3"
+              onMouseEnter={() => handleMouseEnter(currentInfo)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Stack
+                  direction="row"
+                  spacing={1}
+                  alignItems="center"
+                  justifyContent="center"
+                  useFlexGap
+                  flexWrap="wrap"
+                >
+                  {BoardInfos.map((info, index) => (
+                    <ThemeProvider theme={theme} key={index}>
+                      <Chip 
+                      label={info.name} 
+                      color={info.team} 
+  
+                      onMouseEnter={() => handleMouseEnter(info)}
+                      onMouseLeave={handleMouseLeave}
+                      />
+                    </ThemeProvider>
+                  ))}
+                </Stack>
+  
+            </div>
+            
+  
+  
+            {!hovered ? (
+                <img
+                  src={'/images/team24/board.webp'}
+                  alt="Board"
+                  style={{
+                    maxWidth: "70%",
+                    height: "auto",
+                  }}
+                />
+            ) : (
+              <div
+                className="fade-in"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={`/images/team24/${currentInfo?.path}.webp`}
+                  alt= {currentInfo?.path}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
+                />
+                <div style={{ marginLeft: '20px' }}>
+                  <p
+                    style={{
+                      color: "white",
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                    }}
+                  >{currentInfo?.name}</p>
+                  <p
+                    style={{
+                      color: "white",
+                      fontSize: "15px",
+                    }}
+                  >{currentInfo?.role}</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </>
+      );
+    }
     return (
-      <>
-        
+      <div
+        key={id}
+        className="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
+        style={{
+          position: "relative",
+          backgroundColor: global.COLORS.NERO, //! Cambiare colore
+        }}
+      >
         <div
+          className="card"
           style={{
             display: "flex",
-            alignItems: "center", 
-            justifyContent: "center",
             flexDirection: "column",
             position: "relative",
-            backgroundColor: "black",
+            border: "2px solid transparent",
+            backgroundColor: global.COLORS.NERO, //! Cambiare colore
           }}
         >
-          <h1 style={BoardNameStyle}>Board</h1>
-          <div className="mt-3 md-3"
-            onMouseEnter={() => handleMouseEnter(currentInfo)}
-            onMouseLeave={handleMouseLeave}
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link"
+            style={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+              textDecoration: "none",
+              color: "white",
+            }}
           >
-            <Stack
-                direction="row"
-                spacing={1}
-                alignItems="center"
-                justifyContent="center"
-                useFlexGap
-                flexWrap="wrap"
-              >
-                {BoardInfos.map((info, index) => (
-                  <ThemeProvider theme={theme} key={index}>
-                    <Chip 
-                    label={info.name} 
-                    color={info.team} 
+            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+          </a>
 
-                    onMouseEnter={() => handleMouseEnter(info)}
-                    onMouseLeave={handleMouseLeave}
-                    />
-                  </ThemeProvider>
-                ))}
-              </Stack>
+          <img
+            src={`/images/team24/${image}`}
+            width="245px"
+            height="350px"
+            alt="foto team esecutivo"
+            style={{
+              borderRadius: "20px 20px 0 0",
+              objectFit: "cover",
+              //backgroundColor: "#1f1f1f",
+            }}
+          />
 
-          </div>
-          
-
-
-          {!hovered ? (
-              <img
-                src={'/images/team24/board.webp'}
-                alt="Board"
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
-              />
-          ) : (
+          <div
+            className="portfolio-caption"
+            style={{
+              justifyContent: "center",
+              backgroundColor: "#000",
+              color: "#fff",
+              width: "245px",
+              borderRadius: "0 0 20px 20px",
+              padding: "20px 0",
+              height: "120px",
+            }}
+          >
             <div
-              className="fade-in"
+              className="portfolio-caption-heading"
               style={{
-                display: 'flex',
-                alignItems: 'center'
+                fontWeight: "bold",
+                textAlign: "center",
+                fontSize: "23px",
+                color: "#fff",
               }}
             >
-              <img
-                src={`/images/team24/${currentInfo?.path}.webp`}
-                alt= {currentInfo?.path}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-              <div style={{ marginLeft: '20px' }}>
-                <p
-                  style={{
-                    color: "white",
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                  }}
-                >{currentInfo?.name}</p>
-                <p
-                  style={{
-                    color: "white",
-                    fontSize: "15px",
-                  }}
-                >{currentInfo?.role}</p>
-              </div>
+              {nome}
             </div>
-          )}
-        </div>
-      </>
-    );
 
+            <div
+              className="portfolio-caption-heading"
+              style={{
+                fontStyle: "italic",
+                textAlign: "center",
+                fontSize: "15px",
+              }}
+            >
+              {ruolo}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
   if (year === 2023) {
     return (
