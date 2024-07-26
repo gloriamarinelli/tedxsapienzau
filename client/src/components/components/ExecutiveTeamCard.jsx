@@ -32,7 +32,7 @@ const BoardInfos = [
   { team: "segr", name: "Giulia Riccardi", linkedin: "www", path: "GiuliaRiccardi", role: "Segreteria Generale"},
   { team: "it", name: "Gloria Marinelli", linkedin: "www", path: "GloriaMarinelli", role: "IT & Website"},
   { team: "pem", name: "Michele Gili", linkedin: "www", path: "MicheleGili", role: "Planning & Event Management" },
-  { team: "dex", name: "Enrico Romiti", linkedin: "www", path: "EnricoRomiti", role: "Design"},
+  { team: "dex", name: "Enrico Romito", linkedin: "www", path: "EnricoRomito", role: "Design"},
   { team: "sec", name: "Alessandro Paolinelli", linkedin: "www", path: "AlessandroPaolinelli", role: "Speaker & Event Curation" },
   { team: "ers", name: "Claudio Mantuano", linkedin: "www", path: "ClaudioMantuano", role : "External Relations & Sponsor"},
   { team: "hra", name: "Giulia Grasso", linkedin: "www", path: "GiuliaGrasso", role: "Human Resources & Academy"},
