@@ -102,7 +102,7 @@ export default function MvHome({ withTitle = false }) {
             <extra>
               <condensed-extrabold>
                 TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza
-                dell'Università di Roma
+                Università di Roma
               </condensed-extrabold>
             </extra>
           </h1>
@@ -207,7 +207,7 @@ export default function MvHome({ withTitle = false }) {
             <extra>
               <condensed-extrabold>
                 TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza
-                dell'Università di Roma
+                Università di Roma
               </condensed-extrabold>
             </extra>
           </h1>
