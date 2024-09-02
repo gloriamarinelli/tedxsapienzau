@@ -1,54 +1,176 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import global from "../../resources/global.json";
-import Chip from '@mui/material/Chip';
+import Chip from "@mui/material/Chip";
 import "../../resources/styles/board.css";
-import { createTheme, rgbToHex, ThemeProvider } from '@mui/material/styles';
+import { createTheme, rgbToHex, ThemeProvider } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
 
 const theme = createTheme({
-  palette: { 
-    it: {main: 'rgba(240, 126, 42, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    ted: {main: 'rgba(255,255,255, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    la: {main: 'rgba(33, 188, 239, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    cem: {main: 'rgba(233, 73, 58, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    hra: {main: 'rgba(40, 132, 199, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    ers: {main: 'rgba(240, 137, 183, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    sec: {main: 'rgba(149, 196, 89, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    dex: {main: 'rgba(250, 183, 50, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    pem: {main: 'rgba(187, 92, 158, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    segr: {main: 'rgba(235, 0, 40, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    coorg: {main: 'rgba(235, 0, 40, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
-    org: {main: 'rgba(235, 0, 40, 0.5)',light: '#EC6162', dark: '#FFFFFF', contrastText: '#FFFFFF'},
+  palette: {
+    it: {
+      main: "rgba(240, 126, 42, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    ted: {
+      main: "rgba(255,255,255, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    la: {
+      main: "rgba(33, 188, 239, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    cem: {
+      main: "rgba(233, 73, 58, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    hra: {
+      main: "rgba(40, 132, 199, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    ers: {
+      main: "rgba(240, 137, 183, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    sec: {
+      main: "rgba(149, 196, 89, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    dex: {
+      main: "rgba(250, 183, 50, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    pem: {
+      main: "rgba(187, 92, 158, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    segr: {
+      main: "rgba(235, 0, 40, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    coorg: {
+      main: "rgba(235, 0, 40, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
+    org: {
+      main: "rgba(235, 0, 40, 0.5)",
+      light: "#EC6162",
+      dark: "#FFFFFF",
+      contrastText: "#FFFFFF",
+    },
   },
 });
 
-
-
 const BoardInfos = [
-  { team: "org", name: "Ilaria Cataldi", linkedin: "www", path: "IlariaCataldi", role: "Organizer"},
-  { team: "coorg", name: "Matteo Orsini", linkedin: "www", path: "MatteoOrsini", role: "Co-Organizer"},
-  { team: "segr", name: "Giulia Riccardi", linkedin: "www", path: "GiuliaRiccardi", role: "Segreteria Generale"},
-  { team: "it", name: "Gloria Marinelli", linkedin: "www", path: "GloriaMarinelli", role: "IT & Website"},
-  { team: "pem", name: "Michele Gili", linkedin: "www", path: "MicheleGili", role: "Planning & Event Management" },
-  { team: "dex", name: "Enrico Romiti", linkedin: "www", path: "EnricoRomiti", role: "Design"},
-  { team: "sec", name: "Alessandro Paolinelli", linkedin: "www", path: "AlessandroPaolinelli", role: "Speaker & Event Curation" },
-  { team: "ers", name: "Claudio Mantuano", linkedin: "www", path: "ClaudioMantuano", role : "External Relations & Sponsor"},
-  { team: "hra", name: "Giulia Grasso", linkedin: "www", path: "GiuliaGrasso", role: "Human Resources & Academy"},
-  { team: "cem", name: "Matilde Bernardini", linkedin: "www", path: "MatildeBernardini", role: "Communication, Editorial, Marketing & Media" },
-  { team: "la", name: "Silvia Scardini", linkedin: "www", path: "SilviaScardini", role: "Legal & Administrative"},
+  {
+    team: "org",
+    name: "Ilaria Cataldi",
+    linkedin: "www",
+    path: "IlariaCataldi",
+    role: "Organizer",
+  },
+  {
+    team: "coorg",
+    name: "Matteo Orsini",
+    linkedin: "www",
+    path: "MatteoOrsini",
+    role: "Co-Organizer",
+  },
+  {
+    team: "segr",
+    name: "Giulia Riccardi",
+    linkedin: "www",
+    path: "GiuliaRiccardi",
+    role: "Segreteria Generale",
+  },
+  {
+    team: "it",
+    name: "Gloria Marinelli",
+    linkedin: "www",
+    path: "GloriaMarinelli",
+    role: "IT & Website",
+  },
+  {
+    team: "pem",
+    name: "Michele Gili",
+    linkedin: "www",
+    path: "MicheleGili",
+    role: "Planning & Event Management",
+  },
+  {
+    team: "dex",
+    name: "Enrico Romito",
+    linkedin: "www",
+    path: "EnricoRomito",
+    role: "Design",
+  },
+  {
+    team: "sec",
+    name: "Alessandro Paolinelli",
+    linkedin: "www",
+    path: "AlessandroPaolinelli",
+    role: "Speaker & Event Curation",
+  },
+  {
+    team: "ers",
+    name: "Claudio Mantuano",
+    linkedin: "www",
+    path: "ClaudioMantuano",
+    role: "External Relations & Sponsor",
+  },
+  {
+    team: "hra",
+    name: "Giulia Grasso",
+    linkedin: "www",
+    path: "GiuliaGrasso",
+    role: "Human Resources & Academy",
+  },
+  {
+    team: "cem",
+    name: "Matilde Bernardini",
+    linkedin: "www",
+    path: "MatildeBernardini",
+    role: "Communication, Editorial, Marketing & Media",
+  },
+  {
+    team: "la",
+    name: "Silvia Scardini",
+    linkedin: "www",
+    path: "SilviaScardini",
+    role: "Legal & Administrative",
+  },
 ];
 
 const BoardNameStyle = {
   margin: "30px 0",
   fontFamily: "Fira Sans Extra Condensed, sans-serif",
   fontSize: "50px",
-  backgroundColor: global.COLORS.NERO, 
+  backgroundColor: global.COLORS.NERO,
   color: "#fff",
 };
-
-
 
 export default function ExecutiveTeamCard({
   id,
@@ -73,16 +195,14 @@ export default function ExecutiveTeamCard({
     setCurrentInfo(null);
   };
 
-
-  
   if (year === 2024) {
-    if (device === 'desktop') {
+    if (device === "desktop") {
       return (
         <>
           <div
             style={{
               display: "flex",
-              alignItems: "center", 
+              alignItems: "center",
               justifyContent: "center",
               flexDirection: "column",
               position: "relative",
@@ -90,74 +210,75 @@ export default function ExecutiveTeamCard({
             }}
           >
             <h1 style={BoardNameStyle}>Board</h1>
-            <div className="mt-3 md-3"
+            <div
+              className="mt-3 md-3"
               onMouseEnter={() => handleMouseEnter(currentInfo)}
               onMouseLeave={handleMouseLeave}
             >
               <Stack
-                  direction="row"
-                  spacing={1}
-                  alignItems="center"
-                  justifyContent="center"
-                  useFlexGap
-                  flexWrap="wrap"
-                >
-                  {BoardInfos.map((info, index) => (
-                    <ThemeProvider theme={theme} key={index}>
-                      <Chip 
-                      label={info.name} 
-                      color={info.team} 
-  
+                direction="row"
+                spacing={1}
+                alignItems="center"
+                justifyContent="center"
+                useFlexGap
+                flexWrap="wrap"
+              >
+                {BoardInfos.map((info, index) => (
+                  <ThemeProvider theme={theme} key={index}>
+                    <Chip
+                      label={info.name}
+                      color={info.team}
                       onMouseEnter={() => handleMouseEnter(info)}
                       onMouseLeave={handleMouseLeave}
-                      />
-                    </ThemeProvider>
-                  ))}
-                </Stack>
-  
+                    />
+                  </ThemeProvider>
+                ))}
+              </Stack>
             </div>
-            
-  
-  
+
             {!hovered ? (
-                <img
-                  src={'/images/team24/board.webp'}
-                  alt="Board"
-                  style={{
-                    maxWidth: "70%",
-                    height: "auto",
-                  }}
-                />
+              <img
+                src={"/images/team24/board.webp"}
+                alt="Board"
+                style={{
+                  maxWidth: "70%",
+                  height: "auto",
+                }}
+              />
             ) : (
               <div
                 className="fade-in"
                 style={{
-                  display: 'flex',
-                  alignItems: 'center'
+                  display: "flex",
+                  alignItems: "center",
                 }}
               >
                 <img
                   src={`/images/team24/${currentInfo?.path}.webp`}
-                  alt= {currentInfo?.path}
+                  alt={currentInfo?.path}
                   style={{
                     maxWidth: "100%",
                     height: "auto",
                   }}
                 />
-                <div style={{ marginLeft: '20px' }}>
+                <div style={{ marginLeft: "20px" }}>
                   <p
                     style={{
                       color: "white",
                       fontSize: "20px",
                       fontWeight: "bold",
                     }}
-                  >{currentInfo?.name}</p>
+                  >
+                    {currentInfo?.name}
+                  </p>
                   <p
                     style={{
                       color: "white",
                       fontSize: "15px",
                     }}
-                  >{currentInfo?.role}</p>
+                  >
+                    {currentInfo?.role}
+                  </p>
                 </div>
               </div>
             )}
