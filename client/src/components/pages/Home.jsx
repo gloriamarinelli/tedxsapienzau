@@ -27,6 +27,8 @@ import { Button, Row } from "react-bootstrap";
 import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
+import RFW_bg_img from "../images/RFW23/RFW2.png";
+import test_img from "../images/RFW-logo_negativo_su_box.png";
 
 import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
@@ -197,6 +199,75 @@ export default function Home() {
           </div>
         </div>*/}
         {/** fine div video **/}
+
+        <div
+  id="main-container"
+  style={{
+    width: "100%",
+    height: "90%",
+    padding: global.UTILS.BENTO_BOX_PADDING,
+    borderRadius: global.UTILS.BENTO_BOX_PADDING,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${RFW_bg_img})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    fontFamily: "Fira Sans Extra Condensed, sans-serif",
+    position: "relative",
+  }}
+>
+  {/* Colonna per il testo */}
+  <div
+    style={{
+      width: "55%",
+      color: "white",
+      paddingLeft: "10%",
+      fontSize: "1.5em",
+    }}
+  >
+    <h1
+    style={{
+      fontSize: "200%",
+      paddingBottom: "2%",
+    }}
+    > 16 - 22 Settembre </h1>
+    <h3
+    style={{
+      paddingBottom: "2%",
+    }}>Piazzale Aldo Moro, 5</h3>
+    <h3
+    style={{
+      paddingBottom: "2%",
+    }}>ore 16:00</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+
+  {/* div RFW logo */}
+  <div
+  style={{
+    width: "50%",
+    padding: "20px",
+    display: "flex",
+    justifyContent: "center",  // centra orizzontalmente
+    alignItems: "center",      // centra verticalmente
+  }}
+>
+  <img
+    src={test_img}
+    alt="Rome Future Week Logo"
+    style={{
+      width: "40%",
+      height: "auto",
+      borderRadius: "10px",
+    }}
+  />
+</div>
+
+</div>
+
+
       </section>
       <section>
         <MvHome />
