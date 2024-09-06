@@ -94,7 +94,8 @@ export default function Home() {
           padding: global.UTILS.BENTO_BOX_PADDING,
         }}
       >
-        <div
+        {/** inizio div video **/}
+        {/*<div
           id="main-container"
           style={{
             width: "100%",
@@ -194,7 +195,8 @@ export default function Home() {
               BACK TO ZERO 2023
             </h2>
           </div>
-        </div>
+        </div>*/}
+        {/** fine div video **/}
       </section>
       <section>
         <MvHome />
