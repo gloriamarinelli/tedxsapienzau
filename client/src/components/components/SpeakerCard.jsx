@@ -2,6 +2,8 @@ import React from "react";
 import "../../index.css";
 import global from "../../resources/global.json";
 import { set } from "date-fns";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SpeakerCard({
   nomeSpeaker,
@@ -18,6 +20,7 @@ export default function SpeakerCard({
   ruoloSpeaker,
   link,
   event,
+  showLinkTalk,
 }) {
   if (event === "countdown24") {
     return (
@@ -69,6 +72,20 @@ export default function SpeakerCard({
             }}
           >
             {ruoloSpeaker}
+          </p>
+        ) : (
+          <></>
+        )}
+        {showLinkTalk ? (
+          <p
+            onClick={() => (window.location.href = linkTalk)}
+            style={{
+              fontSize: "15px",
+              marginTop: "-70px",
+              marginBottom: "50px",
+            }}
+          >
+            <FontAwesomeIcon icon={faYoutube} /> Guarda il talk
           </p>
         ) : (
           <></>

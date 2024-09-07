@@ -15,6 +15,26 @@ import SpeakerCard from "../components/SpeakerCard";
 export default function Countdown2024() {
   const [windowSize, setWindowSize] = useOutletContext();
   const [scrollY, setScrollY] = useState(0);
+  const [iframeSource, setIframeSource] = useState(
+    "https://www.youtube.com/embed/qfP5K6o_71E?si=hKofScYpCbBKDmCt&amp;"
+  );
+  const [selectedVideoSpeaker, setSelectedVideoSpeaker] =
+    useState("BrunoMazzara");
+
+  const videoLinks = {
+    BrunoMazzara:
+      "https://www.youtube.com/embed/qfP5K6o_71E?si=0LfW2q82x4_-SDLS",
+    AlessandroCorsini:
+      "https://www.youtube.com/embed/iKBoU13MLPE?si=1X9w5PUX_o6qOFCt",
+    RaffaellaAbate:
+      "https://www.youtube.com/embed/NmKLVYuWutI?si=6rNKgF52yK62cuuE",
+    MarceloConti:
+      "https://www.youtube.com/embed/bogFGkkxGz8?si=296Zb5tf5dkF4bPU",
+    SabrinaLucibello:
+      "https://www.youtube.com/embed/xiON0VBhuP0?si=10HDt77bIpIHIJMC",
+    NunzioAllocca:
+      "https://www.youtube.com/embed/D_SgAqsNdhM?si=bW9uYM00eup1_bze",
+  };
 
   const svgRef = useRef();
 
@@ -61,12 +81,14 @@ export default function Countdown2024() {
       ruoloSpeaker: "Professore Ordinario di Macchine a Fluido",
       link: "https://corsidilaurea.uniroma1.it/it/users/alessandrocorsiniuniroma1it",
       imgSrc: AlessandroCorsiniImage,
+      linkTalk: videoLinks.AlessandroCorsini,
     },
     {
       nomeSpeaker: "Raffaella Abate",
       ruoloSpeaker: "Dottoranda in Psicologia Dinamica e Clinica",
       link: "https://research.uniroma1.it/researcher/8b60c7379ba8ad0f753282348cc599974f0d56dc91c31f9bef7a573d",
       imgSrc: RaffaellaAbateImage,
+      linkTalk: videoLinks.RaffaellaAbate,
     },
     {
       nomeSpeaker: "Marcelo Enrique Conti",
@@ -74,26 +96,35 @@ export default function Countdown2024() {
         "Professore Ordinario di Management Ambientale e Sostenibilità",
       link: "https://corsidilaurea.uniroma1.it/it/users/marcelocontiuniroma1it",
       imgSrc: MarceloEnriqueContiImage,
+      linkTalk: videoLinks.MarceloConti,
     },
     {
       nomeSpeaker: "Sabrina Lucibello",
       ruoloSpeaker: "Professoressa ordinaria in Disegno Industriale",
       link: "https://research.uniroma1.it/researcher/ee71bff0ec967dd4fe3bb096af968cd53d93f861490fd84160c96484?page=1",
       imgSrc: SabrinaLucibelloImage,
+      linkTalk: videoLinks.SabrinaLucibello,
     },
     {
       nomeSpeaker: "Bruno Mazzara",
       ruoloSpeaker: "Professore Ordinario di Comunicazione e Ricerca Sociale",
       link: "https://corsidilaurea.uniroma1.it/it/users/brunomazzarauniroma1it",
       imgSrc: BrunoMazzaraImage,
+      linkTalk: videoLinks.BrunoMazzara,
     },
     {
       nomeSpeaker: "Nunzio Allocca",
       ruoloSpeaker: "Professore Associato di Storia e Scienze delle tecniche",
       link: "",
       imgSrc: NunzioAlloccaImage,
+      linkTalk: videoLinks.NunzioAllocca,
     },
   ];
+
+  const speakerSelectionStyle = {
+    cursor: "pointer",
+    textTransform: "uppercase",
+  };
 
   const getShowMore = () => {
     // print the scroll height
@@ -134,7 +165,10 @@ export default function Countdown2024() {
     );
   };
 
-  if (windowSize > global.UTILS.MOBILE_WIDTH)
+  if (windowSize > global.UTILS.TABLET_WIDTH)
+    /**
+     * DESKTOP VERSION
+     */
     return (
       <>
         <section
@@ -178,7 +212,7 @@ export default function Countdown2024() {
               fontFamily: "Anton",
               fontSize: "100px",
               marginLeft: "1ch",
-              marginBottom: "10px"
+              marginBottom: "10px",
             }}
           >
             <span style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>
@@ -188,7 +222,11 @@ export default function Countdown2024() {
             5 | 24
           </h1>
           <h4
-            style={{ color: global.COLORS.GIALLO_COUNTDOWN, marginLeft: "3ch",  backgroundColor: "#000", }}
+            style={{
+              color: global.COLORS.GIALLO_COUNTDOWN,
+              marginLeft: "3ch",
+              backgroundColor: "#000",
+            }}
           >
             Nuovo Teatro Ateneo
           </h4>
@@ -257,6 +295,214 @@ export default function Countdown2024() {
             </div>
           </div>
         </section>
+        <section
+          style={{
+            width: "100vw",
+            height: "100%",
+            backgroundColor: "#000",
+            color: "#000",
+            fontFamily: "Anton",
+            display: "flex",
+            alignItems: "center",
+            padding: "50px ",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+          }}
+        >
+          <section
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: windowSize > 1300 ? "30%" : "50%",
+              gap: "25px",
+              color: global.COLORS.GIALLO_COUNTDOWN,
+              fontSize: "40px",
+              fontFamily: "Anton",
+            }}
+          >
+            <div
+              style={{
+                ...speakerSelectionStyle,
+                ...{
+                  color:
+                    selectedVideoSpeaker === "BrunoMazzara"
+                      ? global.COLORS.GIALLO_COUNTDOWN
+                      : "grey",
+                },
+              }}
+              onClick={() => {
+                setIframeSource(videoLinks.BrunoMazzara);
+                setSelectedVideoSpeaker("BrunoMazzara");
+              }}
+            >
+              Bruno Mazzara
+              <p
+                style={{
+                  fontSize: "20px",
+                  opacity: selectedVideoSpeaker === "BrunoMazzara" ? 1 : 0,
+                  marginTop:
+                    selectedVideoSpeaker === "BrunoMazzara" ? "0" : "-40px",
+                  transition: "0.5s all",
+                }}
+              >
+                Una svolta green, ma quale?
+              </p>
+            </div>
+            <div
+              style={{
+                ...speakerSelectionStyle,
+                ...{
+                  color:
+                    selectedVideoSpeaker === "AlessandroCorsini"
+                      ? global.COLORS.GIALLO_COUNTDOWN
+                      : "grey",
+                },
+              }}
+              onClick={() => {
+                setIframeSource(videoLinks.AlessandroCorsini);
+                setSelectedVideoSpeaker("AlessandroCorsini");
+              }}
+            >
+              Alessandro Corsini
+              <p
+                style={{
+                  fontSize: "20px",
+                  opacity: selectedVideoSpeaker === "AlessandroCorsini" ? 1 : 0,
+                  marginTop:
+                    selectedVideoSpeaker === "AlessandroCorsini"
+                      ? "0"
+                      : "-60px",
+                  transition: "0.5s all",
+                }}
+              >
+                Come pesci che modellano l'acqua
+              </p>
+            </div>
+            <div
+              style={{
+                ...speakerSelectionStyle,
+                ...{
+                  color:
+                    selectedVideoSpeaker === "RaffaellaAbate"
+                      ? global.COLORS.GIALLO_COUNTDOWN
+                      : "grey",
+                },
+              }}
+              onClick={() => {
+                setIframeSource(videoLinks.RaffaellaAbate);
+                setSelectedVideoSpeaker("RaffaellaAbate");
+              }}
+            >
+              Raffaella Abate
+              <p
+                style={{
+                  fontSize: "20px",
+                  opacity: selectedVideoSpeaker === "RaffaellaAbate" ? 1 : 0,
+                  marginTop:
+                    selectedVideoSpeaker === "RaffaellaAbate" ? "0" : "-60px",
+                  transition: "0.5s all",
+                }}
+              >
+                Un viaggio nella natura: biofilia, solastalgia e benessere
+              </p>
+            </div>
+            <div
+              style={{
+                ...speakerSelectionStyle,
+                ...{
+                  color:
+                    selectedVideoSpeaker === "MarceloConti"
+                      ? global.COLORS.GIALLO_COUNTDOWN
+                      : "grey",
+                },
+              }}
+              onClick={() => {
+                setIframeSource(videoLinks.MarceloConti);
+                setSelectedVideoSpeaker("MarceloConti");
+              }}
+            >
+              Marcelo Enrique Conti
+              <p
+                style={{
+                  fontSize: "20px",
+                  opacity: selectedVideoSpeaker === "MarceloConti" ? 1 : 0,
+                  marginTop:
+                    selectedVideoSpeaker === "MarceloConti" ? "0" : "-60px",
+                  transition: "0.5s all",
+                }}
+              >
+                Dalla complessità economica al cambiamento climatico
+              </p>
+            </div>
+            <div
+              style={{
+                ...speakerSelectionStyle,
+                ...{
+                  color:
+                    selectedVideoSpeaker === "SabrinaLucibello"
+                      ? global.COLORS.GIALLO_COUNTDOWN
+                      : "grey",
+                },
+              }}
+              onClick={() => {
+                setIframeSource(videoLinks.SabrinaLucibello);
+                setSelectedVideoSpeaker("SabrinaLucibello");
+              }}
+            >
+              Sabrina Lucibello
+              <p
+                style={{
+                  fontSize: "20px",
+                  opacity: selectedVideoSpeaker === "SabrinaLucibello" ? 1 : 0,
+                  marginTop:
+                    selectedVideoSpeaker === "SabrinaLucibello" ? "0" : "-60px",
+                  transition: "0.5s all",
+                }}
+              >
+                Non si butta via niente!
+              </p>
+            </div>
+            <div
+              style={{
+                ...speakerSelectionStyle,
+                ...{
+                  color:
+                    selectedVideoSpeaker === "NunzioAllocca"
+                      ? global.COLORS.GIALLO_COUNTDOWN
+                      : "grey",
+                },
+              }}
+              onClick={() => {
+                setIframeSource(videoLinks.NunzioAllocca);
+                setSelectedVideoSpeaker("NunzioAllocca");
+              }}
+            >
+              Nunzio Allocca
+              <p
+                style={{
+                  fontSize: "20px",
+                  opacity: selectedVideoSpeaker === "NunzioAllocca" ? 1 : 0,
+                  marginTop:
+                    selectedVideoSpeaker === "NunzioAllocca" ? "0" : "-60px",
+                  transition: "0.5s all",
+                }}
+              >
+                Responsabilità della cultura e cultura della responsabilità
+              </p>
+            </div>
+          </section>
+
+          <iframe
+            width="800px"
+            style={{ aspectRatio: "16/9" }}
+            src={iframeSource}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </section>
       </>
     );
   else
@@ -311,12 +557,15 @@ export default function Countdown2024() {
             5 | 24
           </h1>
           <p
-            style={{ color: global.COLORS.GIALLO_COUNTDOWN, marginLeft: "3ch",  backgroundColor: "#000", }}
+            style={{
+              color: global.COLORS.GIALLO_COUNTDOWN,
+              marginLeft: "3ch",
+              backgroundColor: "#000",
+            }}
           >
             Nuovo Teatro Ateneo
           </p>
           {getShowMore()}
-
         </section>
         <section
           style={{
@@ -361,7 +610,8 @@ export default function Countdown2024() {
               }}
             >
               {speakersInfo.map((speaker) => {
-                const { nomeSpeaker, ruoloSpeaker, link, imgSrc } = speaker;
+                const { nomeSpeaker, ruoloSpeaker, link, imgSrc, linkTalk } =
+                  speaker;
                 return (
                   <SpeakerCard
                     key={nomeSpeaker}
@@ -370,6 +620,8 @@ export default function Countdown2024() {
                     link={link}
                     imgSrc={imgSrc}
                     showName={true}
+                    showLinkTalk={true}
+                    linkTalk={linkTalk}
                     event={"countdown24"}
                     style={{
                       zIndex: 2,
