@@ -20,6 +20,7 @@
     "SOCIAL_NAV_HEIGHT": "0px",
     "NAV_HEIGHT": "81px",
     "MOBILE_WIDTH": "480",
+    "SMALL_MOBILE_WIDTH": "376",
     "TABLET_WIDTH": "768",
     "BIG_TABLET_WIDTH": "820",
     "BENTO_BOX_PADDING": "24px",

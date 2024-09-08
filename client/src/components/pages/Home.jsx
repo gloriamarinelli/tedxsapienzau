@@ -222,13 +222,12 @@ export default function Home() {
             style={{
               width: windowSize > global.UTILS.TABLET_WIDTH ? "55%" : "auto",
               paddingLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
-              fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : "15px",
               color: "white",
             }}
           >
             <h1
               style={{
-                fontSize: "200%",
+                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "200%" : windowSize > 360 ? "170%" : "110%",
                 paddingBottom: "2%",
                 paddingTop: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "auto",
               }}
@@ -238,6 +237,7 @@ export default function Home() {
             </h1>
             <h3
               style={{
+                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "150%" : windowSize > 360 ? "150%" : "90%",
                 paddingBottom: "2%",
               }}
             >
@@ -245,6 +245,7 @@ export default function Home() {
             </h3>
             <h3
               style={{
+                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "150%" : windowSize > 360 ? "150%" : "90%",
                 paddingBottom: "2%",
               }}
             >
@@ -261,6 +262,7 @@ export default function Home() {
             </h3>
             <p
             style={{
+              fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : "90%",
               textAlign: "justify",
             }}
             >
