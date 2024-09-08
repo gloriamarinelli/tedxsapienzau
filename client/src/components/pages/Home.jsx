@@ -204,12 +204,12 @@ export default function Home() {
           id="main-container"
           style={{
             width: "100%",
-            height: "100%",
+            height: windowSize < 361 ? "110%" : "100%",
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${RFW_bg_img})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
-            display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "block",
+            display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "inline-block",
             justifyContent: "space-between",
             alignItems: "center",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
