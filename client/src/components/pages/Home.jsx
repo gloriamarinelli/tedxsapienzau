@@ -221,23 +221,46 @@ export default function Home() {
           <div
             style={{
               width: windowSize > global.UTILS.TABLET_WIDTH ? "55%" : "auto",
-              paddingLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
+              paddingLeft:
+                windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
               color: "white",
             }}
           >
             <h1
               style={{
-                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "2.5em" : windowSize > 360 ? "170%" : "125%",
+                fontSize:
+                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
+                    ? "2.5em"
+                    : windowSize > 360
+                    ? "170%"
+                    : "125%",
                 paddingBottom: "2%",
-                paddingTop: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "auto",
               }}
             >
               {" "}
-              RFW 16 Settembre{" "}
+              Rome Future Week{" "}
             </h1>
             <h3
               style={{
-                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "1.7em" : windowSize > 360 ? "150%" : "110%",
+                fontSize:
+                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
+                    ? "1.7em"
+                    : windowSize > 360
+                    ? "150%"
+                    : "110%",
+                paddingBottom: "2%",
+              }}
+            >
+              16 Settembre 2024
+            </h3>
+            <h3
+              style={{
+                fontSize:
+                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
+                    ? "1.7em"
+                    : windowSize > 360
+                    ? "150%"
+                    : "110%",
                 paddingBottom: "2%",
               }}
             >
@@ -245,7 +268,12 @@ export default function Home() {
             </h3>
             <h3
               style={{
-                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "1.7em" : windowSize > 360 ? "150%" : "110%",
+                fontSize:
+                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
+                    ? "1.7em"
+                    : windowSize > 360
+                    ? "150%"
+                    : "110%",
                 paddingBottom: "2%",
               }}
             >
@@ -261,10 +289,15 @@ export default function Home() {
               </a>
             </h3>
             <p
-            style={{
-              fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : windowSize > 360 ? "90%" : "80%",
-              textAlign: "justify",
-            }}
+              style={{
+                fontSize:
+                  windowSize > global.UTILS.TABLET_WIDTH
+                    ? "1.5em"
+                    : windowSize > 360
+                    ? "90%"
+                    : "80%",
+                textAlign: "justify",
+              }}
             >
               Un viaggio attraverso i progetti che, grazie alla sinergia tra
               aziende e l'Università di Roma La Sapienza, trasformano la
