@@ -210,26 +210,27 @@ export default function Home() {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${RFW_bg_img})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
-            display: "flex",
+            display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "block",
             justifyContent: "space-between",
             alignItems: "center",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             position: "relative",
           }}
         >
-          {/* Colonna per il testo */}
+          {/* news' content column */}
           <div
             style={{
-              width: "55%",
+              width: windowSize > global.UTILS.TABLET_WIDTH ? "55%" : "auto",
+              paddingLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
+              fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : "15px",
               color: "white",
-              paddingLeft: "10%",
-              fontSize: "1.5em",
             }}
           >
             <h1
               style={{
                 fontSize: "200%",
                 paddingBottom: "2%",
+                paddingTop: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "auto",
               }}
             >
               {" "}
@@ -258,25 +259,29 @@ export default function Home() {
                 Aula Ex-Cisadu, Città Universitaria
               </a>
             </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p
+            style={{
+              textAlign: "justify",
+            }}
+            >
+              Un viaggio attraverso i progetti che, grazie alla sinergia tra
+              aziende e l'Università di Roma La Sapienza, trasformano la
+              collaborazione in benefici tangibili per la comunità accademica e
+              di ricerca. Un'occasione unica per scoprire come queste iniziative
+              stanno plasmando il futuro dell'innovazione, con approfondimenti
+              su aree strategiche che verranno esplorate dagli interventi delle
+              esperte e degli esperti durante l'evento.
             </p>
           </div>
 
-          {/* div RFW logo */}
+          {/* RFW logo */}
           <div
             style={{
-              width: "50%",
-              padding: "20px",
+              width: windowSize > global.UTILS.TABLET_WIDTH ? "50%" : "auto",
+              padding: windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "auto",
               display: "flex",
-              justifyContent: "center", // centra orizzontalmente
-              alignItems: "center", // centra verticalmente
+              justifyContent: "center", // horizontal alignment
+              alignItems: "center", // vertical alignment
             }}
           >
             <img
