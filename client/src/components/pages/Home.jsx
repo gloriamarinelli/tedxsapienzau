@@ -224,7 +224,6 @@ export default function Home() {
               paddingLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
               fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : "15px",
               color: "white",
-              paddingBottom: windowSize < global.UTILS.TABLET_WIDTH ? "10%" : "0%",
             }}
           >
             <h1
