@@ -227,7 +227,7 @@ export default function Home() {
           >
             <h1
               style={{
-                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "200%" : windowSize > 360 ? "170%" : "110%",
+                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "2.5em" : windowSize > 360 ? "170%" : "125%",
                 paddingBottom: "2%",
                 paddingTop: windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "auto",
               }}
@@ -237,7 +237,7 @@ export default function Home() {
             </h1>
             <h3
               style={{
-                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "150%" : windowSize > 360 ? "150%" : "90%",
+                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "1.7em" : windowSize > 360 ? "150%" : "110%",
                 paddingBottom: "2%",
               }}
             >
@@ -245,7 +245,7 @@ export default function Home() {
             </h3>
             <h3
               style={{
-                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "150%" : windowSize > 360 ? "150%" : "90%",
+                fontSize: windowSize > global.UTILS.SMALL_MOBILE_WIDTH ? "1.7em" : windowSize > 360 ? "150%" : "110%",
                 paddingBottom: "2%",
               }}
             >
@@ -262,7 +262,7 @@ export default function Home() {
             </h3>
             <p
             style={{
-              fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : "90%",
+              fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "1.5em" : windowSize > 360 ? "90%" : "80%",
               textAlign: "justify",
             }}
             >
