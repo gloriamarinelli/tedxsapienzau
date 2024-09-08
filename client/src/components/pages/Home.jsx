@@ -230,7 +230,7 @@ export default function Home() {
               style={{
                 fontSize:
                   windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "2.5em"
+                    ? "2.0em"
                     : windowSize > 360
                     ? "170%"
                     : "125%",
@@ -244,7 +244,7 @@ export default function Home() {
               style={{
                 fontSize:
                   windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "1.7em"
+                    ? "1.5em"
                     : windowSize > 360
                     ? "150%"
                     : "110%",
@@ -257,7 +257,7 @@ export default function Home() {
               style={{
                 fontSize:
                   windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "1.7em"
+                    ? "1.5em"
                     : windowSize > 360
                     ? "150%"
                     : "110%",
@@ -270,7 +270,7 @@ export default function Home() {
               style={{
                 fontSize:
                   windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "1.7em"
+                    ? "1.5em"
                     : windowSize > 360
                     ? "150%"
                     : "110%",
@@ -292,7 +292,7 @@ export default function Home() {
               style={{
                 fontSize:
                   windowSize > global.UTILS.TABLET_WIDTH
-                    ? "1.5em"
+                    ? "1.4em"
                     : windowSize > 360
                     ? "90%"
                     : "80%",
