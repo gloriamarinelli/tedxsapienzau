@@ -16,6 +16,7 @@ import TEDxLogoWhite from "../images/logo-white.png";
 import Blog from "./Blog";
 import BlogHome from "./BlogHome";
 import MvHome from "./MvHome";
+import RFW24_Home_News from "./RFW24_Home_News";
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
 import "../../index.css";
 import "../../resources/styles/home.css";
@@ -28,7 +29,6 @@ import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
 import RFW_bg_img from "../images/RFW23/RFW2.png";
-import test_img from "../images/RFW-logo_negativo_su_box.png";
 
 import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
@@ -204,8 +204,7 @@ export default function Home() {
           id="main-container"
           style={{
             width: "100%",
-            height: "90%",
-            padding: global.UTILS.BENTO_BOX_PADDING,
+            height: "100%",
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${RFW_bg_img})`,
             backgroundSize: "cover",
@@ -217,118 +216,9 @@ export default function Home() {
             position: "relative",
           }}
         >
-          {/* news' content column */}
-          <div
-            style={{
-              width: windowSize > global.UTILS.TABLET_WIDTH ? "55%" : "auto",
-              paddingLeft:
-                windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
-              color: "white",
-            }}
-          >
-            <h1
-              style={{
-                fontSize:
-                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "2.0em"
-                    : windowSize > 360
-                    ? "170%"
-                    : "125%",
-                paddingBottom: "2%",
-              }}
-            >
-              {" "}
-              Rome Future Week{" "}
-            </h1>
-            <h3
-              style={{
-                fontSize:
-                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "1.5em"
-                    : windowSize > 360
-                    ? "150%"
-                    : "110%",
-                paddingBottom: "2%",
-              }}
-            >
-              16 Settembre 2024
-            </h3>
-            <h3
-              style={{
-                fontSize:
-                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "1.5em"
-                    : windowSize > 360
-                    ? "150%"
-                    : "110%",
-                paddingBottom: "2%",
-              }}
-            >
-              ore 16:00
-            </h3>
-            <h3
-              style={{
-                fontSize:
-                  windowSize > global.UTILS.SMALL_MOBILE_WIDTH
-                    ? "1.5em"
-                    : windowSize > 360
-                    ? "150%"
-                    : "110%",
-                paddingBottom: "2%",
-              }}
-            >
-              <a
-                style={{
-                  textDecoration: "underline",
-                  textDecorationColor: "#eb0028",
-                  color: "rgb(255, 255, 255)",
-                }}
-                href="https://www2.uniroma1.it/amm-cda/intranet/allegato16cda02_12_2021.pdf"
-              >
-                Aula Ex-Cisadu, Città Universitaria
-              </a>
-            </h3>
-            <p
-              style={{
-                fontSize:
-                  windowSize > global.UTILS.TABLET_WIDTH
-                    ? "1.4em"
-                    : windowSize > 360
-                    ? "90%"
-                    : "80%",
-                textAlign: "justify",
-              }}
-            >
-              Un viaggio attraverso i progetti che, grazie alla sinergia tra
-              aziende e l'Università di Roma La Sapienza, trasformano la
-              collaborazione in benefici tangibili per la comunità accademica e
-              di ricerca. Un'occasione unica per scoprire come queste iniziative
-              stanno plasmando il futuro dell'innovazione, con approfondimenti
-              su aree strategiche che verranno esplorate dagli interventi delle
-              esperte e degli esperti durante l'evento.
-            </p>
-          </div>
-
-          {/* RFW logo */}
-          <div
-            style={{
-              width: windowSize > global.UTILS.TABLET_WIDTH ? "50%" : "auto",
-              padding: windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "auto",
-              display: "flex",
-              justifyContent: "center", // horizontal alignment
-              alignItems: "center", // vertical alignment
-            }}
-          >
-            <img
-              src={test_img}
-              alt="Rome Future Week Logo"
-              style={{
-                width: "40%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
-          </div>
+          <section>
+            <RFW24_Home_News />
+          </section>
         </div>
       </section>
       <section>
