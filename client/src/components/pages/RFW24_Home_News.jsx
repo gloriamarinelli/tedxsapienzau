@@ -146,15 +146,24 @@ export default function RFW24_Home_News({ withTitle = false }) {
             justifyContent: "center",
           }}
         >
-          <img
-            src={RFW_24_logo}
-            alt="Rome Future Week Logo"
+          <div
             style={{
-              width: "40%",
-              height: "auto",
-              borderRadius: "10px",
+              id: "RFW_logo_div",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
-          ></img>
+          >
+            <img
+              src={RFW_24_logo}
+              alt="Rome Future Week Logo"
+              style={{
+                width: "40%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            ></img>
+          </div>
         </div>
       </section>
     );
@@ -260,15 +269,25 @@ export default function RFW24_Home_News({ withTitle = false }) {
             justifyContent: "center",
           }}
         >
-          <img
-            src={RFW_24_logo}
-            alt="Rome Future Week Logo"
+          <div
             style={{
-              width: "40%",
-              height: "auto",
-              borderRadius: "10px",
+              id: "RFW_logo_div",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingBottom: "2%",
             }}
-          ></img>
+          >
+            <img
+              src={RFW_24_logo}
+              alt="Rome Future Week Logo"
+              style={{
+                width: "40%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            ></img>
+          </div>
         </div>
       </section>
     );
