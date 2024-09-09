@@ -146,6 +146,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          padding: "3.5%",
         }}
       >
         <div
@@ -156,7 +157,6 @@ export default function RFW24_Home_News({ withTitle = false }) {
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             color: "white",
-            padding: "2%",
           }}
         >
           <h1
@@ -239,7 +239,6 @@ export default function RFW24_Home_News({ withTitle = false }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              paddingBottom: "2%",
             }}
           >
             <img
