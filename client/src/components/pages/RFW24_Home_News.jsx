@@ -1,13 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useOutletContext } from "react-router";
-import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
 import "../../index.css";
 import "../../resources/styles/home.css";
 import RFW_24_logo from "../images/RFW-logo_negativo_su_box.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function RFW24_Home_News({ withTitle = false }) {
   const [windowSize, setWindowSize] = useOutletContext();
+  const [isVideoHovered, setIsVideoHovered] = useState(false);
+  const [isMapHovered, setIsMapHovered] = useState(false);
+  const [isVideoClicked, setIsVideoClicked] = useState(false);
+  const [isMapClicked, setIsMapClicked] = useState(false);
+  const handleVideoClick = () => {
+    setIsVideoClicked(true);
+  };
+  const handleMapClick = () => {
+    setIsMapClicked(true);
+  };
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**
@@ -56,11 +68,18 @@ export default function RFW24_Home_News({ withTitle = false }) {
               paddingBottom: "2%",
             }}
           >
-            <extra>
-              <condensed-extrabold>
-                16 Settembre 2024 - ore 16:00
-              </condensed-extrabold>
-            </extra>
+            <a
+              style={{
+                textDecoration: "none",
+                color: isVideoHovered ? "#E62153" : "#ee6693",
+              }}
+              onMouseEnter={() => setIsVideoHovered(true)}
+              onMouseLeave={() => setIsVideoHovered(false)}
+              href="https://uniroma1.zoom.us/s/85617281094"
+            >
+              <FontAwesomeIcon icon={faVideo} style={{ marginRight: "3%" }} />
+              16 Settembre 2024 - ore 16:00{" "}
+            </a>
           </h3>
           <h3
             style={{
@@ -70,18 +89,23 @@ export default function RFW24_Home_News({ withTitle = false }) {
           >
             <a
               style={{
-                textDecoration: "underline",
-                textDecorationColor: "#eb0028",
-                color: "rgb(255, 255, 255)",
+                textDecoration: "none",
+                color: isMapHovered ? "#E62153" : "#ee6693",
               }}
+              onMouseEnter={() => setIsMapHovered(true)}
+              onMouseLeave={() => setIsMapHovered(false)}
               href="https://www2.uniroma1.it/amm-cda/intranet/allegato16cda02_12_2021.pdf"
             >
+              <FontAwesomeIcon
+                icon={faMapLocationDot}
+                style={{ marginRight: "3%" }}
+              />
               Aula Ex-Cisadu, Città Universitaria
             </a>
           </h3>
           <p
             style={{
-              fontSize: "100%",
+              fontSize: "120%",
               textAlign: "justify",
             }}
           >
@@ -169,19 +193,17 @@ export default function RFW24_Home_News({ withTitle = false }) {
               paddingBottom: "2%",
             }}
           >
-            <extra>
-              <condensed-extrabold>16 Settembre 2024</condensed-extrabold>
-            </extra>
-          </h3>
-          <h3
-            style={{
-              fontSize: "100%",
-              paddingBottom: "2%",
-            }}
-          >
-            <extra>
-              <condensed-extrabold>ore 16:00</condensed-extrabold>
-            </extra>
+            <a
+              onClick={handleVideoClick}
+              style={{
+                textDecoration: "none",
+                color: isVideoClicked ? "#E62153" : "#ee6693",
+              }}
+              href="https://uniroma1.zoom.us/s/85617281094"
+            >
+              <FontAwesomeIcon icon={faVideo} style={{ marginRight: "3%" }} />
+              16 Settembre 2024 - ore 16:00{" "}
+            </a>
           </h3>
           <h3
             style={{
@@ -190,13 +212,17 @@ export default function RFW24_Home_News({ withTitle = false }) {
             }}
           >
             <a
+              onClick={handleMapClick}
               style={{
-                textDecoration: "underline",
-                textDecorationColor: "#eb0028",
-                color: "rgb(255, 255, 255)",
+                textDecoration: "none",
+                color: isMapClicked ? "#E62153" : "#ee6693",
               }}
               href="https://www2.uniroma1.it/amm-cda/intranet/allegato16cda02_12_2021.pdf"
             >
+              <FontAwesomeIcon
+                icon={faMapLocationDot}
+                style={{ marginRight: "3%" }}
+              />
               Aula Ex-Cisadu, Città Universitaria
             </a>
           </h3>
