@@ -77,7 +77,7 @@ export default function MvHome({ withTitle = false }) {
         <div
           id="main-left-container"
           style={{
-            width: "100%",
+            width: windowSize > global.UTILS.TABLET_WIDTH ? "70%" : "100%",
             height: windowSize > global.UTILS.TABLET_WIDTH ? "100%" : "50%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,

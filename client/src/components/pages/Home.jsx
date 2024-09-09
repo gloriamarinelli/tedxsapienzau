@@ -29,6 +29,8 @@ import Countdown from "../components/Countdown";
 import CountUp from "react-countup";
 import SpeakerCard from "../components/SpeakerCard";
 import RFW_bg_img from "../images/RFW23/RFW2.png";
+import RWF_TedxSapienza1 from "../images/RFW24/1.png";
+import RWF_TedxSapienza2 from "../images/RFW24/2.png";
 
 import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
@@ -89,11 +91,14 @@ export default function Home() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          // height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          height: "100%",
           marginTop: global.UTILS.NAV_HEIGHT,
           width: "100vw",
           backgroundColor: "#000",
-          padding: global.UTILS.BENTO_BOX_PADDING,
+          padding: "34px",
+          gap: "20px",
+          flexWrap: "wrap",
         }}
       >
         {/** inizio div video **/}
@@ -200,7 +205,7 @@ export default function Home() {
         </div>*/}
         {/** fine div video **/}
 
-        <div
+        {/* <div
           id="main-container"
           style={{
             width: "100%",
@@ -220,11 +225,36 @@ export default function Home() {
           <section>
             <RFW24_Home_News />
           </section>
-        </div>
+        </div> */}
+
+        <div
+          style={{
+            width: "50%",
+            aspectRatio: "1/1",
+            display: "block",
+            backgroundImage: `url(${RWF_TedxSapienza1})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            flex: "1 1 450px",
+          }}
+        ></div>
+        <div
+          style={{
+            width: "50%",
+            aspectRatio: "1/1",
+            display: "block",
+            backgroundImage: `url(${RWF_TedxSapienza2})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            flex: "1 1 450px",
+          }}
+        ></div>
       </section>
-      <section>
-        <MvHome />
-      </section>
+      <MvHome />
       <section>
         <Events withTitle={false} />
         <div
