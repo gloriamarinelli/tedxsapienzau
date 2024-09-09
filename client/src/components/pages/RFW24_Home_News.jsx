@@ -97,7 +97,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           </h3>
           <p
             style={{
-              fontSize: "1.4em",
+              fontSize: "1.0em",
               textAlign: "justify",
             }}
           >
