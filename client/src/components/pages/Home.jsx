@@ -31,6 +31,11 @@ import SpeakerCard from "../components/SpeakerCard";
 import RFW_bg_img from "../images/RFW23/RFW2.png";
 import RWF_TedxSapienza1 from "../images/RFW24/1.png";
 import RWF_TedxSapienza2 from "../images/RFW24/2.png";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faTicket } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import AlessandroCorsiniImage from "../images/countdown24/AlessandroCorsini.webp";
 import RaffaellaAbateImage from "../images/countdown24/RaffaellaAbate.webp";
@@ -83,6 +88,27 @@ const speakersInfo = [
 
 export default function Home() {
   const [windowSize, setWindowSize] = useOutletContext();
+  const [isVideoHovered, setIsVideoHovered] = useState(false);
+  const [isMapHovered, setIsMapHovered] = useState(false);
+  const [isTicketHovered, setIsTicketHovered] = useState(false);
+  const [isVideoClicked, setIsVideoClicked] = useState(false);
+  const [isMapClicked, setIsMapClicked] = useState(false);
+  const [isInfoClicked, setIsInfoClicked] = useState(false);
+  const [isCloseInfoClicked, setIsCloseInfoClicked] = useState(false);
+  const handleVideoClick = () => {
+    setIsVideoClicked(true);
+  };
+  const handleMapClick = () => {
+    setIsMapClicked(true);
+  };
+  const handleInfoClick = () => {
+    setIsInfoClicked(true);
+    setIsCloseInfoClicked(false);
+  };
+  const handleCloseInfoClicked = () => {
+    setIsInfoClicked(false);
+    setIsCloseInfoClicked(true);
+  };
 
   return (
     <div style={{ backgroundColor: "#000" }}>
@@ -251,8 +277,152 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             flex: "1 1 450px",
+            position: "relative",
           }}
-        ></div>
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "120px",
+              right: "60px",
+            }}
+          >
+            <button
+              id="RFW_info_button"
+              onClick={handleInfoClick}
+              style={{
+                display: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "block" : "none",
+                backgroundColor: "black",
+                border: "none",
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faCircleInfo}
+                style={{ color: "#E62153", height: "40px" }}
+              />
+            </button>
+          </div>
+        </div>
+        {/* overlay div (info) */}
+        <div
+          id="useful_links"
+          style={{
+            width: "50%",
+            height: "70%",
+            aspectRatio: "1/1",
+            display: "block",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            flex: "1 1 450px",
+            zIndex: "9000",
+            position: "absolute",
+            display: isInfoClicked ? "flex" : "none",
+            flexDirection: "column",
+            color: "white",
+            border: "2px solid #E62153",
+          }}
+        >
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <button
+              id="RFW_close_info_button"
+              onClick={handleCloseInfoClicked}
+              style={{
+                backgroundColor: "black",
+                border: "none",
+                margin: "5%",
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faXmark}
+                style={{ color: "white", height: "40px" }}
+              />
+            </button>
+          </div>
+          <h2
+            style={{
+              alignSelf: "center",
+              textTransform: "uppercase",
+              fontSize: "250%",
+            }}
+          >
+            Links Utili
+          </h2>
+          <div
+            style={{
+              marginLeft: "15%",
+              marginRight: "15%",
+              marginTop: "10%",
+              marginBottom: "30%",
+            }}
+          >
+            <p
+              style={{
+                width: "100%",
+                fontSize: "180%",
+                paddingBottom: "2%",
+              }}
+            >
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: isTicketHovered ? "#E62153" : "white",
+                }}
+                onMouseEnter={() => setIsTicketHovered(true)}
+                onMouseLeave={() => setIsTicketHovered(false)}
+                href=""
+              >
+                <FontAwesomeIcon
+                  icon={faTicket}
+                  style={{ marginRight: "3%" }}
+                />
+                Prenota il tuo ticket
+              </a>
+            </p>
+            <p
+              style={{
+                width: "100%",
+                fontSize: "180%",
+                paddingBottom: "2%",
+              }}
+            >
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: isVideoHovered ? "#E62153" : "white",
+                }}
+                onMouseEnter={() => setIsVideoHovered(true)}
+                onMouseLeave={() => setIsVideoHovered(false)}
+                href="https://uniroma1.zoom.us/s/85617281094"
+              >
+                <FontAwesomeIcon icon={faVideo} style={{ marginRight: "3%" }} />
+                Segui la diretta Zoom
+              </a>
+            </p>
+            <p
+              style={{
+                width: "100%",
+                fontSize: "180%",
+                paddingBottom: "2%",
+              }}
+            >
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: isMapHovered ? "#E62153" : "white",
+                }}
+                onMouseEnter={() => setIsMapHovered(true)}
+                onMouseLeave={() => setIsMapHovered(false)}
+                href="https://www2.uniroma1.it/amm-cda/intranet/allegato16cda02_12_2021.pdf"
+              >
+                <FontAwesomeIcon
+                  icon={faMapLocationDot}
+                  style={{ marginRight: "3%" }}
+                />
+                Mappa Aula Ex-Cisadu, Città Universitaria
+              </a>
+            </p>
+          </div>
+        </div>
       </section>
       <MvHome />
       <section>
