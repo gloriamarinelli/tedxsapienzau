@@ -8,32 +8,6 @@ import RFW_24_logo from "../images/RFW-logo_negativo_su_box.png";
 
 export default function RFW24_Home_News({ withTitle = false }) {
   const [windowSize, setWindowSize] = useOutletContext();
-  const [hidden1, setHidden1] = useState(true);
-
-  const renderSubContainer = (hidden, setHidden, endValue, label, fontSize) => (
-    <div>
-      <h1
-        className="font-weight-bold"
-        style={{
-          color: hidden ? "#eb0028" : "#FFF",
-          fontSize: fontSize,
-          fontWeight: "bold",
-          fontFamily: "Fira sans Extra Condensed",
-        }}
-      ></h1>
-      <h5
-        style={{
-          paddingTop: "-40px",
-          fontWeight: "bold",
-          fontFamily: "Fira sans Extra Condensed",
-          color: "#FFF",
-          fontSize: windowSize > 1245 ? "4vh" : "3vh",
-        }}
-      >
-        {label}
-      </h5>
-    </div>
-  );
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**
@@ -42,15 +16,9 @@ export default function RFW24_Home_News({ withTitle = false }) {
     return (
       <section
         style={{
-          display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
+          display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height:
-            windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(80vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
-          width: "100vw",
-          padding: global.UTILS.BENTO_BOX_PADDING,
         }}
       >
         {/* news' content div */}
@@ -58,7 +26,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           id="main-left-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "100%" : "50%",
+            height: "100%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             display: "flex",
@@ -174,25 +142,21 @@ export default function RFW24_Home_News({ withTitle = false }) {
     return (
       <section
         style={{
-          display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           justifyContent: "center",
-          width: "100vw",
-          padding: global.UTILS.BENTO_BOX_PADDING,
-          color: "white",
         }}
       >
         <div
           id="main-left-container"
           style={{
-            width: "85%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "100%" : "40%",
+            width: "100%",
+            height: "40%",
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            display: "flex",
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            flexDirection: "column",
-            alignItems: "left",
-            justifyContent: "center",
             color: "white",
+            padding: "2%",
           }}
         >
           <h1

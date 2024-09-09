@@ -217,10 +217,7 @@ export default function Home() {
             backgroundColor: "yellow",
           }}
         >
-          <section
-          style={{
-            display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "inline-block",
-          }}>
+          <section>
             <RFW24_Home_News />
           </section>
         </div>
