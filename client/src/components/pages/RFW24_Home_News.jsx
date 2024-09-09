@@ -159,18 +159,28 @@ export default function RFW24_Home_News({ withTitle = false }) {
             color: "white",
           }}
         >
-          <h1
+          <h2
             style={{
-              fontSize: "200%",
+              fontSize: "120%",
               paddingBottom: "2%",
             }}
           >
             {" "}
             Rome Future Week{" "}
+          </h2>
+          <h1
+            style={{
+              fontSize: "150%",
+              paddingBottom: "2%",
+              fontStyle: "italic",
+            }}
+          >
+            {" "}
+            Università, Ricerca e Innovazione
           </h1>
           <h3
             style={{
-              fontSize: "150%",
+              fontSize: "100%",
               paddingBottom: "2%",
             }}
           >
@@ -180,7 +190,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           </h3>
           <h3
             style={{
-              fontSize: "150%",
+              fontSize: "100%",
               paddingBottom: "2%",
             }}
           >
@@ -190,7 +200,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           </h3>
           <h3
             style={{
-              fontSize: "150%",
+              fontSize: "100%",
               paddingBottom: "2%",
             }}
           >
@@ -207,7 +217,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           </h3>
           <p
             style={{
-              fontSize: "90%",
+              fontSize: "80%",
               textAlign: "justify",
             }}
           >
