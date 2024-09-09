@@ -39,20 +39,13 @@ export default function RFW24_Home_News({ withTitle = false }) {
             paddingLeft: "10%",
           }}
         >
-          <h2
-            style={{
-              fontSize: "2.5em",
-              paddingBottom: "2%",
-            }}
-          >
-            {" "}
-            Rome Future Week{" "}
-          </h2>
+          
           <h1
             style={{
-              fontSize: "3.0em",
+              fontSize: "300%",
               paddingBottom: "2%",
               fontStyle: "italic",
+              textTransform: "uppercase",
             }}
           >
             {" "}
@@ -60,27 +53,17 @@ export default function RFW24_Home_News({ withTitle = false }) {
           </h1>
           <h3
             style={{
-              fontSize: "2.0em",
+              fontSize: "180%",
               paddingBottom: "2%",
             }}
           >
             <extra>
-              <condensed-extrabold>16 Settembre 2024</condensed-extrabold>
+              <condensed-extrabold>16 Settembre 2024 - ore 16:00</condensed-extrabold>
             </extra>
           </h3>
           <h3
             style={{
-              fontSize: "2.0em",
-              paddingBottom: "2%",
-            }}
-          >
-            <extra>
-              <condensed-extrabold>ore 16:00</condensed-extrabold>
-            </extra>
-          </h3>
-          <h3
-            style={{
-              fontSize: "2.0em",
+              fontSize: "180%",
               paddingBottom: "2%",
             }}
           >
@@ -97,7 +80,7 @@ export default function RFW24_Home_News({ withTitle = false }) {
           </h3>
           <p
             style={{
-              fontSize: "1.0em",
+              fontSize: "100%",
               textAlign: "justify",
             }}
           >
