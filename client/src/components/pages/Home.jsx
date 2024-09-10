@@ -369,7 +369,7 @@ export default function Home() {
                 }}
                 onMouseEnter={() => setIsTicketHovered(true)}
                 onMouseLeave={() => setIsTicketHovered(false)}
-                href=""
+                href="https://www.eventbrite.it/e/biglietti-universita-ricerca-e-innovazione-1003202574907"
               >
                 <FontAwesomeIcon
                   icon={faTicket}
