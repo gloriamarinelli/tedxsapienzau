@@ -31,6 +31,7 @@ import SpeakerCard from "../components/SpeakerCard";
 import RFW_bg_img from "../images/RFW23/RFW2.png";
 import RWF_TedxSapienza1 from "../images/RFW24/1.png";
 import RWF_TedxSapienza2 from "../images/RFW24/2.png";
+import RWF_TedxSapienza3 from "../images/RFW24/3.png";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -87,6 +88,9 @@ const speakersInfo = [
 ];
 
 export default function Home() {
+  const windowWidth = window.innerWidth; // window's width (breaking point 1458px)
+  const redWinWidth = windowWidth / 80;
+
   const [windowSize, setWindowSize] = useOutletContext();
   const [isVideoHovered, setIsVideoHovered] = useState(false);
   const [isMapHovered, setIsMapHovered] = useState(false);
@@ -280,6 +284,7 @@ export default function Home() {
             position: "relative",
           }}
         >
+          {/*
           <div
             style={{
               position: "absolute",
@@ -302,9 +307,9 @@ export default function Home() {
               />
             </button>
           </div>
-        </div>
-        {/* overlay div (info) */}
-        <div
+        </div>*/}
+          {/* overlay div (info) */}
+          {/*<div
           id="useful_links"
           style={{
             width: "50%",
@@ -421,6 +426,101 @@ export default function Home() {
                 Mappa Aula Ex-Cisadu, Città Universitaria
               </a>
             </p>
+          </div>*/}
+        </div>
+        <div
+          style={{
+            width: "50%",
+            aspectRatio: "1/1",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundImage: `url(${RWF_TedxSapienza3})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            flex: "1 1 450px",
+          }}
+        >
+          <div>
+            <div
+              id="links_div"
+              style={{
+                fontSize: windowWidth < 1458 ? "2.5vw" : `${redWinWidth}px`,
+                paddingTop: "30%",
+                paddingLeft:
+                  windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
+              }}
+            >
+              <p
+                style={{
+                  width: "100%",
+                  paddingBottom: "2%",
+                }}
+              >
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: isTicketHovered ? "#E62153" : "white",
+                  }}
+                  onMouseEnter={() => setIsTicketHovered(true)}
+                  onMouseLeave={() => setIsTicketHovered(false)}
+                  href="https://www.eventbrite.it/e/biglietti-universita-ricerca-e-innovazione-1003202574907"
+                >
+                  <FontAwesomeIcon
+                    icon={faTicket}
+                    style={{ marginRight: "3%" }}
+                  />
+                  Prenota il tuo ticket
+                </a>
+              </p>
+              <p
+                style={{
+                  width: "100%",
+                  paddingBottom: "2%",
+                }}
+              >
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: isVideoHovered ? "#E62153" : "white",
+                  }}
+                  onMouseEnter={() => setIsVideoHovered(true)}
+                  onMouseLeave={() => setIsVideoHovered(false)}
+                  href="https://uniroma1.zoom.us/s/85617281094"
+                >
+                  <FontAwesomeIcon
+                    icon={faVideo}
+                    style={{ marginRight: "3%" }}
+                  />
+                  Segui la diretta Zoom
+                </a>
+              </p>
+              <p
+                style={{
+                  width: "100%",
+                  paddingBottom: "2%",
+                }}
+              >
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: isMapHovered ? "#E62153" : "white",
+                  }}
+                  onMouseEnter={() => setIsMapHovered(true)}
+                  onMouseLeave={() => setIsMapHovered(false)}
+                  href="https://www2.uniroma1.it/amm-cda/intranet/allegato16cda02_12_2021.pdf"
+                >
+                  <FontAwesomeIcon
+                    icon={faMapLocationDot}
+                    style={{ marginRight: "3%" }}
+                  />
+                  Mappa Aula Ex-Cisadu, Città Universitaria
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
