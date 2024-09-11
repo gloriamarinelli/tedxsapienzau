@@ -32,6 +32,7 @@ import RFW_bg_img from "../images/RFW23/RFW2.png";
 import RWF_TedxSapienza1 from "../images/RFW24/1.png";
 import RWF_TedxSapienza2 from "../images/RFW24/2.png";
 import RWF_TedxSapienza3 from "../images/RFW24/3.png";
+import RWF_TedxSapienza4 from "../images/RFW24/4.png";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -126,7 +127,7 @@ export default function Home() {
           marginTop: global.UTILS.NAV_HEIGHT,
           width: "100vw",
           backgroundColor: "#000",
-          padding: "34px",
+          padding:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "34px 34px 0px 34px" : "34px",
           gap: "20px",
           flexWrap: "wrap",
         }}
@@ -428,6 +429,21 @@ export default function Home() {
             </p>
           </div>*/}
         </div>
+      </section>
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          // height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          height: "100%",
+          width: "100vw",
+          backgroundColor: "#000",
+          padding: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "20px 34px 34px 34px" : "34px",
+          gap: "20px",
+          flexWrap: "wrap",
+        }}
+      >
         <div
           style={{
             width: "50%",
@@ -437,6 +453,22 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             backgroundImage: `url(${RWF_TedxSapienza3})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            flex: "1 1 450px",
+          }}
+        ></div>
+        <div
+          style={{
+            width: "50%",
+            aspectRatio: "1/1",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundImage: `url(${RWF_TedxSapienza4})`,
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
