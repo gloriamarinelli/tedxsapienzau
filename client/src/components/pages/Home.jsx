@@ -483,7 +483,7 @@ export default function Home() {
                 fontSize: windowWidth < 1458 ? "2.5vw" : `${redWinWidth}px`,
                 paddingTop: "30%",
                 paddingLeft:
-                  windowSize > global.UTILS.TABLET_WIDTH ? "10%" : "0%",
+                  windowSize > global.UTILS.BIG_TABLET_WIDTH ? "10%" : "0%",
               }}
             >
               <p
