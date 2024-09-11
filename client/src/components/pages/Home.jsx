@@ -90,7 +90,7 @@ const speakersInfo = [
 
 export default function Home() {
   const windowWidth = window.innerWidth; // window's width (breaking point 1458px)
-  const redWinWidth = windowWidth / 80;
+  const redWinWidth = windowWidth / 82;
 
   const [windowSize, setWindowSize] = useOutletContext();
   const [isVideoHovered, setIsVideoHovered] = useState(false);
