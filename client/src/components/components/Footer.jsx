@@ -144,7 +144,7 @@ export default function Footer() {
             />
             <SocialIcon
               icon={faYoutube}
-              link="https://www.youtube.com/playlist?list=PL4-t_gJBexTAtUGEpHCVgcV0Zwt8RyYG6"
+              link="https://www.youtube.com/@tedxsapienzau/playlists"
             />
             <SocialIcon
               icon={faFlickr}
