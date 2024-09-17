@@ -149,11 +149,8 @@ const router = createBrowserRouter([
         element: <Workshop />,
       },
       {
-        /*{
         path: "/joinus",
         element: <JoinUs />,
-      },
-    */
       },
     ],
   },
