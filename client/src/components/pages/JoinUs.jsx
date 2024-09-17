@@ -100,7 +100,7 @@ export default function JoinUs() {
                 di specializzazione{" "}
               </i>
               <strong>presso l'ateneo Sapienza Università di Roma</strong> e si
-              chiuderanno il giorno <strong> 01/03/2024 alle ore 23:59</strong>.
+              chiuderanno il giorno <strong> 07/10/2024 alle ore 23:59</strong>.
             </p>
           </div>
 
@@ -167,7 +167,7 @@ export default function JoinUs() {
                   marginTop: "40px",
                   width: "30%",
                 }}
-                href="https://forms.gle/4d93qym4BDjYhbpx5"
+                href="https://forms.gle/DZdG1DosyGdkV2ZQ7"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -198,7 +198,7 @@ export default function JoinUs() {
                 marginTop: "20px",
               }}
             >
-              Descrizione team
+              Descrizione dei team
             </h1>
           </div>
 
@@ -279,7 +279,7 @@ export default function JoinUs() {
                 <p style={{ textAlign: "justify" }}>
                   Il team Speakers & Event Curation si occupa delle proposte dei
                   temi per i vari eventi, della scelta degli speakers e della
-                  cura dei loro dettagli burocratici (es. mail e contatti) e
+                  cura dei loro dettagli burocratici (es. email e contatti) e
                   pratici (es. slides e speech). In generale, quindi, si occupa
                   a 360° del rapporto con gli speakers affinché sia sempre
                   presente una forte attenzione verso tutte le loro necessità.
@@ -300,8 +300,8 @@ export default function JoinUs() {
                   conoscitivi) e della gestione dei membri dell'organizzazione
                   al fine di garantirne il benessere e di costruire un ambiente
                   creativo e produttivo. Inoltre si occupa della formazione
-                  degli associati attraverso la ricerca continua, interna ed
-                  esterna al mondo universitario, di professionisti.
+                  degli associati attraverso l'organizzazione di masterclass
+                  create ed esposte da membri interni ed esterni.
                 </p>
               </div>
               <div class="image-top-right">
@@ -347,12 +347,12 @@ export default function JoinUs() {
                     {" "}
                     web app
                   </a>{" "}
-                  ufficiale. Inoltre coordina la newsletter settimanale, insieme
-                  al sub team di UI/UX Designer cura la progettazione grafica,
-                  l'identità visiva e i contenuti, assicurando un'esperienza
-                  utente online ottimale. Infine, sovrintende la regia tecnica
-                  durante gli eventi principali, fungendo da figura di supporto
-                  a 360° in ambito tecnologico.
+                  ufficiale. Inoltre coordina la newsletter settimanale e cura
+                  la progettazione grafica, l'identità visiva e i contenuti,
+                  assicurando un'esperienza utente online ottimale. Infine,
+                  sovrintende la regia tecnica durante tutti gli eventi
+                  principali, svolgendo un ruolo di supporto a 360° in ambito
+                  tecnologico.{" "}
                 </p>
               </div>
 
@@ -373,9 +373,11 @@ export default function JoinUs() {
                   coinvolgere il pubblico e le realtà che supportano il
                   progetto. Inoltre si occupa, nelle varie fasi dell' evento,
                   della stesura dei comunicati stampa, delle newsletter e
-                  dell’email marketing. Infine si occupa della creazione di
-                  contenuti visuali, fotografici e video affinché si dia ai
-                  messaggi comunicati la maggior efficacia possibile.
+                  dell’email marketing. Ma anche di articoli per il blog, sia
+                  interno che per nostri partner, come ad esempio la rivista
+                  Millionaire. Infine si occupa della creazione di contenuti
+                  visuali, fotografici e video affinché si dia ai messaggi
+                  comunicati la maggior efficacia possibile.
                 </p>
               </div>
               <div class="image-top-right">
