@@ -122,8 +122,7 @@ export default function Home() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          // height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          height: "100%",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           marginTop: global.UTILS.NAV_HEIGHT,
           width: "100vw",
           backgroundColor: "#000",
@@ -133,7 +132,7 @@ export default function Home() {
         }}
       >
         {/** inizio div video **/}
-        {/*<div
+        <div
           id="main-container"
           style={{
             width: "100%",
@@ -233,32 +232,11 @@ export default function Home() {
               BACK TO ZERO 2023
             </h2>
           </div>
-        </div>*/}
+        </div>
         {/** fine div video **/}
 
-        {/* <div
-          id="main-container"
-          style={{
-            width: "100%",
-            height: "100%",
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${RFW_bg_img})`,
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            position: "relative",
-            backgroundColor: "yellow",
-          }}
-        >
-          <section>
-            <RFW24_Home_News />
-          </section>
-        </div> */}
-
-        <div
+        {/* RFW 24 1st section */}
+        {/*<div
           style={{
             width: "50%",
             aspectRatio: "1/1",
@@ -285,152 +263,10 @@ export default function Home() {
             position: "relative",
           }}
         >
-          {/*
-          <div
-            style={{
-              position: "absolute",
-              top: "120px",
-              right: "60px",
-            }}
-          >
-            <button
-              id="RFW_info_button"
-              onClick={handleInfoClick}
-              style={{
-                display: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "block" : "none",
-                backgroundColor: "black",
-                border: "none",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faCircleInfo}
-                style={{ color: "#E62153", height: "40px" }}
-              />
-            </button>
-          </div>
         </div>*/}
-          {/* overlay div (info) */}
-          {/*<div
-          id="useful_links"
-          style={{
-            width: "50%",
-            height: "70%",
-            aspectRatio: "1/1",
-            display: "block",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            flex: "1 1 450px",
-            zIndex: "9000",
-            position: "absolute",
-            display: isInfoClicked ? "flex" : "none",
-            flexDirection: "column",
-            color: "white",
-            border: "2px solid #E62153",
-          }}
-        >
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <button
-              id="RFW_close_info_button"
-              onClick={handleCloseInfoClicked}
-              style={{
-                backgroundColor: "black",
-                border: "none",
-                margin: "5%",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faXmark}
-                style={{ color: "white", height: "40px" }}
-              />
-            </button>
-          </div>
-          <h2
-            style={{
-              alignSelf: "center",
-              textTransform: "uppercase",
-              fontSize: "250%",
-            }}
-          >
-            Links Utili
-          </h2>
-          <div
-            style={{
-              marginLeft: "15%",
-              marginRight: "15%",
-              marginTop: "10%",
-              marginBottom: "30%",
-            }}
-          >
-            <p
-              style={{
-                width: "100%",
-                fontSize: "180%",
-                paddingBottom: "2%",
-              }}
-            >
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: isTicketHovered ? "#E62153" : "white",
-                }}
-                onMouseEnter={() => setIsTicketHovered(true)}
-                onMouseLeave={() => setIsTicketHovered(false)}
-                href="https://www.eventbrite.it/e/biglietti-universita-ricerca-e-innovazione-1003202574907"
-              >
-                <FontAwesomeIcon
-                  icon={faTicket}
-                  style={{ marginRight: "3%" }}
-                />
-                Prenota il tuo ticket
-              </a>
-            </p>
-            <p
-              style={{
-                width: "100%",
-                fontSize: "180%",
-                paddingBottom: "2%",
-              }}
-            >
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: isVideoHovered ? "#E62153" : "white",
-                }}
-                onMouseEnter={() => setIsVideoHovered(true)}
-                onMouseLeave={() => setIsVideoHovered(false)}
-                href="https://uniroma1.zoom.us/s/85617281094"
-              >
-                <FontAwesomeIcon icon={faVideo} style={{ marginRight: "3%" }} />
-                Segui la diretta Zoom
-              </a>
-            </p>
-            <p
-              style={{
-                width: "100%",
-                fontSize: "180%",
-                paddingBottom: "2%",
-              }}
-            >
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: isMapHovered ? "#E62153" : "white",
-                }}
-                onMouseEnter={() => setIsMapHovered(true)}
-                onMouseLeave={() => setIsMapHovered(false)}
-                href="https://www2.uniroma1.it/amm-cda/intranet/allegato16cda02_12_2021.pdf"
-              >
-                <FontAwesomeIcon
-                  icon={faMapLocationDot}
-                  style={{ marginRight: "3%" }}
-                />
-                Mappa Aula Ex-Cisadu, Città Universitaria
-              </a>
-            </p>
-          </div>*/}
-        </div>
       </section>
-      <section
+      {/* RFW 24 2nd section */}
+      {/*<section
         style={{
           display: "flex",
           justifyContent: "center",
@@ -555,7 +391,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
       <MvHome />
       <section>
         <Events withTitle={false} />
