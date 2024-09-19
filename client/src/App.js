@@ -6,7 +6,7 @@ import MissionandVision from "./components/pages/MissionandVision";
 import ErrorPage from "./components/pages/ErrorPage";
 import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
-import Join from "./components/pages/Join";
+import Join from "./components/pages/JoinUs";
 import Team from "./components/pages/Team";
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
