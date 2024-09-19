@@ -5,6 +5,14 @@ import global from "../../resources/global.json";
 import arrow from "../images/arrow.png";
 import arrowmiddle from "../images/arrowmiddle.png";
 import volunteers from "../images/volunteers.webp";
+import arancione from "../images/joinus/arancione.webp";
+import celeste from "../images/joinus/celeste.webp";
+import blu from "../images/joinus/blu.webp";
+import fucsia from "../images/joinus/fucsia.webp";
+import rosa from "../images/joinus/rosa.webp";
+import rosso from "../images/joinus/rosso.webp";
+import verde from "../images/joinus/verde.webp";
+import giallo from "../images/joinus/giallo.webp";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -122,7 +130,11 @@ export default function JoinUs() {
                 </i>
                 <strong>presso l'ateneo Sapienza Università di Roma</strong> e
                 si chiuderanno il giorno{" "}
-                <strong> 07/10/2024 alle ore 23:59</strong>.
+                <strong style={{ color: "#EB0028" }}>
+                  {" "}
+                  07/10/2024 alle ore 23:59
+                </strong>
+                .
               </p>
             </div>
 
@@ -241,6 +253,15 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
+                  <LazyLoadImage
+                    src={rosa}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -282,6 +303,15 @@ export default function JoinUs() {
                 </div>
 
                 <div class="text-bottom-right-aw">
+                  <LazyLoadImage
+                    src={fucsia}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -318,6 +348,15 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
+                  <LazyLoadImage
+                    src={verde}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -344,6 +383,15 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div class="text-bottom-right-aw">
+                  <LazyLoadImage
+                    src={blu}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -390,6 +438,15 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
+                  <LazyLoadImage
+                    src={arancione}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -432,6 +489,15 @@ export default function JoinUs() {
                 </div>
 
                 <div class="text-bottom-right-aw">
+                  <LazyLoadImage
+                    src={rosso}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -483,6 +549,15 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
+                  <LazyLoadImage
+                    src={celeste}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -522,6 +597,15 @@ export default function JoinUs() {
                   />
                 </div>
                 <div class="text-bottom-right-aw">
+                  <LazyLoadImage
+                    src={giallo}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -585,7 +669,7 @@ export default function JoinUs() {
               padding: "30px",
               backgroundImage: `url(${volunteers})`,
               backgroundSize: "cover",
-              backgroundPosition: "top center",
+              backgroundPosition: "0px 0px",
             }}
           ></div>
 
@@ -660,7 +744,11 @@ export default function JoinUs() {
                 </i>
                 <strong>presso l'ateneo Sapienza Università di Roma</strong> e
                 si chiuderanno il giorno{" "}
-                <strong> 07/10/2024 alle ore 23:59</strong>.
+                <strong style={{ color: "#EB0028" }}>
+                  {" "}
+                  07/10/2024 alle ore 23:59
+                </strong>
+                .
               </p>
             </div>
 
@@ -776,6 +864,15 @@ export default function JoinUs() {
             >
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
+                  <LazyLoadImage
+                    src={rosa}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -805,6 +902,15 @@ export default function JoinUs() {
                 </div>
 
                 <div>
+                  <LazyLoadImage
+                    src={fucsia}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -838,6 +944,15 @@ export default function JoinUs() {
             <div className="container-lg mt-3">
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
+                  <LazyLoadImage
+                    src={verde}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -864,6 +979,15 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div>
+                  <LazyLoadImage
+                    src={blu}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -895,6 +1019,15 @@ export default function JoinUs() {
             <div className="container-lg mt-3">
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
+                  <LazyLoadImage
+                    src={arancione}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -937,6 +1070,15 @@ export default function JoinUs() {
                 </div>
 
                 <div>
+                  <LazyLoadImage
+                    src={rosso}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -973,6 +1115,15 @@ export default function JoinUs() {
             <div className="container-lg mt-3">
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
+                  <LazyLoadImage
+                    src={celeste}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
@@ -1001,6 +1152,15 @@ export default function JoinUs() {
                 </div>
 
                 <div>
+                  <LazyLoadImage
+                    src={giallo}
+                    alt=""
+                    style={{
+                      height: "100px",
+                      width: "200px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <h2
                     style={{
                       fontSize: "40px",
