@@ -126,7 +126,10 @@ export default function Home() {
           marginTop: global.UTILS.NAV_HEIGHT,
           width: "100vw",
           backgroundColor: "#000",
-          padding:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "34px 34px 0px 34px" : "34px",
+          padding:
+            windowSize < global.UTILS.BIG_TABLET_WIDTH
+              ? "34px 34px 0px 34px"
+              : "34px",
           gap: "20px",
           flexWrap: "wrap",
         }}

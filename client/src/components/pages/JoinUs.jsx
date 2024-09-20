@@ -40,6 +40,7 @@ export default function JoinUs() {
               fontWeight: "bold",
               fontFamily: "Fira Sans Extra Condensed",
               color: "#fff",
+              margin: "10px",
             }}
           >
             Entra anche tu a far parte del team TEDxSapienzaU!
@@ -200,9 +201,9 @@ export default function JoinUs() {
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize:
-                      windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
-                    textDecoration: "none",
-                    fontFamily: "Fira Sans Extra Condensed",
+                      windowSize > global.UTILS.TABLET_WIDTH ? "35px" : "35px",
+                    textDecoration: "",
+                    fontFamily: "sans-serif",
                     color: "#eb0028",
                     marginTop: "40px",
                     width: "30%",
@@ -211,7 +212,7 @@ export default function JoinUs() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Candidati!
+                  <strong>Candidati!</strong>
                 </a>
               </div>
             </div>
@@ -253,12 +254,12 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
-                  <LazyLoadImage
+                  <img
                     src={rosa}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -290,7 +291,7 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div class="image-top-right">
-                  <LazyLoadImage
+                  <img
                     src={arrow}
                     alt="cover edizione 2023"
                     style={{
@@ -303,12 +304,12 @@ export default function JoinUs() {
                 </div>
 
                 <div class="text-bottom-right-aw">
-                  <LazyLoadImage
+                  <img
                     src={fucsia}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -348,12 +349,12 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
-                  <LazyLoadImage
+                  <img
                     src={verde}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -383,12 +384,12 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div class="text-bottom-right-aw">
-                  <LazyLoadImage
+                  <img
                     src={blu}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -418,7 +419,7 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div class="image-top-right">
-                  <LazyLoadImage
+                  <img
                     src={arrowmiddle}
                     alt="cover edizione 2023"
                     style={{
@@ -438,12 +439,12 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
-                  <LazyLoadImage
+                  <img
                     src={arancione}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -489,12 +490,12 @@ export default function JoinUs() {
                 </div>
 
                 <div class="text-bottom-right-aw">
-                  <LazyLoadImage
+                  <img
                     src={rosso}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -529,7 +530,7 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div class="image-top-right">
-                  <LazyLoadImage
+                  <img
                     src={arrowmiddle}
                     alt="cover edizione 2023"
                     style={{
@@ -549,12 +550,12 @@ export default function JoinUs() {
                 style={{ fontFamily: "Fira Sans Extra Condensed" }}
               >
                 <div class="text-top-left-aw">
-                  <LazyLoadImage
+                  <img
                     src={celeste}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -585,7 +586,7 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div class="image-top-right">
-                  <LazyLoadImage
+                  <img
                     src={arrowmiddle}
                     alt="cover edizione 2023"
                     style={{
@@ -597,12 +598,12 @@ export default function JoinUs() {
                   />
                 </div>
                 <div class="text-bottom-right-aw">
-                  <LazyLoadImage
+                  <img
                     src={giallo}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -654,6 +655,7 @@ export default function JoinUs() {
               fontWeight: "bold",
               fontFamily: "Fira Sans Extra Condensed",
               color: "#fff",
+              margin: "10px",
             }}
           >
             Entra anche tu a far parte del team TEDxSapienzaU!
@@ -814,9 +816,9 @@ export default function JoinUs() {
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize:
-                      windowSize > global.UTILS.TABLET_WIDTH ? "20px" : "15px",
-                    textDecoration: "none",
-                    fontFamily: "Fira Sans Extra Condensed",
+                      windowSize > global.UTILS.TABLET_WIDTH ? "30px" : "30px",
+                    textDecoration: "",
+                    fontFamily: "sans-serif",
                     color: "#eb0028",
                     marginTop: "40px",
                     width: "90%",
@@ -825,7 +827,7 @@ export default function JoinUs() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Candidati!
+                  <strong>Candidati!</strong>
                 </a>
               </div>
             </div>
@@ -864,12 +866,12 @@ export default function JoinUs() {
             >
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={rosa}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -902,12 +904,12 @@ export default function JoinUs() {
                 </div>
 
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={fucsia}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -944,12 +946,12 @@ export default function JoinUs() {
             <div className="container-lg mt-3">
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={verde}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -979,12 +981,12 @@ export default function JoinUs() {
                   </p>
                 </div>
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={blu}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -1019,12 +1021,12 @@ export default function JoinUs() {
             <div className="container-lg mt-3">
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={arancione}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -1070,12 +1072,12 @@ export default function JoinUs() {
                 </div>
 
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={rosso}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -1115,12 +1117,12 @@ export default function JoinUs() {
             <div className="container-lg mt-3">
               <div style={{ fontFamily: "Fira Sans Extra Condensed" }}>
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={celeste}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
@@ -1152,12 +1154,12 @@ export default function JoinUs() {
                 </div>
 
                 <div>
-                  <LazyLoadImage
+                  <img
                     src={giallo}
                     alt=""
                     style={{
-                      height: "100px",
-                      width: "200px",
+                      height: "25px",
+                      width: "50px",
                       objectFit: "cover",
                     }}
                   />
