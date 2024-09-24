@@ -12,8 +12,10 @@ import Image from "../images/logo-white.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
 import "../../index.css";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function Footer() {
+  const {t, i18n } = useTranslation();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -112,12 +114,9 @@ export default function Footer() {
               fontFamily: "Fira Sans Extra Condensed, sans-serif",
             }}
           >
-            TEDxSapienzaU è un evento TED organizzato in modo indipendente
-            gestito su licenza di TED. I protagonisti sono le idee, gli
-            speakers, i partner e gli studenti che popolano questa grande
-            comunità accademica.
+            {t("footer.description")}
           </p>
-          <b>Seguici sui social</b>
+          <Trans i18nKey="footer.follow_us" lang={i18n.language}/>
           <div
             style={{
               display: "flex",
@@ -162,7 +161,7 @@ export default function Footer() {
         >
           <b>
             <WhiteLink
-              text="Eventi"
+              text={t("navbar.events")}
               link="/edizioni"
               style={{ marginBottom: "10px" }}
             />
@@ -179,16 +178,16 @@ export default function Footer() {
             </p>
           </div>
           <b>
-            <WhiteLink text="Partners" link="/partners" />
+            <WhiteLink text={t("navbar.partners")} link="/partners" />
           </b>
           <b>
-            <WhiteLink text="Team" link="/team" />
+            <WhiteLink text={t("navbar.team")} link="/team" />
           </b>
           <b>
-            <WhiteLink text="Blog" link="/blog" />
+            <WhiteLink text={t("navbar.blog")} link="/blog" />
           </b>
           <b>
-            <WhiteLink text="Chi Siamo" link="/mission&vision" />
+            <WhiteLink text={t("navbar.about_us")} link="/mission&vision" />
           </b>
         </div>
         <div
@@ -200,7 +199,7 @@ export default function Footer() {
           }}
         >
           <b>
-            Entra anche tu a far parte del <br /> team TEDxSapienzaU!
+            <Trans i18nKey="footer.join_us" lang={i18n.language}/>
           </b>
           <a className="link" href={"/join"}>
             <button
@@ -218,9 +217,9 @@ export default function Footer() {
             </button>
           </a>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <b>Cerchi informazioni?</b>
+            <Trans i18nKey="footer.info1" lang={i18n.language}/>
             <p>
-              Contattaci{" "}
+              {t("footer.info2")}{" "}
               <a
                 className="tertiary-text"
                 href="mailto:info@tedxsapienzau.com"
@@ -250,7 +249,7 @@ export default function Footer() {
               style={{ textDecoration: "none" }}
               href="/images/Statuto2024-25.pdf"
             >
-              Statuto{" "}
+              {t("footer.statute")}
             </a>
           </small>
         </div>

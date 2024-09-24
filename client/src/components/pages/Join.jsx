@@ -4,12 +4,15 @@ import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import Iframe from "react-iframe";
 import backgroundVolunteers from "../images/volunteers.webp";
+import { Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Join() {
+  const {i18n } = useTranslation();
   const state = useLocation().state;
   const [windowSize, setWindowSize] = useOutletContext();
-  const [cat, setCat] = useState(state?.cat || "");
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  //const [cat, setCat] = useState(state?.cat || "");
+  //const [formSubmitted, setFormSubmitted] = useState(false);
 
   if (windowSize > 992) {
     /**
@@ -51,9 +54,7 @@ export default function Join() {
                 color: global.COLORS.BIANCO,
               }}
             >
-              Le candidature per far parte del team sono chiuse, ma non per
-              sempre.<br></br> Compila il form qui sotto per essere contattato
-              quando riapriremo le candidature!
+              <Trans i18nKey="joinus.join_us_closed" lang={i18n.language} />
             </h1>
           </div>
         </section>
@@ -143,9 +144,7 @@ export default function Join() {
                 color: global.COLORS.BIANCO,
               }}
             >
-              Le candidature per far parte del team sono chiuse, ma non per
-              sempre.<br></br> Compila il form qui sotto per essere contattato
-              quando riapriremo le candidature!
+              <Trans i18nKey="joinus.join_us_closed" lang={i18n.language}/>
             </h1>
           </div>
         </section>

@@ -62,11 +62,21 @@ export default function NavbarComponent(props) {
   }
 
   function changeLanguage() {
-    if (i18n.language === "en") i18n.changeLanguage("it");
-    else i18n.changeLanguage("en");
+    if (i18n.language === 'en') {
+      i18n.changeLanguage('it');
+      localStorage.setItem('language', 'it');
+    }
+    else {
+      i18n.changeLanguage('en');
+      localStorage.setItem('language', 'en');
+    }
+    
   }
 
   useEffect(() => {
+    let lan = localStorage.getItem("language");
+    if (lan) i18n.changeLanguage(lan);
+
     if (
       localStorage.getItem("token") === null ||
       localStorage.getItem("token") === undefined ||
@@ -144,7 +154,7 @@ export default function NavbarComponent(props) {
                             aria-expanded="false"
                             style={{ borderRadius: "5px" }}
                           >
-                            {t("events")} &#709;
+                            {t("navbar.events")} &#709;
                           </a>
 
                           <ul
@@ -243,7 +253,7 @@ export default function NavbarComponent(props) {
                               selectOption("partners");
                             }}
                           >
-                            {t("partners")}
+                            {t("navbar.partners")}
                           </Link>
                         </li>
 
@@ -259,7 +269,7 @@ export default function NavbarComponent(props) {
                             }}
                             id="team"
                           >
-                            {t("team")}
+                            {t("navbar.team")}
                           </Link>
                         </li>
 
@@ -275,7 +285,7 @@ export default function NavbarComponent(props) {
                             }}
                             id="blog"
                           >
-                            {t("blog")}
+                            {t("navbar.blog")}
                           </Link>
                         </li>
                         {/*
@@ -297,7 +307,7 @@ export default function NavbarComponent(props) {
                             role="button"
                             style={{ borderRadius: "5px" }}
                           >
-                            {t("about_us")} &#709;
+                            {t("navbar.about_us")} &#709;
                           </a>
 
                           <ul
@@ -317,7 +327,7 @@ export default function NavbarComponent(props) {
                                 }}
                                 id="mission_and_vision"
                               >
-                                {t("mission_and_vision")}
+                                {t("navbar.mission_and_vision")}
                               </Link>
                             </li>
                             <li className="mt-2 mb-1">
@@ -331,7 +341,7 @@ export default function NavbarComponent(props) {
                                 }}
                                 id="location"
                               >
-                                {t("location")}
+                                {t("navbar.location")}
                               </Link>
                             </li>
                           </ul>
@@ -344,8 +354,8 @@ export default function NavbarComponent(props) {
                 <Col className="col-lg-2 col-md-12 col-sm-12 col-12">
                   <Row className="mt-2 mb-2 d-flex justify-content-center">
                     <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">
-                      <li className="nav-item dropdown">
-                        {/*data-bs-toggle="dropdown"*/}
+                      <li className="nav-item dropdown " data-bs-toggle="dropdown">
+                        
                         <a
                           className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
                           role="button"
@@ -361,9 +371,9 @@ export default function NavbarComponent(props) {
                             width="20"
                             height="15"
                           />
-                          {/*&#709;*/}
+                          &#709;
                         </a>
-                        {/*
+                        {
                           <ul
                             className="dropdown-menu dropdown-menu-new p-0"
                             style={{
@@ -388,7 +398,7 @@ export default function NavbarComponent(props) {
                                 height="15"
                               />
                             </li>
-                              </ul> */}
+                              </ul> }
                       </li>
                     </Col>
 

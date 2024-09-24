@@ -1,0 +1,24 @@
+{
+    "navbar":{
+        "partners": "Partners",
+        "team": "Team",
+        "blog": "Blog",
+        "about_us": "Chi Siamo",
+        "events": "Eventi",
+        "mission_and_vision": "Mission and Vision",
+        "location": "Location"
+    },
+    
+    "joinus":{
+        "join_us_closed": "Le candidature per far parte del team sono chiuse, ma non per sempre.<br>Compila il form qui sotto per essere contattato quando riapriremo le candidature!"
+    },
+
+    "footer":{
+        "description":"TEDxSapienzaU è un evento TED organizzato in modo indipendente gestito su licenza di TED. I protagonisti sono le idee, gli speakers, i partner e gli studenti che popolano questa grande comunità accademica.",
+        "follow_us": "Seguici sui social",
+        "join_us": "Entra anche tu a far parte del <br> team TEDxSapienzaU!",
+        "info1": "Cerchi più informazioni?",
+        "info2": "Contattaci",
+        "statute": "Statuto"
+    }
+}

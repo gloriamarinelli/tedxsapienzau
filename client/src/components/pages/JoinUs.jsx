@@ -5,12 +5,13 @@ import global from "../../resources/global.json";
 import arrow from "../images/arrow.png";
 import arrowmiddle from "../images/arrowmiddle.png";
 
+import { Trans } from 'react-i18next';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function JoinUs() {
   const state = useLocation().state;
   const [windowSize, setWindowSize] = useOutletContext();
-  const [cat, setCat] = useState(state?.cat || "");
+  //const [cat, setCat] = useState(state?.cat || "");
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**

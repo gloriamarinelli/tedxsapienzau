@@ -1,0 +1,24 @@
+{
+    "navbar":{
+        "partners": "Partners",
+        "team": "Team",
+        "blog": "Blog",
+        "about_us": "About Us",
+        "events": "Events",
+        "mission_and_vision": "Mission and Vision",
+        "location": "Location"
+    },
+    
+    "joinus":{
+        "join_us_closed": "Applications to join the team are closed, but not forever.<br></br> Fill out the form below to be contacted when we reopen applications!"
+    },
+
+    "footer":{
+        "description":"TEDxSapienzaU is an independently organized TED event operated under license from TED. The protagonists are the ideas, the speakers, the partners and the students that populate this great academic community.",
+        "follow_us": "Follow us on social media",
+        "join_us": "Join the <br> TEDxSapienzaU team!",
+        "info1": "Looking for more information?",
+        "info2": "Contact us",
+        "statute": "Statute"
+    }
+}
