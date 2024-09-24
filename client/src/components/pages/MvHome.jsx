@@ -6,8 +6,10 @@ import "../../index.css";
 import "../../resources/styles/home.css";
 import { Button } from "react-bootstrap";
 import CountUp from "react-countup";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function MvHome({ withTitle = false }) {
+  const { t } = useTranslation();
   const [windowSize, setWindowSize] = useOutletContext();
   const [hidden1, setHidden1] = useState(true);
   const [hidden2, setHidden2] = useState(true);
@@ -101,8 +103,7 @@ export default function MvHome({ withTitle = false }) {
           >
             <extra>
               <condensed-extrabold>
-                TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza
-                Università di Roma
+                {t("mvhome.description")}
               </condensed-extrabold>
             </extra>
           </h1>
@@ -116,7 +117,7 @@ export default function MvHome({ withTitle = false }) {
                 padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
               }}
             >
-              Scopri di più
+              {t("mvhome.find_out_more")}
             </Button>
           </a>
         </div>
@@ -139,28 +140,28 @@ export default function MvHome({ withTitle = false }) {
             hidden1,
             setHidden1,
             26,
-            "speakers",
+            t("mvhome.speakers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
           {renderSubContainer(
             hidden2,
             setHidden2,
             3000,
-            "spettatori",
+            t("mvhome.spectators"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
           {renderSubContainer(
             hidden3,
             setHidden3,
             5160,
-            "social followers",
+            t("mvhome.followers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
           {renderSubContainer(
             hidden4,
             setHidden4,
             22083,
-            "visualizzazioni su youtube",
+            t("mvhome.yt_views"),
             windowSize > 1245 ? "11vh" : "8vh"
           )}
         </div>
@@ -206,8 +207,7 @@ export default function MvHome({ withTitle = false }) {
           >
             <extra>
               <condensed-extrabold>
-                TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza
-                Università di Roma
+                {t("mvhome.description")}
               </condensed-extrabold>
             </extra>
           </h1>
@@ -221,7 +221,7 @@ export default function MvHome({ withTitle = false }) {
                 padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
               }}
             >
-              Scopri di più
+              {t("mvhome.find_out_more")}
             </Button>
           </Link>
         </div>
@@ -240,20 +240,20 @@ export default function MvHome({ withTitle = false }) {
             position: "relative",
           }}
         >
-          {renderSubContainer(hidden1, setHidden1, 26, "speakers", "80px")}
-          {renderSubContainer(hidden2, setHidden2, 3000, "spettatori", "80px")}
+          {renderSubContainer(hidden1, setHidden1, 26, t("mvhome.speakers"), "80px")}
+          {renderSubContainer(hidden2, setHidden2, 3000, t("mvhome.spectators"), "80px")}
           {renderSubContainer(
             hidden3,
             setHidden3,
             5160,
-            "social followers",
+            t("mvhome.followers"),
             "80px"
           )}
           {renderSubContainer(
             hidden4,
             setHidden4,
             22083,
-            "visualizzazioni su youtube",
+            t("mvhome.yt_views"),
             "60px"
           )}
         </div>

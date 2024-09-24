@@ -20,5 +20,20 @@
         "info1": "Cerchi più informazioni?",
         "info2": "Contattaci",
         "statute": "Statuto"
+    },
+
+    "home":{
+        "find_out_more": "Scopri di più",
+        "next_event": "NON PERDERE<br> IL NOSTRO <br> PROSSIMO EVENTO<br>",
+        "next_event_form": "Compila il form per rimanere aggiornato sulle nostre attività"
+    },
+
+    "mvhome":{
+        "description": "TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza Università di Roma",
+        "find_out_more": "Scopri di più",
+        "speakers": "Speakers",
+        "spectators": "Spettatori",
+        "followers": "Social Followers",
+        "yt_views": "Visualizzazioni su YouTube"
     }
 }

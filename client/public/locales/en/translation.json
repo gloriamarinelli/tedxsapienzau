@@ -20,5 +20,20 @@
         "info1": "Looking for more information?",
         "info2": "Contact us",
         "statute": "Statute"
+    },
+
+    "home":{
+        "find_out_more": "Find out more",
+        "next_event": "DON'T MISS<br> OUR <br> NEXT EVENT<br>",
+        "next_event_form": "Fill out the form to stay updated on our activities"
+    },
+
+    "mvhome":{
+        "description": "TEDxSapienzaU is the TEDx of Sapienza University of Rome",
+        "find_out_more": "Find out more",
+        "speakers": "Speakers",
+        "spectators": "Spectators",
+        "followers": "Social Followers",
+        "yt_views": "YouTube Views"
     }
 }

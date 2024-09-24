@@ -45,6 +45,7 @@ import MarceloEnriqueContiImage from "../images/countdown24/MarceloEnriqueConti.
 import SabrinaLucibelloImage from "../images/countdown24/SabrinaLucibello.webp";
 import BrunoMazzaraImage from "../images/countdown24/BrunoMazzara.webp";
 import NunzioAlloccaImage from "../images/countdown24/NunzioAllocca.webp";
+import { useTranslation, Trans } from "react-i18next";
 
 const NewsSidebarSize = 18;
 
@@ -92,6 +93,7 @@ export default function Home() {
   const windowWidth = window.innerWidth; // window's width (breaking point 1458px)
   const redWinWidth = windowWidth / 82;
 
+  const { t, i18n } = useTranslation();
   const [windowSize, setWindowSize] = useOutletContext();
   const [isVideoHovered, setIsVideoHovered] = useState(false);
   const [isMapHovered, setIsMapHovered] = useState(false);
@@ -415,7 +417,7 @@ export default function Home() {
                 padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
               }}
             >
-              Scopri di più
+              {t("home.find_out_more")}
             </Button>
           </a>
         </div>
@@ -439,7 +441,7 @@ export default function Home() {
                 padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
               }}
             >
-              Scopri di più
+              {t("home.find_out_more")}
             </Button>
           </a>
         </div>
@@ -491,8 +493,7 @@ export default function Home() {
             >
               <extra>
                 <condensed-extrabold>
-                  NON PERDERE<br></br> IL NOSTRO <br></br> PROSSIMO EVENTO
-                  <br></br>
+                  <Trans i18nKey="home.next_event" />
                 </condensed-extrabold>
               </extra>
             </h1>
@@ -506,7 +507,7 @@ export default function Home() {
                 color: "#FFFFFF",
               }}
             >
-              Compila il form per rimanere aggiornato sulle nostre attività{" "}
+              {t("home.next_event_form")}
             </h5>
           </div>
         </div>
@@ -530,6 +531,7 @@ export default function Home() {
             overflow: "hidden",
           }}
         >
+          {i18n.language === "it" ? (
           <Iframe
             width="100%"
             height="100%"
@@ -547,7 +549,26 @@ export default function Home() {
               maxWidth: "100%",
               maxHeight: "100%",
             }}
-          ></Iframe>
+          /> )
+            : (
+          <Iframe
+            width="100%"
+            height="100%"
+            src="https://31dfcf3b.sibforms.com/serve/MUIFAKnZWxErJcLmuyvzjpWio3_SOy18jxtNLMON5G4GXZ07vtBK-fSmY0LBBp5pIyZKhgR5ynPFkmhJRkAo3lOojEg8azeYnh9sFMM4RsRNHbY7vOYVljvmYhVNmDNqa5GMoqJGIXFd6sYwIYygz9wXcu0m8mYHzXIA4DZv2fSnGI_VxMHLXcU32UR2EtP9h5CYf9l-_zSPuk1t"
+            frameborder="0"
+            allowfullscreen
+            position="absolute"
+            style={{
+              position: "absolute",
+              display: "block",
+              margin: 0,
+              padding: 0,
+              top: 0,
+              left: 0,
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }}
+          />)}
         </div>
       </section>
     </div>
