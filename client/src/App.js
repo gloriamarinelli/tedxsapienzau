@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { AuthContextProvider } from "./components/context/authContext";
+
 import NavbarComponent from "./components/components/NavbarComponent";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
-import MissionandVision from "./components/pages/MissionandVision";
 import ErrorPage from "./components/pages/ErrorPage";
 import Partners from "./components/pages/Partners";
 
@@ -14,20 +16,25 @@ import JoinUs from "./components/pages/JoinUs";
 import Newsletter from "./components/pages/Newsletter";
 
 import Team from "./components/pages/Team";
+
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
+
 import Events from "./components/pages/Events";
+
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
-import Write from "./components/pages/Write";
-import Location from "./components/pages/Location";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+
 import Login from "./components/pages/Login";
-import { AuthContextProvider } from "./components/context/authContext";
+import Write from "./components/pages/Write";
+
+import Location from "./components/pages/Location";
+import MissionandVision from "./components/pages/MissionandVision";
+
+
 import Awards2023 from "./components/pages/Awards2023";
 import Awards2022 from "./components/pages/Awards2022";
 
 import Countdown2024 from "./components/pages/Countdown2024";
-import Awards from "./components/pages/Awards";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +72,6 @@ const router = createBrowserRouter([
         path: "/mission&vision",
         element: <MissionandVision />,
       },
-
       {
         path: "/location",
         element: <Location />,
@@ -78,7 +84,6 @@ const router = createBrowserRouter([
         path: "/edizioni",
         element: <Events />,
       },
-
       {
         path: "/eventi/edizione2022",
         element: <Edizione2022 />,
@@ -95,16 +100,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-
       {
         path: "/privacypolicy",
         element: <PrivacyPolicy />,
-      },
-
-      {
-        path: "/awards",
-        element: <Awards />,
-      },
+      },      
       {
         path: "/eventi/awards2023",
         element: <Awards2023 />,
@@ -116,8 +115,7 @@ const router = createBrowserRouter([
       {
         path: "/eventi/countdown2024",
         element: <Countdown2024 />,
-      },
-      
+      },      
 
       {
         path: "/joinus",
