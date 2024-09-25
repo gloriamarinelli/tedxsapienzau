@@ -19,9 +19,8 @@ import { Button, Row } from "react-bootstrap";
 export default function NavbarComponent(props) {
   const { t, i18n } = useTranslation();
   const [expanded, setExpanded] = useState(false);
-  const { currentUser, currentToken } = useContext(AuthContext);
   const { logout, isUserLoggedIn } = useContext(AuthContext);
-  const [windowSize, setWindowSize] = useState(props.windowSize);
+  const [windowSize] = useState(props.windowSize);
   const [isAdmin, setIsAdmin] = useState(false);
   const [previousOption, setOption] = useState(undefined); //set selected navbar option
 
@@ -62,15 +61,13 @@ export default function NavbarComponent(props) {
   }
 
   function changeLanguage() {
-    if (i18n.language === 'en') {
-      i18n.changeLanguage('it');
-      localStorage.setItem('language', 'it');
+    if (i18n.language === "en") {
+      i18n.changeLanguage("it");
+      localStorage.setItem("language", "it");
+    } else {
+      i18n.changeLanguage("en");
+      localStorage.setItem("language", "en");
     }
-    else {
-      i18n.changeLanguage('en');
-      localStorage.setItem('language', 'en');
-    }
-    
   }
 
   useEffect(() => {
@@ -100,7 +97,7 @@ export default function NavbarComponent(props) {
         }
       });
     }
-  }, []);
+  },);
 
   return (
     <>
@@ -354,8 +351,10 @@ export default function NavbarComponent(props) {
                 <Col className="col-lg-2 col-md-12 col-sm-12 col-12">
                   <Row className="mt-2 mb-2 d-flex justify-content-center">
                     <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">
-                      <li className="nav-item dropdown " data-bs-toggle="dropdown">
-                        
+                      <li
+                        className="nav-item dropdown "
+                        data-bs-toggle="dropdown"
+                      >
                         <a
                           className="navbar-submenu-edition-item d-flex align-items-center  justify-content-start"
                           role="button"
@@ -368,6 +367,7 @@ export default function NavbarComponent(props) {
                             src={
                               i18n.language === "it" ? ItalianFlag : EnglishFlag
                             }
+                            alt= "flags"
                             width="20"
                             height="15"
                           />
@@ -398,7 +398,8 @@ export default function NavbarComponent(props) {
                                 height="15"
                               />
                             </li>
-                              </ul> }
+                          </ul>
+                        }
                       </li>
                     </Col>
 

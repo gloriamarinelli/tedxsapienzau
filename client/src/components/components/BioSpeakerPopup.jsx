@@ -23,7 +23,8 @@ export default function BioSpeakerPopup({
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
-  }, [isBioOpen]);
+  });
+
   if (windowSize > global.UTILS.TABLET_WIDTH) {
     /**
      * DESKTOP

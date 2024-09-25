@@ -16,7 +16,7 @@ export default function VolunteerCard({
 }) {
   const [hovered, setHovered] = useState(false);
   const [hovered2, setHovered2] = useState(false);
-  if (year == 2024) {
+  if (year === 2024) {
     if (device === "mobile") {
       return (
         <>
@@ -129,7 +129,7 @@ export default function VolunteerCard({
       </>
     );
   }
-  if (year == 2023) {
+  if (year === 2023) {
     return (
       <>
         <div
@@ -186,7 +186,7 @@ export default function VolunteerCard({
       </>
     );
   }
-  if (year == 2022) {
+  if (year === 2022) {
     return (
       <>
         <div

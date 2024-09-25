@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -15,7 +15,7 @@ import "../../index.css";
 import { useTranslation, Trans } from "react-i18next";
 
 export default function Footer() {
-  const {t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export default function Footer() {
           >
             {t("footer.description")}
           </p>
-          <Trans i18nKey="footer.follow_us" lang={i18n.language}/>
+          <Trans i18nKey="footer.follow_us" lang={i18n.language} />
           <div
             style={{
               display: "flex",
@@ -199,7 +199,7 @@ export default function Footer() {
           }}
         >
           <b>
-            <Trans i18nKey="footer.join_us" lang={i18n.language}/>
+            <Trans i18nKey="footer.join_us" lang={i18n.language} />
           </b>
           <a className="link" href={"/join"}>
             <button
@@ -217,7 +217,7 @@ export default function Footer() {
             </button>
           </a>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <Trans i18nKey="footer.info1" lang={i18n.language}/>
+            <Trans i18nKey="footer.info1" lang={i18n.language} />
             <p>
               {t("footer.info2")}{" "}
               <a

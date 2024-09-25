@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import global from "../../resources/global.json";
 import Chip from "@mui/material/Chip";
 import "../../resources/styles/board.css";
-import { createTheme, rgbToHex, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
 
 const theme = createTheme({

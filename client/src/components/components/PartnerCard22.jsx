@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartnerCard22({ imgSrc, sponsorType }) {
+export default function PartnerCard22({ imgSrc }) {
   return (
     <div className="col-lg-4 col-sm-6 mb-5 mt-5 d-flex justify-content-center">
       <div

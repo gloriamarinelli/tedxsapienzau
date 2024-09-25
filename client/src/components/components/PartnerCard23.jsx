@@ -1,12 +1,6 @@
 import React from "react";
 
-export default function PartnerCard23({
-  title,
-  imgSrc,
-  text,
-  sponsorType,
-  link,
-}) {
+export default function PartnerCard23({ title, imgSrc, text, link }) {
   return (
     <>
       <div

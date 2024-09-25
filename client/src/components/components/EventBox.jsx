@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
 
 export default function EventBox({
@@ -10,7 +9,7 @@ export default function EventBox({
   windowSize,
   linkTo,
 }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [setIsHovered] = useState(false);
 
   const boxHeight = 600;
 

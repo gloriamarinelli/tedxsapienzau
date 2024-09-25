@@ -1,7 +1,6 @@
 import React from "react";
 import "../../index.css";
 import global from "../../resources/global.json";
-import { set } from "date-fns";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
