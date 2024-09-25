@@ -1,14 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
-import "../../resources/styles/loginstyle.css";
 import { AuthContext } from "../context/authContext";
-import { useNavigate } from "react-router";
-import { redirect } from "react-router-dom";
-import Image from "../images/logo-black.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import Image from "../images/logo-black.png";
+import "../../resources/styles/loginstyle.css";
 
+/**
+ * Login page that allows the user to enter the secret page to write a post
+ */
 export default function Login() {
   const { currentUser } = useContext(AuthContext);
   const { logout, isUserLoggedIn } = useContext(AuthContext);
@@ -61,14 +62,15 @@ export default function Login() {
   );
 }
 
+/**
+ * LoginForm component
+ */
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
   const { login } = useContext(AuthContext);
-
   const errorMessageRef = useRef();
 
   const handleSubmit = async (event) => {

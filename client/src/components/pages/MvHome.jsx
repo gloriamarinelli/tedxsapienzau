@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
@@ -8,7 +8,11 @@ import { Button } from "react-bootstrap";
 import CountUp from "react-countup";
 import { useTranslation, Trans } from "react-i18next";
 
-export default function MvHome({ withTitle = false }) {
+/**
+ * Component that renders the information about TEDxSapienzaU in the home page.
+ * It shows the number of speakers, spectators, followers and YouTube views. All in bento boxes.
+ */
+export default function MvHome() {
   const { t } = useTranslation();
   const [windowSize, setWindowSize] = useOutletContext();
   const [hidden1, setHidden1] = useState(true);
@@ -240,8 +244,20 @@ export default function MvHome({ withTitle = false }) {
             position: "relative",
           }}
         >
-          {renderSubContainer(hidden1, setHidden1, 26, t("mvhome.speakers"), "80px")}
-          {renderSubContainer(hidden2, setHidden2, 3000, t("mvhome.spectators"), "80px")}
+          {renderSubContainer(
+            hidden1,
+            setHidden1,
+            26,
+            t("mvhome.speakers"),
+            "80px"
+          )}
+          {renderSubContainer(
+            hidden2,
+            setHidden2,
+            3000,
+            t("mvhome.spectators"),
+            "80px"
+          )}
           {renderSubContainer(
             hidden3,
             setHidden3,

@@ -1,12 +1,15 @@
-import "../../index.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image from "../images/location3.jpg";
-import Image1 from "../images/location1.webp";
-
 import React from "react";
-import global from "../../resources/global.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 
+import global from "../../resources/global.json";
+import Image from "../images/location3.jpg";
+import Image1 from "../images/location1.webp";
+import "../../index.css";
+
+/**
+ * Location page that talks about Sapienza University
+ */
 export default function Location() {
   const [windowSize, setWindowSize] = useOutletContext();
 
@@ -325,7 +328,6 @@ export default function Location() {
             borderRadius: "25px",
           }}
         >
-          
           <div className="gradient-div gradient-div-top">
             <h3
               className="title"

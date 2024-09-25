@@ -139,7 +139,6 @@ export default function Home() {
         </div>
         {/** fine div video **/}
       </section>
-
       <MvHome />
       <section>
         <Events withTitle={false} />

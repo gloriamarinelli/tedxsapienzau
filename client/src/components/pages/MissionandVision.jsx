@@ -17,6 +17,9 @@ import global from "../../resources/global.json";
 import { useOutletContext } from "react-router";
 import CountUp from "react-countup";
 
+/**
+ * Mission and Vision page
+ */
 export default function MissionandVision() {
   const [windowSize, setWindowSize] = useOutletContext();
 
@@ -354,23 +357,29 @@ export default function MissionandVision() {
                       l'obiettivo di creare per l'intera comunità accademica una
                       programmazione sempre nuova e internazionale.
                     </p>
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                    <a className="link" href={"/partners"}>
-                      <button
-                        style={{
-                          backgroundColor: global.COLORS.ROSSO_TED_2023,
-                          padding: "8px 32px",
-                          color: "white",
-                          border: "none",
-                          fontSize: "18px",
-                          borderRadius: "8px",
-                          fontWeight: "bold",
-                          marginBottom: "20px",
-                        }}
-                      >
-                        Collabora con noi{" "}
-                      </button>
-                    </a>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <a className="link" href={"/partners"}>
+                        <button
+                          style={{
+                            backgroundColor: global.COLORS.ROSSO_TED_2023,
+                            padding: "8px 32px",
+                            color: "white",
+                            border: "none",
+                            fontSize: "18px",
+                            borderRadius: "8px",
+                            fontWeight: "bold",
+                            marginBottom: "20px",
+                          }}
+                        >
+                          Collabora con noi{" "}
+                        </button>
+                      </a>
                     </div>
                   </div>
                   <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">

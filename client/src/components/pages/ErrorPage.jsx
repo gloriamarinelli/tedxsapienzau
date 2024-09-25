@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
 
+/**
+ * ErrorPage showed when a page is not found
+ */
 export default function ErrorPage() {
   return (
     <>
