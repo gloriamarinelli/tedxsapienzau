@@ -421,7 +421,7 @@ export default function NavbarComponent(props) {
                         }}
                         onClick={() => {
                           setExpanded(false);
-                          window.location.href = "/join";
+                          window.location.href = "/joinus";
                         }}
                       >
                         Join us
