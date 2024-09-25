@@ -15,7 +15,7 @@ const Write = () => {
   const [author, setAuthor] = useState("");
   const [base64Image, setBase64Image] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const { currentUser, currentToken, logout, isUserLoggedIn } =
+  const {  currentToken, logout, isUserLoggedIn } =
     useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -43,11 +43,11 @@ const Write = () => {
         }
       });
     }
-  }, []);
+  });
 
   useEffect(() => {
     if (!currentToken) navigate("/login");
-  }, [currentToken]);
+  });
 
   useEffect(() => {
     imageToBase64(file).then((res) => setBase64Image(res));
@@ -194,7 +194,7 @@ const Write = () => {
               onChange={(e) => setFile(e.target.files[0])}
             />
             {base64Image ? (
-              <img src={`data:image/*;base64,${base64Image}`} width="300px" />
+              <img src={`data:image/*;base64,${base64Image}`} width="300px" alt="Blog" />
             ) : (
               <></>
             )}

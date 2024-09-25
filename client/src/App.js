@@ -9,27 +9,25 @@ import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
 import BlogPost from "./components/pages/BlogPost";
 
-import Join from "./components/pages/JoinUs";
+import JoinUs from "./components/pages/JoinUs";
+
+import Newsletter from "./components/pages/Newsletter";
+
 import Team from "./components/pages/Team";
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
 import Events from "./components/pages/Events";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import Write from "./components/pages/Write";
-import Newsletter from "./components/pages/Newsletter";
 import Location from "./components/pages/Location";
-import Sustainability from "./components/pages/Sustainability";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./components/pages/Login";
 import { AuthContextProvider } from "./components/context/authContext";
 import Awards2023 from "./components/pages/Awards2023";
 import Awards2022 from "./components/pages/Awards2022";
-import RFW2023 from "./components/pages/RFW2023";
-import NewsletterBrevo from "./components/pages/NewsletterBrevo";
-import Workshop from "./components/pages/Workshop";
+
 import Countdown2024 from "./components/pages/Countdown2024";
 import Awards from "./components/pages/Awards";
-import JoinUs from "./components/pages/JoinUs";
 
 const router = createBrowserRouter([
   {
@@ -64,14 +62,10 @@ const router = createBrowserRouter([
         element: <BlogPost />,
       },
       {
-        path: "/join",
-        element: <Join />,
-      },
-      {
         path: "/mission&vision",
         element: <MissionandVision />,
       },
-     
+
       {
         path: "/location",
         element: <Location />,
@@ -106,14 +100,7 @@ const router = createBrowserRouter([
         path: "/privacypolicy",
         element: <PrivacyPolicy />,
       },
-      {
-        path: "/newsletter",
-        element: <Newsletter />,
-      },
-      {
-        path: "/newsletterBrevo",
-        element: <NewsletterBrevo />,
-      },
+
       {
         path: "/awards",
         element: <Awards />,
@@ -130,21 +117,15 @@ const router = createBrowserRouter([
         path: "/eventi/countdown2024",
         element: <Countdown2024 />,
       },
-      {
-        path: "/sustainability",
-        element: <Sustainability />,
-      },
-      {
-        path: "/rfw23",
-        element: <RFW2023 />,
-      },
-      {
-        path: "/workshop",
-        element: <Workshop />,
-      },
+      
+
       {
         path: "/joinus",
         element: <JoinUs />,
+      },
+      {
+        path: "/newsletter",
+        element: <Newsletter />,
       },
     ],
   },

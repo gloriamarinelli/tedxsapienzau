@@ -5,7 +5,7 @@ import "../../index.css";
 import global from "../../resources/global.json";
 
 export default function PrivacyPolicy() {
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     /**
@@ -24,16 +24,7 @@ export default function PrivacyPolicy() {
             placeItems: "center",
             marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
           }}
-        >
-          <h1
-            className="font-weight-bold mt-5 mb-3"
-            style={{
-              fontSize: "30px",
-              fontWeight: "bold",
-              fontFamily: "GothamBold",
-            }}
-          ></h1>
-        </div>
+        ></div>
 
         <div
           style={{
@@ -220,7 +211,7 @@ export default function PrivacyPolicy() {
             n.196/2003 e al regolamento Europeo – GDPR 679/2016 (Codice in
             materia di protezione dei dati personali) a coloro che interagiscono
             con i servizi Web accessibili per via telematica a partire
-            dall’indirizzo:{" "} <br></br>
+            dall’indirizzo: <br></br>
             <Link style={{ color: "#eb0028" }} to="/tedxsapienzau">
               https://www.tedxsapienzau.com/
             </Link>

@@ -11,7 +11,7 @@ import "../../resources/styles/team.css";
 export default function Team2022() {
   // #region --------------------------------- Constants --------------------------------------
   const [activeYear, setActiveYear] = useState(24);
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
 
@@ -96,7 +96,7 @@ export default function Team2022() {
     } else {
       let res = [];
 
-      board.map((board) => {
+      board.forEach((board) => {
         const { id, nome, gruppo, ruolo, fotoNome, link } = board;
         if (gruppo !== "board") return;
         res.push(
@@ -132,7 +132,7 @@ export default function Team2022() {
       {}
     );
 
-    volunteers.map((vol) => {
+    volunteers.forEach((vol) => {
       const { id, nome, gruppo, fotoNome, link } = vol;
       if (!photos[gruppo]) {
         photos[gruppo] = [];
@@ -224,24 +224,6 @@ export default function Team2022() {
   // #endregion
 
   // #region --------------------------------- Chips ------------------------------------------
-
-  function comingSoon() {
-    return (
-      <div
-        className="boardSpinnerSection"
-        style={{
-          backgroundColor: global.COLORS.NERO,
-          padding: "10px",
-          fontFamily: "Fira Sans Extra Condensed, sans-serif",
-          placeItems: "center",
-          display: "grid",
-          color: global.COLORS.ROSSO_TED,
-        }}
-      >
-        <h1>COMING SOON . . .</h1>
-      </div>
-    );
-  }
 
   function handleTeamsChips() {
     var gruppi = teams[activeYear.toString()] || teams["24"];

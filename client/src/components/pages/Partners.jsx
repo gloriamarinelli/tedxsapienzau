@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
 import PartnerCard24 from "../components/PartnerCard24";
 import { useOutletContext } from "react-router";
 import CountUp from "react-countup";
 import global from "../../resources/global.json";
-import { Link } from "react-router-dom";
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../index.css";
@@ -17,15 +16,11 @@ import ImageThree from "../components/partners_scrolldown/ImageThree.js";
 import ImageFour from "../components/partners_scrolldown/ImageFour.js";
 
 export default function Partners() {
-  const [activeYear, setActiveYear] = useState(24);
-  const [windowSize, setWindowSize] = useOutletContext();
-  const button2022 = useRef();
-  const button2023 = useRef();
-  const button2024 = useRef();
+  const [activeYear] = useState(24);
+  const [windowSize] = useOutletContext();
+
   /* variabili per la gestione play-pause animazione scroller loghi */
   let [isHovered, setIsHovered] = useState(false);
-  let onMouseMove = null;
-  let onMouseLeave = null;
 
   function getSponsor2022() {
     return (
@@ -477,25 +472,6 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </div>
         </section>
       </>
-    );
-  }
-
-  function comingSoon() {
-    return (
-      <div
-        className="coming-soon"
-        style={{
-          backgroundColor: global.COLORS.NERO,
-          padding: "10px",
-          fontFamily: "Fira Sans Extra Condensed, sans-serif",
-          placeItems: "center",
-          display: "grid",
-          color: global.COLORS.ROSSO_TED,
-          textTransform: "uppercase",
-        }}
-      >
-        <h1>Coming Soon . . .</h1>
-      </div>
     );
   }
 
