@@ -5,14 +5,16 @@ import Home from "./components/pages/Home";
 import MissionandVision from "./components/pages/MissionandVision";
 import ErrorPage from "./components/pages/ErrorPage";
 import Partners from "./components/pages/Partners";
+
 import Blog from "./components/pages/Blog";
+import BlogPost from "./components/pages/BlogPost";
+
 import Join from "./components/pages/JoinUs";
 import Team from "./components/pages/Team";
 import Edizione2022 from "./components/pages/Edizione2022";
 import Edizione2023 from "./components/pages/Edizione2023";
 import Events from "./components/pages/Events";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
-import BlogPost from "./components/pages/BlogPost";
 import Write from "./components/pages/Write";
 import Newsletter from "./components/pages/Newsletter";
 import Location from "./components/pages/Location";
@@ -26,13 +28,8 @@ import RFW2023 from "./components/pages/RFW2023";
 import NewsletterBrevo from "./components/pages/NewsletterBrevo";
 import Workshop from "./components/pages/Workshop";
 import Countdown2024 from "./components/pages/Countdown2024";
-import ArchivedCountdown24 from "./components/pages/archived_homepages/ArchivedCountdown24";
 import Awards from "./components/pages/Awards";
-import ScrollToTop from "./components/components/ScrollToTop";
-
-import ParlanoDiNoi from "./components/pages/parlanodinoi";
 import JoinUs from "./components/pages/JoinUs";
-import MvHome from "./components/pages/MvHome";
 
 const router = createBrowserRouter([
   {
@@ -74,10 +71,7 @@ const router = createBrowserRouter([
         path: "/mission&vision",
         element: <MissionandVision />,
       },
-      /*{
-        path: "/parlanodinoi",
-        element: <ParlanoDiNoi />,
-      },*/
+     
       {
         path: "/location",
         element: <Location />,
