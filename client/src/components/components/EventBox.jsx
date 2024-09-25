@@ -9,8 +9,6 @@ export default function EventBox({
   windowSize,
   linkTo,
 }) {
-  const [setIsHovered] = useState(false);
-
   const boxHeight = 600;
 
   return (
@@ -26,8 +24,6 @@ export default function EventBox({
         flexDirection: "column",
         justifyContent: "flex-end",
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <h2>{date}</h2>
       <a style={{ textDecoration: "none", color: "#fff" }} href={linkTo}>
