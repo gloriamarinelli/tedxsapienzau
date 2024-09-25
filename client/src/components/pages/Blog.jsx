@@ -9,14 +9,14 @@ import { AuthContext } from "../context/authContext";
 import { Pagination } from "react-bootstrap";
 import backgroundBlog from "../../components/images/header_blog23.webp";
 
-export default function Blog({ withTitle = true }) {
+export default function Blog() {
   const [blog, setBlog] = useState([]);
   const [blogSize, setBlogSize] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
   const [isLoading, setIsLoading] = useState(true);
 
-  const { currentUser } = useContext(AuthContext);
+  useContext(AuthContext);
 
   const pageSize = 9;
   const clearDbIncrement = 10;
@@ -30,11 +30,11 @@ export default function Blog({ withTitle = true }) {
         getCurrentPagePosts();
       })
       .catch((err) => console.error(err));
-  }, []);
+  });
 
   useEffect(() => {
     getCurrentPagePosts();
-  }, [currentPage, blogSize]);
+  });
 
   const getCurrentPagePosts = () => {
     if (blogSize === 0) return;

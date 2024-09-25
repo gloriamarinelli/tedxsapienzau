@@ -6,16 +6,15 @@ import BlogCard from "../components/BlogCard";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { AuthContext } from "../context/authContext";
-import { Pagination } from "react-bootstrap";
 
-export default function Blog({ withTitle = true }) {
+export default function Blog() {
   const [blog, setBlog] = useState([]);
   const [blogSize, setBlogSize] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [currentPage] = useState(1);
+  const [windowSize] = useOutletContext();
   const [isLoading, setIsLoading] = useState(true);
 
-  const { currentUser } = useContext(AuthContext);
+  useContext(AuthContext);
 
   const pageSize = 3;
   const clearDbIncrement = 10;
@@ -29,11 +28,11 @@ export default function Blog({ withTitle = true }) {
         getCurrentPagePosts();
       })
       .catch((err) => console.error(err));
-  }, []);
+  });
 
   useEffect(() => {
     getCurrentPagePosts();
-  }, [currentPage, blogSize]);
+  });
 
   const getCurrentPagePosts = () => {
     if (blogSize === 0) return;

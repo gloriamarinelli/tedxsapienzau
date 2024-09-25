@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { faFeatherPointed } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { format } from "date-fns";
 import { useNavigate, useParams } from "react-router";
 import { it } from "date-fns/locale";
-
 import global from "../../resources/global.json";
 
 export default function BlogPost() {
@@ -19,12 +18,7 @@ export default function BlogPost() {
     axios
       .get(global.CONNECTION.ENDPOINT + `blog/${id}`)
       .then((res, err) => {
-        if (
-          res.data === null ||
-          res.data === undefined ||
-          res.data === {} ||
-          res.data === ""
-        ) {
+        if (res.data === null || res.data === undefined || res.data === "") {
           navigate("/blog");
         } else {
           setBlogPost(res.data);
@@ -34,7 +28,7 @@ export default function BlogPost() {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  });
 
   // eslint-disable-next-line no-lone-blocks
 
