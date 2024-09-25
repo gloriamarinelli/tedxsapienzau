@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
-import { useOutletContext } from "react-router";
 
 export default function ErrorPage() {
   return (

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import React from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import Iframe from "react-iframe";
@@ -8,11 +7,8 @@ import { Trans } from "react-i18next";
 import { useTranslation } from "react-i18next";
 
 export default function Join() {
-  const {i18n } = useTranslation();
-  const state = useLocation().state;
-  const [windowSize, setWindowSize] = useOutletContext();
-  //const [cat, setCat] = useState(state?.cat || "");
-  //const [formSubmitted, setFormSubmitted] = useState(false);
+  const { i18n } = useTranslation();
+  const [windowSize] = useOutletContext();
 
   if (windowSize > 992) {
     /**
@@ -20,7 +16,6 @@ export default function Join() {
      */
     return (
       <>
-        
         <section
           style={{
             marginTop: global.UTILS.NAV_HEIGHT,
@@ -98,7 +93,13 @@ export default function Join() {
               src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
               frameborder="0"
               allowfullscreen
-              style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+              style={{
+                display: "block",
+                marginTop: "0",
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: "100%",
+              }}
             ></Iframe>
           </div>
         </section>
@@ -110,7 +111,6 @@ export default function Join() {
      */
     return (
       <>
-        
         <section
           style={{
             marginTop: global.UTILS.NAV_HEIGHT,
@@ -144,7 +144,7 @@ export default function Join() {
                 color: global.COLORS.BIANCO,
               }}
             >
-              <Trans i18nKey="joinus.join_us_closed" lang={i18n.language}/>
+              <Trans i18nKey="joinus.join_us_closed" lang={i18n.language} />
             </h1>
           </div>
         </section>
@@ -184,7 +184,13 @@ export default function Join() {
               src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
               frameborder="0"
               allowfullscreen
-              style="display: block;margin-top: 0;margin-left: auto;margin-right: auto;max-width: 100%;"
+              style={{
+                display: "block",
+                marginTop: "0",
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: "100%",
+              }}
             ></Iframe>
           </div>
         </section>
