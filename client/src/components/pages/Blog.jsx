@@ -27,19 +27,22 @@ export default function Blog() {
       .get(global.CONNECTION.ENDPOINT + "blog/count")
       .then((res) => {
         setBlogSize(res.data[0].posts);
-        getCurrentPagePosts();
       })
       .catch((err) => console.error(err));
-  });
+  }, []);
 
   useEffect(() => {
-    getCurrentPagePosts();
-  });
+    if (blogSize > 0) {
+      getCurrentPagePosts();
+    }
+  }, [currentPage, blogSize]);
 
   const getCurrentPagePosts = () => {
     if (blogSize === 0) return;
     let start = blogSize - pageSize * currentPage + clearDbMagic;
     let end = blogSize - pageSize * (currentPage - 1) + clearDbMagic;
+
+    setIsLoading(true);
     axios
       .get(
         global.CONNECTION.ENDPOINT +
@@ -53,6 +56,7 @@ export default function Blog() {
       })
       .catch((err) => {
         console.error(err);
+        setIsLoading(false);
       });
   };
 
@@ -67,7 +71,6 @@ export default function Blog() {
           onClick={() => {
             window.scrollTo(0, 0);
             setCurrentPage(number);
-            setIsLoading(true);
           }}
         >
           {number}
@@ -199,10 +202,10 @@ export default function Blog() {
                 {[...Array(3)].map((_) => {
                   return (
                     <div style={{ backgroundColor: "#000" }}>
-                      <div class="blog-card">
-                        <div class="meta">
+                      <div className="blog-card">
+                        <div className="meta">
                           <div
-                            class="photo shimmer"
+                            className="photo shimmer"
                             style={{
                               background: "lightgrey",
                               width: "100%",
@@ -213,7 +216,7 @@ export default function Blog() {
                             alt={"loading"}
                           ></div>
                         </div>
-                        <div class="description">
+                        <div className="description">
                           <div className="rectangle medium shimmer"></div>
                           <div className="rectangle small shimmer"></div>
                         </div>
@@ -309,10 +312,10 @@ export default function Blog() {
               );
             })
           ) : (
-            <div class="blog-card">
-              <div class="meta">
+            <div className="blog-card">
+              <div className="meta">
                 <div
-                  class="photo shimmer"
+                  className="photo shimmer"
                   style={{
                     background: "lightgrey",
                     width: "100%",
@@ -323,10 +326,11 @@ export default function Blog() {
                   alt={"loading"}
                 ></div>
               </div>
-              <div class="description">
+              <div className="description">
                 <h4
                   style={{
                     fontFamily: "Fira Sans Extra Condensed",
+                    color: "white",
                   }}
                 >
                   Loading...

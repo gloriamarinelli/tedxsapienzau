@@ -8,17 +8,19 @@ import { it } from "date-fns/locale";
 import global from "../../resources/global.json";
 
 export default function BlogPost() {
-  const [blogPost, setBlogPost] = useState([]);
+  const [blogPost, setBlogPost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   let { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
     axios
       .get(global.CONNECTION.ENDPOINT + `blog/${id}`)
-      .then((res, err) => {
-        if (res.data === null || res.data === undefined || res.data === "") {
+      .then((res) => {
+        if (!res.data) {
+          // Controlla se il dato è valido
           navigate("/blog");
         } else {
           setBlogPost(res.data);
@@ -27,10 +29,9 @@ export default function BlogPost() {
       })
       .catch((err) => {
         console.error(err);
+        setIsLoading(false);
       });
-  });
-
-  // eslint-disable-next-line no-lone-blocks
+  }, [id, navigate]);
 
   if (isLoading) {
     return (
@@ -49,15 +50,17 @@ export default function BlogPost() {
         </div>
       </div>
     );
-  } else {
-    return BlogCardPost(
-      blogPost.titolo,
-      blogPost.descrizione,
-      blogPost.image,
-      blogPost.data,
-      blogPost.autore
-    );
   }
+
+  return (
+    <BlogCardPost
+      titolo={blogPost.titolo}
+      descrizione={blogPost.descrizione}
+      image={blogPost.image}
+      data={blogPost.data}
+      autore={blogPost.autore}
+    />
+  );
 }
 
 /**
@@ -68,7 +71,7 @@ export default function BlogPost() {
  * @param {Date} data
  * @returns Carta container del blog post
  */
-function BlogCardPost(titolo, descrizione, image, data, autore) {
+function BlogCardPost({ titolo, descrizione, image, data, autore }) {
   return (
     <div
       className="main-container"
