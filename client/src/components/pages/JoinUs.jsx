@@ -52,12 +52,12 @@ export default function JoinUs() {
               backgroundColor: "#191919",
               borderRadius: "25px",
               width: "95%",
-              height: "100px",
+              height: "200px",
               margin: "auto",
               padding: "30px",
               backgroundImage: `url(${volunteers})`,
               backgroundSize: "cover",
-              backgroundPosition: "0px -30px",
+              backgroundPosition: "0px -40px",
             }}
           ></div>
 
@@ -291,19 +291,6 @@ export default function JoinUs() {
                     progetto.
                   </p>
                 </div>
-                <div class="image-top-right">
-                  <img
-                    src={arrow}
-                    alt="cover edizione 2023"
-                    style={{
-                      height: "300px",
-                      width: "auto",
-                      objectFit: "cover",
-                      marginBottom: "50px",
-                    }}
-                  />
-                </div>
-
                 <div class="text-bottom-right-aw">
                   <img
                     src={fucsia}
@@ -419,18 +406,6 @@ export default function JoinUs() {
                     masterclass create ed esposte da membri interni ed esterni.
                   </p>
                 </div>
-                <div class="image-top-right">
-                  <img
-                    src={arrowmiddle}
-                    alt="cover edizione 2023"
-                    style={{
-                      height: "300px",
-                      width: "auto",
-                      objectFit: "cover",
-                      marginBottom: "50px",
-                    }}
-                  />
-                </div>
               </div>
             </div>
 
@@ -530,18 +505,7 @@ export default function JoinUs() {
                     messaggi comunicati la maggior efficacia possibile.
                   </p>
                 </div>
-                <div class="image-top-right">
-                  <img
-                    src={arrowmiddle}
-                    alt="cover edizione 2023"
-                    style={{
-                      height: "300px",
-                      width: "auto",
-                      objectFit: "cover",
-                      marginBottom: "50px",
-                    }}
-                  />
-                </div>
+                
               </div>
             </div>
 
@@ -586,18 +550,7 @@ export default function JoinUs() {
                     diritto d'autore.
                   </p>
                 </div>
-                <div class="image-top-right">
-                  <img
-                    src={arrowmiddle}
-                    alt="cover edizione 2023"
-                    style={{
-                      height: "300px",
-                      width: "auto",
-                      objectFit: "cover",
-                      marginBottom: "50px",
-                    }}
-                  />
-                </div>
+                
                 <div class="text-bottom-right-aw">
                   <img
                     src={giallo}
