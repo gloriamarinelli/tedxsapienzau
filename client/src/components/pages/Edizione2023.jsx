@@ -30,7 +30,7 @@ export default function Edizione2023() {
   const [isBioOpen, setIsBioOpen] = useState(false);
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize,] = useOutletContext();
 
   useEffect(() => {
     axios

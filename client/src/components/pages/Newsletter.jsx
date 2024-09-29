@@ -49,7 +49,7 @@ export default function Join() {
                 color: global.COLORS.BIANCO,
               }}
             >
-              <Trans i18nKey="joinus.join_us_closed" lang={i18n.language} />
+              <Trans i18nKey="joinus.closed_title" lang={i18n.language} />
             </h1>
           </div>
         </section>
@@ -144,7 +144,7 @@ export default function Join() {
                 color: global.COLORS.BIANCO,
               }}
             >
-              <Trans i18nKey="joinus.join_us_closed" lang={i18n.language} />
+              <Trans i18nKey="joinus.closed_title" lang={i18n.language} />
             </h1>
           </div>
         </section>

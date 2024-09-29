@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useOutletContext } from "react-router";
 
 import global from "../../resources/global.json";
@@ -13,8 +13,8 @@ import NunzioAlloccaImage from "../images/countdown24/NunzioAllocca.webp";
 import SpeakerCard from "../components/SpeakerCard";
 
 export default function Countdown2024() {
-  const [windowSize, setWindowSize] = useOutletContext();
-  const [scrollY, setScrollY] = useState(0);
+  const [windowSize,] = useOutletContext();
+  const [, setScrollY] = useState(0);
   const [iframeSource, setIframeSource] = useState(
     "https://www.youtube.com/embed/qfP5K6o_71E?si=hKofScYpCbBKDmCt&amp;"
   );
@@ -36,7 +36,7 @@ export default function Countdown2024() {
       "https://www.youtube.com/embed/D_SgAqsNdhM?si=bW9uYM00eup1_bze",
   };
 
-  const svgRef = useRef();
+  //const svgRef = useRef();
 
   useEffect(() => {
     // create a function that listens for the scroll event

@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import React from "react";
 import { useOutletContext } from "react-router";
 import Cover23 from "../images/cover-edizione23.webp";
 import Cover22 from "../images/cover-edizione22.webp";
@@ -12,9 +11,70 @@ import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../resources/styles/editionsstyle.css";
 import "../../index.css";
+import { useTranslation } from "react-i18next";
+
 
 export default function Editions({ withTitle = true }) {
-  const [windowSize, setWindowSize] = useOutletContext();
+  const {i18n} = useTranslation();
+  const [windowSize] = useOutletContext();
+
+  const eventsInfo = [
+    {
+      date: i18n.language === 'it' ? "31 Maggio 2024" : "May 31, 2024",
+      title: "COUNTDOWN",
+      description:
+        i18n.language === 'it' 
+        ? 
+        "Il tempo scorre ed è necessario creare un nuovo spazio di riflessione ed intrattenimento incentrato sulla crisi climatica. Un luogo dove affrontare le paure sul futuro con positività e scienza grazie ad una visione interdisciplinare e coinvolgente negli spazi del nostro Ateneo." 
+        : 
+        "Time is running out and it is necessary to create a new space for reflection and entertainment focused on the climate crisis. A place to address fears about the future with positivity and science thanks to an interdisciplinary and engaging vision in the spaces of our University.",
+      photo: CoverCountdown24,
+      linkTo: "/eventi/countdown2024",
+    },
+    {
+      date: i18n.language === 'it' ? "15 Novembre 2023" : "November 15, 2023",
+      title: "BACK TO ZERO",
+      description:
+        i18n.language === 'it' 
+        ?
+        "Il nostro obiettivo è azzerare, ricercare un punto zero: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che  rallentano la crescita della nostra società, peggiorando la qualità della nostra vita."
+        :
+        "Our goal is to zero, to research a zero point: inequalities, conflicts, bad lifestyles, emissions and waste. Reduce those polluting factors that slow down the growth of our society, worsening the quality of our life.",
+      photo: Cover23,
+      linkTo: "/eventi/edizione2023",
+    },
+    {
+      date: i18n.language === 'it' ? "18 Aprile 2023" : "April 18, 2023",
+      title: "AWARDS 2023",
+      description:
+        i18n.language === 'it' 
+        ?
+        "Il concorso Back to Zero Awards è organizzato dal Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea con il motto TED “Ideas worth spreading”, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell’edizione 2023 del TEDxSapienzaU."
+        :
+        "The Back to Zero Awards competition is organized by the TEDxSapienzaU Committee and aims to promote valuable ideas in line with the TED motto “Ideas worth spreading”, offering the winners the prestigious opportunity to perform on the stage of the 2023 edition of TEDxSapienzaU.",
+      photo: CoverAwards23,
+      linkTo: "/eventi/awards2023",
+    },
+    {
+      date: i18n.language === 'it' ? "29 Aprile 2022" : "April 29, 2022",
+      title: "ACT: LEAD THE CHANGE",
+      description:
+        i18n.language === 'it' 
+        ?
+        "Il titolo della prima edizione del TEDxSapienzaU è stato ACT - Lead the change. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici."
+        :
+        "The title of the first edition of TEDxSapienzaU was ACT - Lead the change. As per TEDx guidelines, the dialogues that were presented concerned different subjects and interconnected thematic areas, preferring the best inspiring ideas and experiences.",
+      photo: Cover22,
+      linkTo: "/eventi/edizione2022",
+    },
+    {
+      date: "29 Aprile 2022",
+      title: "AWARDS 2022",
+      description: "",
+      photo: CoverAwards22,
+      linkTo: "/eventi/awards2022",
+    },
+  ];
 
   return (
     <div
@@ -71,45 +131,3 @@ export default function Editions({ withTitle = true }) {
     </div>
   );
 }
-
-const eventsInfo = [
-  {
-    date: "31 Maggio 2024",
-    title: "COUNTDOWN",
-    description:
-      "Il tempo scorre ed è necessario creare un nuovo spazio di riflessione ed intrattenimento incentrato sulla crisi climatica. Un luogo dove affrontare le paure sul futuro con positività e scienza grazie ad una visione interdisciplinare e coinvolgente negli spazi del nostro Ateneo.",
-    photo: CoverCountdown24,
-    linkTo: "/eventi/countdown2024",
-  },
-  {
-    date: "15 Novembre 2023",
-    title: "BACK TO ZERO",
-    description:
-      "Il nostro obiettivo è azzerare, ricercare un punto zero: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che  rallentano la crescita della nostra società, peggiorando la qualità della nostra vita.",
-    photo: Cover23,
-    linkTo: "/eventi/edizione2023",
-  },
-  {
-    date: "18 Aprile 2023",
-    title: "AWARDS 2023",
-    description:
-      "  Il concorso Back to Zero Awards è organizzato dal Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea con il motto TED “Ideas worth spreading”, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell’edizione 2023 del TEDxSapienzaU.",
-    photo: CoverAwards23,
-    linkTo: "/eventi/awards2023",
-  },
-  {
-    date: "29 Aprile 2022",
-    title: "ACT: LEAD THE CHANGE",
-    description:
-      "Il titolo della prima edizione del TEDxSapienzaU è stato ACT - Lead the change. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici.",
-    photo: Cover22,
-    linkTo: "/eventi/edizione2022",
-  },
-  {
-    date: "29 Aprile 2022",
-    title: "AWARDS 2022",
-    description: "",
-    photo: CoverAwards22,
-    linkTo: "/eventi/awards2022",
-  },
-];

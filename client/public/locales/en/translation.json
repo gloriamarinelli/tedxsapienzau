@@ -10,7 +10,25 @@
     },
     
     "joinus":{
-        "join_us_closed": "Applications to join the team are closed, but not forever.<br></br> Fill out the form below to be contacted when we reopen applications!"
+        "closed_title": "Applications to join the team are closed, but not forever.<br></br> Fill out the form below to be contacted when we reopen applications!",
+        "open_title": "Join the TEDxSapienzaU team!",
+        "open_how_to_apply_title": "How to apply",
+        "open_description": "Join this project full of stimuli and growth opportunities. We can't wait to read your story! <br><br> If you are selected, you will be part of the TEDxSapienzaU team for the activities of 2024 and 2025, with immediate inclusion. <br><br> Applications are open to all students <strong>regularly enrolled</strong> in a <i>bachelor's, master's, master's, doctorate or specialization school</i> <strong>at Sapienza University of Rome</strong> and will close on <3>07/10/2024 at 23:59</3>. <br><br> Fill out the <strong>form</strong> to join us! <br><br> The outcome of the application will be communicated via institutional email. <br><br> For <1>any doubts or clarifications</1> you can contact us by sending an email to: <2>info@tedxsapienzau.com</2>.",
+        "open_apply_button": "Apply now!",
+        "open_team_title": "Teams description",
+        "ERS": "The External Relations & Sponsorship team deals with managing every aspect related to sponsorships, partnerships, sponsorships and public tenders. So starting from the search for companies, startups, SMEs, media, associations, entities and institutions, up to the signing of agreements and contracts, with a focus on managing the relationship in all its phases, in order to give life to a win-win collaboration. TEDxSapienzaU is a non-profit organization and these funds are entirely used to finance the realization of the project.",
+        "PEM": "The Planning and Event Management team deals with the planning and management of various aspects of the organization. In practice, it deals with requesting quotes from companies, finding spaces for conferences and events with sponsors, promoting them through days dedicated to Sapienza students. In essence, therefore, it deals with the ideation, design and development of the various events signed TEDxSapienzaU.",
+        "SEC": "The Speakers & Event Curation team deals with the proposals of the themes for the various events, the choice of speakers and the care of their bureaucratic (e.g. email and contacts) and practical (e.g. slides and speech) details. In general, therefore, it takes care of the relationship with the speakers 360° so that there is always a strong attention to all their needs.",
+        "HRA": "The Human Resources & Academy team deals with the selection (e.g. construction and screening of applications, introductory interviews) and management of the members of the organization in order to guarantee their well-being and to build a creative and productive environment. It also deals with the training of associates through the organization of masterclasses created and presented by internal and external members.",
+        "IT": "The IT & Website team is responsible for ensuring the correct functioning of the <2>official website</2> both front-end and back-end and manages the official <1>web app</1>. It also coordinates the weekly newsletter and takes care of graphic design, visual identity and content, ensuring an optimal online user experience. Finally, it supervises the technical direction during all major events, playing a 360° support role in the technological field.",
+        "CEM": "The Communication & Marketing team takes care of the entire communication of TEDxSapienzaU. In particular, it deals with building and planning online reputation, awareness and creating campaigns and initiatives to engage the public and the realities that support the project. It also deals, in the various phases of the event, with writing press releases, newsletters and email marketing. But also articles for the blog, both internal and for our partners, such as the Millionaire magazine. Finally, it takes care of creating visual, photographic and video content so that the messages communicated are as effective as possible.",
+        "LA": "The Legal & Administrative team takes care of the legal and administrative aspects related to the organization of TED events. In particular, it deals with drafting contracts, accounting, searching for tenders for fund recovery, compliance with TEDx rules and University guidelines and finally with the protection of privacy and copyright.",
+        "DESIGN": "The Design team takes care of the design aspects of the event. In detail, it works on creating a visual and graphic identity, developing products and designing the setups."
+    },
+
+    "partners": {
+        "slider_title": "Who supported us",
+        "text1": "<h3>TEDx, much more than an event.</h3> <p> Realizing a TEDx is a <1>team effort</1>. For this reason we collaborate synergistically with our partners. </p>"
     },
 
     "footer":{
@@ -33,7 +51,7 @@
         "find_out_more": "Find out more",
         "speakers": "Speakers",
         "spectators": "Spectators",
-        "followers": "Social Followers",
+        "followers": "Followers",
         "yt_views": "YouTube Views"
     }
 }
