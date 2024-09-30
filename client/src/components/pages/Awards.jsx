@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import Cover23 from "../images/awards23/header_awards23.webp";
@@ -205,10 +205,10 @@ export default function Awards() {
               Il concorso Back to Zero Awards è organizzato dal Comitato
               TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea
               con il motto TED “Ideas worth spreading”, offrendo ai vincitori la
-              prestigiosa opportunità di esibirsi sul palco dell’edizione 2023
+              prestigiosa opportunità di esibirsi sul palco dell'edizione 2023
               del TEDxSapienzaU. I 5 vincitori del concorso TEDxSapienzaU
               Awards, 3 Speaker e 2 Artist, vengono premiati sul palco della
-              finale e hanno l’occasione di esibirsi durante l’evento
+              finale e hanno l'occasione di esibirsi durante l'evento
               TEDxSapienzaU 2023!
             </p>
             <a className="link" href={"/edizione2023"}>
