@@ -8,7 +8,7 @@ import "../../resources/styles/awardsstyle.css";
 import "../../index.css";
 
 export default function Awards() {
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
 
   if (windowSize > 992) {
     return (

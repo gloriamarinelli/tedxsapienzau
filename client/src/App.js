@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { AuthContextProvider } from "./components/context/authContext";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import NavbarComponent from "./components/components/NavbarComponent";
 import Footer from "./components/components/Footer";
@@ -29,7 +30,6 @@ import Write from "./components/pages/Write";
 
 import Location from "./components/pages/Location";
 import MissionandVision from "./components/pages/MissionandVision";
-
 
 import Awards2023 from "./components/pages/Awards2023";
 import Awards2022 from "./components/pages/Awards2022";
@@ -103,7 +103,7 @@ const router = createBrowserRouter([
       {
         path: "/privacypolicy",
         element: <PrivacyPolicy />,
-      },      
+      },
       {
         path: "/eventi/awards2023",
         element: <Awards2023 />,
@@ -115,7 +115,7 @@ const router = createBrowserRouter([
       {
         path: "/eventi/countdown2024",
         element: <Countdown2024 />,
-      },      
+      },
 
       {
         path: "/joinus",
@@ -154,6 +154,7 @@ function App() {
   return (
     <AuthContextProvider>
       <RouterProvider router={router} />
+      <SpeedInsights />
     </AuthContextProvider>
   );
 }
