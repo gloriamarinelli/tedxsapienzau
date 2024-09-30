@@ -21,7 +21,7 @@ export default function Partners() {
   const [activeYear] = useState(24);
   const [windowSize] = useOutletContext();
 
-  /* variabili per la gestione play-pause animazione scroller loghi */
+  /* variables to manage play-pause animation logos scroller */
   let [isHovered, setIsHovered] = useState(false);
 
   function getSponsor2022() {
@@ -486,60 +486,18 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           <ImageTwo />
           <ImageThree />
           <ImageFour />
-          {/*<ImageFive />*/}
         </div>
         <div className="gradient-div gradient-div-bottom"></div>
       </div>
     );
   }
 
-  /*function checkElementPosition() {
-    const group_id_1 = "1st-group";
-    const group_id_2 = "2nd-group";
-    const last_element_id = "last-element";
-    const snd_last_element_id = "2nd-last-element";
-    const tmp_id = "tmp-id";
-    const tmp_group_id = "tmp-group-id";
-
-    let groupElement = document.getElementById(group_id_1);
-    let groupElement2 = document.getElementById(group_id_2);
-    let lastElement = document.getElementById(last_element_id);
-    let sndLastElement = document.getElementById(snd_last_element_id);
-    
-    if (!groupElement || !lastElement || !groupElement2 || !sndLastElement) {
-      console.debug("not found");
-      return;
-    }
-
-    const lastElementRect = lastElement.getBoundingClientRect();
-    if (lastElementRect.left <= 0) {
-      groupElement.style.animationPlayState = "paused";
-      groupElement2.parentNode.insertBefore(groupElement, groupElement2.nextSibling); // accodamento del primo div una volta uscito dalla visualizzazione
-      groupElement.id = tmp_group_id;
-      groupElement2.id = group_id_1;
-      groupElement = document.getElementById(group_id_1);
-      groupElement2 = document.getElementById(tmp_group_id);
-      groupElement2.id = group_id_2;
-
-      lastElement.id = tmp_id; // l'ultimo elemento del 1 gruppo riceve un id temporaneo per evitare conflitti
-      sndLastElement.id = last_element_id; // l'ultimo elemento del 2 gruppo assume l'id dell'elemento del quale viene monitorata la posizione
-      lastElement = document.getElementById(last_element_id); // scambio effettivo 
-      sndLastElement = document.getElementById(tmp_id); // il secondo elemento ora diventa quello che all'inizio era il primo perché il div viene accodato
-      sndLastElement.id = snd_last_element_id; // viene cambiato il valore dell'id
-
-
-    }
-    else{
-      groupElement.style.animationPlayState = "running";
-    }
-  }*/
-
-  /* funzione per la gestione 'pause' animazione scroller loghi */
+  /* 'pause' animation logos scroller */
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
 
-  /* funzione per la gestione 'play' animazione scroller loghi */
+  /* 'play' animation logos scroller */
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
@@ -560,10 +518,10 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               {t("partners.slider_title")}
             </h2>
             <div
-              /* controllo per mouse hover */
+              /* mouse hover check */
               onMouseMove={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              /* se il mouse è hover viene aggiunta la classe 'hovered', altrimenti nulla */
+              /* if mouse is hovering, the 'hovered' class is added */
               className={`image-scroller-container ${
                 isHovered ? "hovered" : ""
               }`}
@@ -801,110 +759,13 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         <section
           style={{
             backgroundColor: global.COLORS.NERO,
-            //marginTop: global.UTILS.NAV_HEIGHT,
-            //padding: "10px",
             paddingTop: "5vh",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
             display: "grid",
           }}
         >
-          {/*<div
-            style={{
-              width: "99%",
-              height: "80%",
-              padding: global.UTILS.BENTO_BOX_PADDING,
-              borderRadius: global.UTILS.BENTO_BOX_PADDING,
-              backgroundColor: "black",
-              //marginRight: "10px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-            }}
-          ></div>*/}
         </section>
-
-        {/* <section
-          className="pt-5 pb-5 px-5 d-flex justify-content-between"
-          style={{
-            //width: "95vw",
-            //margin: "auto",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            backgroundColor: global.COLORS.NERO,
-          }}
-        >
-          <h3
-            style={{
-              fontSize: "25px",
-              fontWeight: "bold",
-              color: "black",
-              display: "flex",
-              color: "white",
-            }}
-          >
-            Chi ci ha supportato:
-            <div
-              ref={button2024}
-              className="year-button underlined"
-              type="button"
-              style={{ marginLeft: "30px" }}
-              onClick={() => {
-                console.log("click");
-                button2022.current.classList.remove("underlined");
-                button2023.current.classList.remove("underlined");
-                button2024.current.classList.add("underlined");
-                setActiveYear(24);
-              }}
-            >
-              2024
-            </div>
-            <div
-              ref={button2023}
-              className="year-button"
-              type="button"
-              style={{ marginLeft: "30px" }}
-              onClick={() => {
-                console.log("click");
-                button2022.current.classList.remove("underlined");
-                button2024.current.classList.remove("underlined");
-                button2023.current.classList.add("underlined");
-                setActiveYear(23);
-              }}
-            >
-              2023
-            </div>
-            <div
-              ref={button2022}
-              className="year-button"
-              type="button"
-              style={{ marginLeft: "30px" }}
-              onClick={() => {
-                console.log("click");
-                button2023.current.classList.remove("underlined");
-                button2024.current.classList.remove("underlined");
-                button2022.current.classList.add("underlined");
-                setActiveYear(22);
-              }}
-            >
-              2022
-            </div>
-          </h3>
-
-          <Link to="/join">
-            <button
-              type="button"
-              className="btn"
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED,
-                fontWeight: "bold",
-                color: "#fff",
-              }}
-            >
-              Vuoi supportarci?
-            </button>
-          </Link>
-            </section> */}
 
         {chooseYear()}
       </>
@@ -917,8 +778,6 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         <section
           style={{
             backgroundColor: global.COLORS.NERO,
-            //marginTop: global.UTILS.NAV_HEIGHT,
-            //padding: "10px",
             paddingTop: "5vh",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             placeItems: "center",
@@ -933,7 +792,6 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               padding: global.UTILS.BENTO_BOX_PADDING,
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
               backgroundColor: "black",
-              //marginRight: "10px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -941,89 +799,6 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             }}
           ></div>
         </section>
-
-        {/*<section
-          className="pt-3 pb-5 px-3"
-          style={{
-            //width: "95vw",
-            //margin: "auto",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            backgroundColor: global.COLORS.NERO,
-          }}
-        >
-          <h3
-            style={{
-              fontSize: "15px",
-              fontWeight: "bold",
-              textAlign: "left",
-              color: "white",
-              display: "flex",
-            }}
-          >
-            Chi ci ha supportato:
-          </h3>
-          <div style={{ display: "flex" }}>
-            <div
-              ref={button2024}
-              className="year-button underlined px-3"
-              type="button"
-              style={{
-                //marginLeft: "30px",
-                fontSize: "30px",
-                color: "white",
-              }}
-              onClick={() => {
-                console.log("click");
-                button2022.current.classList.remove("underlined");
-                button2023.current.classList.remove("underlined");
-                button2024.current.classList.add("underlined");
-                setActiveYear(24);
-              }}
-            >
-              2024
-            </div>
-
-            <div
-              ref={button2023}
-              className="year-button px-3"
-              type="button"
-              style={{
-                //marginRight: "30px",
-                cursor: "initial",
-                fontSize: "30px",
-                color: "white",
-              }}
-              onClick={() => {
-                console.log("click");
-                button2022.current.classList.remove("underlined");
-                button2024.current.classList.remove("underlined");
-                button2023.current.classList.add("underlined");
-                setActiveYear(23);
-              }}
-            >
-              2023
-            </div>
-            <div
-              ref={button2022}
-              className="year-button px-3"
-              type="button"
-              style={{
-                //marginRight: "30px",
-                fontSize: "30px",
-                color: "white",
-              }}
-              onClick={() => {
-                console.log("click");
-                button2023.current.classList.remove("underlined");
-                button2024.current.classList.remove("underlined");
-                button2022.current.classList.add("underlined");
-                setActiveYear(22);
-              }}
-            >
-              2022
-            </div>
-          </div>
-        </section>*/}
 
         {chooseYear()}
       </>
