@@ -14,10 +14,10 @@ import ImageOne from "../components/partners_scrolldown/ImageOne.js";
 import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
 import ImageThree from "../components/partners_scrolldown/ImageThree.js";
 import ImageFour from "../components/partners_scrolldown/ImageFour.js";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Partners() {
-  const{t, Trans} = useTranslation();
+  const { t, Trans } = useTranslation();
   const [activeYear] = useState(24);
   const [windowSize] = useOutletContext();
 
@@ -618,12 +618,17 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         >
           <div id="mobile-1st-div" className="mobile-div ct-right">
             <div id="mobile-text-block-1" className="mobile-text-block">
-
-              <Trans i18nKey="partners.text1"
+              <h3>TEDx, molto più che un evento.</h3>
+              <p>
+                Realizzare un TEDx è un{" "}
+                <span id="imp-txt-1">lavoro di squadra</span>. Per questo motivo
+                collaboriamo in sinergia con i nostri partner.
+              </p>
+              {/*<Trans i18nKey="partners.text1"
               components={{
                 1: <span id="imp-txt-1" />,
               }}
-              />
+              />*/}
             </div>
           </div>
           <div id="mobile-2nd-div" className="mobile-div ct-left">
@@ -764,8 +769,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             placeItems: "center",
             display: "grid",
           }}
-        >
-        </section>
+        ></section>
 
         {chooseYear()}
       </>
