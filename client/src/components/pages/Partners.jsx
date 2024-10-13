@@ -14,7 +14,13 @@ import ImageOne from "../components/partners_scrolldown/ImageOne.js";
 import ImageTwo from "../components/partners_scrolldown/ImageTwo.js";
 import ImageThree from "../components/partners_scrolldown/ImageThree.js";
 import ImageFour from "../components/partners_scrolldown/ImageFour.js";
+import first_box_bg from "../images/partners/desktop/3.webp";
+import second_box_bg from "../images/partners/desktop/6.webp";
+import third_box_bg from "../images/partners/desktop/5.webp";
+import fourth_box_bg from "../images/partners/desktop/4.webp";
+import volunteers from "../images/partners/desktop/volunteers_darker_filter.webp";
 import { useTranslation } from "react-i18next";
+import PartnersCounter from "./PartnersCounter";
 
 export default function Partners() {
   const { t, Trans } = useTranslation();
@@ -477,7 +483,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function displayParallaxScrollDown() {
+  /*function displayParallaxScrollDown() {
     return (
       <div className="parent-div">
         <div className="gradient-div gradient-div-top"></div>
@@ -490,7 +496,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         <div className="gradient-div gradient-div-bottom"></div>
       </div>
     );
-  }
+  }*/
 
   /* 'pause' animation logos scroller */
   const handleMouseEnter = () => {
@@ -608,7 +614,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function displayMobileScrollDown() {
+  function mobilePartnersLayout() {
     return (
       <>
         <div className="gradient-div gradient-div-top"></div>
@@ -736,12 +742,470 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
+  function desktopPartnersLayout() {
+    return (
+      <div style={{ backgroundColor: "#000" }}>
+        {/* first row */}
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            marginTop: global.UTILS.NAV_HEIGHT,
+            width: "100vw",
+            backgroundColor: "#000",
+            padding:
+              windowSize < global.UTILS.BIG_TABLET_WIDTH
+                ? "34px 34px 0px 34px"
+                : "34px",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          <div
+            id="main-container"
+            style={{
+              width: "100%",
+              height: "90%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${first_box_bg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* content's div */}
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "1.5em",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h1
+                  style={{
+                    fontSize: "200%",
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.opening_st")}
+                </h1>
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.2nd_st")}
+                  <span id="imp-txt-1">{t("partners.2nd_st_red")}</span>.
+                </h3>
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.3rd_st")}
+                </h3>
+              </div>
+            </div>
+
+            {/* placeholder div */}
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+              }}
+            ></div>
+          </div>
+        </section>
+        {/* second row */}
+        <PartnersCounter />
+        {/* third row */}
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            width: "100vw",
+            backgroundColor: "#000",
+            padding:
+              windowSize < global.UTILS.BIG_TABLET_WIDTH
+                ? "34px 34px 0px 34px"
+                : "34px",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          <div
+            id="main-container"
+            style={{
+              width: "100%",
+              height: "90%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${second_box_bg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* content's div */}
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "1.5em",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h1
+                  style={{
+                    fontSize: "200%",
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.4th_st")}
+                </h1>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* content's div */}
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "1.5em",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                    fontSize: "4vh",
+                  }}
+                >
+                  {/*<span id="imp-txt-1">{t("partners.5th_st")}</span>*/}
+                  <i>{t("partners.5th_st")}</i>
+                </h3>
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.6th_st")}
+                  <br></br>
+                  {t("partners.7th_st")}
+                  <span id="imp-txt-1">{t("partners.7th_st_red")}</span>.
+                </h3>
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.8th_st_1")}
+                  <span id="imp-txt-1">{t("partners.8th_st_red")}</span>
+                  {t("partners.8th_st_2")}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* fourth row */}
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            width: "100vw",
+            backgroundColor: "#000",
+            padding:
+              windowSize < global.UTILS.BIG_TABLET_WIDTH
+                ? "34px 34px 0px 34px"
+                : "34px",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          <div
+            id="main-container"
+            style={{
+              width: "100%",
+              height: "90%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${third_box_bg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            ></div>
+
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* content's div */}
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "1.5em",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h1
+                  style={{
+                    fontSize: "200%",
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.9th_st")}
+                </h1>
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.10th_st")}
+                </h3>
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                  }}
+                >
+                  {t("partners.11th_st_1")}
+                  <br></br>
+                  {t("partners.11th_st_2")}
+                  <span id="imp-txt-1">{t("partners.11th_st_red")}</span>
+                  {t("partners.11th_st_3")}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* fifth row */}
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            width: "100vw",
+            backgroundColor: "#000",
+            padding:
+              windowSize < global.UTILS.BIG_TABLET_WIDTH
+                ? "34px 34px 0px 34px"
+                : "34px",
+            gap: "20px",
+            flexWrap: "wrap",
+          }}
+        >
+          <div
+            id="main-container"
+            style={{
+              width: "100%",
+              height: "90%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${fourth_box_bg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* content's div */}
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "1.5em",
+                  display: "flex",
+                  flexDirection: "column",
+                  /*backgroundImage: `url(${volunteers})`,*/
+                }}
+              >
+                <img
+                  src={volunteers}
+                  alt="TEDxSapienzaU Volunteers Photo"
+                  style={{ width: "100%", height: "20%", borderRadius: global.UTILS.BENTO_BOX_PADDING }}
+                ></img>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                padding: "20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* content's div */}
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "1.5em",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h3
+                  style={{
+                    paddingBottom: "2%",
+                    fontSize: "5vh",
+                  }}
+                >
+                  {t("partners.14th_st")}
+                </h3>
+                <ul>
+                  <li>
+                    <h3
+                      style={{
+                        paddingBottom: "2%",
+                        fontSize: "3vh",
+                      }}
+                    >
+                      {t("partners.14th_st_el_1")}
+                    </h3>
+                  </li>
+                  <li>
+                    <h3
+                      style={{
+                        paddingBottom: "2%",
+                        fontSize: "3vh",
+                      }}
+                    >
+                      {t("partners.14th_st_el_2")}
+                    </h3>
+                  </li>
+                  <li>
+                    <h3
+                      style={{
+                        paddingBottom: "2%",
+                        fontSize: "3vh",
+                      }}
+                    >
+                      {t("partners.14th_st_el_3")}
+                    </h3>
+                  </li>
+                  <li>
+                    <h3
+                      style={{
+                        paddingBottom: "2%",
+                        fontSize: "3vh",
+                      }}
+                    >
+                      {t("partners.14th_st_el_4")}
+                    </h3>
+                  </li>
+                  <li>
+                    <h3
+                      style={{
+                        paddingBottom: "2%",
+                        fontSize: "3vh",
+                      }}
+                    >
+                      {t("partners.14th_st_el_5")}
+                    </h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   function partners24() {
     let scrollDownComponent;
     if (windowSize > global.UTILS.TABLET_WIDTH) {
-      scrollDownComponent = displayParallaxScrollDown();
+      scrollDownComponent = desktopPartnersLayout();
     } else {
-      scrollDownComponent = displayMobileScrollDown();
+      scrollDownComponent = mobilePartnersLayout();
     }
 
     return (
@@ -758,10 +1222,10 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     else return partners24();
   }
 
-  function partnerLayout24Desktop() {
+  function showPartners24Desktop() {
     return (
       <>
-        <section
+        {/*<section
           style={{
             backgroundColor: global.COLORS.NERO,
             paddingTop: "5vh",
@@ -769,14 +1233,14 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             placeItems: "center",
             display: "grid",
           }}
-        ></section>
+        ></section>*/}
 
         {chooseYear()}
       </>
     );
   }
 
-  function partnerLayout24Mobile() {
+  function showPartners24Mobile() {
     return (
       <>
         <section
@@ -813,11 +1277,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     /**
      * DESKTOP
      */
-    return partnerLayout24Desktop();
+    return showPartners24Desktop();
   } else {
     /**
      * MOBILE
      */
-    return partnerLayout24Mobile();
+    return showPartners24Mobile();
   }
 }
