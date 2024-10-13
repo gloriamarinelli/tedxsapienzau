@@ -624,74 +624,66 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
         >
           <div id="mobile-1st-div" className="mobile-div ct-right">
             <div id="mobile-text-block-1" className="mobile-text-block">
-              <h3>TEDx, molto più che un evento.</h3>
+              <h3>{t("partners.opening_st")}</h3>
               <p>
-                Realizzare un TEDx è un{" "}
-                <span id="imp-txt-1">lavoro di squadra</span>. Per questo motivo
-                collaboriamo in sinergia con i nostri partner.
+                {t("partners.2nd_st")}
+                <span id="imp-txt-1">{t("partners.2nd_st_red")}</span>.<br></br>
+                {t("partners.3rd_st")}
               </p>
-              {/*<Trans i18nKey="partners.text1"
-              components={{
-                1: <span id="imp-txt-1" />,
-              }}
-              />*/}
             </div>
           </div>
           <div id="mobile-2nd-div" className="mobile-div ct-left">
             <div id="mobile-text-block-2" className="mobile-text-block">
-              <h3>Perché collaborare?</h3>
-              <h5 id="imp-txt-2">Uniti per un obiettivo</h5>
+              <h3>{t("partners.4th_st")}</h3>
+              <h5 id="imp-txt-2">
+                <i>{t("partners.5th_st")}</i>
+              </h5>
               <p>
-                Circa 3 anni fa, dallo stimolo di sei studenti si è deciso di
-                portare questo format internazionale nella nostra Università.{" "}
+                {t("partners.6th_st")}
                 <br></br>
-                Ora siamo più di <span id="imp-txt-5">120 volontari</span>.
+                {t("partners.7th_st")}
+                <span id="imp-txt-1">{t("partners.7th_st_red")}</span>.
               </p>
               <p>
-                Sapienza è l'Università più grande d'Europa, con più di 120 mila
-                studenti iscritti ed il nostro obiettivo è <br></br>
-                <span id="imp-txt-4">dare voce alle idee</span> di valore della
-                nostra comunità accademica.
+                {t("partners.8th_st_1")}
+                <span id="imp-txt-1">{t("partners.8th_st_red")}</span>
+                {t("partners.8th_st_2")}
               </p>
             </div>
           </div>
           <div id="mobile-3rd-div" className="mobile-div ct-left">
             <div id="mobile-text-block-3" className="mobile-text-block">
               <div>
-                <h4>L'innovazione è nelle nostre vene</h4>
+                <h4>{t("partners.9th_st")}</h4>
+                <p>{t("partners.10th_st")}</p>
                 <p>
-                  Il format TEDx ci è concesso sotto licenza ufficiale da TED
-                  Foundation. Operiamo sotto i più elevati standard di qualità
-                  per garantire un'esperienza che sia all'altezza del nome che
-                  portiamo.
-                </p>
-                <p>
-                  Ci impegniamo a parlare di temi più rilevanti per la nostra
-                  società attraverso la voce degli Speaker. Vogliamo portare un
-                  <span id="imp-txt-3"> impatto positivo</span> alla nostra
-                  comunità.
+                  {t("partners.11th_st_1")}
+                  <br></br>
+                  {t("partners.11th_st_2")}
+                  <span id="imp-txt-1">{t("partners.11th_st_red")}</span>
+                  {t("partners.11th_st_3")}
                 </p>
               </div>
               <div class="">
                 <div>
                   <div>
-                    <h2>I nostri pilastri</h2>
+                    <h2>{t("partners.13th_st")}</h2>
                     <ul>
-                      <li>Community</li>
-                      <li>Content marketing</li>
-                      <li>Employer branding</li>
+                      <li>{t("partners.13th_st_el_1")}</li>
+                      <li>{t("partners.13th_st_el_2")}</li>
+                      <li>{t("partners.13th_st_el_3")}</li>
                     </ul>
                   </div>
                 </div>
                 <div>
                   <div>
-                    <h2>Collabora con noi</h2>
+                    <h2>{t("partners.14th_st")}</h2>
                     <ul>
-                      <li>Sponsor</li>
-                      <li>Partnership</li>
-                      <li>Media partner</li>
-                      <li>Community partner</li>
-                      <li>Patrocinio</li>
+                      <li>{t("partners.14th_st_el_1")}</li>
+                      <li>{t("partners.14th_st_el_2")}</li>
+                      <li>{t("partners.14th_st_el_3")}</li>
+                      <li>{t("partners.14th_st_el_4")}</li>
+                      <li>{t("partners.14th_st_el_5")}</li>
                     </ul>
                   </div>
                 </div>
@@ -700,37 +692,37 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           </div>
           <div id="mobile-4th-div" className="mobile-div ct-right">
             <div id="mobile-text-block-4" className="mobile-text-block">
-              <h3>In numeri</h3>
+              <h3>{t("partners.stats")}</h3>
               <p>
-                2 Edizioni, 2 Awards, 10 Workshops, 3 Eventi indipendenti.
+              {t("partners.events")}
                 <ul className="numbers-list">
                   <li className="info-el">
                     <h3 className="info-number">
                       +
                       <CountUp end={1500} duration={2} useEasing={false} />
                     </h3>{" "}
-                    persone coinvolte negli eventi
+                    {t("partners.people")}
                   </li>
                   <li className="info-el">
                     <h3 className="info-number">
                       +
                       <CountUp end={200000} duration={2} useEasing={false} />
                     </h3>{" "}
-                    visualizzazioni su YouTube
+                    {t("partners.yt_views")}
                   </li>
                   <li className="info-el">
                     <h3 className="info-number">
                       +
                       <CountUp end={50} duration={2} useEasing={false} />
                     </h3>{" "}
-                    partner a supporto del nostro evento
+                    {t("partners.partners")}
                   </li>
                   <li className="info-el">
                     <h3 className="info-number">
                       +
                       <CountUp end={300} duration={2} useEasing={false} />
                     </h3>{" "}
-                    volontari passati di qui
+                    {t("partners.volunteers")}
                   </li>
                 </ul>
               </p>
@@ -1108,7 +1100,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <img
                   src={volunteers}
                   alt="TEDxSapienzaU Volunteers Photo"
-                  style={{ width: "100%", height: "20%", borderRadius: global.UTILS.BENTO_BOX_PADDING }}
+                  style={{
+                    width: "100%",
+                    height: "20%",
+                    borderRadius: global.UTILS.BENTO_BOX_PADDING,
+                  }}
                 ></img>
               </div>
             </div>
