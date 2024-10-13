@@ -164,7 +164,7 @@ export default function MvHome() {
           {renderSubContainer(
             hidden4,
             setHidden4,
-            22083,
+            33000,
             t("mvhome.yt_views"),
             windowSize > 1245 ? "11vh" : "8vh"
           )}

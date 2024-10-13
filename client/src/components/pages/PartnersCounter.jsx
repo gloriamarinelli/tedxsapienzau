@@ -123,14 +123,14 @@ export default function PartnersCounter() {
             {renderSubContainer(
               hidden1,
               setHidden1,
-              1500,
+              3000,
               t("partners.people"),
               windowSize > 1245 ? "9vh" : "6vh"
             )}
             {renderSubContainer(
               hidden2,
               setHidden2,
-              200000,
+              33000,
               t("partners.yt_views"),
               windowSize > 1245 ? "9vh" : "6vh"
             )}

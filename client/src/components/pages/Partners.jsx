@@ -699,14 +699,14 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                   <li className="info-el">
                     <h3 className="info-number">
                       +
-                      <CountUp end={1500} duration={2} useEasing={false} />
+                      <CountUp end={3000} duration={2} useEasing={false} />
                     </h3>{" "}
                     {t("partners.people")}
                   </li>
                   <li className="info-el">
                     <h3 className="info-number">
                       +
-                      <CountUp end={200000} duration={2} useEasing={false} />
+                      <CountUp end={33000} duration={2} useEasing={false} />
                     </h3>{" "}
                     {t("partners.yt_views")}
                   </li>
