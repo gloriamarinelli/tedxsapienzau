@@ -27,7 +27,7 @@ export default function JoinUs() {
         <h1
           className="font-weight-bold mt-5 mb-5 text-center"
           style={{
-            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "60px" : "40px",
+            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "50px" : "30px",
             fontWeight: "bold",
             fontFamily: "Fira Sans Extra Condensed",
             color: "#fff",
@@ -63,7 +63,7 @@ export default function JoinUs() {
           }}
         >
           <div className="container-lg marketing">
-            <h3
+            <h2
               className="title"
               style={{
                 fontSize: "50px",
@@ -74,7 +74,7 @@ export default function JoinUs() {
               }}
             >
               {t("joinus.open_how_to_apply_title")}
-            </h3>
+            </h2>
           </div>
 
           <div className="container-lg marketing">
@@ -84,6 +84,7 @@ export default function JoinUs() {
                 textAlign: "justify",
                 fontFamily: "Fira Sans Extra Condensed",
                 color: "#fff",
+                fontSize: "18px",
               }}
             >
               <Trans
@@ -113,12 +114,12 @@ export default function JoinUs() {
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize:
-                    windowSize > global.UTILS.MOBILE_WIDTH ? "35px" : "20px",
+                    windowSize > global.UTILS.MOBILE_WIDTH ? "25px" : "15px",
                   textDecoration: "",
                   fontFamily: "sans-serif",
                   color: "#eb0028",
                   marginTop: "40px",
-                  width: windowSize > global.UTILS.MOBILE_WIDTH ? "40%" : "90%",
+                  width: windowSize > global.UTILS.MOBILE_WIDTH ? "30%" : "90%",
                 }}
                 href="https://forms.gle/DZdG1DosyGdkV2ZQ7"
                 target="_blank"

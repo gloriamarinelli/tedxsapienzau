@@ -15,13 +15,12 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
 import { useOutletContext } from "react-router";
-import CountUp from "react-countup";
 
 /**
  * Mission and Vision page
  */
 export default function MissionandVision() {
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
 
   if (windowSize > global.UTILS.MOBILE_WIDTH) {
     return (
@@ -139,117 +138,6 @@ export default function MissionandVision() {
                       alt="TedxSapienzaU"
                       height="400"
                     />
-                  </div>
-                </div>
-
-                <div
-                  className="row mt-10 mb-10"
-                  style={{
-                    textAlign: "center",
-                  }}
-                >
-                  <div className="col">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      <CountUp end={26} duration={2} />
-                    </h1>
-                    <h5
-                      style={{
-                        color: "#FFF",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      speakers
-                    </h5>
-                  </div>
-                  <div className="col">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      <CountUp
-                        end={3000}
-                        duration={2}
-                        useEasing={false}
-                        separator=""
-                      />
-                    </h1>
-                    <h5
-                      style={{
-                        color: "#FFF",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      spettatori
-                    </h5>
-                  </div>
-                  <div className="col">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      <CountUp
-                        end={5160}
-                        duration={2}
-                        useEasing={false}
-                        separator=""
-                      />
-                    </h1>
-                    <h5
-                      style={{
-                        color: "#FFF",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      social followers
-                    </h5>
-                  </div>
-                  <div className="col">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      <CountUp
-                        end={22083}
-                        duration={2}
-                        useEasing={false}
-                        separator=""
-                      />
-                    </h1>
-                    <h5
-                      style={{
-                        color: "#FFF",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      visualizzazioni su youtube
-                    </h5>
                   </div>
                 </div>
               </div>
@@ -388,117 +276,6 @@ export default function MissionandVision() {
                       alt="TedxSapienzaU"
                       height="300"
                     />
-                  </div>
-                </div>
-
-                <div
-                  className="row mt-10 mb-10"
-                  style={{
-                    textAlign: "center",
-                  }}
-                >
-                  <div className="col-12">
-                    <h1
-                      className="font-weight-bold mt-5"
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      26
-                    </h1>
-                    <h5
-                      style={{
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                        color: "#FFF",
-                      }}
-                    >
-                      speakers
-                    </h5>
-                  </div>
-                  <div className="col-12">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      <CountUp
-                        end={3000}
-                        duration={2}
-                        useEasing={false}
-                        separator=""
-                      />
-                    </h1>
-                    <h5
-                      style={{
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                        color: "#FFF",
-                      }}
-                    >
-                      spettatori
-                    </h5>
-                  </div>
-                  <div className="col-12">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "Fira sans Extra Condensed",
-                      }}
-                    >
-                      <CountUp
-                        end={5160}
-                        duration={2}
-                        useEasing={false}
-                        separator=""
-                      />
-                    </h1>
-                    <h5
-                      style={{
-                        fontWeight: "bold",
-                        fontFamily: "GothamBold",
-                        color: "#FFF",
-                      }}
-                    >
-                      social followers
-                    </h5>
-                  </div>
-                  <div className="col-12">
-                    <h1
-                      className="font-weight-bold mt-5 "
-                      style={{
-                        color: "rgb(235, 0, 40)",
-                        fontSize: "80px",
-                        fontWeight: "bold",
-                        fontFamily: "GothamBold",
-                      }}
-                    >
-                      <CountUp
-                        end={22083}
-                        duration={2}
-                        useEasing={false}
-                        separator=""
-                      />
-                    </h1>
-                    <h5
-                      style={{
-                        fontWeight: "bold",
-                        fontFamily: "GothamBold",
-                        color: "#FFF",
-                      }}
-                    >
-                      visualizzazioni su youtube
-                    </h5>
                   </div>
                 </div>
               </div>

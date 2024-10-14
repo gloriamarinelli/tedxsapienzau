@@ -19,7 +19,7 @@ import { useTranslation } from "react-i18next";
 import PartnersCounter from "./PartnersCounter";
 
 export default function Partners() {
-  const { t, Trans } = useTranslation();
+  const { t } = useTranslation();
   const [activeYear] = useState(24);
   const [windowSize] = useOutletContext();
 
@@ -1095,7 +1095,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               >
                 <img
                   src={volunteers}
-                  alt="TEDxSapienzaU Volunteers Photo"
+                  alt="TEDxSapienzaU Volunteers"
                   style={{
                     width: "100%",
                     height: "20%",

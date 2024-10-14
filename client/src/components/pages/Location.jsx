@@ -5,7 +5,7 @@ import Image from "../images/location3.jpg";
 import Image2 from "../images/location2.webp";
 import "../../index.css";
 
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 /**
  * Location page that talks about Sapienza University
@@ -25,7 +25,7 @@ export default function Location() {
         <h1
           className="font-weight-bold mt-5 mb-5 text-center"
           style={{
-            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "60px" : "40px",
+            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "50px" : "30px",
             fontWeight: "bold",
             fontFamily: "Fira Sans Extra Condensed",
             color: "#fff",
@@ -68,7 +68,6 @@ export default function Location() {
               textAlign: "justify",
               color: "#fff",
               fontFamily: "Fira sans Extra Condensed",
-              fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
               marginTop: "20px",
             }}
           >

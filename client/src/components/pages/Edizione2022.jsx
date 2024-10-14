@@ -50,7 +50,7 @@ export default function Edizione2022() {
       );
     } else {
       let res = [];
-      speakers.map((speaker) => {
+      speakers.forEach((speaker) => {
         const { id, nome, bio, categoria, fotoPath, link } = speaker;
         res.push(
           <SpeakerCard

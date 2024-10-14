@@ -6,7 +6,7 @@ import "../../index.css";
 import "../../resources/styles/home.css";
 import { Button } from "react-bootstrap";
 import CountUp from "react-countup";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation} from "react-i18next";
 
 /**
  * Component that renders the information about TEDxSapienzaU in the home page.
@@ -14,7 +14,7 @@ import { useTranslation, Trans } from "react-i18next";
  */
 export default function MvHome() {
   const { t } = useTranslation();
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
   const [hidden1, setHidden1] = useState(true);
   const [hidden2, setHidden2] = useState(true);
   const [hidden3, setHidden3] = useState(true);
@@ -90,7 +90,6 @@ export default function MvHome() {
             backgroundColor: "#191919",
             display: "flex",
             margin: "10px",
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
@@ -157,7 +156,7 @@ export default function MvHome() {
           {renderSubContainer(
             hidden3,
             setHidden3,
-            5160,
+            5500,
             t("mvhome.followers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
@@ -194,7 +193,6 @@ export default function MvHome() {
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
             display: "flex",
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
@@ -261,14 +259,14 @@ export default function MvHome() {
           {renderSubContainer(
             hidden3,
             setHidden3,
-            5160,
+            5500,
             t("mvhome.followers"),
             "80px"
           )}
           {renderSubContainer(
             hidden4,
             setHidden4,
-            22083,
+            33000,
             t("mvhome.yt_views"),
             "60px"
           )}

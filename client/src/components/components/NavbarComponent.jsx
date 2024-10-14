@@ -89,15 +89,13 @@ export default function NavbarComponent(props) {
       let status = checkIsUserLoggedIn().catch((err) => logout());
       status.then((res) => {
         if (res.status === 200) {
-          console.log(res);
           setIsAdmin(true);
         } else {
-          console.log(res);
           logout();
         }
       });
     }
-  },);
+  });
 
   return (
     <>
@@ -367,7 +365,7 @@ export default function NavbarComponent(props) {
                             src={
                               i18n.language === "it" ? ItalianFlag : EnglishFlag
                             }
-                            alt= "flags"
+                            alt="flags"
                             width="20"
                             height="15"
                           />
@@ -435,7 +433,7 @@ export default function NavbarComponent(props) {
                         data-bs-toggle="dropdown"
                         role="button"
                       >
-                        Menù Admin
+                        Menu Admin
                       </a>
                       <ul className="dropdown-menu bg-success">
                         <li>
