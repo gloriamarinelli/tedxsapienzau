@@ -93,7 +93,7 @@ export default function Awards() {
           linea con il motto TED <i>“Ideas worth spreading”</i>, offrendo ai
           vincitori la prestigiosa opportunità di esibirsi sul palco dell’
           <strong>edizione 2023</strong> del TEDxSapienzaU. I 5 vincitori del
-          concorso TEDxSapienzaU Awards,{" "}
+          concorso SapienzaU Awards,{" "}
           <strong style={{ color: global.COLORS.ROSSO_TED }}>3 Speaker</strong>{" "}
           e <strong style={{ color: global.COLORS.ROSSO_TED }}>2 Artist</strong>
           , vengono premiati sul palco della finale e hanno l’occasione di
@@ -109,7 +109,7 @@ export default function Awards() {
           fontWeight: "bold",
         }}
       >
-        I VINCITORI TEDxSAPIENZAU AWARDS 2023
+        I VINCITORI SAPIENZAU AWARDS 2023
       </h1>
       <h3
         className="font-weight-bold mt-5 mb-3"
