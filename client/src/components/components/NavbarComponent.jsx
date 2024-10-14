@@ -97,7 +97,7 @@ export default function NavbarComponent(props) {
         }
       });
     }
-  },);
+  }, []);
 
   return (
     <>
@@ -367,7 +367,7 @@ export default function NavbarComponent(props) {
                             src={
                               i18n.language === "it" ? ItalianFlag : EnglishFlag
                             }
-                            alt= "flags"
+                            alt="flags"
                             width="20"
                             height="15"
                           />
