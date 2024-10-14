@@ -67,8 +67,11 @@ export default function Location() {
             style={{
               textAlign: "justify",
               color: "#fff",
-              fontFamily: "Fira sans Extra Condensed",
               marginTop: "20px",
+              fontSize:
+                windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+              fontFamily: "Fira sans Extra Condensed",
+              fontWeight: "400",
             }}
           >
             L’Università Sapienza di Roma, fondata <strong>nel 1303</strong> da
@@ -89,10 +92,12 @@ export default function Location() {
             className="paragraph"
             style={{
               textAlign: "justify",
-              fontFamily: "Fira sans Extra Condensed",
               color: "#fff",
-              fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
               marginTop: "20px",
+              fontSize:
+                windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+              fontFamily: "Fira sans Extra Condensed",
+              fontWeight: "400",
             }}
           >
             Una{" "}
@@ -115,9 +120,11 @@ export default function Location() {
             className="paragraph"
             style={{
               textAlign: "justify",
-              fontFamily: "Fira sans Extra Condensed",
               color: "#fff",
-              fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+              fontSize:
+                windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+              fontFamily: "Fira sans Extra Condensed",
+              fontWeight: "400",
               marginTop: "20px",
             }}
           >
@@ -142,9 +149,11 @@ export default function Location() {
             className="paragraph"
             style={{
               textAlign: "justify",
-              fontFamily: "Fira sans Extra Condensed",
               color: "#fff",
-              fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+              fontSize:
+                windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+              fontFamily: "Fira sans Extra Condensed",
+              fontWeight: "400",
               marginTop: "20px",
             }}
           >
@@ -175,9 +184,11 @@ export default function Location() {
             className="paragraph"
             style={{
               textAlign: "justify",
-              fontFamily: "Fira sans Extra Condensed",
               color: "#fff",
-              fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+              fontSize:
+                windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+              fontFamily: "Fira sans Extra Condensed",
+              fontWeight: "400",
               marginTop: "20px",
             }}
           >
@@ -200,9 +211,11 @@ export default function Location() {
             className="paragraph"
             style={{
               textAlign: "justify",
-              fontFamily: "Fira sans Extra Condensed",
               color: "#fff",
-              fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+              fontSize:
+                windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+              fontFamily: "Fira sans Extra Condensed",
+              fontWeight: "400",
               marginTop: "20px",
             }}
           >
@@ -231,7 +244,7 @@ export default function Location() {
         <h1
           className="font-weight-bold mt-5 mb-5 text-center"
           style={{
-            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "60px" : "40px",
+            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "50px" : "30px",
             fontWeight: "bold",
             fontFamily: "Fira Sans Extra Condensed",
             color: "#fff",
@@ -272,10 +285,12 @@ export default function Location() {
               className="paragraph"
               style={{
                 textAlign: "justify",
-                fontFamily: "Fira sans Extra Condensed",
                 color: "#fff",
                 fontSize:
-                  windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+                  windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontFamily: "Fira sans Extra Condensed",
+                fontWeight: "400",
+
                 marginTop: "20px",
               }}
             >
@@ -299,10 +314,11 @@ export default function Location() {
               className="paragraph"
               style={{
                 textAlign: "justify",
-                fontFamily: "Fira sans Extra Condensed",
                 color: "#fff",
                 fontSize:
-                  windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+                  windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontFamily: "Fira sans Extra Condensed",
+                fontWeight: "400",
                 marginTop: "20px",
               }}
             >
@@ -322,11 +338,13 @@ export default function Location() {
               className="paragraph"
               style={{
                 textAlign: "justify",
-                fontFamily: "Fira sans Extra Condensed",
                 color: "#fff",
-                fontSize:
-                  windowSize > global.UTILS.MOBILE_WIDTH ? "2em" : "1em",
+
                 marginTop: "20px",
+                fontSize:
+                  windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontFamily: "Fira sans Extra Condensed",
+                fontWeight: "400",
               }}
             >
               Dalla sua fondazione, Sapienza ha sempre mantenuto un ruolo

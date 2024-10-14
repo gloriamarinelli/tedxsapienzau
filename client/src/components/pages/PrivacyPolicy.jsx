@@ -1,7 +1,6 @@
 import React from "react";
 import { useOutletContext } from "react-router";
 import { Link } from "react-router-dom";
-import "../../index.css";
 import global from "../../resources/global.json";
 
 export default function PrivacyPolicy() {
@@ -29,7 +28,9 @@ export default function PrivacyPolicy() {
         <div
           style={{
             textAlign: "justify",
-            fontFamily: "GothamBook",
+            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "18px" : "15px",
+            fontFamily: "Fira sans Extra Condensed",
+            fontWeight: "400",
             marginLeft: "10%",
             marginRight: "10%",
             color: "white",
@@ -175,7 +176,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: "15px",
               fontWeight: "bold",
-              fontFamily: "GothamBold",
+              fontFamily: "Fira sans Extra Condensed",
               color: "white",
             }}
           >
@@ -187,8 +188,10 @@ export default function PrivacyPolicy() {
           style={{
             textAlign: "justify",
             padding: "20px",
-            fontFamily: "GothamBook",
             color: "white",
+            fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "18px" : "15px",
+            fontFamily: "Fira sans Extra Condensed",
+            fontWeight: "400",
           }}
         >
           <p style={{ fontStyle: "italic", fontWeight: "bold" }}>

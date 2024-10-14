@@ -62,15 +62,15 @@ export default function JoinUs() {
             marginTop: "50px",
           }}
         >
-          <div className="container-lg marketing">
+          <div className="container-lg marketing ">
             <h2
               className="title"
               style={{
                 fontSize: "50px",
-                textAlign: "justify",
                 fontFamily: "Fira Sans Extra Condensed",
-                marginTop: "30px",
                 color: "#eb0028",
+                textAlign: "center",
+                marginBottom: "30px",
               }}
             >
               {t("joinus.open_how_to_apply_title")}
@@ -82,9 +82,11 @@ export default function JoinUs() {
               className="paragraph"
               style={{
                 textAlign: "justify",
-                fontFamily: "Fira Sans Extra Condensed",
                 color: "#fff",
-                fontSize: "18px",
+                fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontFamily: "Fira sans Extra Condensed",
+                fontWeight: "400",
+               
               }}
             >
               <Trans
@@ -97,10 +99,12 @@ export default function JoinUs() {
                     <a
                       href="mailto:info@tedxsapienzau.com"
                       style={{
-                        fontFamily: '"Fira Sans Extra Condensed"',
+                        fontFamily: "Fira Sans Extra Condensed",
                         color: "#eb0028",
                       }}
-                    />
+                    >
+                      {t("joinus.contact_email")}
+                    </a>
                   ),
                 }}
               />
@@ -142,29 +146,25 @@ export default function JoinUs() {
           }}
         >
           <div>
-            <h1
+            <h2
               className="title"
               style={{
                 fontSize: "50px",
-                fontWeight: "bold",
-                fontFamily: "Fira Sans Extra Condensed",
-                marginTop: "80px",
-                color: "#eb0028",
                 textAlign: "center",
+                fontFamily: "Fira Sans Extra Condensed",
+                marginTop: "30px",
+                color: "#eb0028",
               }}
             >
               {t("joinus.open_team_title")}
-            </h1>
+            </h2>
           </div>
 
           <div
             className="container-lg mt-3"
             style={{ display: "flex", alignItems: "center" }}
           >
-            <div
-              class="parent-aw"
-              style={{ fontFamily: "Fira Sans Extra Condensed" }}
-            >
+            <div class="parent-aw">
               <div class="text-top-left-aw">
                 <img
                   src={rosa}
@@ -175,19 +175,22 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#f089b7",
+                    fontFamily: "Fira Sans Extra Condensed",
                   }}
                 >
                   External Relations & Sponsorship
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.ERS")}
@@ -203,7 +206,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#bb5c9e",
@@ -211,12 +214,14 @@ export default function JoinUs() {
                   }}
                 >
                   Planning & Event Management
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontFamily: "Fira sans Extra Condensed",
+                fontWeight: "400",
                   }}
                 >
                   {t("joinus.PEM")}
@@ -226,10 +231,7 @@ export default function JoinUs() {
           </div>
 
           <div className="container-lg mt-3">
-            <div
-              class="parent-aw"
-              style={{ fontFamily: "Fira Sans Extra Condensed" }}
-            >
+            <div class="parent-aw">
               <div class="text-top-left-aw">
                 <img
                   src={verde}
@@ -240,7 +242,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#95c459",
@@ -248,12 +250,14 @@ export default function JoinUs() {
                   }}
                 >
                   Speakers & Event Curation
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontFamily: "Fira sans Extra Condensed",
+                fontWeight: "400",
                   }}
                 >
                   {t("joinus.SEC")}
@@ -269,7 +273,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#2884c7",
@@ -277,12 +281,14 @@ export default function JoinUs() {
                   }}
                 >
                   Human Resources & Academy
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.HRA")}
@@ -292,10 +298,7 @@ export default function JoinUs() {
           </div>
 
           <div className="container-lg mt-3">
-            <div
-              class="parent-aw"
-              style={{ color: "#fff", fontFamily: "Fira Sans Extra Condensed" }}
-            >
+            <div class="parent-aw" style={{ color: "#fff" }}>
               <div class="text-top-left-aw">
                 <img
                   src={arancione}
@@ -306,7 +309,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#f07e2a",
@@ -314,24 +317,18 @@ export default function JoinUs() {
                   }}
                 >
                   IT & Website
-                </h2>
-                <Trans
-                  i18nKey="joinus.IT"
-                  components={{
-                    2: (
-                      <a
-                        href="https://www.tedxsapienzau.com/"
-                        style={{ color: "#eb0028" }}
-                      />
-                    ),
-                    1: (
-                      <a
-                        href="https://tedxsapienzauapp.vercel.app/"
-                        style={{ color: "#eb0028" }}
-                      />
-                    ),
+                </h3>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    color: "#fff",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
-                />
+                >
+                  {t("joinus.IT")}
+                </p>
               </div>
 
               <div class="text-bottom-right-aw">
@@ -345,7 +342,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#e9493a",
@@ -353,12 +350,14 @@ export default function JoinUs() {
                   }}
                 >
                   Communication & Marketing
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.CEM")}
@@ -369,8 +368,7 @@ export default function JoinUs() {
 
           <div className="container-lg mt-3">
             <div
-              class="parent-aw"
-              style={{ fontFamily: "Fira Sans Extra Condensed" }}
+              class="parent-aw"              
             >
               <div class="text-top-left-aw">
                 <img
@@ -382,7 +380,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#21bcef",
@@ -390,12 +388,14 @@ export default function JoinUs() {
                   }}
                 >
                   Legal & Administrative
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.LA")}
@@ -412,7 +412,7 @@ export default function JoinUs() {
                     objectFit: "cover",
                   }}
                 />
-                <h2
+                <h3
                   style={{
                     fontSize: "40px",
                     color: "#fab732",
@@ -420,12 +420,14 @@ export default function JoinUs() {
                   }}
                 >
                   Design
-                </h2>
+                </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.DESIGN")}

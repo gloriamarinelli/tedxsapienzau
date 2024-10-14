@@ -46,6 +46,7 @@ export default function MissionandVision() {
                       color: "#FFF",
                       textAlign: "justify",
                       fontFamily: "Fira sans Extra Condensed",
+                      fontWeight: "400",
                     }}
                   >
                     TED è un'organizzazione no profit dedicata alla diffusione
@@ -75,6 +76,7 @@ export default function MissionandVision() {
                         color: "#FFF",
                         textAlign: "justify",
                         fontFamily: "Fira sans Extra Condensed",
+                        fontWeight: "400",
                       }}
                     >
                       Per poter ampliare la diffusione delle idee di valore, TED
@@ -102,6 +104,7 @@ export default function MissionandVision() {
                         color: "#FFF",
                         textAlign: "justify",
                         fontFamily: "Fira sans Extra Condensed",
+                        fontWeight: "400",
                       }}
                     >
                       È il TEDx Universitario dell'Ateneo Sapienza
@@ -126,6 +129,7 @@ export default function MissionandVision() {
                           fontSize: "18px",
                           borderRadius: "8px",
                           fontWeight: "bold",
+                          fontFamily: "Fira sans Extra Condensed",
                         }}
                       >
                         Collabora con noi{" "}
