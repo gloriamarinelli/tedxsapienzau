@@ -9,7 +9,7 @@ import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
 import PartnerCard24 from "../components/PartnerCard24";
 import PartnerCardCommunity from "../components/PartnerCardCommunity";
-import PartnersCounter from "./PartnersCounter";
+import PartnersCounter from "../components/PartnersCounter";
 import global from "../../resources/global.json";
 
 /* -------------------- css files import -------------------- */
