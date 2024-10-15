@@ -1,31 +1,39 @@
+/* -------------------- React's components import -------------------- */
 import React, { useState } from "react";
+import { useOutletContext } from "react-router";
+import { useTranslation } from "react-i18next";
+import CountUp from "react-countup";
+
+/* -------------------- components and resources import -------------------- */
 import PartnerCard22 from "../components/PartnerCard22";
 import PartnerCard23 from "../components/PartnerCard23";
 import PartnerCard24 from "../components/PartnerCard24";
-import { useOutletContext } from "react-router";
-import CountUp from "react-countup";
+import PartnerCardCommunity from "../components/PartnerCardCommunity";
+import PartnersCounter from "./PartnersCounter";
 import global from "../../resources/global.json";
+
+/* -------------------- css files import -------------------- */
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../index.css";
 import "../../resources/styles/parallax-scrolldown.css";
-import PartnerCardCommunity from "../components/PartnerCardCommunity";
+
+/* -------------------- images import -------------------- */
 import first_box_bg from "../images/partners/desktop/3.webp";
 import second_box_bg from "../images/partners/desktop/6.webp";
 import third_box_bg from "../images/partners/desktop/5.webp";
 import fourth_box_bg from "../images/partners/desktop/4.webp";
 import volunteers from "../images/partners/desktop/volunteers_darker_filter.webp";
-import { useTranslation } from "react-i18next";
-import PartnersCounter from "./PartnersCounter";
 
 export default function Partners() {
-  const { t } = useTranslation();
-  const [activeYear] = useState(24);
-  const [windowSize] = useOutletContext();
+  const { t } = useTranslation(); // translation variable
+  const [activeYear] = useState(24); // active year variable
+  const [windowSize] = useOutletContext(); // window's size variable
 
   /* variables to manage play-pause animation logos scroller */
   let [isHovered, setIsHovered] = useState(false);
 
+  /* #region -------------------- getSponsors functions from previous years -------------------- */
   function getSponsor2022() {
     return (
       <section className="page-section" id="portfolio">
@@ -478,6 +486,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       </>
     );
   }
+  /* -------------------- #endregion -------------------- */
 
   /*function displayParallaxScrollDown() {
     return (
@@ -494,6 +503,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }*/
 
+  /* #region -------------------- sponsors logo slider functions -------------------- */
+
   /* 'pause' animation logos scroller */
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -504,7 +515,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     setIsHovered(false);
   };
 
-  function getSponsor2024() {
+  /* sponsors logo horizontal slider function */
+  function sponsorsLogoSlider() {
     return (
       <>
         <section className="page-section" id="portfolio">
@@ -609,7 +621,11 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       </>
     );
   }
+  /* -------------------- #endregion -------------------- */
 
+  /* #region -------------------- sponsors layout functions -------------------- */
+
+  /* mobile layout function */
   function mobilePartnersLayout() {
     return (
       <>
@@ -690,7 +706,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
             <div id="mobile-text-block-4" className="mobile-text-block">
               <h3>{t("partners.stats")}</h3>
               <p>
-              {t("partners.events")}
+                {t("partners.events")}
                 <ul className="numbers-list">
                   <li className="info-el">
                     <h3 className="info-number">
@@ -730,6 +746,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
+  /* desktop layout function  */
   function desktopPartnersLayout() {
     return (
       <div style={{ backgroundColor: "#000" }}>
@@ -1192,7 +1209,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  function partners24() {
+  function choosePartnersLayout() {
     let scrollDownComponent;
     if (windowSize > global.UTILS.TABLET_WIDTH) {
       scrollDownComponent = desktopPartnersLayout();
@@ -1203,36 +1220,28 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     return (
       <>
         {scrollDownComponent}
-        {getSponsor2024()}
+        {sponsorsLogoSlider()}
       </>
     );
   }
 
-  function chooseYear() {
+  /* -------------------- #endregion -------------------- */
+
+  function chooseYearToShow() {
     if (activeYear === 22) return getSponsor2022();
     else if (activeYear === 23) return getSponsor2023();
-    else return partners24();
+    else return choosePartnersLayout();
   }
 
-  function showPartners24Desktop() {
-    return (
-      <>
-        {/*<section
-          style={{
-            backgroundColor: global.COLORS.NERO,
-            paddingTop: "5vh",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
-            placeItems: "center",
-            display: "grid",
-          }}
-        ></section>*/}
-
-        {chooseYear()}
-      </>
-    );
-  }
-
-  function showPartners24Mobile() {
+  if (windowSize > global.UTILS.TABLET_WIDTH) {
+    /**
+     * DESKTOP
+     */
+    return <>{chooseYearToShow()}</>;
+  } else {
+    /**
+     * MOBILE
+     */
     return (
       <>
         <section
@@ -1260,20 +1269,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
           ></div>
         </section>
 
-        {chooseYear()}
+        {chooseYearToShow()}
       </>
     );
-  }
-
-  if (windowSize > global.UTILS.TABLET_WIDTH) {
-    /**
-     * DESKTOP
-     */
-    return showPartners24Desktop();
-  } else {
-    /**
-     * MOBILE
-     */
-    return showPartners24Mobile();
   }
 }
