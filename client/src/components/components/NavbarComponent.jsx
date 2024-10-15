@@ -71,31 +71,45 @@ export default function NavbarComponent(props) {
   }
 
   useEffect(() => {
+    // Retrieve the previously set language from localStorage
     let lan = localStorage.getItem("language");
+
+    // If a language was found in localStorage, change the app's language accordingly
     if (lan) i18n.changeLanguage(lan);
 
-    if (
-      localStorage.getItem("token") === null ||
-      localStorage.getItem("token") === undefined ||
-      localStorage.getItem("token") === "null"
-    ) {
-      return;
-    } else {
-      const checkIsUserLoggedIn = async () => {
-        const status = await isUserLoggedIn(localStorage.getItem("token"));
-        return status;
-      };
+    // Define an asynchronous function to check if the user is logged in
+    const checkIsUserLoggedIn = async () => {
+      // Check if a token exists in localStorage; if not, exit early
+      if (
+        localStorage.getItem("token") === null || // Check if token is null
+        localStorage.getItem("token") === undefined || // Check if token is undefined
+        localStorage.getItem("token") === "null" // Check if token is a string literal "null"
+      ) {
+        return;
+      }
 
-      let status = checkIsUserLoggedIn().catch((err) => logout());
-      status.then((res) => {
-        if (res.status === 200) {
+      // If a token exists, check the user's authentication status
+      try {
+        const status = await isUserLoggedIn(localStorage.getItem("token")); // Check if the token is valid
+
+        // If the user is logged in successfully (status 200), set them as an admin
+        if (status.status === 200) {
           setIsAdmin(true);
         } else {
+          // If the status is anything other than 200, log the user out
           logout();
         }
-      });
-    }
-  },);
+      } catch (err) {
+        // If an error occurs during the authentication check, log the user out
+        logout();
+      }
+    };
+
+    // Call the function to check the user's login status
+    checkIsUserLoggedIn();
+
+    // Add dependencies: This ensures the effect only re-runs if i18n, isUserLoggedIn, or logout changes
+  }, [i18n, isUserLoggedIn, logout]);
 
   return (
     <>
