@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
  * Location page that talks about Sapienza University
  */
 export default function Location() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [windowSize] = useOutletContext();
 
   return (
@@ -32,7 +32,7 @@ export default function Location() {
             margin: "10px",
           }}
         >
-          I luoghi di TEDxSapienzaU: Sapienza{" "}
+          {t("location.title1")}
         </h1>
 
         <div
@@ -51,7 +51,6 @@ export default function Location() {
                 : "0px -600px",
           }}
         ></div>
-
         <div
           style={{
             backgroundColor: "#191919",
@@ -74,18 +73,17 @@ export default function Location() {
               fontWeight: "400",
             }}
           >
-            L’Università Sapienza di Roma, fondata <strong>nel 1303</strong> da
-            papa Bonifacio VIII, è la più antica università di Roma e la più
-            grande in Europa. L’Ateneo conta <strong>700 anni</strong> di storia
-            e ospita, secondo i dati dell’anno accademico 2022/23, circa{" "}
-            <strong>120 mila studenti</strong> e{" "}
-            <strong>3,5 mila docenti</strong>. Tra i suoi obiettivi principali
-            c’è contribuire allo sviluppo della società della conoscenza
-            attraverso ricerca, formazione di eccellenza e di qualità e la
-            cooperazione internazionale. Il suo motto è la frase{" "}
-            <i>“Il futuro è passato qui”</i>: uno slogan che parte da lontano,
-            dalla storia centenaria dell’Università, e arriva fino ai giorni
-            nostri.
+            {t("location.a1")}
+            <strong>{t("location.a2")}</strong>
+            {t("location.a3")}
+            <strong>{t("location.a4")}</strong>
+            {t("location.a5")}
+            <strong>{t("location.a6")}</strong>
+            {t("location.a7")}
+            <strong>{t("location.a8")}</strong>
+            {t("location.a9")}
+            <i>{t("location.a10")}</i>
+            {t("location.a11")}
           </p>
 
           <p
@@ -100,20 +98,14 @@ export default function Location() {
               fontWeight: "400",
             }}
           >
-            Una{" "}
+            {t("location.b1")}
             <a
               href="https://www.uniroma1.it/it/pagina/la-storia"
               style={{ color: "#EB0028" }}
             >
-              storia
-            </a>{" "}
-            che varrebbe la pena approfondire: negli ultimi sette secoli
-            Sapienza è stata al centro della storia romana e di quella italiana,
-            prima come ateneo legato ai Papi, poi come Studium Urbis autonomo.
-            Con il passare del tempo si è aperta a nuove discipline scientifiche
-            e umanistiche. Oggi è un grande campus che si trova a breve distanza
-            dalla stazione centrale Termini, con alcune sedi dislocate sul
-            territorio della città, e altre nel Comune di Latina.
+              {t("location.b2")}
+            </a>
+            {t("location.b3")}
           </p>
 
           <p
@@ -128,21 +120,16 @@ export default function Location() {
               marginTop: "20px",
             }}
           >
-            Se si considera il{" "}
+            {t("location.c1")}
             <a
               href="https://www.uniroma1.it/it/notizia/la-sapienza-nei-ranking"
               style={{ color: "#EB0028" }}
             >
-              panorama internazionale
+              {t("location.c2")}
             </a>
-            , inoltre, qualità della ricerca e della didattica e dimensione
-            internazionale hanno portato l’Ateneo a posizionarsi{" "}
-            <strong>ai primi posti in Italia</strong> secondo i principali
-            ranking universitari mondiali. Sapienza emerge poi anche nelle
-            classifiche settoriali, affermandosi come punto di riferimento per
-            numerose discipline (per esempio è prima al mondo negli studi
-            classici), e ha ottenuto <strong>14 primati nazionali</strong> in
-            diverse materie.
+            {t("location.c3")}
+            <strong>{t("location.c4")}</strong> {t("location.c5")}{" "}
+            <strong>{t("location.c6")}</strong> {t("location.c7")}
           </p>
 
           <p
@@ -157,27 +144,25 @@ export default function Location() {
               marginTop: "20px",
             }}
           >
-            Un altro aspetto che la caratterizza è la sua{" "}
+            {t("location.d1")}
             <a
               href="https://www.uniroma1.it/it/pagina-strutturale/corsi-e-iscrizioni"
               style={{ color: "#EB0028" }}
             >
-              offerta formativa
+              {t("location.d2")}
             </a>
-            : <strong>300 corsi </strong>
-            di laurea e laurea magistrale (di cui oltre{" "}
-            <strong>60 in inglese</strong>),
-            <strong> 200 master</strong>, oltre <strong>90 dottorati</strong> di
-            ricerca e più di <strong>80 scuole di specializzazione</strong>. La
-            comunità studentesca si compone di più di{" "}
-            <strong>30 mila studenti</strong> fuorisede, 10 mila internazionali
-            e oltre 2,2 mila studenti all’anno in mobilità internazionale. Sono
-            984 le Università Partner, collocate in 87 Paesi, con la quale
-            l’Ateneo ha stretto rapporti negli anni. Viceversa, Sapienza offre
-            ai propri studenti{" "}
-            <strong> numerose opportunità internazionali</strong>, per esempio
-            lauree a doppio titolo, borse per tesi all’estero, tirocini in
-            diversi paesi europei ed extraeuropei, dottorati internazionali.
+            <strong>{t("location.d3")}</strong>
+            {t("location.d4")}
+            <strong>{t("location.d5")}</strong>,{t("location.d6")}
+            <strong>{t("location.d7")}</strong>
+            {t("location.d8")}
+            <strong>{t("location.d9")}</strong>
+            {t("location.d10")}
+            <strong>{t("location.d11")}</strong>
+            {t("location.d12")}
+            <strong>{t("location.d13")}</strong>
+            {t("location.d14")}
+            <strong>{t("location.d15")}</strong>
           </p>
 
           <p
@@ -192,19 +177,15 @@ export default function Location() {
               marginTop: "20px",
             }}
           >
-            Per quanto riguarda la{" "}
+            {t("location.e1")}
             <a
               href="https://www.uniroma1.it/it/pagina-strutturale/ricerca-scientifica"
               style={{ color: "#EB0028" }}
             >
-              ricerca
+              {t("location.e2")}
             </a>{" "}
-            scientifica, si parla di una copertura tra le discipline ad ampio
-            raggio: l’Ateneo raggiunge
-            <strong> livelli di eccellenza</strong> in molti ambiti, tra cui
-            l’archeologia, la fisica, l’astrofisica e le scienze umanistiche.
-            L’Università ha inoltre accolto durante lo studio o l’insegnamento
-            premi Nobel e scienziati di fama internazionale.
+            {t("location.e3")}
+            <strong>{t("location.e4")}</strong> {t("location.e5")}
           </p>
 
           <p
@@ -219,26 +200,23 @@ export default function Location() {
               marginTop: "20px",
             }}
           >
-            L’impegno in materia di{" "}
+            {t("location.f1")}
             <a
               href="https://www.uniroma1.it/it/pagina-strutturale/sapienza-sostenibile"
               style={{ color: "#EB0028" }}
             >
-              sostenibilità
+              {t("location.f2")}
             </a>{" "}
-            è un’altra dimensione di rilievo per Sapienza, la quale si impegna
-            per il raggiungimento dei 17 Obiettivi di sviluppo sostenibile delle
-            Nazioni unite con attività di didattica, di ricerca, di terza
-            missione e con policy trasversali. Le iniziative portate avanti sono
-            descritte sul portale
-            <strong> Sapienza sostenibile</strong> e nel{" "}
+            {t("location.f3")}
+            <strong>{t("location.f4")}</strong>
+            {t("location.f5")}
             <a
               href="https://www.uniroma1.it/it/pagina/rapporto-di-sostenibilita"
               style={{ color: "#EB0028" }}
             >
-              Bilancio sociale e di sostenibilità
+              {t("location.f6")}
             </a>{" "}
-            pubblicato ogni anno.
+            {t("location.f7")}
           </p>
         </div>
         <h1
@@ -251,7 +229,7 @@ export default function Location() {
             margin: "10px",
           }}
         >
-          Le strutture e l’Aula Magna
+          {t("location.title2")}
         </h1>
         <div>
           <div
@@ -294,21 +272,15 @@ export default function Location() {
                 marginTop: "20px",
               }}
             >
-              L’Università Sapienza comprende numerose{" "}
+              {t("location.g1")}
               <a
                 href="https://www.uniroma1.it/it/pagina/strutture"
                 style={{ color: "#EB0028" }}
               >
-                strutture
+                {t("location.g2")}
               </a>
-              : <strong>11 facoltà</strong>, una scuola di studi avanzati, una
-              scuola post laurea di ingegneria aerospaziale e{" "}
-              <strong>58 dipartimenti</strong>, senza contare i molteplici
-              centri di ricerca e centri di servizi, il tutto gestito
-              dall’amministrazione centrale suddivisa per aree. A disposizione
-              degli studenti ci sono 48 biblioteche, 18 musei, un ospedale
-              universitario e diversi sportelli e uffici con lo scopo di
-              rispondere alle loro esigenze.
+              <strong>{t("location.g3")}</strong>{t("location.g4")}
+              <strong>{t("location.g5")}</strong>{t("location.g6")}
             </p>
             <p
               className="paragraph"
@@ -322,17 +294,10 @@ export default function Location() {
                 marginTop: "20px",
               }}
             >
-              Tra gli spazi fondamentali c’è senz’altro{" "}
-              <strong>l’Aula Magna del Rettorato </strong>
-              collocata nella Città Universitaria, una vera e propria città
-              nella città situata nel cuore di Roma. L’Aula Magna ha una
-              superficie di
-              <strong> 900 metri quadri</strong> e si conclude con una tribuna
-              absidata definita da una parete curva con il murale “L’Italia tra
-              le Arti e le Scienze” del pittore Mario Sironi. Si tratta di
-              un’opera fissata in una dimensione atemporale che rappresenta una
-              visione epica della storia. Le Figure Monumentali disposte ai lati
-              dell’Italia alludono alla ricchezza e al valore della conoscenza.
+              {t("location.h1")}
+              <strong>{t("location.h2")}</strong>
+              {t("location.h3")}
+              <strong>{t("location.h4")}</strong>{t("location.h5")}
             </p>{" "}
             <p
               className="paragraph"
@@ -347,18 +312,11 @@ export default function Location() {
                 fontWeight: "400",
               }}
             >
-              Dalla sua fondazione, Sapienza ha sempre mantenuto un ruolo
-              importante nella storia italiana ed è stato coinvolta negli
-              sviluppi cruciali della società, dell'economia e della politica.
-              L’Università riesce oggi a far{" "}
+              {t("location.i1")}
               <strong>
-                collidere secoli di tradizione con una didattica
-                all'avanguardia, ricerca e innovazione
+              {t("location.i2")}
               </strong>
-              , offrendo un’istruzione di alta qualità e numerose opportunità di
-              ricerca. Si tratta di un posto in cui studenti e docenti
-              provenienti da tutto il mondo si incontrano e si confrontano in un
-              contagio continuo di idee.
+              {t("location.i3")}
             </p>
           </div>
         </div>

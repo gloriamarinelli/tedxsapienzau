@@ -206,7 +206,7 @@ export default function Home() {
           id="left-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%", //la barra bianca sotto dipende dal secondo valore
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
@@ -257,7 +257,7 @@ export default function Home() {
           id="right-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",//la barra bianca sotto dipende dal secondo valore
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
