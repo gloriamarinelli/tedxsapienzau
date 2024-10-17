@@ -74,14 +74,6 @@ export default function BlogCard({ id, titolo, image, data }) {
               {titolo}
             </h4>
           </a>
-
-          {isAdmin && (
-            <p className="link">
-              <a className="link" href={`/`}>
-                <button className="button">Modifica</button>
-              </a>
-            </p>
-          )}
         </div>
       </div>
     </>
