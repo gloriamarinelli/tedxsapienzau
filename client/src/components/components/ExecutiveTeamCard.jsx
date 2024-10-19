@@ -223,6 +223,51 @@ export default function ExecutiveTeamCard({
     };
   }, [timerId]);
 
+  function fromGruppoToTeamAcronym(gruppo) {
+    let team_acronym;
+
+    switch (gruppo) {
+      case "IT & Website":
+        team_acronym = "it";
+        break;
+      case "Design":
+        team_acronym = "dex";
+        break;
+      case "Legal & Administrative":
+        team_acronym = "la";
+        break;
+      case "Communication & Marketing":
+        team_acronym = "cem";
+        break;
+      case "Co-organizer":
+        team_acronym = "coorg";
+        break;
+      case "Organizer":
+        team_acronym = "org";
+        break;
+      case "Speakers & Event Curation":
+        team_acronym = "sec";
+        break;
+      case "External Relations & Sponsor":
+        team_acronym = "ers";
+        break;
+      case "Human Resources & Academy":
+        team_acronym = "hra";
+        break;
+      case "Segreteria Generale":
+        team_acronym = "segr";
+        break;
+      case "Plannig & Event Management":
+        team_acronym = "pem";
+        break;
+      default:
+        team_acronym = "empty";
+        break;
+    }
+
+    return team_acronym;
+  }
+
   if (year === 2024) {
     if (device === "desktop") {
       return (
@@ -407,6 +452,8 @@ export default function ExecutiveTeamCard({
                 fontStyle: "italic",
                 textAlign: "center",
                 fontSize: "15px",
+                fontWeight: "bold",
+                color: theme.palette[fromGruppoToTeamAcronym(ruolo)]?.main || "yellow",
               }}
             >
               {ruolo}
