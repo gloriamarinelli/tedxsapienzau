@@ -251,6 +251,8 @@ export default function ExecutiveTeamCard({
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  marginTop: "50px",
+                  height: "auto"
                 }}
               >
                 <img
@@ -258,8 +260,8 @@ export default function ExecutiveTeamCard({
                   alt={currentInfo?.path}
                   style={{
                     height: "auto",
-                    objectFit: "contain",
                     maxWidth: "45%",
+                    maxHeight: "70%",
                   }}
                 />
                 <div style={{ marginLeft: "20px" }}>
