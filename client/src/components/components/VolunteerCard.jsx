@@ -69,7 +69,11 @@ export default function VolunteerCard({
                 >
                   {nome}
                   {link && (
-                    <FontAwesomeIcon icon={faLinkedin} size="m" style={{marginLeft: "10px"}}/>
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      size="m"
+                      style={{ marginLeft: "10px" }}
+                    />
                   )}
                 </div>
               </a>
