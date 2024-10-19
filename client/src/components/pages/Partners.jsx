@@ -1,3 +1,5 @@
+// #region -------------------- imports --------------------
+
 /* -------------------- React's components import -------------------- */
 import React, { useState } from "react";
 import { useOutletContext } from "react-router";
@@ -24,6 +26,7 @@ import second_box_bg from "../images/partners/desktop/6.webp";
 import third_box_bg from "../images/partners/desktop/5.webp";
 import fourth_box_bg from "../images/partners/desktop/4.webp";
 import volunteers from "../images/partners/desktop/volunteers_darker_filter.webp";
+// #endregion
 
 export default function Partners() {
   const { t } = useTranslation(); // translation variable
@@ -33,7 +36,7 @@ export default function Partners() {
   /* variables to manage play-pause animation logos scroller */
   let [isHovered, setIsHovered] = useState(false);
 
-  /* #region -------------------- getSponsors functions from previous years -------------------- */
+  // #region -------------------- past years --------------------
   function getSponsor2022() {
     return (
       <section className="page-section" id="portfolio">
@@ -486,7 +489,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       </>
     );
   }
-  /* -------------------- #endregion -------------------- */
+  // #endregion
 
   /*function displayParallaxScrollDown() {
     return (
@@ -503,7 +506,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }*/
 
-  /* #region -------------------- sponsors logo slider functions -------------------- */
+  // #region -------------------- logos slider --------------------
 
   /* 'pause' animation logos scroller */
   const handleMouseEnter = () => {
@@ -621,9 +624,9 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
       </>
     );
   }
-  /* -------------------- #endregion -------------------- */
+  // #endregion
 
-  /* #region -------------------- sponsors layout functions -------------------- */
+  // #region -------------------- layouts --------------------
 
   /* mobile layout function */
   function mobilePartnersLayout() {
@@ -1225,7 +1228,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
     );
   }
 
-  /* -------------------- #endregion -------------------- */
+  // #endregion
 
   function chooseYearToShow() {
     if (activeYear === 22) return getSponsor2022();
