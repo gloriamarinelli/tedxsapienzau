@@ -40,7 +40,7 @@ export default function VolunteerCard({
               }
               height="280"
               alt="foto volontario"
-              style={{ maxWidth: "300px", objectFit: "cover" }}
+              style={{ maxWidth: "300px", objectFit: "contain" }}
             />
 
             <div

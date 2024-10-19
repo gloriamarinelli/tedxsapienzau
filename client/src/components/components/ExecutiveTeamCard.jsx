@@ -257,8 +257,9 @@ export default function ExecutiveTeamCard({
                   src={`/images/team24/${currentInfo?.path}.webp`}
                   alt={currentInfo?.path}
                   style={{
-                    maxWidth: "100%",
                     height: "auto",
+                    objectFit: "contain",
+                    maxWidth: "45%",
                   }}
                 />
                 <div style={{ marginLeft: "20px" }}>
@@ -328,7 +329,7 @@ export default function ExecutiveTeamCard({
             alt="foto team esecutivo"
             style={{
               borderRadius: "20px 20px 0 0",
-              objectFit: "cover",
+              objectFit: "contain",
               //backgroundColor: "#1f1f1f",
             }}
           />
