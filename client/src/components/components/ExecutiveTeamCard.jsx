@@ -453,7 +453,9 @@ export default function ExecutiveTeamCard({
                 textAlign: "center",
                 fontSize: "15px",
                 fontWeight: "bold",
-                color: theme.palette[fromGruppoToTeamAcronym(ruolo)]?.main || "yellow",
+                color:
+                  theme.palette[fromGruppoToTeamAcronym(ruolo)]?.main ||
+                  "white",
               }}
             >
               {ruolo}
