@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import global from "../../resources/global.json";
@@ -182,18 +182,46 @@ export default function ExecutiveTeamCard({
   year,
   device,
 }) {
-  const [hovered, setHovered] = useState(false);
-  const [currentInfo, setCurrentInfo] = useState(null);
+  const [currentInfo, setCurrentInfo] = useState(null); // currently clicked chip information
+  const [timerId, setTimerId] = useState(null); // timer ID
+  const css_fade_in_class = "fade-in"; // css class from "../../resources/styles/board.css"
+  const css_fade_out_class = "fade-out"; // css class from "../../resources/styles/board.css"
+  const [imageClass, setImageClass] = useState(css_fade_in_class); // State for the image animation class
+  const fadeOutDuration = 500; // animation from "../../resources/styles/board.css"
 
-  const handleMouseEnter = (info) => {
-    setHovered(true);
-    setCurrentInfo(info);
+  const handleClick = (info) => {
+    // clear the existing timer if one is active
+    if (timerId) {
+      clearTimeout(timerId);
+    }
+
+    setCurrentInfo(info); // set the current info to the clicked chip
+    setImageClass(css_fade_in_class); // set the image class to "fade-in"
+
+    // set a new timer to change the class to "fade-out" after 5 seconds
+    const newTimerId = setTimeout(() => {
+      setImageClass(css_fade_out_class); // change the class to "fade-out"
+
+      // set another timer to reset the image to the default after the "fade-out" duration
+      const resetTimerId = setTimeout(() => {
+        setImageClass(css_fade_in_class); // reset to "fade-in" for the default image
+        setCurrentInfo(null); // reset current info to show the default picture (board picture)
+      }, fadeOutDuration); // duration of the "fade-out" animation
+
+      setTimerId(resetTimerId); // save the reset timer ID
+    }, 5000); // wait for 5 seconds before starting the "fade-out"
+
+    setTimerId(newTimerId); // save the new timer ID
   };
 
-  const handleMouseLeave = () => {
-    setHovered(false);
-    setCurrentInfo(null);
-  };
+  /* timer resets when a new chip is clicked */
+  useEffect(() => {
+    return () => {
+      if (timerId) {
+        clearTimeout(timerId);
+      }
+    };
+  }, [timerId]);
 
   if (year === 2024) {
     if (device === "desktop") {
@@ -210,11 +238,7 @@ export default function ExecutiveTeamCard({
             }}
           >
             <h1 style={BoardNameStyle}>Board</h1>
-            <div
-              className="mt-3 md-3"
-              onMouseEnter={() => handleMouseEnter(currentInfo)}
-              onMouseLeave={handleMouseLeave}
-            >
+            <div className="mt-3 md-3">
               <Stack
                 direction="row"
                 spacing={1}
@@ -226,17 +250,21 @@ export default function ExecutiveTeamCard({
                 {BoardInfos.map((info, index) => (
                   <ThemeProvider theme={theme} key={index}>
                     <Chip
+                      sx={{
+                        "&:hover": {
+                          backgroundColor: "transparent", // Mantieni lo sfondo trasparente
+                        },
+                      }}
                       label={info.name}
                       color={info.team}
-                      onMouseEnter={() => handleMouseEnter(info)}
-                      onMouseLeave={handleMouseLeave}
+                      onClick={() => handleClick(info)}
                     />
                   </ThemeProvider>
                 ))}
               </Stack>
             </div>
 
-            {!hovered ? (
+            {!currentInfo ? (
               <img
                 src={"/images/team24/board.webp"}
                 alt="Board"
@@ -247,12 +275,12 @@ export default function ExecutiveTeamCard({
               />
             ) : (
               <div
-                className="fade-in"
+                className={imageClass}
                 style={{
                   display: "flex",
                   alignItems: "center",
                   marginTop: "50px",
-                  height: "auto"
+                  height: "auto",
                 }}
               >
                 <img
