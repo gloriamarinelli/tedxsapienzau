@@ -83,9 +83,10 @@ export default function PartnersCounter() {
               alignItems: "center",
             }}
           >
-            <h3 className="img-title">{t("partners.stats")}</h3>
+            <h2 className="img-title">{t("partners.stats")}</h2>
+
             <p className="img-txt-2">
-            {t("partners.events")}
+              <h3>{t("partners.events")}</h3>
             </p>
           </div>
         </div>
