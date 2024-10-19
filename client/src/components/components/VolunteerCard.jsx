@@ -64,11 +64,12 @@ export default function VolunteerCard({
                     textAlign: "center",
                     fontSize: "20px",
                     color: "#fff",
+                    marginTop: "5px",
                   }}
                 >
-                  {nome + "  "}
-                  {link == null ? null : (
-                    <FontAwesomeIcon icon={faLinkedin} size="xl" />
+                  {nome}
+                  {link && (
+                    <FontAwesomeIcon icon={faLinkedin} size="m" style={{marginLeft: "10px"}}/>
                   )}
                 </div>
               </a>

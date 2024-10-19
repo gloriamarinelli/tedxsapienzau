@@ -252,7 +252,7 @@ export default function ExecutiveTeamCard({
                     <Chip
                       sx={{
                         "&:hover": {
-                          backgroundColor: "transparent", // Mantieni lo sfondo trasparente
+                          backgroundColor: "transparent",
                         },
                       }}
                       label={info.name}
@@ -293,19 +293,32 @@ export default function ExecutiveTeamCard({
                   }}
                 />
                 <div style={{ marginLeft: "20px" }}>
-                  <p
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="nav-link"
                     style={{
+                      textDecoration: "none",
                       color: "white",
-                      fontSize: "20px",
+                      fontSize: "35px",
                       fontWeight: "bold",
                     }}
                   >
                     {currentInfo?.name}
-                  </p>
+                    {link && (
+                      <FontAwesomeIcon
+                        icon={faLinkedin}
+                        size="m"
+                        style={{ marginLeft: "20px" }}
+                      />
+                    )}
+                  </a>
                   <p
                     style={{
-                      color: "white",
-                      fontSize: "15px",
+                      color: theme.palette[currentInfo?.team]?.main,
+                      fontSize: "20px",
+                      fontWeight: "bold",
                     }}
                   >
                     {currentInfo?.role}
@@ -349,14 +362,14 @@ export default function ExecutiveTeamCard({
               color: "white",
             }}
           >
-            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+            {link && <FontAwesomeIcon icon={faLinkedin} size="xl" />}
           </a>
 
           <img
             src={`/images/team24/${image}`}
             width="245px"
             height="350px"
-            alt="foto team esecutivo"
+            alt="foto board"
             style={{
               borderRadius: "20px 20px 0 0",
               objectFit: "contain",
@@ -443,7 +456,7 @@ export default function ExecutiveTeamCard({
             src={`/images/team23/${image}`}
             width="245px"
             height="350px"
-            alt="foto team esecutivo"
+            alt="foto board"
             style={{
               borderRadius: "20px 20px 0 0",
               objectFit: "cover",
@@ -511,7 +524,7 @@ export default function ExecutiveTeamCard({
             }
             width="245px"
             height="350px"
-            alt="foto team esecutivo"
+            alt="foto board"
             style={{ borderRadius: "20px 20px 0 0", objectFit: "cover" }}
           />
 
