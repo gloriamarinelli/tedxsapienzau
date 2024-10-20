@@ -803,15 +803,14 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div
                 style={{
                   color: "white",
-                  fontSize: "1.5em",
                   display: "flex",
                   flexDirection: "column",
                 }}
               >
                 <h1
                   style={{
-                    fontSize: "200%",
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
                   }}
                 >
                   {t("partners.opening_st")}
@@ -819,6 +818,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <h3
                   style={{
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                   }}
                 >
                   {t("partners.2nd_st")}
@@ -827,6 +827,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <h3
                   style={{
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                   }}
                 >
                   {t("partners.3rd_st")}
@@ -896,14 +897,13 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div
                 style={{
                   color: "white",
-                  fontSize: "1.5em",
                   display: "flex",
                   flexDirection: "column",
                 }}
               >
                 <h1
                   style={{
-                    fontSize: "200%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
                     paddingBottom: "2%",
                   }}
                 >
@@ -926,23 +926,22 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div
                 style={{
                   color: "white",
-                  fontSize: "1.5em",
                   display: "flex",
                   flexDirection: "column",
                 }}
               >
-                <h3
+                <h1
                   style={{
                     paddingBottom: "2%",
-                    fontSize: "4vh",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
                   }}
                 >
-                  {/*<span id="imp-txt-1">{t("partners.5th_st")}</span>*/}
                   <i>{t("partners.5th_st")}</i>
-                </h3>
+                </h1>
                 <h3
                   style={{
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                   }}
                 >
                   {t("partners.6th_st")}
@@ -953,6 +952,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <h3
                   style={{
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                   }}
                 >
                   {t("partners.8th_st_1")}
@@ -1023,15 +1023,14 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div
                 style={{
                   color: "white",
-                  fontSize: "1.5em",
                   display: "flex",
                   flexDirection: "column",
                 }}
               >
                 <h1
                   style={{
-                    fontSize: "200%",
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
                   }}
                 >
                   {t("partners.9th_st")}
@@ -1039,6 +1038,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <h3
                   style={{
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                   }}
                 >
                   {t("partners.10th_st")}
@@ -1046,6 +1046,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                 <h3
                   style={{
                     paddingBottom: "2%",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                   }}
                 >
                   {t("partners.11th_st_1")}
@@ -1087,6 +1088,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               backgroundSize: "cover",
               backgroundPosition: "center",
               display: "flex",
+              flexDirection: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "row" : "column",
               justifyContent: "space-between",
               alignItems: "center",
               fontFamily: "Fira Sans Extra Condensed, sans-serif",
@@ -1107,10 +1109,8 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div
                 style={{
                   color: "white",
-                  fontSize: "1.5em",
                   display: "flex",
                   flexDirection: "column",
-                  /*backgroundImage: `url(${volunteers})`,*/
                 }}
               >
                 <img
@@ -1139,25 +1139,24 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               <div
                 style={{
                   color: "white",
-                  fontSize: "1.5em",
                   display: "flex",
                   flexDirection: "column",
                 }}
               >
-                <h3
+                <h1
                   style={{
                     paddingBottom: "2%",
-                    fontSize: "5vh",
+                    fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
                   }}
                 >
                   {t("partners.14th_st")}
-                </h3>
+                </h1>
                 <ul>
                   <li>
                     <h3
                       style={{
                         paddingBottom: "2%",
-                        fontSize: "3vh",
+                        fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                       }}
                     >
                       {t("partners.14th_st_el_1")}
@@ -1167,7 +1166,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                     <h3
                       style={{
                         paddingBottom: "2%",
-                        fontSize: "3vh",
+                        fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                       }}
                     >
                       {t("partners.14th_st_el_2")}
@@ -1177,7 +1176,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                     <h3
                       style={{
                         paddingBottom: "2%",
-                        fontSize: "3vh",
+                        fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                       }}
                     >
                       {t("partners.14th_st_el_3")}
@@ -1187,7 +1186,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                     <h3
                       style={{
                         paddingBottom: "2%",
-                        fontSize: "3vh",
+                        fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                       }}
                     >
                       {t("partners.14th_st_el_4")}
@@ -1197,7 +1196,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
                     <h3
                       style={{
                         paddingBottom: "2%",
-                        fontSize: "3vh",
+                        fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
                       }}
                     >
                       {t("partners.14th_st_el_5")}
