@@ -332,9 +332,7 @@ export default function ExecutiveTeamCard({
                   src={`/images/team24/${currentInfo?.path}.webp`}
                   alt={currentInfo?.path}
                   style={{
-                    height: "auto",
-                    maxWidth: "45%",
-                    maxHeight: "70%",
+                    height: "500px",
                   }}
                 />
                 <div style={{ marginLeft: "20px" }}>
