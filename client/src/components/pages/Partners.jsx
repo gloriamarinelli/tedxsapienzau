@@ -1088,7 +1088,7 @@ Red Bull Basement, il Global Student Project che mette alla prova gli studenti u
               backgroundSize: "cover",
               backgroundPosition: "center",
               display: "flex",
-              flexDirection: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "row" : "column",
+              flexDirection: windowSize > global.UTILS.TABLET_WIDTH ? "row" : "column",
               justifyContent: "space-between",
               alignItems: "center",
               fontFamily: "Fira Sans Extra Condensed, sans-serif",
