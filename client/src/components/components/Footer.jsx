@@ -201,7 +201,7 @@ export default function Footer() {
           <b>
             <Trans i18nKey="footer.join_us" lang={i18n.language} />
           </b>
-          <a className="link" href={"/join"}>
+          <a className="link" href={"/Newsletter"}>
             <button
               style={{
                 backgroundColor: global.COLORS.ROSSO_TED_2023,
