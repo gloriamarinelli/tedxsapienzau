@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useOutletContext } from "react-router";
+import {Trans, useTranslation} from "react-i18next";
 
 import global from "../../resources/global.json";
 import Earth from "../images/earth.webp";
@@ -13,6 +14,7 @@ import NunzioAlloccaImage from "../images/countdown24/NunzioAllocca.webp";
 import SpeakerCard from "../components/SpeakerCard";
 
 export default function Countdown2024() {
+  const {t} = useTranslation();
   const [windowSize,] = useOutletContext();
   const [, setScrollY] = useState(0);
   const [iframeSource, setIframeSource] = useState(
@@ -245,22 +247,13 @@ export default function Countdown2024() {
             textAlign: "justify",
           }}
         >
-          <h1 style={{}}>3, 2, 1MPATTO</h1>
+          <h1 style={{}}>{t("event_countdown2024.title")}</h1>
           <p style={{ maxWidth: "60ch", fontSize: "20px" }}>
-            Il tempo scorre ed è necessario creare un nuovo spazio di
-            riflessione ed intrattenimento incentrato sulla crisi climatica. Un
-            luogo dove affrontare le paure sul futuro con positività e scienza
-            grazie ad una visione interdisciplinare e coinvolgente negli spazi
-            del nostro Ateneo. Immergiti nel primo evento{" "}
-            <span
-              style={{
-                fontWeight: "bold",
-              }}
-            >
-              TEDx Countdown
-            </span>{" "}
-            della Sapienza e lasciati ispirare dall'urgenza e dalla complessità
-            di questa sfida globale per promuovere azioni concrete.
+            <Trans i18nKey="event_countdown2024.description"
+            components={{
+              1: <b></b>
+            }}
+            />
           </p>
           <div>
             <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>SPEAKERS</h1>
@@ -581,22 +574,13 @@ export default function Countdown2024() {
             textAlign: "center",
           }}
         >
-          <h1 style={{}}>3, 2, 1MPATTO</h1>
+          <h1 style={{}}>{t("event_countdown2024.title")}</h1>
           <p style={{ maxWidth: "60ch", fontSize: "20px" }}>
-            Il tempo scorre ed è necessario creare un nuovo spazio di
-            riflessione ed intrattenimento incentrato sulla crisi climatica. Un
-            luogo dove affrontare le paure sul futuro con positività e scienza
-            grazie ad una visione interdisciplinare e coinvolgente negli spazi
-            del nostro Ateneo. Immergiti nel primo evento{" "}
-            <span
-              style={{
-                fontWeight: "bold",
-              }}
-            >
-              TEDx Countdown
-            </span>{" "}
-            della Sapienza e lasciati ispirare dall'urgenza e dalla complessità
-            di questa sfida globale per promuovere azioni concrete.
+          <Trans i18nKey="event_countdown2024.description"
+          components={{
+            1: <b></b>
+          }}
+          />
           </p>
           <div>
             <h1 style={{ color: global.COLORS.GIALLO_COUNTDOWN }}>SPEAKERS</h1>

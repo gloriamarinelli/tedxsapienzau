@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { useOutletContext } from "react-router";
 import Carousel from "react-bootstrap/Carousel";
-
+import { Trans, useTranslation } from "react-i18next";
 import axios from "axios";
 
 import Image1 from "../images/edizione23/tullio.jpg";
@@ -27,6 +27,7 @@ import Image11 from "../images/edizione23/onofri.jpg";
 import Image12 from "../images/edizione23/aboya.jpg";
 
 export default function Edizione2023() {
+  const { t } = useTranslation();
   const [isBioOpen, setIsBioOpen] = useState(false);
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
@@ -197,18 +198,18 @@ export default function Edizione2023() {
     },
     {
       time: "10:15 - 11:30",
-      title: "Sessione I",
+      title: "Session I",
       text: "Damiano Tullio → Antropologo e fondatore di Antropostudio | Ilaria Lucrezia Rossi → Studentessa di fisica e divulgatrice online | Edward von Freymann → Fondazione Gaia von Freymann | Riccardo Basilone → Studente di fisica e cantautore ",
     },
     { time: "11:30 - 12:00", title: "I break", text: "" },
     {
       time: "12:00 - 13:00",
-      title: "Sessione II",
+      title: "Session II",
       text: "Gloria Schito → Fondatrice di ICONICA brand e content creator nel settore moda | Matteo Cervellini → Fisioterapista | Ana Estrela → Fondatrice di Ethnic Cook | Nina Lambarelli → Poetessa e studentessa di lingue, culture, letterature e traduzione ",
     },
     {
       time: "13:00 - 15:00",
-      title: "Lunch break presso il Village TEDxSapienzaU",
+      title: "Lunch Break, Village TEDxSapienzaU",
       text: "",
     },
     { time: "15:00 - 15:15", title: "TED GLOBAL", text: "" },
@@ -219,7 +220,7 @@ export default function Edizione2023() {
     },
     {
       time: "15:30 - 16:30",
-      title: "Sessione III",
+      title: "Session III",
       text: "Marcello Ienca → Professore di Etica dell'Intelligenza Artificiale e Neuroscienze | Rose Villain → Rapper e cantautrice | Silvano Onofri → Presidente della Commissione Scientifica Nazionale per l'Antartide (Ministero Università e Ricerca) | Nakita Aboya → Studentessa dottoranda in Economia",
     },
 
@@ -249,7 +250,7 @@ export default function Edizione2023() {
             fontWeight: "bold",
           }}
         >
-          IL PROGRAMMA
+          {t("event_backtozero.schedule")}
         </h1>
         <div className="row">
           {programma.map((item, index) => (
@@ -331,7 +332,7 @@ export default function Edizione2023() {
                 style={{ color: "#EB0028" }}
                 size="2x"
               />
-              <p className="col-8">mercoledì 15 nov 2023 ore 08:45 - 17:00</p>
+              <p className="col-8">15.11.2023, 08:45 - 17:00</p>
             </div>
           </div>
           <div className="col-md-6">
@@ -349,7 +350,7 @@ export default function Edizione2023() {
               target="_blank"
               rel="noreferrer"
             >
-              Guarda i TEDx talk
+              {t("event_backtozero.button")}
             </a>{" "}
           </div>
         </div>
@@ -364,7 +365,7 @@ export default function Edizione2023() {
             fontWeight: "bold",
           }}
         >
-          IL NOSTRO OBIETTIVO
+          {t("event_backtozero.title")}
         </h1>
         <p
           style={{
@@ -373,18 +374,12 @@ export default function Edizione2023() {
             textAlign: "justify",
           }}
         >
-          Il nostro obiettivo è <strong>azzerare</strong>, ricercare un punto{" "}
-          <strong>zero</strong>: le disuguaglianze, i conflitti, i cattivi stili
-          di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che
-          rallentano la crescita della nostra società, peggiorando la qualità
-          della nostra vita. <strong>Riconsiderare noi stessi </strong> ed il
-          nostro modo di confrontarci. Imparare ed interagire con la società
-          contemporanea, con le <strong>arti</strong> e le{" "}
-          <strong>scienze</strong>. È fondamentale per costruire un mondo dove
-          l'essere umano possa '<strong>rinascere</strong>', prosperando ed
-          esprimendosi al meglio in ogni disciplina. Riscoprire le basi per{" "}
-          <strong>rinascere</strong>, diventare persone migliori in un luogo
-          migliore.
+          <Trans
+          i18nKey="event_backtozero.description"
+          components={{
+            1: <strong></strong>
+          }}
+          />
         </p>
 
         <p
@@ -395,8 +390,7 @@ export default function Edizione2023() {
             textAlign: "center",
           }}
         >
-          ❝ L'uomo e il mondo che lo circonda non sono binari separati, ma
-          rotaie che si muovono insieme, hanno bisogno l'uno dell'altro. ❞
+          ❝ {t("event_backtozero.citation")} ❞
         </p>
       </div>
 
@@ -409,7 +403,7 @@ export default function Edizione2023() {
             fontWeight: "bold",
           }}
         >
-          GLI SPEAKERS
+          SPEAKERS
         </h1>
         <div className="row">{handleSpeakersCardSection()}</div>
       </div>

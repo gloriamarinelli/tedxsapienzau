@@ -165,5 +165,37 @@
         "tedxsapienzau2": "con l'obiettivo di creare per l'intera comunità accademica una programmazione sempre nuova e internazionale. ",
         "sapienzau": "'SapienzaU' ",
         "button": "Collabora con noi"
+    },
+
+    "events":{
+        "title": "Eventi Passati"
+    },
+
+    "event_countdown2024":{
+        "title": "3, 2, 1MPATTO",
+        "description": "Il tempo scorre ed è necessario creare un nuovo spazio di riflessione ed intrattenimento incentrato sulla crisi climatica. Un luogo dove affrontare le paure sul futuro con positività e scienza grazie ad una visione interdisciplinare e coinvolgente negli spazi del nostro Ateneo. Immergiti nel primo evento <1>TEDx Countdown</1> della Sapienza e lasciati ispirare dall'urgenza e dalla complessità di questa sfida globale per promuovere azioni concrete."
+    },
+    "event_awards2023":{
+        "title": "COSA SONO I SAPIENZAU AWARDS?",
+        "description": "Il concorso <1>Back to Zero Awards</1> è organizzato dal Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea con il motto TED <i>“Ideas worth spreading”</i>, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell' <1>edizione 2023</1> del TEDxSapienzaU. I 5 vincitori del concorso SapienzaU Awards, <2>3 Speaker</2> e <2> Artist</2>, vengono premiati sul palco della finale e hanno l'occasione di esibirsi durante l'evento <1>TEDxSapienzaU 2023</1>!",
+        "winners": "I VINCITORI SAPIENZAU AWARDS 2023"
+    },
+    "event_awards2022":{
+        "winners": "I VINCITORI SAPIENZAU AWARDS 2022"
+    },
+    "event_leadthechange":{
+        "button": "Guarda i TEDx talks",
+        "title": "IL TEMA DELL'EVENTO",
+        "description": "Il titolo della prima edizione del TEDxSapienzaU è stato <1>ACT - Lead the change</1>. Come da linee guida TEDx, i dialoghi che sono stati presentati hanno riguardato diverse materie ed aree tematiche interconnesse, prediligendo le migliori idee ed esperienze ispiratrici:",
+        "A": "La cultura dell'azione contro la cultura dell'inerzia e il ruolo della cittadinanza attiva nell'educazione del futuro.",
+        "C": "La predisposizione alla creatività ed empatia, la pop education e i nuovi orizzonti della contaminazione tra i saperi.",
+        "T": "Il digitale e la realtà integrata, la trasformazione dei modelli educativi e il valore dell'esperienza nella crescita dell'individuo."
+    },
+    "event_backtozero":{
+        "button": "Guarda i TEDx talks",
+        "title": "IL NOSTRO OBIETTIVO",
+        "description": "Il nostro obiettivo è <1>azzerare</1>, ricercare un punto <1>zero</1>: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che rallentano la crescita della nostra società, peggiorando la qualità della nostra vita. <1>Riconsiderare noi stessi </1> ed il nostro modo di confrontarci. Imparare ed interagire con la società contemporanea, con le <1>arti</1> e le <1>scienze</1>. È fondamentale per costruire un mondo dove l'essere umano possa '<1>rinascere</1>', prosperando ed esprimendosi al meglio in ogni disciplina. Riscoprire le basi per <1>rinascere</1>, diventare persone migliori in un luogo migliore.",
+        "citation": "L'uomo e il mondo che lo circonda non sono binari separati, ma rotaie che si muovono insieme, hanno bisogno l'uno dell'altro.",
+        "schedule": "IL PROGRAMMA"
     }
 }

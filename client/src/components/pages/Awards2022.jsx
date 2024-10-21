@@ -9,8 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
 import global from "../../resources/global.json";
+import { useTranslation } from "react-i18next";
 
 export default function Awards2022() {
+  const { t } = useTranslation();
   return (
     <section style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
       <header
@@ -43,7 +45,7 @@ export default function Awards2022() {
               style={{ color: "#E62B1E" }}
               size="2x"
             />
-            <p className="col-8">29 Aprile 2022</p>
+            <p className="col-8">29.04.2022</p>
 
             <div className="row mt-3"></div>
           </div>
@@ -59,7 +61,7 @@ export default function Awards2022() {
           fontWeight: "bold",
         }}
       >
-        I VINCITORI SAPIENZAU AWARDS 2022
+        {t("event_awards2022.winners")}
       </h1>
       <div class="container mt-5 pb-5">
         <LazyLoadImage src={Image2} class="winner_22" height="350" />

@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 
 export default function Editions({ withTitle = true }) {
-  const {i18n} = useTranslation();
+  const {i18n, t} = useTranslation();
   const [windowSize] = useOutletContext();
 
   const eventsInfo = [
@@ -101,7 +101,7 @@ export default function Editions({ withTitle = true }) {
             fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "60px" : "40px",
           }}
         >
-          EVENTI PASSATI
+          {t("events.title")}
         </h1>
       </div>
       <section

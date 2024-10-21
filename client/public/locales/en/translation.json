@@ -162,5 +162,37 @@
         "tedxsapienzau2": "with the aim of creating ever new and international programming for the entire academic community. ",
         "sapienzau": "'SapienzaU' ",
         "button": "Collaborate with us"
+    },
+
+    "events":{
+        "title": "Past Events"
+    },
+
+    "event_countdown2024":{
+        "title": "3, 2, 1IMPACT",
+        "description": "Time is ticking and it is necessary to create a new space for reflection and entertainment focused on the climate crisis. A place to face fears about the future with positivity and science thanks to an interdisciplinary and engaging vision in the spaces of our University. Immerse yourself in Sapienza's first <1>TEDx Countdown</1> event and be inspired by the urgency and complexity of this global challenge to promote concrete actions."
+    },
+    "event_awards2023":{
+        "title": "WHAT ARE THE SAPIENZAU AWARDS?",
+        "description": "The <1>Back to Zero Awards</1> competition is organized by the TEDxSapienzaU Committee and aims to promote valuable ideas in line with the TED motto <i>“Ideas worth spreading”</i>, offering the winners the prestigious opportunity to perform on the stage of the <1>2023 edition</1> of TEDxSapienzaU. The 5 winners of the SapienzaU Awards competition, <2>3 Speaker</2> and <2> Artist</2>, are awarded on the stage of the final and have the opportunity to perform during the <1>TEDxSapienzaU 2023</1> event!",
+        "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2023"
+    },
+    "event_awards2022":{
+        "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2022"
+    },
+    "event_leadthechange":{
+        "button": "Watch the TEDx talks",
+        "title": "THEME OF THE EVENT",
+        "description": "The title of the first edition of TEDxSapienzaU was <1>ACT - Lead the change</1>. As per the TEDx guidelines, the dialogues that were presented concerned various interconnected subjects and thematic areas, favoring the best ideas and experiences inspiring:",
+        "A": "The culture of action against the culture of inertia and the role of active citizenship in the education of the future.",
+        "C": "The predisposition for creativity and empathy, pop education and the new horizons of contamination between knowledge.",
+        "T": "Digital and integrated reality, the transformation of educational models and the value of experience in the growth of the individual."
+    },
+    "event_backtozero":{
+        "button": "Watch the TEDx talks",
+        "title": "OUR OBJECTIVE",
+        "description": "Our goal is to <1>reset</1>, seek a point <1>zero</1>: inequalities, conflicts, bad lifestyles, emissions and waste. Reduce those factors pollutants that slow down the growth of our society, worsening the quality of our life <1>Reconsider ourselves </1> and our way of dealing with contemporary society, with the <1>arts</1 > and the <1>sciences</1>. It is fundamental to build a world where human beings can '<1>be reborn</1>', thriving and expressing themselves to the fullest in every discipline foundations for <1>to be reborn</1>, to become better people in a better place.",
+        "citation": "Man and the world around him are not separate tracks, but rails that move together, they need each other.",
+        "schedule": "SCHEDULE"
     }
 }

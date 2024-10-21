@@ -9,8 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
 import global from "../../resources/global.json";
+import {Trans, useTranslation} from "react-i18next";
 
 export default function Awards() {
+  const { t } = useTranslation();
   return (
     <section
       className="pb-5"
@@ -46,23 +48,9 @@ export default function Awards() {
               style={{ color: "#ffd800" }}
               size="2x"
             />
-            <p className="col-8">18 Aprile 2023</p>
+            <p className="col-8">18.04.2023</p>
 
             <div className="row mt-3">
-              {/*<a
-                href="https://www.eventbrite.it/e/biglietti-awards-by-tedxsapienzau-514452590547"
-                type="button"
-                className="btn5-1"
-                style={{
-                  fontWeight: "bold",
-                  width:"50%",
-                  marginLeft: "50px",
-                  alignItems: "center",
-                  fontFamily: "GothamBold",
-                }}
-              >
-                Ottieni i biglietti
-              </a>*/}
             </div>
           </div>
         </div>
@@ -77,7 +65,7 @@ export default function Awards() {
             fontWeight: "bold",
           }}
         >
-          COSA SONO I SAPIENZAU AWARDS?
+          {t("event_awards2023.title")}
         </h1>
         <p
           style={{
@@ -88,16 +76,13 @@ export default function Awards() {
             lineHeight: "40px",
           }}
         >
-          Il concorso <strong>Back to Zero Awards</strong> è organizzato dal
-          Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in
-          linea con il motto TED <i>“Ideas worth spreading”</i>, offrendo ai
-          vincitori la prestigiosa opportunità di esibirsi sul palco dell’
-          <strong>edizione 2023</strong> del TEDxSapienzaU. I 5 vincitori del
-          concorso SapienzaU Awards,{" "}
-          <strong style={{ color: global.COLORS.ROSSO_TED }}>3 Speaker</strong>{" "}
-          e <strong style={{ color: global.COLORS.ROSSO_TED }}>2 Artist</strong>
-          , vengono premiati sul palco della finale e hanno l’occasione di
-          esibirsi durante l’evento <strong>TEDxSapienzaU 2023</strong>!
+          <Trans
+            i18nKey="event_awards2023.description"
+            components={{
+              1: <strong></strong>,
+              2: <strong style={{ color: global.COLORS.ROSSO_TED }}>3 </strong>
+            }}
+          />
         </p>
       </div>
 
@@ -109,7 +94,7 @@ export default function Awards() {
           fontWeight: "bold",
         }}
       >
-        I VINCITORI SAPIENZAU AWARDS 2023
+        {t("event_awards2023.winners")}
       </h1>
       <h3
         className="font-weight-bold mt-5 mb-3"

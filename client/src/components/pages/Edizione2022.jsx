@@ -10,8 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useOutletContext } from "react-router";
+import {Trans, useTranslation} from "react-i18next";
 
 export default function Edizione2022() {
+  const { t } = useTranslation();
   const [isBioOpen, setIsBioOpen] = useState(false);
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
@@ -105,7 +107,7 @@ export default function Edizione2022() {
                 style={{ color: global.COLORS.ROSSO_EDIZIONE_2022 }}
                 size="2x"
               />
-              <p className="col-8">29 Aprile 2022</p>
+              <p className="col-8">29.04.2022</p>
             </div>
           </div>
           <div className="col-md-6">
@@ -123,8 +125,8 @@ export default function Edizione2022() {
               target="_blank"
               rel="noreferrer"
             >
-              Guarda i TEDx talk
-            </a>{" "}
+              {t("event_leadthechange.button")}
+            </a>
           </div>
         </div>
       </div>
@@ -138,14 +140,15 @@ export default function Edizione2022() {
             fontWeight: "bold",
           }}
         >
-          IL TEMA DELL'EVENTO
+          {t("event_leadthechange.title")}
         </h1>
         <p style={{ fontSize: "20px", fontFamily: "GothamBook", textAlign: "justify" }}>
-          Il titolo della prima edizione del TEDxSapienzaU è stato{" "}
-          <strong>ACT - Lead the change</strong>. Come da linee guida TEDx, i
-          dialoghi che sono stati presentati hanno riguardato diverse materie ed
-          aree tematiche interconnesse, prediligendo le migliori idee ed
-          esperienze ispiratrici:
+          <Trans
+          i18nKey="event_leadthechange.description"
+          components={{
+            1: <strong></strong>
+          }}
+          />
         </p>
         {/** CARDS */}
         <section className="container">
@@ -161,9 +164,7 @@ export default function Edizione2022() {
                 A
               </p>
               <p>
-                <strong>Action</strong>: La cultura dell'azione contro la
-                cultura dell'inerzia e il ruolo della cittadinanza attiva
-                nell'educazione del futuro.
+                <strong>Action</strong>: {t("event_leadthechange.A")}
               </p>
             </div>
             <div className="col-lg-3 theme-card">
@@ -177,9 +178,7 @@ export default function Edizione2022() {
                 C
               </p>
               <p>
-                <strong>Cross-Fertilization</strong>: La predisposizione alla
-                creatività ed empatia, la pop education e i nuovi orizzonti
-                della contaminazione tra i saperi.
+                <strong>Cross-Fertilization</strong>: {t("event_leadthechange.C")}
               </p>
             </div>
             <div className="col-lg-3 theme-card">
@@ -193,9 +192,7 @@ export default function Edizione2022() {
                 T
               </p>
               <p>
-                <strong>Transformation</strong>: Il digitale e la realtà
-                integrata, la trasformazione dei modelli educativi e il valore
-                dell'esperienza nella crescita dell'individuo.
+                <strong>Transformation</strong>: {t("event_leadthechange.T")}
               </p>
             </div>
           </div>
@@ -211,7 +208,7 @@ export default function Edizione2022() {
             fontWeight: "bold",
           }}
         >
-          GLI SPEAKERS
+          SPEAKERS
         </h1>
         <div className="row">{handleSpeakersCardSection()}</div>
       </div>
