@@ -433,7 +433,7 @@ export default function NavbarComponent(props) {
                         }}
                         onClick={() => {
                           setExpanded(false);
-                          window.location.href = "/joinus";
+                          window.location.href = "/Newsletter";
                         }}
                       >
                         Join us

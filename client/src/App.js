@@ -12,7 +12,7 @@ import Partners from "./components/pages/Partners";
 import Blog from "./components/pages/Blog";
 import BlogPost from "./components/pages/BlogPost";
 
-import JoinUs from "./components/pages/JoinUs";
+// import JoinUs from "./components/pages/JoinUs";
 
 import Newsletter from "./components/pages/Newsletter";
 
@@ -117,10 +117,10 @@ const router = createBrowserRouter([
         element: <Countdown2024 />,
       },
 
-      {
-        path: "/joinus",
-        element: <JoinUs />,
-      },
+      // {
+      //   path: "/joinus",
+      //   element: <JoinUs />,
+      // },
       {
         path: "/newsletter",
         element: <Newsletter />,
