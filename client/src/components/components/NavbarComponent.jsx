@@ -436,7 +436,7 @@ export default function NavbarComponent(props) {
                           window.location.href = "/Newsletter";
                         }}
                       >
-                        Join us
+                        Join Us
                       </Button>
                     </Col>
                   </Row>

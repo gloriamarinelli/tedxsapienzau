@@ -1,20 +1,22 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image2 from "../images/awards22/vincitori_full.png";
 import Image1 from "../images/awards22/artist1.jpg";
 import Image4 from "../images/awards22/speaker1.jpg";
 import Image3 from "../images/awards22/speaker2.jpg";
-import Image6 from "../images/awards22/speaker3.jpg";
+import Image5 from "../images/awards22/speaker3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
 import global from "../../resources/global.json";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Awards2022() {
   const { t } = useTranslation();
   return (
-    <section style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
+    <section
+      className="pb-5"
+      style={{ backgroundColor: "#000", color: "#fff" }}
+    >
       <header
         className="header-awards22"
         style={{
@@ -24,13 +26,13 @@ export default function Awards2022() {
         }}
       ></header>
 
-      <div className="row no-gutters mx-0 where-is-the-event">
+      <div className="where-is-the-event-awards row mx-0 pt-3 pb-3">
         <div className="col-md-6">
           <div className="row">
             <FontAwesomeIcon
               className="col-2"
               icon={faLocationDot}
-              style={{ color: "#E62B1E" }}
+              style={{ color: "#ffd800" }}
               size="2x"
             />
             <p className="col-8">
@@ -42,7 +44,7 @@ export default function Awards2022() {
             <FontAwesomeIcon
               className="col-2"
               icon={faCalendar}
-              style={{ color: "#E62B1E" }}
+              style={{ color: "#ffd800" }}
               size="2x"
             />
             <p className="col-8">29.04.2022</p>
@@ -52,53 +54,88 @@ export default function Awards2022() {
         </div>
         <div className="col-md-6"></div>
       </div>
+      <div className="container mb-5 d-flex justify-content-center align-items-center flex-column">
+        <h1
+          className="font-weight-bold mt-5 mb-3"
+          style={{
+            fontSize: "45px",
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          {t("event_awards2022.title")}
+        </h1>
+        <p
+          style={{
+            fontSize: "20px",
+            fontFamily: "GothamBook",
+            maxWidth: "75ch",
+            textAlign: "justify",
+            lineHeight: "40px",
+          }}
+        >
+          <Trans
+            i18nKey="event_awards2022.description"
+            components={{
+              1: <strong></strong>,
+              2: <strong style={{ color: global.COLORS.ROSSO_TED }}>3 </strong>,
+            }}
+          />
+        </p>
+      </div>
 
       <h1
         className="font-weight-bold mt-5 mb-3"
         style={{
-          fontSize: "40px",
+          fontSize: "45px",
           textAlign: "center",
           fontWeight: "bold",
         }}
       >
         {t("event_awards2022.winners")}
       </h1>
-      <div class="container mt-5 pb-5">
-        <LazyLoadImage src={Image2} class="winner_22" height="350" />
-        <div class="row justify-content-center" style={{ gap: "100px" }}>
+      <h3
+        className="font-weight-bold mt-5 mb-3"
+        style={{
+          fontSize: "45px",
+          textAlign: "center",
+        }}
+      >
+        Artist
+      </h3>
+      <div
+        class="container mt-5 mb-5"
+        style={{
+          alignItems: "center",
+        }}
+      >
+        <div class="row justify-content-center" style={{ gap: "20px" }}>
           <div class="col-sm-4">
             {" "}
-            <div class="row-4 winner_22_small">
-              <LazyLoadImage
-                src={Image3}
-                class="winner_22_small"
-                height="350"
-              />
-            </div>
-            <div class="row-4 winner_22_small">
-              <LazyLoadImage
-                src={Image4}
-                class="winner_22_small"
-                height="350"
-              />
-            </div>
-            <div class="row-4 winner_22_small">
-              <LazyLoadImage
-                src={Image6}
-                class="winner_22_small"
-                height="350"
-              />
-            </div>
+            <LazyLoadImage src={Image1} alt="TEDxSapienzaU" height="350" />
           </div>
-          <div class="col-sm-4">
-            {" "}
-            <div class="row-4 winner_22_small">
-              <LazyLoadImage
-                src={Image1}
-                class="winner_22_small"
-                height="350"
-              />
-            </div>
+        </div>
+      </div>
+
+      <h3
+        className="font-weight-bold mt-5 mb-3"
+        style={{
+          fontSize: "45px",
+          textAlign: "center",
+        }}
+      >
+        Speakers
+      </h3>
+      <div class="container mt-5">
+        <div class="row" style={{ gap: "20px" }}>
+          <div class="col">
+            <LazyLoadImage src={Image3} alt="TEDxSapienzaU" height="350" />
+          </div>
+          <div class="col">
+            <LazyLoadImage src={Image4} alt="TEDxSapienzaU" height="350" />
+          </div>
+          <div class="col">
+            <LazyLoadImage src={Image5} alt="TEDxSapienzaU" height="350" />
           </div>
         </div>
       </div>
