@@ -199,5 +199,9 @@
         "description": "Il nostro obiettivo è <1>azzerare</1>, ricercare un punto <1>zero</1>: le disuguaglianze, i conflitti, i cattivi stili di vita, le emissioni e i rifiuti. Ridurre quei fattori inquinanti che rallentano la crescita della nostra società, peggiorando la qualità della nostra vita. <1>Riconsiderare noi stessi </1> ed il nostro modo di confrontarci. Imparare ed interagire con la società contemporanea, con le <1>arti</1> e le <1>scienze</1>. È fondamentale per costruire un mondo dove l'essere umano possa '<1>rinascere</1>', prosperando ed esprimendosi al meglio in ogni disciplina. Riscoprire le basi per <1>rinascere</1>, diventare persone migliori in un luogo migliore.",
         "citation": "L'uomo e il mondo che lo circonda non sono binari separati, ma rotaie che si muovono insieme, hanno bisogno l'uno dell'altro.",
         "schedule": "IL PROGRAMMA"
+    },
+    "error_page":{
+        "404_msg": "Sembra che questa pagina non esista",
+        "home_button": "Torna alla home"
     }
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
+import { useTranslation } from "react-i18next";
 
 /**
  * ErrorPage showed when a page is not found
  */
 export default function ErrorPage() {
+  const { t } = useTranslation(); // translation variable
   return (
     <>
       <div style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
@@ -40,7 +42,7 @@ export default function ErrorPage() {
           <div>
             <h1 style={{ fontSize: "100px", fontWeight: "bold" }}>404</h1>
             <p style={{ fontSize: "20px", maxWidth: "20ch" }}>
-              Sembra che questa pagina non esista{" "}
+            {t("error_page.404_msg")}
             </p>
             <Link
               to="/"
@@ -51,7 +53,7 @@ export default function ErrorPage() {
                 color: "#fff",
               }}
             >
-              Torna alla home
+              {t("error_page.home_button")}
             </Link>
           </div>
         </div>

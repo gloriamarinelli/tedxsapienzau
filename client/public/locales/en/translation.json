@@ -196,5 +196,9 @@
         "description": "Our goal is to <1>reset</1>, seek a point <1>zero</1>: inequalities, conflicts, bad lifestyles, emissions and waste. Reduce those factors pollutants that slow down the growth of our society, worsening the quality of our life <1>Reconsider ourselves </1> and our way of dealing with contemporary society, with the <1>arts</1 > and the <1>sciences</1>. It is fundamental to build a world where human beings can '<1>be reborn</1>', thriving and expressing themselves to the fullest in every discipline foundations for <1>to be reborn</1>, to become better people in a better place.",
         "citation": "Man and the world around him are not separate tracks, but rails that move together, they need each other.",
         "schedule": "SCHEDULE"
+    },
+    "error_page":{
+        "404_msg": "Looks like this page doesn't exist",
+        "home_button": "Return to the homepage"
     }
 }
