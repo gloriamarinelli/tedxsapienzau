@@ -95,10 +95,35 @@ export default function Team2022() {
       );
     } else {
       let res = [];
-
-      board.forEach((board) => {
+  
+      /* priority order */
+      const priorityOrder = ["Ilaria Cataldi", "Matteo Orsini", "Giulia Riccardi", "Gloria Marinelli"];
+  
+      /* custom sorting function (priority order) */
+      const customSort = (a, b) => {
+        const indexA = priorityOrder.indexOf(a.nome);
+        const indexB = priorityOrder.indexOf(b.nome);
+  
+        /* both names are in the priorityOrder list, the first found has more priority */
+        if (indexA !== -1 && indexB !== -1) {
+          return indexA - indexB;
+        }
+  
+        /* just one of the names is in the priorityOrder list */
+        if (indexA !== -1) return -1; // "a" has the priority (if it is in the list)
+        if (indexB !== -1) return 1; // "b" has the priority (if it is in the list)
+  
+        /* none of the names is in the priorityOrder list, and they are sorted alphabetically. */
+        return a.nome.localeCompare(b.nome);
+      };
+  
+      /* board members custom sorting */
+      const sortedBoard = board
+        .filter((board) => board.gruppo === "board") // "board" elements filtering
+        .sort(customSort);
+  
+      sortedBoard.forEach((board) => {
         const { id, nome, gruppo, ruolo, fotoNome, link } = board;
-        if (gruppo !== "board") return;
         res.push(
           <ExecutiveTeamCard
             key={id}
@@ -111,6 +136,7 @@ export default function Team2022() {
           />
         );
       });
+  
       return (
         <>
           <h1 className="boardNameStyle">Board</h1>
@@ -119,6 +145,7 @@ export default function Team2022() {
       );
     }
   };
+  
   // #endregion
 
   // #region --------------------------------- Volunteers -------------------------------------
