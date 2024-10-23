@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router";
-import { Link } from "react-router-dom";
 import global from "../../resources/global.json";
 import "../../index.css";
 import "../../resources/styles/home.css";
