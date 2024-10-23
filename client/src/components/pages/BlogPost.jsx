@@ -99,7 +99,6 @@ function BlogCardPost({ titolo, descrizione, image, data, autore }) {
           alt={titolo}
           className="post-image"
         />
-        <hr className="featurette-divider"></hr>
       </div>
     </div>
   );
