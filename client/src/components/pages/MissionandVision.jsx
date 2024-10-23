@@ -1,8 +1,5 @@
 import "../../index.css";
-import React, { useState } from "react";
-import Image from "../images/Cos_èTED.webp"; //fare bianco
-import Image1 from "../images/Cos_èTEDx.webp"; //fare bianco
-import Image2 from "../images/logo-white.png"; // fare  bianco
+import React, { useState, useEffect } from "react";
 
 import Image11 from "../images/missionvision23/DSC00149.jpg";
 import Image13 from "../images/missionvision23/DSC04914.jpg";
@@ -14,6 +11,7 @@ import Carousel from "react-bootstrap/Carousel";
 import global from "../../resources/global.json";
 import { useOutletContext } from "react-router";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 /**
  * Mission and Vision page
@@ -21,6 +19,10 @@ import { useTranslation } from "react-i18next";
 export default function MissionandVision() {
   const { t } = useTranslation();
   const [windowSize] = useOutletContext();
+
+  useEffect(() => {
+    console.log(i18next.language);
+  }, []);
 
   return (
     <>
@@ -39,7 +41,15 @@ export default function MissionandVision() {
             {/* Cos'è TED */}
             <div className="row featurette">
               <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-                <LazyLoadImage src={Image} alt="Cos'èTED" height="50" />
+                <LazyLoadImage
+                  src={
+                    i18next.language == "it"
+                      ? `${process.env.PUBLIC_URL}/images/logos/Cosa_TED.webp`
+                      : `${process.env.PUBLIC_URL}/images/logos/whatis_TED.webp`
+                  }
+                  alt="Cos'èTED"
+                  height="50"
+                />
               </div>
               <div className="col-md-7 order-md-2 mt-3">
                 <p
@@ -64,7 +74,15 @@ export default function MissionandVision() {
             <div className="marketing">
               <div className="row featurette">
                 <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
-                  <LazyLoadImage src={Image1} alt="Cos'èTEDx" height="50" />
+                  <LazyLoadImage
+                    src={
+                      i18next.language == "it"
+                        ? `${process.env.PUBLIC_URL}/images/logos/Cosa_TEDx.webp`
+                        : `${process.env.PUBLIC_URL}/images/logos/whatis_TEDx.webp`
+                    }
+                    alt="Cos'èTEDx"
+                    height="50"
+                  />
                 </div>
                 <div className="col-md-7 order-md-2 mt-3">
                   <p
@@ -89,7 +107,7 @@ export default function MissionandVision() {
                 <div className="row featurette">
                   <div className="col-md-5 order-md-1 d-flex justify-content-center align-items-center">
                     <LazyLoadImage
-                      src={Image2}
+                      src={`${process.env.PUBLIC_URL}/images/logo-white.png`}
                       alt="TEDxSapienzaU"
                       height="70"
                     />
