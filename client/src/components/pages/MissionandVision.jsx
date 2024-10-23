@@ -1,10 +1,4 @@
-import "../../index.css";
 import React, { useState, useEffect } from "react";
-
-import Image11 from "../images/missionvision23/DSC00149.jpg";
-import Image13 from "../images/missionvision23/DSC04914.jpg";
-import Image14 from "../images/missionvision23/DSC05278.jpg";
-import Image15 from "../images/missionvision23/PHP07700.jpg";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from "react-bootstrap/Carousel";
@@ -189,29 +183,33 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <img
           className="d-block carousel-image"
-          src={Image11}
+          src={`${process.env.PUBLIC_URL}/images/missionandvision/DSC00149.webp`}
           alt="First slide"
+          loading="lazy"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block carousel-image"
-          src={Image13}
+          src={`${process.env.PUBLIC_URL}/images/missionandvision/DSC04914.webp`}
+          alt="Second slide"
+          loading="lazy"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block carousel-image"
+          src={`${process.env.PUBLIC_URL}/images/missionandvision/DSC05278.webp`}
           alt="Third slide"
+          loading="lazy"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block carousel-image"
-          src={Image14}
+          src={`${process.env.PUBLIC_URL}/images/missionandvision/PHP07700.webp`}
           alt="Fourth slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block carousel-image"
-          src={Image15}
-          alt="Fourth slide"
+          loading="lazy"
         />
       </Carousel.Item>
     </Carousel>
