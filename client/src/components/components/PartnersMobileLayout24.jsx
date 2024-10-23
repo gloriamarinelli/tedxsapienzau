@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../resources/global.json";
 
-export default function PartnersMobileLayout() {
+export default function PartnersMobileLayout24() {
   const { t } = useTranslation(); // translation variable
 
   return (
