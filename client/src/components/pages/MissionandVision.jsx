@@ -72,7 +72,7 @@ export default function MissionandVision() {
                     src={
                       i18next.language == "it"
                         ? `${process.env.PUBLIC_URL}/images/logos/Cosa_TEDx.webp`
-                        : `${process.env.PUBLIC_URL}/images/logos/whatis_TEDx.webp`
+                        : `${process.env.PUBLIC_URL}/images/logos/whatis_TEDX.webp`
                     }
                     alt="Cos'èTEDx"
                     height="50"
