@@ -2,6 +2,12 @@ import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../resources/global.json";
 
+/* -------------------- images import -------------------- */
+import first_box_bg from "../images/partners/mobile/2.webp";
+import second_box_bg from "../images/partners/mobile/3.webp";
+import third_box_bg from "../images/partners/mobile/4.webp";
+import fourth_box_bg from "../images/partners/mobile/5.webp";
+
 export default function PartnersMobileLayout24() {
   const { t } = useTranslation(); // translation variable
 
@@ -31,42 +37,79 @@ export default function PartnersMobileLayout24() {
           }}
         ></div>
       </section>
-      <div className="gradient-div gradient-div-top"></div>
+      <div
+        id="top-gradient"
+        style={{
+          height: "100px",
+          width: "100%",
+          backgroundImage: "linear-gradient(to bottom, black, #191919)",
+        }}
+      ></div>
       <div
         className="mobile-content"
         style={{ fontFamily: "Fira Sans Extra Condensed" }}
       >
-        <div id="mobile-1st-div" className="mobile-div ct-right">
-          <div id="mobile-text-block-1" className="mobile-text-block">
+        <div
+          id="mobile-1st-div"
+          className="mobile-div"
+          style={{
+            justifyContent: "right",
+            backgroundImage: `url(${first_box_bg})`,
+          }}
+        >
+          <div
+            className="mobile-text-block"
+            style={{ textAlign: "right", width: "50%" }}
+          >
             <h3>{t("partners.opening_st")}</h3>
             <p>
               {t("partners.2nd_st")}
-              <span id="imp-txt-1">{t("partners.2nd_st_red")}</span>.<br></br>
+              <span className="red-txt">{t("partners.2nd_st_red")}</span>.
+              <br></br>
               {t("partners.3rd_st")}
             </p>
           </div>
         </div>
-        <div id="mobile-2nd-div" className="mobile-div ct-left">
-          <div id="mobile-text-block-2" className="mobile-text-block">
+        <div
+          className="mobile-div"
+          style={{
+            justifyContent: "left",
+            backgroundImage: `url(${second_box_bg})`,
+          }}
+        >
+          <div
+            className="mobile-text-block"
+            style={{ textAlign: "left", width: "60%" }}
+          >
             <h3>{t("partners.4th_st")}</h3>
-            <h5 id="imp-txt-2">
+            <h5 className="red-txt">
               <i>{t("partners.5th_st")}</i>
             </h5>
             <p>
               {t("partners.6th_st")}
               <br></br>
               {t("partners.7th_st")}
-              <span id="imp-txt-1">{t("partners.7th_st_red")}</span>.
+              <span className="red-txt">{t("partners.7th_st_red")}</span>.
             </p>
             <p>
               {t("partners.8th_st_1")}
-              <span id="imp-txt-1">{t("partners.8th_st_red")}</span>
+              <span className="red-txt">{t("partners.8th_st_red")}</span>
               {t("partners.8th_st_2")}
             </p>
           </div>
         </div>
-        <div id="mobile-3rd-div" className="mobile-div ct-left">
-          <div id="mobile-text-block-3" className="mobile-text-block">
+        <div
+          className="mobile-div"
+          style={{
+            justifyContent: "left",
+            backgroundImage: `url(${third_box_bg})`,
+            backgroundPosition: "right",
+          }}
+        >
+          <div
+            className="mobile-text-block"
+            style={{ textAlign: "left", width: "60%" }}
+          >
             <div>
               <h4>{t("partners.9th_st")}</h4>
               <p>{t("partners.10th_st")}</p>
@@ -74,11 +117,11 @@ export default function PartnersMobileLayout24() {
                 {t("partners.11th_st_1")}
                 <br></br>
                 {t("partners.11th_st_2")}
-                <span id="imp-txt-1">{t("partners.11th_st_red")}</span>
+                <span className="red-txt">{t("partners.11th_st_red")}</span>
                 {t("partners.11th_st_3")}
               </p>
             </div>
-            <div class="">
+            <div>
               <div>
                 <div>
                   <h2>{t("partners.13th_st")}</h2>
@@ -104,35 +147,44 @@ export default function PartnersMobileLayout24() {
             </div>
           </div>
         </div>
-        <div id="mobile-4th-div" className="mobile-div ct-right">
-          <div id="mobile-text-block-4" className="mobile-text-block">
+        <div
+          className="mobile-div"
+          style={{
+            justifyContent: "right",
+            backgroundImage: `url(${fourth_box_bg})`,
+          }}
+        >
+          <div
+            className="mobile-text-block"
+            style={{ textAlign: "right", width: "60%" }}
+          >
             <h3>{t("partners.stats")}</h3>
             <p>
               {t("partners.events")}
-              <ul className="numbers-list">
-                <li className="info-el">
-                  <h3 className="info-number">
+              <ul style={{ listStyleType: "none" }}>
+                <li className="info-list-element">
+                  <h3 className="info-list-number">
                     +
                     <CountUp end={3000} duration={2} useEasing={false} />
                   </h3>{" "}
                   {t("partners.people")}
                 </li>
-                <li className="info-el">
-                  <h3 className="info-number">
+                <li className="info-list-element">
+                  <h3 className="info-list-number">
                     +
                     <CountUp end={33000} duration={2} useEasing={false} />
                   </h3>{" "}
                   {t("partners.yt_views")}
                 </li>
-                <li className="info-el">
-                  <h3 className="info-number">
+                <li className="info-list-element">
+                  <h3 className="info-list-number">
                     +
                     <CountUp end={50} duration={2} useEasing={false} />
                   </h3>{" "}
                   {t("partners.partners")}
                 </li>
-                <li className="info-el">
-                  <h3 className="info-number">
+                <li className="info-list-element">
+                  <h3 className="info-list-number">
                     +
                     <CountUp end={300} duration={2} useEasing={false} />
                   </h3>{" "}
@@ -143,7 +195,14 @@ export default function PartnersMobileLayout24() {
           </div>
         </div>
       </div>
-      <div className="gradient-div gradient-div-bottom"></div>
+      <div
+        id="bottom-gradient"
+        style={{
+          height: "100px",
+          width: "100%",
+          backgroundImage: "linear-gradient(to bottom, #191919, black)",
+        }}
+      ></div>
     </>
   );
 }

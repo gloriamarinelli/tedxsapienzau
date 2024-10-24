@@ -87,7 +87,7 @@ export default function PartnersDesktopLayout24() {
                 }}
               >
                 {t("partners.2nd_st")}
-                <span id="imp-txt-1">{t("partners.2nd_st_red")}</span>.
+                <span className="red-txt">{t("partners.2nd_st_red")}</span>.
               </h3>
               <h3
                 style={{
@@ -216,7 +216,7 @@ export default function PartnersDesktopLayout24() {
                 {t("partners.6th_st")}
                 <br></br>
                 {t("partners.7th_st")}
-                <span id="imp-txt-1">{t("partners.7th_st_red")}</span>.
+                <span className="red-txt">{t("partners.7th_st_red")}</span>.
               </h3>
               <h3
                 style={{
@@ -226,7 +226,7 @@ export default function PartnersDesktopLayout24() {
                 }}
               >
                 {t("partners.8th_st_1")}
-                <span id="imp-txt-1">{t("partners.8th_st_red")}</span>
+                <span className="red-txt">{t("partners.8th_st_red")}</span>
                 {t("partners.8th_st_2")}
               </h3>
             </div>
@@ -325,7 +325,7 @@ export default function PartnersDesktopLayout24() {
                 {t("partners.11th_st_1")}
                 <br></br>
                 {t("partners.11th_st_2")}
-                <span id="imp-txt-1">{t("partners.11th_st_red")}</span>
+                <span className="red-txt">{t("partners.11th_st_red")}</span>
                 {t("partners.11th_st_3")}
               </h3>
             </div>

@@ -12,7 +12,6 @@ import PartnersDesktopLayout24 from "../components/PartnersDesktopLayout24"; // 
 import "../../resources/styles/partnerstyle.css";
 import "../../resources/styles/partnercommunity.css";
 import "../../index.css";
-import "../../resources/styles/parallax-scrolldown.css";
 
 export default function Partners() {
   const [activeYear] = useState(24); // active year variable

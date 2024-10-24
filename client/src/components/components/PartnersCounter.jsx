@@ -72,6 +72,7 @@ export default function PartnersCounter() {
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
+            color: "white",
           }}
         >
           <div
@@ -82,11 +83,26 @@ export default function PartnersCounter() {
               alignItems: "center",
             }}
           >
-            <h2 className="img-title">{t("partners.stats")}</h2>
+            <h1
+              style={{
+                paddingBottom: "2%",
+                fontWeight: "bold",
+                fontSize:
+                  windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
+              }}
+            >
+              {t("partners.stats")}
+            </h1>
 
-            <p className="img-txt-2">
-              <h3>{t("partners.events")}</h3>
-            </p>
+            <h3
+              style={{
+                paddingBottom: "2%",
+                fontSize:
+                  windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "5vh",
+              }}
+            >
+              {t("partners.events")}
+            </h3>
           </div>
         </div>
         <section
