@@ -28,7 +28,7 @@
 @media (max-width: 768px) { /* TABLET_WIDTH - check resources/global.json */
     .logos:before,
     .logos:after {
-      width: 100px;
+      width: 50px;
     } 
 }
 
