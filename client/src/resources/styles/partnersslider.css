@@ -1,0 +1,70 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: black;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  width: 250px;
+}
+
+@media (max-width: 768px) { /* TABLET_WIDTH - check resources/global.json */
+    .logos:before,
+    .logos:after {
+      width: 100px;
+    } 
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 60s slide infinite linear;
+}
+
+.partner_card_24_div {
+  height: 100px;
+  width: 100px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  border-radius: 10%;
+  margin: 0 20px;
+}
+
+.partner_card_24_img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
+  border-radius: 10%;
+}
