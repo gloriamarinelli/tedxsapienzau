@@ -13,7 +13,6 @@ import rosa from "../images/joinus/rosa.webp";
 import rosso from "../images/joinus/rosso.webp";
 import verde from "../images/joinus/verde.webp";
 import giallo from "../images/joinus/giallo.webp";
-import ics from "../images/joinus/ics.png";
 
 export default function HomeAwards24() {
   const [windowSize] = useOutletContext();
@@ -104,6 +103,7 @@ export default function HomeAwards24() {
 
   const commonContent = () => {
     let aspectRatio = "2/1";
+    let width = "450px";
 
     return (
       <section
@@ -190,15 +190,6 @@ export default function HomeAwards24() {
         }}
       >
         <div id="teamLogosBannerTop" style={{ width: "600vw" }}>
-        <img src={giallo} width={logoHeight} alt="" />
-          <img src={arancione} width={logoHeight} alt="" />
-          <img src={celeste} width={logoHeight} alt="" />
-          <img src={blu} width={logoHeight} alt="" />
-          <img src={fucsia} width={logoHeight} alt="" />
-          <img src={rosa} width={logoHeight} alt="" />
-          <img src={rosso} width={logoHeight} alt="" />
-          <img src={verde} width={logoHeight} alt="" />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} alt="" />
@@ -207,7 +198,6 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} alt="" />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} alt="" />
@@ -216,7 +206,14 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} alt="" />
-          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} alt="" />
@@ -225,7 +222,6 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} />
@@ -233,7 +229,6 @@ export default function HomeAwards24() {
           <img src={fucsia} width={logoHeight} />
           <img src={rosa} width={logoHeight} />
           <img src={rosso} width={logoHeight} />
-          <img src={ics} width={logoHeight} alt="" />
         </div>
         <div
           id="teamLogosBannerBottom"
@@ -254,7 +249,6 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} alt="" />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} alt="" />
@@ -263,7 +257,6 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} alt="" />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} alt="" />
@@ -272,7 +265,6 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} alt="" />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} alt="" />
@@ -281,15 +273,13 @@ export default function HomeAwards24() {
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} />
-          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
+          <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} />
           <img src={blu} width={logoHeight} />
           <img src={fucsia} width={logoHeight} />
           <img src={rosa} width={logoHeight} />
           <img src={rosso} width={logoHeight} />
-          <img src={ics} width={logoHeight} alt="" />
         </div>
       </div>
     );
