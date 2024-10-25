@@ -103,7 +103,8 @@ export default function HomeAwards24() {
   );
 
   const commonContent = () => {
-    let aspectRatio = "2/1";
+    let aspectRatio = "1.5/1";
+    let width = "450px";
 
     return (
       <section
@@ -117,18 +118,17 @@ export default function HomeAwards24() {
       >
         <div
           style={{
-            width: "450px",
-            aspectRatio: "2/1",
+            width: width,
+            aspectRatio: aspectRatio,
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "space-between",
             justifyContent: "center",
             textAlign: "center",
             color: "#fff",
-            position: "relative",
           }}
         >
           <h1
@@ -138,32 +138,27 @@ export default function HomeAwards24() {
               fontSize: "50px",
               color: "#FFFFFF",
               fontFamily: "GothamBold",
-              position: "absolute",
-              top: 20,
             }}
           >
             DOVE
           </h1>
-          <p style={{ fontSize: "30px", marginTop: "80px" }}>
-            NUOVO TEATRO ATENEO
-          </p>
+          <p style={{ fontSize: "30px" }}>NUOVO TEATRO ATENEO</p>
           <p style={{ fontSize: "20px" }}>CITTA' UNIVERSITARIA</p>
         </div>
 
         <div
           style={{
-            width: "450px",
-            aspectRatio: "2/1",
+            width: width,
+            aspectRatio: aspectRatio,
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "space-between",
             justifyContent: "center",
             textAlign: "center",
             color: "#fff",
-            position: "relative",
           }}
         >
           <h1
@@ -173,15 +168,12 @@ export default function HomeAwards24() {
               fontSize: "50px",
               color: "#FFFFFF",
               fontFamily: "GothamBold",
-              position: "absolute",
-              top: 20,
             }}
           >
             QUANDO
           </h1>
-          <p style={{ fontSize: "30px", marginTop: "50px" }}>
-            24 Novembre 2024
-          </p>
+          <p style={{ fontSize: "30px" }}>24 Novembre 2024</p>
+          <p style={{ fontSize: "20px" }}>TBD 🕒</p>
         </div>
       </section>
     );
@@ -396,6 +388,7 @@ export default function HomeAwards24() {
               <br />
             </p>
             <Button
+              href="https://forms.gle/9EKGjY8NGt6vWKe86"
               style={{
                 backgroundColor: global.COLORS.ROSSO_TED_2023,
                 borderColor: "red",
