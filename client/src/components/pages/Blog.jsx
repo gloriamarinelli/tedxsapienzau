@@ -273,7 +273,7 @@ export default function Blog() {
                   textShadow: "3px 3px #000",
                 }}
               >
-                IDEAS WORTH SPREADING
+                IDEAS CHANGE EVERYTHING
               </h1>
               <h5
                 className="fira-sans"
