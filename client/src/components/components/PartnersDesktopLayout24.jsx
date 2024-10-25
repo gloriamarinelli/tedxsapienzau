@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import PartnersCounter from "./PartnersCounter";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
+import PartnersSlider from "../components/PartnersSlider";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../images/partners/desktop/3.webp";
@@ -487,6 +488,7 @@ export default function PartnersDesktopLayout24() {
           </div>
         </div>
       </section>
+      <PartnersSlider />
     </div>
   );
 }

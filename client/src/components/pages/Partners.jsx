@@ -4,7 +4,6 @@ import { useOutletContext } from "react-router";
 
 /* -------------------- components and resources import -------------------- */
 import global from "../../resources/global.json";
-import PartnersSlider from "../components/PartnersSlider"; // Partners 2024
 import PartnersMobileLayout24 from "../components/PartnersMobileLayout24"; // Partners 2024
 import PartnersDesktopLayout24 from "../components/PartnersDesktopLayout24"; // Partners 2024
 
@@ -55,7 +54,7 @@ export default function Partners() {
 
   return (
     <>
-      {selectYear()} {activeYear === 24 && <PartnersSlider />}
+      {selectYear()}
     </>
   );
 }
