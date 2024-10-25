@@ -420,6 +420,7 @@ export default function HomeAwards24() {
             position: "relative",
             fontFamily: "Anton",
             padding: "0 20px",
+            overflowX: "hidden",
           }}
         >
           {getBannerTeamLogosMobile()}
