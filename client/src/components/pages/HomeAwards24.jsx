@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import logo from "../images/awards24/awards24.webp";
@@ -13,11 +13,11 @@ import rosa from "../images/joinus/rosa.webp";
 import rosso from "../images/joinus/rosso.webp";
 import verde from "../images/joinus/verde.webp";
 import giallo from "../images/joinus/giallo.webp";
+import ics from "../images/joinus/ics.png";
 
 export default function HomeAwards24() {
   const [windowSize] = useOutletContext();
   const [scrollY, setScrollY] = useState(0);
-  const svgRef = useRef();
 
   useEffect(() => {
     window.addEventListener("scroll", handleYScroll);
@@ -103,8 +103,6 @@ export default function HomeAwards24() {
   );
 
   const commonContent = () => {
-    let aspectRatio = "2/1";
-
     return (
       <section
         style={{
@@ -199,37 +197,50 @@ export default function HomeAwards24() {
         }}
       >
         <div id="teamLogosBannerTop" style={{ width: "600vw" }}>
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+        <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} />
+          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
+          <img src={arancione} width={logoHeight} alt="" />
           <img src={celeste} width={logoHeight} />
           <img src={blu} width={logoHeight} />
           <img src={fucsia} width={logoHeight} />
           <img src={rosa} width={logoHeight} />
           <img src={rosso} width={logoHeight} />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+          <img src={ics} width={logoHeight} alt="" />
         </div>
         <div
           id="teamLogosBannerBottom"
@@ -242,14 +253,42 @@ export default function HomeAwards24() {
             left: -1000,
           }}
         >
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={ics} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
+          <img src={arancione} width={logoHeight} alt="" />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
           <img src={verde} width={logoHeight} />
+          <img src={ics} width={logoHeight} alt="" />
           <img src={giallo} width={logoHeight} />
           <img src={arancione} width={logoHeight} />
           <img src={celeste} width={logoHeight} />
@@ -257,30 +296,7 @@ export default function HomeAwards24() {
           <img src={fucsia} width={logoHeight} />
           <img src={rosa} width={logoHeight} />
           <img src={rosso} width={logoHeight} />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
-          <img src={arancione} width={logoHeight} />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+          <img src={ics} width={logoHeight} alt="" />
         </div>
       </div>
     );
