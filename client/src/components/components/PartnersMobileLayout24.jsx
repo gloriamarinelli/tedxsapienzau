@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../resources/global.json";
-import PartnersSlider from "../components/PartnersSlider";
+import PartnersSliderMobile from "./PartnersSliderMobile";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../images/partners/mobile/2.webp";
@@ -204,7 +204,7 @@ export default function PartnersMobileLayout24() {
           backgroundImage: "linear-gradient(to bottom, #191919, black)",
         }}
       ></div>
-      <PartnersSlider />
+      <PartnersSliderMobile />
     </>
   );
 }
