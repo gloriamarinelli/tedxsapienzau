@@ -1,3 +1,4 @@
+/* --------------- common slider CSS rules --------------- */
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -25,11 +26,12 @@
   width: 250px;
 }
 
-@media (max-width: 768px) { /* TABLET_WIDTH - check resources/global.json */
-    .logos:before,
-    .logos:after {
-      width: 50px;
-    } 
+@media (max-width: 768px) {
+  /* TABLET_WIDTH - check resources/global.json */
+  .logos:before,
+  .logos:after {
+    width: 50px;
+  }
 }
 
 .logos:before {
@@ -48,8 +50,19 @@
 
 .logos-slide {
   display: inline-block;
-  animation: 60s slide infinite linear;
+  animation: 70s slide infinite linear;
 }
+
+.partner_card_24_img,
+.logo_img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
+}
+
+/* --------------- mobile slider CSS rules --------------- */
 
 .partner_card_24_div {
   height: 100px;
@@ -61,10 +74,20 @@
 }
 
 .partner_card_24_img {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: scale-down;
   border-radius: 10%;
+}
+
+/* --------------- desktop slider CSS rules --------------- */
+
+.logo_img {
+  filter: brightness(50%);
+}
+
+.logo_div {
+  display: inline-block;
+  text-align: center;
+  height: 15vh;
+  width: 15vw;
+  overflow: hidden;
+  margin: 0 1vw;
 }
