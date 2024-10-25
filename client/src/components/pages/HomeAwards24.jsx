@@ -3,6 +3,17 @@ import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import logo from "../images/awards24/awards24.webp";
 
+import { Button } from "react-bootstrap";
+
+import arancione from "../images/joinus/arancione.webp";
+import celeste from "../images/joinus/celeste.webp";
+import blu from "../images/joinus/blu.webp";
+import fucsia from "../images/joinus/fucsia.webp";
+import rosa from "../images/joinus/rosa.webp";
+import rosso from "../images/joinus/rosso.webp";
+import verde from "../images/joinus/verde.webp";
+import giallo from "../images/joinus/giallo.webp";
+
 export default function HomeAwards24() {
   const [windowSize] = useOutletContext();
   const [scrollY, setScrollY] = useState(0);
@@ -11,27 +22,41 @@ export default function HomeAwards24() {
   useEffect(() => {
     window.addEventListener("scroll", handleYScroll);
 
-    if (windowSize > 1100) {
-      let path = svgRef.current.querySelector("path");
-      let length = path.getTotalLength();
-      path.style.strokeDasharray = length + " " + length;
+    // if (windowSize > 1100) {
+    //   let path = svgRef.current.querySelector("path");
+    //   let length = path.getTotalLength();
+    //   path.style.strokeDasharray = length + " " + length;
 
-      let offset = windowSize > 1360 ? 6500 : 5500;
-      path.style.strokeDashoffset = offset;
+    //   let offset = windowSize > 1360 ? 6500 : 5500;
+    //   path.style.strokeDashoffset = offset;
 
-      window.addEventListener("scroll", function () {
-        let scrollPercentage =
-          (document.documentElement.scrollTop + document.body.scrollTop) /
-          (document.documentElement.scrollHeight -
-            document.documentElement.clientHeight);
-        let drawLength = length * scrollPercentage;
-        path.style.strokeDashoffset = offset - drawLength;
-      });
-    }
+    //   window.addEventListener("scroll", function () {
+    //     let scrollPercentage =
+    //       (document.documentElement.scrollTop + document.body.scrollTop) /
+    //       (document.documentElement.scrollHeight -
+    //         document.documentElement.clientHeight);
+    //     let drawLength = length * scrollPercentage;
+    //     path.style.strokeDashoffset = offset - drawLength;
+    //   });
+    // }
   }, [windowSize]);
 
   function handleYScroll() {
     setScrollY(window.scrollY);
+
+    // as the window scroll down move the div teamLogosBannerTop to the left
+    let teamLogosBannerTop = document.getElementById("teamLogosBannerTop");
+    if (teamLogosBannerTop) {
+      teamLogosBannerTop.style.transform = `translateX(-${window.scrollY}px)`;
+    }
+
+    // as the window scroll down move the div teamLogosBannerBottom to the right
+    let teamLogosBannerBottom = document.getElementById(
+      "teamLogosBannerBottom"
+    );
+    if (teamLogosBannerBottom) {
+      teamLogosBannerBottom.style.transform = `translateX(${window.scrollY}px)`;
+    }
   }
 
   const getShowMore = () => (
@@ -47,7 +72,7 @@ export default function HomeAwards24() {
         color: "#fff",
         fontWeight: "bold",
         fontFamily: "Anton",
-        padding: "0 0 10px 0",
+        padding: "0 0 80px 0",
         transition: "0.5s all",
         opacity: scrollY > 450 ? 0 : 1,
       }}
@@ -77,48 +102,189 @@ export default function HomeAwards24() {
     </div>
   );
 
-  const commonContent = (
-    <>
+  const commonContent = () => {
+    let aspectRatio = "2/1";
+
+    return (
+      <section
+        style={{
+          width: "100%",
+          margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+        }}
+      >
+        <div
+          style={{
+            width: "450px",
+            aspectRatio: "2/1",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: "#191919",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            color: "#fff",
+            position: "relative",
+          }}
+        >
+          <h1
+            className="fira-sans mb-5"
+            style={{
+              textAlign: "center",
+              fontSize: "50px",
+              color: "#FFFFFF",
+              fontFamily: "GothamBold",
+              position: "absolute",
+              top: 20,
+            }}
+          >
+            DOVE
+          </h1>
+          <p style={{ fontSize: "30px", marginTop: "80px" }}>
+            NUOVO TEATRO ATENEO
+          </p>
+          <p style={{ fontSize: "20px" }}>CITTA' UNIVERSITARIA</p>
+        </div>
+
+        <div
+          style={{
+            width: "450px",
+            aspectRatio: "2/1",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: "#191919",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            color: "#fff",
+            position: "relative",
+          }}
+        >
+          <h1
+            className="fira-sans mb-5"
+            style={{
+              textAlign: "center",
+              fontSize: "50px",
+              color: "#FFFFFF",
+              fontFamily: "GothamBold",
+              position: "absolute",
+              top: 20,
+            }}
+          >
+            QUANDO
+          </h1>
+          <p style={{ fontSize: "30px", marginTop: "50px" }}>
+            24 Novembre 2024
+          </p>
+        </div>
+      </section>
+    );
+  };
+
+  const getBannerTeamLogos = () => {
+    const logoHeight = "80px";
+    return (
       <div
         style={{
           width: "100vw",
-          backgroundColor: "black",
-          textAlign: "center",
-          marginTop: "50px",
-          color: "#fff",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT} `,
+          marginTop: global.UTILS.NAV_HEIGHT,
+          position: "absolute",
         }}
       >
-        <h1 style={{ color: global.COLORS.ROSSO_TED_2023 }}>QUANDO</h1>
+        <div id="teamLogosBannerTop" style={{ width: "600vw" }}>
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+        </div>
         <div
+          id="teamLogosBannerBottom"
           style={{
-            width: "80%",
-            margin: "auto",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
+            width: "600vw",
+            maxHeight: logoHeight,
+            overflow: "hidden",
+            position: "absolute",
+            bottom: 20,
+            left: -1000,
           }}
         >
-          <div className="container mb-5 d-flex justify-content-center align-items-center flex-column">
-            <p
-              style={{
-                fontSize: "30px",
-                fontFamily: "GothamBook",
-                maxWidth: "75ch",
-                textAlign: "center",
-                lineHeight: "40px",
-                color: "#fff",
-                fontWeight: "bold",
-              }}
-            >
-              28 NOVEMBRE 2024
-              <br />
-              NUOVO TEATRO ATENEO
-            </p>
-          </div>
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
+          <img src={verde} width={logoHeight} />
+          <img src={giallo} width={logoHeight} />
+          <img src={arancione} width={logoHeight} />
+          <img src={celeste} width={logoHeight} />
+          <img src={blu} width={logoHeight} />
+          <img src={fucsia} width={logoHeight} />
+          <img src={rosa} width={logoHeight} />
+          <img src={rosso} width={logoHeight} />
         </div>
       </div>
-    </>
-  );
+    );
+  };
 
   if (windowSize > 1100) {
     return (
@@ -134,7 +300,7 @@ export default function HomeAwards24() {
         >
           {getShowMore()}
           {/* SVG for Desktop */}
-          {windowSize > 1360 ? (
+          {/* {windowSize > 1360 ? (
             <svg
               width={"100%"}
               height={"100%"}
@@ -180,7 +346,9 @@ export default function HomeAwards24() {
                 strokeLinejoin="round"
               />
             </svg>
-          )}
+          )} */}
+
+          {getBannerTeamLogos()}
 
           <div
             style={{
@@ -203,10 +371,10 @@ export default function HomeAwards24() {
               />
             </div>
           </div>
-          <div className="container mb-5 d-flex justify-content-center align-items-center flex-column">
+          <div className="container mb-5 d-flex justify-content-center align-items-center flex-column mt-5">
             <p
               style={{
-                fontSize: "20px",
+                fontSize: "25px",
                 fontFamily: "GothamBook",
                 maxWidth: "75ch",
                 textAlign: "justify",
@@ -214,27 +382,34 @@ export default function HomeAwards24() {
                 color: "#fff",
               }}
             >
-              Il concorso <b style={{ color: "#eb0028" }}>SapienzaU Awards</b> è
-              organizzato dall'{" "}
-              <b style={{ color: "#eb0028" }}>Associazione SapienzaU</b> ed ha
-              lo scopo di promuovere idee di valore, offrendo ai vincitori la
-              prestigiosa opportunità di esibirsi sul palco dell'edizione 2025
-              del TEDxSapienzaU. I 5 vincitori del concorso SapienzaU Awards,{" "}
-              <b style={{ color: "#eb0028" }}>3 Speakers e 2 Artists</b>,
-              verranno premiati sul palco della finale e hanno l'occasione di
-              esibirsi durante l'evento TEDxSapienzaU 2025!
+              I <b style={{ color: "#eb0028" }}>SapienzaU Awards</b> sono
+              organizzati dall'
+              <b style={{ color: "#eb0028" }}>Associazione SapienzaU</b> ed
+              hanno lo scopo di promuovere idee di valore, offrendo ai vincitori
+              la prestigiosa opportunità di esibirsi sul palco dell'edizione
+              2025 del TEDxSapienzaU. I 5 vincitori dei SapienzaU Awards,{" "}
+              <b style={{ color: "#eb0028" }}>3 Speakers e 2 Artists</b>
+              , verranno premiati sul palco della finale e avranno l'occasione
+              di condividere le loro idee con un pubblico ampio, promuovendo il
+              loro messaggio di innovazione e ispirazione.
               <br />
               <br />
-              Candidati qui:{" "}
-              <a
-                href="https://forms.gle/24mnez76mMoNekSW9"
-                style={{ color: "#eb0028", textDecoration: "underline" }}
-              >
-                Candidati!
-              </a>
             </p>
+            <Button
+              style={{
+                backgroundColor: global.COLORS.ROSSO_TED_2023,
+                borderColor: "red",
+                borderRadius: "9999px",
+                fontSize: "25px",
+                fontWeight: "bold",
+                fontFamily: "GothamBook",
+                padding: "10px 20px",
+              }}
+            >
+              Candidati qui!
+            </Button>
           </div>
-          {commonContent}
+          {commonContent()}
         </section>
       </div>
     );
