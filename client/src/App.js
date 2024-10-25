@@ -36,6 +36,8 @@ import Awards2022 from "./components/pages/Awards2022";
 
 import Countdown2024 from "./components/pages/Countdown2024";
 
+import HomeAwards24 from "./components/pages/HomeAwards24";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,7 +52,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <HomeAwards24 />,
       },
       {
         path: "/tedxsapienzau",
