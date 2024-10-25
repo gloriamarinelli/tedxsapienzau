@@ -14,6 +14,9 @@ import rosso from "../images/joinus/rosso.webp";
 import verde from "../images/joinus/verde.webp";
 import giallo from "../images/joinus/giallo.webp";
 
+import bento from "../images/joinus/bento.png";
+
+
 export default function HomeAwards24() {
   const [windowSize] = useOutletContext();
   const [scrollY, setScrollY] = useState(0);
@@ -122,6 +125,8 @@ export default function HomeAwards24() {
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
+            backgroundImage: `url(${bento})`,
+            backgroundSize: "contain",
             display: "flex",
             flexDirection: "column",
             alignItems: "space-between",
@@ -152,6 +157,8 @@ export default function HomeAwards24() {
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
+            backgroundImage: `url(${bento})`,
+            backgroundSize: "contain",
             display: "flex",
             flexDirection: "column",
             alignItems: "space-between",
@@ -171,7 +178,7 @@ export default function HomeAwards24() {
           >
             QUANDO
           </h1>
-          <p style={{ fontSize: "30px" }}>24 Novembre 2024</p>
+          <p style={{ fontSize: "30px" }}>28 Novembre 2024</p>
           <p style={{ fontSize: "20px" }}>TBD 🕒</p>
         </div>
       </section>
