@@ -53,8 +53,8 @@
   animation: 70s slide infinite linear;
 }
 
-.partner_card_24_img,
-.logo_img {
+.mobile_logo_img,
+.desktop_logo_img {
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -64,7 +64,7 @@
 
 /* --------------- mobile slider CSS rules --------------- */
 
-.partner_card_24_div {
+.mobile_logo_div {
   height: 100px;
   width: 100px;
   background: rgb(255, 255, 255);
@@ -73,17 +73,17 @@
   margin: 0 20px;
 }
 
-.partner_card_24_img {
+.mobile_logo_img {
   border-radius: 10%;
 }
 
 /* --------------- desktop slider CSS rules --------------- */
 
-.logo_img {
+.desktop_logo_img {
   filter: brightness(50%);
 }
 
-.logo_div {
+.desktop_logo_div {
   display: inline-block;
   text-align: center;
   height: 15vh;

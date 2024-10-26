@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
-import global from "../../resources/global.json";
-import PartnersSliderMobile from "./PartnersSliderMobile";
+import global from "../../../resources/global.json";
+import PartnersSlider from "./PartnersSlider";
 
 /* -------------------- images import -------------------- */
-import first_box_bg from "../images/partners/mobile/2.webp";
-import second_box_bg from "../images/partners/mobile/3.webp";
-import third_box_bg from "../images/partners/mobile/4.webp";
-import fourth_box_bg from "../images/partners/mobile/5.webp";
+import first_box_bg from "../../images/partners/mobile/2.webp";
+import second_box_bg from "../../images/partners/mobile/3.webp";
+import third_box_bg from "../../images/partners/mobile/4.webp";
+import fourth_box_bg from "../../images/partners/mobile/5.webp";
 
 export default function PartnersMobileLayout24() {
   const { t } = useTranslation(); // translation variable
@@ -204,7 +204,7 @@ export default function PartnersMobileLayout24() {
           backgroundImage: "linear-gradient(to bottom, #191919, black)",
         }}
       ></div>
-      <PartnersSliderMobile />
+      <PartnersSlider />
     </>
   );
 }

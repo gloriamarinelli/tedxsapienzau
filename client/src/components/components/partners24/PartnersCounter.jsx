@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router";
-import global from "../../resources/global.json";
-import "../../index.css";
-import "../../resources/styles/home.css";
+import global from "../../../resources/global.json";
+import "../../../index.css";
+import "../../../resources/styles/home.css";
 import CountUp from "react-countup";
 import { useTranslation, Trans } from "react-i18next";
 

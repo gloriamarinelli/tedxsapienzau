@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next";
 import PartnersCounter from "./PartnersCounter";
 import { useOutletContext } from "react-router";
-import global from "../../resources/global.json";
-import PartnersSliderDesktop from "../components/PartnersSliderDesktop";
+import global from "../../../resources/global.json";
+import PartnersSlider from "./PartnersSlider";
 
 /* -------------------- images import -------------------- */
-import first_box_bg from "../images/partners/desktop/3.webp";
-import second_box_bg from "../images/partners/desktop/6.webp";
-import third_box_bg from "../images/partners/desktop/5.webp";
-import fourth_box_bg from "../images/partners/desktop/4.webp";
-import volunteers from "../images/partners/desktop/volunteers_darker_filter.webp";
+import first_box_bg from "../../images/partners/desktop/3.webp";
+import second_box_bg from "../../images/partners/desktop/6.webp";
+import third_box_bg from "../../images/partners/desktop/5.webp";
+import fourth_box_bg from "../../images/partners/desktop/4.webp";
+import volunteers from "../../images/partners/desktop/volunteers_darker_filter.webp";
 
 export default function PartnersDesktopLayout24() {
   const { t } = useTranslation(); // translation variable
@@ -36,7 +36,6 @@ export default function PartnersDesktopLayout24() {
         }}
       >
         <div
-          
           style={{
             width: "100%",
             height: "90%",
@@ -115,7 +114,7 @@ export default function PartnersDesktopLayout24() {
       </section>
       {/* second row */}
       <PartnersCounter />
-      <PartnersSliderDesktop />
+      <PartnersSlider />
       {/* third row */}
       <section
         style={{
@@ -134,7 +133,6 @@ export default function PartnersDesktopLayout24() {
         }}
       >
         <div
-          
           style={{
             width: "100%",
             height: "90%",
@@ -253,7 +251,6 @@ export default function PartnersDesktopLayout24() {
         }}
       >
         <div
-          
           style={{
             width: "100%",
             height: "90%",
@@ -352,7 +349,6 @@ export default function PartnersDesktopLayout24() {
         }}
       >
         <div
-          
           style={{
             width: "100%",
             height: "90%",

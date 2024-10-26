@@ -4,8 +4,8 @@ import { useOutletContext } from "react-router";
 
 /* -------------------- components and resources import -------------------- */
 import global from "../../resources/global.json";
-import PartnersMobileLayout24 from "../components/PartnersMobileLayout24"; // Partners 2024
-import PartnersDesktopLayout24 from "../components/PartnersDesktopLayout24"; // Partners 2024
+import PartnersMobileLayout24 from "../components/partners24/PartnersMobileLayout24"; // Partners 2024
+import PartnersDesktopLayout24 from "../components/partners24/PartnersDesktopLayout24"; // Partners 2024
 
 /* -------------------- css files import -------------------- */
 import "../../resources/styles/partnerstyle.css";
