@@ -4,7 +4,7 @@ import global from "../../../resources/global.json";
 import "../../../index.css";
 import "../../../resources/styles/home.css";
 import CountUp from "react-countup";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 /**
  * Component that renders the information about TEDxSapienzaU in the Partners page.
@@ -12,7 +12,7 @@ import { useTranslation, Trans } from "react-i18next";
  */
 export default function PartnersCounter() {
   const { t } = useTranslation();
-  const [windowSize, setWindowSize] = useOutletContext();
+  const [windowSize] = useOutletContext();
   const [hidden1, setHidden1] = useState(true);
   const [hidden2, setHidden2] = useState(true);
   const [hidden3, setHidden3] = useState(true);

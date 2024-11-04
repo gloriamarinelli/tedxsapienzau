@@ -209,14 +209,14 @@ export default function HomeAwards24() {
           <img src={fucsia} width={logoHeight} alt="" />
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
         </div>
         <div
           id="teamLogosBannerBottom"
@@ -260,14 +260,14 @@ export default function HomeAwards24() {
           <img src={fucsia} width={logoHeight} alt="" />
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
         </div>
       </div>
     );
@@ -316,14 +316,14 @@ export default function HomeAwards24() {
           <img src={fucsia} width={logoHeight} alt="" />
           <img src={rosa} width={logoHeight} alt="" />
           <img src={rosso} width={logoHeight} alt="" />
-          <img src={verde} width={logoHeight} />
-          <img src={giallo} width={logoHeight} />
+          <img src={verde} width={logoHeight} alt="" />
+          <img src={giallo} width={logoHeight} alt="" />
           <img src={arancione} width={logoHeight} alt="" />
-          <img src={celeste} width={logoHeight} />
-          <img src={blu} width={logoHeight} />
-          <img src={fucsia} width={logoHeight} />
-          <img src={rosa} width={logoHeight} />
-          <img src={rosso} width={logoHeight} />
+          <img src={celeste} width={logoHeight} alt="" />
+          <img src={blu} width={logoHeight} alt="" />
+          <img src={fucsia} width={logoHeight} alt="" />
+          <img src={rosa} width={logoHeight} alt="" />
+          <img src={rosso} width={logoHeight} alt="" />
         </div>
       </div>
     );
