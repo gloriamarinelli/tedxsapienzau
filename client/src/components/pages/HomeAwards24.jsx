@@ -391,7 +391,7 @@ export default function HomeAwards24() {
               <br />
             </p>
             <Button
-              href="https://forms.gle/9EKGjY8NGt6vWKe86"
+              href="https://www.eventbrite.it/e/biglietti-sapienzau-awards-2024-1072162840919?fbclid=PAZXh0bgNhZW0CMTEAAaasy8hjYj_E4L9_r5l1nSaZqT0EVedP7zLuwzU1zxQHwDEhk-F_z_GTGOY_aem_zmhcZZ4lXolUiOStxvIHZA"
               style={{
                 backgroundColor: global.COLORS.ROSSO_TED_2023,
                 borderColor: "red",
@@ -402,7 +402,7 @@ export default function HomeAwards24() {
                 padding: "10px 20px",
               }}
             >
-              Candidati qui!
+              🎫 Ottieni il tuo biglietto qui! 🎫
             </Button>
           </div>
           {commonContent()}
@@ -465,19 +465,18 @@ export default function HomeAwards24() {
             </p>
 
             <Button
-              href="https://forms.gle/9EKGjY8NGt6vWKe86"
+              href="https://www.eventbrite.it/e/biglietti-sapienzau-awards-2024-1072162840919?fbclid=PAZXh0bgNhZW0CMTEAAaasy8hjYj_E4L9_r5l1nSaZqT0EVedP7zLuwzU1zxQHwDEhk-F_z_GTGOY_aem_zmhcZZ4lXolUiOStxvIHZA"
               style={{
                 backgroundColor: global.COLORS.ROSSO_TED_2023,
                 borderColor: "red",
                 borderRadius: "9999px",
-                fontSize: "18px",
+                fontSize: "25px",
                 fontWeight: "bold",
                 fontFamily: "GothamBook",
-                padding: "8px 16px",
-                marginTop: "20px",
+                padding: "10px 20px",
               }}
             >
-              Candidati qui!
+              🎫 Ottieni il tuo biglietto qui! 🎫
             </Button>
           </div>
 
