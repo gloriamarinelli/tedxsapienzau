@@ -10,6 +10,12 @@ import { AuthContext } from "../context/authContext";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
+import {
+  faArrowLeft,
+  faAngleRight,
+  faA,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../../index.css";
 import "../../i18n";
@@ -111,8 +117,365 @@ export default function NavbarComponent(props) {
     // Add dependencies: This ensures the effect only re-runs if i18n, isUserLoggedIn, or logout changes
   }, [i18n, isUserLoggedIn, logout]);
 
+  useEffect(() => {
+    if (window.innerWidth > 992) {
+      setExpanded(false);
+    }
+  });
+
+  // This function adds and remove classes to the navbar elements when the navbar is expanded
+  // It waits for 0.3s to remove the classes after the navbar is collapsed to avoid to be able to
+  // see the style changes while the navbar is collapsing
+  useEffect(() => {
+    const pt = "pt-3";
+    const pb = "pb-3";
+    if (expanded) {
+      const navbarNav = document.getElementById("navbar-nav");
+      navbarNav.style.fontSize = "32px";
+      navbarNav.style.textTransform = "uppercase";
+      navbarNav.style.height = `calc(100vh - ${global.UTILS.NAV_HEIGHT})`;
+
+      const columnContainer = document.getElementById("column-container");
+      columnContainer.classList.remove("text-center");
+      columnContainer.classList.remove("gap-1");
+
+      const mainContainer = document.getElementById("main-container");
+      mainContainer.classList.add("justify-content-center");
+      mainContainer.classList.remove("align-items-center");
+
+      const liEvents = document.getElementById("li-events");
+      liEvents.classList.add("border-bottom");
+      liEvents.classList.add(pt);
+      liEvents.classList.add(pb);
+      liEvents.classList.remove("justify-content-center");
+      liEvents.classList.add("justify-content-between");
+      const supEvents = document.getElementById("sup-events");
+      if (supEvents) supEvents.style.opacity = 1;
+      const faAngleRightEvents = document.getElementById(
+        "fa-angle-right-events"
+      );
+      faAngleRightEvents.style.rotate = "0deg";
+      faAngleRightEvents.style.paddingRight = "10px";
+
+      const liPartners = document.getElementById("li-partners");
+      liPartners.classList.add("border-bottom");
+      liPartners.classList.add(pt);
+      liPartners.classList.add(pb);
+      liPartners.classList.remove("justify-content-center");
+
+      const liTeam = document.getElementById("li-team");
+      liTeam.classList.add("border-bottom");
+      liTeam.classList.add(pt);
+      liTeam.classList.add(pb);
+      liTeam.classList.remove("justify-content-center");
+
+      const liBlog = document.getElementById("li-blog");
+      liBlog.classList.add("border-bottom");
+      liBlog.classList.add(pt);
+      liBlog.classList.add(pb);
+      liBlog.classList.remove("justify-content-center");
+
+      const liAbout = document.getElementById("li-about");
+      liAbout.classList.add("border-bottom");
+      liAbout.classList.add(pt);
+      liAbout.classList.add(pb);
+      liAbout.classList.remove("justify-content-center");
+      liAbout.classList.add("justify-content-between");
+
+      const faAngleRightAbout = document.getElementById("fa-angle-right-about");
+      faAngleRightAbout.style.rotate = "0deg";
+      faAngleRightAbout.style.paddingRight = "10px";
+
+      const sups = document.getElementsByClassName("sup-elem");
+      if (sups) {
+        for (let i = 0; i < sups.length; i++) {
+          sups[i].style.opacity = 1;
+        }
+      }
+    } else {
+      document.getElementById("navbar-overlay-events").style.right = "-100%";
+      document.getElementById("navbar-overlay-events").style.opacity = 0;
+      document.getElementById("navbar-overlay-about").style.right = "-100%";
+      document.getElementById("navbar-overlay-about").style.opacity = 0;
+
+      //wait 0.3s before removing the classes
+      setTimeout(() => {
+        const navbarNav = document.getElementById("navbar-nav");
+        navbarNav.style.fontSize = "16px";
+        navbarNav.style.textTransform = "none";
+        navbarNav.style.height = "auto";
+
+        const columnContainer = document.getElementById("column-container");
+        columnContainer.classList.add("text-center");
+        columnContainer.classList.add("gap-1");
+
+        const mainContainer = document.getElementById("main-container");
+        mainContainer.classList.add("align-items-center");
+
+        const liEvents = document.getElementById("li-events");
+        liEvents.classList.remove("border-bottom");
+        liEvents.classList.remove(pt);
+        liEvents.classList.remove(pb);
+        liEvents.classList.add("justify-content-center");
+        liEvents.classList.remove("justify-content-between");
+        const supEvents = document.getElementById("sup-events");
+        if (supEvents) supEvents.style.opacity = 0;
+
+        const faAngleRightEvents = document.getElementById(
+          "fa-angle-right-events"
+        );
+        faAngleRightEvents.style.rotate = "90deg";
+        faAngleRightEvents.style.paddingRight = "0px";
+
+        const liPartners = document.getElementById("li-partners");
+        liPartners.classList.remove("border-bottom");
+        liPartners.classList.remove(pt);
+        liPartners.classList.remove(pb);
+        liPartners.classList.add("justify-content-center");
+
+        const liTeam = document.getElementById("li-team");
+        liTeam.classList.remove("border-bottom");
+        liTeam.classList.remove(pt);
+        liTeam.classList.remove(pb);
+        liTeam.classList.add("justify-content-center");
+
+        const liBlog = document.getElementById("li-blog");
+        liBlog.classList.remove("border-bottom");
+        liBlog.classList.remove(pt);
+        liBlog.classList.remove(pb);
+        liBlog.classList.add("justify-content-center");
+
+        const liAbout = document.getElementById("li-about");
+        liAbout.classList.remove("border-bottom");
+        liAbout.classList.remove(pt);
+        liAbout.classList.remove(pb);
+        liAbout.classList.add("justify-content-center");
+        liAbout.classList.remove("justify-content-between");
+
+        const faAngleRightAbout = document.getElementById(
+          "fa-angle-right-about"
+        );
+        faAngleRightAbout.style.rotate = "90deg";
+        faAngleRightAbout.style.paddingRight = "0px";
+      }, 300);
+    }
+  }, [expanded]);
+
+  const onEventsClick = () => {
+    document.getElementById("navbar-overlay-events").style.right = "0";
+    document.getElementById("navbar-overlay-events").style.opacity = 1;
+  };
+
+  const onBackEventsClick = () => {
+    document.getElementById("navbar-overlay-events").style.right = "-100vw";
+  };
+
+  const onAboutClick = () => {
+    document.getElementById("navbar-overlay-about").style.right = "0";
+    document.getElementById("navbar-overlay-about").style.opacity = 1;
+  };
+
+  const onBackAboutClick = () => {
+    document.getElementById("navbar-overlay-about").style.right = "-100vw";
+  };
+
+  const supStyle = {
+    marginLeft: "2px",
+    color: "lightgrey",
+    fontSize: "18px",
+    opacity: 0,
+  };
+
   return (
     <>
+      <Container
+        id="navbar-overlay-events"
+        style={{
+          width: "100vw",
+          minWidth: "100vw",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          backgroundColor: "black",
+          position: "fixed",
+          top: global.UTILS.NAV_HEIGHT,
+          right: "-100%",
+          zIndex: 100,
+          fontFamily: "Fira Sans Extra Condensed",
+          fontSize: "medium",
+          transition: "all 0.4s cubic-bezier(.27,1.08,.24,1)",
+        }}
+      >
+        <Row className="ps-4">
+          <Col className="d-flex row">
+            <ul className="navbar-nav" style={{ fontSize: "32px" }}>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-1 pb-3 border-bottom">
+                <a
+                  className="navbar-submenu-edition-item font-600"
+                  role="button"
+                  aria-expanded="false"
+                  style={{ fontSize: "18px", color: "grey" }}
+                  onClick={() => onBackEventsClick()}
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    style={{ marginRight: "5px" }}
+                  />{" "}
+                  Back
+                </a>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
+                  to="/eventi/countdown2024"
+                  role="button"
+                  aria-expanded="false"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("countdown2024");
+                  }}
+                >
+                  COUNTDOWN{" "}
+                  <sup className="sup-elem" style={supStyle}>
+                    2024
+                  </sup>
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
+                  ref={back_to_zero}
+                  to="/eventi/edizione2023"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("back_to_zero");
+                  }}
+                >
+                  BACK TO ZERO{" "}
+                  <sup className="sup-elem" style={supStyle}>
+                    2023
+                  </sup>
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  ref={awards23}
+                  className="navbar-submenu-edition-item font-600"
+                  to="/eventi/awards2023"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("awards23");
+                  }}
+                >
+                  AWARDS{" "}
+                  <sup className="sup-elem" style={supStyle}>
+                    2023
+                  </sup>
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom">
+                <Link
+                  ref={act}
+                  className="navbar-submenu-edition-item font-600"
+                  to="/eventi/edizione2022"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("act");
+                  }}
+                >
+                  ACT: Lead The Change{" "}
+                  <sup className="sup-elem" style={supStyle}>
+                    2022
+                  </sup>
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom">
+                <Link
+                  ref={awards22}
+                  className="navbar-submenu-edition-item font-600"
+                  to="/eventi/awards2022"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("awards22");
+                  }}
+                  id="awards2022"
+                >
+                  Awards{" "}
+                  <sup className="sup-elem" style={supStyle}>
+                    2022
+                  </sup>
+                </Link>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+      <Container
+        id="navbar-overlay-about"
+        style={{
+          width: "100vw",
+          minWidth: "100vw",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          backgroundColor: "black",
+          position: "fixed",
+          top: global.UTILS.NAV_HEIGHT,
+          right: "-100%",
+          zIndex: 100,
+          fontFamily: "Fira Sans Extra Condensed",
+          fontSize: "medium",
+          transition: "all 0.4s cubic-bezier(.27,1.08,.24,1)",
+        }}
+      >
+        <Row className="ps-4">
+          <Col className="d-flex row">
+            <ul className="navbar-nav" style={{ fontSize: "32px" }}>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-1 pb-3 border-bottom">
+                <a
+                  className="navbar-submenu-edition-item font-600"
+                  role="button"
+                  aria-expanded="false"
+                  style={{ fontSize: "18px", color: "grey" }}
+                  onClick={() => onBackAboutClick()}
+                >
+                  <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    style={{ marginRight: "5px" }}
+                  />{" "}
+                  Back
+                </a>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
+                  to="/mission&vision"
+                  role="button"
+                  aria-expanded="false"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("mission_and_vision");
+                  }}
+                >
+                  MISSION AND VISION
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
+                  ref={back_to_zero}
+                  to="/location"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("location");
+                  }}
+                >
+                  LOCATION
+                </Link>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+      {/**
+       * Navbar
+       */}
       <Navbar
         ref={navRef}
         className="navbar navbar-white bg-black static-top"
@@ -121,7 +484,8 @@ export default function NavbarComponent(props) {
         style={{
           fontFamily: "Fira Sans Extra Condensed",
           fontSize: "medium",
-          position: "absolute",
+          position:
+            windowSize > global.UTILS.MOBILE_WIDTH ? "absolute" : "fixed",
           zIndex: 99,
           width: "100vw",
           top: 0,
@@ -136,37 +500,65 @@ export default function NavbarComponent(props) {
               selectOption(undefined);
             }}
           >
-            <LazyLoadImage src={Image} alt="LogoTedx" width="" height="45" />
+            <LazyLoadImage
+              src={Image}
+              alt="LogoTedx"
+              width=""
+              height="45"
+              onClick={() => setExpanded(false)}
+            />
           </Link>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={() => setExpanded(expanded ? false : "expanded")}
+            style={{ border: 0, fontSize: "24px" }}
           />
           <Navbar.Collapse>
-            <Row className="w-100 ps-5">
+            <Row className={expanded ? "" : "w-100"}>
               <ul
-                className={`navbar-nav ${
-                  windowSize < global.UTILS.TABLET_WIDTH && "pt-2"
+                className={`navbar-nav d-flex p-0 m-0 ${
+                  windowSize < global.UTILS.TABLET_WIDTH && "pt-2 ps-4 pe-4"
                 }`}
-                style={{ gap: "10px" }}
+                id="navbar-nav"
               >
-                <Col className="col-lg-10 col-md-12 col-sm-12 d-flex align-items-center">
+                <Col
+                  id="main-container"
+                  className="col-lg-10 col-md-12 col-sm-12 d-flex align-items-center"
+                >
                   <Container>
                     <Row>
-                      <Col className="text-center d-flex justify-content-center row gap-1">
-                        <li className="nav-item dropdown col-xl-1 col-lg-2 col-md-4 col-12 p-0">
+                      <Col
+                        id="column-container"
+                        className="d-flex justify-content-center row m-0 p-0"
+                      >
+                        <li
+                          className="nav-item dropdown col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
+                          data-bs-toggle={expanded ? "" : "dropdown"}
+                          id="li-events"
+                          aria-controls="events-dropdown" // add unique aria-controls
+                          role="button"
+                          onClick={() => (expanded ? onEventsClick() : {})}
+                        >
                           <a
+                            id="a-events"
                             className="navbar-submenu-edition-item font-600"
-                            data-bs-toggle="dropdown"
-                            href="/location"
                             role="button"
-                            aria-expanded="false"
-                            style={{ borderRadius: "5px" }}
                           >
-                            {t("navbar.events")} &#709;
+                            {t("navbar.events")}
+                            <sup id="sup-events" style={supStyle}>
+                              6
+                            </sup>
                           </a>
+                          <FontAwesomeIcon
+                            className="fa-angle-right"
+                            id="fa-angle-right-events"
+                            role="button"
+                            icon={faAngleRight}
+                            style={{ rotate: "90deg" }}
+                          />
 
                           <ul
+                            id="events-dropdown"
                             className="dropdown-menu dropdown-menu-new bg-black p-1"
                             style={{
                               backgroundColor: "black",
@@ -251,7 +643,10 @@ export default function NavbarComponent(props) {
                           </ul>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col-12 p-0">
+                        <li
+                          className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
+                          id="li-partners"
+                        >
                           <Link
                             ref={partners}
                             className="navbar-submenu-edition-item font-600"
@@ -266,7 +661,10 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col-12 p-0">
+                        <li
+                          className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
+                          id="li-team"
+                        >
                           <Link
                             ref={team}
                             className="navbar-submenu-edition-item font-600"
@@ -282,7 +680,10 @@ export default function NavbarComponent(props) {
                           </Link>
                         </li>
 
-                        <li className="nav-item d-flex justify-content-center col-xl-1 col-lg-2 col-12 p-0">
+                        <li
+                          className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
+                          id="li-blog"
+                        >
                           <Link
                             ref={blog}
                             className="navbar-submenu-edition-item font-600"
@@ -297,30 +698,35 @@ export default function NavbarComponent(props) {
                             {t("navbar.blog")}
                           </Link>
                         </li>
-                        {/*
-                                              <li class="nav-item dropdown col-xl-1 col-lg-2 col-sm-2 col-12 p-0">
-                                  <a class="navbar-submenu-edition-item dropdown-toggle font-600" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  {t("about_us")}
-                                  </a>
-                                  <ul class="dropdown-menu dropdown-menu-dark bg-black text-center">
-                                    <li><a class="dropdown-item" href="/mission&vision">Mission and vision</a></li>
-                                    <li><a class="dropdown-item" href="#">Location</a></li>
-                                  </ul>
-                                </li>
-                                */}
-
-                        <li className="nav-item dropdown col-xl-1 col-lg-2 col-sm-2 col-md-2 col-12 p-0">
+                        <li
+                          className="nav-item dropdown col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
+                          id="li-about"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          onClick={() => (expanded ? onAboutClick() : {})}
+                        >
                           <a
+                            id="a-about"
                             className="navbar-submenu-edition-item font-600"
-                            data-bs-toggle="dropdown"
+                            dataToggle="dropdown"
+                            type="button"
                             role="button"
-                            style={{ borderRadius: "5px" }}
+                            href="#"
                           >
-                            {t("navbar.about_us")} &#709;
+                            {t("navbar.about_us")}
                           </a>
+                          <FontAwesomeIcon
+                            className="fa-angle-right"
+                            id="fa-angle-right-about"
+                            role="button"
+                            icon={faAngleRight}
+                            style={{ rotate: "90deg", marginLeft: "10px" }}
+                          />
 
                           <ul
+                            id="about-dropdown"
                             className="dropdown-menu dropdown-menu-new bg-black p-1"
+                            aria-labelledby="dropdownAbout"
                             style={{
                               borderRadius: "5px",
                             }}
@@ -359,7 +765,6 @@ export default function NavbarComponent(props) {
                     </Row>
                   </Container>
                 </Col>
-
                 <Col className="col-lg-2 col-md-12 col-sm-12 col-12">
                   <Row className="mt-2 mb-2 d-flex justify-content-center">
                     <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">

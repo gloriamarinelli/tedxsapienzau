@@ -37,6 +37,7 @@ import Awards2022 from "./components/pages/Awards2022";
 import Countdown2024 from "./components/pages/Countdown2024";
 
 import HomeAwards24 from "./components/pages/HomeAwards24";
+import SapienzaU from "./components/pages/SapienzaU";
 
 const router = createBrowserRouter([
   {
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
       {
         path: "/eventi/countdown2024",
         element: <Countdown2024 />,
+      },
+      {
+        path: "/sapienzau",
+        element: <SapienzaU />,
       },
 
       // {
