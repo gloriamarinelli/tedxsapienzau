@@ -147,7 +147,7 @@ export default function Team2022() {
       return (
         <>
           <div
-            id="board-div-mobile"
+            id="board-div"
             style={{
               display: selectedChip
                 ? selectedChip !== "board"
@@ -159,8 +159,7 @@ export default function Team2022() {
             <h1 id="board" className="boardNameStyle">
               Board
             </h1>
-
-            {res}
+            <div style={{ display: "flex", flexWrap: "wrap" }}>{res}</div>
           </div>
         </>
       );
