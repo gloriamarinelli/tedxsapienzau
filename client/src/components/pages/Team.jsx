@@ -14,10 +14,12 @@ export default function Team2022() {
   const [windowSize] = useOutletContext();
   const [board, setBoard] = useState([]);
   const [volunteers, setVolunteers] = useState([]);
+  const [selectedChip, setSelectedChip] = useState(null);
 
   const teams = {
     24: {
-      acronyms: ["it", "pem", "dex", "sec", "ers", "hra", "cem", "la"],
+      acronyms: ["board", "it", "pem", "dex", "sec", "ers", "hra", "cem", "la"],
+      board: "Board",
       it: "Team IT & Website",
       pem: "Team Planning & Event Management",
       dex: "Team Design",
@@ -95,33 +97,38 @@ export default function Team2022() {
       );
     } else {
       let res = [];
-  
+
       /* priority order */
-      const priorityOrder = ["Ilaria Cataldi", "Matteo Orsini", "Giulia Riccardi", "Gloria Marinelli"];
-  
+      const priorityOrder = [
+        "Ilaria Cataldi",
+        "Matteo Orsini",
+        "Giulia Riccardi",
+        "Gloria Marinelli",
+      ];
+
       /* custom sorting function (priority order) */
       const customSort = (a, b) => {
         const indexA = priorityOrder.indexOf(a.nome);
         const indexB = priorityOrder.indexOf(b.nome);
-  
+
         /* both names are in the priorityOrder list, the first found has more priority */
         if (indexA !== -1 && indexB !== -1) {
           return indexA - indexB;
         }
-  
+
         /* just one of the names is in the priorityOrder list */
         if (indexA !== -1) return -1; // "a" has the priority (if it is in the list)
         if (indexB !== -1) return 1; // "b" has the priority (if it is in the list)
-  
+
         /* none of the names is in the priorityOrder list, and they are sorted alphabetically. */
         return a.nome.localeCompare(b.nome);
       };
-  
+
       /* board members custom sorting */
       const sortedBoard = board
         .filter((board) => board.gruppo === "board") // "board" elements filtering
         .sort(customSort);
-  
+
       sortedBoard.forEach((board) => {
         const { id, nome, gruppo, ruolo, fotoNome, link } = board;
         res.push(
@@ -136,16 +143,30 @@ export default function Team2022() {
           />
         );
       });
-  
+
       return (
         <>
-          <h1 className="boardNameStyle">Board</h1>
-          {res}
+          <div
+            id="board-div-mobile"
+            style={{
+              display: selectedChip
+                ? selectedChip !== "board"
+                  ? "none"
+                  : ""
+                : "",
+            }}
+          >
+            <h1 id="board" className="boardNameStyle">
+              Board
+            </h1>
+
+            {res}
+          </div>
         </>
       );
     }
   };
-  
+
   // #endregion
 
   // #region --------------------------------- Volunteers -------------------------------------
@@ -179,8 +200,16 @@ export default function Team2022() {
     });
 
     const sections = Object.entries(photos).map(([key, value]) => (
-      <div>
-        <h1 className="teamNameStyle" id={key}>
+      <div
+        style={{
+          display: selectedChip ? (selectedChip == key ? "" : "none") : "",
+        }}
+      >
+        <h1
+          className="teamNameStyle"
+          id={key}
+          style={{ display: key !== "board" ? "" : "none" }}
+        >
           {teams[annata][key]}
         </h1>
         <div className="row">{value}</div>
@@ -218,7 +247,11 @@ export default function Team2022() {
             </>
           ) : (
             <>
-              <ExecutiveTeamCard year={2024} device={"desktop"} />
+              <ExecutiveTeamCard
+                year={2024}
+                device={"desktop"}
+                selectedChip={selectedChip}
+              />
               <div className="container-xl">
                 <div>{handleVolunteersCardSection(2024)}</div>
               </div>
@@ -253,18 +286,47 @@ export default function Team2022() {
   // #region --------------------------------- Chips ------------------------------------------
 
   function handleTeamsChips() {
-    var gruppi = teams[activeYear.toString()] || teams["24"];
+    const team_strings = teams[activeYear.toString()] || teams["24"];
 
-    const chips = Object.entries(gruppi).map(([key, teamName]) => (
+    const handleChipClick = (teamId) => {
+      setSelectedChip(teamId);
+    };
+
+    const handleDeselect = () => {
+      setSelectedChip(null);
+    };
+
+    const chips = Object.entries(team_strings).map(([key, teamName]) => (
       <BasicChips
-        key={key} // Using `teamId` as the key for better stability in re-renders
+        key={key}
         teamName={teamName}
         teamId={key}
+        onClick={() => handleChipClick(key)} //
       />
     ));
 
-    delete chips[0]; // Remove the first chip which represents the acronyms
+    delete chips[0]; // remove the first chip which contains the acronyms
 
+    if (selectedChip) {
+      // if a chip is selected, it will be displayed alongside the 'X' chip
+      return (
+        <>
+          <BasicChips
+            key="deselect"
+            teamName="X"
+            onClick={handleDeselect} // selected chip reset
+          />
+
+          <BasicChips
+            key={selectedChip}
+            teamName={team_strings[selectedChip]} // display selected team's name
+            teamId={selectedChip}
+          />
+        </>
+      );
+    }
+
+    // if no chip is selected, all chips will be displayed
     return chips;
   }
 

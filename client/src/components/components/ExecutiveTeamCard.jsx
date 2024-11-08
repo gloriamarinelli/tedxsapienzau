@@ -181,6 +181,7 @@ export default function ExecutiveTeamCard({
   link,
   year,
   device,
+  selectedChip,
 }) {
   const [currentInfo, setCurrentInfo] = useState(null); // currently clicked chip information
   const [timerId, setTimerId] = useState(null); // timer ID
@@ -273,6 +274,7 @@ export default function ExecutiveTeamCard({
       return (
         <>
           <div
+            id="board-ext-div-desktop"
             style={{
               display: "flex",
               alignItems: "center",
@@ -282,93 +284,111 @@ export default function ExecutiveTeamCard({
               backgroundColor: "black",
             }}
           >
-            <h1 style={BoardNameStyle}>Board</h1>
-            <div className="mt-3 md-3">
-              <Stack
-                direction="row"
-                spacing={1}
-                alignItems="center"
-                justifyContent="center"
-                useFlexGap
-                flexWrap="wrap"
-              >
-                {BoardInfos.map((info, index) => (
-                  <ThemeProvider theme={theme} key={index}>
-                    <Chip
-                      sx={{
-                        "&:hover": {
-                          backgroundColor: "transparent",
-                        },
-                      }}
-                      label={info.name}
-                      color={info.team}
-                      onClick={() => handleClick(info)}
-                    />
-                  </ThemeProvider>
-                ))}
-              </Stack>
-            </div>
+            <div
+              id="board-int-div-desktop"
+              style={{
+                display: selectedChip
+                  ? selectedChip !== "board"
+                    ? "none"
+                    : "flex"
+                  : "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                position: "relative",
+                backgroundColor: "black",
+              }}
+            >
+              <h1 id="board" style={BoardNameStyle}>
+                Board
+              </h1>
+              <div className="mt-3 md-3">
+                <Stack
+                  direction="row"
+                  spacing={1}
+                  alignItems="center"
+                  justifyContent="center"
+                  useFlexGap
+                  flexWrap="wrap"
+                >
+                  {BoardInfos.map((info, index) => (
+                    <ThemeProvider theme={theme} key={index}>
+                      <Chip
+                        sx={{
+                          "&:hover": {
+                            backgroundColor: "transparent",
+                          },
+                        }}
+                        label={info.name}
+                        color={info.team}
+                        onClick={() => handleClick(info)}
+                      />
+                    </ThemeProvider>
+                  ))}
+                </Stack>
+              </div>
 
-            {!currentInfo ? (
-              <img
-                src={"/images/team24/board.webp"}
-                alt="Board"
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
-              />
-            ) : (
-              <div
-                className={imageClass}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginTop: "50px",
-                  height: "auto",
-                }}
-              >
+              {!currentInfo ? (
                 <img
-                  src={`/images/team24/${currentInfo?.path}.webp`}
-                  alt={currentInfo?.path}
+                  src={"/images/team24/board.webp"}
+                  alt="Board"
                   style={{
-                    height: "500px",
+                    maxWidth: "70%",
+                    height: "auto",
                   }}
                 />
-                <div style={{ marginLeft: "20px" }}>
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="nav-link"
+              ) : (
+                <div
+                  className={imageClass}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: "50px",
+                    height: "auto",
+                  }}
+                >
+                  <img
+                    src={`/images/team24/${currentInfo?.path}.webp`}
+                    alt={currentInfo?.path}
                     style={{
-                      textDecoration: "none",
-                      color: "white",
-                      fontSize: "35px",
-                      fontWeight: "bold",
+                      height: "500px",
                     }}
-                  >
-                    {currentInfo?.name}
-                    {link && (
-                      <FontAwesomeIcon
-                        icon={faLinkedin}
-                        size="m"
-                        style={{ marginLeft: "20px" }}
-                      />
-                    )}
-                  </a>
-                  <p
-                    style={{
-                      color: theme.palette[currentInfo?.team]?.main,
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {currentInfo?.role}
-                  </p>
+                  />
+                  <div style={{ marginLeft: "20px" }}>
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="nav-link"
+                      style={{
+                        textDecoration: "none",
+                        color: "white",
+                        fontSize: "35px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {currentInfo?.name}
+                      {link && (
+                        <FontAwesomeIcon
+                          icon={faLinkedin}
+                          size="m"
+                          style={{ marginLeft: "20px" }}
+                        />
+                      )}
+                    </a>
+                    <p
+                      style={{
+                        color: theme.palette[currentInfo?.team]?.main,
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {currentInfo?.role}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </>
       );
