@@ -10,11 +10,8 @@ import { AuthContext } from "../context/authContext";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import {
-  faArrowLeft,
-  faAngleRight,
-  faA,
-} from "@fortawesome/free-solid-svg-icons";
+
+import { faArrowLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../../index.css";
@@ -123,8 +120,6 @@ export default function NavbarComponent(props) {
     }
   });
 
-  // This function adds and remove classes to the navbar elements when the navbar is expanded
-  // It waits for 0.3s to remove the classes after the navbar is collapsed to avoid to be able to
   // see the style changes while the navbar is collapsing
   useEffect(() => {
     const pt = "pt-3";
@@ -156,6 +151,10 @@ export default function NavbarComponent(props) {
       );
       faAngleRightEvents.style.rotate = "0deg";
       faAngleRightEvents.style.paddingRight = "10px";
+      const eventsButton = document.getElementById("events-button");
+      eventsButton.style.display = "flex";
+      eventsButton.style.justifyContent = "space-between";
+      eventsButton.style.width = "100%";
 
       const liPartners = document.getElementById("li-partners");
       liPartners.classList.add("border-bottom");
@@ -185,6 +184,11 @@ export default function NavbarComponent(props) {
       const faAngleRightAbout = document.getElementById("fa-angle-right-about");
       faAngleRightAbout.style.rotate = "0deg";
       faAngleRightAbout.style.paddingRight = "10px";
+
+      const aboutButton = document.getElementById("about-button");
+      aboutButton.style.display = "flex";
+      aboutButton.style.justifyContent = "space-between";
+      aboutButton.style.width = "100%";
 
       const sups = document.getElementsByClassName("sup-elem");
       if (sups) {
@@ -226,6 +230,10 @@ export default function NavbarComponent(props) {
         );
         faAngleRightEvents.style.rotate = "90deg";
         faAngleRightEvents.style.paddingRight = "0px";
+        const eventsButton = document.getElementById("events-button");
+        eventsButton.style.display = "block";
+        eventsButton.style.justifyContent = "center";
+        eventsButton.style.width = "auto";
 
         const liPartners = document.getElementById("li-partners");
         liPartners.classList.remove("border-bottom");
@@ -257,6 +265,11 @@ export default function NavbarComponent(props) {
         );
         faAngleRightAbout.style.rotate = "90deg";
         faAngleRightAbout.style.paddingRight = "0px";
+
+        const aboutButton = document.getElementById("about-button");
+        aboutButton.style.display = "block";
+        aboutButton.style.justifyContent = "center";
+        aboutButton.style.width = "auto";
       }, 300);
     }
   }, [expanded]);
@@ -474,7 +487,13 @@ export default function NavbarComponent(props) {
         </Row>
       </Container>
       {/**
+       *
+       *
+       *
        * Navbar
+       *
+       *
+       *
        */}
       <Navbar
         ref={navRef}
@@ -504,7 +523,7 @@ export default function NavbarComponent(props) {
               src={Image}
               alt="LogoTedx"
               width=""
-              height="45"
+              height="40"
               onClick={() => setExpanded(false)}
             />
           </Link>
@@ -529,36 +548,32 @@ export default function NavbarComponent(props) {
                     <Row>
                       <Col
                         id="column-container"
-                        className="d-flex justify-content-center row m-0 p-0"
+                        className="d-flex justify-content-center row m-0 p-2"
                       >
                         <li
                           className="nav-item dropdown col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
-                          data-bs-toggle={expanded ? "" : "dropdown"}
                           id="li-events"
-                          aria-controls="events-dropdown" // add unique aria-controls
-                          role="button"
-                          onClick={() => (expanded ? onEventsClick() : {})}
                         >
-                          <a
-                            id="a-events"
+                          <div
                             className="navbar-submenu-edition-item font-600"
+                            data-bs-toggle={expanded ? "" : "dropdown"}
                             role="button"
+                            aria-expanded="false"
+                            onClick={() => (expanded ? onEventsClick() : {})}
+                            id="events-button"
                           >
-                            {t("navbar.events")}
-                            <sup id="sup-events" style={supStyle}>
-                              6
-                            </sup>
-                          </a>
-                          <FontAwesomeIcon
-                            className="fa-angle-right"
-                            id="fa-angle-right-events"
-                            role="button"
-                            icon={faAngleRight}
-                            style={{ rotate: "90deg" }}
-                          />
+                            <a style={{ borderRadius: "5px" }}>
+                              {t("navbar.events")}
+                            </a>
+                            <FontAwesomeIcon
+                              className="fa-angle-right"
+                              id="fa-angle-right-events"
+                              icon={faAngleRight}
+                              style={{ rotate: "90deg", marginLeft: "8px" }}
+                            />
+                          </div>
 
                           <ul
-                            id="events-dropdown"
                             className="dropdown-menu dropdown-menu-new bg-black p-1"
                             style={{
                               backgroundColor: "black",
@@ -698,35 +713,31 @@ export default function NavbarComponent(props) {
                             {t("navbar.blog")}
                           </Link>
                         </li>
+
                         <li
                           className="nav-item dropdown col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
                           id="li-about"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          onClick={() => (expanded ? onAboutClick() : {})}
                         >
-                          <a
-                            id="a-about"
+                          <div
                             className="navbar-submenu-edition-item font-600"
-                            dataToggle="dropdown"
-                            type="button"
+                            data-bs-toggle={expanded ? "" : "dropdown"}
                             role="button"
-                            href="#"
+                            onClick={() => (expanded ? onAboutClick() : {})}
+                            id="about-button"
                           >
-                            {t("navbar.about_us")}
-                          </a>
-                          <FontAwesomeIcon
-                            className="fa-angle-right"
-                            id="fa-angle-right-about"
-                            role="button"
-                            icon={faAngleRight}
-                            style={{ rotate: "90deg", marginLeft: "10px" }}
-                          />
+                            <a style={{ borderRadius: "5px" }}>
+                              {t("navbar.about_us")}
+                            </a>
+                            <FontAwesomeIcon
+                              className="fa-angle-right"
+                              id="fa-angle-right-about"
+                              icon={faAngleRight}
+                              style={{ rotate: "90deg", marginLeft: "8px" }}
+                            />
+                          </div>
 
                           <ul
-                            id="about-dropdown"
                             className="dropdown-menu dropdown-menu-new bg-black p-1"
-                            aria-labelledby="dropdownAbout"
                             style={{
                               borderRadius: "5px",
                             }}
@@ -765,6 +776,7 @@ export default function NavbarComponent(props) {
                     </Row>
                   </Container>
                 </Col>
+
                 <Col className="col-lg-2 col-md-12 col-sm-12 col-12">
                   <Row className="mt-2 mb-2 d-flex justify-content-center">
                     <Col className="col-lg-3 col-md-3 col-sm-6 col-6 text-center d-flex justify-content-start align-items-center">
