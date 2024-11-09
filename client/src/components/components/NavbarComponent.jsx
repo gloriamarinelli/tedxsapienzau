@@ -128,7 +128,7 @@ export default function NavbarComponent(props) {
       const navbarNav = document.getElementById("navbar-nav");
       navbarNav.style.fontSize = "32px";
       navbarNav.style.textTransform = "uppercase";
-      navbarNav.style.height = `calc(100vh - ${global.UTILS.NAV_HEIGHT})`;
+      navbarNav.style.height = `calc(100vh - 80px)`;
 
       const columnContainer = document.getElementById("column-container");
       columnContainer.classList.remove("text-center");
@@ -497,7 +497,7 @@ export default function NavbarComponent(props) {
        */}
       <Navbar
         ref={navRef}
-        className="navbar navbar-white bg-black static-top"
+        className="navbar navbar-white static-top bg-black"
         expand={"lg"}
         expanded={expanded}
         style={{
@@ -511,6 +511,7 @@ export default function NavbarComponent(props) {
           top: 0,
           paddingTop: "18px",
           paddingBottom: "18px",
+          backgroundColor: "black",
         }}
       >
         <Container fluid>
@@ -536,7 +537,7 @@ export default function NavbarComponent(props) {
           <Navbar.Collapse>
             <Row className={expanded ? "" : "w-100"}>
               <ul
-                className={`navbar-nav d-flex p-0 m-0 ${
+                className={`navbar-nav bg-black d-flex p-0 m-0 ${
                   windowSize < global.UTILS.TABLET_WIDTH && "pt-2 ps-4 pe-4"
                 }`}
                 id="navbar-nav"

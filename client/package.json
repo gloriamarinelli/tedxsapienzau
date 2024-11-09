@@ -61,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "ajv": "^7.2.4",
     "gh-pages": "^4.0.0"
   },
   "proxy": "http://localhost:8800/api/"
