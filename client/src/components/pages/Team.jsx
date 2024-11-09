@@ -162,7 +162,7 @@ export default function Team2022() {
             <h1 id="board" className="boardNameStyle">
               Board
             </h1>
-            <div style={{ display: "flex", flexWrap: "wrap" }}>{res}</div>
+            {res}
           </div>
         </>
       );
