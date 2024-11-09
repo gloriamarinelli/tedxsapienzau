@@ -30,7 +30,8 @@ export default function Team2022() {
       la: "Team Legal & Administrative",
     },
     23: {
-      acronyms: ["dw", "cem", "ers", "la", "pem", "sec"],
+      acronyms: ["board", "dw", "cem", "ers", "la", "pem", "sec"],
+      board: "Board",
       dw: "Team Design & Website",
       cem: "Team Communication, Editorial, Marketing & Media",
       ers: "Team External Relation & Sponsor",
@@ -40,6 +41,7 @@ export default function Team2022() {
     },
     22: {
       acronyms: [
+        "board",
         "curator",
         "communication",
         "spe",
@@ -48,6 +50,7 @@ export default function Team2022() {
         "radio",
         "planning",
       ],
+      board: "Board",
       curator: "Team Curator",
       communication: "Team Communication",
       spe: "Team Speaker Curation",
