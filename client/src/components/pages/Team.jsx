@@ -216,7 +216,7 @@ export default function Team2022() {
       return (
         <>
           <div
-            id="board-div"
+            id="board-ext-div"
             style={{
               display: selectedChip
                 ? selectedChip !== "board"
@@ -228,7 +228,15 @@ export default function Team2022() {
             <h1 id="board" className="boardNameStyle">
               Board
             </h1>
-            {res}
+            <div
+              id="board-int-div"
+              style={{
+                display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "",
+                flexWrap: "wrap",
+              }}
+            >
+              {res}
+            </div>
           </div>
         </>
       );
