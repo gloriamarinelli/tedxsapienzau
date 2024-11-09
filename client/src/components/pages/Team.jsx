@@ -7,6 +7,7 @@ import VolunteerCard from "../components/VolunteerCard.jsx";
 import Stack from "@mui/material/Stack";
 import BasicChips from "../components/BasicChips.jsx";
 import "../../resources/styles/team.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export default function Team2022() {
   // #region --------------------------------- Constants --------------------------------------
@@ -60,6 +61,71 @@ export default function Team2022() {
       planning: "Team Planning",
     },
   };
+
+  const theme = createTheme({
+    palette: {
+      it: {
+        main: "rgba(240, 126, 42, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      ted: {
+        main: "rgba(255,255,255, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      la: {
+        main: "rgba(33, 188, 239, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      cem: {
+        main: "rgba(233, 73, 58, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      hra: {
+        main: "rgba(40, 132, 199, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      ers: {
+        main: "rgba(240, 137, 183, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      sec: {
+        main: "rgba(149, 196, 89, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      dex: {
+        main: "rgba(250, 183, 50, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      pem: {
+        main: "rgba(187, 92, 158, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+      board: {
+        main: "rgba(235, 0, 40, 0.5)",
+        light: "#EC6162",
+        dark: "#FFFFFF",
+        contrastText: "#FFFFFF",
+      },
+    },
+  });
 
   // #endregion
 
@@ -298,14 +364,16 @@ export default function Team2022() {
       setSelectedChip(null);
     };
 
-    const chips = Object.entries(team_strings).map(([key, teamName]) => (
-      <BasicChips
-        key={key}
-        teamName={teamName}
-        teamId={key}
-        onClick={() => handleChipClick(key)} //
-      />
-    ));
+    const chips = Object.entries(team_strings).map(([key, teamName]) => {
+      return (
+        <BasicChips
+          key={key}
+          teamName={teamName}
+          teamId={key}
+          onClick={() => handleChipClick(key)}
+        />
+      );
+    });
 
     delete chips[0]; // remove the first chip which contains the acronyms
 
@@ -323,6 +391,9 @@ export default function Team2022() {
             key={selectedChip}
             teamName={team_strings[selectedChip]} // display selected team's name
             teamId={selectedChip}
+            backgroundColor={
+              activeYear === 24 ? theme.palette[selectedChip]?.main || "" : ""
+            }
           />
         </>
       );
@@ -339,7 +410,12 @@ export default function Team2022() {
           key={year}
           year={year}
           active={year === activeYear}
-          onClick={() => year !== activeYear && setActiveYear(year)}
+          onClick={() => {
+            if (year !== activeYear) {
+              setActiveYear(year);
+              setSelectedChip(null);
+            }
+          }}
         />
       );
     });
