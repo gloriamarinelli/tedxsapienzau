@@ -489,6 +489,22 @@ nav.navbar {
     background: lightgray;
   }
 }
+
+#li-events {
+  color: white;
+}
+
+#li-events:hover {
+  color: #eb0028;
+}
+
+#li-about {
+  color: white;
+}
+
+#li-about:hover {
+  color: #eb0028;
+}
 /*======================*/
 
 /* Team Elements */
