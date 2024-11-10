@@ -215,27 +215,29 @@ export default function Team2022() {
 
       return (
         <>
-          <div
-            id="board-ext-div"
-            style={{
-              display: selectedChip
-                ? selectedChip !== "board"
-                  ? "none"
-                  : ""
-                : "",
-            }}
-          >
-            <h1 id="board" className="boardNameStyle">
-              Board
-            </h1>
+          <div id="board-ext-div">
             <div
-              id="board-int-div"
+              id="board-box-div"
               style={{
-                display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "",
-                flexWrap: "wrap",
+                display: selectedChip
+                  ? selectedChip !== "board"
+                    ? "none"
+                    : ""
+                  : "",
               }}
             >
-              {res}
+              <h1 id="board" className="boardNameStyle">
+                Board
+              </h1>
+              <div
+                id="board-int-div"
+                style={{
+                  display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "",
+                  flexWrap: "wrap",
+                }}
+              >
+                {res}
+              </div>
             </div>
           </div>
         </>
