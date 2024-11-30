@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomeAwards24 />,
+        element: <Home />,
       },
       {
         path: "/tedxsapienzau",
