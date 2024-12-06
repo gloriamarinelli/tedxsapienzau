@@ -31,6 +31,7 @@ import Write from "./components/pages/Write";
 import Location from "./components/pages/Location";
 import MissionandVision from "./components/pages/MissionandVision";
 
+import Awards2024 from "./components/pages/Awards2024";
 import Awards2023 from "./components/pages/Awards2023";
 import Awards2022 from "./components/pages/Awards2022";
 
@@ -119,6 +120,11 @@ const router = createBrowserRouter([
         path: "/eventi/countdown2024",
         element: <Countdown2024 />,
       },
+      {
+        path: "/eventi/awards2024",
+        element: <Awards2024/>,
+      },
+
       {
         path: "/sapienzau",
         element: <SapienzaU />,

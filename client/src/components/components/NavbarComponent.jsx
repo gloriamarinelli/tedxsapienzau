@@ -38,6 +38,7 @@ export default function NavbarComponent(props) {
   const act = useRef();
   const awards22 = useRef();
   const countdown2024 = useRef();
+  const awards24 = useRef();
 
   const options = {
     team: team,
@@ -50,6 +51,7 @@ export default function NavbarComponent(props) {
     act: act,
     awards22: awards22,
     countdown2024: countdown2024,
+    awards24: awards24,
   };
 
   function selectOption(option) {
@@ -338,6 +340,23 @@ export default function NavbarComponent(props) {
               <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
                 <Link
                   className="navbar-submenu-edition-item font-600"
+                  to="/eventi/awards24"
+                  role="button"
+                  aria-expanded="false"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("awards24");
+                  }}
+                >
+                  AWARDS{" "}
+                  <sup className="sup-elem" style={supStyle}>
+                    2024
+                  </sup>
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
                   to="/eventi/countdown2024"
                   role="button"
                   aria-expanded="false"
@@ -585,6 +604,19 @@ export default function NavbarComponent(props) {
                             <span className="ms-3 mb-3 navbar-submenu-edition-year">
                               2024
                             </span>
+                            <li>
+                              <Link
+                                ref={awards24}
+                                className="navbar-submenu-edition-item ms-3"
+                                to="/eventi/awards2024"
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("awards24");
+                                }}
+                              >
+                                Awards
+                              </Link>
+                            </li>
                             <li>
                               <Link
                                 className="navbar-submenu-edition-item ms-3 "

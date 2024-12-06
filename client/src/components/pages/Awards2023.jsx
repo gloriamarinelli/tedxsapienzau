@@ -103,7 +103,7 @@ export default function Awards() {
           textAlign: "center",
         }}
       >
-        Artist
+        Artists
       </h3>
       <div
         class="container mt-5 mb-5"
@@ -130,7 +130,7 @@ export default function Awards() {
           textAlign: "center",
         }}
       >
-        Speaker
+        Speakers
       </h3>
       <div class="container mt-5">
         <div class="row" style={{ gap: "20px" }}>

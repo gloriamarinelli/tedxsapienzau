@@ -173,6 +173,11 @@
     "title": "3, 2, 1MPATTO",
     "description": "Il tempo scorre ed è necessario creare un nuovo spazio di riflessione ed intrattenimento incentrato sulla crisi climatica. Un luogo dove affrontare le paure sul futuro con positività e scienza grazie ad una visione interdisciplinare e coinvolgente negli spazi del nostro Ateneo. Immergiti nel primo evento <1>TEDx Countdown</1> della Sapienza e lasciati ispirare dall'urgenza e dalla complessità di questa sfida globale per promuovere azioni concrete."
   },
+  "event_awards2024": {
+    "title": "COSA SONO I SAPIENZAU AWARDS?",
+    "description": "I <1>SapienzaU Awards</1> sono organizzati dall'associazione SapienzaU ed hanno lo scopo di promuovere idee di valore, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell' <1>edizione 2025</1> del TEDxSapienzaU. I 5 vincitori del concorso SapienzaU Awards, <2>3 Speakers</2> e <2> 2 Artists</2>, vengono premiati sul palco della finale e avranno l'occasione di condividere le loro idee con un pubblico ampio, promuovendo il loro messaggio di innovazione e ispirazione.",
+    "winners": "I VINCITORI SAPIENZAU AWARDS 2024"
+  },
   "event_awards2023": {
     "title": "COSA SONO I SAPIENZAU AWARDS?",
     "description": "Il concorso <1>Back to Zero Awards</1> è organizzato dal Comitato TEDxSapienzaU ed ha lo scopo di promuovere idee di valore in linea con il motto TED <i>“Ideas worth spreading”</i>, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell' <1>edizione 2023</1> del TEDxSapienzaU. I 5 vincitori del concorso SapienzaU Awards, <2>3 Speakers</2> e <2> 2 Artists</2>, vengono premiati sul palco della finale e hanno l'occasione di esibirsi durante l'evento <1>TEDxSapienzaU 2023</1>!",

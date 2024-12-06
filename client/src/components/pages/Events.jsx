@@ -5,6 +5,7 @@ import Cover22 from "../images/cover-edizione22.webp";
 import CoverAwards23 from "../images/awards23/header_awards23.webp";
 import CoverAwards22 from "../images/awards22/awards2022.webp";
 import CoverCountdown24 from "../images/cover-countdown24.webp";
+import CoverAwards24 from "../images/awards24event.webp";
 import global from "../../resources/global.json";
 import EventBox from "../components/EventBox";
 import "../../resources/styles/partnerstyle.css";
@@ -19,6 +20,18 @@ export default function Editions({ withTitle = true }) {
   const [windowSize] = useOutletContext();
 
   const eventsInfo = [
+    {
+      date: i18n.language === 'it' ? "28 Novembre 2024" : "November 28, 2024",
+      title: "AWARDS 2024",
+      description:
+        i18n.language === 'it' 
+        ? 
+        "I SapienzaU Awards sono organizzati dall'associazione SapienzaU ed hanno lo scopo di promuovere idee di valore, offrendo ai vincitori la prestigiosa opportunità di esibirsi sul palco dell' edizione 2025 del TEDxSapienzaU." 
+        : 
+        "The SapienzaU Awards are organized by the SapienzaU association and aims to promote valuable ideas, offering the winners the prestigious opportunity to perform on the stage of the 2025 edition of TEDxSapienzaU.",
+      photo: CoverAwards24,
+      linkTo: "/eventi/awards2024",
+    },
     {
       date: i18n.language === 'it' ? "31 Maggio 2024" : "May 31, 2024",
       title: "COUNTDOWN",
