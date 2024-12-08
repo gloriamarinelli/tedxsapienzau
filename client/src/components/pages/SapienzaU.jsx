@@ -11,6 +11,8 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import * as THREE from "three";
 import gsap from "gsap";
 import { useControls, Leva } from "leva";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const verdeSEC = "#95c459";
 const violaPEM = "#bb5c9e";
@@ -65,6 +67,19 @@ function ObjModel(props) {
       });
     }
   });
+
+  // Animation: Floating effect
+  useEffect(() => {
+    if (logoRef.current) {
+      gsap.to(logoRef.current.position, {
+        y: "+=0.02", // Move up by 0.5 units
+        duration: 2, // Duration for one cycle
+        repeat: -1, // Infinite repeat
+        yoyo: true, // Reverse the animation
+        ease: "sine.inOut", // Smooth easing
+      });
+    }
+  }, []);
 
   const scaleRatio = 0.01;
 
@@ -137,15 +152,41 @@ export default function SapienzaU() {
   });
 
   const handleDiscoverClick = () => {
-    const tempPosition = { x: 50, y: 10, z: 20 };
-    const tempTarget = { x: 0, y: 0, z: 0 };
+    const tempPosition = {
+      x: cameraSettings.position[0],
+      y: cameraSettings.position[1],
+      z: cameraSettings.position[2],
+    };
+    const tempTarget = {
+      x: cameraSettings.target[0],
+      y: cameraSettings.target[1],
+      z: cameraSettings.target[2],
+    };
+    const tempZoom = cameraSettings.zoom;
+
+    const finalPosition = {
+      x: 50,
+      y: cameraSettings.position[1] == 10 ? 0 : 10,
+      z: cameraSettings.position[2] == 20 ? 4 : 20,
+    };
+
+    const finalTarget = {
+      x: cameraSettings.target[0] == 0 ? 0.6 : 0,
+      y: cameraSettings.target[1] == 0 ? 0 : 0,
+      z: cameraSettings.target[2] == 0 ? -2.8 : 0,
+    };
+
+    const duration = 1.5;
+
+    const ease = "power4.inOut";
 
     // Animate position
     gsap.to(tempPosition, {
-      x: 50,
-      y: 0,
-      z: 4,
-      duration: 2,
+      x: finalPosition.x,
+      y: finalPosition.y,
+      z: finalPosition.z,
+      duration: duration,
+      ease: ease,
       onUpdate: () => {
         setCameraSettings((prev) => ({
           ...prev,
@@ -156,10 +197,11 @@ export default function SapienzaU() {
 
     // Animate target
     gsap.to(tempTarget, {
-      x: 0.6,
-      y: 0,
-      z: -2.8,
-      duration: 2,
+      x: finalTarget.x,
+      y: finalTarget.y,
+      z: finalTarget.z,
+      duration: duration,
+      ease: ease,
       onUpdate: () => {
         setCameraSettings((prev) => ({
           ...prev,
@@ -170,8 +212,9 @@ export default function SapienzaU() {
 
     // Animate zoom
     gsap.to(cameraSettings, {
-      zoom: 753,
-      duration: 2,
+      zoom: tempZoom == 150 ? 753 : 150,
+      duration: duration,
+      ease: ease,
       onUpdate: () => {
         setCameraSettings((prev) => ({
           ...prev,
@@ -255,8 +298,44 @@ export default function SapienzaU() {
             pointerEvents: "initial",
           }}
         >
-          Scopri di più
+          {cameraSettings.zoom === 150 ? (
+            "Scopri di più"
+          ) : (
+            <FontAwesomeIcon icon={faArrowLeft} />
+          )}
         </button>
+      </div>
+      <div
+        id="overlay-text"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: "40%",
+          width: "60%",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "50px",
+          paddingRight: "50px",
+          opacity: cameraSettings.zoom === 753 ? 1 : 0,
+          transition: "all 0.5s ease-in-out",
+        }}
+      >
+        <h1 style={{ fontFamily: "GothamBold" }}>Cos'è SapienzaU?</h1>
+        <p style={{ maxWidth: "60ch" }}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam rerum
+          suscipit quo, fuga dolores, accusamus voluptatum labore officiis
+          beatae praesentium odit obcaecati dolorem? Laborum error rerum
+          quisquam ratione voluptatum perspiciatis quasi voluptates facere nemo!
+          Cum earum aperiam eligendi incidunt, rem consectetur error esse porro
+          sequi minus cupiditate debitis, dolorum alias commodi ratione quae? At
+          quaerat qui optio incidunt adipisci praesentium provident! Sed,
+          voluptatum enim. Debitis pariatur rem velit aut iure, inventore alias
+          quia? Explicabo commodi maxime sapiente quos, optio iste a officiis
+          deserunt tempore in expedita voluptatibus dolorum iusto iure
+          voluptatum dicta hic rem temporibus! Natus quasi vitae maiores
+          ducimus.
+        </p>
       </div>
     </div>
   );
