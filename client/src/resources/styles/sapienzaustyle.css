@@ -1,0 +1,20 @@
+/**
+Create a media query for the screen size of 768px
+*/
+
+#overlay-text {
+  right: 10vw;
+}
+
+@media screen and (max-width: 1660px) {
+  #overlay-text {
+    right: 4vw;
+  }
+}
+
+@media screen and (max-width: 1425px) {
+  #overlay-text {
+    right: 4vw;
+    width: 600px;
+  }
+}

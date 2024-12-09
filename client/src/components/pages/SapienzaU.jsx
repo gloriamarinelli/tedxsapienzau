@@ -1,4 +1,5 @@
 import React, { Suspense, useRef, useEffect, useState } from "react";
+import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { Canvas, useLoader, useThree, useFrame } from "@react-three/fiber";
 import {
@@ -13,6 +14,9 @@ import gsap from "gsap";
 import { useControls, Leva } from "leva";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+import "../../resources/styles/sapienzaustyle.css";
+import BasicChips from "../components/BasicChips";
 
 const verdeSEC = "#95c459";
 const violaPEM = "#bb5c9e";
@@ -29,7 +33,6 @@ function ObjModel(props) {
     `${process.env.PUBLIC_URL}/3d_models/logo3d_v5.obj`
   );
   const logoRef = useRef();
-  const [hoveredMesh, setHoveredMesh] = useState(null);
   // useHelper(logoRef, BoxHelper, "red");
 
   const box = new THREE.Box3().setFromObject(obj);
@@ -56,6 +59,32 @@ function ObjModel(props) {
     ERS: rosaERS,
   };
 
+  const mobileMeshes = [
+    "lettera U",
+    "pem",
+    "it",
+    "dex",
+    "la",
+    "sec",
+    "ers sx",
+    "ers dx",
+    "cem",
+    "hra",
+  ];
+
+  // if (props.windowSize < 768) {
+  //   obj.traverse((child) => {
+  //     if (child instanceof THREE.Mesh) {
+  //       console.log(child.name);
+  //       if (mobileMeshes.includes(child.name)) {
+  //         child.visible = true;
+  //       } else {
+  //         child.visible = false;
+  //       }
+  //     }
+  //   });
+  // }
+
   // loop through all the object meshes and add a material to them
   obj.traverse((child) => {
     if (child instanceof THREE.Mesh) {
@@ -78,6 +107,222 @@ function ObjModel(props) {
         yoyo: true, // Reverse the animation
         ease: "sine.inOut", // Smooth easing
       });
+
+      const itMesh = logoRef.current.getObjectByName("IT:1");
+
+      if (itMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(itMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        itMesh.position.sub(center);
+        pivot.add(itMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "+=" + Math.PI * 2, // Full rotation
+          y: "+=" + Math.PI * 2, // Full rotation
+          z: "+=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const dexMesh = logoRef.current.getObjectByName("DEX:1");
+
+      if (dexMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(dexMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        dexMesh.position.sub(center);
+        pivot.add(dexMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "-=" + Math.PI * 2, // Full rotation
+          y: "-=" + Math.PI * 2, // Full rotation
+          z: "+=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const hraMesh = logoRef.current.getObjectByName("HRA:1");
+
+      if (hraMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(hraMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        hraMesh.position.sub(center);
+        pivot.add(hraMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "+=" + Math.PI * 2, // Full rotation
+          y: "-=" + Math.PI * 2, // Full rotation
+          z: "-=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const cemMesh = logoRef.current.getObjectByName("CEM:1");
+
+      if (cemMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(cemMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        cemMesh.position.sub(center);
+        pivot.add(cemMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "+=" + Math.PI * 2, // Full rotation
+          y: "+=" + Math.PI * 2, // Full rotation
+          z: "+=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const laMesh = logoRef.current.getObjectByName("L&A");
+
+      if (laMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(laMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        laMesh.position.sub(center);
+        pivot.add(laMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "-=" + Math.PI * 2, // Full rotation
+          y: "+=" + Math.PI * 2, // Full rotation
+          z: "-=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const secMesh = logoRef.current.getObjectByName("SEC");
+
+      if (secMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(secMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        secMesh.position.sub(center);
+        pivot.add(secMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "-=" + Math.PI * 2, // Full rotation
+          y: "+=" + Math.PI * 2, // Full rotation
+          z: "+=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const pemMesh = logoRef.current.getObjectByName("PEM:1");
+
+      if (pemMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(pemMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        pemMesh.position.sub(center);
+        pivot.add(pemMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "+=" + Math.PI * 2, // Full rotation
+          y: "+=" + Math.PI * 2, // Full rotation
+          z: "-=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
+
+      const ersMesh = logoRef.current.getObjectByName("ERS");
+
+      if (ersMesh) {
+        const center = new THREE.Vector3();
+        const box = new THREE.Box3().setFromObject(ersMesh);
+        box.getCenter(center);
+
+        // Create a pivot group
+        const pivot = new THREE.Group();
+        logoRef.current.add(pivot);
+        pivot.position.copy(center); // Move pivot to the center of the mesh
+
+        // Move the mesh to the pivot
+        ersMesh.position.sub(center);
+        pivot.add(ersMesh);
+
+        // Animate rotation
+        gsap.to(pivot.rotation, {
+          x: "+=" + Math.PI * 2, // Full rotation
+          y: "-=" + Math.PI * 2, // Full rotation
+          z: "+=" + Math.PI * 2, // Full rotation
+          duration: 30,
+          repeat: -1, // Infinite rotation
+          ease: "linear",
+        });
+      }
     }
   }, []);
 
@@ -145,6 +390,12 @@ const CustomCamera = ({ startPosition, startTarget, startZoom, onUpdate }) => {
 };
 
 export default function SapienzaU() {
+  const [windowSize] = useOutletContext();
+
+  useEffect(() => {
+    console.log(windowSize);
+  }, [windowSize]);
+
   const [cameraSettings, setCameraSettings] = useState({
     position: [50, 10, 20],
     target: [0, 0, 0],
@@ -270,7 +521,7 @@ export default function SapienzaU() {
         />
         <Lights />
         <Suspense fallback={null}>
-          <ObjModel />
+          <ObjModel windowSize={windowSize} />
         </Suspense>
       </Canvas>
       <div
@@ -310,19 +561,21 @@ export default function SapienzaU() {
         style={{
           position: "absolute",
           top: 0,
-          left: "40%",
-          width: "60%",
+          maxWidth: "800px",
           height: "100%",
           pointerEvents: "none",
           color: "#fff",
-          paddingTop: "50px",
+          paddingTop: "8em",
           paddingRight: "50px",
           opacity: cameraSettings.zoom === 753 ? 1 : 0,
           transition: "all 0.5s ease-in-out",
+          fontFamily: "GothamBook",
         }}
       >
-        <h1 style={{ fontFamily: "GothamBold" }}>Cos'è SapienzaU?</h1>
-        <p style={{ maxWidth: "60ch" }}>
+        <h1 style={{ fontFamily: "GothamBold", pointerEvents: "initial" }}>
+          Cos'è SapienzaU?
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam rerum
           suscipit quo, fuga dolores, accusamus voluptatum labore officiis
           beatae praesentium odit obcaecati dolorem? Laborum error rerum
@@ -336,6 +589,9 @@ export default function SapienzaU() {
           voluptatum dicta hic rem temporibus! Natus quasi vitae maiores
           ducimus.
         </p>
+        <div>
+          <BasicChips teamName="Team IT" teamId="it" />
+        </div>
       </div>
     </div>
   );
