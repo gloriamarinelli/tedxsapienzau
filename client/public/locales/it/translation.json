@@ -83,10 +83,10 @@
   "mvhome": {
     "description": "TEDxSapienzaU è il TEDx Universitario dell'Ateneo Sapienza Università di Roma",
     "find_out_more": "Scopri di più",
-    "speakers": "Speakers",
-    "spectators": "Spettatori",
-    "followers": "Followers",
-    "yt_views": "Visualizzazioni su YouTube"
+    "speakers": "speakers",
+    "spectators": "spettatori",
+    "followers": "followers",
+    "yt_views": "visualizzazioni su YouTube"
   },
 
   "location": {

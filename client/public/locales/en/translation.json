@@ -83,10 +83,10 @@
   "mvhome": {
     "description": "TEDxSapienzaU is the TEDx of Sapienza University of Rome",
     "find_out_more": "Find out more",
-    "speakers": "Speakers",
-    "spectators": "Spectators",
-    "followers": "Followers",
-    "yt_views": "YouTube Views"
+    "speakers": "speakers",
+    "spectators": "spectators",
+    "followers": "followers",
+    "yt_views": "youTube views"
   },
   "location":{
         "title1": "TEDxSapienzaU locations: Sapienza University",
