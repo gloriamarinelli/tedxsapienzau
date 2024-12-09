@@ -142,7 +142,7 @@ export default function MvHome() {
           {renderSubContainer(
             hidden1,
             setHidden1,
-            26,
+            31,
             t("mvhome.speakers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
@@ -156,14 +156,14 @@ export default function MvHome() {
           {renderSubContainer(
             hidden3,
             setHidden3,
-            5500,
+            8500,
             t("mvhome.followers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
           {renderSubContainer(
             hidden4,
             setHidden4,
-            33000,
+            35000,
             t("mvhome.yt_views"),
             windowSize > 1245 ? "11vh" : "8vh"
           )}
@@ -245,7 +245,7 @@ export default function MvHome() {
           {renderSubContainer(
             hidden1,
             setHidden1,
-            26,
+            31,
             t("mvhome.speakers"),
             "80px"
           )}
@@ -259,14 +259,14 @@ export default function MvHome() {
           {renderSubContainer(
             hidden3,
             setHidden3,
-            5500,
+            8500,
             t("mvhome.followers"),
             "80px"
           )}
           {renderSubContainer(
             hidden4,
             setHidden4,
-            33000,
+            35000,
             t("mvhome.yt_views"),
             "60px"
           )}

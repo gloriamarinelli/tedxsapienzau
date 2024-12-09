@@ -174,7 +174,7 @@ export default function Footer() {
               <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
             </p>
             <p className="secondary-text">
-              <GreyLink text="Awards" link={"/eventi/awards2023"} />
+              <GreyLink text="Awards" link={"/eventi/awards2024"} />
             </p>
           </div>
           <b>

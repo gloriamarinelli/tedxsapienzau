@@ -228,7 +228,6 @@ export default function Blog() {
             )}
             {!isLoading && getButtons()}
           </section>
-          <div style={{ backgroundColor: "#000" }}>a</div>
           <section></section>
         </div>
       </>

@@ -5,8 +5,6 @@ import Image1 from "../images/awards24/dapoto.webp";
 import Image5 from "../images/awards24/saltarelli.webp";
 import Image4 from "../images/awards24/nardi.webp";
 import Image3 from "../images/awards24/pasatu.webp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
 import global from "../../resources/global.json";
 import { Trans, useTranslation } from "react-i18next";
