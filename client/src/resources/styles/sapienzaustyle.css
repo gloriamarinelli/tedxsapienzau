@@ -1,6 +1,9 @@
 /**
 Create a media query for the screen size of 768px
 */
+p {
+  line-height: 22px;
+}
 
 #overlay-text {
   right: 10vw;

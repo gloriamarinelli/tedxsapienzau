@@ -389,12 +389,9 @@ const CustomCamera = ({ startPosition, startTarget, startZoom, onUpdate }) => {
   );
 };
 
+//** Main COMPONENT */
 export default function SapienzaU() {
   const [windowSize] = useOutletContext();
-
-  useEffect(() => {
-    console.log(windowSize);
-  }, [windowSize]);
 
   const [cameraSettings, setCameraSettings] = useState({
     position: [50, 10, 20],
@@ -507,7 +504,7 @@ export default function SapienzaU() {
         position: "relative",
       }}
     >
-      <Leva hidden />
+      <Leva hidden={true} />
       <Canvas>
         {/* <OrbitControls /> */}
         {/* <axesHelper args={[10]} /> */}
@@ -565,32 +562,177 @@ export default function SapienzaU() {
           height: "100%",
           pointerEvents: "none",
           color: "#fff",
-          paddingTop: "8em",
+          paddingTop: "2em",
           paddingRight: "50px",
           opacity: cameraSettings.zoom === 753 ? 1 : 0,
           transition: "all 0.5s ease-in-out",
           fontFamily: "GothamBook",
         }}
       >
-        <h1 style={{ fontFamily: "GothamBold", pointerEvents: "initial" }}>
-          Cos'è SapienzaU?
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Chi siamo
         </h1>
         <p style={{ pointerEvents: "initial" }}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam rerum
-          suscipit quo, fuga dolores, accusamus voluptatum labore officiis
-          beatae praesentium odit obcaecati dolorem? Laborum error rerum
-          quisquam ratione voluptatum perspiciatis quasi voluptates facere nemo!
-          Cum earum aperiam eligendi incidunt, rem consectetur error esse porro
-          sequi minus cupiditate debitis, dolorum alias commodi ratione quae? At
-          quaerat qui optio incidunt adipisci praesentium provident! Sed,
-          voluptatum enim. Debitis pariatur rem velit aut iure, inventore alias
-          quia? Explicabo commodi maxime sapiente quos, optio iste a officiis
-          deserunt tempore in expedita voluptatibus dolorum iusto iure
-          voluptatum dicta hic rem temporibus! Natus quasi vitae maiores
-          ducimus.
+          SapienzaUè un’associazione studentesca ufficialmente riconosciuta da
+          Sapienza Università di Roma, fondata nel 2024 e attiva come Comitato
+          TEDxSapienzaU sin dal 2021. Con oltre 110 membri provenienti da quasi
+          tutte le Facoltà, ci impegniamo a costruire una comunità accogliente e
+          multidisciplinare, dove il dialogo e la crescita collettiva sono al
+          centro.
         </p>
-        <div>
-          <BasicChips teamName="Team IT" teamId="it" />
+
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Cosa facciamo
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Il nostro obiettivo è organizzare eventi formativi e culturali che
+          arricchiscano l’esperienza universitaria. Ispirata ai principi TED,
+          SapienzaU offre contenuti di valore, organizzando iniziative che
+          promuovono attivismo civico, diversità e dialogo.
+        </p>
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          I nostri valori
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Come da statuto, SapienzaU è indipendente da qualsiasi movimento
+          elettorale o partitico e opera esclusivamente per scopi educativi e
+          culturali. Il nostro regolamento punta a garantire uno spazio
+          inclusivo e rispettoso, dove ogni studente possa trovare ispirazione e
+          sostegno per crescere sia come individuo, sia come parte della
+          comunità della nostra Università.
+        </p>
+        <div
+          style={{
+            marginTop: "30px",
+            display: "grid",
+            gridTemplateColumns: "25% 25% 25% 25%",
+            columnGap: "10px",
+            rowGap: "10px",
+            fontSize: "15px",
+          }}
+        >
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: arancioneIT,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team IT
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: rosaERS,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team ERS
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: rossoCEM,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team CEM
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: bluHRA,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team HRA
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: gialloDEX,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team DEX
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: azzurroLA,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team L&A
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: verdeSEC,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team SEC
+          </button>
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: violaPEM,
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            team PEM
+          </button>
         </div>
       </div>
     </div>
