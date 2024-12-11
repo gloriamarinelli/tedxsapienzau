@@ -9,9 +9,17 @@ p {
   right: 10vw;
 }
 
+#overlay-text-left {
+  left: 10vw;
+}
+
 @media screen and (max-width: 1660px) {
   #overlay-text {
     right: 4vw;
+  }
+
+  #overlay-text-left {
+    left: 4vw;
   }
 }
 
@@ -19,5 +27,95 @@ p {
   #overlay-text {
     right: 4vw;
     width: 600px;
+  }
+
+  #overlay-text-left {
+    left: 4vw;
+    width: 600px;
+  }
+}
+
+.team-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+/* .team-button:hover {
+  transform: scale(1.1);
+} */
+
+.extra-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transform: translateY(-110%);
+  border-radius: 20px;
+}
+
+.animated-button {
+  background-color: grey;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 20px;
+  animation: slideUp 0.5s ease-out forwards;
+  transform: scale(0.8);
+  opacity: 0;
+  font-weight: 600;
+}
+
+.animated-button:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.animated-button:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.animated-button:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.animated-button:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.animated-button:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.animated-button:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.animated-button:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.animated-button:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }

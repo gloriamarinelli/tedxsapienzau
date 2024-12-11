@@ -13,10 +13,11 @@ import * as THREE from "three";
 import gsap from "gsap";
 import { useControls, Leva } from "leva";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import "../../resources/styles/sapienzaustyle.css";
 import BasicChips from "../components/BasicChips";
+import { set } from "date-fns";
 
 const verdeSEC = "#95c459";
 const violaPEM = "#bb5c9e";
@@ -393,13 +394,182 @@ const CustomCamera = ({ startPosition, startTarget, startZoom, onUpdate }) => {
 export default function SapienzaU() {
   const [windowSize] = useOutletContext();
 
+  const [showTeamButtons, setShowTeamButtons] = useState(false);
+  const [selectedTeam, setSelectedTeam] = useState(null);
+
   const [cameraSettings, setCameraSettings] = useState({
     position: [50, 10, 20],
     target: [0, 0, 0],
     zoom: 150,
   });
 
+  const ITCameraSetting = {
+    position: [190, 30, -8],
+    target: [-7.4, 0.0, -0.8],
+    zoom: 1000,
+  };
+
+  const ERSCameraSetting = {
+    position: [50.1, 10.1, 20.1],
+    target: [0.1, 1.1, 0.1],
+    zoom: 970,
+  };
+
+  const DEXCameraSetting = {
+    position: [98, 20, 28],
+    target: [-4.8, 1.4, -0.6],
+    zoom: 924,
+  };
+
+  const CEMCameraSetting = {
+    position: [38, -22, 16],
+    target: [0.0, 1.1, 3.0],
+    zoom: 1000,
+  };
+
+  const LACameraSetting = {
+    position: [50.1, 6, -8],
+    target: [0.0, 2.2, 2.8],
+    zoom: 1000,
+  };
+
+  const SECCameraSetting = {
+    position: [106, 22, 4],
+    target: [0.0, 2.3, -1.4],
+    zoom: 1000,
+  };
+
+  const PEMCameraSetting = {
+    position: [50.1, 6, -40],
+    target: [0.0, 1.5, 1.8],
+    zoom: 860,
+  };
+
+  const HRACameraSetting = {
+    position: [50.1, 2, 0],
+    target: [0.0, 1.5, -3.2],
+    zoom: 1000,
+  };
+
+  useEffect(() => {
+    console.log(selectedTeam);
+    if (selectedTeam === null) return;
+
+    const tempPosition = {
+      x: cameraSettings.position[0],
+      y: cameraSettings.position[1],
+      z: cameraSettings.position[2],
+    };
+    const tempTarget = {
+      x: cameraSettings.target[0],
+      y: cameraSettings.target[1],
+      z: cameraSettings.target[2],
+    };
+    const tempZoom = cameraSettings.zoom;
+
+    let finalPosition = ITCameraSetting.position;
+    let finalTarget = ITCameraSetting.target;
+    let finalZoom = ITCameraSetting.zoom;
+
+    switch (selectedTeam) {
+      case "IT":
+        finalPosition = ITCameraSetting.position;
+        finalTarget = ITCameraSetting.target;
+        finalZoom = ITCameraSetting.zoom;
+        break;
+      case "ERS":
+        finalPosition = ERSCameraSetting.position;
+        finalTarget = ERSCameraSetting.target;
+        finalZoom = ERSCameraSetting.zoom;
+        break;
+      case "DEX":
+        finalPosition = DEXCameraSetting.position;
+        finalTarget = DEXCameraSetting.target;
+        finalZoom = DEXCameraSetting.zoom;
+        break;
+      case "CEM":
+        finalPosition = CEMCameraSetting.position;
+        finalTarget = CEMCameraSetting.target;
+        finalZoom = CEMCameraSetting.zoom;
+        break;
+      case "LA":
+        finalPosition = LACameraSetting.position;
+        finalTarget = LACameraSetting.target;
+        finalZoom = LACameraSetting.zoom;
+        break;
+      case "SEC":
+        finalPosition = SECCameraSetting.position;
+        finalTarget = SECCameraSetting.target;
+        finalZoom = SECCameraSetting.zoom;
+        break;
+      case "PEM":
+        finalPosition = PEMCameraSetting.position;
+        finalTarget = PEMCameraSetting.target;
+        finalZoom = PEMCameraSetting.zoom;
+        break;
+      case "HRA":
+        finalPosition = HRACameraSetting.position;
+        finalTarget = HRACameraSetting.target;
+        finalZoom = HRACameraSetting.zoom;
+        break;
+      default:
+        finalPosition = [50, 10, 20];
+        finalTarget = [0, 0, 0];
+        finalZoom = 150;
+    }
+
+    const duration = 1.5;
+
+    const ease = "power4.inOut";
+
+    // Animate position
+    gsap.to(tempPosition, {
+      x: finalPosition[0],
+      y: finalPosition[1],
+      z: finalPosition[2],
+      duration: duration,
+      ease: ease,
+      onUpdate: () => {
+        setCameraSettings((prev) => ({
+          ...prev,
+          position: [tempPosition.x, tempPosition.y, tempPosition.z],
+        }));
+      },
+    });
+
+    // Animate target
+    gsap.to(tempTarget, {
+      x: finalTarget[0],
+      y: finalTarget[1],
+      z: finalTarget[2],
+      duration: duration,
+      ease: ease,
+      onUpdate: () => {
+        setCameraSettings((prev) => ({
+          ...prev,
+          target: [tempTarget.x, tempTarget.y, tempTarget.z],
+        }));
+      },
+    });
+
+    // Animate zoom
+    gsap.to(cameraSettings, {
+      zoom: finalZoom,
+      duration: duration,
+      ease: ease,
+      onUpdate: () => {
+        setCameraSettings((prev) => ({
+          ...prev,
+          zoom: cameraSettings.zoom,
+        }));
+      },
+    });
+  }, [selectedTeam]);
+
   const handleDiscoverClick = () => {
+    setShowTeamButtons(false);
+    setSelectedTeam(null);
+
     const tempPosition = {
       x: cameraSettings.position[0],
       y: cameraSettings.position[1],
@@ -473,9 +643,9 @@ export default function SapienzaU() {
   };
 
   const { x, y, z, targetX, targetY, targetZ, zoom } = useControls("Camera", {
-    x: { value: cameraSettings.position[0], min: -100, max: 100 },
-    y: { value: cameraSettings.position[1], min: -100, max: 100 },
-    z: { value: cameraSettings.position[2], min: -100, max: 100 },
+    x: { value: cameraSettings.position[0], min: -200, max: 200 },
+    y: { value: cameraSettings.position[1], min: -200, max: 200 },
+    z: { value: cameraSettings.position[2], min: -200, max: 200 },
     targetX: { value: cameraSettings.target[0], min: -10, max: 10 },
     targetY: { value: cameraSettings.target[1], min: -10, max: 10 },
     targetZ: { value: cameraSettings.target[2], min: -10, max: 10 },
@@ -533,6 +703,7 @@ export default function SapienzaU() {
           alignItems: "flex-end",
           paddingBottom: "50px",
           pointerEvents: "none",
+          gap: "50px",
         }}
       >
         <button
@@ -547,9 +718,84 @@ export default function SapienzaU() {
           }}
         >
           {cameraSettings.zoom === 150 ? (
-            "Scopri di più"
+            "Scopri cos'è SapienzaU"
           ) : (
             <FontAwesomeIcon icon={faArrowLeft} />
+          )}
+        </button>
+        <button
+          onClick={() => setShowTeamButtons(!showTeamButtons)}
+          className="team-button"
+          style={{
+            backgroundColor: "#eb0028",
+            color: "white",
+            padding: "10px 20px",
+            borderRadius: "20px",
+            border: "0",
+            pointerEvents: "initial",
+          }}
+        >
+          Scopri i Team{" "}
+          <FontAwesomeIcon icon={faCaretDown} style={{ rotate: "180deg" }} />
+          {showTeamButtons && (
+            <div className="extra-buttons">
+              <button
+                className="animated-button"
+                style={{ backgroundColor: arancioneIT }}
+                onClick={() => setSelectedTeam("IT")}
+              >
+                Team IT
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: gialloDEX }}
+                onClick={() => setSelectedTeam("DEX")}
+              >
+                Team DEX
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: rosaERS }}
+                onClick={() => setSelectedTeam("ERS")}
+              >
+                Team ERS
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: rossoCEM }}
+                onClick={() => setSelectedTeam("CEM")}
+              >
+                Team CEM
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: azzurroLA }}
+                onClick={() => setSelectedTeam("LA")}
+              >
+                Team L&A
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: verdeSEC }}
+                onClick={() => setSelectedTeam("SEC")}
+              >
+                Team SEC
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: violaPEM }}
+                onClick={() => setSelectedTeam("PEM")}
+              >
+                Team PEM
+              </button>
+              <button
+                className="animated-button"
+                style={{ backgroundColor: bluHRA }}
+                onClick={() => setSelectedTeam("HRA")}
+              >
+                Team HRA
+              </button>
+            </div>
           )}
         </button>
       </div>
@@ -562,7 +808,7 @@ export default function SapienzaU() {
           height: "100%",
           pointerEvents: "none",
           color: "#fff",
-          paddingTop: "2em",
+          paddingTop: "8vh",
           paddingRight: "50px",
           opacity: cameraSettings.zoom === 753 ? 1 : 0,
           transition: "all 0.5s ease-in-out",
@@ -579,7 +825,7 @@ export default function SapienzaU() {
           Chi siamo
         </h1>
         <p style={{ pointerEvents: "initial" }}>
-          SapienzaUè un’associazione studentesca ufficialmente riconosciuta da
+          SapienzaU è un’associazione studentesca ufficialmente riconosciuta da
           Sapienza Università di Roma, fondata nel 2024 e attiva come Comitato
           TEDxSapienzaU sin dal 2021. Con oltre 110 membri provenienti da quasi
           tutte le Facoltà, ci impegniamo a costruire una comunità accogliente e
@@ -619,121 +865,213 @@ export default function SapienzaU() {
           sostegno per crescere sia come individuo, sia come parte della
           comunità della nostra Università.
         </p>
-        <div
+      </div>
+      <div
+        id="overlay-text-left"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "IT" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
           style={{
-            marginTop: "30px",
-            display: "grid",
-            gridTemplateColumns: "25% 25% 25% 25%",
-            columnGap: "10px",
-            rowGap: "10px",
-            fontSize: "15px",
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
           }}
         >
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: arancioneIT,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team IT
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: rosaERS,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team ERS
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: rossoCEM,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team CEM
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: bluHRA,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team HRA
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: gialloDEX,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team DEX
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: azzurroLA,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team L&A
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: verdeSEC,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team SEC
-          </button>
-          <button
-            onClick={handleDiscoverClick}
-            style={{
-              backgroundColor: violaPEM,
-              color: "white",
-              padding: "10px 20px",
-              borderRadius: "20px",
-              border: "0",
-              pointerEvents: "initial",
-            }}
-          >
-            team PEM
-          </button>
-        </div>
+          Il team IT
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis. Natus
+          quod rem temporibus praesentium, rerum a! At quibusdam porro vitae
+          accusamus ex provident similique, facilis minima eius, exercitationem
+          pariatur molestiae officiis, commodi quod fuga nesciunt laudantium
+          placeat iste vel adipisci cupiditate voluptatibus dignissimos eaque.
+          Esse, totam suscipit.
+        </p>
+      </div>
+      <div
+        id="overlay-text"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "DEX" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team DEX
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident.
+        </p>
+      </div>
+      <div
+        id="overlay-text"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "ERS" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team ERS
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis.
+        </p>
+      </div>
+      <div
+        id="overlay-text"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "CEM" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team CEM
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis.
+        </p>
+      </div>
+      <div
+        id="overlay-text"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "LA" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team LA
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis.
+        </p>
       </div>
     </div>
   );
