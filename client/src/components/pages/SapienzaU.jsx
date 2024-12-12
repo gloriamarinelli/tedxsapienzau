@@ -435,14 +435,14 @@ export default function SapienzaU() {
 
   const SECCameraSetting = {
     position: [106, 22, 4],
-    target: [0.0, 2.3, -1.4],
+    target: [0.0, 2.3, -0.65],
     zoom: 1000,
   };
 
   const PEMCameraSetting = {
-    position: [50.1, 6, -40],
-    target: [0.0, 1.5, 1.8],
-    zoom: 860,
+    position: [200, 6, 76],
+    target: [0.6, 1.5, 2.6],
+    zoom: 924,
   };
 
   const HRACameraSetting = {
@@ -1071,6 +1071,144 @@ export default function SapienzaU() {
           veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
           distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
           minus reiciendis, possimus maxime quasi hic sapiente at facilis.
+        </p>
+      </div>
+      <div
+        id="overlay-text-left"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "SEC" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team SEC
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis. Natus
+          quod rem temporibus praesentium, rerum a! At quibusdam porro vitae
+          accusamus ex provident similique, facilis minima eius, exercitationem
+          pariatur molestiae officiis, commodi quod fuga nesciunt laudantium
+          placeat iste vel adipisci cupiditate voluptatibus dignissimos eaque.
+          Esse, totam suscipit.
+        </p>
+      </div>
+      <div
+        id="overlay-text-left"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "PEM" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team PEM
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis. Natus
+          quod rem temporibus praesentium, rerum a! At quibusdam porro vitae
+          accusamus ex provident similique, facilis minima eius, exercitationem
+          pariatur molestiae officiis, commodi quod fuga nesciunt laudantium
+          placeat iste vel adipisci cupiditate voluptatibus dignissimos eaque.
+          Esse, totam suscipit.
+        </p>
+      </div>
+      <div
+        id="overlay-text"
+        style={{
+          position: "absolute",
+          top: 0,
+          maxWidth: "800px",
+          height: "100%",
+          pointerEvents: "none",
+          color: "#fff",
+          paddingTop: "8vh",
+          paddingRight: "0px",
+          opacity: selectedTeam === "HRA" ? 1 : 0,
+          transition: "all 1s ease-in-out",
+          fontFamily: "GothamBook",
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: "GothamBold",
+            pointerEvents: "initial",
+            fontSize: "30px",
+          }}
+        >
+          Il team HRA
+        </h1>
+        <p style={{ pointerEvents: "initial" }}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus eius
+          explicabo veniam corrupti adipisci quae repellat vero nisi maiores. Ea
+          itaque repellat, reprehenderit provident fugit iste at animi voluptate
+          facere asperiores voluptates, corporis expedita nemo! Doloribus quae
+          ipsum asperiores repellendus voluptates fuga consectetur minus nihil
+          accusantium beatae est, expedita debitis quas labore quos officiis
+          consequatur, quasi ducimus voluptas dicta explicabo. Illo facere
+          ratione ut atque! Suscipit consectetur modi assumenda distinctio
+          tempora ea voluptatibus! Voluptatem accusantium iure soluta saepe
+          deserunt quod minus perferendis provident. Asperiores, non consequatur
+          veniam dolor ipsam iure reiciendis ducimus odit aliquid quia
+          distinctio quibusdam corporis dolorem. Excepturi, iusto quidem. Cumque
+          minus reiciendis, possimus maxime quasi hic sapiente at facilis. Natus
+          quod rem temporibus praesentium, rerum a! At quibusdam porro vitae
+          accusamus ex provident similique, facilis minima eius, exercitationem
+          pariatur molestiae officiis, commodi quod fuga nesciunt laudantium
+          placeat iste vel adipisci cupiditate voluptatibus dignissimos eaque.
+          Esse, totam suscipit.
         </p>
       </div>
     </div>
