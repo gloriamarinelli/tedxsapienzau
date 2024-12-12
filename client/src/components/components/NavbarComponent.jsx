@@ -33,6 +33,7 @@ export default function NavbarComponent(props) {
   const blog = useRef();
   const mission_and_vision = useRef();
   const location = useRef();
+  const sapienzau = useRef();
   const back_to_zero = useRef();
   const awards23 = useRef();
   const act = useRef();
@@ -768,6 +769,20 @@ export default function NavbarComponent(props) {
                                 id="location"
                               >
                                 {t("navbar.location")}
+                              </Link>
+                            </li>
+                            <li className="mt-2 mb-1">
+                              <Link
+                                ref={sapienzau}
+                                className="navbar-submenu-edition-item ms-2"
+                                to="/sapienzau"
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("sapienzau");
+                                }}
+                                id="location"
+                              >
+                                {t("navbar.sapienzau")}
                               </Link>
                             </li>
                           </ul>

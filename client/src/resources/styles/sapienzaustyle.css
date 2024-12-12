@@ -7,10 +7,32 @@ p {
 
 #overlay-text {
   right: 10vw;
+  position: absolute;
+  top: 0;
+  max-width: 800px;
+  height: 100%;
+  pointer-events: none;
+  color: #fff;
+  padding-top: 8vh;
+  padding-right: 0;
+  transition: all 1s ease-in-out 0s;
+  font-family: GothamBook;
+  transition-delay: 1s;
 }
 
 #overlay-text-left {
   left: 10vw;
+  position: absolute;
+  top: 0;
+  max-width: 800px;
+  height: 100%;
+  pointer-events: none;
+  color: #fff;
+  padding-top: 8vh;
+  padding-right: 0;
+  transition: all 1s ease-in-out 0s;
+  font-family: GothamBook;
+  transition-delay: 1s;
 }
 
 @media screen and (max-width: 1660px) {
@@ -23,16 +45,29 @@ p {
   }
 }
 
-@media screen and (max-width: 1425px) {
+@media screen and (max-width: 1440px) {
   #overlay-text {
     right: 4vw;
-    width: 600px;
+    width: 650px;
   }
 
   #overlay-text-left {
     left: 4vw;
-    width: 600px;
+    width: 650px;
   }
+}
+
+.team-title {
+  font-family: "GothamBold";
+  pointer-events: initial;
+  font-size: 50px;
+}
+
+.team-description {
+  font-family: "GothamBook";
+  pointer-events: initial;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .team-button {
