@@ -473,7 +473,7 @@ export default function NavbarComponent(props) {
               <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
                 <Link
                   className="navbar-submenu-edition-item font-600"
-                  ref={back_to_zero}
+                  ref={location}
                   to="/location"
                   onClick={() => {
                     setExpanded(false);
@@ -481,6 +481,19 @@ export default function NavbarComponent(props) {
                   }}
                 >
                   LOCATION
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
+                  ref={sapienzau}
+                  to="/sapienzau"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("location");
+                  }}
+                >
+                  ASSOCIAZIONE SAPIENZAU
                 </Link>
               </li>
             </ul>
