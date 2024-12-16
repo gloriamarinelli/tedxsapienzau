@@ -33,6 +33,7 @@ export default function NavbarComponent(props) {
   const blog = useRef();
   const mission_and_vision = useRef();
   const location = useRef();
+  const sapienzau = useRef();
   const back_to_zero = useRef();
   const awards23 = useRef();
   const act = useRef();
@@ -491,7 +492,7 @@ export default function NavbarComponent(props) {
               <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
                 <Link
                   className="navbar-submenu-edition-item font-600"
-                  ref={back_to_zero}
+                  ref={location}
                   to="/location"
                   onClick={() => {
                     setExpanded(false);
@@ -499,6 +500,19 @@ export default function NavbarComponent(props) {
                   }}
                 >
                   LOCATION
+                </Link>
+              </li>
+              <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+                <Link
+                  className="navbar-submenu-edition-item font-600"
+                  ref={sapienzau}
+                  to="/sapienzau"
+                  onClick={() => {
+                    setExpanded(false);
+                    selectOption("location");
+                  }}
+                >
+                  ASSOCIAZIONE SAPIENZAU
                 </Link>
               </li>
             </ul>
@@ -802,6 +816,20 @@ export default function NavbarComponent(props) {
                                 id="location"
                               >
                                 {t("navbar.location")}
+                              </Link>
+                            </li>
+                            <li className="mt-2 mb-1">
+                              <Link
+                                ref={sapienzau}
+                                className="navbar-submenu-edition-item ms-2"
+                                to="/sapienzau"
+                                onClick={() => {
+                                  setExpanded(false);
+                                  selectOption("sapienzau");
+                                }}
+                                id="location"
+                              >
+                                {t("navbar.sapienzau")}
                               </Link>
                             </li>
                           </ul>

@@ -1,0 +1,175 @@
+/**
+Create a media query for the screen size of 768px
+*/
+p {
+  line-height: 22px;
+}
+
+#overlay-text {
+  right: 10vw;
+  position: absolute;
+  top: 0;
+  max-width: 800px;
+  height: 100%;
+  pointer-events: none;
+  color: #fff;
+  padding-top: 8vh;
+  padding-right: 0;
+  transition: all 1s ease-in-out 0s;
+  font-family: GothamBook;
+  transition-delay: 1s;
+}
+
+#overlay-text-left {
+  left: 10vw;
+  position: absolute;
+  top: 0;
+  max-width: 800px;
+  height: 100%;
+  pointer-events: none;
+  color: #fff;
+  padding-top: 8vh;
+  padding-right: 0;
+  transition: all 1s ease-in-out 0s;
+  font-family: GothamBook;
+  transition-delay: 1s;
+}
+
+.overlay-text-mobile {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  height: 90%;
+  color: #fff;
+  padding-top: 8vh;
+  padding-right: 0;
+  transition: all 1s ease-in-out 0s;
+  font-family: GothamBook;
+  transition-delay: 1s;
+  background-color: blue;
+}
+
+.overlay-text-mobile h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1660px) {
+  #overlay-text {
+    right: 4vw;
+  }
+
+  #overlay-text-left {
+    left: 4vw;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #overlay-text {
+    right: 4vw;
+    width: 650px;
+  }
+
+  #overlay-text-left {
+    left: 4vw;
+    width: 650px;
+  }
+}
+
+.team-title {
+  font-family: "GothamBold";
+  pointer-events: initial;
+  font-size: 40px;
+}
+
+.team-description {
+  font-family: "GothamBook";
+  pointer-events: initial;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.team-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+/* .team-button:hover {
+  transform: scale(1.1);
+} */
+
+.extra-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transform: translateY(-110%);
+  border-radius: 20px;
+}
+
+.animated-button {
+  background-color: grey;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 20px;
+  animation: slideUp 0.5s ease-out forwards;
+  transform: scale(0.8);
+  opacity: 0;
+  font-weight: 600;
+}
+
+.animated-button:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.animated-button:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.animated-button:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.animated-button:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.animated-button:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.animated-button:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.animated-button:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.animated-button:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

@@ -6,7 +6,8 @@
     "about_us": "About Us",
     "events": "Events",
     "mission_and_vision": "Mission and Vision",
-    "location": "Location"
+    "location": "Location",
+    "sapienzau": "SapienzaU Association"
   },
 
   "joinus": {
@@ -88,122 +89,122 @@
     "followers": "followers",
     "yt_views": "youTube views"
   },
-  "location":{
-        "title1": "TEDxSapienzaU locations: Sapienza University",
-        "a1": "Sapienza University of Rome, established ",
-        "a2":"in 1303 ",
-        "a3":"by Pope Boniface VIII, it is the oldest university in Rome and the largest in Europe. The Athenaeum has ",
-        "a4":"700 years ",
-        "a5":"of history and hosts, according to the data of the academic year 2022/23, approximately ",
-        "a6":"120 thousand students ",
-        "a7":"and ",
-        "a8":"3,5 thousand teachers",
-        "a9":". Among its main objectives is to contribute to the development of the knowledge society through research, excellent and quality training and international cooperation. Its motto is the phrase ",
-        "a10": "'The future is past here'",
-        "a11": ": a slogan that starts from afar, from the centenary history of the University, and arrives to the present day.",
-        "b1": "A ",
-        "b2": "history ",
-        "b3": "which would be worth exploring: over the last seven centuries Sapienza has been at the center of Roman and Italian history, first as a university linked to the Popes, then as an autonomous Studium Urbis. Over time it has opened up to new scientific and humanistic disciplines. Today it is a large campus located a short distance from the central Termini station, with some locations spread across the city, and others in the Municipality of Latina. ",
-        "c1": "If you consider the ",
-        "c2": "international panorama ",
-        "c3": "Furthermore, the quality of research and teaching and the international dimension have led the University to position itself ",
-        "c4": "at the top of the list in Italy ",
-        "c5": "according to the main world university rankings. Sapienza also emerges in the sector rankings, establishing itself as a point of reference for numerous disciplines (for example, it is first in the world in classical studies), and has obtained ",
-        "c6": "14 national records ",
-        "c7": " in various subjects. ",
-        "d1": " Another aspect that characterizes it is its ",
-        "d2": "training offer: ", 
-        "d3": "300 courses ",
-        "d4": "of bachelor's and master's degrees (of which over ",
-        "d5": "60 in English ",
-        "d6": "), ",
-        "d7": "200 masters ",
-        "d8": ", over ",
-        "d9": "90 PhDs ",
-        "d10": "and more than ",
-        "d11": "80 specialized schools. ",
-        "d12": "The student community is made up of more than ",
-        "d13": "30 thousand students ",
-        "d14": "non-resident, 10 thousand international students and over 2.2 thousand students per year in international mobility. There are 984 Partner Universities, located in 87 countries, with which the University has established relationships over the years. Vice versa, Sapienza offers its students ",
-        "d15": "numerous international opportunities ",
-        "d16": "for example double degrees, scholarships for theses abroad, internships in various European and non-European countries, international doctorates. ",
-        "e1": "As regards the ",
-        "e2": "research ",
-        "e3": ", there is talk of a wide-ranging coverage of disciplines: the University reaches ",
-        "e4": "levels of excellence ",
-        "e5": "in many fields, including archaeology, physics, astrophysics and the humanities. The University has also welcomed Nobel Prize winners and internationally renowned scientists during their studies or teaching. ",
-        "f1": "The commitment in the field of ",
-        "f2": "sustainability ",
-        "f3": "is another important dimension for Sapienza, which is committed to achieving the 17 Sustainable Development Goals of the United Nations with teaching, research, third mission and cross-cutting policies. The initiatives carried out are described on the portal ",
-        "f4": "Sustainable wisdom ",
-        "f5": "and in the ",
-        "f6": "Social and sustainability balance sheet ", 
-        "f7": "published every year.",
-        "title2": "The structures and the Great Hall",
-        "g1": "Sapienza University includes numerous ",
-        "g2": "structures:",
-        "g3": "11 faculties, ", 
-        "g4": "a school of advanced studies, a postgraduate school of aerospace engineering and ",
-        "g5": "58 departments",
-        "g6": ", not to mention the many research centers and service centers, all managed by the central administration divided into areas. At the disposal of students there are 48 libraries, 18 museums, a university hospital and several counters and offices with the aim of responding to their needs.",
-        "h1": "Among the fundamental spaces there is certainly ",
-        "h2": "the Great Hall of the Rectorate ",
-        "h3": "located in the University City, a real city within the city located in the heart of Rome. The Aula Magna has a surface area of ",
-        "h4": "900 square meters",
-        "h5": "and ends with an apsidal tribune defined by a curved wall with the mural “Italy between the Arts and the Sciences” by the painter Mario Sironi. It is a work fixed in a timeless dimension that represents an epic vision of history. The Monumental Figures arranged on the sides of Italy allude to the wealth and value of knowledge.",
-        "i1": "Since its foundation, Sapienza has always maintained an important role in Italian history and has been involved in crucial developments in society, economics and politics. The University today manages to make ",
-        "i2": "collide centuries of tradition with cutting-edge teaching, research and innovation ",
-        "i3": ", offering high-quality education and numerous research opportunities. It is a place where students and faculty from all over the world meet and exchange ideas in a continuous contagion of ideas."
-    },
-    "mission":{
-        "ted": "TED is a nonprofit organization dedicated to spreading ideas in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where technology, entertainment, and design converged, and today covers nearly every topic from science to business to global issues, in more than 100 languages. Its goal is to spread and champion powerful ideas that will change the world.",
-        "tedx": "In order to broaden the diffusion of valuable ideas, TED has created a specific program, TEDx, that is, local events organized independently but always with the spirit of a real TED conference, which in fact grants its own license.",
-        "tedxsapienzau1": "It is the University TEDx of the Sapienza University of Rome, it enjoys the official license granted by the TED Foundation and the support of the Rector Antonella Polimeni together with the Research Support and Technology Transfer Area. The event, born in 2021 from the stimulus of some students of the University, has now reached its third edition. Organized solely by students and PhD students of the first Roman University, thanks to the recognized association ",
-        "tedxsapienzau2": "with the aim of creating ever new and international programming for the entire academic community. ",
-        "sapienzau": "'SapienzaU' ",
-        "button": "Collaborate with us"
-    },
+  "location": {
+    "title1": "TEDxSapienzaU locations: Sapienza University",
+    "a1": "Sapienza University of Rome, established ",
+    "a2": "in 1303 ",
+    "a3": "by Pope Boniface VIII, it is the oldest university in Rome and the largest in Europe. The Athenaeum has ",
+    "a4": "700 years ",
+    "a5": "of history and hosts, according to the data of the academic year 2022/23, approximately ",
+    "a6": "120 thousand students ",
+    "a7": "and ",
+    "a8": "3,5 thousand teachers",
+    "a9": ". Among its main objectives is to contribute to the development of the knowledge society through research, excellent and quality training and international cooperation. Its motto is the phrase ",
+    "a10": "'The future is past here'",
+    "a11": ": a slogan that starts from afar, from the centenary history of the University, and arrives to the present day.",
+    "b1": "A ",
+    "b2": "history ",
+    "b3": "which would be worth exploring: over the last seven centuries Sapienza has been at the center of Roman and Italian history, first as a university linked to the Popes, then as an autonomous Studium Urbis. Over time it has opened up to new scientific and humanistic disciplines. Today it is a large campus located a short distance from the central Termini station, with some locations spread across the city, and others in the Municipality of Latina. ",
+    "c1": "If you consider the ",
+    "c2": "international panorama ",
+    "c3": "Furthermore, the quality of research and teaching and the international dimension have led the University to position itself ",
+    "c4": "at the top of the list in Italy ",
+    "c5": "according to the main world university rankings. Sapienza also emerges in the sector rankings, establishing itself as a point of reference for numerous disciplines (for example, it is first in the world in classical studies), and has obtained ",
+    "c6": "14 national records ",
+    "c7": " in various subjects. ",
+    "d1": " Another aspect that characterizes it is its ",
+    "d2": "training offer: ",
+    "d3": "300 courses ",
+    "d4": "of bachelor's and master's degrees (of which over ",
+    "d5": "60 in English ",
+    "d6": "), ",
+    "d7": "200 masters ",
+    "d8": ", over ",
+    "d9": "90 PhDs ",
+    "d10": "and more than ",
+    "d11": "80 specialized schools. ",
+    "d12": "The student community is made up of more than ",
+    "d13": "30 thousand students ",
+    "d14": "non-resident, 10 thousand international students and over 2.2 thousand students per year in international mobility. There are 984 Partner Universities, located in 87 countries, with which the University has established relationships over the years. Vice versa, Sapienza offers its students ",
+    "d15": "numerous international opportunities ",
+    "d16": "for example double degrees, scholarships for theses abroad, internships in various European and non-European countries, international doctorates. ",
+    "e1": "As regards the ",
+    "e2": "research ",
+    "e3": ", there is talk of a wide-ranging coverage of disciplines: the University reaches ",
+    "e4": "levels of excellence ",
+    "e5": "in many fields, including archaeology, physics, astrophysics and the humanities. The University has also welcomed Nobel Prize winners and internationally renowned scientists during their studies or teaching. ",
+    "f1": "The commitment in the field of ",
+    "f2": "sustainability ",
+    "f3": "is another important dimension for Sapienza, which is committed to achieving the 17 Sustainable Development Goals of the United Nations with teaching, research, third mission and cross-cutting policies. The initiatives carried out are described on the portal ",
+    "f4": "Sustainable wisdom ",
+    "f5": "and in the ",
+    "f6": "Social and sustainability balance sheet ",
+    "f7": "published every year.",
+    "title2": "The structures and the Great Hall",
+    "g1": "Sapienza University includes numerous ",
+    "g2": "structures:",
+    "g3": "11 faculties, ",
+    "g4": "a school of advanced studies, a postgraduate school of aerospace engineering and ",
+    "g5": "58 departments",
+    "g6": ", not to mention the many research centers and service centers, all managed by the central administration divided into areas. At the disposal of students there are 48 libraries, 18 museums, a university hospital and several counters and offices with the aim of responding to their needs.",
+    "h1": "Among the fundamental spaces there is certainly ",
+    "h2": "the Great Hall of the Rectorate ",
+    "h3": "located in the University City, a real city within the city located in the heart of Rome. The Aula Magna has a surface area of ",
+    "h4": "900 square meters",
+    "h5": "and ends with an apsidal tribune defined by a curved wall with the mural “Italy between the Arts and the Sciences” by the painter Mario Sironi. It is a work fixed in a timeless dimension that represents an epic vision of history. The Monumental Figures arranged on the sides of Italy allude to the wealth and value of knowledge.",
+    "i1": "Since its foundation, Sapienza has always maintained an important role in Italian history and has been involved in crucial developments in society, economics and politics. The University today manages to make ",
+    "i2": "collide centuries of tradition with cutting-edge teaching, research and innovation ",
+    "i3": ", offering high-quality education and numerous research opportunities. It is a place where students and faculty from all over the world meet and exchange ideas in a continuous contagion of ideas."
+  },
+  "mission": {
+    "ted": "TED is a nonprofit organization dedicated to spreading ideas in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where technology, entertainment, and design converged, and today covers nearly every topic from science to business to global issues, in more than 100 languages. Its goal is to spread and champion powerful ideas that will change the world.",
+    "tedx": "In order to broaden the diffusion of valuable ideas, TED has created a specific program, TEDx, that is, local events organized independently but always with the spirit of a real TED conference, which in fact grants its own license.",
+    "tedxsapienzau1": "It is the University TEDx of the Sapienza University of Rome, it enjoys the official license granted by the TED Foundation and the support of the Rector Antonella Polimeni together with the Research Support and Technology Transfer Area. The event, born in 2021 from the stimulus of some students of the University, has now reached its third edition. Organized solely by students and PhD students of the first Roman University, thanks to the recognized association ",
+    "tedxsapienzau2": "with the aim of creating ever new and international programming for the entire academic community. ",
+    "sapienzau": "'SapienzaU' ",
+    "button": "Collaborate with us"
+  },
 
-    "events":{
-        "title": "Past Events"
-    },
+  "events": {
+    "title": "Past Events"
+  },
 
-    "event_countdown2024":{
-        "title": "3, 2, 1IMPACT",
-        "description": "Time is ticking and it is necessary to create a new space for reflection and entertainment focused on the climate crisis. A place to face fears about the future with positivity and science thanks to an interdisciplinary and engaging vision in the spaces of our University. Immerse yourself in Sapienza's first <1>TEDx Countdown</1> event and be inspired by the urgency and complexity of this global challenge to promote concrete actions."
-    },
-    "event_awards2024":{
-        "title": "WHAT ARE THE SAPIENZAU AWARDS?",
-        "description": "The <1>SapienzaU Awards</1> are organized by the SapienzaU association and aims to promote valuable ideas, offering the winners the prestigious opportunity to perform on the stage of the <1>2025 edition</1> of TEDxSapienzaU. The 5 winners of the SapienzaU Awards competition, <2>3 Speakers</2> and <2> 2 Artists</2>, are awarded on the stage of the final and have the opportunity to share their ideas with a wide audience, promoting their message of innovation and inspiration.",
-        "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2024"
-    },
-    "event_awards2023":{
-        "title": "WHAT ARE THE SAPIENZAU AWARDS?",
-        "description": "The <1>Back to Zero Awards</1> competition is organized by the TEDxSapienzaU Committee and aims to promote valuable ideas in line with the TED motto <i>“Ideas worth spreading”</i>, offering the winners the prestigious opportunity to perform on the stage of the <1>2023 edition</1> of TEDxSapienzaU. The 5 winners of the SapienzaU Awards competition, <2>3 Speakers</2> and <2> 2 Artists</2>, are awarded on the stage of the final and have the opportunity to perform during the <1>TEDxSapienzaU 2023</1> event!",
-        "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2023"
-    },
-    "event_awards2022":{
-        "title": "WHAT ARE THE SAPIENZAU AWARDS?",
-        "description": "The <1>ACT:Lead The Change Awards</1> competition is organized by the TEDxSapienzaU Committee and aims to promote valuable ideas in line with the TED motto <i>“Ideas worth spreading”</i>, offering the winners the prestigious opportunity to perform on the stage of the <1>2022 edition</1> of TEDxSapienzaU. The 4 winners of the SapienzaU Awards competition, <2>3 Speakers</2> and <2> 1 Artist</2>, are awarded on the stage of the final and have the opportunity to perform during the <1>TEDxSapienzaU 2022</1> event!",
-        "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2022"
-    },
-    "event_leadthechange":{
-        "button": "Watch the TEDx talks",
-        "title": "THEME OF THE EVENT",
-        "description": "The title of the first edition of TEDxSapienzaU was <1>ACT - Lead the change</1>. As per the TEDx guidelines, the dialogues that were presented concerned various interconnected subjects and thematic areas, favoring the best ideas and experiences inspiring:",
-        "A": "The culture of action against the culture of inertia and the role of active citizenship in the education of the future.",
-        "C": "The predisposition for creativity and empathy, pop education and the new horizons of contamination between knowledge.",
-        "T": "Digital and integrated reality, the transformation of educational models and the value of experience in the growth of the individual."
-    },
-    "event_backtozero":{
-        "button": "Watch the TEDx talks",
-        "title": "OUR OBJECTIVE",
-        "description": "Our goal is to <1>reset</1>, seek a point <1>zero</1>: inequalities, conflicts, bad lifestyles, emissions and waste. Reduce those factors pollutants that slow down the growth of our society, worsening the quality of our life <1>Reconsider ourselves </1> and our way of dealing with contemporary society, with the <1>arts</1 > and the <1>sciences</1>. It is fundamental to build a world where human beings can '<1>be reborn</1>', thriving and expressing themselves to the fullest in every discipline foundations for <1>to be reborn</1>, to become better people in a better place.",
-        "citation": "Man and the world around him are not separate tracks, but rails that move together, they need each other.",
-        "schedule": "SCHEDULE"
-    },
-    "error_page":{
-        "404_msg": "Looks like this page doesn't exist",
-        "home_button": "Return to the homepage"
-    }
+  "event_countdown2024": {
+    "title": "3, 2, 1IMPACT",
+    "description": "Time is ticking and it is necessary to create a new space for reflection and entertainment focused on the climate crisis. A place to face fears about the future with positivity and science thanks to an interdisciplinary and engaging vision in the spaces of our University. Immerse yourself in Sapienza's first <1>TEDx Countdown</1> event and be inspired by the urgency and complexity of this global challenge to promote concrete actions."
+  },
+  "event_awards2024": {
+    "title": "WHAT ARE THE SAPIENZAU AWARDS?",
+    "description": "The <1>SapienzaU Awards</1> are organized by the SapienzaU association and aims to promote valuable ideas, offering the winners the prestigious opportunity to perform on the stage of the <1>2025 edition</1> of TEDxSapienzaU. The 5 winners of the SapienzaU Awards competition, <2>3 Speakers</2> and <2> 2 Artists</2>, are awarded on the stage of the final and have the opportunity to share their ideas with a wide audience, promoting their message of innovation and inspiration.",
+    "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2024"
+  },
+  "event_awards2023": {
+    "title": "WHAT ARE THE SAPIENZAU AWARDS?",
+    "description": "The <1>Back to Zero Awards</1> competition is organized by the TEDxSapienzaU Committee and aims to promote valuable ideas in line with the TED motto <i>“Ideas worth spreading”</i>, offering the winners the prestigious opportunity to perform on the stage of the <1>2023 edition</1> of TEDxSapienzaU. The 5 winners of the SapienzaU Awards competition, <2>3 Speakers</2> and <2> 2 Artists</2>, are awarded on the stage of the final and have the opportunity to perform during the <1>TEDxSapienzaU 2023</1> event!",
+    "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2023"
+  },
+  "event_awards2022": {
+    "title": "WHAT ARE THE SAPIENZAU AWARDS?",
+    "description": "The <1>ACT:Lead The Change Awards</1> competition is organized by the TEDxSapienzaU Committee and aims to promote valuable ideas in line with the TED motto <i>“Ideas worth spreading”</i>, offering the winners the prestigious opportunity to perform on the stage of the <1>2022 edition</1> of TEDxSapienzaU. The 4 winners of the SapienzaU Awards competition, <2>3 Speakers</2> and <2> 1 Artist</2>, are awarded on the stage of the final and have the opportunity to perform during the <1>TEDxSapienzaU 2022</1> event!",
+    "winners": "THE WINNERS OF THE SAPIENZAU AWARDS 2022"
+  },
+  "event_leadthechange": {
+    "button": "Watch the TEDx talks",
+    "title": "THEME OF THE EVENT",
+    "description": "The title of the first edition of TEDxSapienzaU was <1>ACT - Lead the change</1>. As per the TEDx guidelines, the dialogues that were presented concerned various interconnected subjects and thematic areas, favoring the best ideas and experiences inspiring:",
+    "A": "The culture of action against the culture of inertia and the role of active citizenship in the education of the future.",
+    "C": "The predisposition for creativity and empathy, pop education and the new horizons of contamination between knowledge.",
+    "T": "Digital and integrated reality, the transformation of educational models and the value of experience in the growth of the individual."
+  },
+  "event_backtozero": {
+    "button": "Watch the TEDx talks",
+    "title": "OUR OBJECTIVE",
+    "description": "Our goal is to <1>reset</1>, seek a point <1>zero</1>: inequalities, conflicts, bad lifestyles, emissions and waste. Reduce those factors pollutants that slow down the growth of our society, worsening the quality of our life <1>Reconsider ourselves </1> and our way of dealing with contemporary society, with the <1>arts</1 > and the <1>sciences</1>. It is fundamental to build a world where human beings can '<1>be reborn</1>', thriving and expressing themselves to the fullest in every discipline foundations for <1>to be reborn</1>, to become better people in a better place.",
+    "citation": "Man and the world around him are not separate tracks, but rails that move together, they need each other.",
+    "schedule": "SCHEDULE"
+  },
+  "error_page": {
+    "404_msg": "Looks like this page doesn't exist",
+    "home_button": "Return to the homepage"
+  }
 }
