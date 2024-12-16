@@ -79,13 +79,13 @@ p {
 .team-title {
   font-family: "GothamBold";
   pointer-events: initial;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .team-description {
   font-family: "GothamBook";
   pointer-events: initial;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 22px;
 }
 
@@ -172,4 +172,18 @@ p {
     transform: translateY(0%);
     opacity: 1;
   }
+}
+
+#mobile-buttons-container {
+  background-color: black;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  z-index: 10;
+}
+
+#mobile-buttons-container button {
+  max-height: 50px;
 }
