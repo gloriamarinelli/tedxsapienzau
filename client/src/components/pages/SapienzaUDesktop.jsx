@@ -813,6 +813,7 @@ export default function SapienzaUDesktop() {
           opacity: cameraState === "discover" ? 1 : 0,
           transition: "all 0.5s ease-in-out",
           fontFamily: "GothamBook",
+          transitionDelay: cameraState === "discover" ? "1.2s" : "0s",
         }}
       >
         <h1

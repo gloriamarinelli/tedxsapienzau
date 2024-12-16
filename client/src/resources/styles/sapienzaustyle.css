@@ -35,6 +35,25 @@ p {
   transition-delay: 1s;
 }
 
+.overlay-text-mobile {
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+  height: 90%;
+  color: #fff;
+  padding-top: 8vh;
+  padding-right: 0;
+  transition: all 1s ease-in-out 0s;
+  font-family: GothamBook;
+  transition-delay: 1s;
+  background-color: blue;
+}
+
+.overlay-text-mobile h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
 @media screen and (max-width: 1660px) {
   #overlay-text {
     right: 4vw;

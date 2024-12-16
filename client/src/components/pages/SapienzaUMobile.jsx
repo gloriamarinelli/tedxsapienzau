@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { Canvas, useLoader, useThree, useFrame } from "@react-three/fiber";
 import {
+  Html,
   OrbitControls,
   OrthographicCamera,
   useHelper,
@@ -14,6 +15,7 @@ import gsap from "gsap";
 import { useControls, Leva } from "leva";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { Trans, useTranslation } from "react-i18next";
 
 import "../../resources/styles/sapienzaustyle.css";
 
@@ -25,6 +27,15 @@ const arancioneIT = "#f07e2a";
 const gialloDEX = "#fab732";
 const bluHRA = "#2884c7";
 const rossoCEM = "#e9493a";
+
+const ITDescriptionPosition = [0, 2, -3];
+const SECDescriptionPosition = [0, 2, 3];
+const DEXDescriptionPosition = [0, 1, -3];
+const PEMDescriptionPosition = [0, 1, 3];
+const HRADescriptionPosition = [0, 0, -3];
+const LADescriptionPosition = [0, 0, 3];
+const ERSDescriptionPosition = [0, -1, 3];
+const CEMDescriptionPosition = [0, -1, -3];
 
 function ObjModel(props) {
   const obj = useLoader(
@@ -72,16 +83,16 @@ function ObjModel(props) {
 
   // Animation: Floating effect
   useEffect(() => {
-    if (logoRef.current) {
-      // Floating effect
-      gsap.to(logoRef.current.position, {
-        y: "+=0.02",
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
-    }
+    // if (logoRef.current) {
+    //   // Floating effect
+    //   gsap.to(logoRef.current.position, {
+    //     x: "+=0.015",
+    //     duration: 2,
+    //     repeat: -1,
+    //     yoyo: true,
+    //     ease: "sine.inOut",
+    //   });
+    // }
 
     if (props.cameraState === "discoverTeam") {
       const blinkingMeshes = [];
@@ -102,20 +113,39 @@ function ObjModel(props) {
           });
 
           // Set up a material with a "radioactive green" effect
-          const radioactiveGreen = new THREE.Color(0x39ff14); // Bright green (hex code)
+          const radioactiveGreen = new THREE.Color("#2CFA1F"); // Bright green (hex code)
           const radioactiveEmissive = new THREE.Color(0x00ff00); // Strong green glow
+
+          const team_delays = {
+            it: 1.3,
+            sec: 1.3,
+            pem: 1.4,
+            dex: 1.4,
+            hra: 1.5,
+            la: 1.5,
+            cem: 1.6,
+            "ers sx": 1.6,
+            "ers dx": 1.6,
+          };
+
+          const duration = 0.3;
+          const delay = team_delays[child.name];
+          const repeatDelay = 0.0;
+          const repeat = 1;
+          const yoyo = true;
+          const ease = "sine.inOut";
 
           // GSAP animation for blinking effect
           gsap.to(child.material.color, {
             r: radioactiveGreen.r,
             g: radioactiveGreen.g,
             b: radioactiveGreen.b,
-            duration: 1.0,
-            delay: 1.0,
-            repeatDelay: 1.0,
-            repeat: 1,
-            yoyo: true,
-            ease: "sine.inOut",
+            duration: duration,
+            delay: delay,
+            repeatDelay: repeatDelay,
+            repeat: repeat,
+            yoyo: yoyo,
+            ease: ease,
             onComplete: () => {
               child.material.color.copy(originalColor);
             },
@@ -125,19 +155,19 @@ function ObjModel(props) {
             r: radioactiveEmissive.r,
             g: radioactiveEmissive.g,
             b: radioactiveEmissive.b,
-            duration: 1.0,
-            delay: 1.0,
-            repeatDelay: 1.0,
-            repeat: 1,
-            yoyo: true,
-            ease: "sine.inOut",
+            duration: duration,
+            delay: delay,
+            repeatDelay: repeatDelay,
+            repeat: repeat,
+            yoyo: yoyo,
+            ease: ease,
             onComplete: () => {
               child.material.emissive.copy(originalEmissive);
             },
           });
 
           // Make the glow more intense
-          child.material.emissiveIntensity = 3.5; // Adjust intensity (higher = brighter)
+          child.material.emissiveIntensity = 2.5; // Adjust intensity (higher = brighter)
         }
       });
 
@@ -184,6 +214,7 @@ function ObjModel(props) {
       itMesh.userData.isClickable = true; // Mark the mesh for debugging
       itMesh.onClick = () => {
         console.log("click on it");
+        props.setCameraState("infoIT");
       };
     }
 
@@ -192,6 +223,7 @@ function ObjModel(props) {
       dexMesh.userData.isClickable = true; // Mark the mesh for debugging
       dexMesh.onClick = () => {
         console.log("click on dex");
+        props.setCameraState("infoDEX");
       };
     }
 
@@ -200,6 +232,7 @@ function ObjModel(props) {
       laMesh.userData.isClickable = true; // Mark the mesh for debugging
       laMesh.onClick = () => {
         console.log("click on la");
+        props.setCameraState("infoLA");
       };
     }
 
@@ -208,6 +241,7 @@ function ObjModel(props) {
       secMesh.userData.isClickable = true; // Mark the mesh for debugging
       secMesh.onClick = () => {
         console.log("click on sec");
+        props.setCameraState("infoSEC");
       };
     }
 
@@ -216,6 +250,7 @@ function ObjModel(props) {
       pemMesh.userData.isClickable = true; // Mark the mesh for debugging
       pemMesh.onClick = () => {
         console.log("click on pem");
+        props.setCameraState("infoPEM");
       };
     }
 
@@ -224,6 +259,7 @@ function ObjModel(props) {
       ersSxMesh.userData.isClickable = true; // Mark the mesh for debugging
       ersSxMesh.onClick = () => {
         console.log("click on ers sx");
+        props.setCameraState("infoERS");
       };
     }
 
@@ -232,6 +268,7 @@ function ObjModel(props) {
       ersDxMesh.userData.isClickable = true; // Mark the mesh for debugging
       ersDxMesh.onClick = () => {
         console.log("click on ers dx");
+        props.setCameraState("infoERS");
       };
     }
 
@@ -240,6 +277,7 @@ function ObjModel(props) {
       cemMesh.userData.isClickable = true; // Mark the mesh for debugging
       cemMesh.onClick = () => {
         console.log("click on cem");
+        props.setCameraState("infoCEM");
       };
     }
 
@@ -248,6 +286,7 @@ function ObjModel(props) {
       hraMesh.userData.isClickable = true; // Mark the mesh for debugging
       hraMesh.onClick = () => {
         console.log("click on hra");
+        props.setCameraState("infoHRA");
       };
     }
   }, [obj]);
@@ -322,6 +361,7 @@ const Lights = () => {
 export default function SapienzaUMobile() {
   const [windowSize] = useOutletContext();
   const [cameraState, setCameraState] = useState("default");
+  const { t, i18n } = useTranslation();
 
   // Default camera settings used when the page is loaded
   const [cameraSettings, setCameraSettings] = useState({
@@ -339,7 +379,61 @@ export default function SapienzaUMobile() {
   const discoverTeamCameraSetting = {
     position: [50, 0, 0],
     target: [0, 0, 0],
-    zoom: 700,
+    zoom: windowSize < 450 ? 500 : windowSize < 630 ? 750 : 900,
+  };
+
+  const ITCameraSetting = {
+    position: [50, 0, -200],
+    target: ITDescriptionPosition,
+    zoom: 900,
+  };
+
+  const SECCameraSetting = {
+    position: [50, 0, -200],
+    target: SECDescriptionPosition,
+    zoom: 900,
+  };
+
+  const DEXCameraSetting = {
+    position: [50, 0, -200],
+    target: DEXDescriptionPosition,
+    zoom: 900,
+  };
+
+  const PEMCameraSetting = {
+    position: [50, 0, -200],
+    target: PEMDescriptionPosition,
+    zoom: 900,
+  };
+
+  const HRACameraSetting = {
+    position: [50, 0, -200],
+    target: HRADescriptionPosition,
+    zoom: 900,
+  };
+
+  const LACameraSetting = {
+    position: [50, 0, -200],
+    target: LADescriptionPosition,
+    zoom: 900,
+  };
+
+  const ERSCameraSetting = {
+    position: [50, 0, -200],
+    target: ERSDescriptionPosition,
+    zoom: 900,
+  };
+
+  const CEMCameraSetting = {
+    position: [50, 0, -200],
+    target: CEMDescriptionPosition,
+    zoom: 900,
+  };
+
+  const teamInfoCameraSetting = {
+    position: [50, 0, -200],
+    target: [0, 0, 3.0],
+    zoom: 900,
   };
 
   /**
@@ -380,6 +474,46 @@ export default function SapienzaUMobile() {
         finalPosition = [50, 10, 20];
         finalTarget = [0, 0, 0];
         finalZoom = 500;
+        break;
+      case "infoIT":
+        finalPosition = ITCameraSetting.position;
+        finalTarget = ITCameraSetting.target;
+        finalZoom = ITCameraSetting.zoom;
+        break;
+      case "infoDEX":
+        finalPosition = DEXCameraSetting.position;
+        finalTarget = DEXCameraSetting.target;
+        finalZoom = DEXCameraSetting.zoom;
+        break;
+      case "infoLA":
+        finalPosition = LACameraSetting.position;
+        finalTarget = LACameraSetting.target;
+        finalZoom = LACameraSetting.zoom;
+        break;
+      case "infoSEC":
+        finalPosition = SECCameraSetting.position;
+        finalTarget = SECCameraSetting.target;
+        finalZoom = SECCameraSetting.zoom;
+        break;
+      case "infoPEM":
+        finalPosition = PEMCameraSetting.position;
+        finalTarget = PEMCameraSetting.target;
+        finalZoom = PEMCameraSetting.zoom;
+        break;
+      case "infoERS":
+        finalPosition = ERSCameraSetting.position;
+        finalTarget = ERSCameraSetting.target;
+        finalZoom = ERSCameraSetting.zoom;
+        break;
+      case "infoCEM":
+        finalPosition = CEMCameraSetting.position;
+        finalTarget = CEMCameraSetting.target;
+        finalZoom = CEMCameraSetting.zoom;
+        break;
+      case "infoHRA":
+        finalPosition = HRACameraSetting.position;
+        finalTarget = HRACameraSetting.target;
+        finalZoom = HRACameraSetting.zoom;
         break;
       default:
         finalPosition = [50, 10, 20];
@@ -451,16 +585,48 @@ export default function SapienzaUMobile() {
   };
 
   /**
-   * This is what moves the camera effectively in the scene
+   * Controls for the camera that can be displayed and used on screen using the Leva library
    */
-  // useEffect(() => {
-  //   setCameraSettings((prev) => ({
-  //     ...prev,
-  //     position: [x, y, z],
-  //     target: [targetX, targetY, targetZ],
-  //     zoom,
-  //   }));
-  // }, [x, y, z, targetX, targetY, targetZ, zoom]);
+  const { x, y, z, targetX, targetY, targetZ, zoom } = useControls("Camera", {
+    x: { value: cameraSettings.position[0], min: -200, max: 200 },
+    y: { value: cameraSettings.position[1], min: -200, max: 200 },
+    z: { value: cameraSettings.position[2], min: -200, max: 200 },
+    targetX: { value: cameraSettings.target[0], min: -10, max: 10 },
+    targetY: { value: cameraSettings.target[1], min: -10, max: 10 },
+    targetZ: { value: cameraSettings.target[2], min: -10, max: 10 },
+    zoom: { value: cameraSettings.zoom, min: 100, max: 2000 },
+  });
+
+  /**
+   * This is what allows the camera to move in the scene with Leva
+   */
+  useEffect(() => {
+    setCameraSettings((prev) => ({
+      ...prev,
+      position: [x, y, z],
+      target: [targetX, targetY, targetZ],
+      zoom,
+    }));
+  }, [x, y, z, targetX, targetY, targetZ, zoom]);
+
+  const HtmlTeamDescription = ({ teamName, teamKey, position }) => {
+    return (
+      <Html
+        as="div"
+        center
+        style={{
+          padding: "20px",
+          borderRadius: "10px",
+          width: "80vw",
+          color: "white",
+        }}
+        position={position}
+      >
+        <h1 className="team-title">Il team {teamName}</h1>
+        <p className="team-description">{t(`joinus.${teamKey}`)}</p>
+      </Html>
+    );
+  };
 
   /**
    * Main return of the component
@@ -479,7 +645,7 @@ export default function SapienzaUMobile() {
         zIndex: 10,
       }}
     >
-      <Leva hidden={false} />
+      <Leva hidden={true} />
       <Canvas>
         {/* <OrbitControls /> */}
         {/* OrbitControls allows to move freely in the scene using the mouse clicks*/}
@@ -495,7 +661,51 @@ export default function SapienzaUMobile() {
         />
         <Lights />
         <Suspense fallback={null}>
-          <ObjModel windowSize={windowSize} cameraState={cameraState} />
+          <ObjModel
+            windowSize={windowSize}
+            cameraState={cameraState}
+            setCameraState={setCameraState}
+          />
+          <HtmlTeamDescription
+            teamName="IT"
+            teamKey="IT"
+            position={ITDescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="SEC"
+            teamKey="SEC"
+            position={SECDescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="PEM"
+            teamKey="PEM"
+            position={PEMDescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="DEX"
+            teamKey="DESIGN"
+            position={DEXDescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="L&A"
+            teamKey="LA"
+            position={LADescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="ERS"
+            teamKey="ERS"
+            position={ERSDescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="CEM"
+            teamKey="CEM"
+            position={CEMDescriptionPosition}
+          />
+          <HtmlTeamDescription
+            teamName="HRA"
+            teamKey="HRA"
+            position={HRADescriptionPosition}
+          />
         </Suspense>
       </Canvas>
       <div
@@ -522,6 +732,10 @@ export default function SapienzaUMobile() {
             borderRadius: "20px",
             border: "0",
             pointerEvents: "initial",
+            display:
+              cameraState === "default" || cameraState === "discoverTeam"
+                ? "block"
+                : "none",
           }}
         >
           {cameraState === "default" || cameraState === "discoverTeam" ? (
@@ -615,6 +829,17 @@ export default function SapienzaUMobile() {
           comunità della nostra Università.
         </p>
       </div>
+      {/* <div
+        id="overlay-text-mobile"
+        style={{
+          opacity: cameraState === "infoIT" ? 1 : 0,
+          transitionDelay: cameraState === "infoIT" ? "0.7s" : "0s",
+          pointerEvents: "none",
+        }}
+      >
+        <h1 className="team-title">Il team IT</h1>
+        <p className="team-description">{t("joinus.IT")}</p>
+      </div> */}
     </div>
   );
 }
