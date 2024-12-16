@@ -172,7 +172,7 @@ const BoardNameStyle = {
   color: "#fff",
 };
 
-export default function ExecutiveTeamCard({
+export default function BoardCard({
   id,
   nome,
   gruppo,

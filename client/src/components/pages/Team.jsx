@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ExecutiveTeamCard from "../components/ExecutiveTeamCard.jsx";
+import ExecutiveTeamCard from "../components/BoardCard.jsx";
 import axios from "axios";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
