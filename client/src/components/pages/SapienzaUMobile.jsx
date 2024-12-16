@@ -716,6 +716,7 @@ export default function SapienzaUMobile() {
           left: 0,
           width: "100%",
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          height: `calc(100svh - ${global.UTILS.NAV_HEIGHT})`,
           minHeight: "-webkit-fill-available",
           display: "flex",
           justifyContent: "center",
