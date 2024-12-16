@@ -710,14 +710,12 @@ export default function SapienzaUMobile() {
         </Suspense>
       </Canvas>
       <div
+        id="mobile-overlay-container"
         style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
-          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          height: `calc(100svh - ${global.UTILS.NAV_HEIGHT})`,
-          minHeight: "-webkit-fill-available",
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-end",

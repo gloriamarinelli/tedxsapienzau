@@ -1,6 +1,3 @@
-/**
-Create a media query for the screen size of 768px
-*/
 p {
   line-height: 22px;
 }
@@ -73,6 +70,16 @@ p {
   #overlay-text-left {
     left: 4vw;
     width: 650px;
+  }
+}
+
+#mobile-overlay-container {
+  height: calc(100vh - 90px);
+}
+
+@supports (height: 100dvh) {
+  #mobile-overlay-container {
+    height: calc(100dvh - 90px);
   }
 }
 
