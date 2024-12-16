@@ -316,7 +316,7 @@ export default function ExecutiveTeamCard({
                       <Chip
                         sx={{
                           "&:hover": {
-                            backgroundColor: "transparent",
+                            backgroundColor: "#191919",
                           },
                         }}
                         label={info.name}
