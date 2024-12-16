@@ -718,49 +718,50 @@ export default function SapienzaUMobile() {
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-end",
-          paddingBottom: "30px",
           pointerEvents: "none",
           gap: "50px",
         }}
       >
-        <button
-          onClick={handleDiscoverClick}
-          style={{
-            backgroundColor: "#eb0028",
-            color: "white",
-            padding: "10px 20px",
-            borderRadius: "20px",
-            border: "0",
-            pointerEvents: "initial",
-            display:
-              cameraState === "default" || cameraState === "discoverTeam"
-                ? "block"
-                : "none",
-          }}
-        >
-          {cameraState === "default" || cameraState === "discoverTeam" ? (
-            "Scopri cos'è SapienzaU"
-          ) : (
-            <FontAwesomeIcon icon={faArrowLeft} />
-          )}
-        </button>
-        <button
-          onClick={handleDiscoverTeamClick}
-          style={{
-            backgroundColor: "#eb0028",
-            color: "white",
-            padding: "10px 20px",
-            borderRadius: "20px",
-            border: "0",
-            pointerEvents: "initial",
-          }}
-        >
-          {cameraState === "default" || cameraState === "discover" ? (
-            "Scopri i Team"
-          ) : (
-            <FontAwesomeIcon icon={faArrowLeft} />
-          )}
-        </button>
+        <div id="mobile-buttons-container">
+          <button
+            onClick={handleDiscoverClick}
+            style={{
+              backgroundColor: "#eb0028",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+              display:
+                cameraState === "default" || cameraState === "discoverTeam"
+                  ? "block"
+                  : "none",
+            }}
+          >
+            {cameraState === "default" || cameraState === "discoverTeam" ? (
+              "Scopri cos'è SapienzaU"
+            ) : (
+              <FontAwesomeIcon icon={faArrowLeft} />
+            )}
+          </button>
+          <button
+            onClick={handleDiscoverTeamClick}
+            style={{
+              backgroundColor: "#eb0028",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "20px",
+              border: "0",
+              pointerEvents: "initial",
+            }}
+          >
+            {cameraState === "default" || cameraState === "discover" ? (
+              "Scopri i Team"
+            ) : (
+              <FontAwesomeIcon icon={faArrowLeft} />
+            )}
+          </button>
+        </div>
       </div>
       <div
         id="overlay-text"
