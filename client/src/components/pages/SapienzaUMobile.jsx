@@ -367,8 +367,8 @@ export default function SapienzaUMobile() {
   // Default camera settings used when the page is loaded
   const [cameraSettings, setCameraSettings] = useState({
     position: [50, 10, 20],
-    target: [0, 0, 0],
-    zoom: 500,
+    target: [0, -0.075, 0],
+    zoom: 300,
   });
 
   const discoverCameraSetting = {
@@ -379,7 +379,7 @@ export default function SapienzaUMobile() {
 
   const discoverTeamCameraSetting = {
     position: [50, 0, 0],
-    target: [0, 0, 0],
+    target: [0, -0.075, 0],
     zoom: windowSize < 450 ? 500 : windowSize < 630 ? 750 : 900,
   };
 
@@ -473,7 +473,7 @@ export default function SapienzaUMobile() {
         break;
       case "default":
         finalPosition = [50, 10, 20];
-        finalTarget = [0, 0, 0];
+        finalTarget = [0, -0.075, 0];
         finalZoom = 500;
         break;
       case "infoIT":
@@ -620,6 +620,10 @@ export default function SapienzaUMobile() {
           borderRadius: "10px",
           width: "90vw",
           color: "white",
+          position: "absolute",
+          maxHeight: "60vh",
+          overflow: "scroll",
+          zIndex: 1,
         }}
         position={position}
       >
@@ -721,6 +725,7 @@ export default function SapienzaUMobile() {
           alignItems: "flex-end",
           pointerEvents: "none",
           gap: "50px",
+          zIndex: 100,
         }}
       >
         <div id="mobile-buttons-container">
