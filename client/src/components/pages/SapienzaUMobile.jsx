@@ -18,6 +18,7 @@ import { faArrowLeft, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { Trans, useTranslation } from "react-i18next";
 
 import "../../resources/styles/sapienzaustyle.css";
+import { fill } from "three/src/extras/TextureUtils.js";
 
 const verdeSEC = "#95c459";
 const violaPEM = "#bb5c9e";
@@ -714,7 +715,8 @@ export default function SapienzaUMobile() {
           top: 0,
           left: 0,
           width: "100%",
-          height: "100%",
+          height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+          WebkitFillAvailable: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-end",
