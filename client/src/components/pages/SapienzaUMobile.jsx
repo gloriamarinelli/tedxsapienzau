@@ -623,7 +623,7 @@ export default function SapienzaUMobile() {
           position: "absolute",
           maxHeight: "60vh",
           overflow: "scroll",
-          zIndex: 1,
+          pointerEvents: "none",
         }}
         position={position}
       >
