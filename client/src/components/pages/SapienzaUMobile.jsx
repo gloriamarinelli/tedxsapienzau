@@ -734,12 +734,14 @@ export default function SapienzaUMobile() {
               pointerEvents: "initial",
               display:
                 cameraState === "default" || cameraState === "discoverTeam"
-                  ? "block"
+                  ? "flex"
                   : "none",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             {cameraState === "default" || cameraState === "discoverTeam" ? (
-              "Scopri cos'è SapienzaU"
+              "Scopri SapienzaU"
             ) : (
               <FontAwesomeIcon icon={faArrowLeft} />
             )}
@@ -753,6 +755,9 @@ export default function SapienzaUMobile() {
               borderRadius: "20px",
               border: "0",
               pointerEvents: "initial",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             {cameraState === "default" || cameraState === "discover" ? (
@@ -772,7 +777,7 @@ export default function SapienzaUMobile() {
           maxWidth: "100vw",
           padding: "20px 50px 50px 50px",
           height: `calc(100% - 100px)`,
-          pointerEvents: "none",
+          pointerEvents: cameraState === "discover" ? "initial" : "none",
           color: "#fff",
           opacity: cameraState === "discover" ? 1 : 0,
           transition: "opacity 0.5s ease-in-out",
@@ -830,17 +835,6 @@ export default function SapienzaUMobile() {
           comunità della nostra Università.
         </p>
       </div>
-      {/* <div
-        id="overlay-text-mobile"
-        style={{
-          opacity: cameraState === "infoIT" ? 1 : 0,
-          transitionDelay: cameraState === "infoIT" ? "0.7s" : "0s",
-          pointerEvents: "none",
-        }}
-      >
-        <h1 className="team-title">Il team IT</h1>
-        <p className="team-description">{t("joinus.IT")}</p>
-      </div> */}
     </div>
   );
 }
