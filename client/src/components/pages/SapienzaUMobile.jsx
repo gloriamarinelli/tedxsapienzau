@@ -647,7 +647,6 @@ export default function SapienzaUMobile() {
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        zIndex: 10,
       }}
     >
       <Leva hidden={true} />
@@ -725,7 +724,7 @@ export default function SapienzaUMobile() {
           alignItems: "flex-end",
           pointerEvents: "none",
           gap: "50px",
-          zIndex: 100,
+          zIndex: 8,
         }}
       >
         <div id="mobile-buttons-container">
