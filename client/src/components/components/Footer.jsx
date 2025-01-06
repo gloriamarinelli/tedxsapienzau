@@ -168,13 +168,13 @@ export default function Footer() {
           </b>
           <div style={{ lineHeight: "10px", fontSize: "16px" }}>
             <p className="secondary-text">
+              <GreyLink text="Awards" link={"/eventi/awards2024"} />
+            </p>
+            <p className="secondary-text">
               <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
             </p>
             <p className="secondary-text" style={{ marginTop: "5px" }}>
               <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
-            </p>
-            <p className="secondary-text">
-              <GreyLink text="Awards" link={"/eventi/awards2024"} />
             </p>
           </div>
           <b>
