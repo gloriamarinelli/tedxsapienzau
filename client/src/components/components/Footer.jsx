@@ -157,6 +157,7 @@ export default function Footer() {
             flexDirection: "column",
             justifyContent: "space-evenly",
             fontSize: "20px",
+            fontFamily: "Fira Sans Extra Condensed",
           }}
         >
           <b>
@@ -199,7 +200,7 @@ export default function Footer() {
             fontFamily: "Fira Sans Extra Condensed",
           }}
         >
-          <b>
+          <b style={{ fontFamily: "Fira Sans Extra Condensed" }}>
             <Trans i18nKey="footer.join_us" lang={i18n.language} />
           </b>
           <a className="link" href={"/Newsletter"}>
@@ -244,7 +245,7 @@ export default function Footer() {
           justifyContent: "space-between",
           width: "95%",
           flexWrap: "wrap",
-          fontFamily: "Fira Sans Extra Condensed"
+          fontFamily: "Fira Sans Extra Condensed",
         }}
       >
         <div>
