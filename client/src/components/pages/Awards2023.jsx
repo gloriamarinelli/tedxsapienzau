@@ -22,8 +22,7 @@ export default function Awards() {
         className="header-awards"
         style={{
           textAlign: "center",
-          height: "45vh",
-          marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
+          height: "45vh"
         }}
       ></header>
 

@@ -82,7 +82,7 @@ export default function Footer() {
         flexDirection: "column",
         padding: "24px",
         gap: "15px",
-        fontFamily: "Fira Sans Extra Condensed",
+        fontFamily: "Fira Sans Extra Condensed, sans-serif",
       }}
     >
       <footer
@@ -111,7 +111,7 @@ export default function Footer() {
               maxWidth: "385px",
               fontSize: "16px",
               lineHeight: "20px",
-              fontFamily: "Fira Sans Extra Condensed",
+              fontFamily: "Fira Sans Extra Condensed, sans-serif",
             }}
           >
             {t("footer.description")}
@@ -167,14 +167,14 @@ export default function Footer() {
               style={{ marginBottom: "10px" }}
             />
           </b>
-          <div style={{ fontSize: "16px" }}>
+          <div style={{ lineHeight: "5px", fontSize: "16px" }}>
             <p className="secondary-text">
               <GreyLink text="Awards" link={"/eventi/awards2024"} />
             </p>
             <p className="secondary-text">
               <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
             </p>
-            <p className="secondary-text">
+            <p className="secondary-text" style={{ marginTop: "5px" }}>
               <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function Footer() {
             flexDirection: "column",
             gap: "20px",
             fontSize: "18px",
-            fontFamily: "Fira Sans Extra Condensed",
+            fontFamily: "Fira Sans Extra Condensed"
           }}
         >
           <b style={{ fontFamily: "Fira Sans Extra Condensed" }}>
@@ -218,13 +218,8 @@ export default function Footer() {
               Join Us
             </button>
           </a>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              fontFamily: "Fira Sans Extra Condensed",
-            }}
-          >
+          <div style={{ display: "flex", flexDirection: "column",               fontFamily: "Fira Sans Extra Condensed",
+ }}>
             <Trans i18nKey="footer.info1" lang={i18n.language} />
             <p>
               {t("footer.info2")}{" "}
@@ -246,6 +241,7 @@ export default function Footer() {
           width: "95%",
           flexWrap: "wrap",
           fontFamily: "Fira Sans Extra Condensed",
+
         }}
       >
         <div>
