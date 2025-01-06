@@ -166,7 +166,7 @@ export default function Footer() {
               style={{ marginBottom: "10px" }}
             />
           </b>
-          <div style={{ lineHeight: "5px", fontSize: "16px" }}>
+          <div style={{ fontSize: "16px" }}>
             <p className="secondary-text">
               <GreyLink text="Awards" link={"/eventi/awards2024"} />
             </p>
@@ -196,7 +196,7 @@ export default function Footer() {
             flexDirection: "column",
             gap: "20px",
             fontSize: "18px",
-            fontFamily: "Fira Sans Extra Condensed"
+            fontFamily: "Fira Sans Extra Condensed",
           }}
         >
           <b>
@@ -217,8 +217,13 @@ export default function Footer() {
               Join Us
             </button>
           </a>
-          <div style={{ display: "flex", flexDirection: "column",               fontFamily: "Fira Sans Extra Condensed",
- }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              fontFamily: "Fira Sans Extra Condensed",
+            }}
+          >
             <Trans i18nKey="footer.info1" lang={i18n.language} />
             <p>
               {t("footer.info2")}{" "}
@@ -239,8 +244,7 @@ export default function Footer() {
           justifyContent: "space-between",
           width: "95%",
           flexWrap: "wrap",
-          fontFamily: "Fira Sans Extra Condensed",
-
+          fontFamily: "Fira Sans Extra Condensed"
         }}
       >
         <div>
