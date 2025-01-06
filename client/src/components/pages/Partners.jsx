@@ -17,34 +17,58 @@ export default function Partners() {
 
   return (
     <div
+      id="external_div"
       className="headerSection"
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "row",
+        flexDirection: "column",
       }}
     >
-      <PartnerCard24
-        title={"Unicredit"}
-        imgName={"unicredit.webp"}
-        text={"ciao"}
-      />
-      <PartnerCard24
-        title={"Novo Nordisk"}
-        imgName={"novo_nordisk.png"}
-        text={"ciao"}
-      />
-      <PartnerCard24
-        title={"Autocentri Balduina"}
-        imgName={"balduina.webp"}
-        text={"ciao"}
-      />
-      <PartnerCard24
-        title={"Hyper Foundry"}
-        imgName={"hyper.jpg"}
-        text={"ciao"}
-      />
+      <div
+        id="title_div"
+        className="headerSection"
+        style={{
+          color: "white",
+          marginTop: "25px",
+        }}
+      >
+        <h1>Partners</h1>
+      </div>
+      <div
+        id="partners_div"
+        className="headerSection"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "35px",
+          width: "90%", // 110% to match footer's width
+        }}
+      >
+        <PartnerCard24
+          title={"Unicredit"}
+          imgName={"unicredit.webp"}
+          text={"ciao"}
+        />
+        <PartnerCard24
+          title={"Novo Nordisk"}
+          imgName={"novo_nordisk.png"}
+          text={"ciao"}
+        />
+        <PartnerCard24
+          title={"Autocentri Balduina"}
+          imgName={"balduina.webp"}
+          text={"ciao"}
+        />
+        <PartnerCard24
+          title={"Hyper Foundry"}
+          imgName={"hyper.jpg"}
+          text={"ciao"}
+        />
+      </div>
     </div>
   );
 }
