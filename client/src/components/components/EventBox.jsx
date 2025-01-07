@@ -13,7 +13,10 @@ export default function EventBox({
 
   return (
     <div
-      className="bento-box"
+      onClick={() => {
+        window.location.href = linkTo;
+      }}
+      className="bento-box event-box"
       style={{
         width: "%",
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),url(${photo})`,
@@ -23,6 +26,7 @@ export default function EventBox({
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
+        cursor: "pointer",
       }}
     >
       <h2>{date}</h2>
