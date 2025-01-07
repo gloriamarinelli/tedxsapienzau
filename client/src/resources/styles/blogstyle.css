@@ -4,6 +4,41 @@ body {
   --rosso-ted: #eb0028;
 }
 
+.headerSection {
+  margin-top: 82px;
+  height: 411px;
+  top: 124px;
+  left: 32px;
+  gap: 0px;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  place-items: center;
+  display: grid;
+  background-color: black !important;
+}
+
+.headerTitleSection {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.headerTitle {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  color: white !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+.headerSubTitle {
+  font-size: 20px;
+  font-style: italic;
+}
+
 /** 
 * ARTICLE STYLES
 **/
