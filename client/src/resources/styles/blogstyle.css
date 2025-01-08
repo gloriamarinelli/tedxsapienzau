@@ -34,6 +34,22 @@ body {
   font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
+.headerTitleSectionMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.headerTitleMobile {
+  font-size: 55px;
+  font-weight: bold;
+  color: white !important;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
 .headerSubTitle {
   font-size: 20px;
   font-style: italic;

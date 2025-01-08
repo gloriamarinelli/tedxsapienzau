@@ -207,58 +207,21 @@ export default function Blog() {
             style={{
               marginTop: global.UTILS.NAV_HEIGHT,
               backgroundColor: global.COLORS.NERO,
-              padding: "10px",
+              padding: "25px",
               fontFamily: "Fira Sans Extra Condensed, sans-serif",
               placeItems: "center",
               display: "flex",
+              justifyContent: "center",
             }}
           >
             <div
+              className="headerTitleSectionMobile"
               style={{
-                width: "100%",
-                height: "90%",
                 padding: global.UTILS.BENTO_BOX_PADDING,
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                backgroundImage: `url(${backgroundBlog})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "grid",
-
-                textAlign: "left",
               }}
             >
-              <h1
-                className="font-weight-bold mt-5 mb-5"
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  color: global.COLORS.BIANCO,
-                  textShadow: "3px 3px #000",
-                }}
-              >
-                IDEAS CHANGE EVERYTHING
-              </h1>
-              <h5
-                className="fira-sans"
-                style={{
-                  textAlign: "left",
-                  fontSize: "4vh",
-                  fontWeight: 300,
-                  maxWidth: "30ch",
-                  color: "#FFFFFF",
-                  textShadow: "3px 3px #000",
-                }}
-              >
-                Le{" "}
-                <strong
-                  style={{
-                    color: "#EB0028",
-                  }}
-                >
-                  idee
-                </strong>{" "}
-                per cambiare il mondo
-              </h5>
+              <h1 className="font-weight-bold headerTitleMobile">BLOG</h1>
+              <p className="headerSubTitle">Ideas change everything</p>
             </div>
           </section>
           {!isLoading ? (
