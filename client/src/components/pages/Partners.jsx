@@ -51,22 +51,22 @@ export default function Partners() {
         <PartnerCard24
           title={"Unicredit"}
           imgName={"unicredit.webp"}
-          text={"ciao"}
+          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"}
         />
         <PartnerCard24
           title={"Novo Nordisk"}
           imgName={"novo_nordisk.png"}
-          text={"ciao"}
+          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"}
         />
         <PartnerCard24
           title={"Autocentri Balduina"}
           imgName={"balduina.webp"}
-          text={"ciao"}
+          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"}
         />
         <PartnerCard24
           title={"Hyper Foundry"}
           imgName={"hyper.jpg"}
-          text={"ciao"}
+          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"}
         />
       </div>
     </div>
