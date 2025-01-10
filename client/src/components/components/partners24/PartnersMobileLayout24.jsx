@@ -145,6 +145,26 @@ export default function PartnersMobileLayout24() {
                     <li>{t("partners.14th_st_el_4")}</li>
                     <li>{t("partners.14th_st_el_5")}</li>
                   </ul>
+                  <button
+                    style={{
+                      borderRadius: "10px",
+                      border: "none",
+                      backgroundColor: global.COLORS.ROSSO_TED,
+                    }}
+                  >
+                    <a
+                      href="mailto:tedx.sapienzau@uniroma1.it"
+                      style={{
+                        fontFamily: global.UTILS.FONT_FAMILY,
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                        color: "white",
+                        padding: "50px"
+                      }}
+                    >
+                      {t("partners.14th_st_el_6")}
+                    </a>
+                  </button>
                 </div>
               </div>
             </div>
