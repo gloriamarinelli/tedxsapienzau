@@ -24,7 +24,7 @@ export default function PartnersCounter() {
       onMouseLeave={() => setHidden(true)}
       style={{
         borderRadius: global.UTILS.BENTO_BOX_PADDING,
-        backgroundColor: hidden ? "#191919" : "#eb0028",
+        backgroundColor: "#191919",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -37,7 +37,7 @@ export default function PartnersCounter() {
       <h1
         className="font-weight-bold"
         style={{
-          color: hidden ? "#eb0028" : "#FFF",
+          color: "#eb0028",
           fontSize: fontSize,
           fontWeight: "bold",
           fontFamily: "Fira sans Extra Condensed",
