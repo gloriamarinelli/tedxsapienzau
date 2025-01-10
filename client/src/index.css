@@ -421,6 +421,15 @@ code {
   padding: 40px;
 }
 
+.event-box {
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.event-box:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px lemonchiffon;
+}
+
 .secondary-text {
   color: #ffffffcc;
 }

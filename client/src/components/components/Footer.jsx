@@ -157,6 +157,7 @@ export default function Footer() {
             flexDirection: "column",
             justifyContent: "space-evenly",
             fontSize: "20px",
+            fontFamily: "Fira Sans Extra Condensed",
           }}
         >
           <b>
@@ -166,15 +167,15 @@ export default function Footer() {
               style={{ marginBottom: "10px" }}
             />
           </b>
-          <div style={{ lineHeight: "10px", fontSize: "16px" }}>
+          <div style={{ lineHeight: "5px", fontSize: "16px" }}>
+            <p className="secondary-text">
+              <GreyLink text="Awards" link={"/eventi/awards2024"} />
+            </p>
             <p className="secondary-text">
               <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
             </p>
             <p className="secondary-text" style={{ marginTop: "5px" }}>
               <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
-            </p>
-            <p className="secondary-text">
-              <GreyLink text="Awards" link={"/eventi/awards2024"} />
             </p>
           </div>
           <b>
@@ -196,9 +197,10 @@ export default function Footer() {
             flexDirection: "column",
             gap: "20px",
             fontSize: "18px",
+            fontFamily: "Fira Sans Extra Condensed"
           }}
         >
-          <b>
+          <b style={{ fontFamily: "Fira Sans Extra Condensed" }}>
             <Trans i18nKey="footer.join_us" lang={i18n.language} />
           </b>
           <a className="link" href={"/Newsletter"}>
@@ -216,7 +218,8 @@ export default function Footer() {
               Join Us
             </button>
           </a>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{ display: "flex", flexDirection: "column",               fontFamily: "Fira Sans Extra Condensed",
+ }}>
             <Trans i18nKey="footer.info1" lang={i18n.language} />
             <p>
               {t("footer.info2")}{" "}
@@ -237,6 +240,8 @@ export default function Footer() {
           justifyContent: "space-between",
           width: "95%",
           flexWrap: "wrap",
+          fontFamily: "Fira Sans Extra Condensed",
+
         }}
       >
         <div>

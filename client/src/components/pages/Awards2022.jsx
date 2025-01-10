@@ -22,7 +22,6 @@ export default function Awards2022() {
         style={{
           textAlign: "center",
           height: "45vh",
-          marginTop: global.UTILS.SOCIAL_NAV_HEIGHT,
         }}
       ></header>
 

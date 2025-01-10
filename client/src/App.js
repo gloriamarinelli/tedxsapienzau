@@ -40,6 +40,7 @@ import Countdown2024 from "./components/pages/Countdown2024";
 import HomeAwards24 from "./components/pages/HomeAwards24";
 import SapienzaU from "./components/pages/SapienzaUDesktop";
 import AssociazioneSapienzaU from "./components/components/AssociazioneSapienzaU";
+import NavbarComponentNew from "./components/components/NavbarComponentNew";
 
 const router = createBrowserRouter([
   {
@@ -123,7 +124,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/eventi/awards2024",
-        element: <Awards2024/>,
+        element: <Awards2024 />,
       },
 
       {
@@ -156,7 +157,8 @@ function HomeManager() {
 
   return (
     <>
-      <NavbarComponent windowSize={windowSize} />
+      {/* <NavbarComponent windowSize={windowSize} /> */}
+      <NavbarComponentNew />
       {/* <ScrollToTop /> */}
       <Outlet context={[windowSize, setWindowSize]} />
       <Footer />

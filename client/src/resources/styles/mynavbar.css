@@ -1,0 +1,157 @@
+.my-navbar {
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  font-family: "Fira Sans Extra Condensed";
+  font-size: "medium";
+}
+
+.navbar-middle-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navbar-middle-section li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-middle-section li ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-tools-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-tools-section li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/********** Mobile style **********/
+
+.my-navbar-mobile {
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  font-family: "Fira Sans Extra Condensed";
+  font-size: "medium";
+}
+
+#mobile-menu {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 0px 24px;
+}
+
+#mobile-menu h1 {
+  color: white;
+  text-decoration: none;
+  font-family: "Fira Sans Extra Condensed";
+  font-size: "medium";
+  text-transform: uppercase;
+  font-size: 32px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  padding: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.side-menu {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 0px 24px;
+  font-family: "Fira Sans Extra Condensed";
+  font-size: "medium";
+}
+
+/* From Uiverse.io by Cevorob */
+.burger {
+  position: relative;
+  width: 35px;
+  height: 25px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
