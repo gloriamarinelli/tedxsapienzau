@@ -133,8 +133,8 @@
 /* PartnerCard24 */
 .card-main-container {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 230px;
+  height: 230px;
   color: white;
   background-color: #191919;
   margin: 0px 3px;
@@ -175,6 +175,9 @@
   overflow: hidden;
   background: white;
   color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-back {

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartnerCard24({ title, imgName, text }) {
+export default function PartnerCard24({ name, imgName, descr }) {
   return (
     <>
       <div className="card-main-container">
@@ -18,9 +18,9 @@ export default function PartnerCard24({ title, imgName, text }) {
               }}
             />
           </div>
-          <div className="card-back">{text}</div>
+          <div className="card-back">{descr}</div>
         </div>
-        <div style={{ fontWeight: "bold" }}>{title}</div>
+        <div style={{ fontWeight: "bold" }}>{name}</div>
       </div>
     </>
   );

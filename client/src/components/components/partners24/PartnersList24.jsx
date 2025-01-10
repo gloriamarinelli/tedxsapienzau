@@ -5,6 +5,7 @@ import { useOutletContext } from "react-router";
 /* -------------------- components and resources import -------------------- */
 import global from "../../../resources/global.json";
 import PartnerCard24 from "../PartnerCard24";
+import partnersInfo from "./partners_info_list.json";
 
 /* -------------------- css files import -------------------- */
 import "../../../resources/styles/partnerstyle.css";
@@ -51,41 +52,13 @@ export default function PartnersList24() {
           width: "90%", // 110% to match footer's width
         }}
       >
-        <PartnerCard24
-          title={"Unicredit"}
-          imgName={"unicredit.webp"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"
-          }
-        />
-        <PartnerCard24
-          title={"Novo Nordisk"}
-          imgName={"novo_nordisk.png"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"
-          }
-        />
-        <PartnerCard24
-          title={"Autocentri Balduina"}
-          imgName={"balduina.webp"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"
-          }
-        />
-        <PartnerCard24
-          title={"Hyper Foundry"}
-          imgName={"hyper.jpg"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"
-          }
-        />
-        <PartnerCard24
-          title={"Your Personal Trainer"}
-          imgName={"ytp.png"}
-          text={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu"
-          }
-        />
+        {partnersInfo.partners.map((partner) => (
+          <PartnerCard24
+            name={partner.name}
+            imgName={partner.imgName}
+            descr={partner.descr}
+          />
+        ))}
       </div>
     </div>
   );

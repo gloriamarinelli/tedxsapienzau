@@ -1,0 +1,33 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "name": "Unicredit",
+      "imgName": "unicredit.webp",
+      "descr": "UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa."
+    },
+    {
+      "id": 2,
+      "name": "Novo Nordisk",
+      "imgName": "novo_nordisk.png",
+      "descr": "..."
+    },
+    {
+        "id": 3,
+        "name": "Autocentri Balduina",
+        "imgName": "balduina.webp",
+        "descr": "Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche. La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre."},
+      {
+        "id": 4,
+        "name": "Hyper Foundry",
+        "imgName": "hyper.png",
+        "descr": "Hyper Foundry è la startup innovativa e studio creativo che combina design e tecnologia per creare soluzioni digitali all’avanguardia. Con un approccio multidisciplinare integrato, supporta aziende e startup nel realizzare progetti concreti e scalabili, specializzati in interfacce avanzate, sviluppo software e avatar AI personalizzati."
+      },
+      {
+        "id": 5,
+        "name": "Your Personal Trainer",
+        "imgName": "ypt.png",
+        "descr": "..."
+      }
+  ]
+}
