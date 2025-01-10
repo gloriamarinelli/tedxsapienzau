@@ -45,7 +45,7 @@ export default function Partners() {
           gap: "20px",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: "35px",
+          margin: "35px 0",
           height: "auto",
           width: "90%", // 110% to match footer's width
         }}
