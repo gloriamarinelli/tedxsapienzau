@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../../resources/global.json";
 import PartnersSlider from "./PartnersSlider";
+import PartnersList24 from "./PartnersList24";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../../images/partners/mobile/2.webp";
@@ -38,6 +39,7 @@ export default function PartnersMobileLayout24() {
           }}
         ></div>
       </section>
+      <PartnersList24 />
       <div
         id="top-gradient"
         style={{
