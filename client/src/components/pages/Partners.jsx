@@ -18,7 +18,9 @@ export default function Partners() {
   //const [activeYear] = useState(24); // active year variable
   const [windowSize] = useOutletContext(); // window's size variable
 
-  return (
-    windowSize > global.UTILS.TABLET_WIDTH ? <PartnersDesktopLayout24 /> : <PartnersMobileLayout24 />
+  return windowSize > global.UTILS.TABLET_WIDTH ? (
+    <PartnersDesktopLayout24 />
+  ) : (
+    <PartnersMobileLayout24 />
   );
 }

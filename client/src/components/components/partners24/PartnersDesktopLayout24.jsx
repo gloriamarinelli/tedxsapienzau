@@ -3,7 +3,7 @@ import PartnersCounter from "./PartnersCounter";
 import { useOutletContext } from "react-router";
 import global from "../../../resources/global.json";
 import PartnersSlider from "./PartnersSlider";
-import PartnersList24 from "./PartnersList24"
+import PartnersList24 from "./PartnersList24";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../../images/partners/desktop/3.webp";
