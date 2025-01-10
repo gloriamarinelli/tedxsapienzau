@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../../resources/global.json";
 import PartnersSlider from "./PartnersSlider";
+import PartnersList24 from "./PartnersList24";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../../images/partners/mobile/2.webp";
@@ -18,7 +19,7 @@ export default function PartnersMobileLayout24() {
         style={{
           backgroundColor: global.COLORS.NERO,
           paddingTop: "5vh",
-          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          fontFamily: global.UTILS.FONT_FAMILY,
           placeItems: "center",
           display: "grid",
         }}
@@ -38,6 +39,7 @@ export default function PartnersMobileLayout24() {
           }}
         ></div>
       </section>
+      <PartnersList24 />
       <div
         id="top-gradient"
         style={{
@@ -143,6 +145,26 @@ export default function PartnersMobileLayout24() {
                     <li>{t("partners.14th_st_el_4")}</li>
                     <li>{t("partners.14th_st_el_5")}</li>
                   </ul>
+                  <button
+                    style={{
+                      borderRadius: "10px",
+                      border: "none",
+                      backgroundColor: global.COLORS.ROSSO_TED,
+                    }}
+                  >
+                    <a
+                      href="mailto:tedx.sapienzau@uniroma1.it"
+                      style={{
+                        fontFamily: global.UTILS.FONT_FAMILY,
+                        fontWeight: "bold",
+                        textDecoration: "none",
+                        color: "white",
+                        padding: "50px"
+                      }}
+                    >
+                      {t("partners.14th_st_el_6")}
+                    </a>
+                  </button>
                 </div>
               </div>
             </div>

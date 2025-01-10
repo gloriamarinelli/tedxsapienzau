@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router";
 import { useTranslation } from "react-i18next";
 import global from "../../../resources/global.json";
 import "../../../resources/styles/partnersslider.css";
-import partnersInfo from "./partners_info.json";
+import partnersInfo from "./partners_info_slider.json";
 
 export default function PartnersSlider() {
   const { t } = useTranslation(); // translation variable
@@ -26,7 +26,7 @@ export default function PartnersSlider() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              fontFamily: global.UTILS.FONT_FAMILY,
               fontSize: "2.5em",
               color: "white",
             }}
@@ -61,7 +61,7 @@ export default function PartnersSlider() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              fontFamily: global.UTILS.FONT_FAMILY,
               fontSize: "2.5em",
               color: "white",
             }}
