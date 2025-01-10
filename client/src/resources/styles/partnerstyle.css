@@ -160,7 +160,8 @@
   transition: all 0.8s ease;
 }
 
-.card-inner-container:hover {
+.card-inner-container:hover,
+.mobile-rotated {
   transform: rotateY(180deg);
 }
 
