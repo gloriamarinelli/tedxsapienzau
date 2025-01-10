@@ -19,7 +19,7 @@ export default function PartnersMobileLayout24() {
         style={{
           backgroundColor: global.COLORS.NERO,
           paddingTop: "5vh",
-          fontFamily: "Fira Sans Extra Condensed, sans-serif",
+          fontFamily: global.UTILS.FONT_FAMILY,
           placeItems: "center",
           display: "grid",
         }}

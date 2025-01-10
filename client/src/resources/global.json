@@ -24,7 +24,8 @@
     "TABLET_WIDTH": "768",
     "BIG_TABLET_WIDTH": "820",
     "BENTO_BOX_PADDING": "24px",
-    "HALF_BENTO_BOX_PADDING": "12px"
+    "HALF_BENTO_BOX_PADDING": "12px",
+    "FONT_FAMILY": "Fira Sans Extra Condensed, sans-serif"
   },
   "CONNECTION": {
     "ENDPOINT": "https://tedxsapienzau-backend.herokuapp.com/"

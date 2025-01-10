@@ -26,7 +26,7 @@ export default function PartnersSlider() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              fontFamily: global.UTILS.FONT_FAMILY,
               fontSize: "2.5em",
               color: "white",
             }}
@@ -61,7 +61,7 @@ export default function PartnersSlider() {
           <h2
             className="section-heading"
             style={{
-              fontFamily: "Fira Sans Extra Condensed, sans-serif",
+              fontFamily: global.UTILS.FONT_FAMILY,
               fontSize: "2.5em",
               color: "white",
             }}
