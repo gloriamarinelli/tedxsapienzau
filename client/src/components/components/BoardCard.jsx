@@ -101,9 +101,9 @@ const BoardInfos = [
   },
   {
     team: "segr",
-    name: "Giulia Riccardi",
+    name: "Matilde Bernardini",
     linkedin: "www",
-    path: "GiuliaRiccardi",
+    path: "MatildeBernardini",
     role: "Segreteria Generale",
   },
   {
@@ -136,9 +136,9 @@ const BoardInfos = [
   },
   {
     team: "ers",
-    name: "Claudio Mantuano",
+    name: "Alessandra Amicucci",
     linkedin: "www",
-    path: "ClaudioMantuano",
+    path: "AlessandraAmicucci",
     role: "External Relations & Sponsor",
   },
   {
@@ -150,9 +150,9 @@ const BoardInfos = [
   },
   {
     team: "cem",
-    name: "Matilde Bernardini",
+    name: "Niccolò Testa",
     linkedin: "www",
-    path: "MatildeBernardini",
+    path: "NiccoloTesta",
     role: "Communication, Editorial, Marketing & Media",
   },
   {

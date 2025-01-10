@@ -169,16 +169,16 @@ export default function Team2022() {
 
       /* priority order */
       const priorityOrder = [
-        "Ilaria Cataldi",
-        "Matteo Orsini",
-        "Giulia Riccardi",
-        "Gloria Marinelli",
+        "Organizer",
+        "Co-organizer",
+        "Segreteria Generale",
+        "IT & Website",
       ];
 
       /* custom sorting function (priority order) */
       const customSort = (a, b) => {
-        const indexA = priorityOrder.indexOf(a.nome);
-        const indexB = priorityOrder.indexOf(b.nome);
+        const indexA = priorityOrder.indexOf(a.ruolo);
+        const indexB = priorityOrder.indexOf(b.ruolo);
 
         /* both names are in the priorityOrder list, the first found has more priority */
         if (indexA !== -1 && indexB !== -1) {
