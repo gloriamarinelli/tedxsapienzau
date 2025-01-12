@@ -3,6 +3,7 @@ import PartnersCounter from "./PartnersCounter";
 import { useOutletContext } from "react-router";
 import global from "../../../resources/global.json";
 import PartnersSlider from "./PartnersSlider";
+import PartnersList24 from "./PartnersList24";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../../images/partners/desktop/3.webp";
@@ -17,6 +18,7 @@ export default function PartnersDesktopLayout24() {
 
   return (
     <div style={{ backgroundColor: "#000" }}>
+      <PartnersList24 />
       {/* first row */}
       <section
         style={{
@@ -24,7 +26,7 @@ export default function PartnersDesktopLayout24() {
           justifyContent: "center",
           alignItems: "center",
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          marginTop: global.UTILS.NAV_HEIGHT,
+          // marginTop: global.UTILS.NAV_HEIGHT, ***IMPORTANTE*** da ripristinare nel caso in cui la "PartnersList24" non sia presente!
           width: "100vw",
           backgroundColor: "#000",
           padding:
@@ -48,7 +50,7 @@ export default function PartnersDesktopLayout24() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            fontFamily: global.UTILS.FONT_FAMILY,
             position: "relative",
           }}
         >
@@ -145,7 +147,7 @@ export default function PartnersDesktopLayout24() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            fontFamily: global.UTILS.FONT_FAMILY,
             position: "relative",
           }}
         >
@@ -263,7 +265,7 @@ export default function PartnersDesktopLayout24() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            fontFamily: global.UTILS.FONT_FAMILY,
             position: "relative",
           }}
         >
@@ -363,7 +365,7 @@ export default function PartnersDesktopLayout24() {
               windowSize > global.UTILS.TABLET_WIDTH ? "row" : "column",
             justifyContent: "space-between",
             alignItems: "center",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            fontFamily: global.UTILS.FONT_FAMILY,
             position: "relative",
           }}
         >
@@ -481,6 +483,27 @@ export default function PartnersDesktopLayout24() {
                   </h3>
                 </li>
               </ul>
+              <button
+                style={{
+                  borderRadius: "10px",
+                  border: "none",
+                  padding: "10px 0",
+                  margin: "0 25px",
+                  backgroundColor: global.COLORS.ROSSO_TED,
+                }}
+              >
+                <a
+                  href="mailto:tedx.sapienzau@uniroma1.it"
+                  style={{
+                    fontFamily: global.UTILS.FONT_FAMILY,
+                    fontWeight: "bold",
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                >
+                  {t("partners.14th_st_el_6")}
+                </a>
+              </button>
             </div>
           </div>
         </div>

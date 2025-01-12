@@ -316,14 +316,13 @@ export default function Team2022() {
     } else {
       return (
         <>
-          {small ? (
-            <>
+          {
+            /*small ? */ <>
               <div className="container-xl">
                 <div className="row">{handleBoardCardSection(2024)}</div>
                 <div>{handleVolunteersCardSection(2024, true)}</div>
               </div>
-            </>
-          ) : (
+            </> /*: (
             <>
               <ExecutiveTeamCard
                 year={2024}
@@ -334,7 +333,8 @@ export default function Team2022() {
                 <div>{handleVolunteersCardSection(2024)}</div>
               </div>
             </>
-          )}
+          )*/
+          }
         </>
       );
     }
