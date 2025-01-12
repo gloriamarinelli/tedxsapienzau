@@ -232,7 +232,7 @@ export default function Awards() {
             maxHeight: logoHeight,
             overflow: "hidden",
             position: "absolute",
-            bottom: 500,
+            bottom: 400,
           }}
         >
           <img src={giallo} width={logoHeight} alt="" />
