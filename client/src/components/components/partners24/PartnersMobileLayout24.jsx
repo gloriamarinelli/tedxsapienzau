@@ -18,7 +18,7 @@ export default function PartnersMobileLayout24() {
       <section
         style={{
           backgroundColor: global.COLORS.NERO,
-          paddingTop: "5vh",
+          // paddingTop: "5vh", ***IMPORTANTE*** da ripristinare nel caso in cui la "PartnersList24" non sia presente!
           fontFamily: global.UTILS.FONT_FAMILY,
           placeItems: "center",
           display: "grid",
