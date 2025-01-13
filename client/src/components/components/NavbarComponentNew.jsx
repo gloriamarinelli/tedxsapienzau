@@ -370,7 +370,7 @@ export default function NavbarComponentNew() {
           </Link>
 
           <label
-            class="burger"
+            className="burger"
             onClick={(e) => {
               e.preventDefault();
               setExpanded(!expanded);

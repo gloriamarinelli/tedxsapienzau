@@ -159,7 +159,7 @@ export default function PartnersMobileLayout24() {
                         fontWeight: "bold",
                         textDecoration: "none",
                         color: "white",
-                        padding: "50px"
+                        padding: "50px",
                       }}
                     >
                       {t("partners.14th_st_el_6")}
@@ -182,39 +182,37 @@ export default function PartnersMobileLayout24() {
             style={{ textAlign: "right", width: "60%" }}
           >
             <h3>{t("partners.stats")}</h3>
-            <p>
-              {t("partners.events")}
-              <ul style={{ listStyleType: "none" }}>
-                <li className="info-list-element">
-                  <h3 className="info-list-number">
-                    +
-                    <CountUp end={3000} duration={2} useEasing={false} />
-                  </h3>{" "}
-                  {t("partners.people")}
-                </li>
-                <li className="info-list-element">
-                  <h3 className="info-list-number">
-                    +
-                    <CountUp end={33000} duration={2} useEasing={false} />
-                  </h3>{" "}
-                  {t("partners.yt_views")}
-                </li>
-                <li className="info-list-element">
-                  <h3 className="info-list-number">
-                    +
-                    <CountUp end={50} duration={2} useEasing={false} />
-                  </h3>{" "}
-                  {t("partners.partners")}
-                </li>
-                <li className="info-list-element">
-                  <h3 className="info-list-number">
-                    +
-                    <CountUp end={300} duration={2} useEasing={false} />
-                  </h3>{" "}
-                  {t("partners.volunteers")}
-                </li>
-              </ul>
-            </p>
+            <p>{t("partners.events")}</p>
+            <ul style={{ listStyleType: "none" }}>
+              <li className="info-list-element">
+                <h3 className="info-list-number">
+                  +
+                  <CountUp end={3000} duration={2} useEasing={false} />
+                </h3>{" "}
+                {t("partners.people")}
+              </li>
+              <li className="info-list-element">
+                <h3 className="info-list-number">
+                  +
+                  <CountUp end={33000} duration={2} useEasing={false} />
+                </h3>{" "}
+                {t("partners.yt_views")}
+              </li>
+              <li className="info-list-element">
+                <h3 className="info-list-number">
+                  +
+                  <CountUp end={50} duration={2} useEasing={false} />
+                </h3>{" "}
+                {t("partners.partners")}
+              </li>
+              <li className="info-list-element">
+                <h3 className="info-list-number">
+                  +
+                  <CountUp end={300} duration={2} useEasing={false} />
+                </h3>{" "}
+                {t("partners.volunteers")}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
