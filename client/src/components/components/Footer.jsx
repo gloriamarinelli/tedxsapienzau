@@ -11,8 +11,9 @@ import {
 import Image from "../images/logo-white.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import global from "../../resources/global.json";
-import "../../index.css";
 import { useTranslation, Trans } from "react-i18next";
+
+import "../../index.css";
 
 export default function Footer() {
   const { t, i18n } = useTranslation();
@@ -63,6 +64,8 @@ export default function Footer() {
         className="secondary-text"
         style={{
           textDecoration: "none",
+          fontFamily: global.UTILS.FONT_FAMILY,
+          fontSize: "18px",
         }}
         href={link}
       >
@@ -110,7 +113,6 @@ export default function Footer() {
             style={{
               maxWidth: "385px",
               fontSize: "16px",
-              lineHeight: "20px",
               fontFamily: "Fira Sans Extra Condensed, sans-serif",
             }}
           >
@@ -155,28 +157,23 @@ export default function Footer() {
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-evenly",
             fontSize: "20px",
             fontFamily: "Fira Sans Extra Condensed",
           }}
         >
           <b>
-            <WhiteLink
-              text={t("navbar.events")}
-              link="/edizioni"
-              style={{ marginBottom: "10px" }}
-            />
+            <WhiteLink text={t("navbar.events")} link="/edizioni" />
           </b>
-          <div style={{ lineHeight: "5px", fontSize: "16px" }}>
-            <p className="secondary-text">
-              <GreyLink text="Awards" link={"/eventi/awards2024"} />
-            </p>
-            <p className="secondary-text">
-              <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
-            </p>
-            <p className="secondary-text" style={{ marginTop: "5px" }}>
-              <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
-            </p>
+          <div
+            style={{
+              fontSize: "16px",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <GreyLink text="Awards" link={"/eventi/awards2024"} />
+            <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
+            <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
           </div>
           <b>
             <WhiteLink text={t("navbar.partners")} link="/partners" />
@@ -197,36 +194,33 @@ export default function Footer() {
             flexDirection: "column",
             gap: "20px",
             fontSize: "18px",
-            fontFamily: "Fira Sans Extra Condensed"
+            fontFamily: "Fira Sans Extra Condensed",
           }}
         >
           <b style={{ fontFamily: "Fira Sans Extra Condensed" }}>
             <Trans i18nKey="footer.join_us" lang={i18n.language} />
           </b>
           <a className="link" href={"/Newsletter"}>
-            <button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                padding: "8px 32px",
-                color: "white",
-                border: "none",
-                fontSize: "18px",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              Join Us
-            </button>
+            <button className="primary-button">Join Us</button>
           </a>
-          <div style={{ display: "flex", flexDirection: "column",               fontFamily: "Fira Sans Extra Condensed",
- }}>
+          <div
+            className="secondary-text"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              fontFamily: "Fira Sans Extra Condensed",
+            }}
+          >
             <Trans i18nKey="footer.info1" lang={i18n.language} />
-            <p>
+            <p className="secondary-text">
               {t("footer.info2")}{" "}
               <a
-                className="tertiary-text"
+                className="secondary-text"
                 href="mailto:info@tedxsapienzau.com"
-                style={{ color: "#eb0028" }}
+                style={{
+                  color: "#eb0028",
+                  fontFamily: "Fira Sans Extra Condensed",
+                }}
               >
                 info@tedxsapienzau.com
               </a>
@@ -241,17 +235,25 @@ export default function Footer() {
           width: "95%",
           flexWrap: "wrap",
           fontFamily: "Fira Sans Extra Condensed",
-
         }}
       >
         <div>
           <small style={{ marginRight: "20px" }} className="tertiary-text">
-            <GreyLink text="Privacy Policy" link={"/privacypolicy"} />
+            <a
+              className="secondary-text"
+              style={{
+                textDecoration: "none",
+                textDecoration: "underline",
+              }}
+              href="/privacypolicy"
+            >
+              Privacy Policy
+            </a>
           </small>
           <small className="tertiary-text">
             <a
               className="secondary-text"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", textDecoration: "underline" }}
               href="/images/Statuto2024-25.pdf"
             >
               {t("footer.statute")}
