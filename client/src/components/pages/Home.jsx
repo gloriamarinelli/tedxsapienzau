@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import Volunteers from "../images/volunteers.webp";
@@ -15,6 +15,24 @@ import { useTranslation, Trans } from "react-i18next";
 export default function Home() {
   const { t, i18n } = useTranslation();
   const [windowSize] = useOutletContext();
+  const [hiddenButton, setHiddenButton] = useState(true);
+  const renderButton = (hidden, setHidden) => (
+    <button
+      onMouseEnter={() => setHidden(false)}
+      onMouseLeave={() => setHidden(true)}
+      style={{
+        backgroundColor: hidden ? global.COLORS.ROSSO_TED_2023 : "#8d0018",
+        borderColor: "#8d0018",
+        borderRadius: global.UTILS.BENTO_BOX_PADDING,
+        fontWeight: "bold",
+        padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
+        transition: "background-color 0.3s ease",
+        color: "#FFF",
+      }}
+    >
+      {t("home.find_out_more")}
+    </button>
+  );
 
   return (
     <div style={{ backgroundColor: "#000" }}>
@@ -150,17 +168,7 @@ export default function Home() {
           }}
         >
           <a href="/edizioni">
-            <Button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                fontWeight: "bold",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-              }}
-            >
-              {t("home.find_out_more")}
-            </Button>
+            {renderButton(hiddenButton, setHiddenButton)}
           </a>
         </div>
       </section>
@@ -174,17 +182,7 @@ export default function Home() {
           }}
         >
           <a href="/blog">
-            <Button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                fontWeight: "bold",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-              }}
-            >
-              {t("home.find_out_more")}
-            </Button>
+            {renderButton(hiddenButton, setHiddenButton)}
           </a>
         </div>
       </section>

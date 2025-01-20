@@ -26,8 +26,8 @@ export default function MvHome() {
       onMouseEnter={() => setHidden(false)}
       onMouseLeave={() => setHidden(true)}
       style={{
-        backgroundColor: hidden ? global.COLORS.ROSSO_TED_2023 : "#BC0020",
-        borderColor: "#BC0020",
+        backgroundColor: hidden ? global.COLORS.ROSSO_TED_2023 : "#8d0018",
+        borderColor: "#8d0018",
         borderRadius: global.UTILS.BENTO_BOX_PADDING,
         fontWeight: "bold",
         padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,

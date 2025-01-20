@@ -80,6 +80,14 @@ export default function Awards() {
         <img src={rosa} width={logoHeight} alt="" />
         <img src={rosso} width={logoHeight} alt="" />
         <img src={verde} width={logoHeight} alt="" />
+        <img src={giallo} width={logoHeight} alt="" />
+        <img src={arancione} width={logoHeight} alt="" />
+        <img src={celeste} width={logoHeight} alt="" />
+        <img src={blu} width={logoHeight} alt="" />
+        <img src={fucsia} width={logoHeight} alt="" />
+        <img src={rosa} width={logoHeight} alt="" />
+        <img src={rosso} width={logoHeight} alt="" />
+        <img src={verde} width={logoHeight} alt="" />
       </div>
     );
   };
@@ -134,7 +142,7 @@ export default function Awards() {
             <img
               src={logo}
               alt="SapienzaU Awards"
-              width={windowSize > 1360 ? "504px" : "420px"}
+              width={windowSize > 1360 ? "604px" : "420px"}
             />
           </div>
           {getBannerTeamLogos()}
