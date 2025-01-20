@@ -11,6 +11,7 @@ import EnglishFlag from "../images/flags/en.png";
 import Logo from "../images/logo-white.png";
 
 import "../../resources/styles/mynavbar.css";
+import "../../index.css";
 
 export default function NavbarComponentNew() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -313,19 +314,8 @@ export default function NavbarComponentNew() {
             }
 
             <div
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: "30px",
-                fontWeight: "bold",
-                marginLeft: "24px",
-                color: "white",
-                padding: "6px 12px",
-                width: "100px",
-                minWidth: "100px",
-                textAlign: "center",
-                cursor: "pointer",
-              }}
+              className="primary-button"
+              style={{ marginLeft: "24px" }}
               onMouseEnter={(e) => {
                 e.target.style.borderColor = "white";
               }}
@@ -370,7 +360,7 @@ export default function NavbarComponentNew() {
           </Link>
 
           <label
-            class="burger"
+            className="burger"
             onClick={(e) => {
               e.preventDefault();
               setExpanded(!expanded);

@@ -54,6 +54,7 @@ export default function PartnersList24() {
       >
         {partnersInfo.partners.map((partner) => (
           <PartnerCard24
+            key={partner.id}
             name={partner.name}
             imgName={partner.imgName}
             descr={partner.descr}
