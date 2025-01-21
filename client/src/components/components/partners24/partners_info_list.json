@@ -9,7 +9,7 @@
     {
       "id": 2,
       "name": "Novo Nordisk",
-      "imgName": "novo_nordisk.png",
+      "imgName": "novo_nordisk.webp",
       "descr": "..."
     },
     {
@@ -26,7 +26,7 @@
       {
         "id": 5,
         "name": "Your Personal Trainer",
-        "imgName": "ypt.png",
+        "imgName": "ytp.webp",
         "descr": "Your Personal Trainer è il primo ecosistema fisico e digitale dedicato al personal training e al fitness. Una piattaforma gratuita che consente a clienti e professionisti di conoscersi ma soprattutto consente loro di prenotare on-demand spazi riservati e attrezzati per rendere l'esperienza di allenamento davvero unica."
       }
   ]
