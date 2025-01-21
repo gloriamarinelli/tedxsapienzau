@@ -32,7 +32,7 @@ export default function PartnersList24() {
         id="title_div"
         style={{
           color: "white",
-          marginTop: "95px",
+          //marginTop: "95px",
         }}
       >
         <h1
