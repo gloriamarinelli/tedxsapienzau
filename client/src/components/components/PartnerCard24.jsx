@@ -37,7 +37,7 @@ export default function PartnerCard24({ name, imgName, descr }) {
           </div>
           <div className="card-back">{descr}</div>
         </div>
-        <div style={{ fontWeight: "bold" }}>{name}</div>
+        <div style={{ fontSize: "20px", fontWeight: "bold" }}>{name}</div>
       </div>
     </>
   );

@@ -27,7 +27,7 @@ const theme = createTheme({
       dark: "#FFFFFF",
       contrastText: "#FFFFFF",
     },
-    cem: {
+    cemm: {
       main: "rgba(233, 73, 58, 0.5)",
       light: "#EC6162",
       dark: "#FFFFFF",
@@ -149,7 +149,7 @@ const BoardInfos = [
     role: "Human Resources & Academy",
   },
   {
-    team: "cem",
+    team: "cemm",
     name: "Niccolò Testa",
     linkedin: "www",
     path: "NiccoloTesta",
@@ -237,8 +237,8 @@ export default function BoardCard({
       case "Legal & Administrative":
         team_acronym = "la";
         break;
-      case "Communication & Marketing":
-        team_acronym = "cem";
+      case "Communication, Editorial, Marketing & Media":
+        team_acronym = "cemm";
         break;
       case "Co-organizer":
         team_acronym = "coorg";

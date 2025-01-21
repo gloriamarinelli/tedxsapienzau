@@ -98,6 +98,7 @@ export default function Awards2022() {
         style={{
           fontSize: "45px",
           textAlign: "center",
+          color: "#fff",
         }}
       >
         Artist
@@ -108,8 +109,18 @@ export default function Awards2022() {
           alignItems: "center",
         }}
       >
-        <div class="row justify-content-center" style={{ gap: "20px" }}>
-          <div class="col-sm-4">
+        <div
+          class="row justify-content-center"
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            class="col-sm-4"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             {" "}
             <LazyLoadImage src={Image1} alt="TEDxSapienzaU" height="350" />
           </div>
@@ -125,15 +136,38 @@ export default function Awards2022() {
       >
         Speakers
       </h3>
-      <div class="container mt-5">
-        <div class="row" style={{ gap: "20px" }}>
-          <div class="col">
+      <div
+        class="container mt-5"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div
+          class="row"
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            class="col"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <LazyLoadImage src={Image3} alt="TEDxSapienzaU" height="350" />
           </div>
-          <div class="col">
+          <div
+            class="col"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <LazyLoadImage src={Image4} alt="TEDxSapienzaU" height="350" />
           </div>
-          <div class="col">
+          <div
+            class="col"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <LazyLoadImage src={Image5} alt="TEDxSapienzaU" height="350" />
           </div>
         </div>

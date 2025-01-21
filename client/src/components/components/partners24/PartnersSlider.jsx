@@ -33,8 +33,8 @@ export default function PartnersSlider() {
           >
             {t("partners.slider_title")}
           </h2>
-          <div class="logos">
-            <div class="logos-slide">
+          <div className="logos">
+            <div className="logos-slide">
               {partnersInfo.partners.map((partner) => (
                 <div key={partner.id} className="desktop_logo_div">
                   <img
@@ -68,8 +68,8 @@ export default function PartnersSlider() {
           >
             {t("partners.slider_title")}
           </h2>
-          <div class="logos">
-            <div class="logos-slide">
+          <div className="logos">
+            <div className="logos-slide">
               {partnersInfo.partners.map((partner) => (
                 <div key={partner.id} className="mobile_logo_div">
                   <img

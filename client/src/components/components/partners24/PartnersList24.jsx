@@ -35,7 +35,15 @@ export default function PartnersList24() {
           marginTop: "95px",
         }}
       >
-        <h1>Partners</h1>
+        <h1
+          className="font-weight-bold headerTitle"
+          style={{
+            fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "120px" : "12vw",
+            textTransform: "uppercase",
+          }}
+        >
+          Partners
+        </h1>
       </div>
       <div
         id="partners_div"
@@ -54,6 +62,7 @@ export default function PartnersList24() {
       >
         {partnersInfo.partners.map((partner) => (
           <PartnerCard24
+            key={partner.id}
             name={partner.name}
             imgName={partner.imgName}
             descr={partner.descr}

@@ -6,7 +6,7 @@ import "../../index.css";
 import "../../resources/styles/home.css";
 import { Button } from "react-bootstrap";
 import CountUp from "react-countup";
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 /**
  * Component that renders the information about TEDxSapienzaU in the home page.
@@ -19,6 +19,25 @@ export default function MvHome() {
   const [hidden2, setHidden2] = useState(true);
   const [hidden3, setHidden3] = useState(true);
   const [hidden4, setHidden4] = useState(true);
+  const [hiddenButton, setHiddenButton] = useState(true);
+
+  const renderButton = (hidden, setHidden) => (
+    <button
+      onMouseEnter={() => setHidden(false)}
+      onMouseLeave={() => setHidden(true)}
+      style={{
+        backgroundColor: hidden ? global.COLORS.ROSSO_TED_2023 : "#8d0018",
+        borderColor: "#8d0018",
+        borderRadius: global.UTILS.BENTO_BOX_PADDING,
+        fontWeight: "bold",
+        padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
+        transition: "background-color 0.3s ease",
+        color: "#FFF",
+      }}
+    >
+      {t("mvhome.find_out_more")}
+    </button>
+  );
 
   const renderSubContainer = (hidden, setHidden, endValue, label, fontSize) => (
     <div
@@ -26,20 +45,19 @@ export default function MvHome() {
       onMouseLeave={() => setHidden(true)}
       style={{
         borderRadius: global.UTILS.BENTO_BOX_PADDING,
-        backgroundColor: hidden ? "#191919" : "#eb0028",
+        backgroundColor: "#191919",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        transition: "background-color 0.3s ease",
         padding: global.UTILS.BENTO_BOX_PADDING,
       }}
     >
       <h1
         className="font-weight-bold"
         style={{
-          color: hidden ? "#eb0028" : "#FFF",
+          color: "#eb0028",
           fontSize: fontSize,
           fontWeight: "bold",
           fontFamily: "Fira sans Extra Condensed",
@@ -111,17 +129,7 @@ export default function MvHome() {
             </extra>
           </h1>
           <a href="/mission&vision">
-            <Button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                fontWeight: "bold",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-              }}
-            >
-              {t("mvhome.find_out_more")}
-            </Button>
+            {renderButton(hiddenButton, setHiddenButton)}
           </a>
         </div>
         <div
@@ -214,17 +222,7 @@ export default function MvHome() {
             </extra>
           </h1>
           <Link to="/edizioni">
-            <Button
-              style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderColor: "red",
-                borderRadius: global.UTILS.BENTO_BOX_PADDING,
-                fontWeight: "bold",
-                padding: `${global.UTILS.HALF_BENTO_BOX_PADDING} ${global.UTILS.BENTO_BOX_PADDING}`,
-              }}
-            >
-              {t("mvhome.find_out_more")}
-            </Button>
+            {renderButton(hiddenButton, setHiddenButton)}
           </Link>
         </div>
         <div

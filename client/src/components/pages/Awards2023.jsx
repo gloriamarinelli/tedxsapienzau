@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "../../index.css";
 import global from "../../resources/global.json";
-import {Trans, useTranslation} from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Awards() {
   const { t } = useTranslation();
@@ -22,7 +22,7 @@ export default function Awards() {
         className="header-awards"
         style={{
           textAlign: "center",
-          height: "45vh"
+          height: "45vh",
         }}
       ></header>
 
@@ -49,8 +49,7 @@ export default function Awards() {
             />
             <p className="col-8">18.04.2023</p>
 
-            <div className="row mt-3">
-            </div>
+            <div className="row mt-3"></div>
           </div>
         </div>
         <div className="col-md-6"></div>
@@ -79,7 +78,7 @@ export default function Awards() {
             i18nKey="event_awards2023.description"
             components={{
               1: <strong></strong>,
-              2: <strong style={{ color: global.COLORS.ROSSO_TED }}>3 </strong>
+              2: <strong style={{ color: global.COLORS.ROSSO_TED }}>3 </strong>,
             }}
           />
         </p>
@@ -100,6 +99,7 @@ export default function Awards() {
         style={{
           fontSize: "45px",
           textAlign: "center",
+          color: "#fff",
         }}
       >
         Artists
@@ -110,12 +110,25 @@ export default function Awards() {
           alignItems: "center",
         }}
       >
-        <div class="row justify-content-center" style={{ gap: "20px" }}>
-          <div class="col-sm-4">
+        <div
+          class="row justify-content-center"
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            class="col-sm-4"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             {" "}
             <LazyLoadImage src={Image2} alt="TEDxSapienzaU" height="350" />
           </div>
-          <div class="col-sm-4">
+          <div
+            class="col-sm-4"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             {" "}
             <LazyLoadImage src={Image5} alt="TEDxSapienzaU" height="350" />
           </div>
@@ -127,19 +140,43 @@ export default function Awards() {
         style={{
           fontSize: "45px",
           textAlign: "center",
+          color: "#fff",
         }}
       >
         Speakers
       </h3>
-      <div class="container mt-5">
-        <div class="row" style={{ gap: "20px" }}>
-          <div class="col">
+      <div
+        class="container mt-5"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div
+          class="row"
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            class="col"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <LazyLoadImage src={Image3} alt="TEDxSapienzaU" height="350" />
           </div>
-          <div class="col">
+          <div
+            class="col"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <LazyLoadImage src={Image4} alt="TEDxSapienzaU" height="350" />
           </div>
-          <div class="col">
+          <div
+            class="col"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <LazyLoadImage src={Image1} alt="TEDxSapienzaU" height="350" />
           </div>
         </div>
