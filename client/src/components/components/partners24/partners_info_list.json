@@ -4,30 +4,36 @@
       "id": 1,
       "name": "UniCredit",
       "imgName": "unicredit.webp",
-      "descr": "UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa."
+      "descr_it": "UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa.",
+      "descr_en": "UniCredit is a pan-European commercial bank with a unique service model in Italy, Germany, and Central and Eastern Europe. Our primary goal is to empower our communities to progress by offering the best to all stakeholders and unlocking the potential of our clients and people across Europe."
     },
     {
       "id": 2,
       "name": "Novo Nordisk",
       "imgName": "novo_nordisk.webp",
-      "descr": "..."
+      "descr_it": "...",
+      "descr_en": "..."
     },
     {
         "id": 3,
         "name": "Autocentri Balduina",
         "imgName": "balduina.webp",
-        "descr": "Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche. La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre."},
+        "descr_it": "Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche. La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre.",
+        "descr_en": "Autocentri Balduina has been a trusted name for generations of Romans. With multiple showrooms in Rome and its surrounding province, it represents some of the most prestigious brands: Audi, Volkswagen, Skoda, and Porsche. Customer satisfaction is paramount. Direct sales, service, and technologically advanced workshops. Since 1962, always the best."
+      },
       {
         "id": 4,
         "name": "Hyper Foundry",
         "imgName": "hyper.png",
-        "descr": "Hyper Foundry è la startup innovativa e studio creativo che combina design e tecnologia per creare soluzioni digitali all'avanguardia. Con un approccio multidisciplinare integrato, supporta aziende e startup nel realizzare progetti concreti e scalabili, specializzati in interfacce avanzate, sviluppo software e avatar AI personalizzati."
+        "descr_it": "Hyper Foundry è la startup innovativa e studio creativo che combina design e tecnologia per creare soluzioni digitali all'avanguardia. Con un approccio multidisciplinare integrato, supporta aziende e startup nel realizzare progetti concreti e scalabili, specializzati in interfacce avanzate, sviluppo software e avatar AI personalizzati.",
+        "descr_en": "Hyper Foundry is an innovative startup and creative studio that merges design and technology to forge cutting-edge digital solutions. Through an integrated, multidisciplinary approach, it empowers businesses and startups to bring tangible and scalable projects to fruition, with a specialization in advanced interfaces, software development, and custom AI avatars."
       },
       {
         "id": 5,
         "name": "Your Personal Trainer",
         "imgName": "ytp.webp",
-        "descr": "Your Personal Trainer è il primo ecosistema fisico e digitale dedicato al personal training e al fitness. Una piattaforma gratuita che consente a clienti e professionisti di conoscersi ma soprattutto consente loro di prenotare on-demand spazi riservati e attrezzati per rendere l'esperienza di allenamento davvero unica."
+        "descr_it": "Your Personal Trainer è il primo ecosistema fisico e digitale dedicato al personal training e al fitness. Una piattaforma gratuita che consente a clienti e professionisti di conoscersi ma soprattutto consente loro di prenotare on-demand spazi riservati e attrezzati per rendere l'esperienza di allenamento davvero unica.",
+        "descr_en": "Your Personal Trainer is the premier physical and digital ecosystem dedicated to personal training and fitness. A complimentary platform that connects clients and professionals, enabling on-demand bookings of reserved, equipped spaces to create a truly unique workout experience."
       }
   ]
 }
