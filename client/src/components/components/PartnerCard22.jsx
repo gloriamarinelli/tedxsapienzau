@@ -11,6 +11,7 @@ export default function PartnerCard22({ imgSrc }) {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          borderRadius: "10px"
         }}
       >
         <img
@@ -19,6 +20,7 @@ export default function PartnerCard22({ imgSrc }) {
           alt="TEDx Sponsor"
           style={{
             width: "150px",
+            padding: "0 10px"
           }}
         />
       </div>
