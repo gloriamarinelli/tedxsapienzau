@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 
@@ -6,19 +6,21 @@ export default function PartnerCard24({ name, imgName, descr }) {
   const [windowSize] = useOutletContext(); // window's size variable
   const [isRotated, setIsRotated] = useState(false);
 
+  useEffect(() => {
+    // Initialize rotation state based on initial window size
+    setIsRotated(windowSize <= global.UTILS.TABLET_WIDTH);
+  }, [windowSize]);
+
   const handleMobileClick = () => {
     setIsRotated(!isRotated);
   };
+
   return (
     <>
       <div className="card-main-container">
         <div
           className={`card-inner-container ${
-            windowSize > global.UTILS.TABLET_WIDTH
-              ? ""
-              : isRotated
-              ? "mobile-rotated"
-              : ""
+            isRotated ? "" : "mobile-rotated"
           }`}
           onClick={handleMobileClick}
         >
