@@ -5,21 +5,13 @@ export default function PartnerCard24({ name, imgName, descr }) {
 
   const handleMobileClick = () => {
     setIsRotated(!isRotated);
-
-    const card = document.querySelector(".card-inner-container");
-    card.classList.toggle("mobile-rotated");
-
-    setTimeout(() => {
-      card.classList.remove("mobile-rotated");
-    }, 2000);
+    console.log("click!!!");
   };
 
   return (
-    <div className="card-main-container">
+    <div className="card-main-container" onClick={handleMobileClick}>
       <div
-        //className={`card-inner-container ${isRotated ? "mobile-rotated" : ""}`}
-        className="card-inner-container"
-        onClick={handleMobileClick}
+        className={`card-inner-container ${isRotated ? "mobile-rotated" : ""}`}
       >
         <div className="card-front">
           <img
