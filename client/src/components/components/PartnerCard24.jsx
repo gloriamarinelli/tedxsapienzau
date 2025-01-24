@@ -3,14 +3,23 @@ import React, { useState } from "react";
 export default function PartnerCard24({ name, imgName, descr }) {
   const [isRotated, setIsRotated] = useState(false);
 
-  const handleCardClick = () => {
-    setIsRotated((prevState) => !prevState);
+  const handleMobileClick = () => {
+    setIsRotated(!isRotated);
+
+    const card = document.querySelector(".card-inner-container");
+    card.classList.toggle("mobile-rotated");
+
+    setTimeout(() => {
+      card.classList.remove("mobile-rotated");
+    }, 2000);
   };
 
   return (
-    <div className="card-main-container" onClick={handleCardClick}>
+    <div className="card-main-container">
       <div
-        className={`card-inner-container ${isRotated ? "mobile-rotated" : ""}`}
+        //className={`card-inner-container ${isRotated ? "mobile-rotated" : ""}`}
+        className="card-inner-container"
+        onClick={handleMobileClick}
       >
         <div className="card-front">
           <img
