@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
-export default function PartnerCard24({ name, imgName, descr }) {
+export default function PartnerCard24({ name, css_name, imgName, descr }) {
   const [isRotated, setIsRotated] = useState(false);
 
-  const handleCardClick = () => {
-    setIsRotated((prevState) => !prevState);
+  const handleMobileClick = () => {
+    setIsRotated(!isRotated);
   };
 
   return (
-    <div className="card-main-container" onClick={handleCardClick}>
+    <div className="card-main-container" onClick={handleMobileClick}>
       <div
-        className={`card-inner-container ${isRotated ? "mobile-rotated" : ""}`}
+        id={`id_${isRotated ? "back_" : ""}${css_name}`}
+        className="card-inner-container"
       >
         <div className="card-front">
           <img
