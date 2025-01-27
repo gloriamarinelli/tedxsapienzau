@@ -164,7 +164,12 @@
   transform: rotateY(180deg);
 }
 
-.mobile-rotated {
+/* cards rotation mechanism */
+#id_back_uni,
+#id_back_novo,
+#id_back_auto,
+#id_back_hyper,
+#id_back_ypt {
   transform: rotateY(180deg);
 }
 
