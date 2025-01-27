@@ -1,5 +1,5 @@
 /* -------------------- React's components import -------------------- */
-//import React, { useState, Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router";
 
 /* -------------------- components and resources import -------------------- */
@@ -13,8 +13,10 @@ import "../../../resources/styles/partnercommunity.css";
 import "../../../index.css";
 
 export default function PartnersList24() {
-  //const [activeYear] = useState(24); // active year variable
   const [windowSize] = useOutletContext(); // window's size variable
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const lang_it = "it";
 
   return (
     <div
@@ -35,7 +37,15 @@ export default function PartnersList24() {
           marginTop: "95px",
         }}
       >
-        <h1>Partners</h1>
+        <h1
+          className="font-weight-bold headerTitle"
+          style={{
+            fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "120px" : "12vw",
+            textTransform: "uppercase",
+          }}
+        >
+          Partners
+        </h1>
       </div>
       <div
         id="partners_div"
@@ -56,8 +66,11 @@ export default function PartnersList24() {
           <PartnerCard24
             key={partner.id}
             name={partner.name}
+            css_name={partner.css_name}
             imgName={partner.imgName}
-            descr={partner.descr}
+            descr={
+              currentLanguage == lang_it ? partner.descr_it : partner.descr_en
+            }
           />
         ))}
       </div>

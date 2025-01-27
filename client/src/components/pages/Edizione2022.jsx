@@ -10,14 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useOutletContext } from "react-router";
-import {Trans, useTranslation} from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Edizione2022() {
   const { t } = useTranslation();
   const [isBioOpen, setIsBioOpen] = useState(false);
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
-  const [windowSize,] = useOutletContext();
+  const [windowSize] = useOutletContext();
 
   useEffect(() => {
     axios
@@ -141,28 +141,38 @@ export default function Edizione2022() {
         >
           {t("event_leadthechange.title")}
         </h1>
-        <p style={{ fontSize: "20px", fontFamily: "GothamBook", textAlign: "justify" }}>
-          <Trans
-          i18nKey="event_leadthechange.description"
-          components={{
-            1: <strong></strong>
+        <p
+          style={{
+            fontSize: "20px",
+            fontFamily: "GothamBook",
+            textAlign: "justify",
           }}
+        >
+          <Trans
+            i18nKey="event_leadthechange.description"
+            components={{
+              1: <strong></strong>,
+            }}
           />
         </p>
         {/** CARDS */}
         <section className="container">
-          <div className="row gap-5 d-flex justify-content-center">
+          <div
+            id="external_cards_div"
+            className="row gap-5 d-flex justify-content-center"
+          >
             <div className="col-lg-3 theme-card">
               <p
                 style={{
                   fontSize: "250px",
                   color: "#fff",
                   zIndex: "2",
+                  margin: "30%",
                 }}
               >
                 A
               </p>
-              <p>
+              <p style={{ marginTop: "15%" }}>
                 <strong>Action</strong>: {t("event_leadthechange.A")}
               </p>
             </div>
@@ -172,12 +182,14 @@ export default function Edizione2022() {
                   fontSize: "250px",
                   color: "#fff",
                   zIndex: "2",
+                  margin: "30%",
                 }}
               >
                 C
               </p>
-              <p>
-                <strong>Cross-Fertilization</strong>: {t("event_leadthechange.C")}
+              <p style={{ marginTop: "15%" }}>
+                <strong>Cross-Fertilization</strong>:{" "}
+                {t("event_leadthechange.C")}
               </p>
             </div>
             <div className="col-lg-3 theme-card">
@@ -186,11 +198,12 @@ export default function Edizione2022() {
                   fontSize: "250px",
                   color: "#fff",
                   zIndex: "2",
+                  margin: "30%",
                 }}
               >
                 T
               </p>
-              <p>
+              <p style={{ marginTop: "15%" }}>
                 <strong>Transformation</strong>: {t("event_leadthechange.T")}
               </p>
             </div>
