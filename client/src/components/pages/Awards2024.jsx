@@ -143,6 +143,7 @@ export default function Awards() {
               src={logo}
               alt="SapienzaU Awards"
               width={windowSize > 1360 ? "604px" : "420px"}
+              style={{padding:"50px"}}
             />
           </div>
           {getBannerTeamLogos()}
