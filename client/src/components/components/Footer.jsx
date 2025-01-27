@@ -209,6 +209,7 @@ export default function Footer() {
               display: "flex",
               flexDirection: "column",
               fontFamily: "Fira Sans Extra Condensed",
+              fontWeight: "bold",
             }}
           >
             <Trans i18nKey="footer.info1" lang={i18n.language} />
@@ -220,6 +221,7 @@ export default function Footer() {
                 style={{
                   color: "#eb0028",
                   fontFamily: "Fira Sans Extra Condensed",
+                  fontWeight: "initial",
                 }}
               >
                 info@tedxsapienzau.com
