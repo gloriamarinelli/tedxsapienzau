@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { Suspense, useState, useRef, useEffect } from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
 import { Canvas, useLoader, useThree, useFrame } from "@react-three/fiber";
@@ -12,6 +12,9 @@ import "../../index.css";
 import "../../resources/styles/home.css";
 import { useTranslation, Trans } from "react-i18next";
 import { useControls, Leva } from "leva";
+import gsap from "gsap";
+import * as THREE from "three";
+import CorniceParadoxa from "../images/paradoxa25/cornice_paradoxa.png";
 
 export default function ParaDoxa2025() {
   const { t, i18n } = useTranslation();
@@ -30,6 +33,20 @@ export default function ParaDoxa2025() {
     const logoRef = useRef();
 
     const scaleRatio = 0.01;
+    const floatSpeed = 0.5; // Speed of floating motion
+    const rotationSpeed = 0.2; // Speed of rotation
+
+    useEffect(() => {
+      if (logoRef.current) {
+        gsap.to(logoRef.current.position, {
+          y: logoRef.current.position.y + 0.1,
+          duration: 5,
+          yoyo: true,
+          repeat: -1,
+          ease: "sine.inOut",
+        });
+      }
+    }, []);
 
     return (
       <primitive
@@ -64,6 +81,34 @@ export default function ParaDoxa2025() {
       max: Math.PI,
     },
   });
+
+  const CustomCamera = ({
+    startPosition,
+    startTarget,
+    startZoom,
+    // onUpdate,
+  }) => {
+    const cameraRef = useRef();
+
+    useEffect(() => {
+      if (cameraRef.current) {
+        cameraRef.current.lookAt(...startTarget);
+      }
+    }, [startTarget]);
+
+    // useEffect(() => {
+    //   onUpdate(cameraRef.current);
+    // }, [onUpdate]);
+
+    return (
+      <OrthographicCamera
+        ref={cameraRef}
+        makeDefault
+        position={startPosition}
+        zoom={startZoom}
+      />
+    );
+  };
 
   /**
    * This is what allows the camera to move in the scene with Leva
@@ -102,9 +147,10 @@ export default function ParaDoxa2025() {
             height: "100%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
-            backgroundColor: "#000",
+            backgroundImage: `url(${CorniceParadoxa})`,
+            backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPosition: "top",
+            backgroundPosition: "center",
             display: "flex",
             justifyContent: "center",
             alignItems: "flex-end",
@@ -114,16 +160,26 @@ export default function ParaDoxa2025() {
         >
           <Leva hidden={true} />
           <Canvas>
-            <OrbitControls />
+            {/* <OrbitControls /> */}
             {/* <axesHelper args={[10]} /> */}
-            <OrthographicCamera
+            {/* <OrthographicCamera
               makeDefault
               position={[10, 10, 10]}
               zoom={300}
+            /> */}
+            <CustomCamera
+              startPosition={[10, 10, 10]}
+              startTarget={[0, 0, 0]}
+              startZoom={350}
+              // onUpdate={(camera) => {
+              //   if (camera) camera.lookAt(...cameraSettings.target);
+              // }}
             />
             <ambientLight intensity={10} />
             <pointLight position={[10, 10, 10]} />
-            <ObjModel />
+            <Suspense fallback={null}>
+              <ObjModel />
+            </Suspense>
           </Canvas>
         </div>
       </section>
