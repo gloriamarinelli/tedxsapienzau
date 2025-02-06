@@ -14,7 +14,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { useControls, Leva } from "leva";
 import gsap from "gsap";
 import * as THREE from "three";
-import CorniceParadoxa from "../images/paradoxa25/cornice_paradoxa.png";
+import CorniceParadoxa from "../images/paradoxa25/cornice_paradoxa_transparent.png";
 
 export default function ParaDoxa2025() {
   const { t, i18n } = useTranslation();
@@ -24,6 +24,29 @@ export default function ParaDoxa2025() {
     rotationY: 0,
     rotationZ: 0,
   });
+  const [bgColor, setBgColor] = useState("#000");
+
+  useEffect(() => {
+    let black = "#000";
+    let azzurro = global.COLORS.AZZURRO_PARADOXA;
+    let magenta = global.COLORS.MAGENTA_PARADOXA;
+    let blu = global.COLORS.BLU_PARADOXA;
+
+    const colors = [black, azzurro, magenta, blu];
+
+    console.log(colors);
+
+    const interval = setInterval(() => {
+      setBgColor((prev) => {
+        const currentIndex = colors.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % colors.length; // Loop back to first color
+        console.log(colors[nextIndex]);
+        return colors[nextIndex];
+      });
+    }, 6000);
+
+    return () => clearInterval(interval); // Cleanup function
+  }, []); // No bgColor in dependencies
 
   function ObjModel(props) {
     const obj = useLoader(
@@ -58,7 +81,7 @@ export default function ParaDoxa2025() {
           objectRotation.rotationY,
           objectRotation.rotationZ,
         ]}
-        position={[-2.8, -0.4, -2]}
+        position={[-2.7, -0.4, -2.15]}
         {...props}
       />
     );
@@ -147,6 +170,7 @@ export default function ParaDoxa2025() {
             height: "100%",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: bgColor,
             backgroundImage: `url(${CorniceParadoxa})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -156,6 +180,7 @@ export default function ParaDoxa2025() {
             alignItems: "flex-end",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             position: "relative",
+            transition: "background-color 4s ease-in-out",
           }}
         >
           <Leva hidden={true} />
@@ -170,7 +195,7 @@ export default function ParaDoxa2025() {
             <CustomCamera
               startPosition={[10, 10, 10]}
               startTarget={[0, 0, 0]}
-              startZoom={350}
+              startZoom={windowSize > global.UTILS.TABLET_WIDTH ? 330 : 150}
               // onUpdate={(camera) => {
               //   if (camera) camera.lookAt(...cameraSettings.target);
               // }}
