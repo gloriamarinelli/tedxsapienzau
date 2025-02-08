@@ -3,15 +3,15 @@ import React, { useState } from "react";
 export default function PartnerCard24({ name, css_name, imgName, descr }) {
   const [isRotated, setIsRotated] = useState(false);
 
-  const handleMobileClick = () => {
-    setIsRotated(!isRotated);
+  const handleClick = () => {
+    setIsRotated((prev) => !prev); // Alterna lo stato
   };
 
   return (
-    <div className="card-main-container" onClick={handleMobileClick}>
+    <div id={`id_${css_name}`} className="card-main-container">
       <div
-        id={`id_${isRotated ? "back_" : ""}${css_name}`}
-        className="card-inner-container"
+        className={`card-inner-container ${isRotated ? "rotate" : ""}`}
+        onClick={handleClick} // Assegna il gestore di click
       >
         <div className="card-front">
           <img
