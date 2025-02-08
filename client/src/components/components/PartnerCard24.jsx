@@ -4,14 +4,14 @@ export default function PartnerCard24({ name, css_name, imgName, descr }) {
   const [isRotated, setIsRotated] = useState(false);
 
   const handleClick = () => {
-    setIsRotated((prev) => !prev); // Alterna lo stato
+    setIsRotated((prev) => !prev);
   };
 
   return (
     <div id={`id_${css_name}`} className="card-main-container">
       <div
         className={`card-inner-container ${isRotated ? "rotate" : ""}`}
-        onClick={handleClick} // Assegna il gestore di click
+        onClick={handleClick}
       >
         <div className="card-front">
           <img
