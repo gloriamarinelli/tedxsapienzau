@@ -41,6 +41,7 @@ import HomeAwards24 from "./components/pages/HomeAwards24";
 import SapienzaU from "./components/pages/SapienzaUDesktop";
 import AssociazioneSapienzaU from "./components/components/AssociazioneSapienzaU";
 import NavbarComponentNew from "./components/components/NavbarComponentNew";
+import ParaDoxa2025 from "./components/pages/ParaDoxa2025";
 
 const router = createBrowserRouter([
   {
@@ -139,6 +140,10 @@ const router = createBrowserRouter([
       {
         path: "/newsletter",
         element: <Newsletter />,
+      },
+      {
+        path: "/paradoxa",
+        element: <ParaDoxa2025 />,
       },
     ],
   },

@@ -160,16 +160,7 @@
   transition: all 0.8s ease;
 }
 
-.card-inner-container:hover {
-  transform: rotateY(180deg);
-}
-
-/* cards rotation mechanism */
-#id_back_uni,
-#id_back_novo,
-#id_back_auto,
-#id_back_hyper,
-#id_back_ypt {
+.card-inner-container:hover, .rotate {
   transform: rotateY(180deg);
 }
 
