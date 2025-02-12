@@ -8,13 +8,71 @@ import {
   useHelper,
 } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import "../../index.css";
-import "../../resources/styles/home.css";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { useControls, Leva } from "leva";
 import gsap from "gsap";
 import * as THREE from "three";
-import CorniceParadoxa from "../images/paradoxa25/cornice_paradoxa_transparent.png";
+import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona.webp";
+
+function ObjModel(props) {
+  const obj = useLoader(
+    OBJLoader,
+    `${process.env.PUBLIC_URL}/3d_models/logo3d_paradoxa.obj`
+  );
+  const groupRef = useRef();
+  const modelRef = useRef();
+  const scaleRatio = 0.01;
+
+  useEffect(() => {
+    // Calculate the bounding box of the model
+    const boundingBox = new THREE.Box3().setFromObject(obj);
+    const center = boundingBox.getCenter(new THREE.Vector3());
+
+    // Position the model so its center is at the origin of the group
+    if (modelRef.current) {
+      modelRef.current.position.set(-center.x, -center.y, -center.z);
+    }
+
+    // Create burst rotation animation
+    if (groupRef.current) {
+      const createBurstRotation = () => {
+        gsap.to(groupRef.current.rotation, {
+          y: `+=${Math.PI * 2}`, // Rotate 360 degrees from current position
+          duration: 4,
+          ease: "elastic.out(1,0.5)", // Snappy rotation with slight overshoot
+          onComplete: () => {
+            // Ensure rotation value stays manageable
+            groupRef.current.rotation.y %= Math.PI * 2;
+          },
+        });
+      };
+
+      // Initial rotation
+      createBurstRotation();
+
+      // Set up interval for repeated rotations
+      const intervalId = setInterval(createBurstRotation, 8000);
+
+      // Cleanup
+      return () => clearInterval(intervalId);
+    }
+  }, [obj]);
+
+  return (
+    <group ref={groupRef} {...props}>
+      <primitive
+        ref={modelRef}
+        object={obj}
+        scale={[scaleRatio, scaleRatio, scaleRatio]}
+        rotation={[
+          props.objectRotation.rotationX,
+          props.objectRotation.rotationY,
+          props.objectRotation.rotationZ,
+        ]}
+      />
+    </group>
+  );
+}
 
 export default function ParaDoxa2025() {
   const { t, i18n } = useTranslation();
@@ -25,67 +83,6 @@ export default function ParaDoxa2025() {
     rotationZ: 0,
   });
   const [bgColor, setBgColor] = useState("#000");
-
-  useEffect(() => {
-    let black = "#000";
-    let azzurro = global.COLORS.AZZURRO_PARADOXA;
-    let magenta = global.COLORS.MAGENTA_PARADOXA;
-    let blu = global.COLORS.BLU_PARADOXA;
-
-    const colors = [black, azzurro, magenta, blu];
-
-    console.log(colors);
-
-    const interval = setInterval(() => {
-      setBgColor((prev) => {
-        const currentIndex = colors.indexOf(prev);
-        const nextIndex = (currentIndex + 1) % colors.length; // Loop back to first color
-        console.log(colors[nextIndex]);
-        return colors[nextIndex];
-      });
-    }, 6000);
-
-    return () => clearInterval(interval); // Cleanup function
-  }, []); // No bgColor in dependencies
-
-  function ObjModel(props) {
-    const obj = useLoader(
-      OBJLoader,
-      `${process.env.PUBLIC_URL}/3d_models/logo3d_paradoxa.obj`
-    );
-    const logoRef = useRef();
-
-    const scaleRatio = 0.01;
-    const floatSpeed = 0.5; // Speed of floating motion
-    const rotationSpeed = 0.2; // Speed of rotation
-
-    useEffect(() => {
-      if (logoRef.current) {
-        gsap.to(logoRef.current.position, {
-          y: logoRef.current.position.y + 0.1,
-          duration: 5,
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
-        });
-      }
-    }, []);
-
-    return (
-      <primitive
-        object={obj}
-        ref={logoRef}
-        scale={[scaleRatio, scaleRatio, scaleRatio]}
-        rotation={[
-          objectRotation.rotationX,
-          objectRotation.rotationY,
-          objectRotation.rotationZ,
-        ]}
-        position={[-2.7, -0.4, -2.15]}
-        {...props}
-      />
-    );
-  }
 
   const { rotationX, rotationY, rotationZ } = useControls("Object", {
     rotationX: {
@@ -105,12 +102,7 @@ export default function ParaDoxa2025() {
     },
   });
 
-  const CustomCamera = ({
-    startPosition,
-    startTarget,
-    startZoom,
-    // onUpdate,
-  }) => {
+  const CustomCamera = ({ startPosition, startTarget, startZoom }) => {
     const cameraRef = useRef();
 
     useEffect(() => {
@@ -118,10 +110,6 @@ export default function ParaDoxa2025() {
         cameraRef.current.lookAt(...startTarget);
       }
     }, [startTarget]);
-
-    // useEffect(() => {
-    //   onUpdate(cameraRef.current);
-    // }, [onUpdate]);
 
     return (
       <OrthographicCamera
@@ -133,9 +121,6 @@ export default function ParaDoxa2025() {
     );
   };
 
-  /**
-   * This is what allows the camera to move in the scene with Leva
-   */
   useEffect(() => {
     setObjectRotation({
       rotationX: rotationX,
@@ -171,7 +156,7 @@ export default function ParaDoxa2025() {
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: bgColor,
-            backgroundImage: `url(${CorniceParadoxa})`,
+            backgroundImage: `url(${CorniceParadoxaPersona})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -185,25 +170,15 @@ export default function ParaDoxa2025() {
         >
           <Leva hidden={true} />
           <Canvas>
-            {/* <OrbitControls /> */}
-            {/* <axesHelper args={[10]} /> */}
-            {/* <OrthographicCamera
-              makeDefault
-              position={[10, 10, 10]}
-              zoom={300}
-            /> */}
             <CustomCamera
               startPosition={[10, 10, 10]}
               startTarget={[0, 0, 0]}
               startZoom={windowSize > global.UTILS.TABLET_WIDTH ? 330 : 150}
-              // onUpdate={(camera) => {
-              //   if (camera) camera.lookAt(...cameraSettings.target);
-              // }}
             />
             <ambientLight intensity={10} />
             <pointLight position={[10, 10, 10]} />
             <Suspense fallback={null}>
-              <ObjModel />
+              <ObjModel objectRotation={objectRotation} />
             </Suspense>
           </Canvas>
         </div>
