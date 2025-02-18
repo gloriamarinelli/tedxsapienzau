@@ -9,8 +9,11 @@ export default function PartnerCard24({ name, css_name, imgName, descr }) {
 
   return (
     <div id={`id_${css_name}`} className="card-main-container">
-      <div className={`card-inner-container ${isRotated ? "rotate" : ""}`}>
-        <div className="card-front" onClick={handleClick}>
+      <div
+        className={`card-inner-container ${isRotated ? "rotate" : ""}`}
+        onClick={handleClick}
+      >
+        <div className="card-front">
           <img
             src={`/images/partners24/cards/${imgName}`}
             alt="TEDx Sponsor"
@@ -23,9 +26,7 @@ export default function PartnerCard24({ name, css_name, imgName, descr }) {
             }}
           />
         </div>
-        <div className="card-back" onClick={handleClick}>
-          {descr}
-        </div>
+        <div className="card-back">{descr}</div>
       </div>
       <div style={{ fontSize: "20px", fontWeight: "bold" }}>{name}</div>
     </div>
