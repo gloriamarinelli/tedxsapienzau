@@ -13,7 +13,7 @@ import { useControls, Leva } from "leva";
 import gsap from "gsap";
 import * as THREE from "three";
 // import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona.webp";
-import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona_v2.png";
+import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona_v3.webp";
 
 function ObjModel(props) {
   const obj = useLoader(
