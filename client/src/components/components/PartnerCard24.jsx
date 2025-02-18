@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function PartnerCard24({ name, imgName, descr }) {
+export default function PartnerCard24({ name, css_name, imgName, descr }) {
   const [isRotated, setIsRotated] = useState(false);
 
   const handleClick = () => {
@@ -8,7 +8,7 @@ export default function PartnerCard24({ name, imgName, descr }) {
   };
 
   return (
-    <div className="card-main-container">
+    <div id={`id_${css_name}`} className="card-main-container">
       <div
         className={`card-inner-container ${isRotated ? "rotate" : ""}`}
         onClick={handleClick}
@@ -26,7 +26,9 @@ export default function PartnerCard24({ name, imgName, descr }) {
             }}
           />
         </div>
-        <div className="card-back">{descr}</div>
+        <div className="card-back" onClick={handleClick}>
+          {descr}
+        </div>
       </div>
       <div style={{ fontSize: "20px", fontWeight: "bold" }}>{name}</div>
     </div>
