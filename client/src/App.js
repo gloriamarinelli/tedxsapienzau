@@ -57,11 +57,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <ParaDoxa2025 />,
       },
       {
         path: "/tedxsapienzau",
-        element: <Home />,
+        element: <ParaDoxa2025 />,
       },
       {
         path: "/partners",
