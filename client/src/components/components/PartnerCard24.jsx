@@ -26,7 +26,9 @@ export default function PartnerCard24({ name, css_name, imgName, descr }) {
             }}
           />
         </div>
-        <div className="card-back">{descr}</div>
+        <div className="card-back" onClick={handleClick}>
+          {descr}
+        </div>
       </div>
       <div style={{ fontSize: "20px", fontWeight: "bold" }}>{name}</div>
     </div>
