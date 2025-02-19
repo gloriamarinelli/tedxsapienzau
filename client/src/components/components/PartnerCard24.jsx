@@ -1,35 +1,34 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
-export default function PartnerCard24({ name, imgName, descr }) {
-  const [isRotating, setIsRotating] = useState(false);
+export default function PartnerCard24({ name, css_name, imgName, descr }) {
+  const [isRotated, setIsRotated] = useState(false);
 
   const handleClick = () => {
-    setIsRotating(true);
-    setTimeout(() => {
-      setIsRotating(false);
-    }, 5000);
+    setIsRotated((prev) => !prev);
   };
 
   return (
-    <div className="card-main-container">
-      <motion.div
-        className="card-inner-container"
-        animate={{ rotateY: isRotating ? 180 * 1 : 0 }}
-        whileHover={{ rotateY: 180 }}
-        transition={{ duration: 0.4, ease: "linear" }}
+    <div id={`id_${css_name}`} className="card-main-container">
+      <div
+        className={`card-inner-container ${isRotated ? "rotate" : ""}`}
         onClick={handleClick}
       >
         <div className="card-front">
           <img
-            className="sponsor_logo"
             src={`/images/partners24/cards/${imgName}`}
             alt="TEDx Sponsor"
+            style={{
+              width: "100%",
+              height: "175px",
+              objectFit: "contain",
+              padding: "0px 5px",
+              borderRadius: "10%",
+            }}
           />
         </div>
         <div className="card-back">{descr}</div>
-      </motion.div>
-      <div className="sponsor_name">{name}</div>
+      </div>
+      <div style={{ fontSize: "20px", fontWeight: "bold" }}>{name}</div>
     </div>
   );
 }
