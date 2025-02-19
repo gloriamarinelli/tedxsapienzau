@@ -160,7 +160,7 @@
   transition: all 0.8s ease;
 }
 
-.card-inner-container:hover, .rotate {
+.card-inner-container:hover {
   transform: rotateY(180deg);
 }
 
@@ -195,4 +195,42 @@
   font-size: 13px;
   padding: 5px 7px;
   transform: rotateY(180deg);
+}
+
+.sponsor_logo {
+  width: 100%;
+  height: 175px;
+  object-fit: contain;
+  padding: 0px 5px;
+  border-radius: 10%;
+}
+
+.sponsor_name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* PartnersList24 */
+#external_div {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+#title_div {
+  color: white;
+  margin-top: 95px;
+}
+
+#partners_div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+  height: auto;
+  width: 90%; /* 110% to match footer's width */
 }
