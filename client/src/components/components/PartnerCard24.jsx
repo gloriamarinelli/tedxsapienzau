@@ -16,6 +16,7 @@ export default function PartnerCard24({ name, imgName, descr }) {
       <motion.div
         className="card-inner-container"
         animate={{ rotateY: isRotating ? 180 * 1 : 0 }}
+        whileHover={{ rotateY: 180}}
         transition={{ duration: 0.4, ease: "linear" }}
         onClick={handleClick}
       >
