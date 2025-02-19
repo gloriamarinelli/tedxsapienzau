@@ -19,24 +19,8 @@ export default function PartnersList24() {
   const lang_it = "it";
 
   return (
-    <div
-      id="external_div"
-      style={{
-        backgroundColor: "black",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        fontFamily: "Fira Sans Extra Condensed,  sans-serif",
-      }}
-    >
-      <div
-        id="title_div"
-        style={{
-          color: "white",
-          //marginTop: "95px",
-        }}
-      >
+    <div id="external_div">
+      <div id="title_div">
         <h1
           className="font-weight-bold headerTitle"
           style={{
@@ -50,23 +34,14 @@ export default function PartnersList24() {
       <div
         id="partners_div"
         style={{
-          display: "flex",
-          //gridTemplateColumns: "repeat(4, 1fr)",
           flexDirection:
             windowSize > global.UTILS.TABLET_WIDTH ? "row" : "column",
-          gap: "20px",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "35px 0",
-          height: "auto",
-          width: "90%", // 110% to match footer's width
         }}
       >
         {partnersInfo.partners.map((partner) => (
           <PartnerCard24
             key={partner.id}
             name={partner.name}
-            css_name={partner.css_name}
             imgName={partner.imgName}
             descr={
               currentLanguage == lang_it ? partner.descr_it : partner.descr_en
