@@ -164,10 +164,6 @@
   transform: rotateY(180deg);
 }
 
-.transformed {
-  transform: rotateY(180deg);
-}
-
 .card-front {
   position: absolute;
   top: 0;

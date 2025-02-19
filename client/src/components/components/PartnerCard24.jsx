@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function PartnerCard24({ name, imgName, descr }) {
-  const [isTransformed, setIsTransformed] = useState(false);
+  const [isRotating, setIsRotating] = useState(false);
 
   const handleClick = () => {
-    setIsTransformed((prev) => !prev);
+    setIsRotating(true);
+    setTimeout(() => {
+      setIsRotating(false);
+    }, 5000);
   };
 
   return (
     <div className="card-main-container">
-      <div
-        className={`card-inner-container ${isTransformed ? "transformed" : ""}`}
+      <motion.div
+        className="card-inner-container"
+        animate={{ rotateY: isRotating ? 180 * 1 : 0 }}
+        transition={{ duration: 0.4, ease: "linear" }}
         onClick={handleClick}
       >
         <div className="card-front">
@@ -21,7 +27,7 @@ export default function PartnerCard24({ name, imgName, descr }) {
           />
         </div>
         <div className="card-back">{descr}</div>
-      </div>
+      </motion.div>
       <div className="sponsor_name">{name}</div>
     </div>
   );
