@@ -1,36 +1,28 @@
 import React, { useState } from "react";
 
 export default function PartnerCard24({ name, imgName, descr }) {
-  const [isRotated, setIsRotated] = useState(false);
+  const [isTransformed, setIsTransformed] = useState(false);
 
   const handleClick = () => {
-    setIsRotated((prev) => !prev);
+    setIsTransformed((prev) => !prev);
   };
 
   return (
     <div className="card-main-container">
       <div
-        className={`card-inner-container ${isRotated ? "rotate" : ""}`}
+        className={`card-inner-container ${isTransformed ? "transformed" : ""}`}
         onClick={handleClick}
       >
         <div className="card-front">
           <img
+            className="sponsor_logo"
             src={`/images/partners24/cards/${imgName}`}
             alt="TEDx Sponsor"
-            style={{
-              width: "100%",
-              height: "175px",
-              objectFit: "contain",
-              padding: "0px 5px",
-              borderRadius: "10%",
-            }}
           />
         </div>
-        <div className="card-back" onClick={handleClick}>
-          {descr}
-        </div>
+        <div className="card-back">{descr}</div>
       </div>
-      <div style={{ fontSize: "20px", fontWeight: "bold" }}>{name}</div>
+      <div className="sponsor_name">{name}</div>
     </div>
   );
 }
