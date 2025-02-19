@@ -29,9 +29,7 @@ export default function PartnersMobileLayout24() {
           style={{
             width: "98%",
             height: "80%",
-            paddingLeft: global.UTILS.BENTO_BOX_PADDING,
-            paddingRight: global.UTILS.BENTO_BOX_PADDING,
-            paddingBottom: global.UTILS.BENTO_BOX_PADDING,
+            padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "black",
             display: "flex",
