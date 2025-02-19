@@ -66,7 +66,6 @@ export default function PartnersList24() {
           <PartnerCard24
             key={partner.id}
             name={partner.name}
-            css_name={partner.css_name}
             imgName={partner.imgName}
             descr={
               currentLanguage == lang_it ? partner.descr_it : partner.descr_en
