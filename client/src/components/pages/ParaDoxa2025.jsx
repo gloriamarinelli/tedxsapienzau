@@ -8,12 +8,13 @@ import {
   useHelper,
 } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { useControls, Leva } from "leva";
 import gsap from "gsap";
 import * as THREE from "three";
 // import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona.webp";
 import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona_v3.webp";
+import Iframe from "react-iframe";
 
 function ObjModel(props) {
   const obj = useLoader(
@@ -182,6 +183,132 @@ export default function ParaDoxa2025() {
               <ObjModel objectRotation={objectRotation} />
             </Suspense>
           </Canvas>
+        </div>
+      </section>
+      <section
+        style={{
+          display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
+          justifyContent: "center",
+          alignItems: "center",
+          height:
+            windowSize > global.UTILS.TABLET_WIDTH
+              ? `calc(80vh - ${global.UTILS.NAV_HEIGHT})`
+              : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
+          width: "100vw",
+          backgroundColor: "#000",
+          padding: global.UTILS.BENTO_BOX_PADDING,
+        }}
+      >
+        <div
+          id="left-container"
+          style={{
+            width: "100%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%", //la barra bianca sotto dipende dal secondo valore
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: "#191919",
+            display: "flex",
+            marginRight: "10px",
+            justifyContent: "left",
+            alignItems: "flex",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            position: "relative",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+            }}
+          >
+            <h1
+              className="fira-sans"
+              style={{
+                textAlign: "left",
+                fontSize: windowSize > 1245 ? "6vh" : "5vh",
+                fontWeight: 700,
+                maxWidth: "20ch",
+                color: "#FFFFFF",
+              }}
+            >
+              <extra>
+                <condensed-extrabold>
+                  <Trans i18nKey="home.next_event" />
+                </condensed-extrabold>
+              </extra>
+            </h1>
+            <h5
+              className="fira-sans"
+              style={{
+                textAlign: "left",
+                fontSize: windowSize > 1245 ? "4vh" : "3vh",
+                fontWeight: 300,
+                maxWidth: "30ch",
+                color: "#FFFFFF",
+              }}
+            >
+              {t("home.next_event_form")}
+            </h5>
+          </div>
+        </div>
+        <div
+          id="right-container"
+          style={{
+            width: "100%",
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",//la barra bianca sotto dipende dal secondo valore
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: "#191919",
+            display: "flex",
+            marginLeft: windowSize > global.UTILS.TABLET_WIDTH ? "10px" : "0px",
+            marginTop: windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "17px",
+            marginBottom:
+              windowSize > global.UTILS.TABLET_WIDTH ? "0px" : "200vw",
+            justifyContent: "center",
+            alignItems: "flex-end",
+            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          {i18n.language === "it" ? (
+            <Iframe
+              width="100%"
+              height="100%"
+              src="https://31dfcf3b.sibforms.com/serve/MUIFAGmJoAVv_QJEw7JN7zjN0ucQ52-6hwypIyMu_k-q54TIIoobWKD0giKOQ8S7YqLCXNB3yUuLxFNlXbl3W8gMyt3XtVqxLzpyj45GmokToGpsRe0GXDv0pHrPyQRx3hid7ViTQxx5IMWLrIE4jxASnL6FsD8KljM7qf4u2BhDOQDyfN8DcMvh8E73bfRYFULDqOzCSc1ThILU"
+              frameborder="0"
+              allowfullscreen
+              position="absolute"
+              style={{
+                position: "absolute",
+                display: "block",
+                margin: 0,
+                padding: 0,
+                top: 0,
+                left: 0,
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
+            />
+          ) : (
+            <Iframe
+              width="100%"
+              height="100%"
+              src="https://31dfcf3b.sibforms.com/serve/MUIFAKnZWxErJcLmuyvzjpWio3_SOy18jxtNLMON5G4GXZ07vtBK-fSmY0LBBp5pIyZKhgR5ynPFkmhJRkAo3lOojEg8azeYnh9sFMM4RsRNHbY7vOYVljvmYhVNmDNqa5GMoqJGIXFd6sYwIYygz9wXcu0m8mYHzXIA4DZv2fSnGI_VxMHLXcU32UR2EtP9h5CYf9l-_zSPuk1t"
+              frameborder="0"
+              allowfullscreen
+              position="absolute"
+              style={{
+                position: "absolute",
+                display: "block",
+                margin: 0,
+                padding: 0,
+                top: 0,
+                left: 0,
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }}
+            />
+          )}
         </div>
       </section>
     </div>
