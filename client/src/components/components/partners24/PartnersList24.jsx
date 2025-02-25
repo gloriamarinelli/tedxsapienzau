@@ -34,8 +34,21 @@ export default function PartnersList24() {
       <div
         id="partners_div"
         style={{
-          flexDirection:
-            windowSize > global.UTILS.TABLET_WIDTH ? "row" : "column",
+          marginTop: "30px",
+          display: "grid",
+          gridTemplateColumns:
+            windowSize > global.UTILS.BIG_TABLET_WIDTH
+              ? "repeat(4, 1fr)" // desktop view (4 columns)
+              : windowSize > global.UTILS.TABLET_WIDTH
+              ? "repeat(2, 1fr)" // tablet view (2 columns)
+              : "repeat(1, 1fr)", // smartphone view (1 column)
+          gap:
+            windowSize > global.UTILS.BIG_TABLET_WIDTH
+              ? "100px" // desktop view
+              : windowSize > global.UTILS.TABLET_WIDTH
+              ? "50px" // tablet view
+              : "30px", // smartphone view
+          justifyContent: "center",
         }}
       >
         {partnersInfo.partners.map((partner) => (
