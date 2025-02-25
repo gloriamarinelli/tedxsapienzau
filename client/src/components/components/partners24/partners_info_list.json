@@ -14,7 +14,7 @@
       "imgName": "novo_nordisk.webp",
       "descr_it": "Novo Nordisk, azienda farmaceutica danese, è leader nello sviluppo di soluzioni innovative per patologie croniche come diabete, obesità, emofilia e malattie endocrine rare. Con oltre 65.000 dipendenti, opera in 169 paesi, inclusa l'Italia, dove la sede si trova a Roma, in viale Giorgio Ribotta.",
       "descr_en": "Novo Nordisk, a Danish pharmaceutical company, is a world leader in developing innovative treatments for chronic diseases such as diabetes, obesity, hemophilia, and rare endocrine disorders. With over 65,000 employees, the company operates in 169 countries, including Italy, where its headquarters are located in Rome, on Viale Giorgio Ribotta.",
-      "partner_type": "main"
+      "partner_type": "supporting"
     },
     {
       "id": 3,
@@ -44,9 +44,9 @@
       "id": 6,
       "name": "ENEA",
       "imgName": "enea.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
-      "partner_type": ""
+      "descr_it": "L'ENEA è l'Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sostenibile. Ente pubblico per ricerca, innovazione e servizi avanzati a imprese, PA e cittadini nei settori energia, ambiente e sviluppo sostenibile.",
+      "descr_en": "ENEA is the National Agency for New Technologies, Energy, and Sustainable Development. A public body for research, innovation, and advanced services for businesses, public administration, and citizens in the fields of energy, environment, and sustainable development.",
+      "partner_type": "patrocinio"
     },
     {
       "id": 7,
