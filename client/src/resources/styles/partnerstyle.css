@@ -225,7 +225,7 @@
   margin-top: 95px;
 }
 
-#partners_div {
+/*#partners_div {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -233,4 +233,4 @@
   margin: 35px 0;
   height: auto;
   width: 90%; /* 110% to match footer's width */
-}
+/*}*/
