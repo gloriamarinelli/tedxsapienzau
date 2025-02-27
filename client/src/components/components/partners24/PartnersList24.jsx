@@ -59,7 +59,6 @@ export default function PartnersList24() {
 
   /* sections title style const */
   const pTypeStyle = {
-    textTransform: "uppercase",
     color: "white",
     marginTop: "70px",
     fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "50px" : "6vw",
@@ -129,7 +128,7 @@ export default function PartnersList24() {
       </div>
 
       <div id="ext_patrocinio_div">
-        <h2 style={pTypeStyle}>Patrocinio Partners</h2>
+        <h2 style={pTypeStyle}>Con il patrocinio di:</h2>
         <div id="int_patrocinio_div" style={gridStyle}>
           {renderPartners(patrocinioPartners)}
         </div>
