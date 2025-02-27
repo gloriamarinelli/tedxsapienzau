@@ -6,7 +6,8 @@
       "imgName": "unicredit.webp",
       "descr_it": "UniCredit è una banca commerciale pan-europea con un modello di servizio unico nel suo genere in Italia, Germania, Europa Centrale e Orientale. Il nostro obiettivo primario è dare alle nostre comunità le leve per il progresso, offrendo il meglio a tutti gli stakeholder e liberando il potenziale dei nostri clienti e delle nostre persone in tutta Europa.",
       "descr_en": "UniCredit is a pan-European commercial bank with a unique service model in Italy, Germany, and Central and Eastern Europe. Our primary goal is to empower our communities to progress by offering the best to all stakeholders and unlocking the potential of our clients and people across Europe.",
-      "partner_type": "main"
+      "partner_type": "main",
+      "wb_link": "https://www.unicredit.it/it/privati.html"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "imgName": "novo_nordisk.webp",
       "descr_it": "Novo Nordisk, azienda farmaceutica danese, è leader nello sviluppo di soluzioni innovative per patologie croniche come diabete, obesità, emofilia e malattie endocrine rare. Con oltre 65.000 dipendenti, opera in 169 paesi, inclusa l'Italia, dove la sede si trova a Roma, in viale Giorgio Ribotta.",
       "descr_en": "Novo Nordisk, a Danish pharmaceutical company, is a world leader in developing innovative treatments for chronic diseases such as diabetes, obesity, hemophilia, and rare endocrine disorders. With over 65,000 employees, the company operates in 169 countries, including Italy, where its headquarters are located in Rome, on Viale Giorgio Ribotta.",
-      "partner_type": "supporting"
+      "partner_type": "supporting",
+      "wb_link": "https://www.novonordisk.it/"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "imgName": "balduina.webp",
       "descr_it": "Autocentri Balduina è il punto di riferimento per intere generazioni di romani. Con diversi showroom su Roma e provincia, rappresenta alcuni dei brand più prestigiosi: Audi, Volkswagen, Skoda e Porsche. La soddisfazione del cliente è prioritaria. Vendita diretta, service e officine tecnologicamente avanzavate. Dal 1962 il meglio sempre.",
       "descr_en": "Autocentri Balduina has been a trusted name for generations of Romans. With multiple showrooms in Rome and its surrounding province, it represents some of the most prestigious brands: Audi, Volkswagen, Skoda, and Porsche. Customer satisfaction is paramount. Direct sales, service, and technologically advanced workshops. Since 1962, always the best.",
-      "partner_type": "supporting"
+      "partner_type": "supporting",
+      "wb_link": "https://www.autocentribalduina.com"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "imgName": "hyper.png",
       "descr_it": "Hyper Foundry è la startup innovativa e studio creativo che combina design e tecnologia per creare soluzioni digitali all'avanguardia. Con un approccio multidisciplinare integrato, supporta aziende e startup nel realizzare progetti concreti e scalabili, specializzati in interfacce avanzate, sviluppo software e avatar AI personalizzati.",
       "descr_en": "Hyper Foundry is an innovative startup and creative studio that merges design and technology to forge cutting-edge digital solutions. Through an integrated, multidisciplinary approach, it empowers businesses and startups to bring tangible and scalable projects to fruition, with a specialization in advanced interfaces, software development, and custom AI avatars.",
-      "partner_type": "smart"
+      "partner_type": "smart",
+      "wb_link": "https://www.hyper-foundry.com"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "imgName": "ypt.webp",
       "descr_it": "Your Personal Trainer è il primo ecosistema fisico e digitale dedicato al personal training e al fitness. Una piattaforma gratuita che consente a clienti e professionisti di conoscersi ma soprattutto consente loro di prenotare on-demand spazi riservati e attrezzati per rendere l'esperienza di allenamento davvero unica.",
       "descr_en": "Your Personal Trainer is the premier physical and digital ecosystem dedicated to personal training and fitness. A complimentary platform that connects clients and professionals, enabling on-demand bookings of reserved, equipped spaces to create a truly unique workout experience.",
-      "partner_type": "friendly"
+      "partner_type": "friendly",
+      "wb_link": "https://www.yptrainer.com/"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "imgName": "enea.webp",
       "descr_it": "L'ENEA è l'Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sostenibile. Ente pubblico per ricerca, innovazione e servizi avanzati a imprese, PA e cittadini nei settori energia, ambiente e sviluppo sostenibile.",
       "descr_en": "ENEA is the National Agency for New Technologies, Energy, and Sustainable Development. A public body for research, innovation, and advanced services for businesses, public administration, and citizens in the fields of energy, environment, and sustainable development.",
-      "partner_type": "patrocinio"
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.enea.it"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "imgName": "techno.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "community"
+      "partner_type": "community",
+      "wb_link": "https://www.technotown.it"
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "imgName": "mic.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "community"
+      "partner_type": "community",
+      "wb_link": "https://miccard.roma.it/"
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "imgName": "ef.webp",
       "descr_it": "EF Education First è un'organizzazione internazionale leader nell'educazione, specializzata in formazione linguistica, viaggi studio e scambi culturali. Fondata quasi 60 anni fa in Svezia, è presente in oltre 500 scuole e uffici in 53 paesi. EF offre soluzioni per ogni età e obiettivo.",
       "descr_en": "EF Education First is a leading international education organization, specializing in language training, study abroad programs, and cultural exchanges. Founded almost 60 years ago in Sweden, it has a presence in over 500 schools and offices in 53 countries. EF offers solutions for every age and goal.",
-      "partner_type": "smart"
+      "partner_type": "smart",
+      "wb_link": "https://www.ef-italia.it"
     }
   ]
 }

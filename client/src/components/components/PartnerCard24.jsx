@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function PartnerCard24({ name, imgName, descr }) {
+export default function PartnerCard24({ name, imgName, descr, wb_link }) {
   const [isRotating, setIsRotating] = useState(false);
 
   const handleClick = () => {
@@ -16,7 +16,7 @@ export default function PartnerCard24({ name, imgName, descr }) {
       <motion.div
         className="card-inner-container"
         animate={{ rotateY: isRotating ? 180 * 1 : 0 }}
-        whileHover={{ rotateY: 180}}
+        whileHover={{ rotateY: 180 }}
         transition={{ duration: 0.4, ease: "linear" }}
         onClick={handleClick}
       >
@@ -29,7 +29,20 @@ export default function PartnerCard24({ name, imgName, descr }) {
         </div>
         <div className="card-back">{descr}</div>
       </motion.div>
-      <div className="sponsor_name">{name}</div>
+      <div className="sponsor_name">
+        <a
+          href={wb_link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={wb_link === "" ? (e) => e.preventDefault() : null}
+          style={{
+            color: wb_link === "" ? "white" : "grey",
+            textDecoration: wb_link === "" ? "none" : "underline",
+          }}
+        >
+          {name}
+        </a>
+      </div>
     </div>
   );
 }
