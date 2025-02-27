@@ -36,7 +36,7 @@ export default function PartnerCard24({ name, imgName, descr, wb_link }) {
           rel="noopener noreferrer"
           onClick={wb_link === "" ? (e) => e.preventDefault() : null}
           style={{
-            color: wb_link === "" ? "white" : "grey",
+            color: wb_link === "" ? "white" : "#0077b6",
             textDecoration: wb_link === "" ? "none" : "underline",
           }}
         >
