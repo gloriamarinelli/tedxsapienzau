@@ -63,6 +63,14 @@
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
       "partner_type": "community"
+    },
+    {
+      "id": 9,
+      "name": "Education First",
+      "imgName": "ef.webp",
+      "descr_it": "EF Education First è un'organizzazione internazionale leader nell'educazione, specializzata in formazione linguistica, viaggi studio e scambi culturali. Fondata quasi 60 anni fa in Svezia, è presente in oltre 500 scuole e uffici in 53 paesi. EF offre soluzioni per ogni età e obiettivo.",
+      "descr_en": "EF Education First is a leading international education organization, specializing in language training, study abroad programs, and cultural exchanges. Founded almost 60 years ago in Sweden, it has a presence in over 500 schools and offices in 53 countries. EF offers solutions for every age and goal.",
+      "partner_type": "smart"
     }
   ]
 }
