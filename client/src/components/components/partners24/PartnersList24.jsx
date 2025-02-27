@@ -59,6 +59,7 @@ export default function PartnersList24() {
             descr={
               currentLanguage == lang_it ? partner.descr_it : partner.descr_en
             }
+            wb_link={partner.wb_link}
           />
         ))}
       </div>
