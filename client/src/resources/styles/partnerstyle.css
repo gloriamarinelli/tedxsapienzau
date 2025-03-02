@@ -208,9 +208,6 @@
 .sponsor_name {
   font-size: 20px;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  padding-top: 6px;
 }
 
 /* PartnersList24 */
