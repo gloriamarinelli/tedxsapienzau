@@ -80,6 +80,24 @@
       "descr_en": "EF Education First is a leading international education organization, specializing in language training, study abroad programs, and cultural exchanges. Founded almost 60 years ago in Sweden, it has a presence in over 500 schools and offices in 53 countries. EF offers solutions for every age and goal.",
       "partner_type": "smart",
       "wb_link": "https://www.ef-italia.it"
+    },
+    {
+      "id": 10,
+      "name": "Consigliera di Parità",
+      "imgName": "cp.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.cittametropolitanaroma.it/homepage/la-citta-metropolitana/struttura-organizzativa/altri-organismi/la-consigliera-di-parita/chi-e-la-consigliera-di-parita/"
+    },
+    {
+      "id": 11,
+      "name": "Rome Future Week",
+      "imgName": "rfw.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "friendly",
+      "wb_link": "https://romefutureweek.it/"
     }
   ]
 }
