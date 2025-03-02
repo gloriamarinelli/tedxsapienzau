@@ -228,6 +228,10 @@
   margin-top: 95px;
 }
 
+#empty_card {
+  visibility: hidden;
+}
+
 /*#partners_div {
   display: flex;
   gap: 20px;
