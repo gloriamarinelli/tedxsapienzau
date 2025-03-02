@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export default function PartnerCard24({ name, imgName, descr, wb_link }) {
   const [isRotating, setIsRotating] = useState(false);
@@ -36,11 +38,18 @@ export default function PartnerCard24({ name, imgName, descr, wb_link }) {
           rel="noopener noreferrer"
           onClick={wb_link === "" ? (e) => e.preventDefault() : null}
           style={{
-            color: wb_link === "" ? "white" : "#B50000",
-            textDecoration: wb_link === "" ? "none" : "underline",
+            color: "eb0028",
+            textDecoration: "none",
           }}
         >
-          {name}
+          <h5 style={{ color: "white" }}>
+            {name}{" "}
+            <FontAwesomeIcon
+              size="xs"
+              icon={faLink}
+              style={{ color: "#eb0028" }}
+            />
+          </h5>
         </a>
       </div>
     </div>
