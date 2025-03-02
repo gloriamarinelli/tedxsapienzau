@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-export default function PartnerCard24({ name, imgName, descr, wb_link, div_id }) {
+export default function PartnerCard24({ name, imgName, descr, wb_link }) {
   const [isRotating, setIsRotating] = useState(false);
 
   const handleClick = () => {
@@ -14,7 +14,7 @@ export default function PartnerCard24({ name, imgName, descr, wb_link, div_id })
   };
 
   return (
-    <div id={`${div_id}`} className="card-main-container">
+    <div className="card-main-container">
       <motion.div
         className="card-inner-container"
         animate={{ rotateY: isRotating ? 180 * 1 : 0 }}

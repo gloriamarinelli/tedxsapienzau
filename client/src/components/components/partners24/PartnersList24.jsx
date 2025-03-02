@@ -19,8 +19,11 @@ export default function PartnersList24() {
   const lang_it = "it";
 
   /* partners filtering depending on "partner_type" */
-  const mainSupportingPartners = partnersInfo.partners.filter(
-    (p) => p.partner_type === "main" || p.partner_type === "supporting"
+  const mainPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "main"
+  );
+  const supportingPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "supporting"
   );
   const smartPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "smart"
@@ -61,6 +64,7 @@ export default function PartnersList24() {
     fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "50px" : "6vw",
   };
 
+  /* generate partners card */
   const renderPartners = (partners) =>
     partners.map((partner) => (
       <PartnerCard24
@@ -72,10 +76,8 @@ export default function PartnersList24() {
         }
         partner_type={partner.partner_type}
         wb_link={partner.wb_link}
-        div_id={partner.div_id}
       />
     ));
-   
 
   return (
     <div id="external_div">
@@ -92,12 +94,16 @@ export default function PartnersList24() {
       </div>
 
       <div id="ext_main_div">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)" }}>
-          <h2 style={pTypeStyle}>Main Partners</h2>
-          <h2 style={pTypeStyle}>Supporting Partners</h2>
-        </div>
+        <h2 style={pTypeStyle}>Main Partners</h2>
         <div id="int_main_div" style={gridStyle}>
-          {renderPartners(mainSupportingPartners)}
+          {renderPartners(mainPartners)}
+        </div>
+      </div>
+
+      <div id="ext_supporting_div">
+        <h2 style={pTypeStyle}>Supporting Partners</h2>
+        <div id="int_supporting_div" style={gridStyle}>
+          {renderPartners(supportingPartners)}
         </div>
       </div>
 
