@@ -67,6 +67,11 @@
     "14th_st_el_6": "Contact Us"
   },
 
+  "partners_list":{
+    "patrocinio_div": "With the sponsorship of",
+    "generic_div": "Other Partners"
+  },
+
   "footer": {
     "description": "TEDxSapienzaU is an independently organized TED event operated under license from TED. The protagonists are the ideas, the speakers, the partners and the students that populate this great academic community.",
     "follow_us": "Follow us on social media",

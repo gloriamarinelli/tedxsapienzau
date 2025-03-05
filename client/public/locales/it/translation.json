@@ -67,6 +67,11 @@
     "14th_st_el_6": "Contattaci"
   },
 
+  "partners_list": {
+    "patrocinio_div": "Con il patrocinio di",
+    "generic_div": "Altri Partners"
+  },
+
   "footer": {
     "description": "TEDxSapienzaU è un evento TED organizzato in modo indipendente gestito su licenza di TED. I protagonisti sono le idee, gli speakers, i partner e gli studenti che popolano questa grande comunità accademica.",
     "follow_us": "Seguici sui social",

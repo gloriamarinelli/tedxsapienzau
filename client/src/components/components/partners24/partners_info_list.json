@@ -60,7 +60,7 @@
       "imgName": "techno.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "community",
+      "partner_type": "generic",
       "wb_link": "https://www.technotown.it"
     },
     {
@@ -69,7 +69,7 @@
       "imgName": "mic.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "community",
+      "partner_type": "generic",
       "wb_link": "https://miccard.roma.it/"
     },
     {
@@ -88,7 +88,7 @@
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
       "partner_type": "patrocinio",
-      "wb_link": "https://www.cittametropolitanaroma.it/homepage/la-citta-metropolitana/struttura-organizzativa/altri-organismi/la-consigliera-di-parita/chi-e-la-consigliera-di-parita/"
+      "wb_link": "https://www.cittametropolitanaroma.it/homepage/la-citta-metropolitana/struttura-organizzativa/altri-organismi/la-consigliera-di-parita"
     },
     {
       "id": 11,
@@ -98,6 +98,15 @@
       "descr_en": "coming soon",
       "partner_type": "community",
       "wb_link": "https://romefutureweek.it/"
+    },
+    {
+      "id": 12,
+      "name": "Roma Capitale",
+      "imgName": "roma_cap.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.comune.roma.it"
     }
   ]
 }

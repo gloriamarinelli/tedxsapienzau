@@ -15,6 +15,7 @@ import "../../../index.css";
 export default function PartnersList24() {
   const [windowSize] = useOutletContext(); // window's size variable
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const currentLanguage = i18n.language;
   const lang_it = "it";
 
@@ -36,6 +37,9 @@ export default function PartnersList24() {
   );
   const patrocinioPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "patrocinio"
+  );
+  const genericPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "generic"
   );
 
   /* grid style const */
@@ -92,45 +96,62 @@ export default function PartnersList24() {
           Partners
         </h1>
       </div>
-
-      <div id="ext_main_div">
-        <h2 style={pTypeStyle}>Main Partners</h2>
-        <div id="int_main_div" style={gridStyle}>
-          {renderPartners(mainPartners)}
+      <div
+        id="list_div"
+        /* to restore the previous list display just delete the div style  */
+        style={{
+          display: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "grid" : "",
+          gridTemplateColumns:
+            windowSize > global.UTILS.BIG_TABLET_WIDTH ? "repeat(2, 1fr)" : "",
+          marginLeft: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "100px" : "",
+        }}
+      >
+        <div id="ext_main_div">
+          <h2 style={pTypeStyle}>Main Partners</h2>
+          <div id="int_main_div" style={gridStyle}>
+            {renderPartners(mainPartners)}
+          </div>
         </div>
-      </div>
 
-      <div id="ext_supporting_div">
-        <h2 style={pTypeStyle}>Supporting Partners</h2>
-        <div id="int_supporting_div" style={gridStyle}>
-          {renderPartners(supportingPartners)}
+        <div id="ext_supporting_div">
+          <h2 style={pTypeStyle}>Supporting Partners</h2>
+          <div id="int_supporting_div" style={gridStyle}>
+            {renderPartners(supportingPartners)}
+          </div>
         </div>
-      </div>
 
-      <div id="ext_smart_div">
-        <h2 style={pTypeStyle}>Smart Partners</h2>
-        <div id="int_smart_div" style={gridStyle}>
-          {renderPartners(smartPartners)}
+        <div id="ext_smart_div">
+          <h2 style={pTypeStyle}>Smart Partners</h2>
+          <div id="int_smart_div" style={gridStyle}>
+            {renderPartners(smartPartners)}
+          </div>
         </div>
-      </div>
-      <div id="ext_friendly_div">
-        <h2 style={pTypeStyle}>Friendly Partners</h2>
-        <div id="int_friendly_div" style={gridStyle}>
-          {renderPartners(friendlyPartners)}
+        <div id="ext_friendly_div">
+          <h2 style={pTypeStyle}>Friendly Partners</h2>
+          <div id="int_friendly_div" style={gridStyle}>
+            {renderPartners(friendlyPartners)}
+          </div>
         </div>
-      </div>
 
-      <div id="ext_community_div">
-        <h2 style={pTypeStyle}>Community Partners</h2>
-        <div id="int_community_div" style={gridStyle}>
-          {renderPartners(communityPartners)}
+        <div id="ext_community_div">
+          <h2 style={pTypeStyle}>Community Partners</h2>
+          <div id="int_community_div" style={gridStyle}>
+            {renderPartners(communityPartners)}
+          </div>
         </div>
-      </div>
 
-      <div id="ext_patrocinio_div">
-        <h2 style={pTypeStyle}>Con il patrocinio di:</h2>
-        <div id="int_patrocinio_div" style={gridStyle}>
-          {renderPartners(patrocinioPartners)}
+        <div id="ext_patrocinio_div">
+          <h2 style={pTypeStyle}>{t("partners_list.patrocinio_div")}</h2>
+          <div id="int_patrocinio_div" style={gridStyle}>
+            {renderPartners(patrocinioPartners)}
+          </div>
+        </div>
+
+        <div id="ext_generic_div">
+          <h2 style={pTypeStyle}>{t("partners_list.generic_div")}</h2>
+          <div id="int_generic_div" style={gridStyle}>
+            {renderPartners(genericPartners)}
+          </div>
         </div>
       </div>
     </div>
