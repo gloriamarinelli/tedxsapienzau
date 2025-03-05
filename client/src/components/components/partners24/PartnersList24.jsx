@@ -15,6 +15,7 @@ import "../../../index.css";
 export default function PartnersList24() {
   const [windowSize] = useOutletContext(); // window's size variable
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const currentLanguage = i18n.language;
   const lang_it = "it";
 
@@ -131,14 +132,14 @@ export default function PartnersList24() {
       </div>
 
       <div id="ext_patrocinio_div">
-        <h2 style={pTypeStyle}>Con il patrocinio di:</h2>
+        <h2 style={pTypeStyle}>{t("partners_list.patrocinio_div")}</h2>
         <div id="int_patrocinio_div" style={gridStyle}>
           {renderPartners(patrocinioPartners)}
         </div>
       </div>
 
       <div id="ext_generic_div">
-        <h2 style={pTypeStyle}>Altri Partners:</h2>
+        <h2 style={pTypeStyle}>{t("partners_list.generic_div")}</h2>
         <div id="int_generic_div" style={gridStyle}>
           {renderPartners(genericPartners)}
         </div>
