@@ -98,13 +98,13 @@ export default function PartnersList24() {
       </div>
       <div
         id="list_div"
-        /* to restore the previous list display just delete the div style  */
+        /* to restore the previous list display just delete the div style  
         style={{
           display: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "grid" : "",
           gridTemplateColumns:
             windowSize > global.UTILS.BIG_TABLET_WIDTH ? "repeat(2, 1fr)" : "",
           marginLeft: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "100px" : "",
-        }}
+        }}*/
       >
         <div id="ext_main_div">
           <h2 style={pTypeStyle}>Main Partners</h2>
