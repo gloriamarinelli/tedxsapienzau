@@ -60,7 +60,7 @@
       "imgName": "techno.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "community",
+      "partner_type": "generic",
       "wb_link": "https://www.technotown.it"
     },
     {
@@ -69,7 +69,7 @@
       "imgName": "mic.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "community",
+      "partner_type": "generic",
       "wb_link": "https://miccard.roma.it/"
     },
     {
