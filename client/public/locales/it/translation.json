@@ -68,7 +68,8 @@
   },
 
   "partners_list": {
-    "patrocinio_div": "Con il patrocinio di"
+    "patrocinio_div": "Con il patrocinio di",
+    "generic_div": "Altri Partners"
   },
 
   "footer": {
