@@ -98,43 +98,43 @@ export default function PartnersList24() {
       </div>
       <div
         id="list_div"
-        /* to restore the previous list display just delete the div style  */
+        /*
         style={{
           display: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "grid" : "",
           gridTemplateColumns:
             windowSize > global.UTILS.BIG_TABLET_WIDTH ? "repeat(2, 1fr)" : "",
           marginLeft: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "100px" : "",
-        }}
+        }}*/
       >
         <div id="ext_main_div">
-          <h2 style={pTypeStyle}>Main Partners</h2>
+          <h2 style={pTypeStyle}>Main Sponsors</h2>
           <div id="int_main_div" style={gridStyle}>
             {renderPartners(mainPartners)}
           </div>
         </div>
 
         <div id="ext_supporting_div">
-          <h2 style={pTypeStyle}>Supporting Partners</h2>
+          <h2 style={pTypeStyle}>Supporting Sponsors</h2>
           <div id="int_supporting_div" style={gridStyle}>
             {renderPartners(supportingPartners)}
           </div>
         </div>
 
         <div id="ext_smart_div">
-          <h2 style={pTypeStyle}>Smart Partners</h2>
+          <h2 style={pTypeStyle}>Smart Sponsors</h2>
           <div id="int_smart_div" style={gridStyle}>
             {renderPartners(smartPartners)}
           </div>
         </div>
         <div id="ext_friendly_div">
-          <h2 style={pTypeStyle}>Friendly Partners</h2>
+          <h2 style={pTypeStyle}>Friendly Sponsors</h2>
           <div id="int_friendly_div" style={gridStyle}>
             {renderPartners(friendlyPartners)}
           </div>
         </div>
 
         <div id="ext_community_div">
-          <h2 style={pTypeStyle}>Community Partners</h2>
+          <h2 style={pTypeStyle}>Community Sponsors</h2>
           <div id="int_community_div" style={gridStyle}>
             {renderPartners(communityPartners)}
           </div>
@@ -148,7 +148,7 @@ export default function PartnersList24() {
         </div>
 
         <div id="ext_generic_div">
-          <h2 style={pTypeStyle}>{t("partners_list.generic_div")}</h2>
+          <h2 style={pTypeStyle}>Partners</h2>
           <div id="int_generic_div" style={gridStyle}>
             {renderPartners(genericPartners)}
           </div>
