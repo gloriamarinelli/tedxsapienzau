@@ -83,10 +83,10 @@
     },
     {
       "id": 10,
-      "name": "Consigliera di Parità",
+      "name": "La Consigliera di Parità",
       "imgName": "cp.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
+      "descr_it": "La Consigliera di Parità  è uno strumento di tutela per lavoratrici e lavoratori contro le discriminazioni in ragione del genere sul lavoro.",
+      "descr_en": "The Equality Advisor is an instrument of protection for workers against discrimination based on gender in the workplace.",
       "partner_type": "patrocinio",
       "wb_link": "https://www.cittametropolitanaroma.it/homepage/la-citta-metropolitana/struttura-organizzativa/altri-organismi/la-consigliera-di-parita"
     },
@@ -103,8 +103,8 @@
       "id": 12,
       "name": "Roma Capitale",
       "imgName": "roma_cap.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
+      "descr_it": "Roma, capitale d'Italia, è una delle città più storiche e affascinanti al mondo. Fondata nel 753 a.C., è famosa per il suo patrimonio culturale, artistico e culinario. Centro di storia, arte e politica, è una meta ambita per turisti e visitatori di tutto il mondo.",
+      "descr_en": "Rome, the capital of Italy, is one of the most historic and captivating cities in the world. Founded in 753 BC, it is renowned for its cultural, artistic, and culinary heritage. A center of history, art, and politics, it is a sought-after destination for tourists and visitors from around the globe.",
       "partner_type": "patrocinio",
       "wb_link": "https://www.comune.roma.it"
     }
