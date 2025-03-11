@@ -107,6 +107,15 @@
       "descr_en": "Rome, the capital of Italy, is one of the most historic and captivating cities in the world. Founded in 753 BC, it is renowned for its cultural, artistic, and culinary heritage. A center of history, art, and politics, it is a sought-after destination for tourists and visitors from around the globe.",
       "partner_type": "patrocinio",
       "wb_link": "https://www.comune.roma.it"
+    },
+    {
+      "id": 13,
+      "name": "CNR",
+      "imgName": "cnr.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.cnr.it/"
     }
   ]
 }
