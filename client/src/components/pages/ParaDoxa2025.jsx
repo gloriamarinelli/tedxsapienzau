@@ -16,7 +16,7 @@ import * as THREE from "three";
 // import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona.webp";
 import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona_v3.webp";
 import Iframe from "react-iframe";
-import '@fontsource-variable/bricolage-grotesque/index.css';
+import "@fontsource-variable/bricolage-grotesque/index.css";
 
 function ObjModel(props) {
   const obj = useLoader(
@@ -28,11 +28,9 @@ function ObjModel(props) {
   const scaleRatio = 0.01;
 
   useEffect(() => {
-    
     // Calculate the bounding box of the model
     const boundingBox = new THREE.Box3().setFromObject(obj);
     const center = boundingBox.getCenter(new THREE.Vector3());
-    
 
     // Position the model so its center is at the origin of the group
     if (modelRef.current) {
@@ -83,6 +81,7 @@ function ObjModel(props) {
 export default function ParaDoxa2025() {
   const { t, i18n } = useTranslation();
   const [windowSize] = useOutletContext();
+  const [hover, setHover] = useState(false);
   const [objectRotation, setObjectRotation] = useState({
     rotationX: -1.5,
     rotationY: 0,
@@ -90,8 +89,6 @@ export default function ParaDoxa2025() {
   });
   const [bgColor, setBgColor] = useState("#000");
   const [scrollY, setScrollY] = useState(0);
-  
-  
 
   const getShowMore = () => (
     <div
@@ -111,7 +108,7 @@ export default function ParaDoxa2025() {
         opacity: scrollY > 450 ? 0 : 1,
       }}
     >
-      <p>Biglietti disponibili qui sotto!</p>
+      <p>Biglietti disponibili</p>
       <svg
         width="26"
         height="24"
@@ -237,125 +234,140 @@ export default function ParaDoxa2025() {
         </div>
       </section>
       <section
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100vw",
-    backgroundColor: "#000",
-    padding:
-      windowSize < global.UTILS.BIG_TABLET_WIDTH
-        ? "34px 34px 0px 34px"
-        : "34px",
-    flexWrap: "wrap",
-  }}
->
-  <div
-    id="main-container"
-    style={{
-      width: "100%",
-      height: "100%",
-      padding: global.UTILS.BENTO_BOX_PADDING,
-      borderRadius: global.UTILS.BENTO_BOX_PADDING,
-      backgroundColor: bgColor,
-      backgroundImage: `url(${CorniceParadoxaPersona})`,
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      display: "flex",
-      alignItems: "flex-end",
-      fontFamily: "'Bricolage Grotesque', sans-serif",
-      position: "relative",
-      transition: "background-color 4s ease-in-out",
-    }}
-  >
-    <div
-      style={{
-        display: "flex",
-        flexDirection: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "column" : "row",
-        justifyContent: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "center" : "space-between",
-        alignItems: "center",
-        width: "100%",
-        textAlign: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "center" : "left",
-      }}
-    >
-      <div
         style={{
-          flexGrow: 1,
-          paddingLeft: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          backgroundColor: "#000",
+          padding:
+            windowSize < global.UTILS.BIG_TABLET_WIDTH
+              ? "34px 34px 0px 34px"
+              : "34px",
+          flexWrap: "wrap",
         }}
       >
-        <h1
+        <div
+          id="main-container"
           style={{
-            fontSize: windowSize > 1245 ? "6vh" : "4vh",
-            fontWeight: 700,
-            maxWidth: "20ch",
-            color: "#FFFFFF",
-            textShadow: "2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black",
+            width: "100%",
+            height: "100%",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            backgroundColor: bgColor,
+            backgroundImage: `url(${CorniceParadoxaPersona})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            display: "flex",
+            alignItems: "flex-end",
+            fontFamily: "'Bricolage Grotesque', sans-serif",
+            position: "relative",
+            transition: "background-color 4s ease-in-out",
           }}
         >
-          <extra>
-            <condensed-extrabold>11.04.2025</condensed-extrabold>
-          </extra>
-        </h1>
-        <h1
-          
-          style={{
-            fontSize: windowSize > 1245 ? "6vh" : "4vh",
-            fontWeight: 700,
-            maxWidth: "20ch",
-            color: "#FFFFFF",
-            textShadow: "2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black",
-          }}
-        >
-          <extra>
-            <condensed-extrabold>
-              Aula Magna, Rettorato
-            </condensed-extrabold>
-          </extra>
-        </h1>
-        <h1
-          style={{
-            fontSize: windowSize > 1245 ? "6vh" : "4vh",
-            fontWeight: 700,
-            maxWidth: "40ch",
-            color: "#FFFFFF",
-            textShadow: "2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black",
-          }}
-        >
-          <extra>
-            <condensed-extrabold>
-              Sapienza Università di Roma
-            </condensed-extrabold>
-          </extra>
-        </h1>
-      </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection:
+                windowSize < global.UTILS.BIG_TABLET_WIDTH ? "column" : "row",
+              justifyContent:
+                windowSize < global.UTILS.BIG_TABLET_WIDTH
+                  ? "center"
+                  : "space-between",
+              alignItems: "center",
+              width: "100%",
+              textAlign:
+                windowSize < global.UTILS.BIG_TABLET_WIDTH ? "center" : "left",
+            }}
+          >
+            <div
+              style={{
+                flexGrow: 1,
+                paddingLeft:
+                  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
+              }}
+            >
+              <h1
+                style={{
+                  fontSize: windowSize > 1245 ? "6vh" : "4vh",
+                  fontWeight: 700,
+                  maxWidth: "20ch",
+                  color: "#FFFFFF",
+                  textShadow:
+                    "2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black",
+                }}
+              >
+                <extra>
+                  <condensed-extrabold>11.04.2025</condensed-extrabold>
+                </extra>
+              </h1>
+              <h1
+                style={{
+                  fontSize: windowSize > 1245 ? "6vh" : "4vh",
+                  fontWeight: 700,
+                  maxWidth: "20ch",
+                  color: "#FFFFFF",
+                }}
+              >
+                <extra>
+                  <condensed-extrabold>
+                    Aula Magna, Rettorato
+                  </condensed-extrabold>
+                </extra>
+              </h1>
+              <h1
+                style={{
+                  fontSize: windowSize > 1245 ? "6vh" : "4vh",
+                  fontWeight: 700,
+                  maxWidth: "40ch",
+                  color: "#FFFFFF",
+                }}
+              >
+                <extra>
+                  <condensed-extrabold>
+                    Sapienza Università di Roma
+                  </condensed-extrabold>
+                </extra>
+              </h1>
+            </div>
 
-      <div
-        style={{
-          paddingRight: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
-          marginTop: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "20px" : "0px",
-        }}
-      >
-        <a href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-2025-para-doxa-1267667550769" type="button" class="btn btn-light"
-          style={{
-            width: windowSize < global.UTILS.BIG_TABLET_WIDTH ? "200px":"400px",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            padding: "10px 20px",
-            border: "none",
-            cursor: "pointer",
-            borderRadius: "8px",
-            boxShadow: "2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black",
-          }}
-        >
-          BIGLIETTI
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
+            <div
+              style={{
+                paddingRight:
+                  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
+                marginTop:
+                  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "20px" : "0px",
+              }}
+            >
+              <a
+                href="https://www.eventbrite.it/e/biglietti-tedxsapienzau-2025-para-doxa-1267667550769"
+                type="button"
+                class="btn btn-light"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                style={{
+                  width:
+                    windowSize < global.UTILS.BIG_TABLET_WIDTH
+                      ? "200px"
+                      : "400px",
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                  padding: "10px 20px",
+                  border: "none",
+                  cursor: "pointer",
+                  borderRadius: "8px",
+                  backgroundColor: hover ? "#FF009D" : "white",
+                  transition: "background-color 0.3s ease",
+                  color: hover? "white": "black",
+                }}
+              >
+                BIGLIETTI
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section
         style={{
