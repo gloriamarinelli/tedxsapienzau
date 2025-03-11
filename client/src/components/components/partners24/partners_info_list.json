@@ -58,8 +58,8 @@
       "id": 7,
       "name": "TechnoTown",
       "imgName": "techno.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
+      "descr_it": "Una vera e propria fabbrica creativa in cui ragazze e ragazzi, con un biglietto d'ingresso speciale di 1 euro, possono scoprire ed esprimere le proprie potenzialità, avvicinarsi al mondo della ricerca e dell'innovazione e vivere occasioni di incontro, confronto e cooperazione.",
+      "descr_en": "A veritable creative hub where young people, with a special admission ticket of 1 euro, can discover and express their potential, engage with the world of research and innovation, and participate in opportunities for meeting, discussion, and collaboration.",
       "partner_type": "generic",
       "wb_link": "https://www.technotown.it"
     },
@@ -67,8 +67,8 @@
       "id": 8,
       "name": "Roma MIC Card",
       "imgName": "mic.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
+      "descr_it": "La ROMA MIC CARD, al costo di 5 euro, consente a chi vive o studia a Roma di accedere gratuitamente per 12 mesi al Sistema Musei di Roma Capitale. È riservata ai maggiorenni residenti o domiciliati nella Città Metropolitana di Roma e agli studenti delle Università pubbliche e private della zona.",
+      "descr_en": "The ROMA MIC CARD, available for 5 euros, grants individuals who live or study in Rome free access for 12 months to the Musei di Roma Capitale system. It is reserved for adults residing or domiciled in the Metropolitan City of Rome and students of public and private universities in the area.",
       "partner_type": "generic",
       "wb_link": "https://miccard.roma.it/"
     },
