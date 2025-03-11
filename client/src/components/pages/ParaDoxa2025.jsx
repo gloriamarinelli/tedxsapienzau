@@ -284,27 +284,28 @@ export default function ParaDoxa2025() {
             <div
               style={{
                 flexGrow: 1,
+                padding: "20px",
                 paddingLeft:
                   windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
               }}
             >
               <h1
                 style={{
-                  fontSize: windowSize > 1245 ? "6vh" : "4vh",
+                  fontSize: windowSize > 1245 ? "8vh" : "4vh",
                   fontWeight: 700,
                   maxWidth: "20ch",
-                  color: "#FFFFFF",
-                  textShadow:
-                    "2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black",
+                  color: "#FFFFFF"  ,
+                  marginBottom:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "30px" : "10px",
+                  marginTop:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",               
                 }}
               >
                 <extra>
-                  <condensed-extrabold>11.04.2025</condensed-extrabold>
+                  <condensed-extrabold>11 Aprile 2025</condensed-extrabold>
                 </extra>
               </h1>
               <h1
                 style={{
-                  fontSize: windowSize > 1245 ? "6vh" : "4vh",
+                  fontSize: windowSize > 1245 ? "4vh" : "2vh",
                   fontWeight: 700,
                   maxWidth: "20ch",
                   color: "#FFFFFF",
@@ -318,7 +319,7 @@ export default function ParaDoxa2025() {
               </h1>
               <h1
                 style={{
-                  fontSize: windowSize > 1245 ? "6vh" : "4vh",
+                  fontSize: windowSize > 1245 ? "4vh" : "2vh",
                   fontWeight: 700,
                   maxWidth: "40ch",
                   color: "#FFFFFF",
@@ -338,6 +339,7 @@ export default function ParaDoxa2025() {
                   windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
                 marginTop:
                   windowSize < global.UTILS.BIG_TABLET_WIDTH ? "20px" : "0px",
+                marginBottom:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",
               }}
             >
               <a
