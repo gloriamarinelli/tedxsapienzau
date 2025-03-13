@@ -294,9 +294,13 @@ export default function ParaDoxa2025() {
                   fontSize: windowSize > 1245 ? "8vh" : "4vh",
                   fontWeight: 700,
                   maxWidth: "20ch",
-                  color: "#FFFFFF"  ,
-                  marginBottom:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "30px" : "10px",
-                  marginTop:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",               
+                  color: "#FFFFFF",
+                  marginBottom:
+                    windowSize < global.UTILS.BIG_TABLET_WIDTH
+                      ? "30px"
+                      : "10px",
+                  marginTop:
+                    windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",
                 }}
               >
                 <extra>
@@ -339,7 +343,8 @@ export default function ParaDoxa2025() {
                   windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "80px",
                 marginTop:
                   windowSize < global.UTILS.BIG_TABLET_WIDTH ? "20px" : "0px",
-                marginBottom:  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",
+                marginBottom:
+                  windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",
               }}
             >
               <a
@@ -361,7 +366,7 @@ export default function ParaDoxa2025() {
                   borderRadius: "8px",
                   backgroundColor: hover ? "#FF009D" : "white",
                   transition: "background-color 0.3s ease",
-                  color: hover? "white": "black",
+                  color: hover ? "white" : "black",
                 }}
               >
                 BIGLIETTI
