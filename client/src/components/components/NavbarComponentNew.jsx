@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useTranslation } from "react-i18next";
-import { faArrowLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faAngleRight,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import global from "../../resources/global.json";
@@ -63,7 +67,13 @@ export default function NavbarComponentNew() {
   };
 
   if (windowSize > 992) {
-    /** DESKTOP NAVBAR */
+    /**
+     *
+     *
+     * DESKTOP NAVBAR
+     *
+     *
+     */
     return (
       <nav
         className="my-navbar"
@@ -423,6 +433,10 @@ export default function NavbarComponentNew() {
               id="fa-angle-right-events"
               icon={faAngleRight}
             />
+          </h1>
+          <h1 onClick={() => changeLanguage()}>
+            {i18n.language === "it" ? "Italiano🇮🇹" : "English🇬🇧"}
+            <FontAwesomeIcon icon={faGlobe} />
           </h1>
         </section>
         <section
