@@ -108,7 +108,7 @@ export default function ParaDoxa2025() {
         opacity: scrollY > 450 ? 0 : 1,
       }}
     >
-      <p>Biglietti disponibili</p>
+      <p>Pass gratuito disponibile</p>
       <svg
         width="26"
         height="24"
@@ -369,7 +369,7 @@ export default function ParaDoxa2025() {
                   color: hover ? "white" : "black",
                 }}
               >
-                BIGLIETTI
+                PASS GRATUITO
               </a>
             </div>
           </div>
