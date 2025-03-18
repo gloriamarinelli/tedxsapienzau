@@ -116,6 +116,24 @@
       "descr_en": "coming soon",
       "partner_type": "patrocinio",
       "wb_link": "https://www.cnr.it/"
+    },
+    {
+      "id": 14,
+      "name": "Regione Lazio",
+      "imgName": "lazio.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.regione.lazio.it/"
+    },
+    {
+      "id": 15,
+      "name": "Starting Finance Club",
+      "imgName": "sfc.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "community",
+      "wb_link": "https://startingfinance.com/cerca-club/"
     }
   ]
 }
