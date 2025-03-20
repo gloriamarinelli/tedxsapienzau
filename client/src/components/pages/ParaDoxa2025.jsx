@@ -369,7 +369,7 @@ export default function ParaDoxa2025() {
                   color: hover ? "white" : "black",
                 }}
               >
-                PASS GRATUITO
+                BIGLIETTO GRATUITO
               </a>
             </div>
           </div>
