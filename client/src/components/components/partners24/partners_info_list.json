@@ -134,6 +134,15 @@
       "descr_en": "coming soon",
       "partner_type": "community",
       "wb_link": "https://startingfinance.com/cerca-club/"
+    },
+    {
+      "id": 16,
+      "name": "HXO",
+      "imgName": "hxo.webp",
+      "descr_it": "HXO è un partner strategico che abilita la trasformazione di persone e organizzazioni attraverso soluzioni di apprendimento personalizzate. Creiamo esperienze uniche e immersive che rivoluzionano il modo in cui le persone e i team apprendono, comunicano e collaborano.",
+      "descr_en": "HXO is a strategic partner that enables the transformation of individuals and organizations through tailored learning solutions. We craft unique and immersive experiences that revolutionize how people and teams learn, communicate, and collaborate.",
+      "partner_type": "friendly",
+      "wb_link": "https://www.hxo.it/"
     }
   ]
 }
