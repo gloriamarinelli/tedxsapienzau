@@ -134,7 +134,7 @@ export default function PartnersList24() {
         </div>
 
         <div id="ext_community_div">
-          <h2 style={pTypeStyle}>Community Sponsors</h2>
+          <h2 style={pTypeStyle}>Community Partners</h2>
           <div id="int_community_div" style={gridStyle}>
             {renderPartners(communityPartners)}
           </div>
