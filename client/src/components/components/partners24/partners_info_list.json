@@ -143,6 +143,33 @@
       "descr_en": "HXO is a strategic partner that enables the transformation of individuals and organizations through tailored learning solutions. We craft unique and immersive experiences that revolutionize how people and teams learn, communicate, and collaborate.",
       "partner_type": "friendly",
       "wb_link": "https://www.hxo.it/"
+    },
+    {
+      "id": 17,
+      "name": "Thesis4u",
+      "imgName": "t4.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "community",
+      "wb_link": "https://thesisforyou.com/"
+    },
+    {
+      "id": 18,
+      "name": "Jesap",
+      "imgName": "jesap.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "community",
+      "wb_link": "https://jesap.it/"
+    },
+    {
+      "id": 19,
+      "name": "Pioda",
+      "imgName": "pioda.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "technical",
+      "wb_link": "https://www.piodaimaging.it/"
     }
   ]
 }

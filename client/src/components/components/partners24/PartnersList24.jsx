@@ -41,6 +41,9 @@ export default function PartnersList24() {
   const genericPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "generic"
   );
+  const technicalPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "technical"
+  );
 
   /* grid style const */
   const gridStyle = {
@@ -117,6 +120,13 @@ export default function PartnersList24() {
           <h2 style={pTypeStyle}>Supporting Sponsors</h2>
           <div id="int_supporting_div" style={gridStyle}>
             {renderPartners(supportingPartners)}
+          </div>
+        </div>
+
+        <div id="ext_technical_div">
+          <h2 style={pTypeStyle}>Technical Sponsors</h2>
+          <div id="int_technical_div" style={gridStyle}>
+            {renderPartners(technicalPartners)}
           </div>
         </div>
 
