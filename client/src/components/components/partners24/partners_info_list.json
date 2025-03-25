@@ -170,6 +170,15 @@
       "descr_en": "coming soon",
       "partner_type": "technical",
       "wb_link": "https://www.piodaimaging.it/"
+    },
+    {
+      "id": 20,
+      "name": "European Parliament",
+      "imgName": "ep.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.europarl.europa.eu"
     }
   ]
 }
