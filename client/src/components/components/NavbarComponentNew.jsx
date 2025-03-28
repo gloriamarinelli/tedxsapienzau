@@ -402,7 +402,7 @@ export default function NavbarComponentNew() {
           <h1>
             <Link
               className="text-decoration-none text-white"
-              to="/partners"
+              to="/sponsors"
               onClick={() => setExpanded(false)}
             >
               {t("navbar.partners")}
