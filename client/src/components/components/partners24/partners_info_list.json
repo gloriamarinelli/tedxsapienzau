@@ -177,8 +177,17 @@
       "imgName": "ep.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "patrocinio",
+      "partner_type": "patrocinio_ep",
       "wb_link": "https://www.europarl.europa.eu"
+    },
+    {
+      "id": 21,
+      "name": "Teach For Italy",
+      "imgName": "tfi.webp",
+      "descr_it": "Teach For Italy è un Ente del Terzo Settore che rafforza la scuola pubblica, affrontando la povertà educativa. Promuove l'istruzione come chiave per garantire pari opportunità a tutti i ragazzi, formando e sostenendo persone motivate a diventare agenti di cambiamento nella scuola e nella società.",
+      "descr_en": "Teach For Italy is a Third Sector organization that enhances public education by tackling educational poverty. It promotes education as the key to equal opportunities for all youth, training and supporting motivated individuals to become agents of change in schools and society.",
+      "partner_type": "friendly",
+      "wb_link": "http://www.teachforitaly.org/"
     }
   ]
 }

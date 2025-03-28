@@ -68,7 +68,8 @@
   },
 
   "partners_list": {
-    "patrocinio_div": "With the sponsorship of"
+    "patrocinio_div": "With the sponsorship of",
+    "patrocinioEP_div": "Under the high patronage of"
   },
 
   "footer": {
