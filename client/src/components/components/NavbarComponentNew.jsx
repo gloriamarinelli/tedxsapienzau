@@ -187,7 +187,7 @@ export default function NavbarComponentNew() {
             <Link
               // ref={partners}
               className="navbar-submenu-edition-item font-600"
-              to="/partners"
+              to="/sponsors"
               style={{ borderRadius: "5px" }}
             >
               {t("navbar.partners")}
