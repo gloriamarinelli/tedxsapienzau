@@ -146,6 +146,13 @@ export default function PartnersList24() {
           </div>
         </div>
 
+        <div id="ext_generic_div">
+          <h2 style={pTypeStyle}>Partners</h2>
+          <div id="int_generic_div" style={gridStyle}>
+            {renderPartners(genericPartners)}
+          </div>
+        </div>
+
         <div id="ext_community_div">
           <h2 style={pTypeStyle}>Community Partners</h2>
           <div id="int_community_div" style={gridStyle}>
@@ -164,13 +171,6 @@ export default function PartnersList24() {
           <h2 style={pTypeStyle}>{t("partners_list.patrocinioEP_div")}</h2>
           <div id="int_patrocinioEP_div" style={gridStyle}>
             {renderPartners(patrocinioEPPartners)}
-          </div>
-        </div>
-
-        <div id="ext_generic_div">
-          <h2 style={pTypeStyle}>Partners</h2>
-          <div id="int_generic_div" style={gridStyle}>
-            {renderPartners(genericPartners)}
           </div>
         </div>
       </div>
