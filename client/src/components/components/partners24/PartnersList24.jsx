@@ -71,7 +71,7 @@ export default function PartnersList24() {
     display: "grid",
     gridTemplateColumns:
       windowSize > global.UTILS.BIG_TABLET_WIDTH
-        ? "repeat(5, 1fr)" // desktop view ( columns)
+        ? "repeat(4, 1fr)" // desktop view (4 columns)
         : windowSize > global.UTILS.TABLET_WIDTH
         ? "repeat(2, 1fr)" // tablet view (2 columns)
         : "repeat(1, 1fr)", // smartphone view (1 column)
@@ -97,13 +97,6 @@ export default function PartnersList24() {
     flexWrap: "wrap",
     gap: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "100px" : "",
     justifyContent: "center",
-  };
-
-  /* group div grid style const */
-  const groupDivmainGridStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(5, 1fr)",
-    marginTop: "30px",
   };
 
   /* generate partners card */
@@ -137,7 +130,7 @@ export default function PartnersList24() {
       <div id="list_div">
         <div id="main_&_supporting_&_tech" style={groupDivFlexStyle}>
           <div id="ext_main_div">
-            <h2 style={pTypeStyle}>Main Sponsors</h2>
+            <h2 style={pTypeStyle}>Main Sponsor</h2>
             <div id="int_main_div" style={mainGridStyle}>
               {renderPartners(mainPartners)}
             </div>
@@ -149,32 +142,31 @@ export default function PartnersList24() {
               {renderPartners(supportingPartners)}
             </div>
           </div>
+        </div>
 
+        <div id="tech_&_smart" style={groupDivFlexStyle}>
           <div id="ext_technical_div">
-            <h2 style={pTypeStyle}>Technical Sponsors</h2>
+            <h2 style={pTypeStyle}>Technical Sponsor</h2>
             <div id="int_technical_div" style={mainGridStyle}>
               {renderPartners(technicalPartners)}
             </div>
           </div>
-        </div>
-
-        <div id="smart_&_friendly" style={groupDivFlexStyle}>
           <div id="ext_smart_div">
             <h2 style={pTypeStyle}>Smart Sponsors</h2>
             <div id="int_smart_div" style={mainGridStyle}>
               {renderPartners(smartPartners)}
             </div>
           </div>
-
-          <div id="ext_friendly_div">
-            <h2 style={pTypeStyle}>Friendly Sponsors</h2>
-            <div id="int_friendly_div" style={mainGridStyle}>
-              {renderPartners(friendlyPartners)}
-            </div>
-          </div>
         </div>
 
         <div id="others" style={groupDivFlexStyle}>
+          <div id="ext_friendly_div">
+            <h2 style={pTypeStyle}>Friendly Sponsors</h2>
+            <div id="int_friendly_div" style={secondaryGridStyle}>
+              {renderPartners(friendlyPartners)}
+            </div>
+          </div>
+
           <div id="ext_generic_div">
             <h2 style={pTypeStyle}>Partners</h2>
             <div id="int_generic_div" style={secondaryGridStyle}>
