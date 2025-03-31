@@ -78,7 +78,7 @@
       "imgName": "ef.webp",
       "descr_it": "EF Education First è un'organizzazione internazionale leader nell'educazione, specializzata in formazione linguistica, viaggi studio e scambi culturali. Fondata quasi 60 anni fa in Svezia, è presente in oltre 500 scuole e uffici in 53 paesi. EF offre soluzioni per ogni età e obiettivo.",
       "descr_en": "EF Education First is a leading international education organization, specializing in language training, study abroad programs, and cultural exchanges. Founded almost 60 years ago in Sweden, it has a presence in over 500 schools and offices in 53 countries. EF offers solutions for every age and goal.",
-      "partner_type": "smart",
+      "partner_type": "friendly",
       "wb_link": "https://www.ef-italia.it"
     },
     {
@@ -188,6 +188,33 @@
       "descr_en": "Teach For Italy is a Third Sector organization that enhances public education by tackling educational poverty. It promotes education as the key to equal opportunities for all youth, training and supporting motivated individuals to become agents of change in schools and society.",
       "partner_type": "friendly",
       "wb_link": "http://www.teachforitaly.org/"
+    },
+    {
+      "id": 22,
+      "name": "Direzione Lavoro",
+      "imgName": "dl.webp",
+      "descr_it": "Dal 2016, Direzione Lavoro innova il settore HR con un approccio centrato sulle persone. Partner di aziende in tutta Italia, offre consulenza e formazione su misura per i giovani professionisti. Tra le realtà italiane in crescita, guarda al futuro con visione e innovazione.",
+      "descr_en": "Since 2016, Direzione Lavoro has been innovating the HR sector with a people-centered approach. As a partner to companies throughout Italy, it provides tailored consulting and training for young professionals. Among the growing Italian enterprises, it looks to the future with vision and innovation.",
+      "partner_type": "friendly",
+      "wb_link": "https://www.direzionelavoro.it/"
+    },
+    {
+      "id": 23,
+      "name": "UnderPark Radio",
+      "imgName": "upr.webp",
+      "descr_it": "UnderPark Radio, nel Pigneto, offre una visione alternativa del mondo attraverso linguaggi non convenzionali. Con la radio e il magazine Undermag, sostiene movimenti artistici trascurati, promuovendo la rigenerazione urbana e stimolando un dialogo critico tra artisti e comunità.",
+      "descr_en": "UnderPark Radio, located in Pigneto, offers an alternative perspective on the world through unconventional languages. Through the radio and the magazine Undermag, it supports overlooked artistic movements, promotes urban regeneration, and fosters critical dialogue between artists and the community.",
+      "partner_type": "media",
+      "wb_link": "https://underparkradio.com/"
+    },
+    {
+      "id": 24,
+      "name": "Zeta",
+      "imgName": "zeta.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "media",
+      "wb_link": "https://siamozeta.com/"
     }
   ]
 }

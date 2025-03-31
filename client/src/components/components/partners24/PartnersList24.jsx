@@ -47,6 +47,9 @@ export default function PartnersList24() {
   const technicalPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "technical"
   );
+  const mediaPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "media"
+  );
 
   /* grid style const */
   const gridStyle = {
@@ -102,16 +105,7 @@ export default function PartnersList24() {
           Sponsors
         </h1>
       </div>
-      <div
-        id="list_div"
-        /*  
-        style={{
-          display: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "grid" : "",
-          gridTemplateColumns:
-            windowSize > global.UTILS.BIG_TABLET_WIDTH ? "repeat(2, 1fr)" : "",
-          marginLeft: windowSize > global.UTILS.BIG_TABLET_WIDTH ? "100px" : "",
-        }}*/
-      >
+      <div id="list_div">
         <div id="ext_main_div">
           <h2 style={pTypeStyle}>Main Sponsors</h2>
           <div id="int_main_div" style={gridStyle}>
@@ -143,6 +137,13 @@ export default function PartnersList24() {
           <h2 style={pTypeStyle}>Friendly Sponsors</h2>
           <div id="int_friendly_div" style={gridStyle}>
             {renderPartners(friendlyPartners)}
+          </div>
+        </div>
+
+        <div id="ext_media_div">
+          <h2 style={pTypeStyle}>Media Sponsors</h2>
+          <div id="int_media_div" style={gridStyle}>
+            {renderPartners(mediaPartners)}
           </div>
         </div>
 
