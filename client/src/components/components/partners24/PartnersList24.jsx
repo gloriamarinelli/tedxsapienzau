@@ -38,8 +38,14 @@ export default function PartnersList24() {
   const patrocinioPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "patrocinio"
   );
+  const patrocinioEPPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "patrocinio_ep"
+  );
   const genericPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "generic"
+  );
+  const technicalPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "technical"
   );
 
   /* grid style const */
@@ -93,7 +99,7 @@ export default function PartnersList24() {
             textTransform: "uppercase",
           }}
         >
-          Partners
+          Sponsors
         </h1>
       </div>
       <div
@@ -120,6 +126,13 @@ export default function PartnersList24() {
           </div>
         </div>
 
+        <div id="ext_technical_div">
+          <h2 style={pTypeStyle}>Technical Sponsors</h2>
+          <div id="int_technical_div" style={gridStyle}>
+            {renderPartners(technicalPartners)}
+          </div>
+        </div>
+
         <div id="ext_smart_div">
           <h2 style={pTypeStyle}>Smart Sponsors</h2>
           <div id="int_smart_div" style={gridStyle}>
@@ -133,8 +146,15 @@ export default function PartnersList24() {
           </div>
         </div>
 
+        <div id="ext_generic_div">
+          <h2 style={pTypeStyle}>Partners</h2>
+          <div id="int_generic_div" style={gridStyle}>
+            {renderPartners(genericPartners)}
+          </div>
+        </div>
+
         <div id="ext_community_div">
-          <h2 style={pTypeStyle}>Community Sponsors</h2>
+          <h2 style={pTypeStyle}>Community Partners</h2>
           <div id="int_community_div" style={gridStyle}>
             {renderPartners(communityPartners)}
           </div>
@@ -147,10 +167,10 @@ export default function PartnersList24() {
           </div>
         </div>
 
-        <div id="ext_generic_div">
-          <h2 style={pTypeStyle}>Partners</h2>
-          <div id="int_generic_div" style={gridStyle}>
-            {renderPartners(genericPartners)}
+        <div id="ext_patrocinioEP_div">
+          <h2 style={pTypeStyle}>{t("partners_list.patrocinioEP_div")}</h2>
+          <div id="int_patrocinioEP_div" style={gridStyle}>
+            {renderPartners(patrocinioEPPartners)}
           </div>
         </div>
       </div>

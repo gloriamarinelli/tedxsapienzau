@@ -1,5 +1,6 @@
 import React, { Suspense, useState, useRef, useEffect } from "react";
 import { useOutletContext } from "react-router";
+import { useLocation } from "react-router-dom";
 import global from "../../resources/global.json";
 import { Canvas, useLoader, useThree, useFrame } from "@react-three/fiber";
 import {
@@ -11,26 +12,40 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { useTranslation, Trans } from "react-i18next";
 import { useControls, Leva } from "leva";
 import gsap from "gsap";
-import { Button } from "react-bootstrap";
 import * as THREE from "three";
 // import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona.webp";
 import CorniceParadoxaPersona from "../images/paradoxa25/cornice_paradoxa_persona_v3.webp";
 import Iframe from "react-iframe";
 import "@fontsource-variable/bricolage-grotesque/index.css";
+import Nardi from "../images/paradoxa25/nardi_poster.webp";
+import Dapoto from "../images/paradoxa25/dapoto_poster.webp";
+import Saltarelli from "../images/paradoxa25/saltarelli_poster.webp";
+import Pasatu from "../images/paradoxa25/pasatu_poster.webp";
+import Abbozzo from "../images/paradoxa25/abbozzo_poster.webp";
+import Panepinto from "../images/paradoxa25/panepinto_poster.webp";
+import Azzali from "../images/paradoxa25/azzali_poster.webp";
+import Moretti from "../images/paradoxa25/moretti_poster.webp";
+
+import SpeakerCard from "../components/SpeakerCard";
 
 function ObjModel(props) {
+  const groupRef = useRef(null);
+  const modelRef = useRef(null);
+
   const obj = useLoader(
     OBJLoader,
     `${process.env.PUBLIC_URL}/3d_models/logo3d_paradoxa.obj`
   );
-  const groupRef = useRef();
-  const modelRef = useRef();
+
   const scaleRatio = 0.01;
 
   useEffect(() => {
-    // Calculate the bounding box of the model
+    console.log(obj);
     const boundingBox = new THREE.Box3().setFromObject(obj);
     const center = boundingBox.getCenter(new THREE.Vector3());
+
+    console.log(boundingBox);
+    console.log(center);
 
     // Position the model so its center is at the origin of the group
     if (modelRef.current) {
@@ -45,6 +60,7 @@ function ObjModel(props) {
           duration: 4,
           ease: "elastic.out(1,0.5)", // Snappy rotation with slight overshoot
           onComplete: () => {
+            if (!groupRef.current) return;
             // Ensure rotation value stays manageable
             groupRef.current.rotation.y %= Math.PI * 2;
           },
@@ -78,6 +94,48 @@ function ObjModel(props) {
   );
 }
 
+const getShowMore = () => (
+  <div
+    style={{
+      width: "100vw",
+      height: "100vh",
+      position: "absolute",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      color: "#fff",
+      fontWeight: "bold",
+      fontFamily: "Bricolage Grotesque Variable",
+      padding: "0 0 80px 0",
+      transition: "0.5s all",
+    }}
+  >
+    <p>Biglietto gratuito disponibile</p>
+    <svg
+      width="26"
+      height="24"
+      viewBox="0 0 26 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1 15L13 22L25 15" stroke="white" strokeWidth="2" />
+      <path
+        d="M1 8L13 15L25 8"
+        stroke="white"
+        strokeOpacity="0.5"
+        strokeWidth="2"
+      />
+      <path
+        d="M1 0.999999L13 8L25 1"
+        stroke="white"
+        strokeOpacity="0.25"
+        strokeWidth="2"
+      />
+    </svg>
+  </div>
+);
+
 export default function ParaDoxa2025() {
   const { t, i18n } = useTranslation();
   const [windowSize] = useOutletContext();
@@ -88,50 +146,6 @@ export default function ParaDoxa2025() {
     rotationZ: 0,
   });
   const [bgColor, setBgColor] = useState("#000");
-  const [scrollY, setScrollY] = useState(0);
-
-  const getShowMore = () => (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        position: "absolute",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        color: "#fff",
-        fontWeight: "bold",
-        fontFamily: "Bricolage Grotesque Variable",
-        padding: "0 0 80px 0",
-        transition: "0.5s all",
-        opacity: scrollY > 450 ? 0 : 1,
-      }}
-    >
-      <p>Pass gratuito disponibile</p>
-      <svg
-        width="26"
-        height="24"
-        viewBox="0 0 26 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M1 15L13 22L25 15" stroke="white" strokeWidth="2" />
-        <path
-          d="M1 8L13 15L25 8"
-          stroke="white"
-          strokeOpacity="0.5"
-          strokeWidth="2"
-        />
-        <path
-          d="M1 0.999999L13 8L25 1"
-          stroke="white"
-          strokeOpacity="0.25"
-          strokeWidth="2"
-        />
-      </svg>
-    </div>
-  );
 
   const { rotationX, rotationY, rotationZ } = useControls("Object", {
     rotationX: {
@@ -218,7 +232,7 @@ export default function ParaDoxa2025() {
           }}
         >
           <Leva hidden={true} />
-          <Canvas>
+          <Canvas gl={{ preserveDrawingBuffer: true }}>
             <CustomCamera
               startPosition={[10, 10, 10]}
               startTarget={[0, 0, 0]}
@@ -369,13 +383,107 @@ export default function ParaDoxa2025() {
                   color: hover ? "white" : "black",
                 }}
               >
-                PASS GRATUITO
+                BIGLIETTO GRATUITO
               </a>
             </div>
           </div>
         </div>
       </section>
-
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          backgroundColor: "#000",
+          padding:
+            windowSize < global.UTILS.BIG_TABLET_WIDTH
+              ? "34px 34px 0px 34px"
+              : "34px",
+          flexWrap: "wrap",
+        }}
+      >
+        <div
+          id="main-container"
+          style={{
+            width: "100%",
+            height: "100%",
+            padding: global.UTILS.BENTO_BOX_PADDING,
+            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            fontFamily: "'Bricolage Grotesque', sans-serif",
+            position: "relative",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: windowSize > 1245 ? "6vh" : "3vh",
+              fontWeight: 700,
+              maxWidth: "20ch",
+              color: "#FFFFFF",
+              marginBottom:
+                windowSize < global.UTILS.BIG_TABLET_WIDTH ? "30px" : "50px",
+              marginTop:
+                windowSize < global.UTILS.BIG_TABLET_WIDTH ? "70px" : "0px",
+              paddingLeft:
+                windowSize < global.UTILS.BIG_TABLET_WIDTH ? "0px" : "100px",
+            }}
+          >
+            <extra>
+              <condensed-extrabold>Gli Speakers</condensed-extrabold>
+            </extra>
+          </h1>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <SpeakerCard
+              imgSrc={Nardi}
+              nomeSpeaker="Andrea Nardi"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Dapoto}
+              nomeSpeaker="Alessia Dapoto"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Saltarelli}
+              nomeSpeaker="Lorenzo Saltarelli"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Pasatu}
+              nomeSpeaker="Pepa Pasatu"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Abbozzo}
+              nomeSpeaker="Abbozzo"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Panepinto}
+              nomeSpeaker="Carmen Panepinto"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Azzali}
+              nomeSpeaker="Riccardo Azzali"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+            <SpeakerCard
+              imgSrc={Moretti}
+              nomeSpeaker="Esmeralda Moretti"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+          </div>
+        </div>
+      </section>
       <section
         style={{
           display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",

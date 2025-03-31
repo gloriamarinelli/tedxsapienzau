@@ -130,10 +130,64 @@
       "id": 15,
       "name": "Starting Finance Club",
       "imgName": "sfc.webp",
+      "descr_it": "Lo Starting Finance Club Sapienza è un’associazione universitaria che avvicina gli studenti a economia, finanza e imprenditoria. Organizziamo eventi, produciamo contenuti e lavoriamo in team per crescere insieme, sviluppando competenze utili per il mondo del lavoro.",
+      "descr_en": "The Starting Finance Club Sapienza is a university association that engages students in economics, finance, and entrepreneurship. We organize events, produce content, and collaborate in teams to grow together, developing skills that are valuable for the job market.",
+      "partner_type": "community",
+      "wb_link": "https://linktr.ee/SFCSapienza"
+    },
+    {
+      "id": 16,
+      "name": "HXO",
+      "imgName": "hxo.webp",
+      "descr_it": "HXO è un partner strategico che abilita la trasformazione di persone e organizzazioni attraverso soluzioni di apprendimento personalizzate. Creiamo esperienze uniche e immersive che rivoluzionano il modo in cui le persone e i team apprendono, comunicano e collaborano.",
+      "descr_en": "HXO is a strategic partner that enables the transformation of individuals and organizations through tailored learning solutions. We craft unique and immersive experiences that revolutionize how people and teams learn, communicate, and collaborate.",
+      "partner_type": "friendly",
+      "wb_link": "https://www.hxo.it/"
+    },
+    {
+      "id": 17,
+      "name": "Thesis4u",
+      "imgName": "t4.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
       "partner_type": "community",
-      "wb_link": "https://startingfinance.com/cerca-club/"
+      "wb_link": "https://thesisforyou.com/"
+    },
+    {
+      "id": 18,
+      "name": "Jesap",
+      "imgName": "jesap.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "community",
+      "wb_link": "https://jesap.it/"
+    },
+    {
+      "id": 19,
+      "name": "Pioda",
+      "imgName": "pioda.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "technical",
+      "wb_link": "https://www.piodaimaging.it/"
+    },
+    {
+      "id": 20,
+      "name": "European Parliament",
+      "imgName": "ep.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio_ep",
+      "wb_link": "https://www.europarl.europa.eu"
+    },
+    {
+      "id": 21,
+      "name": "Teach For Italy",
+      "imgName": "tfi.webp",
+      "descr_it": "Teach For Italy è un Ente del Terzo Settore che rafforza la scuola pubblica, affrontando la povertà educativa. Promuove l'istruzione come chiave per garantire pari opportunità a tutti i ragazzi, formando e sostenendo persone motivate a diventare agenti di cambiamento nella scuola e nella società.",
+      "descr_en": "Teach For Italy is a Third Sector organization that enhances public education by tackling educational poverty. It promotes education as the key to equal opportunities for all youth, training and supporting motivated individuals to become agents of change in schools and society.",
+      "partner_type": "friendly",
+      "wb_link": "http://www.teachforitaly.org/"
     }
   ]
 }

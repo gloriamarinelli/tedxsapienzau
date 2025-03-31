@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "partners": "Partners",
+    "partners": "Sponsors",
     "team": "Team",
     "blog": "Blog",
     "about_us": "About Us",
@@ -34,7 +34,7 @@
     "volunteers": "volunteers",
     "slider_title": "Our Partners",
     "stats": "Quick Stats",
-    "events": "2 Editions, 2 Awards, 10 Workshops, 3 Independent Events.",
+    "events": "2 Editions, 3 Awards, 10 Workshops, 3 Independent Events.",
     "opening_st": "TEDx, more than just an event.",
     "2nd_st": "Organizing a TEDx is a ",
     "2nd_st_red": "team effort",
@@ -68,7 +68,8 @@
   },
 
   "partners_list": {
-    "patrocinio_div": "With the sponsorship of"
+    "patrocinio_div": "With the sponsorship of",
+    "patrocinioEP_div": "Under the high patronage of"
   },
 
   "footer": {

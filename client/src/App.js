@@ -64,7 +64,7 @@ const router = createBrowserRouter([
         element: <ParaDoxa2025 />,
       },
       {
-        path: "/partners",
+        path: "/sponsors",
         element: <Partners />,
       },
       {

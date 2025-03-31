@@ -91,6 +91,29 @@ export default function SpeakerCard({
         )}
       </div>
     );
+  } else if (event === "paradoxa") {
+    return (
+      <div
+        className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center"
+        onClick={() => {
+          if (setIsBioOpen) {
+            setIsBioOpen(true);
+            setSelectedSpeakerInfo({
+              nomeSpeaker: nomeSpeaker,
+              imgSrc: imgSrc,
+              tag: tag,
+              linkTalk: linkTalk,
+              bio: bio,
+              fotoSidebar: fotoSidebar,
+            });
+          }
+        }}
+      >
+        <div style={{ cursor: "pointer" }}>
+          <img src={imgSrc} height="400" alt={nomeSpeaker} />
+        </div>
+      </div>
+    );
   }
 
   return (
