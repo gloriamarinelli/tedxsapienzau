@@ -1,12 +1,9 @@
 import React, { Suspense, useState, useRef, useEffect } from "react";
 import { useOutletContext } from "react-router";
-import { useLocation } from "react-router-dom";
 import global from "../../resources/global.json";
-import { Canvas, useLoader, useThree, useFrame } from "@react-three/fiber";
-import {
-  OrbitControls,
+import { Canvas, useLoader} from "@react-three/fiber";
+import {  
   OrthographicCamera,
-  useHelper,
 } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { useTranslation, Trans } from "react-i18next";
@@ -25,6 +22,9 @@ import Abbozzo from "../images/paradoxa25/abbozzo_poster.webp";
 import Panepinto from "../images/paradoxa25/panepinto_poster.webp";
 import Azzali from "../images/paradoxa25/azzali_poster.webp";
 import Moretti from "../images/paradoxa25/moretti_poster.webp";
+import Kento from "../images/paradoxa25/kento_poster.webp";
+import Armaroli from "../images/paradoxa25/armaroli_poster.webp";
+
 
 import SpeakerCard from "../components/SpeakerCard";
 
@@ -435,7 +435,7 @@ export default function ParaDoxa2025() {
           <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
             <SpeakerCard
               imgSrc={Nardi}
-              nomeSpeaker="Andrea Nardi"
+              nomeSpeaker="Lorenzo Nardi"
               showLinkTalk={false}
               event="paradoxa"
             />
@@ -465,7 +465,7 @@ export default function ParaDoxa2025() {
             />
             <SpeakerCard
               imgSrc={Panepinto}
-              nomeSpeaker="Carmen Panepinto"
+              nomeSpeaker="Carmen Panepinto Zayati"
               showLinkTalk={false}
               event="paradoxa"
             />
@@ -478,6 +478,18 @@ export default function ParaDoxa2025() {
             <SpeakerCard
               imgSrc={Moretti}
               nomeSpeaker="Esmeralda Moretti"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+             <SpeakerCard
+              imgSrc={Kento}
+              nomeSpeaker="Kento"
+              showLinkTalk={false}
+              event="paradoxa"
+            />
+             <SpeakerCard
+              imgSrc={Armaroli}
+              nomeSpeaker="Nicola Armaroli"
               showLinkTalk={false}
               event="paradoxa"
             />
