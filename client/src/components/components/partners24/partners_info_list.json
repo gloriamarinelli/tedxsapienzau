@@ -218,7 +218,7 @@
     },
     {
       "id": 25,
-      "name": "Galdiators",
+      "name": "Gladiators",
       "imgName": "gl.webp",
       "descr_it": "SGRT è il team dell'Università di Roma La Sapienza che partecipa al MotoStudent International Competition, progettando motociclette da competizione. Siamo attivi in eventi di innovazione e promuoviamo formazione e convegni, valorizzando internazionalità, innovazione e lavoro di squadra.",
       "descr_en": "SGRT is the team from the University of Rome La Sapienza that participates in the MotoStudent International Competition, designing competition motorcycles. We are active in innovation events and promote training and conferences, emphasizing internationality, innovation, and teamwork.",
@@ -233,6 +233,15 @@
       "descr_en": "coming soon",
       "partner_type": "gastro",
       "wb_link": "https://www.aespertagroup.com/"
+    },
+    {
+      "id": 27,
+      "name": "NAM Studio",
+      "imgName": "nam.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "creative",
+      "wb_link": "https://namstudio.it/"
     }
   ]
 }
