@@ -50,6 +50,9 @@ export default function PartnersList24() {
   const mediaPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "media"
   );
+  const gastroPartners = partnersInfo.partners.filter(
+    (p) => p.partner_type === "gastro"
+  );
 
   /* grid style const */
   const gridStyle = {
@@ -133,6 +136,14 @@ export default function PartnersList24() {
             {renderPartners(smartPartners)}
           </div>
         </div>
+
+        <div id="ext_gastro_div">
+          <h2 style={pTypeStyle}>Gastronomic Sponsor</h2>
+          <div id="int_gastro_div" style={gridStyle}>
+            {renderPartners(gastroPartners)}
+          </div>
+        </div>
+
         <div id="ext_friendly_div">
           <h2 style={pTypeStyle}>Friendly Sponsors</h2>
           <div id="int_friendly_div" style={gridStyle}>
