@@ -76,6 +76,18 @@ export default function PartnersList24() {
     justifyContent: "center",
   };
 
+  /* grid group style const */
+  const gridGroupStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+  };
+
+  const flexStyle = {
+    display: "flex",
+    flexDirection: "row",
+    gap: "50px",
+  };
+
   /* sections title style const */
   const pTypeStyle = {
     color: "white",
@@ -98,7 +110,102 @@ export default function PartnersList24() {
       />
     ));
 
-  return (
+  return windowSize > global.UTILS.BIG_TABLET_WIDTH ? (
+    /* desktop layout */
+    <div id="external_div">
+      <div id="title_div">
+        <h1
+          className="font-weight-bold headerTitle"
+          style={{
+            fontSize: windowSize > global.UTILS.TABLET_WIDTH ? "120px" : "12vw",
+            textTransform: "uppercase",
+          }}
+        >
+          Sponsors
+        </h1>
+      </div>
+      <div id="list_div">
+        <div id="main_&_supporting_div" style={gridGroupStyle}>
+          <div id="ext_main_div">
+            <h2 style={pTypeStyle}>Main Sponsor</h2>
+            <div id="int_main_div">{renderPartners(mainPartners)}</div>
+          </div>
+
+          <div id="ext_supporting_div">
+            <h2 style={pTypeStyle}>Supporting Sponsors</h2>
+            <div id="int_supporting_div" style={flexStyle}>
+              {renderPartners(supportingPartners)}
+            </div>
+          </div>
+        </div>
+        <div id="tech_&_smart_div" style={gridGroupStyle}>
+          <div id="ext_technical_div">
+            <h2 style={pTypeStyle}>Technical Sponsors</h2>
+            <div id="int_technical_div" style={flexStyle}>
+              {renderPartners(technicalPartners)}
+            </div>
+          </div>
+
+          <div id="ext_smart_div">
+            <h2 style={pTypeStyle}>Smart Sponsor</h2>
+            <div id="int_smart_div">{renderPartners(smartPartners)}</div>
+          </div>
+        </div>
+
+        <div id="gastro_&_creative_div" style={gridGroupStyle}>
+          <div id="ext_gastro_div">
+            <h2 style={pTypeStyle}>Gastronomic Sponsor</h2>
+            <div id="int_gastro_div">{renderPartners(gastroPartners)}</div>
+          </div>
+          <div id="ext_creative_div">
+            <h2 style={pTypeStyle}>Creative Sponsor</h2>
+            <div id="int_creative_div">{renderPartners(creativePartners)}</div>
+          </div>
+        </div>
+        <div id="ext_friendly_div">
+          <h2 style={pTypeStyle}>Friendly Sponsors</h2>
+          <div id="int_friendly_div" style={gridStyle}>
+            {renderPartners(friendlyPartners)}
+          </div>
+        </div>
+
+        <div id="ext_media_div">
+          <h2 style={pTypeStyle}>Media Sponsors</h2>
+          <div id="int_media_div" style={gridStyle}>
+            {renderPartners(mediaPartners)}
+          </div>
+        </div>
+        <div id="ext_generic_div">
+          <h2 style={pTypeStyle}>Partners</h2>
+          <div id="int_generic_div" style={gridStyle}>
+            {renderPartners(genericPartners)}
+          </div>
+        </div>
+
+        <div id="ext_community_div">
+          <h2 style={pTypeStyle}>Community Partners</h2>
+          <div id="int_community_div" style={gridStyle}>
+            {renderPartners(communityPartners)}
+          </div>
+        </div>
+
+        <div id="ext_patrocinio_div">
+          <h2 style={pTypeStyle}>{t("partners_list.patrocinio_div")}</h2>
+          <div id="int_patrocinio_div" style={gridStyle}>
+            {renderPartners(patrocinioPartners)}
+          </div>
+        </div>
+
+        <div id="ext_patrocinioEP_div">
+          <h2 style={pTypeStyle}>{t("partners_list.patrocinioEP_div")}</h2>
+          <div id="int_patrocinioEP_div" style={gridStyle}>
+            {renderPartners(patrocinioEPPartners)}
+          </div>
+        </div>
+      </div>
+    </div>
+  ) : (
+    /* tablet + mobile layout */
     <div id="external_div">
       <div id="title_div">
         <h1
@@ -147,6 +254,13 @@ export default function PartnersList24() {
           </div>
         </div>
 
+        <div id="ext_creative_div">
+          <h2 style={pTypeStyle}>Creative Sponsor</h2>
+          <div id="int_creative_div" style={gridStyle}>
+            {renderPartners(creativePartners)}
+          </div>
+        </div>
+
         <div id="ext_friendly_div">
           <h2 style={pTypeStyle}>Friendly Sponsors</h2>
           <div id="int_friendly_div" style={gridStyle}>
@@ -158,13 +272,6 @@ export default function PartnersList24() {
           <h2 style={pTypeStyle}>Media Sponsors</h2>
           <div id="int_media_div" style={gridStyle}>
             {renderPartners(mediaPartners)}
-          </div>
-        </div>
-
-        <div id="ext_creative_div">
-          <h2 style={pTypeStyle}>Creative Sponsor</h2>
-          <div id="int_creative_div" style={gridStyle}>
-            {renderPartners(creativePartners)}
           </div>
         </div>
 
