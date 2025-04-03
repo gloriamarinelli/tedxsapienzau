@@ -162,7 +162,7 @@ export default function PartnersList24() {
         </div>
 
         <div id="ext_creative_div">
-          <h2 style={pTypeStyle}>Creative Sponsors</h2>
+          <h2 style={pTypeStyle}>Creative Sponsor</h2>
           <div id="int_creative_div" style={gridStyle}>
             {renderPartners(creativePartners)}
           </div>
