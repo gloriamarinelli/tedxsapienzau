@@ -113,7 +113,7 @@ export default function PartnersList24() {
       </div>
       <div id="list_div">
         <div id="ext_main_div">
-          <h2 style={pTypeStyle}>Main Sponsors</h2>
+          <h2 style={pTypeStyle}>Main Sponsor</h2>
           <div id="int_main_div" style={gridStyle}>
             {renderPartners(mainPartners)}
           </div>
@@ -134,7 +134,7 @@ export default function PartnersList24() {
         </div>
 
         <div id="ext_smart_div">
-          <h2 style={pTypeStyle}>Smart Sponsors</h2>
+          <h2 style={pTypeStyle}>Smart Sponsor</h2>
           <div id="int_smart_div" style={gridStyle}>
             {renderPartners(smartPartners)}
           </div>
