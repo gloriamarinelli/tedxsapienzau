@@ -39,7 +39,7 @@ export default function PartnersList24() {
     (p) => p.partner_type === "patrocinio"
   );
   const patrocinioEPPartners = partnersInfo.partners.filter(
-    (p) => p.partner_type === "patrocinio_ep"
+    (p) => p.partner_type === "patrocinio_europe"
   );
   const genericPartners = partnersInfo.partners.filter(
     (p) => p.partner_type === "generic"

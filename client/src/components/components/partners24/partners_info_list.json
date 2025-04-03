@@ -46,15 +46,6 @@
       "wb_link": "https://www.yptrainer.com/"
     },
     {
-      "id": 6,
-      "name": "ENEA",
-      "imgName": "enea.webp",
-      "descr_it": "L'ENEA è l'Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sostenibile. Ente pubblico per ricerca, innovazione e servizi avanzati a imprese, PA e cittadini nei settori energia, ambiente e sviluppo sostenibile.",
-      "descr_en": "ENEA is the National Agency for New Technologies, Energy, and Sustainable Development. A public body for research, innovation, and advanced services for businesses, public administration, and citizens in the fields of energy, environment, and sustainable development.",
-      "partner_type": "patrocinio",
-      "wb_link": "https://www.enea.it"
-    },
-    {
       "id": 7,
       "name": "TechnoTown",
       "imgName": "techno.webp",
@@ -82,15 +73,6 @@
       "wb_link": "https://www.ef-italia.it"
     },
     {
-      "id": 10,
-      "name": "La Consigliera di Parità",
-      "imgName": "cp.webp",
-      "descr_it": "La Consigliera di Parità  è uno strumento di tutela per lavoratrici e lavoratori contro le discriminazioni in ragione del genere sul lavoro.",
-      "descr_en": "The Equality Advisor is an instrument of protection for workers against discrimination based on gender in the workplace.",
-      "partner_type": "patrocinio",
-      "wb_link": "https://www.cittametropolitanaroma.it/homepage/la-citta-metropolitana/struttura-organizzativa/altri-organismi/la-consigliera-di-parita"
-    },
-    {
       "id": 11,
       "name": "Rome Future Week",
       "imgName": "rfw.webp",
@@ -98,33 +80,6 @@
       "descr_en": "Rome Future Week is the annual event by SCAI Comunicazione that explores trends and innovation to envision the future in Rome. With over 400 events and more than 60,000 participants, the event transforms the city into an epicenter of creativity and innovation, dedicated to building tomorrow.",
       "partner_type": "community",
       "wb_link": "https://romefutureweek.it/"
-    },
-    {
-      "id": 12,
-      "name": "Roma Capitale",
-      "imgName": "roma_cap.webp",
-      "descr_it": "Roma, capitale d'Italia, è una delle città più storiche e affascinanti al mondo. Fondata nel 753 a.C., è famosa per il suo patrimonio culturale, artistico e culinario. Centro di storia, arte e politica, è una meta ambita per turisti e visitatori di tutto il mondo.",
-      "descr_en": "Rome, the capital of Italy, is one of the most historic and captivating cities in the world. Founded in 753 BC, it is renowned for its cultural, artistic, and culinary heritage. A center of history, art, and politics, it is a sought-after destination for tourists and visitors from around the globe.",
-      "partner_type": "patrocinio",
-      "wb_link": "https://www.comune.roma.it"
-    },
-    {
-      "id": 13,
-      "name": "CNR",
-      "imgName": "cnr.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
-      "partner_type": "patrocinio",
-      "wb_link": "https://www.cnr.it/"
-    },
-    {
-      "id": 14,
-      "name": "Regione Lazio",
-      "imgName": "lazio.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
-      "partner_type": "patrocinio",
-      "wb_link": "https://www.regione.lazio.it/"
     },
     {
       "id": 15,
@@ -177,7 +132,7 @@
       "imgName": "ep.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
-      "partner_type": "patrocinio_ep",
+      "partner_type": "patrocinio_europe",
       "wb_link": "https://www.europarl.europa.eu"
     },
     {
@@ -242,6 +197,87 @@
       "descr_en": "coming soon",
       "partner_type": "creative",
       "wb_link": "https://namstudio.it/"
+    },
+    {
+      "id": 28,
+      "name": "European Commission",
+      "imgName": "ec.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://commission.europa.eu/"
+    },
+    {
+      "id": 30,
+      "name": "Ministero dello Sport",
+      "imgName": "msg.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.sport.governo.it"
+    },
+    {
+      "id": 13,
+      "name": "CNR",
+      "imgName": "cnr.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.cnr.it/"
+    },
+    {
+      "id": 6,
+      "name": "ENEA",
+      "imgName": "enea.webp",
+      "descr_it": "L'ENEA è l'Agenzia nazionale per le nuove tecnologie, l'energia e lo sviluppo sostenibile. Ente pubblico per ricerca, innovazione e servizi avanzati a imprese, PA e cittadini nei settori energia, ambiente e sviluppo sostenibile.",
+      "descr_en": "ENEA is the National Agency for New Technologies, Energy, and Sustainable Development. A public body for research, innovation, and advanced services for businesses, public administration, and citizens in the fields of energy, environment, and sustainable development.",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.enea.it"
+    },
+    {
+      "id": 14,
+      "name": "Regione Lazio",
+      "imgName": "lazio.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.regione.lazio.it/"
+    },
+    {
+      "id": 10,
+      "name": "La Consigliera di Parità",
+      "imgName": "cp.webp",
+      "descr_it": "La Consigliera di Parità  è uno strumento di tutela per lavoratrici e lavoratori contro le discriminazioni in ragione del genere sul lavoro.",
+      "descr_en": "The Equality Advisor is an instrument of protection for workers against discrimination based on gender in the workplace.",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.cittametropolitanaroma.it/homepage/la-citta-metropolitana/struttura-organizzativa/altri-organismi/la-consigliera-di-parita"
+    },
+    {
+      "id": 12,
+      "name": "Roma Capitale",
+      "imgName": "roma_cap.webp",
+      "descr_it": "Roma, capitale d'Italia, è una delle città più storiche e affascinanti al mondo. Fondata nel 753 a.C., è famosa per il suo patrimonio culturale, artistico e culinario. Centro di storia, arte e politica, è una meta ambita per turisti e visitatori di tutto il mondo.",
+      "descr_en": "Rome, the capital of Italy, is one of the most historic and captivating cities in the world. Founded in 753 BC, it is renowned for its cultural, artistic, and culinary heritage. A center of history, art, and politics, it is a sought-after destination for tourists and visitors from around the globe.",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.comune.roma.it"
+    },
+    {
+      "id": 29,
+      "name": "Radio Sapienza",
+      "imgName": "rs.webp",
+      "descr_it": "RadioSapienza è la webradio ufficiale della Sapienza Università di Roma, attiva dal 2007. Fa parte di RadioLab del Dipartimento di Comunicazione e Ricerca Sociale, offrendo informazione, approfondimenti e intrattenimento, oltre a fungere da laboratorio formativo per gli studenti dell'Ateneo.",
+      "descr_en": "RadioSapienza is the official web radio of Sapienza University of Rome, established in 2007. Part of RadioLab in the Department of Communication and Social Research, it provides information, analysis, and entertainment, while serving as a training platform for students.",
+      "partner_type": "media",
+      "wb_link": "https://www.radiosapienza.net/"
+    },
+    {
+      "id": 31,
+      "name": "Tucano",
+      "imgName": "tucano.webp",
+      "descr_it": "Tucano nasce a Milano nel 1985 progettando borse, zaini e accessori per il lavoro, il viaggio e il tempo libero con un design essenziale e attento all’ambiente. Tucano per le aziende, è la divisione interna che sviluppa prodotti personalizzati e soluzioni dedicate per clienti business.",
+      "descr_en": "Tucano was founded in Milan in 1985, designing bags, backpacks, and accessories for work, travel, and leisure with an essential design that is environmentally conscious. Tucano for Business is the internal division that develops customized products and dedicated solutions for corporate clients.",
+      "partner_type": "technical",
+      "wb_link": "https://tucano.com"
     }
   ]
 }
