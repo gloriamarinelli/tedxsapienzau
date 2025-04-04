@@ -85,7 +85,7 @@
       "id": 15,
       "name": "Starting Finance Club",
       "imgName": "sfc.webp",
-      "descr_it": "Lo Starting Finance Club Sapienza è un’associazione universitaria che avvicina gli studenti a economia, finanza e imprenditoria. Organizziamo eventi, produciamo contenuti e lavoriamo in team per crescere insieme, sviluppando competenze utili per il mondo del lavoro.",
+      "descr_it": "Lo Starting Finance Club Sapienza è un'associazione universitaria che avvicina gli studenti a economia, finanza e imprenditoria. Organizziamo eventi, produciamo contenuti e lavoriamo in team per crescere insieme, sviluppando competenze utili per il mondo del lavoro.",
       "descr_en": "The Starting Finance Club Sapienza is a university association that engages students in economics, finance, and entrepreneurship. We organize events, produce content, and collaborate in teams to grow together, developing skills that are valuable for the job market.",
       "partner_type": "community",
       "wb_link": "https://linktr.ee/SFCSapienza"
@@ -274,10 +274,19 @@
       "id": 31,
       "name": "Tucano",
       "imgName": "tucano.webp",
-      "descr_it": "Tucano nasce a Milano nel 1985 progettando borse, zaini e accessori per il lavoro, il viaggio e il tempo libero con un design essenziale e attento all’ambiente. Tucano per le aziende, è la divisione interna che sviluppa prodotti personalizzati e soluzioni dedicate per clienti business.",
+      "descr_it": "Tucano nasce a Milano nel 1985 progettando borse, zaini e accessori per il lavoro, il viaggio e il tempo libero con un design essenziale e attento all'ambiente. Tucano per le aziende, è la divisione interna che sviluppa prodotti personalizzati e soluzioni dedicate per clienti business.",
       "descr_en": "Tucano was founded in Milan in 1985, designing bags, backpacks, and accessories for work, travel, and leisure with an essential design that is environmentally conscious. Tucano for Business is the internal division that develops customized products and dedicated solutions for corporate clients.",
       "partner_type": "technical",
       "wb_link": "https://tucano.com"
+    },
+    {
+      "id": 32,
+      "name": "Bonduelle",
+      "imgName": "bonduelle.webp",
+      "descr_it": "Fondato nel 1853, il Gruppo Bonduelle è leader mondiale nella produzione di verdure, promuovendo un'alimentazione vegetale. In Italia, opera con due stabilimenti a San Paolo d'Argon (Bergamo) e Battipaglia (Salerno), impiegando oltre 400 persone.",
+      "descr_en": "Founded in 1853, the Bonduelle Group is a global leader in vegetable production, promoting a plant-based diet. In Italy, it operates two facilities located in San Paolo d'Argon (Bergamo) and Battipaglia (Salerno), employing over 400 people.",
+      "partner_type": "gastro",
+      "wb_link": "https://www.bonduelle.it"
     }
   ]
 }
