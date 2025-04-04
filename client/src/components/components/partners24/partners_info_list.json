@@ -209,21 +209,12 @@
     },
     {
       "id": 30,
-      "name": "Ministero dello Sport",
+      "name": "Ministero per lo Sport e i Giovani",
       "imgName": "msg.webp",
       "descr_it": "in arrivo",
       "descr_en": "coming soon",
       "partner_type": "patrocinio",
       "wb_link": "https://www.sport.governo.it"
-    },
-    {
-      "id": 13,
-      "name": "CNR",
-      "imgName": "cnr.webp",
-      "descr_it": "in arrivo",
-      "descr_en": "coming soon",
-      "partner_type": "patrocinio",
-      "wb_link": "https://www.cnr.it/"
     },
     {
       "id": 6,
@@ -233,6 +224,15 @@
       "descr_en": "ENEA is the National Agency for New Technologies, Energy, and Sustainable Development. A public body for research, innovation, and advanced services for businesses, public administration, and citizens in the fields of energy, environment, and sustainable development.",
       "partner_type": "patrocinio",
       "wb_link": "https://www.enea.it"
+    },
+    {
+      "id": 13,
+      "name": "Consiglio Nazionale delle Ricerche",
+      "imgName": "cnr.webp",
+      "descr_it": "in arrivo",
+      "descr_en": "coming soon",
+      "partner_type": "patrocinio",
+      "wb_link": "https://www.cnr.it/"
     },
     {
       "id": 14,

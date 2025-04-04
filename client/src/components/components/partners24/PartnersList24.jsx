@@ -151,15 +151,10 @@ export default function PartnersList24() {
             <div id="int_smart_div">{renderPartners(smartPartners)}</div>
           </div>
         </div>
-
-        <div id="gastro_&_creative_div" style={gridGroupStyle}>
-          <div id="ext_gastro_div">
-            <h2 style={pTypeStyle}>Gastronomic Sponsor</h2>
-            <div id="int_gastro_div">{renderPartners(gastroPartners)}</div>
-          </div>
-          <div id="ext_creative_div">
-            <h2 style={pTypeStyle}>Creative Sponsor</h2>
-            <div id="int_creative_div">{renderPartners(creativePartners)}</div>
+        <div id="ext_gastro_div">
+          <h2 style={pTypeStyle}>Gastronomic Sponsor</h2>
+          <div id="int_gastro_div" style={gridStyle}>
+            {renderPartners(gastroPartners)}
           </div>
         </div>
         <div id="ext_friendly_div">
@@ -181,6 +176,11 @@ export default function PartnersList24() {
             {renderPartners(genericPartners)}
           </div>
         </div>
+
+        <div id="ext_creative_div">
+            <h2 style={pTypeStyle}>Creative Partner</h2>
+            <div id="int_creative_div">{renderPartners(creativePartners)}</div>
+          </div>
 
         <div id="ext_community_div">
           <h2 style={pTypeStyle}>Community Partners</h2>
@@ -255,7 +255,7 @@ export default function PartnersList24() {
         </div>
 
         <div id="ext_creative_div">
-          <h2 style={pTypeStyle}>Creative Sponsor</h2>
+          <h2 style={pTypeStyle}>Creative Partner</h2>
           <div id="int_creative_div" style={gridStyle}>
             {renderPartners(creativePartners)}
           </div>
