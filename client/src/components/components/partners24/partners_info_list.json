@@ -193,8 +193,8 @@
       "id": 27,
       "name": "NAM Studio",
       "imgName": "nam.webp",
-      "descr_it": "",
-      "descr_en": "",
+      "descr_it": "NAM Studio crea video professionali e contenuti social che catturano l'attenzione. Uniamo qualità cinematografica a strategie digitali, aiutando le aziende a costruire community senza pubblicità. Trasformiamo il tuo brand in un creator autentico con video memorabili che generano follower reali.",
+      "descr_en": "NAM Studio creates professional videos and social content that capture attention. We blend cinematic quality with effective digital strategies, helping companies build communities without advertising. We turn your brand into an authentic creator with memorable videos that attract real followers.",
       "partner_type": "creative",
       "wb_link": "https://namstudio.it/"
     },
@@ -287,6 +287,15 @@
       "descr_en": "Founded in 1853, the Bonduelle Group is a global leader in vegetable production, promoting a plant-based diet. In Italy, it operates two facilities located in San Paolo d'Argon (Bergamo) and Battipaglia (Salerno), employing over 400 people.",
       "partner_type": "gastro",
       "wb_link": "https://www.bonduelle.it"
+    },
+    {
+      "id": 33,
+      "name": "Avis Comunale di Roma",
+      "imgName": "avis.webp",
+      "descr_it": "AVIS Comunale di Roma è un'associazione di volontari che donano sangue in modo anonimo e gratuito. Promuoviamo la solidarietà, organizziamo eventi e coinvolgiamo i giovani per diffondere la cultura della donazione in modo semplice e diretto.",
+      "descr_en": "AVIS Comunale di Roma is an association of volunteers who donate blood anonymously and free of charge. We promote solidarity, organize events, and engage young people to spread the culture of donation in a simple and direct manner.",
+      "partner_type": "community",
+      "wb_link": "https://www.avisroma.it/"
     }
   ]
 }
