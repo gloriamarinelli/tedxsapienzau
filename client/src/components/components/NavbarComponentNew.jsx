@@ -114,6 +114,18 @@ export default function NavbarComponentNew() {
               }}
             >
               <span className="ms-3 mb-3 navbar-submenu-edition-year">
+                2025
+              </span>
+              <li>
+                <Link
+                  // ref={awards24}
+                  className="navbar-submenu-edition-item ms-3"
+                  to="/eventi/paradoxa2025"
+                >
+                  Para Doxa
+                </Link>
+              </li>
+              <span className="ms-3 mb-3 navbar-submenu-edition-year">
                 2024
               </span>
               <li>

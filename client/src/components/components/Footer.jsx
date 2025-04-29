@@ -171,9 +171,9 @@ export default function Footer() {
               flexDirection: "column",
             }}
           >
+            <GreyLink text="Para Doxa" link={"/eventi/paradoxa2025"} />
             <GreyLink text="Awards" link={"/eventi/awards2024"} />
             <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
-            <GreyLink text="Back to Zero" link={"/eventi/edizione2023"} />
           </div>
           <b>
             <WhiteLink text={t("navbar.partners")} link="/partners" />
@@ -244,7 +244,6 @@ export default function Footer() {
             <a
               className="secondary-text"
               style={{
-                textDecoration: "none",
                 textDecoration: "underline",
               }}
               href="/privacypolicy"
@@ -255,7 +254,7 @@ export default function Footer() {
           <small className="tertiary-text">
             <a
               className="secondary-text"
-              style={{ textDecoration: "none", textDecoration: "underline" }}
+              style={{textDecoration: "underline" }}
               href="/images/Statuto2024-25.pdf"
             >
               {t("footer.statute")}

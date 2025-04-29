@@ -150,21 +150,21 @@ export default function MvHome() {
           {renderSubContainer(
             hidden1,
             setHidden1,
-            31,
+            41,
             t("mvhome.speakers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
           {renderSubContainer(
             hidden2,
             setHidden2,
-            3000,
+            4000,
             t("mvhome.spectators"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}
           {renderSubContainer(
             hidden3,
             setHidden3,
-            8500,
+            9000,
             t("mvhome.followers"),
             windowSize > 1245 ? "12vh" : "9vh"
           )}

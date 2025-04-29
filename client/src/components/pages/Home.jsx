@@ -8,7 +8,7 @@ import MvHome from "./MvHome";
 import "../../index.css";
 import "../../resources/styles/home.css";
 import Iframe from "react-iframe";
-import backgroundVideo from "../videos/tedx.mp4";
+import backgroundVideo from "../videos/tedx2.mp4";
 import { Button } from "react-bootstrap";
 import { useTranslation, Trans } from "react-i18next";
 
@@ -151,7 +151,7 @@ export default function Home() {
                     : " hidden",
               }}
             >
-              BACK TO ZERO 2023
+              PARA DOXA 2025
             </h2>
           </div>
         </div>

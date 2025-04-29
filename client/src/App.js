@@ -57,11 +57,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ParaDoxa2025 />,
+        element: <Home />,
       },
       {
         path: "/tedxsapienzau",
-        element: <ParaDoxa2025 />,
+        element: <Home />,
       },
       {
         path: "/sponsors",
@@ -124,10 +124,13 @@ const router = createBrowserRouter([
         element: <Countdown2024 />,
       },
       {
+        path: "/eventi/paradoxa2025",
+        element: <ParaDoxa2025 />,
+      },
+      {
         path: "/eventi/awards2024",
         element: <Awards2024 />,
       },
-
       {
         path: "/sapienzau",
         element: <AssociazioneSapienzaU />,
