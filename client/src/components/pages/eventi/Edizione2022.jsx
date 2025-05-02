@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import "../../resources/styles/edizione2022style.css";
+import "../../../resources/styles/edizione2022style.css";
 
-import SpeakerCard from "../components/SpeakerCard";
-import BioSpeakerPopup from "../components/BioSpeakerPopup";
+import SpeakerCard from "../../components/SpeakerCard";
+import BioSpeakerPopup from "../../components/BioSpeakerPopup";
 
-import global from "../../resources/global.json";
+import global from "../../../resources/global.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";

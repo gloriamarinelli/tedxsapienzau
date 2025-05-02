@@ -1,13 +1,13 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image1 from "../images/awards22/artist1.jpg";
-import Image4 from "../images/awards22/speaker1.jpg";
-import Image3 from "../images/awards22/speaker2.jpg";
-import Image5 from "../images/awards22/speaker3.jpg";
+import Image1 from "../../images/awards22/artist1.jpg";
+import Image4 from "../../images/awards22/speaker1.jpg";
+import Image3 from "../../images/awards22/speaker2.jpg";
+import Image5 from "../../images/awards22/speaker3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import "../../index.css";
-import global from "../../resources/global.json";
+import "../../../index.css";
+import global from "../../../resources/global.json";
 import { Trans, useTranslation } from "react-i18next";
 
 export default function Awards2022() {

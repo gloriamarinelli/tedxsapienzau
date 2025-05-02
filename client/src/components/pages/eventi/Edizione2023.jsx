@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import "../../resources/styles/edizione2023style.css";
+import "../../../resources/styles/edizione2023style.css";
 
-import SpeakerCard from "../components/SpeakerCard";
-import BioSpeakerPopup from "../components/BioSpeakerPopup";
+import SpeakerCard from "../../components/SpeakerCard";
+import BioSpeakerPopup from "../../components/BioSpeakerPopup";
 
-import global from "../../resources/global.json";
+import global from "../../../resources/global.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { useOutletContext } from "react-router";
@@ -13,25 +13,25 @@ import Carousel from "react-bootstrap/Carousel";
 import { Trans, useTranslation } from "react-i18next";
 import axios from "axios";
 
-import Image1 from "../images/edizione23/tullio.jpg";
-import Image2 from "../images/edizione23/rossi.jpg";
-import Image3 from "../images/edizione23/freymann.jpg";
-import Image4 from "../images/edizione23/basilone.jpg";
-import Image5 from "../images/edizione23/schito.jpg";
-import Image6 from "../images/edizione23/cervellini.jpg";
-import Image7 from "../images/edizione23/estrela.jpg";
-import Image8 from "../images/edizione23/lambarelli.jpg";
-import Image9 from "../images/edizione23/lenca.jpg";
-import Image10 from "../images/edizione23/villain.jpg";
-import Image11 from "../images/edizione23/onofri.jpg";
-import Image12 from "../images/edizione23/aboya.jpg";
+import Image1 from "../../images/edizione23/tullio.jpg";
+import Image2 from "../../images/edizione23/rossi.jpg";
+import Image3 from "../../images/edizione23/freymann.jpg";
+import Image4 from "../../images/edizione23/basilone.jpg";
+import Image5 from "../../images/edizione23/schito.jpg";
+import Image6 from "../../images/edizione23/cervellini.jpg";
+import Image7 from "../../images/edizione23/estrela.jpg";
+import Image8 from "../../images/edizione23/lambarelli.jpg";
+import Image9 from "../../images/edizione23/lenca.jpg";
+import Image10 from "../../images/edizione23/villain.jpg";
+import Image11 from "../../images/edizione23/onofri.jpg";
+import Image12 from "../../images/edizione23/aboya.jpg";
 
 export default function Edizione2023() {
   const { t } = useTranslation();
   const [isBioOpen, setIsBioOpen] = useState(false);
   const [selectedSpeakerInfo, setSelectedSpeakerInfo] = useState({});
   const [speakers, setSpeakers] = useState([]);
-  const [windowSize,] = useOutletContext();
+  const [windowSize] = useOutletContext();
 
   useEffect(() => {
     axios
@@ -375,10 +375,10 @@ export default function Edizione2023() {
           }}
         >
           <Trans
-          i18nKey="event_backtozero.description"
-          components={{
-            1: <strong></strong>
-          }}
+            i18nKey="event_backtozero.description"
+            components={{
+              1: <strong></strong>,
+            }}
           />
         </p>
 

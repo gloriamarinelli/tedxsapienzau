@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useOutletContext } from "react-router";
 import Cover23 from "../images/awards23/header_awards23.webp";
 import Cover22 from "../images/awards22/awards2022.webp";
-import global from "../../resources/global.json";
+import global from "../../../resources/global.json";
 import "../../resources/styles/awardsstyle.css";
 import "../../index.css";
 

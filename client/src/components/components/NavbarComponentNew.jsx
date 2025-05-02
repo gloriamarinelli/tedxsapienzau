@@ -481,6 +481,23 @@ export default function NavbarComponentNew() {
             <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
               <Link
                 className="navbar-submenu-edition-item font-600"
+                to="/eventi/paradoxa2025"
+                role="button"
+                aria-expanded="false"
+                onClick={() => {
+                  setExpanded(false);
+                  onBackEventsClick();
+                }}
+              >
+                PARA DOXA
+                <sup className="sup-elem" style={supStyle}>
+                  2025
+                </sup>
+              </Link>
+            </li>
+            <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+              <Link
+                className="navbar-submenu-edition-item font-600"
                 to="/eventi/awards2024"
                 role="button"
                 aria-expanded="false"

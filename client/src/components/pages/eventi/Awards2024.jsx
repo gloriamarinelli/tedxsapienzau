@@ -1,25 +1,25 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Image2 from "../images/awards24/abbozzo.webp";
-import Image1 from "../images/awards24/dapoto.webp";
-import Image5 from "../images/awards24/saltarelli.webp";
-import Image4 from "../images/awards24/nardi.webp";
-import Image3 from "../images/awards24/pasatu.webp";
-import "../../index.css";
-import global from "../../resources/global.json";
+import Image2 from "../../images/awards24/abbozzo.webp";
+import Image1 from "../../images/awards24/dapoto.webp";
+import Image5 from "../../images/awards24/saltarelli.webp";
+import Image4 from "../../images/awards24/nardi.webp";
+import Image3 from "../../images/awards24/pasatu.webp";
+import "../../../index.css";
+import global from "../../../resources/global.json";
 import { Trans, useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { useOutletContext } from "react-router";
-import logo from "../images/awards24/awards24.webp";
-import arancione from "../images/joinus/arancione.webp";
-import celeste from "../images/joinus/celeste.webp";
-import blu from "../images/joinus/blu.webp";
-import fucsia from "../images/joinus/fucsia.webp";
-import rosa from "../images/joinus/rosa.webp";
-import rosso from "../images/joinus/rosso.webp";
-import verde from "../images/joinus/verde.webp";
-import giallo from "../images/joinus/giallo.webp";
+import logo from "../../images/awards24/awards24.webp";
+import arancione from "../../images/joinus/arancione.webp";
+import celeste from "../../images/joinus/celeste.webp";
+import blu from "../../images/joinus/blu.webp";
+import fucsia from "../../images/joinus/fucsia.webp";
+import rosa from "../../images/joinus/rosa.webp";
+import rosso from "../../images/joinus/rosso.webp";
+import verde from "../../images/joinus/verde.webp";
+import giallo from "../../images/joinus/giallo.webp";
 
 export default function Awards() {
   const { t } = useTranslation();
@@ -143,7 +143,7 @@ export default function Awards() {
               src={logo}
               alt="SapienzaU Awards"
               width={windowSize > 1360 ? "604px" : "420px"}
-              style={{padding:"50px"}}
+              style={{ padding: "50px" }}
             />
           </div>
           {getBannerTeamLogos()}
