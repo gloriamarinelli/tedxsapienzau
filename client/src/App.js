@@ -18,8 +18,8 @@ import Newsletter from "./components/pages/Newsletter";
 
 import Team from "./components/pages/Team";
 
-import Edizione2022 from "./components/pages/Edizione2022";
-import Edizione2023 from "./components/pages/Edizione2023";
+import Edizione2022 from "./components/pages/eventi/Edizione2022";
+import Edizione2023 from "./components/pages/eventi/Edizione2023";
 
 import Events from "./components/pages/Events";
 
@@ -31,11 +31,11 @@ import Write from "./components/pages/Write";
 import Location from "./components/pages/Location";
 import MissionandVision from "./components/pages/MissionandVision";
 
-import Awards2024 from "./components/pages/Awards2024";
-import Awards2023 from "./components/pages/Awards2023";
-import Awards2022 from "./components/pages/Awards2022";
+import Awards2024 from "./components/pages/eventi/Awards2024";
+import Awards2023 from "./components/pages/eventi/Awards2023";
+import Awards2022 from "./components/pages/eventi/Awards2022";
 
-import Countdown2024 from "./components/pages/Countdown2024";
+import Countdown2024 from "./components/pages/eventi/Countdown2024";
 
 import HomeAwards24 from "./components/pages/HomeAwards24";
 import SapienzaU from "./components/pages/SapienzaUDesktop";
@@ -57,11 +57,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ParaDoxa2025 />,
+        element: <Home />,
       },
       {
         path: "/tedxsapienzau",
-        element: <ParaDoxa2025 />,
+        element: <Home />,
       },
       {
         path: "/sponsors",
@@ -124,10 +124,13 @@ const router = createBrowserRouter([
         element: <Countdown2024 />,
       },
       {
+        path: "/eventi/paradoxa2025",
+        element: <ParaDoxa2025 />,
+      },
+      {
         path: "/eventi/awards2024",
         element: <Awards2024 />,
       },
-
       {
         path: "/sapienzau",
         element: <AssociazioneSapienzaU />,

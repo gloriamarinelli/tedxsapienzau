@@ -114,6 +114,18 @@ export default function NavbarComponentNew() {
               }}
             >
               <span className="ms-3 mb-3 navbar-submenu-edition-year">
+                2025
+              </span>
+              <li>
+                <Link
+                  // ref={awards24}
+                  className="navbar-submenu-edition-item ms-3"
+                  to="/eventi/paradoxa2025"
+                >
+                  Para Doxa
+                </Link>
+              </li>
+              <span className="ms-3 mb-3 navbar-submenu-edition-year">
                 2024
               </span>
               <li>
@@ -465,6 +477,23 @@ export default function NavbarComponentNew() {
                 />
                 Back
               </a>
+            </li>
+            <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
+              <Link
+                className="navbar-submenu-edition-item font-600"
+                to="/eventi/paradoxa2025"
+                role="button"
+                aria-expanded="false"
+                onClick={() => {
+                  setExpanded(false);
+                  onBackEventsClick();
+                }}
+              >
+                PARA DOXA
+                <sup className="sup-elem" style={supStyle}>
+                  2025
+                </sup>
+              </Link>
             </li>
             <li className="nav-item col-xl-1 col-lg-2 col-12 p-0 pt-3 pb-3 border-bottom ">
               <Link
