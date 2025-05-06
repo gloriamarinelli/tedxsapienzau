@@ -3,7 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { AuthContextProvider } from "./components/context/authContext";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
-import NavbarComponent from "./components/components/NavbarComponent";
+import NavbarComponent from "./components/components/NavbarComponentNew";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
 import ErrorPage from "./components/pages/ErrorPage";
@@ -11,8 +11,6 @@ import Partners from "./components/pages/Partners";
 
 import Blog from "./components/pages/Blog";
 import BlogPost from "./components/pages/BlogPost";
-
-// import JoinUs from "./components/pages/JoinUs";
 
 import Newsletter from "./components/pages/Newsletter";
 
@@ -37,11 +35,9 @@ import Awards2022 from "./components/pages/eventi/Awards2022";
 
 import Countdown2024 from "./components/pages/eventi/Countdown2024";
 
-import HomeAwards24 from "./components/pages/HomeAwards24";
-import SapienzaU from "./components/pages/SapienzaUDesktop";
 import AssociazioneSapienzaU from "./components/components/AssociazioneSapienzaU";
 import NavbarComponentNew from "./components/components/NavbarComponentNew";
-import ParaDoxa2025 from "./components/pages/ParaDoxa2025";
+import ParaDoxa2025 from "./components/pages/eventi/ParaDoxa2025";
 
 const router = createBrowserRouter([
   {

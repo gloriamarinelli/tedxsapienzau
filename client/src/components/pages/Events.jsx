@@ -6,7 +6,7 @@ import CoverAwards23 from "../images/awards23/header_awards23.webp";
 import CoverAwards22 from "../images/awards22/awards2022.webp";
 import CoverCountdown24 from "../images/cover-countdown24.webp";
 import CoverAwards24 from "../images/awards24event.webp";
-import CoverParaDoxa25 from "../images/paradoxa25/paradoxa2.jpg";
+import CoverParaDoxa25 from "../images/cover-paradoxa25.webp";
 import global from "../../resources/global.json";
 import EventBox from "../components/EventBox";
 import "../../resources/styles/partnerstyle.css";

@@ -5,12 +5,12 @@ import { Trans, useTranslation } from "react-i18next";
 import global from "../../../resources/global.json";
 import Earth from "../../images/earth.webp";
 import CountdownLogo from "../../images/countdown_logo.webp";
-import AlessandroCorsiniImage from "../../images/countdown24/AlessandroCorsini.webp";
-import RaffaellaAbateImage from "../../images/countdown24/RaffaellaAbate.webp";
-import MarceloEnriqueContiImage from "../../images/countdown24/MarceloEnriqueConti.webp";
-import SabrinaLucibelloImage from "../../images/countdown24/SabrinaLucibello.webp";
-import BrunoMazzaraImage from "../../images/countdown24/BrunoMazzara.webp";
-import NunzioAlloccaImage from "../../images/countdown24/NunzioAllocca.webp";
+import AlessandroCorsiniImage from "../../images/speakerscountdown24/AlessandroCorsini.webp";
+import RaffaellaAbateImage from "../../images/speakerscountdown24/RaffaellaAbate.webp";
+import MarceloEnriqueContiImage from "../../images/speakerscountdown24/MarceloEnriqueConti.webp";
+import SabrinaLucibelloImage from "../../images/speakerscountdown24/SabrinaLucibello.webp";
+import BrunoMazzaraImage from "../../images/speakerscountdown24/BrunoMazzara.webp";
+import NunzioAlloccaImage from "../../images/speakerscountdown24/NunzioAllocca.webp";
 import SpeakerCard from "../../components/SpeakerCard";
 
 export default function Countdown2024() {
