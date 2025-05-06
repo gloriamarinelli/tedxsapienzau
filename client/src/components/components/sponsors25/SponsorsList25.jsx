@@ -5,14 +5,14 @@ import { useOutletContext } from "react-router";
 /* -------------------- components and resources import -------------------- */
 import global from "../../../resources/global.json";
 import SponsorCard25 from "../SponsorCard25";
-import partnersInfo from "./partners_info_list.json";
+import sponsorsInfo from "./sponsors_info_list.json";
 
 /* -------------------- css files import -------------------- */
 import "../../../resources/styles/partnerstyle.css";
 import "../../../resources/styles/partnercommunity.css";
 import "../../../index.css";
 
-export default function PartnersList24() {
+export default function SponsorsList25() {
   const [windowSize] = useOutletContext(); // window's size variable
   const { i18n } = useTranslation();
   const { t } = useTranslation();
@@ -20,40 +20,40 @@ export default function PartnersList24() {
   const lang_it = "it";
 
   /* partners filtering depending on "partner_type" */
-  const mainPartners = partnersInfo.partners.filter(
+  const mainPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "main"
   );
-  const supportingPartners = partnersInfo.partners.filter(
+  const supportingPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "supporting"
   );
-  const smartPartners = partnersInfo.partners.filter(
+  const smartPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "smart"
   );
-  const friendlyPartners = partnersInfo.partners.filter(
+  const friendlyPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "friendly"
   );
-  const communityPartners = partnersInfo.partners.filter(
+  const communityPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "community"
   );
-  const patrocinioPartners = partnersInfo.partners.filter(
+  const patrocinioPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "patrocinio"
   );
-  const patrocinioEPPartners = partnersInfo.partners.filter(
+  const patrocinioEPPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "patrocinio_europe"
   );
-  const genericPartners = partnersInfo.partners.filter(
+  const genericPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "generic"
   );
-  const technicalPartners = partnersInfo.partners.filter(
+  const technicalPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "technical"
   );
-  const mediaPartners = partnersInfo.partners.filter(
+  const mediaPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "media"
   );
-  const gastroPartners = partnersInfo.partners.filter(
+  const gastroPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "gastro"
   );
-  const creativePartners = partnersInfo.partners.filter(
+  const creativePartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "creative"
   );
 
