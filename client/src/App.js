@@ -7,7 +7,7 @@ import NavbarComponent from "./components/components/NavbarComponentNew";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
 import ErrorPage from "./components/pages/ErrorPage";
-import Partners from "./components/pages/Partners";
+import Sponsors from "./components/pages/Sponsors";
 
 import Blog from "./components/pages/Blog";
 import BlogPost from "./components/pages/BlogPost";
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/sponsors",
-        element: <Partners />,
+        element: <Sponsors />,
       },
       {
         path: "/blog",

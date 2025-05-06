@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../../resources/global.json";
-import PartnersSlider from "./PartnersSlider";
+import SponsorsSlider from "./SponsorsSlider";
 import PartnersList24 from "./PartnersList24";
 
 /* -------------------- images import -------------------- */
@@ -10,7 +10,7 @@ import second_box_bg from "../../images/partners/mobile/3.webp";
 import third_box_bg from "../../images/partners/mobile/4.webp";
 import fourth_box_bg from "../../images/partners/mobile/5.webp";
 
-export default function PartnersMobileLayout24() {
+export default function SponsorsMobileLayout25() {
   const { t } = useTranslation(); // translation variable
 
   return (
@@ -224,7 +224,7 @@ export default function PartnersMobileLayout24() {
           backgroundImage: "linear-gradient(to bottom, #191919, black)",
         }}
       ></div>
-      <PartnersSlider />
+      <SponsorsSlider />
     </>
   );
 }

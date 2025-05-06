@@ -25,7 +25,7 @@ export default function PartnerCard24({ name, imgName, descr, wb_link }) {
         <div className="card-front">
           <img
             className="sponsor_logo"
-            src={`/images/partners24/cards/${imgName}`}
+            src={`/images/sponsors25/cards/${imgName}`}
             alt="TEDx Sponsor"
           />
         </div>
