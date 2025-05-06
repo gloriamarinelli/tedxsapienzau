@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import PartnersCounter from "./PartnersCounter";
 import { useOutletContext } from "react-router";
 import global from "../../../resources/global.json";
-import PartnersSlider from "./PartnersSlider";
+import SponsorsSlider from "./SponsorsSlider";
 import PartnersList24 from "./PartnersList24";
 
 /* -------------------- images import -------------------- */
@@ -116,7 +116,7 @@ export default function PartnersDesktopLayout24() {
       </section>
       {/* second row */}
       <PartnersCounter />
-      <PartnersSlider />
+      <SponsorsSlider />
       {/* third row */}
       <section
         style={{

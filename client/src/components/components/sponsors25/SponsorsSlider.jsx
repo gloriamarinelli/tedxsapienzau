@@ -5,7 +5,7 @@ import global from "../../../resources/global.json";
 import "../../../resources/styles/partnersslider.css";
 import partnersInfo from "./partners_info_slider.json";
 
-export default function PartnersSlider() {
+export default function SponsorsSlider() {
   const { t } = useTranslation(); // translation variable
   const [windowSize] = useOutletContext(); // window's size variable
 

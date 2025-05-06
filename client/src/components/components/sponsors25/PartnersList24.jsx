@@ -4,7 +4,7 @@ import { useOutletContext } from "react-router";
 
 /* -------------------- components and resources import -------------------- */
 import global from "../../../resources/global.json";
-import PartnerCard24 from "../PartnerCard24";
+import SponsorCard25 from "../SponsorCard25";
 import partnersInfo from "./partners_info_list.json";
 
 /* -------------------- css files import -------------------- */
@@ -98,7 +98,7 @@ export default function PartnersList24() {
   /* generate partners card */
   const renderPartners = (partners) =>
     partners.map((partner) => (
-      <PartnerCard24
+      <SponsorCard25
         key={partner.id}
         name={partner.name}
         imgName={partner.imgName}
