@@ -3,7 +3,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { AuthContextProvider } from "./components/context/authContext";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
-import NavbarComponent from "./components/components/NavbarComponentNew";
+import NavbarComponentNew from "./components/components/NavbarComponentNew";
+import NavbarComponent from "./components/components/NavbarComponent";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
 import ErrorPage from "./components/pages/ErrorPage";
@@ -36,7 +37,6 @@ import Awards2022 from "./components/pages/eventi/Awards2022";
 import Countdown2024 from "./components/pages/eventi/Countdown2024";
 
 import AssociazioneSapienzaU from "./components/components/AssociazioneSapienzaU";
-import NavbarComponentNew from "./components/components/NavbarComponentNew";
 import ParaDoxa2025 from "./components/pages/eventi/ParaDoxa2025";
 
 const router = createBrowserRouter([
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     element: <HomeManager />,
     errorElement: (
       <>
-        <NavbarComponent />
+        <NavbarComponentNew />
         <ErrorPage />
         <Footer />
       </>
@@ -131,11 +131,6 @@ const router = createBrowserRouter([
         path: "/sapienzau",
         element: <AssociazioneSapienzaU />,
       },
-
-      // {
-      //   path: "/joinus",
-      //   element: <JoinUs />,
-      // },
       {
         path: "/newsletter",
         element: <Newsletter />,
@@ -161,9 +156,7 @@ function HomeManager() {
 
   return (
     <>
-      {/* <NavbarComponent windowSize={windowSize} /> */}
       <NavbarComponentNew />
-      {/* <ScrollToTop /> */}
       <Outlet context={[windowSize, setWindowSize]} />
       <Footer />
     </>
