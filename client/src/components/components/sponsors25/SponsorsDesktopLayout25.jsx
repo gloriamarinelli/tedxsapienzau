@@ -3,7 +3,7 @@ import PartnersCounter from "./PartnersCounter";
 import { useOutletContext } from "react-router";
 import global from "../../../resources/global.json";
 import SponsorsSlider from "./SponsorsSlider";
-import PartnersList24 from "./PartnersList24";
+import SponsorsList25 from "./SponsorsList25";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../../images/partners/desktop/3.webp";
@@ -18,7 +18,7 @@ export default function PartnersDesktopLayout24() {
 
   return (
     <div style={{ backgroundColor: "#000" }}>
-      <PartnersList24 />
+      <SponsorsList25 />
       {/* first row */}
       <section
         style={{
@@ -26,7 +26,7 @@ export default function PartnersDesktopLayout24() {
           justifyContent: "center",
           alignItems: "center",
           height: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
-          // marginTop: global.UTILS.NAV_HEIGHT, ***IMPORTANTE*** da ripristinare nel caso in cui la "PartnersList24" non sia presente!
+          // marginTop: global.UTILS.NAV_HEIGHT, ***IMPORTANTE*** da ripristinare nel caso in cui la "SponsorsList25" non sia presente!
           width: "100vw",
           backgroundColor: "#000",
           padding:

@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import CountUp from "react-countup";
 import global from "../../../resources/global.json";
 import SponsorsSlider from "./SponsorsSlider";
-import PartnersList24 from "./PartnersList24";
+import SponsorsList25 from "./SponsorsList25";
 
 /* -------------------- images import -------------------- */
 import first_box_bg from "../../images/partners/mobile/2.webp";
@@ -18,7 +18,7 @@ export default function SponsorsMobileLayout25() {
       <section
         style={{
           backgroundColor: global.COLORS.NERO,
-          // paddingTop: "5vh", ***IMPORTANTE*** da ripristinare nel caso in cui la "PartnersList24" non sia presente!
+          // paddingTop: "5vh", ***IMPORTANTE*** da ripristinare nel caso in cui la "SponsorsList25" non sia presente!
           fontFamily: global.UTILS.FONT_FAMILY,
           placeItems: "center",
           display: "grid",
@@ -39,7 +39,7 @@ export default function SponsorsMobileLayout25() {
           }}
         ></div>
       </section>
-      <PartnersList24 />
+      <SponsorsList25 />
       <div
         id="top-gradient"
         style={{

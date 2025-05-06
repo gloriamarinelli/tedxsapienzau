@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router";
 import { useTranslation } from "react-i18next";
 import global from "../../../resources/global.json";
 import "../../../resources/styles/partnersslider.css";
-import partnersInfo from "./partners_info_slider.json";
+import sponsorsInfo from "./sponsors_info_slider.json";
 
 export default function SponsorsSlider() {
   const { t } = useTranslation(); // translation variable
@@ -35,7 +35,7 @@ export default function SponsorsSlider() {
           </h2>
           <div className="logos">
             <div className="logos-slide">
-              {partnersInfo.partners.map((partner) => (
+              {sponsorsInfo.partners.map((partner) => (
                 <div key={partner.id} className="desktop_logo_div">
                   <img
                     src={partner.logo_desktop}
@@ -70,7 +70,7 @@ export default function SponsorsSlider() {
           </h2>
           <div className="logos">
             <div className="logos-slide">
-              {partnersInfo.partners.map((partner) => (
+              {sponsorsInfo.partners.map((partner) => (
                 <div key={partner.id} className="mobile_logo_div">
                   <img
                     src={partner.logo_mobile}
