@@ -12,7 +12,7 @@ import third_box_bg from "../../images/partners/desktop/5.webp";
 import fourth_box_bg from "../../images/partners/desktop/4.webp";
 import volunteers from "../../images/partners/desktop/volunteers_darker_filter.webp";
 
-export default function PartnersDesktopLayout24() {
+export default function SponsorsDesktopLayout25() {
   const { t } = useTranslation(); // translation variable
   const [windowSize] = useOutletContext(); // window's size variable
 
