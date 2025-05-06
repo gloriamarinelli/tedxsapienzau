@@ -8,8 +8,7 @@ import MvHome from "./MvHome";
 import "../../index.css";
 import "../../resources/styles/home.css";
 import Iframe from "react-iframe";
-import backgroundVideo from "../videos/tedx2.mp4";
-import { Button } from "react-bootstrap";
+import backgroundVideo from "../videos/tedx.mp4";
 import { useTranslation, Trans } from "react-i18next";
 
 export default function Home() {

@@ -293,14 +293,6 @@ code {
   background-color: #ffffff;
 }
 
-/*BUTTON AWARDS*/
-.header-awards24 {
-  background-image: url("./components/images/awards24/awards24prize.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .header-awards {
   background-image: url("./components/images/awards23/header_awards23.webp");
   background-position: top;
