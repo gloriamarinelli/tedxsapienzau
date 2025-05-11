@@ -210,6 +210,11 @@
     "citation": "L'uomo e il mondo che lo circonda non sono binari separati, ma rotaie che si muovono insieme, hanno bisogno l'uno dell'altro.",
     "schedule": "IL PROGRAMMA"
   },
+  "event_paradoxa": {
+    "button": "Guarda i TEDx talks",
+    "title": "PARA DOXA",
+    "description": "Dal greco παράδοξος, composto di παρα- nel sign. di «contro» e δόξα «opinione». Che va contro il modo di pensare comune. La storia dei paradossi è antica e risale alla nascita della logica. Ma, mentre i primi ad essere formulati erano più simili a giochi mentali, la modernità ne ha fatti nascere di nuovi nella realtà che ci circonda. La giustizia che crea disuguaglianza, le possibilità che creano svogliatezza, i conflitti per portare la pace. E così come gli antichi pensatori li hanno sviluppati, per stimolare la riflessione, allo stesso modo noi dobbiamo fronteggiare, non evitare, i paradossi che permeano la natura del mondo antropico per far germogliare le idee che possano migliorarlo. PARA DOXA sarà il terreno fertile per coltivarle."
+  },
   "error_page": {
     "404_msg": "Sembra che questa pagina non esista",
     "home_button": "Torna alla home"

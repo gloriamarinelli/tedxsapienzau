@@ -17,8 +17,9 @@ import Newsletter from "./components/pages/Newsletter";
 
 import Team from "./components/pages/Team";
 
-import Edizione2022 from "./components/pages/eventi/Edizione2022";
-import Edizione2023 from "./components/pages/eventi/Edizione2023";
+import Edizione2022ACT from "./components/pages/eventi/Edizione2022ACT";
+import Edizione2023BTZ from "./components/pages/eventi/Edizione2023BTZ";
+import Edizione2025ParaDoxa from "./components/pages/eventi/Edizione2025ParaDoxa";
 
 import Events from "./components/pages/Events";
 
@@ -89,11 +90,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/eventi/edizione2022",
-        element: <Edizione2022 />,
+        element: <Edizione2022ACT />,
       },
       {
         path: "/eventi/edizione2023",
-        element: <Edizione2023 />,
+        element: <Edizione2023BTZ />,
       },
       {
         path: "/write",
@@ -121,7 +122,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/eventi/paradoxa2025",
-        element: <ParaDoxa2025 />,
+        element: <Edizione2025ParaDoxa />,
       },
       {
         path: "/eventi/awards2024",

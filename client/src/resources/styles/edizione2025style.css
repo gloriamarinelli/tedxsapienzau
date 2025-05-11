@@ -2,14 +2,12 @@
  WHERE IS THE EVENT
 */
 
-@media screen and (max-width: 768px) {
-  .where-is-the-event > div:nth-child(2) {
-    padding-bottom: 30px;
-  }
+.where-is-the-event25 {
+  background-color: #190716;
+  font-family: GothamBook;
 }
 
-.where-is-the-event > div:nth-child(1) {
-  background-color: #191919;
+.where-is-the-event25 > div:nth-child(1) {
   display: flex;
   padding: 50px;
   color: white;
@@ -18,13 +16,12 @@
   flex-direction: column;
 }
 
-.where-is-the-event > div:nth-child(2) {
-  background-color: #191919;
+.where-is-the-event25 > div:nth-child(2) {
   display: grid;
   place-items: center;
 }
 
-.btn5-ed22 {
+.btn5-ed23 {
   display: inline-block;
   padding: 0.7em 1.4em;
   margin: 0 0.3em 0.3em 0;
@@ -36,21 +33,20 @@
   text-transform: uppercase;
   font-weight: 800;
   color: white;
-  background-color: #e62b1e;
+  background-color: #eb0028;
   box-shadow: inset 0 -0.6em 0 -0.3em rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
   cursor: pointer;
 }
-.btn5-ed22:hover {
+.btn5-ed23:hover {
   background: whitesmoke;
-  color: #e62b1e;
+  color: #eb0028;
 }
 
 /*
   THEME CARDS
 */
-
 .theme-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -96,9 +92,9 @@
   }
 }
 
-.header-ed2022 {
-  background-image: url("../../components/images/Edizione2022.webp");
-  background-position: top;
+.header-ed2025 {
+  background-image: url("../../components/images/paradoxa25/header_paradoxa2.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }

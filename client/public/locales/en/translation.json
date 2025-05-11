@@ -209,6 +209,11 @@
     "citation": "Man and the world around him are not separate tracks, but rails that move together, they need each other.",
     "schedule": "SCHEDULE"
   },
+  "event_paradoxa": {
+    "button": "Watch the TEDx talks",
+    "title": "PARA DOXA",
+    "description": "From the Greek παράδοξος, compound of παρα- meaning 'against' and δόξα meaning 'opinion.' Going against the common way of thinking. The history of paradoxes is ancient, dating back to the origins of logic. However, while the first paradoxes were more like mind games, modernity has given rise to new ones within the reality that surrounds us. Justice creates inequality, opportunities that create laziness, conflicts to bring peace. Just as ancient thinkers developed paradoxes to stimulate reflection, we too must face, not avoid, the paradoxes that permeate the nature of the human world in order to sprout ideas that can improve it. PARA DOXA will be the fertile ground to cultivate them."
+  },
   "error_page": {
     "404_msg": "Looks like this page doesn't exist",
     "home_button": "Return to the homepage"
