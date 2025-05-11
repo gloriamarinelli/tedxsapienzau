@@ -13,18 +13,18 @@ import Carousel from "react-bootstrap/Carousel";
 import { Trans, useTranslation } from "react-i18next";
 import axios from "axios";
 
-import Image1 from "../../images/edizione23/tullio.jpg";
-import Image2 from "../../images/edizione23/rossi.jpg";
-import Image3 from "../../images/edizione23/freymann.jpg";
-import Image4 from "../../images/edizione23/basilone.jpg";
-import Image5 from "../../images/edizione23/schito.jpg";
-import Image6 from "../../images/edizione23/cervellini.jpg";
-import Image7 from "../../images/edizione23/estrela.jpg";
-import Image8 from "../../images/edizione23/lambarelli.jpg";
-import Image9 from "../../images/edizione23/lenca.jpg";
-import Image10 from "../../images/edizione23/villain.jpg";
-import Image11 from "../../images/edizione23/onofri.jpg";
-import Image12 from "../../images/edizione23/aboya.jpg";
+import Image1 from "../../images/carousel/edizione23/tullio.webp";
+import Image2 from "../../images/carousel/edizione23/rossi.webp";
+import Image3 from "../../images/carousel/edizione23/freymann.webp";
+import Image4 from "../../images/carousel/edizione23/basilone.webp";
+import Image5 from "../../images/carousel/edizione23/schito.webp";
+import Image6 from "../../images/carousel/edizione23/cervellini.webp";
+import Image7 from "../../images/carousel/edizione23/estrela.webp";
+import Image8 from "../../images/carousel/edizione23/lambarelli.webp";
+import Image9 from "../../images/carousel/edizione23/lenca.webp";
+import Image10 from "../../images/carousel/edizione23/villain.webp";
+import Image11 from "../../images/carousel/edizione23/onofri.webp";
+import Image12 from "../../images/carousel/edizione23/aboya.webp";
 
 export default function Edizione2023() {
   const { t } = useTranslation();
