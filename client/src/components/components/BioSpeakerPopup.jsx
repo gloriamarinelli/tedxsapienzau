@@ -57,7 +57,9 @@ export default function BioSpeakerPopup({
             background:
               year === 2022
                 ? "linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)"
-                : "linear-gradient(307deg, #a42332 5%, #242958 60%)",
+                : year === 2023
+                ? "linear-gradient(307deg, #a42332 5%, #242958 60%)"
+                : "linear-gradient(307deg, #ff009c 3%, #0033cb 60%)",
             transition: "all 0.4s ease-in-out",
             overflowY: "scroll",
           }}
@@ -127,7 +129,9 @@ export default function BioSpeakerPopup({
             background:
               year === 2022
                 ? "linear-gradient(307deg, rgb(130, 36, 51) 29%, #E62B1E 98%)"
-                : "linear-gradient(307deg, #a42332 5%, #242958 60%)",
+                : year === 2023
+                ? "linear-gradient(307deg, #a42332 5%, #242958 60%)"
+                : "linear-gradient(307deg, #ff009c 3%, #0033cb 60%)",
             transition: "all 0.4s ease-in-out",
             overflowY: "scroll",
           }}
@@ -139,7 +143,7 @@ export default function BioSpeakerPopup({
               color: "#fff",
               position: "absolute",
               left: "20px",
-              top: "60px",
+              top: "100px",
               cursor: "pointer",
             }}
             onClick={() => setIsBioOpen(false)}

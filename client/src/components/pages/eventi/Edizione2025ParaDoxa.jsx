@@ -273,7 +273,7 @@ export default function Edizione2023() {
         setIsBioOpen={setIsBioOpen}
         selectedSpeakerInfo={selectedSpeakerInfo}
         windowSize={windowSize}
-        year={2023}
+        year={2025}
       />
       <div className="container mt-5">{CarouselComponent()}</div>
     </div>
