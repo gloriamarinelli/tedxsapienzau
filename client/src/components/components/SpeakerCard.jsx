@@ -3,12 +3,16 @@ import "../../index.css";
 import global from "../../resources/global.json";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
+
+
 
 export default function SpeakerCard({
   nomeSpeaker,
   imgSrc,
   linkTalk,
   bio,
+  bioeng,
   tag,
   fotoSidebar,
   setIsBioOpen,
@@ -21,6 +25,7 @@ export default function SpeakerCard({
   event,
   showLinkTalk,
 }) {
+  const { i18n } = useTranslation();
   if (event === "countdown24") {
     return (
       <div
@@ -103,8 +108,9 @@ export default function SpeakerCard({
               imgSrc: imgSrc,
               tag: tag,
               linkTalk: linkTalk,
-              bio: bio,
+              bio: i18n.language === "it" ? bio : bioeng,
               fotoSidebar: fotoSidebar,
+              bioeng: bioeng
             });
           }
         }}
@@ -136,8 +142,9 @@ export default function SpeakerCard({
             imgSrc: imgSrc,
             tag: tag,
             linkTalk: linkTalk,
-            bio: bio,
+            bio: i18n.language === "it" ? bio : bioeng,
             fotoSidebar: fotoSidebar,
+            bioeng: bioeng
           });
         }
       }}

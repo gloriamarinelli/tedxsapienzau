@@ -61,7 +61,7 @@ export default function Edizione2023() {
     } else {
       let res = [];
       speakers.map((speaker) => {
-        const { id, nome, bio, categoria, fotoPath, link } = speaker;
+        const { id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
         res.push(
           <SpeakerCard
             key={id}
@@ -72,6 +72,7 @@ export default function Edizione2023() {
             setIsBioOpen={setIsBioOpen}
             setSelectedSpeakerInfo={setSelectedSpeakerInfo}
             event="paradoxa"
+            bioeng={bioeng}
             // linkTalk={link}
           />
         );

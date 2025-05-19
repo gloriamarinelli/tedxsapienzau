@@ -217,5 +217,15 @@
   "error_page": {
     "404_msg": "Looks like this page doesn't exist",
     "home_button": "Return to the homepage"
+  },
+  "sapienzau": {
+    "button_sap": "Explore SapienzaU",
+    "button_team": "Explore the Teams",
+    "chi_siamo": "Who we are",
+    "chi_siamo_des": " SapienzaU is a student association officially recognized by Sapienza University of Rome, founded in 2024 and active as TEDxSapienzaU committee since 2021. With more than 110 members from almost all university departments, our goal is building a multidisciplinary and welcoming community, with a strong focus on communication and collective growth.",
+    "cosa_facciamo": "What we do",
+    "cosa_facciamo_des": "Our goal is organizing educational and formative events which enhance the university experience. Ispired by TED priciples, SapienzaU offers quality contents, organizing ventures which promote civic activistm, diversity and communication.",
+    "i_nostri_valori": "Our values",
+    "i_nostri_valori_des": "as the statute explains it, SapienzaU is indipendent from any political and ideological movement and it's only focus is on educational and cultural purposes. Our guidelines guarantees an inclusive space, where every student can found inspiration and strenght to grow as a person and as part of our university community."
   }
 }

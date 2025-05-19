@@ -746,7 +746,7 @@ export default function SapienzaUMobile() {
             }}
           >
             {cameraState === "default" || cameraState === "discoverTeam" ? (
-              "Scopri SapienzaU"
+              t("sapienzau.button_sap")
             ) : (
               <FontAwesomeIcon icon={faArrowLeft} />
             )}
@@ -766,7 +766,7 @@ export default function SapienzaUMobile() {
             }}
           >
             {cameraState === "default" || cameraState === "discover" ? (
-              "Scopri i Team"
+              t("sapienzau.button_team")
             ) : (
               <FontAwesomeIcon icon={faArrowLeft} />
             )}
@@ -798,15 +798,10 @@ export default function SapienzaUMobile() {
             fontSize: "30px",
           }}
         >
-          Chi siamo
+          {t("sapienzau.chi_siamo")}
         </h1>
         <p>
-          SapienzaU è un’associazione studentesca ufficialmente riconosciuta da
-          Sapienza Università di Roma, fondata nel 2024 e attiva come Comitato
-          TEDxSapienzaU sin dal 2021. Con oltre 110 membri provenienti da quasi
-          tutte le Facoltà, ci impegniamo a costruire una comunità accogliente e
-          multidisciplinare, dove il dialogo e la crescita collettiva sono al
-          centro.
+          {t("sapienzau.chi_siamo_des")}
         </p>
 
         <h1
@@ -815,13 +810,10 @@ export default function SapienzaUMobile() {
             fontSize: "30px",
           }}
         >
-          Cosa facciamo
+          {t("sapienzau.cosa_facciamo")}
         </h1>
         <p>
-          Il nostro obiettivo è organizzare eventi formativi e culturali che
-          arricchiscano l’esperienza universitaria. Ispirata ai principi TED,
-          SapienzaU offre contenuti di valore, organizzando iniziative che
-          promuovono attivismo civico, diversità e dialogo.
+          {t("sapienzau.cosa_facciamo_des")}
         </p>
         <h1
           style={{
@@ -829,15 +821,10 @@ export default function SapienzaUMobile() {
             fontSize: "30px",
           }}
         >
-          I nostri valori
+          {t("sapienzau.i_nostri_valori")}
         </h1>
         <p>
-          Come da statuto, SapienzaU è indipendente da qualsiasi movimento
-          elettorale o partitico e opera esclusivamente per scopi educativi e
-          culturali. Il nostro regolamento punta a garantire uno spazio
-          inclusivo e rispettoso, dove ogni studente possa trovare ispirazione e
-          sostegno per crescere sia come individuo, sia come parte della
-          comunità della nostra Università.
+          {t("sapienzau.i_nostri_valori_des")}
         </p>
       </div>
     </div>

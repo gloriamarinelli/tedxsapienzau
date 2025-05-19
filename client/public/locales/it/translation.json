@@ -218,5 +218,15 @@
   "error_page": {
     "404_msg": "Sembra che questa pagina non esista",
     "home_button": "Torna alla home"
+  },
+  "sapienzau": {
+    "button_sap": "Scopri cos'è SapienzaU",
+    "button_team": "Scopri i Team",
+    "chi_siamo": "Chi siamo",
+    "chi_siamo_des": " SapienzaU è un’associazione studentesca ufficialmente riconosciuta da Sapienza Università di Roma, fondata nel 2024 e attiva come Comitato TEDxSapienzaU sin dal 2021. Con oltre 110 membri provenienti da quasi tutte le Facoltà, ci impegniamo a costruire una comunità accogliente e multidisciplinare, dove il dialogo e la crescita collettiva sono al centro.",
+    "cosa_facciamo": "Cosa facciamo",
+    "cosa_facciamo_des": "Il nostro obiettivo è organizzare eventi formativi e culturali che arricchiscano l’esperienza universitaria. Ispirata ai principi TED, SapienzaU offre contenuti di valore, organizzando iniziative che promuovono attivismo civico, diversità e dialogo.",
+    "i_nostri_valori": "I_nostri_valori",
+    "i_nostri_valori_des": "Come da statuto, SapienzaU è indipendente da qualsiasi movimento elettorale o partitico e opera esclusivamente per scopi educativi e culturali. Il nostro regolamento punta a garantire uno spazio inclusivo e rispettoso, dove ogni studente possa trovare ispirazione e sostegno per crescere sia come individuo, sia come parte della comunità della nostra Università."
   }
 }
