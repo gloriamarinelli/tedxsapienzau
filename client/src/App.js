@@ -4,7 +4,6 @@ import { AuthContextProvider } from "./components/context/authContext";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import NavbarComponentNew from "./components/components/NavbarComponentNew";
-import NavbarComponent from "./components/components/NavbarComponent";
 import Footer from "./components/components/Footer";
 import Home from "./components/pages/Home";
 import ErrorPage from "./components/pages/ErrorPage";

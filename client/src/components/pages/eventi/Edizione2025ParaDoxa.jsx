@@ -73,7 +73,7 @@ export default function Edizione2023() {
             setSelectedSpeakerInfo={setSelectedSpeakerInfo}
             event="paradoxa"
             bioeng={bioeng}
-            // linkTalk={link}
+            linkTalk={link}
           />
         );
       });

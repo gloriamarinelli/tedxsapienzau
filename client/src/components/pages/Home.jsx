@@ -166,9 +166,7 @@ export default function Home() {
             marginTop: global.UTILS.BENTO_BOX_PADDING,
           }}
         >
-          <a href="/edizioni">
-            {renderButton(hiddenButton, setHiddenButton)}
-          </a>
+          <a href="/edizioni">{renderButton(hiddenButton, setHiddenButton)}</a>
         </div>
       </section>
       <section>
@@ -180,9 +178,7 @@ export default function Home() {
             marginTop: global.UTILS.BENTO_BOX_PADDING,
           }}
         >
-          <a href="/blog">
-            {renderButton(hiddenButton, setHiddenButton)}
-          </a>
+          <a href="/blog">{renderButton(hiddenButton, setHiddenButton)}</a>
         </div>
       </section>
       <section
@@ -254,7 +250,7 @@ export default function Home() {
           id="right-container"
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%",//la barra bianca sotto dipende dal secondo valore
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%", //la barra bianca sotto dipende dal secondo valore
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
