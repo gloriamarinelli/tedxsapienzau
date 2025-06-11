@@ -207,7 +207,7 @@ export default function Edizione2023() {
           </div>
           <div className="col-md-6">
             <a
-              href="https://youtube.com/playlist?list=PL4-t_gJBexTBDgARWnLB3dmC0g1_OcxFc&si=o_xQf51xiEvfXWl4"
+              href="https://youtube.com/playlist?list=PL4-t_gJBexTAb7wP2mzg-S2bCfzptE58n&feature=shared"
               type="button"
               className="btn5-ed23"
               style={{
