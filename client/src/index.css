@@ -9,11 +9,13 @@ body {
   min-height: -webkit-fill-available;
   min-height: 100vh;
   height: 100%;
+  background-color: black;
 }
 
 html {
   height: -webkit-fill-available;
   height: 100%;
+  background-color: black;
 }
 
 code {

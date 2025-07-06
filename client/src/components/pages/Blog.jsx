@@ -20,13 +20,14 @@ export default function Blog() {
   useContext(AuthContext);
 
   const pageSize = 6;
-  const clearDbIncrement = 10;
-  const clearDbMagic = 2;
+  const clearDbIncrement = 1;
+  const clearDbMagic = 0;
 
   useEffect(() => {
     axios
       .get(global.CONNECTION.ENDPOINT + "blog/count")
       .then((res) => {
+        console.log("Blog count response:", res.data);
         setBlogSize(res.data[0].posts);
       })
       .catch((err) => console.error(err));
@@ -42,6 +43,8 @@ export default function Blog() {
     if (blogSize === 0) return;
     let start = blogSize - pageSize * currentPage + clearDbMagic;
     let end = blogSize - pageSize * (currentPage - 1) + clearDbMagic;
+
+    console.log("Fetching posts from", start, "to", end);
 
     setIsLoading(true);
     axios
