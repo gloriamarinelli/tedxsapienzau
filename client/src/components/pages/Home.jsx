@@ -169,7 +169,7 @@ export default function Home() {
           <a href="/edizioni">{renderButton(hiddenButton, setHiddenButton)}</a>
         </div>
       </section>
-      <section>
+      {/* <section>
         <BlogHome withTitle={true} />
         <div
           style={{
@@ -180,8 +180,8 @@ export default function Home() {
         >
           <a href="/blog">{renderButton(hiddenButton, setHiddenButton)}</a>
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         style={{
           display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
           justifyContent: "center",
@@ -306,7 +306,7 @@ export default function Home() {
             />
           )}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
