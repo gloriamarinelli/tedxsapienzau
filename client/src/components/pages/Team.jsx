@@ -25,7 +25,7 @@ export default function Team2022() {
       pem: "Team Planning & Event Management",
       dex: "Team Design",
       sec: "Team Speakers & Event Curation",
-      ers: "Team External Relations & Sponsor",
+      ers: "External Relationships & Sponsor",
       hra: "Team Human Resources & Academy",
       cem: "Team Communication, Editorial, Marketing & Media",
       la: "Team Legal & Administrative",
@@ -132,12 +132,11 @@ export default function Team2022() {
   // #region --------------------------------- UseEffect --------------------------------------
 
   useEffect(() => {
-    setBoard([]);
-    setVolunteers([]);
     setTimeout(() => {
       axios
         .get(global.CONNECTION.ENDPOINT + `team/${activeYear}`)
         .then((res, err) => {
+          console.log(res);
           const data = res.data;
           let newBoard = [];
           let newVolunteers = [];

@@ -139,7 +139,7 @@ const BoardInfos = [
     name: "Alessandra Amicucci",
     linkedin: "www",
     path: "AlessandraAmicucci",
-    role: "External Relations & Sponsor",
+    role: "External Relationships & Sponsor",
   },
   {
     team: "hra",
@@ -249,7 +249,7 @@ export default function BoardCard({
       case "Speakers & Event Curation":
         team_acronym = "sec";
         break;
-      case "External Relations & Sponsor":
+      case "External Relationships & Sponsor":
         team_acronym = "ers";
         break;
       case "Human Resources & Academy":

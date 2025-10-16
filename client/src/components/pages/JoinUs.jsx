@@ -83,10 +83,10 @@ export default function JoinUs() {
               style={{
                 textAlign: "justify",
                 color: "#fff",
-                fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                fontSize:
+                  windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                 fontFamily: "Fira sans Extra Condensed",
                 fontWeight: "400",
-               
               }}
             >
               <Trans
@@ -182,13 +182,14 @@ export default function JoinUs() {
                     fontFamily: "Fira Sans Extra Condensed",
                   }}
                 >
-                  External Relations & Sponsorship
+                  External Relationships & Sponsor
                 </h3>
                 <p
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                     fontFamily: "Fira sans Extra Condensed",
                     fontWeight: "400",
                   }}
@@ -219,9 +220,10 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                fontFamily: "Fira sans Extra Condensed",
-                fontWeight: "400",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.PEM")}
@@ -255,9 +257,10 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                fontFamily: "Fira sans Extra Condensed",
-                fontWeight: "400",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontFamily: "Fira sans Extra Condensed",
+                    fontWeight: "400",
                   }}
                 >
                   {t("joinus.SEC")}
@@ -286,7 +289,8 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                     fontFamily: "Fira sans Extra Condensed",
                     fontWeight: "400",
                   }}
@@ -322,7 +326,8 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                     fontFamily: "Fira sans Extra Condensed",
                     fontWeight: "400",
                   }}
@@ -355,7 +360,8 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                     fontFamily: "Fira sans Extra Condensed",
                     fontWeight: "400",
                   }}
@@ -367,9 +373,7 @@ export default function JoinUs() {
           </div>
 
           <div className="container-lg mt-3">
-            <div
-              class="parent-aw"              
-            >
+            <div class="parent-aw">
               <div class="text-top-left-aw">
                 <img
                   src={celeste}
@@ -393,7 +397,8 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                     fontFamily: "Fira sans Extra Condensed",
                     fontWeight: "400",
                   }}
@@ -425,7 +430,8 @@ export default function JoinUs() {
                   style={{
                     textAlign: "justify",
                     color: "#fff",
-                    fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
+                    fontSize:
+                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
                     fontFamily: "Fira sans Extra Condensed",
                     fontWeight: "400",
                   }}
