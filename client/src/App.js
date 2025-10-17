@@ -39,6 +39,7 @@ import Countdown2024 from "./components/pages/eventi/Countdown2024";
 
 import AssociazioneSapienzaU from "./components/components/AssociazioneSapienzaU";
 import ParaDoxa2025 from "./components/pages/eventi/ParaDoxa2025";
+import JoinUs from "./components/pages/JoinUs";
 
 const router = createBrowserRouter([
   {
@@ -139,6 +140,10 @@ const router = createBrowserRouter([
       {
         path: "/paradoxa",
         element: <ParaDoxa2025 />,
+      },
+      {
+        path: "/joinus",
+        element: <JoinUs />,
       },
     ],
   },
