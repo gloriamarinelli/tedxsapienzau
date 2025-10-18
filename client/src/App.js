@@ -135,7 +135,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/newsletter",
-        element: <Newsletter />,
+        // element: <Newsletter />, dhange after join us is over
+        element: <JoinUs />,
       },
       {
         path: "/paradoxa",

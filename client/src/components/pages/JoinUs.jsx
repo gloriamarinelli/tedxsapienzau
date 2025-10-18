@@ -1,7 +1,6 @@
 import React from "react";
 import { useOutletContext } from "react-router";
 import global from "../../resources/global.json";
-import volunteers from "../images/volunteers.webp";
 import arancione from "../images/joinus/arancione.webp";
 import celeste from "../images/joinus/celeste.webp";
 import blu from "../images/joinus/blu.webp";
@@ -10,6 +9,7 @@ import rosa from "../images/joinus/rosa.webp";
 import rosso from "../images/joinus/rosso.webp";
 import verde from "../images/joinus/verde.webp";
 import giallo from "../images/joinus/giallo.webp";
+import fourth_box_bg from "../images/partners/desktop/4.webp";
 
 import { Trans, useTranslation } from "react-i18next";
 
@@ -36,81 +36,182 @@ export default function JoinUs() {
         >
           {t("joinus.open_title")}
         </h1>
-
-        <div
+        {/* first bento */}
+        <section
           style={{
-            backgroundColor: "#191919",
-            borderRadius: "25px",
-            width: windowSize > global.UTILS.MOBILE_WIDTH ? "95%" : "90%",
-            height: windowSize > global.UTILS.MOBILE_WIDTH ? "200px" : "100px",
-            margin: "auto",
-            padding: "30px",
-            backgroundImage: `url(${volunteers})`,
-            backgroundSize: "cover",
-            backgroundPosition:
-              windowSize > global.UTILS.MOBILE_WIDTH ? "0px -40px" : "0px 0px",
-          }}
-        ></div>
-
-        <div
-          style={{
-            backgroundColor: "#191919",
-            borderRadius: "25px",
-            width: windowSize > global.UTILS.MOBILE_WIDTH ? "95%" : "90%",
-            margin: "auto",
-            padding: windowSize > global.UTILS.MOBILE_WIDTH ? "30px" : "5px",
-            marginTop: "50px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            minHeight: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            width: "100vw",
+            backgroundColor: "#000",
+            padding:
+              windowSize < global.UTILS.BIG_TABLET_WIDTH
+                ? "34px 34px 0px 34px"
+                : "34px",
+            gap: "20px",
+            flexWrap: "wrap",
           }}
         >
-          <div className="container-lg marketing ">
-            <h2
-              className="title"
+          <div
+            style={{
+              width: "100%",
+              minHeight: "100%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${fourth_box_bg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              position: "relative",
+              overflow: "hidden", // so graphics don't leak outside box
+              fontFamily: global.UTILS.FONT_FAMILY,
+            }}
+          >
+            {/* Decorative graphics layer */}
+            {/* Floating glowing graphics */}
+            <div
               style={{
-                fontSize: "50px",
-                fontFamily: "Fira Sans Extra Condensed",
-                color: "#eb0028",
-                textAlign: "center",
-                marginBottom: "30px",
+                position: "absolute",
+                inset: 0,
+                overflow: "hidden",
+                zIndex: 0,
               }}
             >
-              {t("joinus.open_how_to_apply_title")}
-            </h2>
-          </div>
+              {[...Array(8)].map((_, i) => (
+                <div
+                  key={i}
+                  style={{
+                    position: "absolute",
+                    width: `${450 + Math.random() * 250}px`, // even bigger
+                    height: `${450 + Math.random() * 250}px`,
+                    background: [
+                      "radial-gradient(circle at center, #f089b7, transparent 70%)",
+                      "radial-gradient(circle at center, #bb5c9e, transparent 70%)",
+                      "radial-gradient(circle at center, #94c459, transparent 70%)",
+                      "radial-gradient(circle at center, #2a84c6, transparent 70%)",
+                      "radial-gradient(circle at center, #f07e29, transparent 70%)",
+                      "radial-gradient(circle at center, #e9493b, transparent 70%)",
+                      "radial-gradient(circle at center, #28bdef, transparent 70%)",
+                      "radial-gradient(circle at center, #f9b531, transparent 70%)",
+                    ][i],
+                    top: `${i * 12 + Math.random() * 8}%`,
+                    left: `${i * 10 + Math.random() * 8}%`,
+                    borderRadius: "50%",
+                    filter: "blur(110px)",
+                    opacity: 0.7,
+                    mixBlendMode: "screen",
+                    animation: `floatGlow${i} ${
+                      20 + Math.random() * 10
+                    }s ease-in-out infinite alternate`, // faster (20–30s)
+                  }}
+                />
+              ))}
 
-          <div className="container-lg marketing">
-            <p
-              className="paragraph"
+              <style>
+                {`
+      @keyframes floatGlow0 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(100px, -80px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(-80px, 80px) scale(1); opacity: 0.6; }
+      }
+      @keyframes floatGlow1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-120px, 90px) scale(1.1); opacity: 0.8; }
+        100% { transform: translate(100px, -90px) scale(0.9); opacity: 0.6; }
+      }
+      @keyframes floatGlow2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(90px, 80px) scale(1.15); opacity: 0.7; }
+        100% { transform: translate(-70px, -70px) scale(0.95); opacity: 0.5; }
+      }
+      @keyframes floatGlow3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-100px, 70px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(80px, -80px) scale(1); opacity: 0.6; }
+      }
+      @keyframes floatGlow4 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(90px, -90px) scale(1.2); opacity: 0.7; }
+        100% { transform: translate(-70px, 80px) scale(1); opacity: 0.5; }
+      }
+      @keyframes floatGlow5 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-100px, -80px) scale(1.15); opacity: 0.8; }
+        100% { transform: translate(90px, 70px) scale(0.9); opacity: 0.6; }
+      }
+      @keyframes floatGlow6 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(120px, 100px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(-90px, -90px) scale(0.95); opacity: 0.5; }
+      }
+      @keyframes floatGlow7 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-130px, 80px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(100px, -80px) scale(0.9); opacity: 0.6; }
+      }
+    `}
+              </style>
+            </div>
+
+            {/* Content Layer */}
+            <div
               style={{
-                textAlign: "justify",
-                color: "#fff",
-                fontSize:
-                  windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                fontFamily: "Fira sans Extra Condensed",
-                fontWeight: "400",
+                position: "relative",
+                zIndex: 1, // ensures text is above graphics
+                width: "90%",
+                margin: "0 auto",
+                padding: "40px 20px 120px 20px",
+                color: "white",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
-              <Trans
-                i18nKey="joinus.open_description"
-                components={{
-                  3: <strong style={{ color: "#eb0028" }}></strong>,
-                  1: <strong style={{ textDecoration: "underline" }}></strong>,
-
-                  2: (
-                    <a
-                      href="mailto:info@tedxsapienzau.com"
-                      style={{
-                        fontFamily: "Fira Sans Extra Condensed",
-                        color: "#eb0028",
-                      }}
-                    >
-                      {t("joinus.contact_email")}
-                    </a>
-                  ),
+              <h1
+                style={{
+                  paddingBottom: "5%",
+                  fontSize:
+                    windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "7vw", // responsive on mobile
+                  textAlign: "center",
+                  fontFamily: global.UTILS.FONT_FAMILY,
                 }}
-              />
-            </p>
+              >
+                <i>{t("joinus.open_how_to_apply_title")}</i>
+              </h1>
 
-            <div style={{ display: "flex", justifyContent: "center" }}>
+              <h3
+                style={{
+                  paddingBottom: "2%",
+                  fontSize:
+                    windowSize > global.UTILS.TABLET_WIDTH ? "3vh" : "4vw", // smaller and fits mobile better
+                  maxWidth: "900px",
+                  lineHeight: "1.4",
+                  textAlign: "center",
+                }}
+              >
+                <Trans
+                  i18nKey="joinus.open_description"
+                  components={{
+                    3: <strong style={{ color: "#eb0028" }}></strong>,
+                    1: (
+                      <strong style={{ textDecoration: "underline" }}></strong>
+                    ),
+                    2: (
+                      <a
+                        href="mailto:info@tedxsapienzau.com"
+                        style={{
+                          fontFamily: "Fira Sans Extra Condensed",
+                          color: "#eb0028",
+                        }}
+                      >
+                        {t("joinus.contact_email")}
+                      </a>
+                    ),
+                  }}
+                />
+              </h3>
+
               <a
                 className="btn-volunteers"
                 style={{
@@ -118,330 +219,275 @@ export default function JoinUs() {
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize:
-                    windowSize > global.UTILS.MOBILE_WIDTH ? "25px" : "15px",
-                  textDecoration: "",
+                    windowSize > global.UTILS.MOBILE_WIDTH ? "25px" : "16px",
                   fontFamily: "sans-serif",
                   color: "#eb0028",
                   marginTop: "40px",
-                  width: windowSize > global.UTILS.MOBILE_WIDTH ? "30%" : "90%",
+                  width: windowSize > global.UTILS.MOBILE_WIDTH ? "40%" : "95%", // wider on desktop, almost full width on mobile
+                  padding: "15px 0",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                  textAlign: "center",
                 }}
                 href="https://forms.gle/DZdG1DosyGdkV2ZQ7"
                 target="_blank"
                 rel="noreferrer"
               >
-                <strong>{t("joinus.open_apply_button")}</strong>
+                {t("joinus.open_apply_button")}
               </a>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div
+        {/* second bento */}
+        <section
           style={{
-            backgroundColor: "#191919",
-            borderRadius: "25px",
-            width: windowSize > global.UTILS.MOBILE_WIDTH ? "95%" : "90%",
-            margin: "auto",
-            padding: windowSize > global.UTILS.MOBILE_WIDTH ? "10px" : "5px",
-            marginTop: windowSize > global.UTILS.MOBILE_WIDTH ? "50px" : "30px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            minHeight: `calc(100vh - ${global.UTILS.NAV_HEIGHT})`,
+            width: "100vw",
+            backgroundColor: "#000",
+            padding:
+              windowSize < global.UTILS.BIG_TABLET_WIDTH
+                ? "34px 34px 0px 34px"
+                : "34px",
+            gap: "20px",
+            flexWrap: "wrap",
           }}
         >
-          <div>
-            <h2
-              className="title"
+          <div
+            style={{
+              width: "100%",
+              minHeight: "100%",
+              padding: global.UTILS.BENTO_BOX_PADDING,
+              borderRadius: global.UTILS.BENTO_BOX_PADDING,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${fourth_box_bg})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              position: "relative",
+              overflow: "hidden", // so graphics don't leak outside box
+              fontFamily: global.UTILS.FONT_FAMILY,
+            }}
+          >
+            {/* Decorative graphics layer */}
+            {/* Floating glowing graphics */}
+            <div
               style={{
-                fontSize: "50px",
-                textAlign: "center",
-                fontFamily: "Fira Sans Extra Condensed",
-                marginTop: "30px",
-                color: "#eb0028",
+                position: "absolute",
+                inset: 0,
+                overflow: "hidden",
+                zIndex: 0,
               }}
             >
-              {t("joinus.open_team_title")}
-            </h2>
-          </div>
+              {[...Array(8)].map((_, i) => (
+                <div
+                  key={i}
+                  style={{
+                    position: "absolute",
+                    width: `${450 + Math.random() * 250}px`, // even bigger
+                    height: `${450 + Math.random() * 250}px`,
+                    background: [
+                      "radial-gradient(circle at center, #f089b7, transparent 70%)",
+                      "radial-gradient(circle at center, #bb5c9e, transparent 70%)",
+                      "radial-gradient(circle at center, #94c459, transparent 70%)",
+                      "radial-gradient(circle at center, #2a84c6, transparent 70%)",
+                      "radial-gradient(circle at center, #f07e29, transparent 70%)",
+                      "radial-gradient(circle at center, #e9493b, transparent 70%)",
+                      "radial-gradient(circle at center, #28bdef, transparent 70%)",
+                      "radial-gradient(circle at center, #f9b531, transparent 70%)",
+                    ][i],
+                    top: `${i * 12 + Math.random() * 8}%`,
+                    left: `${i * 10 + Math.random() * 8}%`,
+                    borderRadius: "50%",
+                    filter: "blur(110px)",
+                    opacity: 0.7,
+                    mixBlendMode: "screen",
+                    animation: `floatGlow${i} ${
+                      20 + Math.random() * 10
+                    }s ease-in-out infinite alternate`, // faster (20–30s)
+                  }}
+                />
+              ))}
 
-          <div
-            className="container-lg mt-3"
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <div class="parent-aw">
-              <div class="text-top-left-aw">
-                <img
-                  src={rosa}
-                  alt=""
+              <style>
+                {`
+      @keyframes floatGlow0 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(100px, -80px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(-80px, 80px) scale(1); opacity: 0.6; }
+      }
+      @keyframes floatGlow1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-120px, 90px) scale(1.1); opacity: 0.8; }
+        100% { transform: translate(100px, -90px) scale(0.9); opacity: 0.6; }
+      }
+      @keyframes floatGlow2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(90px, 80px) scale(1.15); opacity: 0.7; }
+        100% { transform: translate(-70px, -70px) scale(0.95); opacity: 0.5; }
+      }
+      @keyframes floatGlow3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-100px, 70px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(80px, -80px) scale(1); opacity: 0.6; }
+      }
+      @keyframes floatGlow4 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(90px, -90px) scale(1.2); opacity: 0.7; }
+        100% { transform: translate(-70px, 80px) scale(1); opacity: 0.5; }
+      }
+      @keyframes floatGlow5 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-100px, -80px) scale(1.15); opacity: 0.8; }
+        100% { transform: translate(90px, 70px) scale(0.9); opacity: 0.6; }
+      }
+      @keyframes floatGlow6 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(120px, 100px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(-90px, -90px) scale(0.95); opacity: 0.5; }
+      }
+      @keyframes floatGlow7 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-130px, 80px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(100px, -80px) scale(0.9); opacity: 0.6; }
+      }
+    `}
+              </style>
+            </div>
+
+            {/* Content Layer */}
+            <div
+              style={{
+                position: "relative",
+                zIndex: 1, // ensures text is above graphics
+                width: "90%",
+                margin: "0 auto",
+                padding: "40px 20px 120px 20px",
+                color: "white",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <h1
+                style={{
+                  paddingBottom: "5%",
+                  fontSize:
+                    windowSize > global.UTILS.TABLET_WIDTH ? "5vh" : "8vh",
+                  textAlign: "center",
+                  fontFamily: global.UTILS.FONT_FAMILY,
+                }}
+              >
+                {t("joinus.open_team_title")}
+              </h1>
+
+              {/* --- TEAM SECTIONS BELOW --- */}
+              {[
+                {
+                  img: rosa,
+                  color: "#f089b7",
+                  title: "External Relationships & Sponsor",
+                  text: t("joinus.ERS"),
+                },
+                {
+                  img: fucsia,
+                  color: "#bb5c9e",
+                  title: "Planning & Event Management",
+                  text: t("joinus.PEM"),
+                },
+                {
+                  img: verde,
+                  color: "#95c459",
+                  title: "Speakers & Event Curation",
+                  text: t("joinus.SEC"),
+                },
+                {
+                  img: blu,
+                  color: "#2884c7",
+                  title: "Human Resources & Academy",
+                  text: t("joinus.HRA"),
+                },
+                {
+                  img: arancione,
+                  color: "#f07e2a",
+                  title: "IT & Website",
+                  text: t("joinus.IT"),
+                },
+                {
+                  img: rosso,
+                  color: "#e9493a",
+                  title: "Communication & Marketing",
+                  text: t("joinus.CEM"),
+                },
+                {
+                  img: celeste,
+                  color: "#21bcef",
+                  title: "Legal & Administrative",
+                  text: t("joinus.LA"),
+                },
+                {
+                  img: giallo,
+                  color: "#fab732",
+                  title: "Design",
+                  text: t("joinus.DESIGN"),
+                },
+              ].map((team, index) => (
+                <div
+                  key={index}
+                  className="parent-aw"
                   style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#f089b7",
-                    fontFamily: "Fira Sans Extra Condensed",
+                    width: "100%",
+                    maxWidth: "900px",
+                    marginBottom: "50px",
+                    textAlign: "center",
                   }}
                 >
-                  External Relationships & Sponsor
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.ERS")}
-                </p>
-              </div>
-              <div class="text-bottom-right-aw">
-                <img
-                  src={fucsia}
-                  alt=""
-                  style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#bb5c9e",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  Planning & Event Management
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.PEM")}
-                </p>
-              </div>
+                  <div className="text-top-left-aw">
+                    <img
+                      src={team.img}
+                      alt={team.title}
+                      style={{
+                        height: "25px",
+                        width: "50px",
+                        objectFit: "cover",
+                        marginBottom: "10px",
+                      }}
+                    />
+                    <h3
+                      style={{
+                        fontSize: "40px",
+                        color: team.color,
+                        fontFamily: "Fira Sans Extra Condensed",
+                        marginBottom: "10px",
+                        fontFamily: global.UTILS.FONT_FAMILY,
+                      }}
+                    >
+                      {team.title}
+                    </h3>
+                    <p
+                      style={{
+                        textAlign: "justify",
+                        color: "#fff",
+                        fontSize:
+                          windowSize > global.UTILS.MOBILE_WIDTH
+                            ? "20px"
+                            : "15px",
+                        fontFamily: "Fira Sans Extra Condensed",
+                        fontWeight: "400",
+                        lineHeight: "1.4",
+                        fontFamily: global.UTILS.FONT_FAMILY,
+                      }}
+                    >
+                      {team.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-
-          <div className="container-lg mt-3">
-            <div class="parent-aw">
-              <div class="text-top-left-aw">
-                <img
-                  src={verde}
-                  alt=""
-                  style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#95c459",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  Speakers & Event Curation
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.SEC")}
-                </p>
-              </div>
-              <div class="text-bottom-right-aw">
-                <img
-                  src={blu}
-                  alt=""
-                  style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#2884c7",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  Human Resources & Academy
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.HRA")}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="container-lg mt-3">
-            <div class="parent-aw" style={{ color: "#fff" }}>
-              <div class="text-top-left-aw">
-                <img
-                  src={arancione}
-                  alt=""
-                  style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#f07e2a",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  IT & Website
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.IT")}
-                </p>
-              </div>
-
-              <div class="text-bottom-right-aw">
-                <img
-                  src={rosso}
-                  alt=""
-                  style={{
-                    marginTop: "10px",
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#e9493a",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  Communication & Marketing
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.CEM")}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="container-lg mt-3">
-            <div class="parent-aw">
-              <div class="text-top-left-aw">
-                <img
-                  src={celeste}
-                  alt=""
-                  style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#21bcef",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  Legal & Administrative
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.LA")}
-                </p>
-              </div>
-
-              <div class="text-bottom-right-aw">
-                <img
-                  src={giallo}
-                  alt=""
-                  style={{
-                    height: "25px",
-                    width: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "40px",
-                    color: "#fab732",
-                    fontFamily: "Fira Sans Extra Condensed",
-                  }}
-                >
-                  Design
-                </h3>
-                <p
-                  style={{
-                    textAlign: "justify",
-                    color: "#fff",
-                    fontSize:
-                      windowSize > global.UTILS.MOBILE_WIDTH ? "20px" : "15px",
-                    fontFamily: "Fira sans Extra Condensed",
-                    fontWeight: "400",
-                  }}
-                >
-                  {t("joinus.DESIGN")}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </section>
     </>
   );
