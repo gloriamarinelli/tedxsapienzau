@@ -146,7 +146,7 @@ export default function JoinUs() {
                   fontWeight: "bold",
                   textAlign: "center",
                 }}
-                href="https://docs.google.com/forms/d/e/1FAIpQLScEOHe8ZgnqgXbIk0ogmp48sHA89FTXr4m2x2Sp0fWCSIghNw/viewform?usp=header"
+                href="https://forms.gle/enEwv924VZvNerFu6"
                 target="_blank"
                 rel="noreferrer"
               >
