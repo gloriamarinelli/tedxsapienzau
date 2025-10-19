@@ -142,10 +142,6 @@ const router = createBrowserRouter([
         path: "/paradoxa",
         element: <ParaDoxa2025 />,
       },
-      {
-        path: "/joinus",
-        element: <JoinUs />,
-      },
     ],
   },
 ]);

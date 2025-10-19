@@ -10,6 +10,7 @@ import rosso from "../images/joinus/rosso.webp";
 import verde from "../images/joinus/verde.webp";
 import giallo from "../images/joinus/giallo.webp";
 import fourth_box_bg from "../images/partners/desktop/4.webp";
+import GlowingCircles from "../components/GlowingCircles";
 
 import { Trans, useTranslation } from "react-i18next";
 
@@ -25,11 +26,11 @@ export default function JoinUs() {
         }}
       >
         <h1
-          className="font-weight-bold mt-5 mb-5 text-center"
+          className="font-weight-bold mt-5  text-center"
           style={{
             fontSize: windowSize > global.UTILS.MOBILE_WIDTH ? "50px" : "30px",
             fontWeight: "bold",
-            fontFamily: "Fira Sans Extra Condensed",
+            fontFamily: global.UTILS.FONT_FAMILY,
             color: "#fff",
             margin: "10px",
           }}
@@ -61,98 +62,14 @@ export default function JoinUs() {
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${fourth_box_bg})`,
               backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
+              backgroundSize: "100% 100%",
               backgroundPosition: "center",
               position: "relative",
               overflow: "hidden", // so graphics don't leak outside box
               fontFamily: global.UTILS.FONT_FAMILY,
             }}
           >
-            {/* Decorative graphics layer */}
-            {/* Floating glowing graphics */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                overflow: "hidden",
-                zIndex: 0,
-              }}
-            >
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={i}
-                  style={{
-                    position: "absolute",
-                    width: `${450 + Math.random() * 250}px`, // even bigger
-                    height: `${450 + Math.random() * 250}px`,
-                    background: [
-                      "radial-gradient(circle at center, #f089b7, transparent 70%)",
-                      "radial-gradient(circle at center, #bb5c9e, transparent 70%)",
-                      "radial-gradient(circle at center, #94c459, transparent 70%)",
-                      "radial-gradient(circle at center, #2a84c6, transparent 70%)",
-                      "radial-gradient(circle at center, #f07e29, transparent 70%)",
-                      "radial-gradient(circle at center, #e9493b, transparent 70%)",
-                      "radial-gradient(circle at center, #28bdef, transparent 70%)",
-                      "radial-gradient(circle at center, #f9b531, transparent 70%)",
-                    ][i],
-                    top: `${i * 12 + Math.random() * 8}%`,
-                    left: `${i * 10 + Math.random() * 8}%`,
-                    borderRadius: "50%",
-                    filter: "blur(110px)",
-                    opacity: 0.7,
-                    mixBlendMode: "screen",
-                    animation: `floatGlow${i} ${
-                      20 + Math.random() * 10
-                    }s ease-in-out infinite alternate`, // faster (20–30s)
-                  }}
-                />
-              ))}
-
-              <style>
-                {`
-      @keyframes floatGlow0 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(100px, -80px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(-80px, 80px) scale(1); opacity: 0.6; }
-      }
-      @keyframes floatGlow1 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-120px, 90px) scale(1.1); opacity: 0.8; }
-        100% { transform: translate(100px, -90px) scale(0.9); opacity: 0.6; }
-      }
-      @keyframes floatGlow2 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-        50% { transform: translate(90px, 80px) scale(1.15); opacity: 0.7; }
-        100% { transform: translate(-70px, -70px) scale(0.95); opacity: 0.5; }
-      }
-      @keyframes floatGlow3 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-100px, 70px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(80px, -80px) scale(1); opacity: 0.6; }
-      }
-      @keyframes floatGlow4 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-        50% { transform: translate(90px, -90px) scale(1.2); opacity: 0.7; }
-        100% { transform: translate(-70px, 80px) scale(1); opacity: 0.5; }
-      }
-      @keyframes floatGlow5 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-100px, -80px) scale(1.15); opacity: 0.8; }
-        100% { transform: translate(90px, 70px) scale(0.9); opacity: 0.6; }
-      }
-      @keyframes floatGlow6 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-        50% { transform: translate(120px, 100px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(-90px, -90px) scale(0.95); opacity: 0.5; }
-      }
-      @keyframes floatGlow7 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-130px, 80px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(100px, -80px) scale(0.9); opacity: 0.6; }
-      }
-    `}
-              </style>
-            </div>
+            <GlowingCircles />
 
             {/* Content Layer */}
             <div
@@ -264,98 +181,14 @@ export default function JoinUs() {
               borderRadius: global.UTILS.BENTO_BOX_PADDING,
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${fourth_box_bg})`,
               backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
+              backgroundSize: "100% 100%",
               backgroundPosition: "center",
               position: "relative",
               overflow: "hidden", // so graphics don't leak outside box
               fontFamily: global.UTILS.FONT_FAMILY,
             }}
           >
-            {/* Decorative graphics layer */}
-            {/* Floating glowing graphics */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                overflow: "hidden",
-                zIndex: 0,
-              }}
-            >
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={i}
-                  style={{
-                    position: "absolute",
-                    width: `${450 + Math.random() * 250}px`, // even bigger
-                    height: `${450 + Math.random() * 250}px`,
-                    background: [
-                      "radial-gradient(circle at center, #f089b7, transparent 70%)",
-                      "radial-gradient(circle at center, #bb5c9e, transparent 70%)",
-                      "radial-gradient(circle at center, #94c459, transparent 70%)",
-                      "radial-gradient(circle at center, #2a84c6, transparent 70%)",
-                      "radial-gradient(circle at center, #f07e29, transparent 70%)",
-                      "radial-gradient(circle at center, #e9493b, transparent 70%)",
-                      "radial-gradient(circle at center, #28bdef, transparent 70%)",
-                      "radial-gradient(circle at center, #f9b531, transparent 70%)",
-                    ][i],
-                    top: `${i * 12 + Math.random() * 8}%`,
-                    left: `${i * 10 + Math.random() * 8}%`,
-                    borderRadius: "50%",
-                    filter: "blur(110px)",
-                    opacity: 0.7,
-                    mixBlendMode: "screen",
-                    animation: `floatGlow${i} ${
-                      20 + Math.random() * 10
-                    }s ease-in-out infinite alternate`, // faster (20–30s)
-                  }}
-                />
-              ))}
-
-              <style>
-                {`
-      @keyframes floatGlow0 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(100px, -80px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(-80px, 80px) scale(1); opacity: 0.6; }
-      }
-      @keyframes floatGlow1 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-120px, 90px) scale(1.1); opacity: 0.8; }
-        100% { transform: translate(100px, -90px) scale(0.9); opacity: 0.6; }
-      }
-      @keyframes floatGlow2 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-        50% { transform: translate(90px, 80px) scale(1.15); opacity: 0.7; }
-        100% { transform: translate(-70px, -70px) scale(0.95); opacity: 0.5; }
-      }
-      @keyframes floatGlow3 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-100px, 70px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(80px, -80px) scale(1); opacity: 0.6; }
-      }
-      @keyframes floatGlow4 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-        50% { transform: translate(90px, -90px) scale(1.2); opacity: 0.7; }
-        100% { transform: translate(-70px, 80px) scale(1); opacity: 0.5; }
-      }
-      @keyframes floatGlow5 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-100px, -80px) scale(1.15); opacity: 0.8; }
-        100% { transform: translate(90px, 70px) scale(0.9); opacity: 0.6; }
-      }
-      @keyframes floatGlow6 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-        50% { transform: translate(120px, 100px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(-90px, -90px) scale(0.95); opacity: 0.5; }
-      }
-      @keyframes floatGlow7 {
-        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-        50% { transform: translate(-130px, 80px) scale(1.2); opacity: 0.8; }
-        100% { transform: translate(100px, -80px) scale(0.9); opacity: 0.6; }
-      }
-    `}
-              </style>
-            </div>
+            <GlowingCircles />
 
             {/* Content Layer */}
             <div

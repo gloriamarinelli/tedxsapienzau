@@ -199,6 +199,7 @@ export default function Home() {
         {/** fine div video **/}
         {getShowMore()}
       </section>
+      {/** join team **/}
       <section
         id="join-us"
         style={{
@@ -217,59 +218,134 @@ export default function Home() {
         <div
           style={{
             width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "50%", //la barra bianca sotto dipende dal secondo valore
+            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "auto",
             padding: global.UTILS.BENTO_BOX_PADDING,
             borderRadius: global.UTILS.BENTO_BOX_PADDING,
             backgroundColor: "#191919",
             display: "flex",
-            marginRight: "10px",
-            justifyContent: "left",
-            alignItems: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             position: "relative",
           }}
         >
-          <h1
+          <div
             style={{
-              color: "white",
               display: "flex",
+              flexDirection:
+                windowSize > global.UTILS.TABLET_WIDTH ? "row" : "column",
+              justifyContent: "space-between",
               alignItems: "center",
-              gap: "10px",
-              fontSize: windowSize > 1245 ? "6vh" : "5vh",
-              fontWeight: 700,
-              maxWidth: "30ch",
+              width: "100%",
+              flex: 1,
             }}
           >
-            Entra nel team{" "}
-            <RotatingText
-              texts={[
-                "ERS",
-                "PEM",
-                "SEC",
-                "HRA",
-                "IT",
-                "CEM",
-                "LA",
-                "DEX",
-                "TEDxSapienzaU",
-              ]}
-              mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-200%" }}
-              staggerDuration={0.03}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={5000}
+            {/* LEFT SIDE - 33% */}
+            <div
               style={{
-                backgroundColor: global.COLORS.ROSSO_TED_2023,
-                borderRadius: " 10px",
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "flex-start",
+                paddingRight: "2rem",
               }}
-            />
-          </h1>
+            >
+              <h1
+                style={{
+                  color: "white",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  fontSize: windowSize > 1245 ? "6vh" : "5vh",
+                  fontWeight: 700,
+                  maxWidth: "30ch",
+                }}
+              >
+                Entra nel team{" "}
+                <RotatingText
+                  texts={[
+                    "ERS",
+                    "PEM",
+                    "SEC",
+                    "HRA",
+                    "IT",
+                    "CEM",
+                    "LA",
+                    "DEX",
+                    //"TEDxSapienzaU",
+                  ]}
+                  mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-200%" }}
+                  staggerDuration={0.03}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={5000} //il timer va sincronizzato con l'altro
+                  style={{
+                    backgroundColor: global.COLORS.ROSSO_TED_2023,
+                    borderRadius: "10px",
+                  }}
+                />
+              </h1>
+            </div>
+
+            {/* RIGHT SIDE - 66% */}
+            <div
+              style={{
+                flex: 2,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#111",
+                borderRadius: "10px",
+                padding: "1.5rem",
+              }}
+            >
+              <h1
+                style={{
+                  color: "white",
+                  fontSize: "3.5vh",
+                  textAlign: "center",
+                  lineHeight: 1.3,
+                }}
+              >
+                <RotatingText
+                  texts={[
+                    t("joinus.ERS"),
+                    t("joinus.PEM"),
+                    t("joinus.SEC"),
+                    t("joinus.HRA"),
+                    t("joinus.IT"),
+                    t("joinus.CEM"),
+                    t("joinus.LA"),
+                    t("joinus.DESIGN"),
+                  ]}
+                  rotationInterval={5000} //il timer va sincronizzato con l'altro
+                />
+              </h1>
+            </div>
+          </div>
+
+          <div
+            style={{
+              marginTop: "2rem",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <a href="/newsletter">
+              {renderButton(hiddenButton, setHiddenButton)}
+            </a>
+          </div>
         </div>
       </section>
+
       <MvHome />
       <section>
         <Events withTitle={false} />
