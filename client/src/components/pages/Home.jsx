@@ -105,8 +105,10 @@ export default function Home() {
             backgroundSize: "cover",
             backgroundPosition: "top",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-end",
+            justifyContent:
+              windowSize > global.UTILS.MOBILE_WIDTH ? "center" : "start",
+            alignItems:
+              windowSize > global.UTILS.MOBILE_WIDTH ? "flex-end" : "center",
             fontFamily: "Fira Sans Extra Condensed, sans-serif",
             position: "relative",
             paddingBottom: "50px",
@@ -169,7 +171,8 @@ export default function Home() {
             </h2>
             <h1
               style={{
-                textAlign: "center",
+                textAlign:
+                  windowSize > global.UTILS.MOBILE_WIDTH ? "center" : " left",
                 fontSize:
                   windowSize > 1245
                     ? "14vh"
@@ -199,153 +202,240 @@ export default function Home() {
         {/** fine div video **/}
         {getShowMore()}
       </section>
-      {/** join team **/}
       <section
-        id="join-us"
         style={{
-          display: windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "flow",
-          justifyContent: "center",
-          alignItems: "center",
-          height:
-            windowSize > global.UTILS.TABLET_WIDTH
-              ? `calc(80vh - ${global.UTILS.NAV_HEIGHT})`
-              : `calc(130vh - ${global.UTILS.NAV_HEIGHT})`,
-          width: "100vw",
+          display: "grid",
+          gridTemplateColumns: windowSize > "985" ? "2fr 1fr" : "1fr",
+          gridTemplateRows: "1fr 1fr",
+          gap: "20px",
+          width: "100%",
           backgroundColor: "#000",
-          padding: global.UTILS.BENTO_BOX_PADDING,
+          padding: "40px",
+          position: "relative",
         }}
       >
+        {/* BOX 1 - Animazione principale */}
         <div
           style={{
-            width: "100%",
-            height: windowSize > global.UTILS.TABLET_WIDTH ? "90%" : "auto",
-            padding: global.UTILS.BENTO_BOX_PADDING,
-            borderRadius: global.UTILS.BENTO_BOX_PADDING,
+            gridRow: "1 / span 2",
             backgroundColor: "#191919",
+            borderRadius: "20px",
+            padding: "40px",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
-            alignItems: "center",
-            fontFamily: "Fira Sans Extra Condensed, sans-serif",
+            justifyContent: "space-around",
+            alignItems: "start",
             position: "relative",
+            overflow: "hidden",
+            zIndex: 1,
           }}
         >
           <div
             style={{
-              display: "flex",
-              flexDirection:
-                windowSize > global.UTILS.TABLET_WIDTH ? "row" : "column",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "100%",
-              flex: 1,
+              position: "absolute",
+              inset: 0,
+              overflow: "hidden",
+              zIndex: 0,
             }}
           >
-            {/* LEFT SIDE - 33% */}
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "flex-start",
-                paddingRight: "2rem",
-              }}
-            >
-              <h1
+            {[...Array(8)].map((_, i) => (
+              <div
+                key={i}
                 style={{
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  fontSize: windowSize > 1245 ? "6vh" : "5vh",
-                  fontWeight: 700,
-                  maxWidth: "30ch",
+                  position: "absolute",
+                  width: `${450 + Math.random() * 250}px`, // even bigger
+                  height: `${250 + Math.random() * 250}px`,
+                  background: [
+                    "radial-gradient(circle at center, #f089b7, transparent 70%)",
+                    "radial-gradient(circle at center, #bb5c9e, transparent 70%)",
+                    "radial-gradient(circle at center, #94c459, transparent 70%)",
+                    "radial-gradient(circle at center, #2a84c6, transparent 70%)",
+                    "radial-gradient(circle at center, #f07e29, transparent 70%)",
+                    "radial-gradient(circle at center, #e9493b, transparent 70%)",
+                    "radial-gradient(circle at center, #28bdef, transparent 70%)",
+                    "radial-gradient(circle at center, #f9b531, transparent 70%)",
+                  ][i],
+                  top: `${i * 12 + Math.random() * 8}%`,
+                  left: `${i * 10 + Math.random() * 8}%`,
+                  borderRadius: "50%",
+                  filter: "blur(110px)",
+                  opacity: 0.7,
+                  mixBlendMode: "screen",
+                  animation: `floatGlow${i} ${
+                    20 + Math.random() * 10
+                  }s ease-in-out infinite alternate`, // faster (20–30s)
                 }}
-              >
-                Entra nel team{" "}
-                <RotatingText
-                  texts={[
-                    "ERS",
-                    "PEM",
-                    "SEC",
-                    "HRA",
-                    "IT",
-                    "CEM",
-                    "LA",
-                    "DEX",
-                    //"TEDxSapienzaU",
-                  ]}
-                  mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-                  staggerFrom={"last"}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-200%" }}
-                  staggerDuration={0.03}
-                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={5000} //il timer va sincronizzato con l'altro
-                  style={{
-                    backgroundColor: global.COLORS.ROSSO_TED_2023,
-                    borderRadius: "10px",
-                  }}
-                />
-              </h1>
-            </div>
+              />
+            ))}
 
-            {/* RIGHT SIDE - 66% */}
-            <div
-              style={{
-                flex: 2,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#111",
-                borderRadius: "10px",
-                padding: "1.5rem",
-              }}
-            >
-              <h1
-                style={{
-                  color: "white",
-                  fontSize: "3.5vh",
-                  textAlign: "center",
-                  lineHeight: 1.3,
-                }}
-              >
-                <RotatingText
-                  texts={[
-                    t("joinus.ERS"),
-                    t("joinus.PEM"),
-                    t("joinus.SEC"),
-                    t("joinus.HRA"),
-                    t("joinus.IT"),
-                    t("joinus.CEM"),
-                    t("joinus.LA"),
-                    t("joinus.DESIGN"),
-                  ]}
-                  rotationInterval={5000} //il timer va sincronizzato con l'altro
-                />
-              </h1>
-            </div>
+            <style>
+              {`
+      @keyframes floatGlow0 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(100px, -80px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(-80px, 80px) scale(1); opacity: 0.6; }
+      }
+      @keyframes floatGlow1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-120px, 90px) scale(1.1); opacity: 0.8; }
+        100% { transform: translate(100px, -90px) scale(0.9); opacity: 0.6; }
+      }
+      @keyframes floatGlow2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(90px, 80px) scale(1.15); opacity: 0.7; }
+        100% { transform: translate(-70px, -70px) scale(0.95); opacity: 0.5; }
+      }
+      @keyframes floatGlow3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-100px, 70px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(80px, -80px) scale(1); opacity: 0.6; }
+      }
+      @keyframes floatGlow4 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(90px, -90px) scale(1.2); opacity: 0.7; }
+        100% { transform: translate(-70px, 80px) scale(1); opacity: 0.5; }
+      }
+      @keyframes floatGlow5 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-100px, -80px) scale(1.15); opacity: 0.8; }
+        100% { transform: translate(90px, 70px) scale(0.9); opacity: 0.6; }
+      }
+      @keyframes floatGlow6 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+        50% { transform: translate(120px, 100px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(-90px, -90px) scale(0.95); opacity: 0.5; }
+      }
+      @keyframes floatGlow7 {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+        50% { transform: translate(-130px, 80px) scale(1.2); opacity: 0.8; }
+        100% { transform: translate(100px, -80px) scale(0.9); opacity: 0.6; }
+      }
+    `}
+            </style>
           </div>
-
+          <h1
+            style={{
+              color: "white",
+              fontSize: "5vh",
+              fontWeight: 700,
+              display:
+                windowSize > global.UTILS.TABLET_WIDTH ? "flex" : "block",
+              gap: "10px",
+              zIndex: 1,
+            }}
+          >
+            Entra nel team{" "}
+            <RotatingText
+              texts={["ERS", "PEM", "SEC", "HRA", "IT", "CEM", "LA", "DEX"]}
+              mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-200%" }}
+              staggerDuration={0.03}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={6000}
+              style={{
+                backgroundColor: global.COLORS.ROSSO_TED_2023,
+                borderRadius: " 10px",
+              }}
+            />
+          </h1>
           <div
             style={{
-              marginTop: "2rem",
+              flex: 2,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              width: "100%",
+              backgroundColor: "#111",
+              borderRadius: "10px",
+              padding: "0.5rem",
             }}
           >
-            <a href="/newsletter">
-              {renderButton(hiddenButton, setHiddenButton)}
-            </a>
+            <h1
+              style={{
+                color: "white",
+                fontSize:
+                  windowSize > global.UTILS.TABLET_WIDTH ? "2.5vh" : "18px",
+                textAlign: "center",
+                lineHeight: 1.3,
+              }}
+            >
+              <RotatingText
+                texts={[
+                  t("joinus.ERS"),
+                  t("joinus.PEM"),
+                  t("joinus.SEC"),
+                  t("joinus.HRA"),
+                  t("joinus.IT"),
+                  t("joinus.CEM"),
+                  t("joinus.LA"),
+                  t("joinus.DESIGN"),
+                ]}
+                rotationInterval={6000} //il timer va sincronizzato con l'altro
+              />
+            </h1>
           </div>
         </div>
-      </section>
 
+        {/* BOX 2 - Descrizione */}
+        <div
+          style={{
+            backgroundColor: "#111",
+            borderRadius: "20px",
+            padding: "30px",
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            fontSize: "2.2vh",
+          }}
+        >
+          <p>
+            Dietro ogni idea che vale la pena diffondere, c’è un team di
+            volontari.
+            <br />
+            TEDxSapienzaU è il loro palco.
+          </p>
+        </div>
+
+        {/* BOX 3 - CTA */}
+        <div
+          style={{
+            backgroundColor: global.COLORS.ROSSO_TED_2023,
+            borderRadius: "20px",
+            padding: "30px",
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-start",
+          }}
+        >
+          <h2 style={{ fontSize: "3vh", fontWeight: 700 }}>
+            Candidature aperte
+          </h2>
+          <p style={{ fontSize: "2vh", marginBottom: "15px" }}>
+            Scopri i ruoli e unisciti a noi.
+          </p>
+          <a
+            href="/Newsletter"
+            style={{
+              backgroundColor: "white",
+              color: global.COLORS.ROSSO_TED_2023,
+              border: "none",
+              borderRadius: "8px",
+              padding: "10px 20px",
+              fontWeight: 700,
+              cursor: "pointer",
+              textDecoration: "none",
+            }}
+          >
+            Candidati ora →
+          </a>
+        </div>
+      </section>
       <MvHome />
       <section>
         <Events withTitle={false} />
