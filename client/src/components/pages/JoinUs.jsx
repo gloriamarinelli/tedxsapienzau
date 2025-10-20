@@ -221,7 +221,7 @@ export default function JoinUs() {
                 {
                   img: rosa,
                   color: "#f089b7",
-                  title: "External Relationships & Sponsor",
+                  title: "External Relations & Sponsor",
                   text: t("joinus.ERS"),
                 },
                 {

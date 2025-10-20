@@ -25,7 +25,7 @@ export default function Team2022() {
       pem: "Team Planning & Event Management",
       dex: "Team Design",
       sec: "Team Speakers & Event Curation",
-      ers: "External Relationships & Sponsor",
+      ers: "External Relations & Sponsor",
       hra: "Team Human Resources & Academy",
       cem: "Team Communication, Editorial, Marketing & Media",
       la: "Team Legal & Administrative",
