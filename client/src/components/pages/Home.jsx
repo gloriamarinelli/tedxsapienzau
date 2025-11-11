@@ -183,7 +183,7 @@ export default function Home() {
                 maxWidth: "13ch",
               }}
             >
-              CANDIDATI COME VOLONTARIO
+              LET'S EXPLORE HOW IT WAS
             </h1>
             <h2
               className="mb-5 secondary-text"
@@ -200,11 +200,11 @@ export default function Home() {
           </div>
         </div>
         {/** fine div video **/}
-        {getShowMore()}
+        {/* {getShowMore()} */}
       </section>
       <section
         style={{
-          display: "grid",
+          display: "none",
           gridTemplateColumns: windowSize > "985" ? "2fr 1fr" : "1fr",
           gridTemplateRows: "1fr 1fr",
           gap: "20px",
