@@ -206,7 +206,7 @@ export default function NavbarComponentNew() {
             </Link>
           </li>
 
-          <li
+          {/* <li
             className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
             id="li-team"
           >
@@ -219,9 +219,9 @@ export default function NavbarComponentNew() {
             >
               {t("navbar.team")}
             </Link>
-          </li>
+          </li> */}
 
-          <li
+          {/* <li
             className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
             id="li-blog"
           >
@@ -234,7 +234,7 @@ export default function NavbarComponentNew() {
             >
               {t("navbar.blog")}
             </Link>
-          </li>
+          </li> */}
 
           <li
             className="nav-item dropdown col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
@@ -348,7 +348,7 @@ export default function NavbarComponentNew() {
                 window.location.href = "/Newsletter";
               }}
             >
-              Join Us
+              JOIN US
             </div>
           </li>
         </section>

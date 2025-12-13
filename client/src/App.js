@@ -65,14 +65,14 @@ const router = createBrowserRouter([
         path: "/sponsors",
         element: <Sponsors />,
       },
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
-      {
-        path: "/blog/:id",
-        element: <BlogPost />,
-      },
+      // {
+      //   path: "/blog",
+      //   element: <Blog />,
+      // },
+      // {
+      //   path: "/blog/:id",
+      //   element: <BlogPost />,
+      // },
       {
         path: "/mission&vision",
         element: <MissionandVision />,
@@ -81,10 +81,10 @@ const router = createBrowserRouter([
         path: "/location",
         element: <Location />,
       },
-      {
-        path: "/team",
-        element: <Team />,
-      },
+      // {
+      //   path: "/team",
+      //   element: <Team />,
+      // },
       {
         path: "/edizioni",
         element: <Events />,
@@ -97,14 +97,14 @@ const router = createBrowserRouter([
         path: "/eventi/edizione2023",
         element: <Edizione2023BTZ />,
       },
-      {
-        path: "/write",
-        element: <Write />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
+      // {
+      //   path: "/write",
+      //   element: <Write />,
+      // },
+      // {
+      //   path: "/login",
+      //   element: <Login />,
+      // },
       {
         path: "/privacypolicy",
         element: <PrivacyPolicy />,

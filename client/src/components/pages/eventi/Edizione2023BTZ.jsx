@@ -25,6 +25,7 @@ import Image9 from "../../images/carousel/edizione23/lenca.webp";
 import Image10 from "../../images/carousel/edizione23/villain.webp";
 import Image11 from "../../images/carousel/edizione23/onofri.webp";
 import Image12 from "../../images/carousel/edizione23/aboya.webp";
+import { set } from "date-fns";
 
 export default function Edizione2023() {
   const { t } = useTranslation();
@@ -34,14 +35,102 @@ export default function Edizione2023() {
   const [windowSize] = useOutletContext();
 
   useEffect(() => {
-    axios
-      .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
-      .then((res, err) => {
-        setSpeakers(res.data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    // axios
+    //   .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
+    //   .then((res, err) => {
+    //     setSpeakers(res.data);
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //   });
+
+    const speakersData2023 = [
+      {
+        id: 14,
+        nome: "Matteo Cervellini",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Cervellini.webp",
+      },
+      {
+        id: 15,
+        nome: "Ilaria Rossi",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Rossi.webp",
+      },
+      {
+        id: 16,
+        nome: "Nina Lambarelli",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Lambarelli.webp",
+      },
+      {
+        id: 17,
+        nome: "Nakita Aboya",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Nakita.webp",
+      },
+      {
+        id: 18,
+        nome: "Riccardo Basilone",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Basilone.webp",
+      },
+      {
+        id: 19,
+        nome: "Ana Estrela",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Estrela.webp",
+      },
+      {
+        id: 20,
+        nome: "Rose Villain",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Villain.webp",
+      },
+      {
+        id: 21,
+        nome: "Gloria Schito",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Schito.webp",
+      },
+      {
+        id: 22,
+        nome: "Damiano Tullio",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Tullio.webp",
+      },
+      {
+        id: 23,
+        nome: "Marcello Ienca",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Ienca.webp",
+      },
+      {
+        id: 24,
+        nome: "Edward von Freymann",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Freymann.webp",
+      },
+      {
+        id: 25,
+        nome: "Silvano Onofri",
+        anno: 2023,
+        categoria: "Speaker",
+        fotoPath: "Onofri.webp",
+      },
+    ];
+    setSpeakers(speakersData2023);
   }, []);
 
   const handleSpeakersCardSection = () => {
@@ -408,13 +497,13 @@ export default function Edizione2023() {
         <div className="row">{handleSpeakersCardSection()}</div>
       </div>
 
-      <BioSpeakerPopup
+      {/* <BioSpeakerPopup
         isBioOpen={isBioOpen}
         setIsBioOpen={setIsBioOpen}
         selectedSpeakerInfo={selectedSpeakerInfo}
         windowSize={windowSize}
         year={2023}
-      />
+      /> */}
       <div>{renderProgram23()}</div>
       <div className="container mt-5">{CarouselComponent()}</div>
     </div>

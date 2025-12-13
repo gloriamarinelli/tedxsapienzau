@@ -5,8 +5,6 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
 
-
-
 export default function SpeakerCard({
   nomeSpeaker,
   imgSrc,
@@ -41,7 +39,7 @@ export default function SpeakerCard({
       >
         <div
           className="speaker-card"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "initial" }}
           onClick={() => (window.location.href = link)}
         >
           <div className="speaker-card-filter"></div>
@@ -62,7 +60,7 @@ export default function SpeakerCard({
             maxWidth: "16ch",
             textAlign: "center",
             marginTop: "15px",
-            cursor: "pointer",
+            cursor: "initial",
           }}
         >
           {showName ? nomeSpeaker : " "}
@@ -110,12 +108,12 @@ export default function SpeakerCard({
               linkTalk: linkTalk,
               bio: i18n.language === "it" ? bio : bioeng,
               fotoSidebar: fotoSidebar,
-              bioeng: bioeng
+              bioeng: bioeng,
             });
           }
         }}
       >
-        <div style={{ cursor: "pointer" }}>
+        <div style={{ cursor: "initial" }}>
           <img src={imgSrc} height="400" alt={nomeSpeaker} />
         </div>
       </div>
@@ -130,7 +128,7 @@ export default function SpeakerCard({
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          cursor: "pointer",
+          cursor: "initial",
         },
         ...style,
       }}
@@ -144,12 +142,12 @@ export default function SpeakerCard({
             linkTalk: linkTalk,
             bio: i18n.language === "it" ? bio : bioeng,
             fotoSidebar: fotoSidebar,
-            bioeng: bioeng
+            bioeng: bioeng,
           });
         }
       }}
     >
-      <div className="speaker-card" style={{ cursor: "pointer" }}>
+      <div className="speaker-card" style={{ cursor: "initial" }}>
         <div className="speaker-card-filter"></div>
         <img
           src={
@@ -163,7 +161,7 @@ export default function SpeakerCard({
           className="speaker-card-image"
           alt={nomeSpeaker}
         />
-        {setIsBioOpen ? (
+        {/* {setIsBioOpen ? (
           <p
             className="speaker-card-text"
             style={{
@@ -175,7 +173,7 @@ export default function SpeakerCard({
           </p>
         ) : (
           <></>
-        )}
+        )} */}
       </div>
 
       <p
