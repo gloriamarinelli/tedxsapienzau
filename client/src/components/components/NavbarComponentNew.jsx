@@ -420,7 +420,7 @@ export default function NavbarComponentNew() {
               {t("navbar.partners")}
             </Link>
           </h1>
-          <h1>
+          {/* <h1>
             <Link
               className="text-decoration-none text-white"
               to="/team"
@@ -428,8 +428,8 @@ export default function NavbarComponentNew() {
             >
               {t("navbar.team")}
             </Link>
-          </h1>
-          <h1>
+          </h1> */}
+          {/* <h1>
             <Link
               className="text-decoration-none text-white"
               to="/blog"
@@ -437,7 +437,7 @@ export default function NavbarComponentNew() {
             >
               {t("navbar.blog")}
             </Link>
-          </h1>
+          </h1> */}
           <h1 onClick={() => onAboutClick()}>
             <a>{t("navbar.about_us")}</a>
             <FontAwesomeIcon
