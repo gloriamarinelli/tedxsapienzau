@@ -20,118 +20,23 @@ export default function Edizione2022() {
   const [windowSize] = useOutletContext();
 
   useEffect(() => {
-    // axios
-    //   .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2022")
-    //   .then((res, err) => {
-    //     setSpeakers(res.data);
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
-    const speakersData2022 = [
-      {
-        id: 1,
-        nome: "Giovanna Melandri",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Melandri.webp",
-      },
-      {
-        id: 2,
-        nome: "Valeria Trombetta",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Trombetta.webp",
-      },
-      {
-        id: 3,
-        nome: "Fasma",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Fasma.webp",
-      },
-      {
-        id: 4,
-        nome: "Viviana Bottaro",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Bottaro.webp",
-      },
-      {
-        id: 5,
-        nome: "Giusy Amoroso",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Amoroso.webp",
-      },
-      {
-        id: 6,
-        nome: "Mario Baccini",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Baccini.webp",
-      },
-      {
-        id: 7,
-        nome: "Vittorio Loreto",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Loreto.webp",
-      },
-      {
-        id: 8,
-        nome: "Valentina Dallari",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Dallari.webp",
-      },
-      {
-        id: 9,
-        nome: "Ewelina Jelenkowska-Lucà",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Ewelina.webp",
-      },
-      {
-        id: 10,
-        nome: "Volosumarte – ARTIST",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "VoloSuMarte.webp",
-      },
-      {
-        id: 11,
-        nome: "Eleonora Parisiet",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Parisiet.webp",
-      },
-      {
-        id: 12,
-        nome: "Arianna Peduzzi",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Peduzzi.webp",
-      },
-      {
-        id: 13,
-        nome: "Serena Spanò",
-        anno: 2022,
-        categoria: "Speaker",
-        fotoPath: "Spano.webp",
-      },
-    ];
-    setSpeakers(speakersData2022);
-  }, []);
-
-  /**
-   * This function returns a spinner when the data from the db is still loading.
-   * When all the speakers are fetched, this function returns the speaker card section
-   */
-  const handleSpeakersCardSection = () => {
-    if (speakers.length === 0) {
-      return (
-        <div
+      const url = global.CONNECTION.ENDPOINT + "speakers/edizione/2022";
+  
+      axios
+        .get(url)
+        .then((res) => {
+          setSpeakers(res.data.speakers); 
+          console.log("Fetched from MongoDB:", res.data.speakers);
+        })
+        .catch((err) => {
+          console.error("Connection error to Flask backend:", err);
+        });
+    }, []);
+  
+    const handleSpeakersCardSection = () => {
+      if (speakers.length === 0) {
+        return (
+           <div
           style={{
             height: "200px",
             width: "90%",
@@ -143,28 +48,27 @@ export default function Edizione2022() {
         >
           <div className="spinner"></div>
         </div>
-      );
-    } else {
-      let res = [];
-      speakers.forEach((speaker) => {
-        const { id, nome, bio, categoria, fotoPath, link } = speaker;
-        res.push(
-          <SpeakerCard
-            key={id}
-            nomeSpeaker={nome}
-            imgSrc={fotoPath}
-            bio={bio}
-            linkTalk={link}
-            tag={categoria}
-            setIsBioOpen={setIsBioOpen}
-            setSelectedSpeakerInfo={setSelectedSpeakerInfo}
-            year={2022}
-          />
         );
-      });
-      return res;
-    }
-  };
+      } else {
+        return speakers.map((speaker) => {
+          const { _id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
+          return (
+            <SpeakerCard
+              key={_id} // MongoDB ID
+              nomeSpeaker={nome}
+              imgSrc={fotoPath}
+              bio={bio}
+              tag={categoria}
+              setIsBioOpen={setIsBioOpen}
+              setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+              year={2022}
+              bioeng={bioeng}
+              linkTalk={link}
+            />
+          );
+        });
+      }
+    };
 
   return (
     <div style={{ backgroundColor: global.COLORS.NERO, color: "#fff" }}>
@@ -318,13 +222,13 @@ export default function Edizione2022() {
         </h1>
         <div className="row">{handleSpeakersCardSection()}</div>
       </div>
-      {/* <BioSpeakerPopup
+      { <BioSpeakerPopup
         isBioOpen={isBioOpen}
         setIsBioOpen={setIsBioOpen}
         selectedSpeakerInfo={selectedSpeakerInfo}
         windowSize={windowSize}
         year={2022}
-      /> */}
+      /> }
     </div>
   );
 }

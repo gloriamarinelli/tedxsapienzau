@@ -32,92 +32,17 @@ export default function Edizione2023() {
   const [windowSize] = useOutletContext();
 
   useEffect(() => {
-    // axios
-    //   .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2025")
-    //   .then((res, err) => {
-    //     setSpeakers(res.data);
-    //     console.log(res.data);
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
+    const url = global.CONNECTION.ENDPOINT + "speakers/edizione/2025";
 
-    /** TEMPORARY HARD CODED SPEAKERS
-     * JUST TO COPE WITH THE LACK OF BACKEND WHILE MIGRATING
-     */
-    const hardcoded_speakersData = [
-      {
-        id: 26,
-        nome: "Lorenzo Nardi",
-        anno: 2025,
-        categoria: "Speaker",
-        fotoPath: "nardi.webp",
-      },
-      {
-        id: 27,
-        nome: "Alessia Dapoto",
-        anno: 2025,
-        fotoPath: "dapoto.webp",
-        categoria: "Speaker", // Assumed based on context
-      },
-      {
-        id: 28,
-        nome: "Lorenzo Saltarelli",
-        anno: 2025,
-        fotoPath: "saltarelli.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 29,
-        nome: "Pepa Pasatu",
-        anno: 2025,
-        fotoPath: "pasatu.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 30,
-        nome: "Abbozzo",
-        anno: 2025,
-        fotoPath: "abbozzo.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 31,
-        nome: "Carmen Panepinto Zayati",
-        anno: 2025,
-        fotoPath: "panepinto.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 32,
-        nome: "Riccardo Azzali",
-        anno: 2025,
-        fotoPath: "azzali.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 33,
-        nome: "Esmeralda Moretti",
-        anno: 2025,
-        fotoPath: "moretti.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 34,
-        nome: "Kento",
-        anno: 2025,
-        fotoPath: "kento.webp",
-        categoria: "Speaker",
-      },
-      {
-        id: 35,
-        nome: "Nicola Armaroli",
-        anno: 2025,
-        fotoPath: "armaroli.webp",
-        categoria: "Speaker",
-      },
-    ];
-    setSpeakers(hardcoded_speakersData);
+    axios
+      .get(url)
+      .then((res) => {
+        setSpeakers(res.data.speakers); 
+        console.log("Fetched from MongoDB:", res.data.speakers);
+      })
+      .catch((err) => {
+        console.error("Connection error to Flask backend:", err);
+      });
   }, []);
 
   const handleSpeakersCardSection = () => {
@@ -137,12 +62,11 @@ export default function Edizione2023() {
         </div>
       );
     } else {
-      let res = [];
-      speakers.map((speaker) => {
-        const { id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
-        res.push(
+      return speakers.map((speaker) => {
+        const { _id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
+        return (
           <SpeakerCard
-            key={id}
+            key={_id}
             nomeSpeaker={nome}
             imgSrc={"/images/speakers25/" + fotoPath}
             bio={bio}
@@ -155,7 +79,6 @@ export default function Edizione2023() {
           />
         );
       });
-      return res;
     }
   };
 
@@ -347,13 +270,13 @@ export default function Edizione2023() {
         </div>
       </div>
 
-      {/* <BioSpeakerPopup
+      { <BioSpeakerPopup
         isBioOpen={isBioOpen}
         setIsBioOpen={setIsBioOpen}
         selectedSpeakerInfo={selectedSpeakerInfo}
         windowSize={windowSize}
         year={2025}
-      /> */}
+      /> }
       <div className="container mt-5">{CarouselComponent()}</div>
     </div>
   );

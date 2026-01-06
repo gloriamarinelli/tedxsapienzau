@@ -31,7 +31,7 @@
     "FONT_FAMILY": "Fira Sans Extra Condensed, sans-serif"
   },
   "CONNECTION": {
-    "ENDPOINT": "https://tedxsapienzau-backend.herokuapp.com/",
+    "ENDPOINT": "https://tedxsapienzau-dashboard-backend.onrender.com/api/website",
     "ENDPOINT1": "//"
   }
 }

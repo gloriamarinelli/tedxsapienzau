@@ -35,106 +35,21 @@ export default function Edizione2023() {
   const [windowSize] = useOutletContext();
 
   useEffect(() => {
-    // axios
-    //   .get(global.CONNECTION.ENDPOINT + "speakers/edizione/2023")
-    //   .then((res, err) => {
-    //     setSpeakers(res.data);
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
-
-    const speakersData2023 = [
-      {
-        id: 14,
-        nome: "Matteo Cervellini",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Cervellini.webp",
-      },
-      {
-        id: 15,
-        nome: "Ilaria Rossi",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Rossi.webp",
-      },
-      {
-        id: 16,
-        nome: "Nina Lambarelli",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Lambarelli.webp",
-      },
-      {
-        id: 17,
-        nome: "Nakita Aboya",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Nakita.webp",
-      },
-      {
-        id: 18,
-        nome: "Riccardo Basilone",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Basilone.webp",
-      },
-      {
-        id: 19,
-        nome: "Ana Estrela",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Estrela.webp",
-      },
-      {
-        id: 20,
-        nome: "Rose Villain",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Villain.webp",
-      },
-      {
-        id: 21,
-        nome: "Gloria Schito",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Schito.webp",
-      },
-      {
-        id: 22,
-        nome: "Damiano Tullio",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Tullio.webp",
-      },
-      {
-        id: 23,
-        nome: "Marcello Ienca",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Ienca.webp",
-      },
-      {
-        id: 24,
-        nome: "Edward von Freymann",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Freymann.webp",
-      },
-      {
-        id: 25,
-        nome: "Silvano Onofri",
-        anno: 2023,
-        categoria: "Speaker",
-        fotoPath: "Onofri.webp",
-      },
-    ];
-    setSpeakers(speakersData2023);
-  }, []);
-
-  const handleSpeakersCardSection = () => {
-    if (speakers.length === 0) {
+      const url = global.CONNECTION.ENDPOINT + "speakers/edizione/2023";
+  
+      axios
+        .get(url)
+        .then((res) => {
+          setSpeakers(res.data.speakers); 
+          console.log("Fetched from MongoDB:", res.data.speakers);
+        })
+        .catch((err) => {
+          console.error("Connection error to Flask backend:", err);
+        });
+    }, []);
+  
+    const handleSpeakersCardSection = () => {
+       if (speakers.length === 0) {
       return (
         <div
           style={{
@@ -150,26 +65,25 @@ export default function Edizione2023() {
         </div>
       );
     } else {
-      let res = [];
-      speakers.map((speaker) => {
-        const { id, nome, bio, categoria, fotoPath, link } = speaker;
-        res.push(
-          <SpeakerCard
-            key={id}
-            nomeSpeaker={nome}
-            imgSrc={fotoPath}
-            bio={bio}
-            tag={categoria}
-            setIsBioOpen={setIsBioOpen}
-            setSelectedSpeakerInfo={setSelectedSpeakerInfo}
-            year={2023}
-            linkTalk={link}
-          />
-        );
-      });
-      return res;
-    }
-  };
+        return speakers.map((speaker) => {
+          const { _id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
+          return (
+            <SpeakerCard
+              key={_id}
+              nomeSpeaker={nome}
+              imgSrc={fotoPath}
+              bio={bio}
+              tag={categoria}
+              setIsBioOpen={setIsBioOpen}
+              setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+              year={2023}
+              bioeng={bioeng}
+              linkTalk={link}
+            />
+          );
+        });
+      }
+    };
 
   const CarouselComponent = () => {
     const [index, setIndex] = useState(0);
@@ -497,13 +411,13 @@ export default function Edizione2023() {
         <div className="row">{handleSpeakersCardSection()}</div>
       </div>
 
-      {/* <BioSpeakerPopup
+      { <BioSpeakerPopup
         isBioOpen={isBioOpen}
         setIsBioOpen={setIsBioOpen}
         selectedSpeakerInfo={selectedSpeakerInfo}
         windowSize={windowSize}
         year={2023}
-      /> */}
+      /> }
       <div>{renderProgram23()}</div>
       <div className="container mt-5">{CarouselComponent()}</div>
     </div>
