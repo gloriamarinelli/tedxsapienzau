@@ -131,27 +131,46 @@ export default function Team2022() {
 
   // #region --------------------------------- UseEffect --------------------------------------
 
-  useEffect(() => {
-    setTimeout(() => {
-      axios
-        .get(global.CONNECTION.ENDPOINT + `team/${activeYear}`)
-        .then((res, err) => {
-          console.log(res);
-          const data = res.data;
-          let newBoard = [];
-          let newVolunteers = [];
-          data.forEach((item) => {
-            if (item.gruppo === "board") newBoard.push(item);
-            else newVolunteers.push(item);
-          });
-          setBoard(newBoard);
-          setVolunteers(newVolunteers);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }, 200);
-  }, [activeYear]);
+useEffect(() => {
+  setBoard([]);
+  setVolunteers([]);
+
+  // Match the year format (2024)
+  const fullYear = activeYear < 100 ? 2000 + activeYear : activeYear;
+  
+  // Use the SAME endpoint as speakers to ensure the base URL is correct
+  const url = global.CONNECTION.ENDPOINT + "team/" + fullYear;
+
+  console.log("Axios calling:", url);
+
+  axios
+    .get(url)
+    .then((res) => {
+      console.log("Fetched from MongoDB:", res.data);
+      const data = res.data; 
+
+let newBoard = [];
+let newVolunteers = [];
+
+if (Array.isArray(data)) {
+  data.forEach((item) => {
+    // MongoDB field name is 'gruppo'
+    // Ensure 'board' is lowercase in your DB or use .toLowerCase()
+    if (item.gruppo && item.gruppo.toLowerCase() === "board") {
+      newBoard.push(item);
+    } else {
+      newVolunteers.push(item);
+    }
+  });
+}
+      setBoard(newBoard);
+      setVolunteers(newVolunteers);
+    })
+    .catch((err) => {
+      console.error("Connection error to Flask backend (Team):", err);
+    });
+}, [activeYear]);
+
   // #endregion
 
   // #region --------------------------------- Board ------------------------------------------

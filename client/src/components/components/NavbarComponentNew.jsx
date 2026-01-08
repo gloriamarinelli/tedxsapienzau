@@ -206,7 +206,7 @@ export default function NavbarComponentNew() {
             </Link>
           </li>
 
-          {/* <li
+          { <li
             className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"
             id="li-team"
           >
@@ -219,7 +219,7 @@ export default function NavbarComponentNew() {
             >
               {t("navbar.team")}
             </Link>
-          </li> */}
+          </li> }
 
           {/* <li
             className="nav-item col-xl-2 col-lg-2 col-12 p-0 d-flex align-items-center"

@@ -81,10 +81,10 @@ const router = createBrowserRouter([
         path: "/location",
         element: <Location />,
       },
-      // {
-      //   path: "/team",
-      //   element: <Team />,
-      // },
+      {
+        path: "/team",
+        element: <Team />,
+      },
       {
         path: "/edizioni",
         element: <Events />,
