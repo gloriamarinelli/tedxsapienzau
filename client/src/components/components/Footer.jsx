@@ -176,7 +176,7 @@ export default function Footer() {
             <GreyLink text="Countdown" link={"/eventi/countdown2024"} />
           </div>
           <b>
-            <WhiteLink text={t("navbar.partners")} link="/partners" />
+            <WhiteLink text={t("navbar.partners")} link="/sponsors" />
           </b>
           <b>
             <WhiteLink text={t("navbar.team")} link="/team" />
@@ -254,7 +254,7 @@ export default function Footer() {
           <small className="tertiary-text">
             <a
               className="secondary-text"
-              style={{textDecoration: "underline" }}
+              style={{ textDecoration: "underline" }}
               href="/images/Statuto2024-25.pdf"
             >
               {t("footer.statute")}
