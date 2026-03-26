@@ -7,7 +7,7 @@ import VolunteerCard from "../components/VolunteerCard.jsx";
 import Stack from "@mui/material/Stack";
 import BasicChips from "../components/BasicChips.jsx";
 import "../../resources/styles/team.css";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 export default function Team2022() {
   // #region --------------------------------- Constants --------------------------------------
@@ -298,7 +298,7 @@ if (Array.isArray(data)) {
     const sections = Object.entries(photos).map(([key, value]) => (
       <div
         style={{
-          display: selectedChip ? (selectedChip == key ? "" : "none") : "",
+          display: selectedChip ? (selectedChip === key ? "" : "none") : "",
         }}
       >
         <h1

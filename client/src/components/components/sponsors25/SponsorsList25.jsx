@@ -286,6 +286,13 @@ export default function SponsorsList25() {
           </div>
         </div>
 
+        <div id="ext_membership_div">
+          <h2 style={pTypeStyle}>Membership Partners</h2>
+          <div id="int_membership_div" style={gridStyle}>
+            {renderPartners(membershipPartners)}
+          </div>
+        </div>
+
         <div id="ext_creative_div">
           <h2 style={pTypeStyle}>Creative Partner</h2>
           <div id="int_creative_div" style={gridStyle}>
