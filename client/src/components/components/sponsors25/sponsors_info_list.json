@@ -296,6 +296,24 @@
       "descr_en": "AVIS Comunale di Roma is an association of volunteers who donate blood anonymously and free of charge. We promote solidarity, organize events, and engage young people to spread the culture of donation in a simple and direct manner.",
       "partner_type": "community",
       "wb_link": "https://www.avisroma.it/"
+    },
+    {
+      "id": 34,
+      "name": "Let's Dev",
+      "imgName": "letsdev.webp",
+      "descr_it": "",
+      "descr_en": "",
+      "partner_type": "membership partners",
+      "wb_link": "https://letsdev.de/en/"
+    },
+    {
+      "id": 35,
+      "name": "Kortpress",
+      "imgName": "kortpress.webp",
+      "descr_it": "",
+      "descr_en": "",
+      "partner_type": "membership partners",
+      "wb_link": "https://kortpress.io/en/"
     }
   ]
 }

@@ -35,21 +35,21 @@ export default function Edizione2023() {
   const [windowSize] = useOutletContext();
 
   useEffect(() => {
-      const url = global.CONNECTION.ENDPOINT + "speakers/edizione/2023";
-  
-      axios
-        .get(url)
-        .then((res) => {
-          setSpeakers(res.data.speakers); 
-          console.log("Fetched from MongoDB:", res.data.speakers);
-        })
-        .catch((err) => {
-          console.error("Connection error to Flask backend:", err);
-        });
-    }, []);
-  
-    const handleSpeakersCardSection = () => {
-       if (speakers.length === 0) {
+    const url = global.CONNECTION.ENDPOINT + "speakers/edizione/2023";
+
+    axios
+      .get(url)
+      .then((res) => {
+        setSpeakers(res.data.speakers);
+        console.log("Fetched from MongoDB:", res.data.speakers);
+      })
+      .catch((err) => {
+        console.error("Connection error to Flask backend:", err);
+      });
+  }, []);
+
+  const handleSpeakersCardSection = () => {
+    if (speakers.length === 0) {
       return (
         <div
           style={{
@@ -65,25 +65,26 @@ export default function Edizione2023() {
         </div>
       );
     } else {
-        return speakers.map((speaker) => {
-          const { _id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
-          return (
-            <SpeakerCard
-              key={_id}
-              nomeSpeaker={nome}
-              imgSrc={fotoPath}
-              bio={bio}
-              tag={categoria}
-              setIsBioOpen={setIsBioOpen}
-              setSelectedSpeakerInfo={setSelectedSpeakerInfo}
-              year={2023}
-              bioeng={bioeng}
-              linkTalk={link}
-            />
-          );
-        });
-      }
-    };
+      return speakers.map((speaker) => {
+        const { _id, nome, bio, categoria, fotoPath, link, bioeng } = speaker;
+        console.log(fotoPath);
+        return (
+          <SpeakerCard
+            key={_id}
+            nomeSpeaker={nome}
+            imgSrc={fotoPath}
+            bio={bio}
+            tag={categoria}
+            setIsBioOpen={setIsBioOpen}
+            setSelectedSpeakerInfo={setSelectedSpeakerInfo}
+            year={2023}
+            bioeng={bioeng}
+            linkTalk={link}
+          />
+        );
+      });
+    }
+  };
 
   const CarouselComponent = () => {
     const [index, setIndex] = useState(0);
@@ -411,13 +412,15 @@ export default function Edizione2023() {
         <div className="row">{handleSpeakersCardSection()}</div>
       </div>
 
-      { <BioSpeakerPopup
-        isBioOpen={isBioOpen}
-        setIsBioOpen={setIsBioOpen}
-        selectedSpeakerInfo={selectedSpeakerInfo}
-        windowSize={windowSize}
-        year={2023}
-      /> }
+      {
+        <BioSpeakerPopup
+          isBioOpen={isBioOpen}
+          setIsBioOpen={setIsBioOpen}
+          selectedSpeakerInfo={selectedSpeakerInfo}
+          windowSize={windowSize}
+          year={2023}
+        />
+      }
       <div>{renderProgram23()}</div>
       <div className="container mt-5">{CarouselComponent()}</div>
     </div>

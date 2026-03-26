@@ -44,7 +44,7 @@ export default function SponsorsList25() {
   const genericPartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "generic"
   );
-  const technicalPartners = sponsorsInfo.partners.filter(
+  const technicalSponsors = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "technical"
   );
   const mediaPartners = sponsorsInfo.partners.filter(
@@ -56,6 +56,10 @@ export default function SponsorsList25() {
   const creativePartners = sponsorsInfo.partners.filter(
     (p) => p.partner_type === "creative"
   );
+  const membershipPartners = sponsorsInfo.partners.filter(
+    (p) => p.partner_type === "membership partners"
+  );
+
 
   /* grid style const */
   const gridStyle = {
@@ -142,7 +146,7 @@ export default function SponsorsList25() {
           <div id="ext_technical_div">
             <h2 style={pTypeStyle}>Technical Sponsors</h2>
             <div id="int_technical_div" style={flexStyle}>
-              {renderPartners(technicalPartners)}
+              {renderPartners(technicalSponsors)}
             </div>
           </div>
 
@@ -174,6 +178,13 @@ export default function SponsorsList25() {
           <h2 style={pTypeStyle}>Partners</h2>
           <div id="int_generic_div" style={gridStyle}>
             {renderPartners(genericPartners)}
+          </div>
+        </div>
+
+        <div id="ext_technical_div">
+          <h2 style={pTypeStyle}>Membership Partners</h2>
+          <div id="int_technical_div" style={gridStyle}>
+            {renderPartners(membershipPartners)}
           </div>
         </div>
 
@@ -236,7 +247,7 @@ export default function SponsorsList25() {
         <div id="ext_technical_div">
           <h2 style={pTypeStyle}>Technical Sponsors</h2>
           <div id="int_technical_div" style={gridStyle}>
-            {renderPartners(technicalPartners)}
+            {renderPartners(technicalSponsors)}
           </div>
         </div>
 
